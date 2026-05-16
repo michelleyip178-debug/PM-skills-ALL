@@ -1,0 +1,13 @@
+{
+  "tasks": [
+    {
+      "id": "41dc4a0a",
+      "cron": "27 8 18 5 *",
+      "prompt": "Retro + Demo this morning (Sprint 2 starts). Run `/retro` to build your Signal/Sense/Shift from meeting notes. You prepped with `/retro-prep` on Friday — check if demo order still holds.",
+      "createdAt": 1778485309711,
+      "createdBySessionId": "3b7f18dc-30e5-4272-b499-66914274b55a",
+      "createdByPid": 4415,
+      "createdByProcStart": "Thu May 14 10:43:46 2026"
+    }
+  ]
+}
