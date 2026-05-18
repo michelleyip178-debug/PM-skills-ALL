@@ -26,6 +26,14 @@ Parse the output to extract:
 
 If the script fails (auth error, network), note "Jira fetch failed — using local context only" and continue without breaking the rest of the flow.
 
+**Sprint story detail:** After fetching the sprint overview, read the per-issue markdown files from `jira-sync/` to get story-level context.
+- Find the most recent `jira-sync/Sprint-*/` folder (newest by folder name)
+- Read every `.md` file in that folder
+- For each story extract: key, title, status, assignee, story points, and the first 2 sentences of the description
+- Cross-reference against `context/current-sprint.md` committed stories — flag any committed story that is missing from the jira-sync folder
+- Flag stories with: no assignee, no story points, or still in Backlog/To Do when it is sprint week 2
+- If the jira-sync folder does not exist or is empty, note "Story detail not available — run `python3 scripts/jira-sync.py` to sync" and skip this section
+
 ### Step 1 — Identify today's ceremony and write prep to inbox
 Read `areas/sprint-delivery/sprint-prep-rhythm.md` and check the "This Sprint" checklist against today's date.
 If today has a ceremony prep entry:
@@ -96,6 +104,14 @@ Save as: `outputs/daily-YYYY-MM-DD.md`
 - **Goal:** [sprint goal]
 - **In Progress:** [count] · **Done:** [count] · **Backlog:** [count]
 - **Flags:** [WIP overload by person, late-sprint backlog items, or "None"]
+
+### Sprint Stories
+| Key | Title | Status | Assignee | Points | Flag |
+|---|---|---|---|---|---|
+| [KEY] | [title] | [status] | [assignee or —] | [pts or —] | [⚠️ no assignee / ⚠️ backlog wk2 / ✓] |
+
+**Story summaries** (first 2 sentences of description for any story in In Progress or flagged):
+- **[KEY]:** [summary]
 
 ### Open Items Needing Attention
 | Item | Owner | Due | Status |
