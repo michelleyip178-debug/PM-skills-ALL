@@ -20,7 +20,7 @@
 - 
 
 ### From Jira
-- 
+- [A] OTEP-129 label: Display "Closing soon" badge on opportunities where closing date is within 7 days.
 
 ### From Meetings
 - 
