@@ -15,3 +15,10 @@ Research and define the technical architecture and user experience for connectin
 ## Subtasks
 
 _No subtasks._
+
+---
+
+## Latest Comments
+
+**Pow Hwee TAN (PSD)** (2026-05-13)
+Hi Thomas, This ticket will be carried into sprint 2.  Can you sharpen this story with its acceptance criteria.  In my mind, the purpose of this ticket is to prepare for the following sprints when we need to do ‘Apply’.  I linked up the dependent stories.   This probably need to be time-boxed too.

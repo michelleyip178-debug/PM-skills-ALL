@@ -4,6 +4,24 @@ Track what changed, where, and when. Most recent first within each date.
 
 ---
 
+## 2026-05-18 (Jira comment sync — scope changes from Pow Hwee)
+
+### context/current-sprint.md
+- Story table rebuilt: OTEP-285 marked absorbed into OTEP-128 (not Sprint 3); OTEP-129 re-added as separate Sprint 2 story (overrides May 14 absorption); OTEP-268 re-added to Sprint 2 (overrides May 15 deferral); OTEP-191 deprioritised to Sprint 3+; OTEP-276 marked resolved
+- Scope decisions updated: 4 new entries (OTEP-285 absorption, OTEP-129 re-add, OTEP-268 re-add, OTEP-191 deprioritisation); two prior decisions struck through
+- Jira board cleanup: removed stale "Remove OTEP-268" and "Close OTEP-129" items; added "Remove OTEP-191"; marked OTEP-285/276 as resolved
+
+### tasks/active.md
+- Header note updated to reflect Jira comment sync scope changes
+- Up Next: removed stale "heads-up to Thomas re OTEP-285/276"; added 3 new PM action items (#28 OTEP-85 visibility, #29 OTEP-289 ACs/timebox, OTEP-128 AC cleanup); added "heads-up to Thomas: OTEP-285 absorbed, no Sprint 3 ticket"
+- Waiting On: OTEP-276 row marked resolved
+
+### context/open-items.md
+- Added open item #28: OTEP-85 visibility rule conflict (Michelle to confirm before grooming)
+- Added open item #29: OTEP-289 spike definition — ACs, timebox, expected output (Michelle to define before grooming Tue 19 May)
+
+---
+
 ## 2026-05-18 (sprint-allocation.md update)
 
 ### projects/sprint-allocation.md

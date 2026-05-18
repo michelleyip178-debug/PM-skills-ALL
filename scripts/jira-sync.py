@@ -5,6 +5,7 @@ import os
 import sys
 import json
 import re
+import datetime
 import urllib.request
 import urllib.parse
 from base64 import b64encode
@@ -85,7 +86,29 @@ def get_issue_detail(base, auth, key):
     return data
 
 
-def build_markdown(key, fields):
+def parse_existing(path):
+    """Extract status, assignee, and latest comment from an existing issue file."""
+    if not os.path.exists(path):
+        return None, None, None
+    with open(path, encoding="utf-8") as f:
+        content = f.read()
+    status = re.search(r"\*\*Status:\*\* (.+)", content)
+    assignee = re.search(r"\*\*Assignee:\*\* (.+)", content)
+    comment = re.search(r"\*\*(.+?)\*\* \((\d{4}-\d{2}-\d{2})\)", content)
+    return (
+        status.group(1).strip() if status else None,
+        assignee.group(1).strip() if assignee else None,
+        f"{comment.group(1)} ({comment.group(2)})" if comment else None,
+    )
+
+
+def get_comments(base, auth, key, max_results=3):
+    url = f"{base}/rest/api/3/issue/{key}/comment?orderBy=-created&maxResults={max_results}"
+    data = get(url, auth)
+    return (data.get("comments") or []) if data else []
+
+
+def build_markdown(key, fields, comments=None):
     summary = fields.get("summary", "N/A")
     status = (fields.get("status") or {}).get("name", "N/A")
     assignee_obj = fields.get("assignee")
@@ -108,6 +131,18 @@ def build_markdown(key, fields):
     else:
         subtasks_section = "_No subtasks._"
 
+    if comments:
+        comment_lines = []
+        for c in comments:
+            author = (c.get("author") or {}).get("displayName", "Unknown")
+            created = (c.get("created") or "")[:10]
+            body = extract_text(c.get("body")).strip()
+            if body:
+                comment_lines.append(f"**{author}** ({created})\n{body}")
+        comments_section = "\n\n---\n\n".join(comment_lines) if comment_lines else "_No comments._"
+    else:
+        comments_section = "_No comments._"
+
     return f"""# {key}: {summary}
 
 **Status:** {status}
@@ -125,6 +160,12 @@ def build_markdown(key, fields):
 ## Subtasks
 
 {subtasks_section}
+
+---
+
+## Latest Comments
+
+{comments_section}
 """
 
 
@@ -152,19 +193,58 @@ def main():
     print(f"Found {len(issues)} issues. Fetching full details...\n")
 
     written = 0
+    change_rows = []
     for issue in issues:
         key = issue["key"]
         detail = get_issue_detail(base, auth, key)
         if detail is None:
             continue
-        md = build_markdown(key, detail.get("fields", {}))
+        comments = get_comments(base, auth, key)
         path = os.path.join(out_dir, f"{key}.md")
+
+        old_status, old_assignee, old_comment = parse_existing(path)
+
+        fields = detail.get("fields", {})
+        md = build_markdown(key, fields, comments)
+
         with open(path, "w", encoding="utf-8") as f:
             f.write(md)
         print(f"  ✓ {key}")
         written += 1
 
+        new_status = (fields.get("status") or {}).get("name", "N/A")
+        assignee_obj = fields.get("assignee")
+        new_assignee = assignee_obj.get("displayName", "N/A") if assignee_obj else "N/A"
+        new_comment = None
+        if comments:
+            c = comments[0]
+            author = (c.get("author") or {}).get("displayName", "Unknown")
+            date = (c.get("created") or "")[:10]
+            if (c.get("body") and extract_text(c.get("body")).strip()):
+                new_comment = f"{author} ({date})"
+
+        if old_status is None:
+            change_rows.append(f"| {key} | New story | — |")
+        else:
+            if old_status != new_status:
+                change_rows.append(f"| {key} | Status | {old_status} → {new_status} |")
+            if old_assignee != new_assignee:
+                change_rows.append(f"| {key} | Assignee | {old_assignee} → {new_assignee} |")
+            if new_comment and old_comment != new_comment:
+                change_rows.append(f"| {key} | New comment | {new_comment} |")
+
+    today = datetime.date.today().isoformat()
+    if change_rows:
+        table = "| Story | Change | Detail |\n|---|---|---|\n" + "\n".join(change_rows)
+    else:
+        table = "_No story changes since last sync._"
+    changes_path = os.path.join(out_dir, ".changes.md")
+    with open(changes_path, "w", encoding="utf-8") as f:
+        f.write(f"# Story Changes — {today}\n\n{table}\n")
+
     print(f"\nDone. {written} files written to jira-sync/{folder_name}/")
+    if change_rows:
+        print(f"Changes detected: {len(change_rows)} (see .changes.md)")
 
 
 if __name__ == "__main__":

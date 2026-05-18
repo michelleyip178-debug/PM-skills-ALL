@@ -15,3 +15,15 @@ User Story As an  officer,  I want to  see open opportunities displayed as cards
 ## Subtasks
 
 _No subtasks._
+
+---
+
+## Latest Comments
+
+**Pow Hwee TAN (PSD)** (2026-05-18)
+Clarification needed on the visibility rule: The AC currently says "Closing Date >= 7 days" and also "strictly in the future." These are different rules: "Strictly in the future" = show everything that hasn’t closed yet. ">= 7 days" = hide listings that close within the next week. I suspect the 7-day rule is meant for the "Closing soon" label in OTEP-129, not the visibility filter here. Can you confirm? Also, the AC "silently drop and log any card missing mandatory data" — suggest reframing as: "The system must exclude any opportunity with incomplete mandatory data (ID, Title, Agency, Type, Posting Date, or Closing Date) from the listing and log the exclusion for investigation." In our contract-first approach, the API guarantees complete data, so data completeness belongs in the API contract, not the frontend story.
+
+---
+
+**Amber Tong** (2026-05-13)
+hi here is the screenshot of the Jobs& opportunities list page. see the design file  here

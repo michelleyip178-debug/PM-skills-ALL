@@ -21,11 +21,17 @@ Extract: sprint name, dates, goal, counts by status, anyone with multiple In Pro
 and any stories still in Backlog during sprint week 2.
 If the script fails, note "Jira fetch failed — using local context only" and continue.
 
+**Jira sync:** Run `python3 scripts/jira-sync.py` to refresh story data and detect changes since yesterday's daily.
+- The script overwrites per-issue files in `jira-sync/Sprint-*/` and writes `.changes.md` with a diff of what changed (status, assignee, new comments).
+- If the script fails, note "Jira sync failed — using stale data" and continue.
+
 **Sprint story detail:** Read per-issue markdown files from the most recent `jira-sync/Sprint-*/` folder.
 For each story extract: key, title, status, assignee, story points, and the first 2 sentences of the description.
 Cross-reference against `context/current-sprint.md` committed stories — flag any missing from jira-sync.
 Flag: no assignee, no story points, Backlog in sprint week 2.
-If the folder doesn't exist: note "Story detail not available — run `python3 scripts/jira-sync.py`" and skip.
+If the folder doesn't exist: note "Story detail not available" and skip.
+
+**Story changes:** Read `jira-sync/Sprint-*//.changes.md`. Populate the Story Changes section from it verbatim. If "No story changes since last sync", say so — don't skip the section.
 
 **Standup lens:** Based on in-progress stories and PM-owned blockers (see Step 2), generate 2–3 bullets
 on what to actively listen for in today's standup. Focus on:
@@ -130,6 +136,15 @@ Before standup, listen for:
 
 **Story summaries** (In Progress and flagged stories only):
 - **[KEY]:** [first 2 sentences of description]
+
+### Story Changes Since Last Sync
+From `jira-sync/.changes.md` — what moved since yesterday's daily run:
+
+| Story | Change | Detail |
+|---|---|---|
+| [KEY] | [Status / Assignee / New comment / New story] | [e.g. Backlog → In Progress, or author (date)] |
+
+If no changes: "No story changes since last sync."
 
 ### PM-Owned Blockers
 Things engineers or stakeholders are waiting on Michelle to resolve:

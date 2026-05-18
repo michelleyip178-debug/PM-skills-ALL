@@ -1,7 +1,7 @@
 # Active Tasks
 
 Current sprint: **Sprint 2 (May 18 – May 29)** — Opportunities Listing → Detail end-to-end.
-Sprint 1 closed 2026-05-15 (partial sign-off — auth edge-cases OTEP-110, WOG-04/05/06 carry forward). Sprint 2 Jira board synced 2026-05-18: **In Progress:** OTEP-170 (Thomas), OTEP-288 (Léo) · **Done:** OTEP-252 (Thomas) · **Backlog:** 10 stories. **2026-05-18 scope cut:** OTEP-285 deferred to Sprint 3; OTEP-276 dropped (superseded by OTEP-252).
+Sprint 1 closed 2026-05-15 (partial sign-off). Jira comment sync 2026-05-18: **In Progress:** OTEP-170 (Thomas), OTEP-288 (Léo) · **Done:** OTEP-252 (Thomas) · **Backlog:** OTEP-85, OTEP-128, OTEP-129, OTEP-267, OTEP-268, OTEP-289, OTEP-192, OTEP-193, OTEP-194. **Scope changes:** OTEP-285 absorbed into OTEP-128 (no Sprint 3 ticket); OTEP-129 and OTEP-268 re-added to Sprint 2 by Pow Hwee; OTEP-191 deprioritised to Sprint 3+; OTEP-276 resolved.
 
 Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
@@ -25,9 +25,11 @@ Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/spr
 
 - [ ] **Run `/groom-prep`** — today (Mon 18 May) before noon; Squad Grooming is tomorrow 10am
 - [ ] **Chase Pow Hwee on #23 + #24** — harmonised data model (OTG + C@G) and which OTG Excel reports to ingest; both block OTEP-192/193
-- [ ] Heads-up to Thomas at standup: OTEP-285 deferred to Sprint 3, OTEP-276 dropped (superseded by OTEP-252). Reduces Sprint 2 load by ~1 story + a spike.
-- [ ] Create OTEP-285 Jira ticket in Sprint 3 prep (carry-over reminder)
 - [ ] **Share OTG opportunity reports (Excel files) with the team** — unblocks #24, OTEP-192, OTEP-193 (overdue — was due Fri 15 May)
+- [ ] **[PM action — #28] Confirm OTEP-85 visibility rule** — Pow Hwee asking: is it "closing_date > now" (show all not yet closed) or "closing_date >= 7 days" (hide listings closing soon)? The 7-day rule is likely OTEP-129's "Closing soon" badge, not OTEP-85's filter. Decide before grooming.
+- [ ] **[PM action — #29] Define OTEP-289 ACs, timebox, expected outcome** — Pow Hwee asking: what is the output of the spike (written recommendation, prototype, other)? How long is it timeboxed? Groom this tomorrow.
+- [ ] **[PM action] Clean OTEP-128 AC** — remove "This opportunity is closed" notice AC from OTEP-128 (it belongs to OTEP-129). Raise with Pow Hwee at grooming.
+- [ ] **Heads-up to Thomas: OTEP-285 absorbed into OTEP-128, OTEP-276 resolved.** No new Sprint 3 ticket needed for OTEP-285.
 - [ ] **Sharpen ACs for Sprint 2 stories** — OTEP-85, OTEP-128, OTEP-267 before tomorrow's grooming; cross-check [sprint-checklists.md](../projects/otep-mvp/sprint-checklists.md)
 - [ ] Consolidate sprint stories + ACs into a doc for Rethna (ThoughtWorks QA)
 - [ ] Run test script review session with Rethna — story by story against AC; log gaps before sign-off
@@ -52,7 +54,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/spr
 | POCDEX account creation (OTEP-72) | Pow Hwee | May 4 | Confirm push mechanism works — bundle into Pow Hwee check-in |
 | `formsg_url` field (#2) | Rama + PSD Ops | May 4 | Last unconfirmed OTG field. Sprint 3 blocker. Chase this week. |
 | Auth edge-cases (OTEP-110, WOG-04/05/06) | Pow Hwee / Leo | May 11 | **NOT on Sprint 2 board.** Confirm Sprint 3 placement at mid-sprint review Mon 26 May. |
-| OTEP-276 design system spike | Thomas | May 13 | **NOT on Sprint 2 board** (OTEP-252 sub-task Done). Confirm if spike is still running or resolved with LifeSG. |
+| ~~OTEP-276 design system spike~~ | Thomas | — | **Resolved** — OTEP-252 Done confirms Flagship/LifeSG adopted. No further action. |
 | QA review session with Rethna | Michelle (doc first) | May 13 | Create Sprint 2 AC summary doc first; schedule session after grooming settles. |
 
 ---
@@ -89,4 +91,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/spr
 
 ---
 
-*Updated: 2026-05-18 — Jira live sync (Sprint 2 board). OTEP-170 back to In Progress; OTEP-252 added as Done; OTEP-288 added as In Progress.*
+*Updated: 2026-05-18 — Jira comment sync. Scope changes applied (OTEP-285 absorbed, OTEP-129/268 re-added, OTEP-191 deprioritised). Three new PM action items added: #28 OTEP-85 visibility, #29 OTEP-289 ACs/timebox, OTEP-128 AC cleanup.*

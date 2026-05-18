@@ -15,3 +15,15 @@ As an  officer,  I want to  view the full details of an opportunity on a dedicat
 ## Subtasks
 
 _No subtasks._
+
+---
+
+## Latest Comments
+
+**Pow Hwee TAN (PSD)** (2026-05-18)
+OTEP-285 ACs (click-through to detail and return-to-page state) are folded into this story: Card click navigates to this detail page. "Back to opportunities" preserves page position via URL query params (?page=N). Consistent ordering guaranteed by Posting Date + ID tie-breaker in OTEP-85. Suggest also splitting the error handling into two distinct ACs: If the opportunity ID does not exist, display "Opportunity not found" with a link back to the listing. If the system cannot load the opportunity (e.g. server error), display a generic error message with a retry option. The AC "display a clear This opportunity is closed notice" overlaps with OTEP-129 which owns open/closed labelling. Suggest removing it from this ticket to avoid double-counting.
+
+---
+
+**Amber Tong** (2026-05-13)
+figma link  here

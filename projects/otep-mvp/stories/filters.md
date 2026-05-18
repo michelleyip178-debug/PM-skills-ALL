@@ -67,7 +67,7 @@ OTEP-276 (design system spike, Thomas) — parallel work, informs FE direction
 
 **Field rendering rules:**
 
-A card needs all mandatory fields to show up. If any mandatory field is missing, the card doesn't appear — the team logs it for review. Officers aren't shown a warning (that's covered by OTEP-268's partial-load AC).
+A card needs all mandatory fields to show up. If any mandatory field is missing, the card doesn't appear — the team logs it for review. Officers aren't shown a warning (partial-load handling removed from OTEP-268 per 2026-05-19 refinement — Tailwind stack renders all-or-nothing).
 
 | Field | Required? | If missing |
 |---|---|---|
@@ -220,43 +220,41 @@ A card needs all mandatory fields to show up. If any mandatory field is missing,
 
 ---
 
-### OTEP-268: Error and partial-load states for the listing — **DEFERRED, UNTICKETED (2026-05-15)**
+### OTEP-268: Error and empty states for the listing — **DEFERRED, UNTICKETED (2026-05-15)**
 
 > **Deferred 2026-05-15.** Removed from Sprint 2 Jira board — unticketed / unplanned. ACs preserved here for future grooming.
 >
-> **Sharpened 2026-05-14.** Empty "no opportunities" state removed from Sprint 2 per grooming feedback — that scenario only matters when filters/search exist (Sprint 3). Sprint 2 originally focused on error handling and card resilience; now deferred.
+> **Refined 2026-05-19 [PH].** Partial-load AC removed — Tailwind stack fetches a single API response; either all cards render or none do. No mechanism for individual cards to fail independently. Good-to-haves (truncation, correlation IDs) spun out as separate low-priority backlog tickets to keep this story closeable. Empty state re-added with confirmed copy.
 
 **As an** officer,
-**I want to** see clear guidance when something goes wrong loading opportunities,
+**I want to** see clear guidance when the opportunities page is empty or fails to load,
 **So that** I'm not confused by a blank or broken page.
 
 **Acceptance Criteria:**
 
 *Must-have:*
-- [ ] **When something goes wrong and the page can't load:** I see "We couldn't load opportunities" with "Something went wrong on our end. Please try again" and a button that lets me retry. The page doesn't just show a blank screen or a confusing error.
-- [ ] **When most opportunities load but a few don't:** I see the ones that loaded normally. I'm not told that some failed — that's handled quietly in the background. The page count still shows the total number of opportunities, not just the ones visible.
-- [ ] **When a card is missing some information** (e.g. no time commitment listed): That piece of information is simply not shown. The card still looks normal — no blank spaces or broken layout.
+- [ ] **When the page loads successfully but there are no opportunities:** I see a heading "No opportunities available right now" and body text "Check back soon — new opportunities are posted regularly." No retry button — this is a valid result, not an error.
+- [ ] **When the page fails to load:** I see a heading "We couldn't load opportunities" and body text "Something went wrong on our end. Please try again." with a "Try again" button that re-fetches. The page doesn't show a blank screen.
 
-*Good-to-have:*
-- [ ] If an agency name is very long, it's shortened with "..." and I can see the full name by hovering over it
+*Not in scope:* Partial-load handling (not possible with current Tailwind stack — API call either succeeds fully or fails). Automatic retries. Agency name truncation (separate backlog ticket). Correlation IDs in error logs (separate backlog ticket).
 
-*Not in scope:* Automatic retries. "No opportunities" empty state (moves to Sprint 3 with filters/search — "no results" for a filter makes sense; "no opportunities at all" doesn't for Sprint 2's unfiltered view).
+**Spun-out backlog items (low priority — do not block this story):**
+- Long agency name truncation with hover tooltip → new low-priority backlog ticket
+- Correlation ID logging on error → new low-priority backlog ticket
 
-**Design decisions made (flag if you disagree):**
-1. When a few cards fail to load, the page doesn't tell the officer — the team logs it instead.
-2. One simple error message covers all failure types — officers don't need to know the technical reason.
-3. Professional, government tone — not casual or playful.
+**Design decisions:**
+1. One simple error message covers all failure types — officers don't need the technical reason.
+2. Empty state has no retry — it's a valid system state, not a failure.
+3. Professional, government tone.
 
 **Subtasks:**
 
 | # | Task | Track | Notes |
 |---|------|-------|-------|
-| 1 | Error state component + retry handler | Frontend | |
-| 2 | Per-card render resilience (try/catch + null-field handling) | Frontend | |
-| 3 | Long agency name truncation + hover tooltip | Frontend | |
-| 4 | Test: error state on 500 + retry works | Test | |
-| 5 | Test: card render with various missing-field combinations | Test | |
-| 6 | Test: partial load — 1 malformed record, others render | Test | |
+| 1 | Error state component + "Try again" re-fetch handler | Frontend | |
+| 2 | Empty state component (no retry) | Frontend | |
+| 3 | Test: error state on 500 + "Try again" re-fetches successfully | Test | |
+| 4 | Test: empty state renders when API returns empty array | Test | |
 
 **Design dependency:** ~~Amber's empty state + error state designs~~ — finalised 2026-05-13
 **Depends on:** OTEP-85 (card component must exist). Can be developed in parallel with OTEP-267.

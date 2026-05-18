@@ -20,29 +20,29 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 
 ## Committed stories
 
-### New stories — Jira status as of 2026-05-18
+### New stories — Jira status as of 2026-05-18 (comment sync)
 
-| Story ID | Title | Jira Status | Owner |
-|---|---|---|---|
-| OTEP-85 | Display opportunity cards with real/mock OTG data | Backlog | — |
-| OTEP-128 | View opportunity detail page | Backlog | — |
-| OTEP-267 | Pagination for the listing page | Backlog | — |
-| OTEP-289 | [Spike] Filter Opportunities by Functions | Backlog | — |
-
-**Removed from Sprint 2 (2026-05-18):**
-- ~~OTEP-285 (Click-through to detail + return-to-page state)~~ — **deferred to Sprint 3.** Click-through state work has nothing to attach to until OTEP-85 (listing) and OTEP-128 (detail) ship. Create the Jira ticket as part of Sprint 3 prep.
-- ~~OTEP-276 ([Spike] Custom design system reimplementation)~~ — **dropped.** Superseded by OTEP-252 (Done) — LifeSG is already integrated into otep-web. Locked in per 2026-05-13 decision.
-
-### In Sprint 2 on Jira — not in original local scope
-
-| Story ID | Title | Jira Status | Owner | Action needed |
+| Story ID | Title | Jira Status | Owner | Notes |
 |---|---|---|---|---|
-| OTEP-170 | Base Layout for Opportunity Listing Page | **In Progress** | Thomas | Was marked done locally (May 15) — MR not closed in Jira yet |
-| OTEP-268 | Empty, error, and partial-load states for listing | Backlog | — | ⚠️ Was deferred from Sprint 2 (decision 2026-05-15) — remove from sprint |
-| OTEP-129 | See whether opportunity is open/closed before applying | Backlog | — | ⚠️ Was absorbed into OTEP-85 (decision 2026-05-14) — close or link |
-| OTEP-191 | Handle credential manager and vault | Backlog | — | Not tracked locally — confirm Sprint 2 scope with Pow Hwee |
-| OTEP-288 | Setup a simple backend endpoint with in-memory list | **In Progress** | Léo | Sub-task (likely OTEP-85 or 128) — not in local context |
-| OTEP-252 | Setup design system in otep-web | **Done** | Thomas | Sub-task of OTEP-276 — design system foundation complete |
+| OTEP-85 | Display opportunity cards with real/mock OTG data | Backlog | — | ⚠️ Visibility rule conflict — PM to confirm (see open item #28) |
+| OTEP-128 | View opportunity detail page | Backlog | — | OTEP-285 ACs absorbed here (Pow Hwee, 2026-05-18). Remove overlapping "closed" AC — owned by OTEP-129. |
+| OTEP-267 | Pagination for the listing page | Backlog | — | API contract dep: GET /opportunities needs total_count in response |
+| OTEP-289 | [Spike] Filter Opportunities by Functions | Backlog | — | ⚠️ No ACs, no timebox — PM action needed (see open item #29) |
+
+**Resolved / dropped:**
+- ~~OTEP-285~~ — **absorbed into OTEP-128** (Pow Hwee, 2026-05-18). Click-through + return-to-page ACs folded in. No Sprint 3 ticket needed.
+- ~~OTEP-276~~ — **resolved** by OTEP-252 Done. Flagship/LifeSG adopted per 2026-05-13 decision.
+
+### In Sprint 2 on Jira
+
+| Story ID | Title | Jira Status | Owner | Notes |
+|---|---|---|---|---|
+| OTEP-129 | See whether opportunity is open/closed before applying | Backlog | — | **Re-added as separate Sprint 2 story** (Pow Hwee, 2026-05-18). Overrides May 14 absorption into OTEP-85. Owns: "Closing soon" badge + deep-link behaviour only. |
+| OTEP-268 | Empty, error, and partial-load states for listing | Backlog | — | **Re-added to Sprint 2** (Pow Hwee, 2026-05-18). Overrides May 15 deferral. AC feedback: drop partial-load AC; good-to-haves as separate tickets. |
+| OTEP-170 | Base Layout for Opportunity Listing Page | **In Progress** | Thomas | MR in progress |
+| OTEP-191 | Handle credential manager and vault | Backlog | — | ⚠️ **Deprioritised to Sprint 3+** (Pow Hwee, 2026-05-14). Still on board — remove. |
+| OTEP-288 | Setup a simple backend endpoint with in-memory list | **In Progress** | Léo | Sub-task of OTEP-170 |
+| OTEP-252 | Setup design system in otep-web | **Done** | Thomas | Sub-task of OTEP-170. Flagship/LifeSG confirmed. |
 
 ### Carry-over from Sprint 1 — Jira status as of 2026-05-18
 
@@ -62,18 +62,21 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 > **Sprint 1 sign-off status (2026-05-15):** Partial. Headline stories done — auth (OTEP-190), explorations, foundation. Auth edge-cases (OTEP-110, WOG-04/05/06) and open item #26 (auth test outcome without AzureAD) carry forward to Sprint 2 / Sprint 3. Confirm placement of WOG-04/05/06 at Sprint 2 mid-sprint review.
 
 ## Scope decisions
-- (2026-05-18) **OTEP-285 deferred to Sprint 3** — click-through + return-state architecture needs OTEP-85 and OTEP-128 to land first; nothing to attach state behaviour to in Sprint 2.
-- (2026-05-18) **OTEP-276 dropped (superseded)** — OTEP-252 (Done) integrates LifeSG into otep-web. Per 2026-05-13 decision, LifeSG is the default; the spike is no longer a live question.
-- (2026-05-15) Sprint 2 reconciled against Jira board: **6 new stories** (OTEP-289 spike added late). *Now 4 new stories after 2026-05-18 removals.*
+- (2026-05-18) **OTEP-285 ACs absorbed into OTEP-128** (Pow Hwee) — click-through + return-to-page state folded into the detail page story. No Sprint 3 ticket needed. Overrides earlier deferral decision.
+- (2026-05-18) **OTEP-129 re-added to Sprint 2 as separate story** (Pow Hwee) — owns "Closing soon" badge + deep-link error state. Overrides May 14 absorption into OTEP-85. Business rule split: OTEP-85 = visibility filter (closing_date > now); OTEP-129 = label + deep-link behaviour.
+- (2026-05-18) **OTEP-268 re-added to Sprint 2** (Pow Hwee) — overrides May 15 deferral. AC feedback: drop partial-load AC (not possible with single API fetch); move good-to-haves to separate backlog tickets.
+- (2026-05-18) **OTEP-191 deprioritised to Sprint 3+** (Pow Hwee) — possibly resolved by AWS infra setup; verify at grooming.
+- (2026-05-18) **OTEP-276 resolved** — OTEP-252 Done confirms Flagship/LifeSG adopted. Spike complete.
+- ~~(2026-05-18) OTEP-285 deferred to Sprint 3~~ — *reversed 2026-05-18: absorbed into OTEP-128 instead.*
+- (2026-05-15) Sprint 2 reconciled against Jira board: **6 new stories** (OTEP-289 spike added late).
 - (2026-05-15) **OTEP-85a re-absorbed into OTEP-85** — "Closing soon" label rolled back into the card story.
-- (2026-05-15) **OTEP-268 (empty/error/partial states) deferred** — unticketed / unplanned for Sprint 2. ACs preserved in [deferred-acs.md](../projects/otep-mvp/deferred-acs.md).
-- ~~(2026-05-15) OTEP-276 added~~ — *reversed 2026-05-18 (see top of list).*
-- (2026-05-14) OTEP-129 absorbed into OTEP-85 (sort, interleave by date).
+- ~~(2026-05-15) OTEP-268 deferred~~ — *reversed 2026-05-18: re-added by Pow Hwee.*
+- ~~(2026-05-14) OTEP-129 absorbed into OTEP-85~~ — *reversed 2026-05-18: re-added by Pow Hwee as separate story.*
 - (2026-05-14) Old OTEP-128 (type badge) absorbed into OTEP-85; OTEP-128 repurposed as Detail Page.
 - (2026-05-14) OTEP-86 (type filter) + US-05 (clear filters) deferred to Sprint 3.
 - Contract-first approach: Pow Hwee, Thomas, Leo aligning on API contracts.
 - ACs written officer-perspective; implementation details in contract sync.
-- **New cut-line (2026-05-18): OTEP-289 spike first, then OTEP-267 (pagination).** Do not cut OTEP-85 or OTEP-128 — they are the end-to-end goal.
+- Cut-line: do not cut OTEP-85 or OTEP-128 — they are the end-to-end goal.
 
 ## Known constraints this sprint
 - [ ] Mon 18 May PM — public holiday + Pow Hwee + Michelle out. Sprint effectively starts Tue 19.
@@ -86,13 +89,14 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 - [ ] Design lock date (#22) not yet set — agree with Amber in Sprint 2 W1.
 - [ ] `formsg_url` (#2) still unconfirmed — Sprint 3 blocker, not Sprint 2.
 
-## Jira board cleanup needed (as of 2026-05-18)
-- [ ] **Remove OTEP-268** from Sprint 2 board — deferred (decision 2026-05-15), still showing in Backlog
-- [ ] **Close or link OTEP-129** — absorbed into OTEP-85 (decision 2026-05-14), still showing in Backlog
+## Jira board cleanup needed (as of 2026-05-18 comment sync)
+- [ ] **Remove OTEP-191** from Sprint 2 board — deprioritised to Sprint 3+ (Pow Hwee, 2026-05-14)
 - [ ] **Add OTEP-192, OTEP-193** to Sprint 2 board — Sprint 2 critical path, not currently showing
 - [ ] **Paste sprint goal into Jira** — still not set as of 2026-05-18
-- [x] ~~Confirm OTEP-285 with Thomas~~ — **resolved 2026-05-18: deferred to Sprint 3.** Create Jira ticket as part of Sprint 3 prep.
-- [x] ~~Confirm OTEP-276 with Thomas~~ — **resolved 2026-05-18: dropped (superseded by OTEP-252).**
+- [x] ~~Remove OTEP-268~~ — **overridden: Pow Hwee re-added to Sprint 2 (2026-05-18)**
+- [x] ~~Close or link OTEP-129~~ — **overridden: Pow Hwee re-added as separate Sprint 2 story (2026-05-18)**
+- [x] ~~Confirm OTEP-285~~ — **resolved: absorbed into OTEP-128 (Pow Hwee, 2026-05-18)**
+- [x] ~~Confirm OTEP-276~~ — **resolved: OTEP-252 Done confirms Flagship adopted**
 - [ ] **Confirm OTEP-202, OTEP-203, OTEP-271** placement — Sprint 2 or Sprint 3 (open item #27)
 
 ## Sprint 2 DoR status
@@ -108,4 +112,4 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 
 ---
 
-*Updated: 2026-05-18 (Jira live sync — statuses, owners, and unexpected tickets reconciled against Sprint 2 board. OTEP-285 deferred to Sprint 3; OTEP-276 dropped — superseded by OTEP-252.).*
+*Updated: 2026-05-18 (Jira comment sync — OTEP-285 absorbed into OTEP-128; OTEP-129 and OTEP-268 re-added to Sprint 2 by Pow Hwee; OTEP-191 deprioritised to Sprint 3+; OTEP-276 resolved. New PM actions: #28 OTEP-85 visibility rule, #29 OTEP-289 ACs/timebox).*

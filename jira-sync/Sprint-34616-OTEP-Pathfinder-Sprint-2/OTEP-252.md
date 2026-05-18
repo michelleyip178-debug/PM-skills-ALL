@@ -15,3 +15,17 @@ As a  developer,  I want to  have access to the Flagship design system,  so that
 ## Subtasks
 
 _No subtasks._
+
+---
+
+## Latest Comments
+
+**Pow Hwee TAN (PSD)** (2026-05-17)
+Work completed via otep-web MR !9 (merged to main).
+
+Details:
+- Added the Flagship design system (react-design-system) from LifeSG.
+- Configured styled-components registry for Next.js server-side rendering.
+- Showcased the installation by implementing the top navigation bar.
+
+Approved by Léo Milbor and Pow Hwee TAN. Marking as Done.
