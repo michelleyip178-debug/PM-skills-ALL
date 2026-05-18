@@ -47,14 +47,12 @@ Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/spr
 
 | Item | Waiting for | Since | Next action |
 |------|-------------|-------|-------------|
-| OTG file import (Excel → OTEP DB) | Pow Hwee | May 4 | OTG has no API (decided 2026-05-14). Depends on #24 (which reports). Michelle sharing reports — **Fri 15 May** if not done Thu 14. |
-| POCDEX account creation (OTEP-72) | Pow Hwee | May 4 | Confirm push mechanism works |
-| `formsg_url` field (#2) | Rama + PSD Ops | May 4 | Last unconfirmed OTG field. Chase after the other 5 were confirmed. |
-| Tue/Fri "squad sync" rename | Jace (PM Weekly 11 May) | May 11 | When confirmed, update `ceremony-prep.md` + `sprint-prep-rhythm.md` |
-| Auth edge-case scope (OTEP-110, WOG-04/05/06) | Sprint 1 finalisation | May 11 | Fri 15 May finalisation decides: carry-over vs Sprint 3 |
-| Design system assessment (OTEP-276) | Thomas | May 13 | Now ticketed as **OTEP-276** — Sprint 2 spike. Investigates custom design system reimplementation. If inconclusive → proceed with LifeSG. |
-| Sprint 1 overflow list | Thomas | Before Sprint 1 finalisation (Fri 15 May) | Which Sprint 1 stories will carry over to Sprint 2? Affects Sprint 2 capacity — Thomas is sole FE. |
-| QA review session with Rethna | Michelle (doc first) | May 13 | Consolidate stories + ACs into a shareable doc, then schedule session. |
+| OTG file import (OTEP-192/193) | Pow Hwee | May 4 | Blocked by #24 (which Excel reports). Michelle to share reports first — **overdue**. |
+| POCDEX account creation (OTEP-72) | Pow Hwee | May 4 | Confirm push mechanism works — bundle into Pow Hwee check-in |
+| `formsg_url` field (#2) | Rama + PSD Ops | May 4 | Last unconfirmed OTG field. Sprint 3 blocker. Chase this week. |
+| Auth edge-cases (OTEP-110, WOG-04/05/06) | Pow Hwee / Leo | May 11 | **NOT on Sprint 2 board.** Confirm Sprint 3 placement at mid-sprint review Mon 26 May. |
+| OTEP-276 design system spike | Thomas | May 13 | **NOT on Sprint 2 board** (OTEP-252 sub-task Done). Confirm if spike is still running or resolved with LifeSG. |
+| QA review session with Rethna | Michelle (doc first) | May 13 | Create Sprint 2 AC summary doc first; schedule session after grooming settles. |
 
 ---
 

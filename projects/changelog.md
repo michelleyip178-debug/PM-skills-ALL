@@ -4,6 +4,25 @@ Track what changed, where, and when. Most recent first within each date.
 
 ---
 
+## 2026-05-18 (stale file sync)
+
+### tasks/active.md
+- Removed stale Waiting On rows: "Sprint 1 overflow list" (resolved) and "Tue/Fri squad sync rename" (pending, no blocker)
+- Updated auth carry-overs row: OTEP-110/WOG-04–06 confirmed NOT on Sprint 2 board; review at mid-sprint Mon 26 May
+- Updated design system row: OTEP-276 not on Sprint 2 board; OTEP-252 sub-task Done — confirm with Thomas if spike is still live
+- Removed OTEP-133 + OTEP-130 from In Progress (deprioritised — Sprint 3/4); moved to Up Next with low-priority label
+- Reordered Up Next by priority for Sprint 2 W1 (groom-prep, #23/#24 chase, OTEP-285 confirm at top)
+- Removed stale date references in Up Next ("before Sprint 2 kickoff Mon 18 May", "Fri 15 May")
+
+### context/risks.md
+- Added "Sprint 2 Jira Board — Cleanup Actions Needed" section: OTEP-268/129 still on board (needs removal), OTEP-192/193/202/203/271/110/WOG stories not on board (needs placement confirm)
+- Updated timestamp to 2026-05-18
+
+### context/current-sprint.md
+- Added "Jira board cleanup needed" checklist with 6 action items: remove OTEP-268/129, add OTEP-192/193, paste sprint goal, confirm OTEP-285, confirm OTEP-202/203/271 placement
+
+---
+
 ## 2026-05-18 (Jira live sync — Sprint 2 board)
 
 ### context/current-sprint.md

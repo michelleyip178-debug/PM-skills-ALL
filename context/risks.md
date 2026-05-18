@@ -38,6 +38,23 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 | Thomas is sole FE developer and fielding dependencies from another squad (standup 13 May) | Single point of failure for all frontend Sprint 2 work (OTEP-85, 267, 268, OTEP-128 detail page). Cross-squad pulls reduce his capacity. OTEP-86/US-05 deferred to Sprint 3 (2026-05-14). | Pow Hwee monitoring; escalate if sprint velocity at risk. Contract-first approach (Pow Hwee, 2026-05-14) decouples FE/BE. |
 | FE and design capacity shared across squads (internal groom 13 May) | Design and frontend resources are not dedicated to OTEP — other squads draw from the same pool. Mid-sprint resource conflicts possible. | Needs alignment with leadership. Dedicated design system story to reduce reliance on single FE dev. Longer-term: engineers own vertical slices (front+back), not strict FE/BE split. |
 
+## Sprint 2 Jira Board — Cleanup Actions Needed
+
+Two stories are on the Sprint 2 Jira board but shouldn't be:
+
+| Story | Issue | Action |
+|---|---|---|
+| OTEP-268 | Deferred from Sprint 2 (decision 2026-05-15) — ACs preserved in `deferred-acs.md` | Remove from Sprint 2 board in Jira |
+| OTEP-129 | Absorbed into OTEP-85 (decision 2026-05-14) | Close or link to OTEP-85 in Jira |
+
+Three carry-over stories are NOT on the Sprint 2 board but may need to be:
+
+| Story | Issue | Action |
+|---|---|---|
+| OTEP-192, OTEP-193 | Data model + file import — Sprint 2 critical path. Not showing on board. | Confirm placement with Pow Hwee |
+| OTEP-202, OTEP-203, OTEP-271 | POCDEX stories — open item #27 unresolved | Confirm Sprint 2 vs Sprint 3 with Pow Hwee / Leo |
+| OTEP-110, WOG-04/05/06 | Auth carry-overs — not on Sprint 2 board | Confirm Sprint 3 placement at mid-sprint review Mon 26 May |
+
 ## Mitigations Already in Place
 
 - OTEP-133 fallback error state covers both null URL scenarios
@@ -47,4 +64,4 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 
 ---
 
-*Updated: 2026-05-15*
+*Updated: 2026-05-18 (Sprint 2 start — Jira board reconciled; cleanup actions added)*

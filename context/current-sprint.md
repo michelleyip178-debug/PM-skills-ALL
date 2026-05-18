@@ -82,6 +82,14 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 - [ ] Design lock date (#22) not yet set — agree with Amber in Sprint 2 W1.
 - [ ] `formsg_url` (#2) still unconfirmed — Sprint 3 blocker, not Sprint 2.
 
+## Jira board cleanup needed (as of 2026-05-18)
+- [ ] **Remove OTEP-268** from Sprint 2 board — deferred (decision 2026-05-15), still showing in Backlog
+- [ ] **Close or link OTEP-129** — absorbed into OTEP-85 (decision 2026-05-14), still showing in Backlog
+- [ ] **Add OTEP-192, OTEP-193** to Sprint 2 board — Sprint 2 critical path, not currently showing
+- [ ] **Paste sprint goal into Jira** — still not set as of 2026-05-18
+- [ ] **Confirm OTEP-285** with Thomas — create ticket or drop from sprint commitment
+- [ ] **Confirm OTEP-202, OTEP-203, OTEP-271** placement — Sprint 2 or Sprint 3 (open item #27)
+
 ## Sprint 2 DoR status
 - [x] Amber's designs finalised (card, pagination, detail page)
 - [x] OTG field questions resolved (5 of 6 — only `formsg_url` open)

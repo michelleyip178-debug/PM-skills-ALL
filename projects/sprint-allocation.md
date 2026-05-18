@@ -2,7 +2,7 @@
 
 **This is the source of truth for which stories are in which sprint.** Other docs (`tasks/story-readiness.md`, `projects/otep-mvp/sprint-checklists.md`, `context/sprint-calendar.md`, the story-group files in `projects/otep-mvp/stories/`) reference this — they don't restate it. Story IDs are reconciled in [story-id-map.md](otep-mvp/story-id-map.md).
 
-**Last updated:** 2026-05-15 (applied 2026-05-15 decisions: refined all 8 Sprint 2 stories including OTEP-192/193 into execution-ready format, identified missing Keyword Search story for Sprint 3).
+**Last updated:** 2026-05-18 (Sprint 2 start — Sprint 1 closed, Sprint 2 stories reconciled against live Jira board).
 **Cadence:** 2-week sprints, Mon start / Fri end, from Mon 4 May 2026. Sprint 1 ran a combined Backlog-Grooming + Sprint-Planning Thursday; from Sprint 2 those split (Backlog Grooming Thu W1, Sprint Planning Thu W2). Dates + ceremonies: [context/sprint-calendar.md](../context/sprint-calendar.md).
 **Feature Freeze:** end of Sprint 8 (Fri 21 Aug) — end of Phase 1, Feature Build · **Go-Live:** end of Sprint 12 (Fri 16 Oct) — end of Phase 2, Compliance & Go-Live (Sprints 9–12).
 
@@ -10,44 +10,35 @@
 
 ---
 
-## Sprint 1 (4–15 May) — CURRENT — Login + Foundation + Discovery/Design
+## Sprint 1 (4–15 May) — CLOSED — Login + Foundation + Discovery/Design
 
 **Sprint goal:** Login and navigate to Jobs and Opportunities. Auth flows end-to-end; OTG → OTEP data pipeline delivering records; C@G ingestion method confirmed; Amber's Hub UI + card designs finalised.
 
-**Jira status (as of 13 May, 16 items):**
+**Final sign-off (2026-05-15): Partial.** Headline auth story done. OTEP-170 MR not merged by close. OTEP-202/203 and data model/pipeline stories carried to Sprint 2. Auth edge-cases (OTEP-110, WOG-04/05/06) not on Sprint 2 board — confirm Sprint 3 placement.
 
-| Jira | Story | Area | Status |
+| Jira | Story | Area | Final Status |
 |------|-------|------|--------|
-| OTEP-209 | Baseline database conventions with team | Foundation | **Done** |
-| OTEP-171 | Frontend repo setup | Foundation | **Done** |
-| OTEP-201 | Create ref table schema migration for local dev | Foundation | **Done** |
-| OTEP-207 | Seed ref tables with POCDEX data for local dev | Foundation | **Done** |
-| OTEP-204 | Seed core entity tables for local dev | Foundation | **Done** |
-| OTEP-224 | Create core entity table schema migration for local dev | Foundation | **Done** |
-| OTEP-223 | Prepare data for OTG ingestion of Oppr types | Epic 4 | **Done** |
-| OTEP-190 | Implement simple authentication through Keycloak | WOG AD | **Done** |
-| OTEP-173 | Exploration: auth flow and tech | WOG AD | **Done** |
-| OTEP-170 | Base layout for Opportunity Listing Page | Epic 4 | **Completing Today** |
-| OTEP-202 | Create POCDEX seed database for local dev | Foundation | In Progress |
-| OTEP-183 | [Spike] POCDEX profile lookup integration pattern | WOG AD | **Done** |
-| OTEP-203 | Implement standalone POCDEX API service to unblock Profile feature team | Foundation | In Progress |
-| OTEP-193 | Design data model for Opportunities | Epic 4 | **Backlog — Sprint 2 blocker** |
-| OTEP-192 | Design recurring job to fetch opportunities data | Epic 4 | **Backlog — Sprint 2 critical blocker** |
-| OTEP-194 | [Discovery/Design] FormSG integration & callback flow | Epic 4 | Backlog |
-| OTEP-251 | Create ER diagram for OTEP data model | — | Backlog |
-
-**Summary:** 9 done, 4 in progress, 4 in backlog. 0 days left (Finalisation Day).
-
-User-story view of the auth work: OTEP-71 (login parent, + subtasks: token handling, session, login UI), OTEP-111 (officers with no access), OTEP-72 (new officer account creation) — all Sprint 1.
-
-**Sprint 2 blockers still open:**
-- **OTEP-193** (data model) — Backlog. OTEP-85 API endpoint needs this.
-- **OTEP-192** (pipeline job) — Backlog. No pipeline = no data = empty Sprint 2 listing.
-- **OTEP-170** (base listing page) — Completing today. Unblocks OTEP-85 for Sprint 2.
-
-**Ships by Fri 15 May:** auth via Keycloak working, base listing page layout, data model designed, POCDEX/FormSG patterns explored. **At risk:** data model and pipeline job haven't started.
-
-**Sprint 1 finalisation (Fri 15 May):** confirm which auth edge-cases (OTEP-110, WOG-04, WOG-05, WOG-06) are done vs carry to Sprint 3.
+| OTEP-209 | Baseline database conventions with team | Foundation | Done |
+| OTEP-171 | Frontend repo setup | Foundation | Done |
+| OTEP-201 | Create ref table schema migration for local dev | Foundation | Done |
+| OTEP-207 | Seed ref tables with POCDEX data for local dev | Foundation | Done |
+| OTEP-204 | Seed core entity tables for local dev | Foundation | Done |
+| OTEP-224 | Create core entity table schema migration for local dev | Foundation | Done |
+| OTEP-223 | Prepare data for OTG ingestion of Oppr types | Epic 4 | Done |
+| OTEP-190 | Implement simple authentication through Keycloak | WOG AD | Done |
+| OTEP-173 | Exploration: auth flow and tech | WOG AD | Done |
+| OTEP-183 | [Spike] POCDEX profile lookup integration pattern | WOG AD | Done |
+| OTEP-170 | Base layout for Opportunity Listing Page | Epic 4 | **Carried → Sprint 2** (MR not merged) |
+| OTEP-202 | Create POCDEX seed database for local dev | Foundation | **Carried → Sprint 2/3** (not on Sprint 2 board) |
+| OTEP-203 | Implement standalone POCDEX API service | Foundation | **Carried → Sprint 2/3** (not on Sprint 2 board) |
+| OTEP-193 | Design data model for Opportunities | Epic 4 | **Carried → Sprint 2** |
+| OTEP-192 | Design recurring job to fetch opportunities data | Epic 4 | **Carried → Sprint 2** |
+| OTEP-194 | [Discovery/Design] FormSG integration & callback flow | Epic 4 | **Carried → Sprint 2** |
+| OTEP-110 | Login fail / clear error | WOG AD | **Carried → Sprint 3** (not on Sprint 2 board) |
+| WOG-04 | Stay logged in during session | WOG AD | **Carried → Sprint 3** (not on Sprint 2 board) |
+| WOG-05 | Log out of OTEP | WOG AD | **Carried → Sprint 3** (not on Sprint 2 board) |
+| WOG-06 | First-time login experience | WOG AD | **Carried → Sprint 3** (not on Sprint 2 board) |
+| OTEP-251 | Create ER diagram for OTEP data model | — | Status unknown — confirm |
 
 ---
 
