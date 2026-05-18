@@ -1,7 +1,7 @@
 # Active Tasks
 
-Current sprint: **Sprint 2 (May 18 – May 31)** — Opportunities Listing → Detail end-to-end.
-Sprint 1 closed 2026-05-15 (partial sign-off — auth edge-cases OTEP-110, WOG-04/05/06 carry forward). Sprint 2 Jira board synced 2026-05-18: **In Progress:** OTEP-170 (Thomas), OTEP-288 (Léo) · **Done:** OTEP-252 (Thomas) · **Backlog:** 10 stories. ⚠️ OTEP-285 not found in Jira — confirm with Thomas.
+Current sprint: **Sprint 2 (May 18 – May 29)** — Opportunities Listing → Detail end-to-end.
+Sprint 1 closed 2026-05-15 (partial sign-off — auth edge-cases OTEP-110, WOG-04/05/06 carry forward). Sprint 2 Jira board synced 2026-05-18: **In Progress:** OTEP-170 (Thomas), OTEP-288 (Léo) · **Done:** OTEP-252 (Thomas) · **Backlog:** 10 stories. **2026-05-18 scope cut:** OTEP-285 deferred to Sprint 3; OTEP-276 dropped (superseded by OTEP-252).
 
 Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
@@ -25,7 +25,8 @@ Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/spr
 
 - [ ] **Run `/groom-prep`** — today (Mon 18 May) before noon; Squad Grooming is tomorrow 10am
 - [ ] **Chase Pow Hwee on #23 + #24** — harmonised data model (OTG + C@G) and which OTG Excel reports to ingest; both block OTEP-192/193
-- [ ] **Confirm OTEP-285 with Thomas** — committed in sprint but not in Jira; create ticket or remove from commitment before grooming
+- [ ] Heads-up to Thomas at standup: OTEP-285 deferred to Sprint 3, OTEP-276 dropped (superseded by OTEP-252). Reduces Sprint 2 load by ~1 story + a spike.
+- [ ] Create OTEP-285 Jira ticket in Sprint 3 prep (carry-over reminder)
 - [ ] **Share OTG opportunity reports (Excel files) with the team** — unblocks #24, OTEP-192, OTEP-193 (overdue — was due Fri 15 May)
 - [ ] **Sharpen ACs for Sprint 2 stories** — OTEP-85, OTEP-128, OTEP-267 before tomorrow's grooming; cross-check [sprint-checklists.md](../projects/otep-mvp/sprint-checklists.md)
 - [ ] Consolidate sprint stories + ACs into a doc for Rethna (ThoughtWorks QA)

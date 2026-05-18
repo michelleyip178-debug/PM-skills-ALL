@@ -42,61 +42,54 @@
 
 ---
 
-## Sprint 2 (18–29 May) — Opportunities Listing Hub
+## Sprint 2 (18–29 May) — CURRENT — Listing → Detail End-to-End
 
-**Sprint goal:** Officers can open OTEP and see every OTG opportunity on one listing page, newest first, published-only.
+**Sprint goal:** By end of Sprint 2, an officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
 
-What it proves: the "one place to see it all" promise works for the OTG side. No filtering, no apply flow, no C@G, no personalisation — those are Sprint 3+.
+### Live Jira status (2026-05-18)
 
-### New stories (6 — reconciled against Jira board 2026-05-15)
+| Jira | Story | Owner | Jira Status | Notes |
+|------|-------|-------|-------------|-------|
+| OTEP-170 | Base Layout for Opportunity Listing Page | Thomas | **In Progress** | MR not merged from Sprint 1. Sub-tasks: OTEP-252 (Done), OTEP-288 (In Progress). |
+| OTEP-252 | Setup design system in otep-web | Thomas | **Done** | Sub-task of OTEP-170. |
+| OTEP-288 | Setup simple backend endpoint with in-memory list | Léo | **In Progress** | Sub-task of OTEP-170. |
+| OTEP-85 | Display opportunity cards with real/mock OTG data | — | Backlog | Critical path — must ship first. 3×5 grid, 15/page. Absorbs OTEP-129 sort + "Closing soon". ⚠️ No assignee. |
+| OTEP-128 | View opportunity detail page | — | Backlog | Repurposed 2026-05-14. Full detail fields, closed/not-found states. ⚠️ No assignee. |
+| OTEP-267 | Pagination for listing page | — | Backlog | 15/page, page indicator. Depends on OTEP-85. ⚠️ No assignee. |
+| OTEP-193 | Design Data Model for Opportunities | **Léo** | Backlog | Owner updated from Pow Hwee — confirm. Sprint 2 blocker for OTEP-85 API. |
+| OTEP-192 | Design recurring job to fetch OTG data (Excel) | — | Backlog | Blocked by open item #24 (which Excel reports). ⚠️ No assignee. |
+| OTEP-194 | [Discovery/Design] FormSG Integration & Callback Flow | Thomas | Backlog | Sprint 3 concern — carried for discovery. |
+| OTEP-191 | Handle credential manager and vault | — | Backlog | Unexpected on board — confirm Sprint 2 scope with Pow Hwee. ⚠️ No assignee. |
+| OTEP-289 | [Spike] Filter Opportunities by Functions | — | Backlog | C@G + OTG function tagging. ⚠️ No assignee. |
+| **OTEP-285** | **Click-through to detail + return-to-page state** | Thomas | **⚠️ NOT IN JIRA** | Committed. Highest-risk story — state persistence architecture. Create ticket or drop from sprint. |
+| **OTEP-276** | **[Spike] Custom design system reimplementation** | Thomas | **⚠️ NOT IN JIRA** | OTEP-252 (sub-task) Done. Confirm if spike is resolved or still running. |
 
-| Jira | Story | Notes |
-|------|-------|-------|
-| OTEP-85 | Display opportunity cards with real/mock OTG data | **Must ship first — rendering foundation.** Absorbs OTEP-129 sort, old OTEP-128 type badge, **and "Closing soon" label (formerly OTEP-85a, re-absorbed 2026-05-15)**. 3x5 grid, 15 cards/page. Field rendering rules. Loading state. |
-| OTEP-285 | Click-through to detail + return-to-page | Split from OTEP-85 (renamed from OTEP-85b 2026-05-15). **Highest-risk story** — state persistence architecture. Fallback: ship without return-to-page. |
-| OTEP-128 | View opportunity detail page | Repurposed 2026-05-14. Full detail fields + closed banner + not-found state. Loading state. No apply (Sprint 3). |
-| OTEP-267 | Pagination for listing page | 15 cards/page. Page indicator (must-have). Hidden on empty. Depends on OTEP-85. |
-| OTEP-276 | [Spike] Investigate custom design system reimplementation | **New (Sprint 2, Thomas).** Confirms or replaces LifeSG as base. Output informs FE direction for remainder of Phase 1. |
-| OTEP-289 | [Spike] Filter Opportunities by Functions | **New (Sprint 2).** C@G and OTG Opportunity Type tagging by Functions. |
+**On Jira board but shouldn't be (cleanup needed):**
+- **OTEP-268** — empty/error/partial-load states. Deferred (2026-05-15). Remove from Sprint 2 board.
+- **OTEP-129** — absorbed into OTEP-85 (2026-05-14). Close or link to OTEP-85.
 
-**Removed from Sprint 2 (2026-05-15):**
-- ~~OTEP-85a~~ — "Closing soon" label re-absorbed into OTEP-85
-- ~~OTEP-268~~ — empty/error/partial-load states deferred / unticketed / unplanned
+### Carry-overs NOT yet on Sprint 2 board (placement TBC)
 
-### Carry-over from Sprint 1 (5)
-
-| Jira | Story | Owner | Notes |
-|------|-------|-------|-------|
-| OTEP-202 | Create POCDEX seed database for local dev | Leo | Needs splitting |
-| OTEP-193 | Design Data Model for Opportunities | Pow Hwee | **Fully Refined** — Sprint 2 blocker. Maps OTG Excel columns to schema. |
-| OTEP-192 | File import job for OTG data (Excel) | Pow Hwee / Leo | **Fully Refined** — Sprint 2 critical blocker. Ingests data, excludes SJR/SGL, upserts records. |
-| OTEP-194 | [Discovery/Design] FormSG Integration & Callback Flow | — | Sprint 3 concern but carried forward |
-| OTEP-183 | [Spike] POCDEX profile lookup integration pattern | Pow Hwee | Needs splitting |
+| Jira | Story | Owner | Action needed |
+|------|-------|-------|---------------|
+| OTEP-202 | Create POCDEX seed database for local dev | Leo | Confirm Sprint 2 vs Sprint 3 (open item #27) |
+| OTEP-203 | Implement standalone POCDEX API service | Pow Hwee | Confirm Sprint 2 vs Sprint 3 (open item #27) |
+| OTEP-271 | Local POCDEX database (container + schema) | Leo | Confirm Sprint 2 vs Sprint 3 (open item #27) |
 
 ### Capacity
 
-- 18 May PM — public holiday + Pow Hwee + Michelle out
+- 18 May PM — public holiday + Pow Hwee + Michelle out. Sprint effectively starts Tue 19.
 - 22 May PM — Leo out
-- Thomas — leave plans pending (asked to confirm)
+- Thomas is sole FE — binding constraint across 4 build stories + OTEP-276 spike
 
-### Deferred from Sprint 2 to Sprint 3
+### Deferred from Sprint 2
 
-- **OTEP-86** (filter by type) → Sprint 3 *(deferred 2026-05-14 to make room for detail page)*
-- **US-05** (clear filters) → Sprint 3 *(pairs with OTEP-86)*
-- **OTEP-129** (sort by posting date) → **absorbed into OTEP-85** (sort, interleave, "Closing soon" label). Closed.
-- ~~**OTEP-128** (type badge on card)~~ → **repurposed as Detail Page** and moved INTO Sprint 2 (2026-05-14)
-- **OTEP-71** (login authentication carry-over) → tracked separately / Sprint 3
-- **OTEP-110** (login fail / clear error) → Sprint 3
-
-### Not in Sprint 2 (unchanged)
-
-- **OTEP-127** ringfencing → Sprint 3
-- **US-18** (apply via FormSG — Internal Jobs, STIPs, Gigs) → Sprint 3
-- ~~**US-19**~~ (apply via OTG for SJR) → **Dropped**
-- **WOG-04 / WOG-05 / WOG-06** auth edge-cases → Sprint 3
-- **Careers@Gov data** → unconfirmed; C@G cards land after ingestion is confirmed
-- **US-03** (category filter) → Sprint 3 at earliest
-- **Search** (keyword) → Sprint 3, needs indexing spike
+- ~~OTEP-85a~~ — "Closing soon" label re-absorbed into OTEP-85
+- ~~OTEP-268~~ — empty/error/partial-load states deferred; ACs preserved in `deferred-acs.md`
+- ~~OTEP-86~~ / ~~US-05~~ → Sprint 3 (deferred 2026-05-14)
+- ~~OTEP-129~~ → absorbed into OTEP-85
+- **OTEP-110, WOG-04/05/06** → Sprint 3 (auth edge-cases, not on Sprint 2 board)
+- **OTEP-202, OTEP-203, OTEP-271** → Sprint 2/3 TBC (POCDEX, open item #27)
 
 ---
 
@@ -205,7 +198,7 @@ No new development. Security review, pen testing, compliance sign-off, go-live r
 
 | Dependency | Owner | Status | Blocks |
 |-----------|-------|--------|--------|
-| WOG AD / Keycloak integration | Pow Hwee + Leo | In progress (Sprint 1) | Everything |
+| WOG AD / Keycloak integration | Pow Hwee + Leo | **Done** — OTEP-190 closed Sprint 1. Auth edge-cases (OTEP-110, WOG-04–06) not on Sprint 2 board; Sprint 3. | Sprint 3 polish |
 | OTG data import (Excel file-based, not API) — schema/fields confirmed | Rama / Pow Hwee | 5 of 6 fields resolved (2026-05-13). Only `formsg_url` still unconfirmed (open item #2). OTG = file import; C@G = API (decided 2026-05-14). | Listing (Sprint 2), Apply (Sprint 3) |
 | POCDEX profile lookup | Eng (spike Sprint 1, OTEP-183) | Discovery | Ringfencing (Sprint 3) |
 | Careers@Gov API integration | Pow Hwee | **Confirmed: API** (open item #11 resolved 2026-05-14) | C@G work (Sprint 5) |

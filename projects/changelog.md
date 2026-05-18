@@ -4,6 +4,16 @@ Track what changed, where, and when. Most recent first within each date.
 
 ---
 
+## 2026-05-18 (sprint-allocation.md update)
+
+### projects/sprint-allocation.md
+- Sprint 1: marked CLOSED; updated final statuses (OTEP-170 carried, OTEP-202/203 carried, auth edge-cases OTEP-110/WOG-04–06 carried to Sprint 3); added partial sign-off note
+- Sprint 2: marked CURRENT; updated sprint goal to match live Jira + context/current-sprint.md version; rebuilt stories table with live Jira statuses (In Progress, Done, Backlog); flagged OTEP-285 and OTEP-276 as missing from Jira board; updated OTEP-193 owner to Léo; added OTEP-191/288 as unexpected board entries; added carry-overs not yet on board (OTEP-202/203/271); added Jira cleanup callout (OTEP-268/129)
+- Key Dependencies: updated WOG AD/Keycloak to Done (Sprint 1 closed)
+- Updated "Last updated" to 2026-05-18
+
+---
+
 ## 2026-05-18 (stale file sync)
 
 ### tasks/active.md
