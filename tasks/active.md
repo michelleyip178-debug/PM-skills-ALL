@@ -17,28 +17,28 @@ Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/spr
 
 **Engineering (Jira):**
 - [ ] **OTEP-170** (Thomas) — Base layout for Opportunity Listing Page. MR in progress — not closed in Jira despite local "done" note from May 15.
-- [ ] **OTEP-288** (Léo) — Setup simple backend endpoint with in-memory list. Sub-task, likely under OTEP-85 or OTEP-128.
-
-**PM tasks:**
-- [ ] Clarify OTEP-133 email deep-link: OTEP auto-sends or manually composed link? Determines notification service scope for MVP (#15) — Sprint 4+, deprioritise this week
-- [ ] Clarify OTEP-130 auto-populate: backend capture only (MVP) or programmatic form pre-fill (R1)? Confirm with Pow Hwee (#14) — Sprint 3, deprioritise this week
+- [ ] **OTEP-288** (Léo) — Setup simple backend endpoint with in-memory list. Sub-task of OTEP-170.
 
 ---
 
 ## Up Next
 
-- [ ] **[Carry-over] OTEP-192 & OTEP-193** — Design data model and file import job (Sprint 2 blockers)
-- [ ] **[Carry-over] OTEP-202 & OTEP-203** — POCDEX seed DB and API service
-- [ ] **[Carry-over] OTEP-271** — Local POCDEX database (container + schema, Leo)
-- [ ] **[Carry-over] OTEP-194** — FormSG integration discovery
-- [ ] Consolidate sprint stories + ACs into a doc for Rethna (ThoughtWorks QA) — she needs this ahead of the QA review session
-- [ ] Run test script review session with Rethna — story by story against AC (happy path, edge cases, error states); log gaps before sign-off
-- [ ] **Sharpen acceptance criteria** for Sprint 2 user stories (Pow Hwee) — groom-ready standard before Sprint 2 kickoff Mon 18 May; cross-check [sprint-checklists.md](../projects/otep-mvp/sprint-checklists.md)
-- [ ] **Share OTG opportunity reports (Excel files) with the team** — unblocks #24, OTEP-192, OTEP-193. If not done before Thu 14 May grooming, complete **Fri 15 May**.
+- [ ] **Run `/groom-prep`** — today (Mon 18 May) before noon; Squad Grooming is tomorrow 10am
+- [ ] **Chase Pow Hwee on #23 + #24** — harmonised data model (OTG + C@G) and which OTG Excel reports to ingest; both block OTEP-192/193
+- [ ] **Confirm OTEP-285 with Thomas** — committed in sprint but not in Jira; create ticket or remove from commitment before grooming
+- [ ] **Share OTG opportunity reports (Excel files) with the team** — unblocks #24, OTEP-192, OTEP-193 (overdue — was due Fri 15 May)
+- [ ] **Sharpen ACs for Sprint 2 stories** — OTEP-85, OTEP-128, OTEP-267 before tomorrow's grooming; cross-check [sprint-checklists.md](../projects/otep-mvp/sprint-checklists.md)
+- [ ] Consolidate sprint stories + ACs into a doc for Rethna (ThoughtWorks QA)
+- [ ] Run test script review session with Rethna — story by story against AC; log gaps before sign-off
 - [ ] Chase Rama on `formsg_url` (#2) — last unconfirmed OTG field. Blocks US-18 (Sprint 3).
+- [ ] **[Carry-over] OTEP-192 & OTEP-193** — Design data model and file import job (Sprint 2 blockers; NOT yet on Sprint 2 board — confirm placement with Pow Hwee)
+- [ ] **[Carry-over] OTEP-202, OTEP-203, OTEP-271** — POCDEX seed DB, API service, local DB — NOT on Sprint 2 board; confirm Sprint 2 vs Sprint 3 placement with Pow Hwee (open item #27)
+- [ ] **[Carry-over] OTEP-194** — FormSG integration discovery (Thomas, in Sprint 2 Backlog)
+- [ ] Clarify OTEP-133 email deep-link: OTEP auto-sends or manually composed link? Determines notification service scope (#15) — Sprint 4+, low priority
+- [ ] Clarify OTEP-130 auto-populate: backend capture only (MVP) or programmatic pre-fill (R1)? Confirm with Pow Hwee (#14) — Sprint 3
 - [ ] Validate categorisation hybrid model (Option C) with Adrian on officer-facing labelling
-- [ ] Load Adrian's OKR doc into the NotebookLM notebook — confirm it isn't already `resources/otep-roadmap-okrs-2627.md`
 - [ ] Loop Diana into opportunities decisions going forward (Jace's call, PM Weekly 11 May); add `areas/stakeholders/people/diana.md`
+- [ ] Load Adrian's OKR doc into NotebookLM — confirm it isn't already `resources/otep-roadmap-okrs-2627.md`
 - [ ] Clarify the "OTG test cases — session notes co-innovation" request, then route to `projects/otg-ops/task-log.md`
 
 ---
