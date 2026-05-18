@@ -1,7 +1,7 @@
 # Active Tasks
 
-Current sprint: **Sprint 2 (May 18 – Jun 1)** — Opportunities Listing → Detail end-to-end.
-Sprint 1 closed 2026-05-15 (partial sign-off — auth edge-cases OTEP-110, WOG-04/05/06 carry forward). Sprint 2 scope per Jira board 2026-05-15: **5 stories** — OTEP-85 (cards, absorbs "Closing soon"), OTEP-128 (detail page), OTEP-267 (pagination), OTEP-285 (click-through + state), OTEP-276 (design system spike — Thomas). Cut-line: OTEP-285 first (highest risk — state architecture).
+Current sprint: **Sprint 2 (May 18 – May 31)** — Opportunities Listing → Detail end-to-end.
+Sprint 1 closed 2026-05-15 (partial sign-off — auth edge-cases OTEP-110, WOG-04/05/06 carry forward). Sprint 2 Jira board synced 2026-05-18: **In Progress:** OTEP-170 (Thomas), OTEP-288 (Léo) · **Done:** OTEP-252 (Thomas) · **Backlog:** 10 stories. ⚠️ OTEP-285 not found in Jira — confirm with Thomas.
 
 Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
@@ -9,12 +9,17 @@ Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/spr
 
 ## This Week's Focus
 
-**Theme:** Sprint 1 finalisation (Fri 15 May). Archive + retro prep after sign-off; clear last Sprint 2 blockers.
+**Theme:** Sprint 2 Week 1 kick-off. Unblock Pow Hwee on data model and file import (#24), run Squad Grooming, lock design lock date (#22) with Amber.
 
 ---
 
 ## In Progress
 
+**Engineering (Jira):**
+- [ ] **OTEP-170** (Thomas) — Base layout for Opportunity Listing Page. MR in progress — not closed in Jira despite local "done" note from May 15.
+- [ ] **OTEP-288** (Léo) — Setup simple backend endpoint with in-memory list. Sub-task, likely under OTEP-85 or OTEP-128.
+
+**PM tasks:**
 - [ ] Clarify OTEP-133 email deep-link: OTEP auto-sends or manually composed link? Determines notification service scope for MVP (#15) — Sprint 4+, deprioritise this week
 - [ ] Clarify OTEP-130 auto-populate: backend capture only (MVP) or programmatic form pre-fill (R1)? Confirm with Pow Hwee (#14) — Sprint 3, deprioritise this week
 
@@ -55,8 +60,9 @@ Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/spr
 
 ## Done This Sprint
 
+- [x] **OTEP-252** — Setup design system in otep-web (Thomas). Done in Jira as of Sprint 2 start. Sub-task of OTEP-276 spike — design system foundation complete.
 - [x] **OTEP-190 — Simple auth through Keycloak** done (Fri 15 May, finalisation day). Closes the Sprint 1 auth goal.
-- [x] OTEP-170 base listing page layout and navbar MR completed (May 15)
+- [ ] ~~OTEP-170 base listing page layout and navbar MR completed (May 15)~~ — **reverted to In Progress** (Jira shows In Progress; MR not yet merged)
 - [x] OTEP-173 (Auth exploration), OTEP-183 (POCDEX spike), and OTEP-223 (OTG data preparation) completed (May 15)
 - [x] Opportunity lifecycle (#17) resolved: date-driven, `closing_date > today` = visible. Pow Hwee agreed. (May 13)
 - [x] Apply-flow decision routed from inbox + CLAUDE.md updated: SJR redirect dropped, Internal Jobs → FormSG (May 13)
@@ -84,4 +90,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/spr
 
 ---
 
-*Updated: 2026-05-15 — Jira reconciliation pass (OTEP-190 done, status sync against Sprint 1 board).*
+*Updated: 2026-05-18 — Jira live sync (Sprint 2 board). OTEP-170 back to In Progress; OTEP-252 added as Done; OTEP-288 added as In Progress.*

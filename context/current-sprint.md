@@ -16,33 +16,46 @@
 ## Sprint goal
 By end of Sprint 2, an officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
 
+> ⚠️ **Sprint goal not set in Jira** (as of 2026-05-18). Paste the above into the Jira sprint before tomorrow's grooming.
+
 ## Committed stories
 
-### New stories (6 — per Jira Sprint 2 board, 2026-05-15)
+### New stories — Jira status as of 2026-05-18
 
-| Story ID | Title | Status | Owner |
+| Story ID | Title | Jira Status | Owner |
 |---|---|---|---|
-| OTEP-85 | Display opportunity cards with real/mock OTG data (absorbs "Closing soon" label — formerly OTEP-85a) | Not started | Thomas (FE) / Pow Hwee (BE) |
-| OTEP-128 | View opportunity detail page | Not started | Thomas (FE) / Pow Hwee (BE) |
-| OTEP-267 | Pagination for the listing page | Not started | Thomas |
-| OTEP-285 | Click-through to detail + return-to-page state | Not started | Thomas |
-| OTEP-276 | [Spike] Investigate custom design system reimplementation | Not started | Thomas |
-| OTEP-289 | [Spike] Filter Opportunities by Functions | Not started | — |
+| OTEP-85 | Display opportunity cards with real/mock OTG data | Backlog | — |
+| OTEP-128 | View opportunity detail page | Backlog | — |
+| OTEP-267 | Pagination for the listing page | Backlog | — |
+| OTEP-285 | Click-through to detail + return-to-page state | ⚠️ **Not found in Jira** | Thomas |
+| OTEP-276 | [Spike] Investigate custom design system reimplementation | ⚠️ **Not found in Jira** (sub-task OTEP-252 Done) | Thomas |
+| OTEP-289 | [Spike] Filter Opportunities by Functions | Backlog | — |
 
-### Carry-over from Sprint 1
+### In Sprint 2 on Jira — not in original local scope
 
-| Story ID | Title | Status | Owner | Reason |
+| Story ID | Title | Jira Status | Owner | Action needed |
 |---|---|---|---|---|
-| OTEP-193 | Design data model for Opportunities | Not started | Pow Hwee | **Sprint 2 blocker** — field confirmations landed late |
-| OTEP-192 | Design recurring job to fetch OTG data | Not started | Pow Hwee | **Sprint 2 critical blocker** — OTG file import architecture clarified May 14 |
-| OTEP-202 | POCDEX seed database (seed data) | In progress at S1 close | Pow Hwee | Carry-over to complete |
-| OTEP-203 | Standalone POCDEX API service | In progress at S1 close | Pow Hwee | Carry-over to complete |
-| OTEP-271 | Local POCDEX database (container + schema) | Not started | Leo | New ticket from OTEP-202 split |
-| OTEP-194 | FormSG integration discovery | Not started | — | Sprint 3 concern, carried forward |
-| OTEP-110 | Login fail / clear error | Carry-over (partial S1 sign-off) | Pow Hwee / Leo | Auth edge-case unresolved at S1 finalisation |
-| WOG-04 | Stay logged in during session | Carry-over (partial S1 sign-off) | Pow Hwee / Leo | Auth edge-case unresolved at S1 finalisation |
-| WOG-05 | Log out of OTEP | Carry-over (partial S1 sign-off) | Pow Hwee / Leo | Auth edge-case unresolved at S1 finalisation |
-| WOG-06 | First-time login experience | Carry-over (partial S1 sign-off) | Pow Hwee / Leo | Auth edge-case unresolved at S1 finalisation |
+| OTEP-170 | Base Layout for Opportunity Listing Page | **In Progress** | Thomas | Was marked done locally (May 15) — MR not closed in Jira yet |
+| OTEP-268 | Empty, error, and partial-load states for listing | Backlog | — | ⚠️ Was deferred from Sprint 2 (decision 2026-05-15) — remove from sprint |
+| OTEP-129 | See whether opportunity is open/closed before applying | Backlog | — | ⚠️ Was absorbed into OTEP-85 (decision 2026-05-14) — close or link |
+| OTEP-191 | Handle credential manager and vault | Backlog | — | Not tracked locally — confirm Sprint 2 scope with Pow Hwee |
+| OTEP-288 | Setup a simple backend endpoint with in-memory list | **In Progress** | Léo | Sub-task (likely OTEP-85 or 128) — not in local context |
+| OTEP-252 | Setup design system in otep-web | **Done** | Thomas | Sub-task of OTEP-276 — design system foundation complete |
+
+### Carry-over from Sprint 1 — Jira status as of 2026-05-18
+
+| Story ID | Title | Jira Status | Owner | Notes |
+|---|---|---|---|---|
+| OTEP-193 | Design data model for Opportunities | Backlog | **Léo** ⚠️ | Local context said Pow Hwee — confirm owner |
+| OTEP-192 | Design recurring job to fetch OTG data | Backlog | — | Still needs #24 (OTG Excel reports) to start |
+| OTEP-194 | FormSG integration discovery | Backlog | **Thomas** | Owner updated from "—" |
+| OTEP-202 | POCDEX seed database | ⚠️ **Not in sprint** | Pow Hwee | Not showing on Sprint 2 board — check placement |
+| OTEP-203 | Standalone POCDEX API service | ⚠️ **Not in sprint** | Pow Hwee | Not showing on Sprint 2 board |
+| OTEP-271 | Local POCDEX database (container + schema) | ⚠️ **Not in sprint** | Leo | Not showing on Sprint 2 board |
+| OTEP-110 | Login fail / clear error | ⚠️ **Not in sprint** | Pow Hwee / Leo | Auth carry-over — not on Sprint 2 board |
+| WOG-04 | Stay logged in during session | ⚠️ **Not in sprint** | Pow Hwee / Leo | Auth carry-over — not on Sprint 2 board |
+| WOG-05 | Log out of OTEP | ⚠️ **Not in sprint** | Pow Hwee / Leo | Auth carry-over — not on Sprint 2 board |
+| WOG-06 | First-time login experience | ⚠️ **Not in sprint** | Pow Hwee / Leo | Auth carry-over — not on Sprint 2 board |
 
 > **Sprint 1 sign-off status (2026-05-15):** Partial. Headline stories done — auth (OTEP-190), explorations, foundation. Auth edge-cases (OTEP-110, WOG-04/05/06) and open item #26 (auth test outcome without AzureAD) carry forward to Sprint 2 / Sprint 3. Confirm placement of WOG-04/05/06 at Sprint 2 mid-sprint review.
 
@@ -82,4 +95,4 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 
 ---
 
-*Updated: 2026-05-15 (Sprint 1 archived end-sprint; Sprint 2 swapped in with reconciled 5-story scope + partial S1 sign-off carry-overs).*
+*Updated: 2026-05-18 (Jira live sync — statuses, owners, and unexpected tickets reconciled against Sprint 2 board).*

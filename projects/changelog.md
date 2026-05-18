@@ -4,6 +4,34 @@ Track what changed, where, and when. Most recent first within each date.
 
 ---
 
+## 2026-05-18 (Jira live sync — Sprint 2 board)
+
+### context/current-sprint.md
+- Rebuilt committed stories tables to reflect live Jira state (statuses, actual owners, unexpected tickets)
+- Flagged: OTEP-285 and OTEP-276 not found on board; OTEP-193 owner is Léo not Pow Hwee; OTEP-268/129 still in sprint despite being deferred/absorbed; OTEP-191/288 added as new unlisted tickets; OTEP-202/203/271/110/WOG-04–06 not showing on Sprint 2 board
+- Added sprint goal reminder to paste into Jira
+
+### tasks/active.md
+- Added OTEP-170 (Thomas, In Progress) and OTEP-288 (Léo, In Progress) to In Progress section
+- Added OTEP-252 (Thomas, Done) to Done This Sprint
+- Reverted OTEP-170 from Done (was incorrectly marked done May 15)
+- Updated header note to reflect live Jira count
+
+---
+
+## 2026-05-18 (Sprint 2 kick-off + Sprint 1 wrap-up)
+
+### Sprint 1 wrap
+- Moved 3 remaining Sprint 1 output files to `outputs/archive/sprint-1/end-sprint/`: `endday-2026-05-15.md`, `retro-brief-2026-05-15.md`, `sprint-2-meetings-2026-05-15.md`
+
+### Sprint 2 context updates
+- `areas/sprint-delivery/sprint-prep-rhythm.md` — replaced Sprint 1 "This Sprint" block with Sprint 2 dates (May 18–29)
+- `tasks/active.md` — updated "This Week's Focus" to Sprint 2 W1 theme (unblock #24, Squad Grooming, design lock date #22)
+- `inbox.md` — cleared "[A] Close off Sprint 1 on 18 May 2026"; updated Ceremony Prep for today/tomorrow
+- New outputs: `outputs/daily-2026-05-18.md`, `outputs/retro-2026-05-18.md`
+
+---
+
 ## 2026-05-15 (Sprint 2 Jira reconciliation)
 
 ### Story ID changes (Sprint 2)

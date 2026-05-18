@@ -20,7 +20,7 @@
 - 
 
 ### From Jira
-- [A] Close off Sprint 1 on 18 May 2026 -done
+- 
 
 ### From Meetings
 - 
@@ -29,8 +29,8 @@
 - 
 
 ### Ceremony Prep
-- **Thu 14 May:** Backlog Grooming + Sprint Planning for Sprint 2 (2pm L11 Anson) — `/groom` then `/sprint-plan-prep` (morning of).
-- **Fri 15 May (today):** Sprint 1 finalisation — after sign-off, run `/archive` then `/retro-prep`.
+- **Mon 18 May (today):** Sprint 2 W1 — check with squad whether Sprint 1 retro/demo runs today or deferred to Tue. Run `/retro` if running today.
+- **Tue 19 May (tomorrow):** Squad Grooming (Sprint 2) — run `/groom` before 9:30am start.
 
 
 

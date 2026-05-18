@@ -32,15 +32,22 @@ Update the dates section at sprint start. The pattern stays the same.
 
 ---
 
-## This Sprint: Sprint 1 (May 4 -- May 15)
+## This Sprint: Sprint 2 (May 18 – May 29)
 
-Currently in **Week 2**. Remaining prep:
+### Week 1
+- [ ] **Mon May 18** — Sprint starts + Retro & Demo (Sprint 1): run `/retro` (if ceremony runs — PH + Michelle out PM). Check with squad.
+- [ ] **Tue May 19** — Squad Grooming (Sprint 2 internal): run `/groom` (morning of)
+- [ ] **Thu May 22** — Backlog Grooming (Sprint 3): run `/groom` (morning of; Leo out PM)
+- [ ] **Fri May 23** — Dependency sync: bring unresolved DoR blockers from sprint-checklists.md
 
-- [x] **Mon May 11** — Mid-Sprint Review: run `/mid-sprint-review`
-- [ ] **Wed May 13** — Prep day: run `/groom-prep` (for Thu grooming + planning)
-- [ ] **Thu May 14** — Backlog Grooming + Sprint Planning: run `/groom` then `/sprint-plan-prep`
-- [ ] **Fri May 15** — Sprint Ends: run `/archive` then `/retro-prep`
-- [ ] **Mon May 18** — Retro + Demo (Sprint 2 starts): run `/retro`
+### Week 2
+- [ ] **Mon May 26** — Mid-Sprint Review: run `/mid-sprint-review`, tick off resolved blockers in sprint-checklists.md
+- [ ] **Wed May 28** — Prep day: check sprint-checklists.md, run `/sprint-plan-prep`
+- [ ] **Thu May 29** — Sprint Planning (Sprint 3): run `/sprint-plan-prep` refresh; populate Sprint 3 section in sprint-checklists.md
+- [ ] **Fri May 30** — Sprint Ends: run `/archive` then `/retro-prep`
+
+### New Sprint Monday
+- [ ] **Mon Jun 1** — Retro + Demo: run `/retro`, fill in Sprint 3 dates + DoR blockers in sprint-checklists.md
 
 ---
 
