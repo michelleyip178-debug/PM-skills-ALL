@@ -20,7 +20,7 @@
 - 
 
 ### From Jira
-- [A] Close off Sprint 1 on 18 May 2026
+- [A] Close off Sprint 1 on 18 May 2026 -done
 
 ### From Meetings
 - 
