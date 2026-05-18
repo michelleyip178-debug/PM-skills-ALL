@@ -24,7 +24,7 @@
 | 21 | Set up Confluence/Jira view for async BO visibility on sprint goals and key tickets | Michelle | Sprint 2 start | BO involvement working agreement (2026-05-11) — BOs need async visibility without attending grooming | 🔴 Open |
 | 22 | Set a design lock date for Sprint 2 — no major design changes after that point | Michelle / Amber | Sprint 2 W1 | Prevents mid-sprint design churn. Screenshots + behavior notes to be attached to Jira. Agreed at internal groom 2026-05-13. | 🔴 Open |
 | 23 | Harmonised data model: confirm it supports both OTG (now) and C@G (later) before finalising OTEP-193 | Pow Hwee | Before Sprint 2 dev | Data model must be extensible. Agreed at internal groom 2026-05-13. | 🔴 Open |
-| 24 | Specify which OTG reports to ingest (STIPs & Gigs, SJR, audience filters, etc.) for OTEP-192 | Michelle / Pow Hwee | Before Sprint 2 dev | Ingestion story needs to name the exact Excel reports and fields. Agreed at internal groom 2026-05-13. | 🔴 Open |
+| 24 | Specify which OTG reports to ingest (STIPs & Gigs, SJR, audience filters, etc.) for OTEP-192 | Michelle / Pow Hwee | Before Sprint 2 dev | Ingestion story needs to name the exact Excel reports and fields. Agreed at internal groom 2026-05-13. | ✅ Resolved |
 | 25 | Profile story split: identify which parts are feasible for Sprint 2 (basic: name, email) vs deferred (competency — depends on another team) | Michelle / Pow Hwee | Sprint 2 planning (Thu 14 May) | Large profile story too big as-is. Only basic auth profile goes into Sprint 2. | 🔴 Open |
 | 26 | Define expected auth test outcome without AzureAD access — team has an alternative tool for testing but expected outcomes need to be explicit | Pow Hwee / Leo | Sprint 2 start | Auth stories (OTEP-71a–d, OTEP-111) can't be finalised without agreement on what "done" looks like in a non-AzureAD test env. Source: Thomas (Slack, 14 May). | 🔴 Open |
 | 27 | **OTEP-271** (local POCDEX DB + seed 5 profiles) — confirm sprint placement: Sprint 2 carry-over vs backlog? Split from **OTEP-202** (Leo): OTEP-271 = infra setup; OTEP-202 = seed data only (Pow Hwee, Sprint 1). Parent OTEP-99. | Michelle / Pow Hwee | Sprint 2 start | Sequences POCDEX vs seed work; affects capacity and OTEP-192/193 dependencies | 🔴 Open |
@@ -48,7 +48,8 @@
 | 12 | Secondment subsumed under SJR (not a distinct type) | Jacky (BO) | 2026-05-13 |
 | 17 | Opportunity lifecycle = date-driven (`closing_date > today`) | Michelle / Pow Hwee | 2026-05-13 |
 | 11 | C@G ingestion = API; OTG ingestion = file import (Excel) | Michelle | 2026-05-14 |
+| 24 | OTG Excel reports shared with Pow Hwee — reports specified for OTEP-192 ingestion | Michelle | 2026-05-18 |
 
 ---
 
-*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-18 (Jira comment sync — added #28 OTEP-85 visibility rule, #29 OTEP-289 spike definition).*
+*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-18 (resolved #24 — OTG Excel reports shared).*
