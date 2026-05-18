@@ -18,15 +18,35 @@ Extract all user stories. For each, identify:
 - Dependencies and open items
 
 ### Step 2 — Score grooming readiness
-| Story ID | Title | Story Format | AC Written | Design Status | Dependencies | Open Items | Ready? |
-|---|---|---|---|---|---|---|---|
+| Story ID | Title | Story Format | AC Written | AC Language | Design Status | Dependencies | Open Items | Ready? |
+|---|---|---|---|---|---|---|---|---|
 
 Scoring: ✅ confirmed | ⚠️ incomplete | ❌ missing
 
+**AC Language check (new column):** For each AC, ask: *"Is this describing what the user sees or can do — or what the system does internally?"*
+
+Flag mechanism-language. Watch for these patterns:
+- "the system will / shall..."
+- "on click, the API calls..."
+- "the field will be populated by..."
+- "the backend returns..."
+- "the component renders..."
+
+These belong in engineering notes, not ACs. Rewrite toward observable user behaviour:
+- ❌ "The API fetches opportunities filtered by type" → ✅ "Officer sees only opportunities matching the selected type"
+- ❌ "The system sets `closing_date` to hide the card" → ✅ "Opportunities past their closing date no longer appear in the listing"
+
 ### Step 3 — Flag risk areas
-Stories Pow Hwee is likely to probe. Cross-check unconfirmed OTG fields
-from CLAUDE.md. Format as:
+Stories Pow Hwee is likely to probe. Cross-check:
+- Unconfirmed OTG fields from CLAUDE.md
+- ACs with conflicting rules (e.g. two ACs that define different behaviour for the same state)
+- ACs where mechanism-language slipped through Step 2
+
+Format as:
 > ⚠️ **[Story ID]** — [Risk] → [Suggested action]
+
+**Pow Hwee's refinement pattern to pre-empt:**
+He will catch (1) AC rule conflicts, (2) mechanism-language in ACs, and (3) tickets that can be folded or reframed. Fix these before grooming — don't discover them in the room.
 
 ### Step 4 — Recommend grooming order
 Prioritise:
@@ -56,6 +76,8 @@ Ready responses for out-of-scope topics that will come up:
 ### Pow Hwee Will Probably Ask...
 Pre-empted tech questions so Michelle isn't caught off guard:
 - [question / edge case]
+
+> **Self-check before closing:** Have you reviewed every AC for mechanism-language? Have you checked for conflicting rules across ACs in the same story? If Pow Hwee raises either of these in the room, that's a prep gap — catch it here first.
 
 ---
 
