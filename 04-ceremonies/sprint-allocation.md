@@ -80,6 +80,7 @@
 
 - 18 May PM — public holiday + Pow Hwee + Michelle out. Sprint effectively starts Tue 19.
 - 22 May PM — Leo out
+- **27 May — Hari Raya Haji public holiday.** 1 dev day lost. Sprint Planning Thu 29 May still on — confirm quorum.
 - Thomas is sole FE — binding constraint across 4 build stories + OTEP-276 spike
 
 ### Deferred from Sprint 2

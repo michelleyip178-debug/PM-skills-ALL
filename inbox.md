@@ -14,13 +14,14 @@
 - 
 
 ### From Teams
-- 
+- [D] OTG ops - The project will pursue a risk acceptance approach rather than implementing PIM — i.e. consciously decide not to implement PIM for now, with documented justification.
+- [A] OTG ops for Michelle to Conduct a risk assessment scoped to the scenario of not having PIM, identifying the worst-case damage if privileged accounts are abused — then submit the residual risk for formal acceptance.
 
 ### From Email
 - [A] Clean up my email inbox
 
 ### From Jira
-- [A] OTEP-129 label: Display "Closing soon" badge on opportunities where closing date is within 7 days.
+- 
 
 ### From Meetings
 - 

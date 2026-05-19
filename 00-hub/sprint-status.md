@@ -44,24 +44,42 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 | OTEP-288 | Setup a simple backend endpoint with in-memory list | **In Progress** | Léo | Sub-task of OTEP-170 |
 | OTEP-252 | Setup design system in otep-web | **Done** | Thomas | Sub-task of OTEP-170. Flagship/LifeSG confirmed. |
 
-### Carry-over from Sprint 1 — Jira status as of 2026-05-18
+### Carry-over from Sprint 1 — staying in Sprint 2
 
 | Story ID | Title | Jira Status | Owner | Notes |
 |---|---|---|---|---|
 | OTEP-193 | Design data model for Opportunities | Backlog | **Léo** ⚠️ | Local context said Pow Hwee — confirm owner |
-| OTEP-192 | Design recurring job to fetch OTG data | Backlog | — | Still needs #24 (OTG Excel reports) to start |
 | OTEP-194 | FormSG integration discovery | Backlog | **Thomas** | Owner updated from "—" |
-| OTEP-202 | POCDEX seed database | ⚠️ **Not in sprint** | Pow Hwee | Not showing on Sprint 2 board — check placement |
-| OTEP-203 | Standalone POCDEX API service | ⚠️ **Not in sprint** | Pow Hwee | Not showing on Sprint 2 board |
-| OTEP-271 | Local POCDEX database (container + schema) | ⚠️ **Not in sprint** | Leo | Not showing on Sprint 2 board |
-| OTEP-110 | Login fail / clear error | ⚠️ **Not in sprint** | Pow Hwee / Leo | Auth carry-over — not on Sprint 2 board |
-| WOG-04 | Stay logged in during session | ⚠️ **Not in sprint** | Pow Hwee / Leo | Auth carry-over — not on Sprint 2 board |
-| WOG-05 | Log out of OTEP | ⚠️ **Not in sprint** | Pow Hwee / Leo | Auth carry-over — not on Sprint 2 board |
-| WOG-06 | First-time login experience | ⚠️ **Not in sprint** | Pow Hwee / Leo | Auth carry-over — not on Sprint 2 board |
 
-> **Sprint 1 sign-off status (2026-05-15):** Partial. Headline stories done — auth (OTEP-190), explorations, foundation. Auth edge-cases (OTEP-110, WOG-04/05/06) and open item #26 (auth test outcome without AzureAD) carry forward to Sprint 2 / Sprint 3. Confirm placement of WOG-04/05/06 at Sprint 2 mid-sprint review.
+### Sprint 3 — confirmed (2026-05-19, Michelle)
+
+| Story ID | Title | Owner | Notes |
+|---|---|---|---|
+| OTEP-192 | Design recurring job to fetch OTG data | — | Moved from Sprint 2 |
+| OTEP-71 | Log in with WOG AD credentials | Pow Hwee / Leo | Auth — open question on agency determination to resolve before grooming |
+| OTEP-110 | Login fail / clear error | Pow Hwee / Leo | ACs being rewritten — DoR pending |
+
+### Unscheduled — Sprint 4+ (moved out of Sprint 3, 2026-05-19)
+
+| Story ID | Title | Notes |
+|---|---|---|
+| WOG-04 | Stay logged in during session | Session timeout TBD |
+| WOG-05 | Log out of OTEP | — |
+| WOG-06 | First-time login experience | Mandatory fields TBD + POCDEX dep |
+| OTEP-202 | POCDEX seed database | Placement TBD |
+| OTEP-203 | Standalone POCDEX API service | Placement TBD |
+| OTEP-271 | Local POCDEX database (container + schema) | Placement TBD |
+| OTEP-86 | Filter by opportunity type | — |
+| US-05 | Clear filters and reset view | — |
+| US-03 | Filter by category | Blocked on OTEP-289 spike output |
+| OTEP-87 | Enhanced detail page (apply CTA + competencies) | Builds on OTEP-128 |
+| US-18 | Apply via FormSG | Blocked on `formsg_url` — open item #2 |
+| OTEP-191 | Credential manager and vault | — |
+
+> **Sprint 1 sign-off status (2026-05-15):** Partial. Headline stories done — auth (OTEP-190), explorations, foundation. Auth edge-cases (OTEP-110, WOG-04/05/06) moved to Sprint 3 (2026-05-19).
 
 ## Scope decisions
+- (2026-05-19) **Sprint 3 locked to 3 stories:** OTEP-192, OTEP-71, OTEP-110. All other previously planned Sprint 3 stories (WOG-04/05/06, OTEP-202/203/271, OTEP-86, US-05, US-03, OTEP-87, US-18, OTEP-191) moved to Sprint 4+. Owner: Michelle.
 - (2026-05-18) **OTEP-285 ACs absorbed into OTEP-128** (Pow Hwee) — click-through + return-to-page state folded into the detail page story. No Sprint 3 ticket needed. Overrides earlier deferral decision.
 - (2026-05-18) **OTEP-129 re-added to Sprint 2 as separate story** (Pow Hwee) — owns "Closing soon" badge + deep-link error state. Overrides May 14 absorption into OTEP-85. Business rule split: OTEP-85 = visibility filter (closing_date > now); OTEP-129 = label + deep-link behaviour.
 - (2026-05-18) **OTEP-268 re-added to Sprint 2** (Pow Hwee) — overrides May 15 deferral. AC feedback: drop partial-load AC (not possible with single API fetch); move good-to-haves to separate backlog tickets.

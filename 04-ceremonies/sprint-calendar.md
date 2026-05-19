@@ -34,8 +34,8 @@
 
 | Sprint | Date | Holiday | Impact |
 |--------|------|---------|--------|
+| S02 | Tue 27 May | Hari Raya Haji | 1 dev day lost. Standup cancelled. Sprint Planning still Thu 29 May — confirm quorum. |
 | S03 | Tue 02 Jun | Vesak Day | 1 dev day lost. Standup cancelled. No ceremony shift. |
-| S06 | Tue 21 Jul | Hari Raya Haji | Tue W2 Squad Sync → Wed 22 Jul. 1 dev day lost. Standup cancelled Tue 21 Jul. |
 | S08 | Mon 10 Aug | National Day (in lieu) | Sprint Start → Tue 11 Aug. Confirm capacity before Planning. |
 | — | Mon 26 Oct | Deepavali | After go-live. No impact. |
 
