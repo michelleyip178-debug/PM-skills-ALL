@@ -50,36 +50,24 @@ I'm actively doing PM work while still building PM muscle. My core tension is mo
 
 ## What This System Is
 
-My PM operating system, built on BASB's CODE + PARA method. Four layers organised by actionability:
-
-1. **Projects** — time-bound work with deliverables (OTEP epics, sprint allocation)
-2. **Areas** — ongoing responsibilities (sprint delivery, stakeholders, PM growth, product ops)
-3. **Resources** — reference material (MVP plan, OKRs, workflows)
-4. **Archive** — inactive items from the above three
-
-Plus two standalone systems: skills/ (PM framework library) and .claude/ (commands, agents, skills).
+My PM operating system, organised by workflow. Seven numbered folders cover the full PM lifecycle — from daily ops to discovery to shipping stories to ceremonies. Each folder is a self-contained prompt bank that works in any AI environment.
 
 ---
 
 ## Folder Structure
 
 ```
-PM-skills-ALL/
-├── inbox.md              ← Single capture point (CODE: Capture)
-├── GOALS.md              ← Identity, ownership, quarterly goals
-├── context/              ← Sprint state (READ BEFORE ANY COMMAND)
-├── tasks/                ← active.md, backlog.md
-├── projects/             ← PARA: Epics, sprint-allocation, PRDs, stories
-├── areas/                ← PARA: Ongoing responsibilities
-│   ├── sprint-delivery/  ← Ceremonies, ceremony-prep, sprint-prep-rhythm
-│   ├── stakeholders/     ← People profiles (Adrian, Jace, etc.)
-│   ├── pm-growth/        ← Skill gaps, habit card, day-in-the-life
-│   └── product-ops/      ← Company, product, team context
-├── resources/            ← PARA: Reference material, workflows
-├── archive/              ← PARA: Past meetings, sprint outputs
-├── skills/               ← Dean + Pawel + NotebookLM + SKILL-INDEX.md
-├── outputs/              ← Current sprint generated briefs
-└── .claude/              ← Commands, agents, skills
+PM-skills-ALL-1/
+├── inbox.md                    ← Single capture point
+├── GOALS.md                    ← Identity, ownership, quarterly goals
+├── 00-hub/                     ← Daily ops: sprint status, tasks, outputs
+├── 01-discovery/               ← Discovery cycle: Problem Framing → Synthesis → OST
+├── 02-prd/                     ← PRD writing, epic hypothesis, Confluence API (pending)
+├── 03-stories/                 ← Story grooming, Jira scripts, story files
+├── 04-ceremonies/              ← Ceremony prep, sprint rhythm, meeting archive
+├── 05-prototypes/              ← Feature ideation (6-idea generator), UI brief handoff
+├── 06-skills-and-decisions/    ← Skills library, decisions log, OTEP context
+└── .claude/                    ← Commands, agents, skills (untouched)
 ```
 
 ---
@@ -88,10 +76,10 @@ PM-skills-ALL/
 
 **Before running any command, read these files:**
 - `inbox.md` — any unprocessed captures needing triage
-- `context/current-sprint.md` — sprint number, goal, dates, committed stories
-- `context/open-items.md` — unresolved items needing owner/deadline
-- `context/decisions-log.md` — scope/design decisions with date and rationale
-- `context/risks.md` — active blockers, OTG field gaps, cross-team dependencies
+- `00-hub/sprint-status.md` — sprint number, goal, dates, committed stories
+- `00-hub/open-items.md` — unresolved items needing owner/deadline
+- `06-skills-and-decisions/decisions-log.md` — scope/design decisions with date and rationale
+- `00-hub/risks.md` — active blockers, OTG field gaps, cross-team dependencies
 
 ---
 
@@ -127,7 +115,7 @@ Slash commands for daily PM workflows. These live in `.claude/commands/`.
 | `/scan` | As needed | Document health: contradictions, undefined reqs, sign-off gaps |
 | `/archive` | Mid-sprint + end-sprint | Snapshot context files, move outputs to archive |
 
-All commands work from local files (context/, projects/, tasks/, areas/).
+All commands work from local files (00-hub/, 03-stories/, 04-ceremonies/, 06-skills-and-decisions/).
 
 ---
 
@@ -160,7 +148,7 @@ Two libraries. Always check these before defaulting to generic answers.
 - **Dean Peters** — guided thinking, structured frameworks, end-to-end workflows
 - **Pawel Huryn** — fast, sharp outputs, slash commands to chain into a workflow
 
-**Full routing tables:** `skills/SKILL-INDEX.md`
+**Full routing tables:** `06-skills-and-decisions/SKILL-INDEX.md`
 
 ---
 
@@ -180,19 +168,19 @@ Two libraries. Always check these before defaulting to generic answers.
 | Weekly stakeholder email | `weekly-update` skill |
 | Write a PRD section | `draft-prd-section` skill |
 | Synthesize research | `synthesize-research` skill |
-| Check scope creep | Review `context/decisions-log.md` + MVP guardrails below |
+| Check scope creep | Review `06-skills-and-decisions/decisions-log.md` + MVP guardrails below |
 
 ---
 
 ## How to Work With Me
 
-**When I ask about a project:** Check `projects/otep-mvp/` first. Check `resources/otep-mvp-release.md` for the sprint plan. For story ID confusion, check `projects/otep-mvp/story-id-map.md`.
+**When I ask about a project:** Check `03-stories/otep-stories/` for user stories. Check `02-prd/otep-mvp-release.md` for the sprint plan. For story ID confusion, check `03-stories/story-id-map.md`.
 
-**When I'm preparing for a meeting:** Look in `archive/meetings/` for past notes, and `areas/stakeholders/people/` for attendee profiles.
+**When I'm preparing for a meeting:** Look in `04-ceremonies/archive-meetings/` for past notes, and `06-skills-and-decisions/stakeholders/people/` for attendee profiles.
 
-**When I need to make a decision:** Reference `GOALS.md` for my priorities and success metrics. Check `context/decisions-log.md` for past decisions.
+**When I need to make a decision:** Reference `GOALS.md` for my priorities and success metrics. Check `06-skills-and-decisions/decisions-log.md` for past decisions.
 
-**When I'm writing user stories:** Check `projects/` for existing stories and numbering. Use the `pm-reviewer` agent to check quality.
+**When I'm writing user stories:** Check `03-stories/otep-stories/` for existing stories and numbering. Use the `pm-reviewer` agent to check quality.
 
 **When I'm stuck:** Ask me clarifying questions. I value being challenged.
 
@@ -215,7 +203,7 @@ I do NOT own facilitation — Rama facilitates ceremonies.
 
 ### Pre-Ceremony Prep Rhythm
 
-Two reference files in `areas/sprint-delivery/`:
+Two reference files in `04-ceremonies/`:
 - **`ceremony-prep.md`** — what to bring and how long to prep for each ceremony
 - **`sprint-prep-rhythm.md`** — when to run each prep command, with a date-filled checklist per sprint
 
@@ -263,7 +251,7 @@ Two reference files in `areas/sprint-delivery/`:
 
 ## Decisions
 
-All scope and design decisions are logged in `context/decisions-log.md`.
+All scope and design decisions are logged in `06-skills-and-decisions/decisions-log.md`.
 When making or revisiting a decision, update that file with: date, decision, rationale, owner.
 
 ---
@@ -274,7 +262,7 @@ When making or revisiting a decision, update that file with: date, decision, rat
 - Acceptance criteria: testable bullet points starting with a verb
 - Avoid BA language ("the system shall") — use outcome-oriented phrasing
 - Mark deferred items inline as **(R1)**
-- Output all briefs as markdown, saved to `outputs/` with date in filename
+- Output all briefs as markdown, saved to `00-hub/outputs/` with date in filename
 
 ---
 
