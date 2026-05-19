@@ -14,10 +14,7 @@ As a user, I should be able to Jobs & Opportunities landing page when I click on
 
 ## Subtasks
 
-| Key | Summary | Status |
-|-----|---------|--------|
-| OTEP-252 | Setup design system in otep-web | Done |
-| OTEP-288 | Setup a simple backend endpoint with in-memory list | In Progress |
+_No subtasks._
 
 ---
 

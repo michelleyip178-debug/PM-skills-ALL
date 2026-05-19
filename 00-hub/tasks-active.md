@@ -3,7 +3,7 @@
 Current sprint: **Sprint 2 (May 18 – May 29)** — Opportunities Listing → Detail end-to-end.
 Sprint 1 closed 2026-05-15 (partial sign-off). Jira comment sync 2026-05-18: **In Progress:** OTEP-170 (Thomas), OTEP-288 (Léo) · **Done:** OTEP-252 (Thomas) · **Backlog:** OTEP-85, OTEP-128, OTEP-129, OTEP-267, OTEP-268, OTEP-289, OTEP-192, OTEP-193, OTEP-194. **Scope changes:** OTEP-285 absorbed into OTEP-128 (no Sprint 3 ticket); OTEP-129 and OTEP-268 re-added to Sprint 2 by Pow Hwee; OTEP-191 deprioritised to Sprint 3+; OTEP-276 resolved.
 
-Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
+Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
 ---
 
@@ -30,7 +30,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/spr
 - [ ] **[PM action — #29] Define OTEP-289 ACs, timebox, expected outcome** — Pow Hwee asking: what is the output of the spike (written recommendation, prototype, other)? How long is it timeboxed? Groom this tomorrow.
 - [ ] **[PM action] Clean OTEP-128 AC** — remove "This opportunity is closed" notice AC from OTEP-128 (it belongs to OTEP-129). Raise with Pow Hwee at grooming.
 - [ ] **Heads-up to Thomas: OTEP-285 absorbed into OTEP-128, OTEP-276 resolved.** No new Sprint 3 ticket needed for OTEP-285.
-- [ ] **Sharpen ACs for Sprint 2 stories** — OTEP-85, OTEP-128, OTEP-267 before tomorrow's grooming; cross-check [sprint-checklists.md](../projects/otep-mvp/sprint-checklists.md)
+- [ ] **Sharpen ACs for Sprint 2 stories** — OTEP-85, OTEP-128, OTEP-267 before tomorrow's grooming; cross-check [sprint-checklists.md](../04-ceremonies/sprint-checklists.md)
 - [ ] Consolidate sprint stories + ACs into a doc for Rethna (ThoughtWorks QA)
 - [ ] Run test script review session with Rethna — story by story against AC; log gaps before sign-off
 - [ ] Chase Rama on `formsg_url` (#2) — last unconfirmed OTG field. Blocks US-18 (Sprint 3).
@@ -40,8 +40,8 @@ Story pipeline tracking lives in [sprint-checklists.md](../projects/otep-mvp/spr
 - [ ] Clarify OTEP-133 email deep-link: OTEP auto-sends or manually composed link? Determines notification service scope (#15) — Sprint 4+, low priority
 - [ ] Clarify OTEP-130 auto-populate: backend capture only (MVP) or programmatic pre-fill (R1)? Confirm with Pow Hwee (#14) — Sprint 3
 - [ ] Validate categorisation hybrid model (Option C) with Adrian on officer-facing labelling
-- [ ] Loop Diana into opportunities decisions going forward (Jace's call, PM Weekly 11 May); add `areas/stakeholders/people/diana.md`
-- [ ] Load Adrian's OKR doc into NotebookLM — confirm it isn't already `resources/otep-roadmap-okrs-2627.md`
+- [ ] Loop Diana into opportunities decisions going forward (Jace's call, PM Weekly 11 May); add `06-skills-and-decisions/stakeholders/people/diana.md`
+- [ ] Load Adrian's OKR doc into NotebookLM — confirm it isn't already `06-skills-and-decisions/otep-roadmap-okrs-2627.md`
 - [ ] Clarify the "OTG test cases — session notes co-innovation" request, then route to `projects/otg-ops/task-log.md`
 
 ---

@@ -64,7 +64,7 @@ Login with WOG AD Authentication. Opportunities discoverable in one place across
 - Phase 2 Compliance & Go-Live — Sprints 9–12 (24 Aug – 16 Oct): security review, pen testing, sign-offs, UAT, launch
 - Target ship: **Fri 16 Oct 2026**
 
-See [context/sprint-calendar.md](context/sprint-calendar.md) (dates + ceremonies) and [projects/sprint-allocation.md](projects/sprint-allocation.md) (stories per sprint). [otep-mvp-release.md](resources/otep-mvp-release.md) has the dependency map and scope decisions (its sprint breakdown is now out of date).
+See [04-ceremonies/sprint-calendar.md](04-ceremonies/sprint-calendar.md) (dates + ceremonies) and [04-ceremonies/sprint-allocation.md](04-ceremonies/sprint-allocation.md) (stories per sprint). [otep-mvp-release.md](02-prd/otep-mvp-release.md) has the dependency map and scope decisions (its sprint breakdown is now out of date).
 
 **Status:** 🟡 In Progress — Sprint 1 (4–15 May)
 

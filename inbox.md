@@ -1,7 +1,7 @@
 # Inbox
 
 > Everything enters here. Nothing stays longer than 24 hours.
-> Capture under a channel header in **Raw Capture**, then triage: tag each item `[D]` decision · `[A]` action · `[Q]` open question · `[I]` info, and move it to its destination (`tasks/`, `projects/`, `context/`) or delete.
+> Capture under a channel header in **Raw Capture**, then triage: tag each item `[D]` decision · `[A]` action · `[Q]` open question · `[I]` info, and move it to its destination (`00-hub/tasks-active.md`, `03-stories/`, `00-hub/open-items.md`) or delete.
 > The **Triaged — pending routing** section below holds tagged items waiting to be moved out — clear it daily. After each triage pass, log what you routed / deleted in [changelog.md](changelog.md) so the history isn't lost.
 
 ---
@@ -29,8 +29,9 @@
 - 
 
 ### Ceremony Prep
-- **Mon 18 May (today):** Sprint 2 W1 — check with squad whether Sprint 1 retro/demo runs today or deferred to Tue. Run `/retro` if running today.
-- **Tue 19 May (tomorrow):** Squad Grooming (Sprint 2) — run `/groom` before 9:30am start.
+- **Mon 18 May:** Sprint 2 W1 — Sprint 1 retro/demo deferred (PH + Michelle out). Check with squad.
+- **Tue 19 May (today):** Squad Grooming (Sprint 2 internal) — run `/groom` before 9:30am. ⚠️ Resolve #28 + #29 BEFORE the session.
+- **Wed 20 May (tomorrow):** Prep day — run `/groom-prep` in the afternoon to catch AC gaps before Thu Backlog Grooming (Sprint 3).
 
 
 

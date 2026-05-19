@@ -32,6 +32,6 @@ Rama facilitates ceremonies. Michelle leads content.
 
 ## Communication Norms
 
-- Decisions: logged in [context/decisions-log.md](../../context/decisions-log.md)
-- Open items: tracked in [context/open-items.md](../../context/open-items.md)
+- Decisions: logged in [decisions-log.md](../decisions-log.md)
+- Open items: tracked in [open-items.md](../../00-hub/open-items.md)
 - TODO: where we Slack vs. doc, async vs. sync defaults

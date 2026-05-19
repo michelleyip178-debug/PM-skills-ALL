@@ -1,7 +1,7 @@
 # Daily PM Focus
 
 Your job is to give Michelle a clear, actionable start to her day — oriented in 15 minutes, ready to unblock in standup.
-Read CLAUDE.md, context/current-sprint.md, context/open-items.md, and tasks/active.md before generating output.
+Read CLAUDE.md, 00-hub/sprint-status.md, 00-hub/open-items.md, and 00-hub/tasks-active.md before generating output.
 
 ---
 
@@ -10,28 +10,27 @@ Read CLAUDE.md, context/current-sprint.md, context/open-items.md, and tasks/acti
 ### Step 0 — Schedule, recent activity, and live sprint state
 
 **Calendar:** If Google Calendar MCP is connected, fetch today's and tomorrow's events.
-Cross-reference meeting attendees with `areas/stakeholders/people/` profiles.
+Cross-reference meeting attendees with `06-skills-and-decisions/stakeholders/people/` profiles.
 If no calendar MCP: note "Calendar not connected" and skip the schedule section.
 
 **Recent activity:** Run `git log --since="yesterday" --name-only --pretty=format:""` to surface
 files changed in the last 24-48 hours. Use this to populate "Recently Completed."
 
-**Live sprint state (Jira):** Run `./scripts/jira-sprint.sh` to pull the active Pathfinder sprint.
-Extract: sprint name, dates, goal, counts by status, anyone with multiple In Progress items (WIP risk),
-and any stories still in Backlog during sprint week 2.
-If the script fails, note "Jira fetch failed — using local context only" and continue.
+**Jira sync:** Run `python3 03-stories/scripts/jira-sync.py` to refresh story data and detect changes since yesterday's daily.
+- The script reads credentials from `03-stories/.env`. If that file is missing, note "Jira sync failed — .env not found in 03-stories/" and continue.
+- The script overwrites per-issue files in `03-stories/jira-sync/Sprint-*/` and writes `.changes.md` with a diff of what changed (status, assignee, new comments, new stories).
+- If the script fails for any other reason, note "Jira sync failed — using stale data" and continue.
 
-**Jira sync:** Run `python3 scripts/jira-sync.py` to refresh story data and detect changes since yesterday's daily.
-- The script overwrites per-issue files in `jira-sync/Sprint-*/` and writes `.changes.md` with a diff of what changed (status, assignee, new comments).
-- If the script fails, note "Jira sync failed — using stale data" and continue.
+**Live sprint state (Jira):** Run `bash 03-stories/scripts/jira-sprint.sh` to pull the active sprint summary.
+If the script fails, derive counts from the jira-sync files instead.
 
-**Sprint story detail:** Read per-issue markdown files from the most recent `jira-sync/Sprint-*/` folder.
+**Sprint story detail:** Read per-issue markdown files from the most recent `03-stories/jira-sync/Sprint-*/` folder.
 For each story extract: key, title, status, assignee, story points, and the first 2 sentences of the description.
-Cross-reference against `context/current-sprint.md` committed stories — flag any missing from jira-sync.
+Cross-reference against `00-hub/sprint-status.md` committed stories — flag any present in jira-sync but missing from sprint-status, or vice versa.
 Flag: no assignee, no story points, Backlog in sprint week 2.
 If the folder doesn't exist: note "Story detail not available" and skip.
 
-**Story changes:** Read `jira-sync/Sprint-*//.changes.md`. Populate the Story Changes section from it verbatim. If "No story changes since last sync", say so — don't skip the section.
+**Story changes:** Read `03-stories/jira-sync/Sprint-*/.changes.md`. Populate the Story Changes section from it verbatim. If "No story changes since last sync", say so — don't skip the section.
 
 **Standup lens:** Based on in-progress stories and PM-owned blockers (see Step 2), generate 2–3 bullets
 on what to actively listen for in today's standup. Focus on:
@@ -41,10 +40,10 @@ on what to actively listen for in today's standup. Focus on:
 
 ### Step 1 — Identify today's ceremony and write prep to inbox
 
-Read `areas/sprint-delivery/sprint-prep-rhythm.md` and check the "This Sprint" checklist against today's date.
+Read `04-ceremonies/sprint-prep-rhythm.md` and check the "This Sprint" checklist against today's date.
 If today has a ceremony prep entry:
 1. Note which commands to run and when
-2. Append to `inbox.md` `## Raw Capture` under `### Ceremony Prep`:
+2. Append to `inbox.md` under `### Ceremony Prep`:
    `- [Ceremony name]: run [command(s)] — [timing]`
    If the entry already exists for today, skip to avoid duplicates.
 3. Flag it prominently in the output
@@ -55,11 +54,11 @@ Also check if tomorrow has a ceremony — mention as a heads-up, don't write to 
 
 This is the most important step for sprint health. Identify everything Michelle is blocking.
 
-From `context/open-items.md`:
+From `00-hub/open-items.md`:
 - Items where Owner includes "Michelle" that are still 🔴 Open
 - Items overdue with Michelle as owner
 
-From `tasks/active.md` Waiting On:
+From `00-hub/tasks-active.md` Waiting On:
 - Rows where the "Next action" requires Michelle to act (not waiting on someone else)
 - Items stale >3 days where Michelle owns the next move
 
@@ -67,14 +66,14 @@ These form the **PM-Owned Blockers** section. If nothing, say "No PM-owned block
 
 ### Step 3 — Surface sprint-blocking open items
 
-From `context/open-items.md`, identify items (owned by anyone) that are:
+From `00-hub/open-items.md`, identify items (owned by anyone) that are:
 - Overdue
 - Due today or tomorrow
 - Blocking a story currently In Progress or needed before next ceremony
 
 ### Step 4 — Surface active tasks
 
-From `tasks/active.md`:
+From `00-hub/tasks-active.md`:
 - **In Progress** — what's actively being worked on (PM and engineering)
 - **Up Next** — queued and ready to start
 - **Waiting On** — items blocked on someone else; flag anything stale >3 days
@@ -98,7 +97,7 @@ One short nudge (1–2 sentences) connecting today's work to one growth area.
 
 ## Output format
 
-Save as: `outputs/daily-YYYY-MM-DD.md`
+Save as: `00-hub/outputs/daily-YYYY-MM-DD.md`
 
 ---
 ## Daily Focus — [Date]
@@ -138,7 +137,7 @@ Before standup, listen for:
 - **[KEY]:** [first 2 sentences of description]
 
 ### Story Changes Since Last Sync
-From `jira-sync/.changes.md` — what moved since yesterday's daily run:
+From `03-stories/jira-sync/Sprint-*/.changes.md` — what moved since yesterday's daily run:
 
 | Story | Change | Detail |
 |---|---|---|

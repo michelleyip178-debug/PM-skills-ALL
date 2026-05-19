@@ -8,7 +8,7 @@
 
 ## Description
 
-No description provided.
+Acceptance Criteria GET /v1/opportunities?offset=X&limit=Y returns a JSON array of at least 10 hardcoded opportunity objects, each with: id, title, agency, opportunity_type, posted_date, deadline, status, is_closing_soon, location Response envelope: {"data": [...], "total_count": N, "offset": X, "limit": Y}. Frontend owns page calculation. In-memory data must cover all 4 opportunity types (STIP, Gig, Secondment, SJR) — at least 2 of each.
 
 ---
 

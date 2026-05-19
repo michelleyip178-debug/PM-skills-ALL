@@ -27,7 +27,7 @@
 - New requests go in Active with the date they came in and who asked
 - When done, move to Completed with the completion date
 - Review at sprint boundaries — patterns here inform OTEP transition planning (e.g. "we get 5 access review requests per month" is useful data for OTEP's admin story scoping)
-- High-severity items should also go in `tasks/active.md` if they need same-day attention
+- High-severity items should also go in `00-hub/tasks-active.md` if they need same-day attention
 
 ---
 

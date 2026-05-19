@@ -17,7 +17,7 @@ Get the facts before planning the next one. What overflows directly affects capa
 | Are there Sprint N blockers that become Sprint N+1 blockers if they don't land by Friday? | Squad | Identify which carry-over items are on the critical path |
 | Any decisions from Sprint N that change what we planned for Sprint N+1? | Michelle | Scope shifts, field confirmations, stakeholder direction changes |
 
-**Output:** Carry-over list with estimated days. Update `context/current-sprint.md` carry-over table.
+**Output:** Carry-over list with estimated days. Update `00-hub/sprint-status.md` carry-over table.
 
 ---
 
@@ -121,11 +121,11 @@ Format: "[Topic] — that's Sprint N+2 / R1. Logging it, not grooming it."
 
 ## After Grooming
 
-- [ ] Update `context/current-sprint.md` with confirmed Sprint N+1 scope
-- [ ] Update `projects/sprint-allocation.md` if stories moved
-- [ ] Log decisions in `context/decisions-log.md`
-- [ ] Add new open items to `context/open-items.md`
-- [ ] Update `projects/otep-mvp/sprint-checklists.md` with DoR status
+- [ ] Update `00-hub/sprint-status.md` with confirmed Sprint N+1 scope
+- [ ] Update `04-ceremonies/sprint-allocation.md` if stories moved
+- [ ] Log decisions in `06-skills-and-decisions/decisions-log.md`
+- [ ] Add new open items to `00-hub/open-items.md`
+- [ ] Update `04-ceremonies/sprint-checklists.md` with DoR status
 - [ ] Share committed stories + ACs with Rethna for QA review prep
 
 ---

@@ -59,8 +59,7 @@ PM-skills-ALL-1/
 │   ├── ceremony-prep.md           What to bring + prep time per ceremony
 │   ├── sprint-prep-rhythm.md      Command schedule per sprint week
 │   ├── sprint-allocation.md       Sprint plan (Sprints 1–11)
-│   ├── sprint-cadence-framework.md
-│   ├── sprint-boundary/           Close sprint → update → open new sprint
+│   ├── sprint-boundary.md         Close sprint → update → open new sprint (13 steps)
 │   ├── story-pipeline/            (reference copy)
 │   ├── weekly-stakeholder-update/ Weekly email workflow
 │   ├── post-meeting-capture/      D/A/Q triage workflow

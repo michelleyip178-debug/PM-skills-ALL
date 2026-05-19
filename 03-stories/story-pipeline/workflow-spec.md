@@ -113,7 +113,7 @@ Create ticket in Jira. Link Confluence one-pager. Story is now the engineering t
 
 ## Tracking
 
-In `projects/otep-mvp/stories/index.md` (the story index), the DoR column tracks pipeline stage:
+In `03-stories/otep-stories/` (the story index), the DoR column tracks pipeline stage:
 - Pending = Draft or earlier
 - In progress = Stages 2–4
 - Ready = DoR met

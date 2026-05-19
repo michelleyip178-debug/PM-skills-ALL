@@ -33,8 +33,8 @@ Review the output. For each story:
 ## After the session (5 min)
 
 - Update the story files with new edge cases and AC refinements from the discussion
-- Add open questions to `context/open-items.md` with owner and deadline
-- Log any scope decisions to `context/decisions-log.md`
+- Add open questions to `00-hub/open-items.md` with owner and deadline
+- Log any scope decisions to `06-skills-and-decisions/decisions-log.md`
 - Update the index: stories that advanced → DoR: In progress
 
 ## Done when

@@ -8,7 +8,7 @@ Reach for **Pawel Huryn** when you need fast, sharp outputs or slash commands to
 ---
 
 ## LIBRARY 1: Dean Peters
-**Path:** ~/Documents/PM-skills-ALL/skills/dean/skills/
+**Path:** ~/Documents/PM-skills-ALL-1/06-skills-and-decisions/dean/skills/
 **Usage:** Read skills/<skill-name>/SKILL.md then apply it
 
 ### Discovery & Problem Framing
@@ -68,7 +68,7 @@ Reach for **Pawel Huryn** when you need fast, sharp outputs or slash commands to
 ---
 
 ## LIBRARY 2: Pawel Huryn
-**Path:** ~/Documents/PM-skills-ALL/skills/pawel/
+**Path:** ~/Documents/PM-skills-ALL-1/06-skills-and-decisions/pawel/
 **Plugin path:** <plugin>/skills/<skill>/SKILL.md
 **Command format:** /<plugin>:<command>
 

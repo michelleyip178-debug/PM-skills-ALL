@@ -1,112 +1,154 @@
 # Grooming Briefing — 19 May 2026
+**Sprint 2 Week 1 — Squad Grooming (internal)**
+**Target sprint:** Sprint 3 (2 Jun – 13 Jun 2026)
+**Facilitator:** Rama | **Content lead:** Michelle
 
-**Sprint:** Sprint 2 (18–29 May 2026)
-**Sprint goal:** By end of Sprint 2, an officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
+---
+
+## Sprint Goal
+> **Sprint 2:** By end of Sprint 2, an officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
+
+Sprint 3 goal is TBD (set at Sprint 2 mid-point). Provisional: *Officers see only eligible opportunities, can open a full detail page, and can route to apply.*
 
 > ⚠️ **Action before tomorrow:** Paste sprint goal into Jira. Still not set as of 2026-05-18.
 
 ---
 
-## Step 2 — Grooming Readiness Score
+## Story Readiness Scorecard
 
 | Story ID | Title | Story Format | AC Written | AC Language | Design Status | Dependencies | Open Items | Ready? |
 |---|---|---|---|---|---|---|---|---|
-| OTEP-193 | Design data model for Opportunities | ❌ No story format | ❌ None | N/A | N/A | OTG + C@G sources | #23 (harmonised model), #27 (OTEP-271 sequencing) | ❌ Not ready |
-| OTEP-192 | Recurring job to fetch OTG data | ❌ No story format | ❌ None | N/A | N/A | OTEP-193, #24 (which reports) | #24 critical — which Excel reports to ingest | ❌ Not ready |
-| OTEP-85 | Display opportunity cards | ✅ | ⚠️ Gap: "Closing soon" ACs missing from must-haves | ✅ Officer-perspective throughout | ✅ Finalised | OTEP-193, OTEP-192 | #24 for real data | ⚠️ Needs AC fix |
-| OTEP-128 | View opportunity detail page | ✅ | ⚠️ Two gaps (see below) | ✅ Officer-perspective; API notes correctly separated | ✅ Finalised | OTEP-85 | #22 design lock date | ⚠️ Needs AC fix |
-| OTEP-267 | Pagination for listing page | ✅ | ✅ | ✅ Clean | ✅ Finalised | OTEP-85 | None | ✅ Ready |
-| OTEP-289 | [Spike] Filter by Functions | ❌ Not a proper spike | ❌ None | N/A | N/A | OTEP-85, OTEP-128 | Design approach TBD | ❌ Not ready |
-| OTEP-191 | Handle credential manager and vault | ❌ No content | ❌ None | N/A | N/A | Unknown | Unknown | ❌ Confirm if even Sprint 2 |
+| US-05 | Clear filters and reset view | ✅ | ✅ | ✅ | ✅ Finalised | Pairs with OTEP-86 | None | ✅ **Ready** |
+| OTEP-86 | Filter by opportunity type | ✅ | ✅ | ✅ | ✅ Finalised | OTEP-85 must ship (S2) | None | ✅ **Ready** |
+| WOG-05 | Log out of OTEP | ✅ | ✅ | ✅ | ✅ Assumed | None | None | ✅ **Ready** |
+| OTEP-110 | Login fail / clear error | ✅ | ✅ | ✅ | ✅ Assumed | None | None | ✅ **Ready** |
+| WOG-04 | Stay logged in during session | ✅ | ⚠️ | ✅ | ✅ Assumed | None | Session timeout TBD | ⚠️ **1 gap** |
+| WOG-06 | First-time login experience | ✅ | ⚠️ | ✅ | ⚠️ Needs lock | OTEP-183 findings | Mandatory fields TBD | ⚠️ **2 gaps** |
+| OTEP-87 | Detail page: apply CTA + competencies | ✅ | ⚠️ | ✅ | ✅ Finalised | OTEP-128 (S2), US-18 | #18, #20 | ⚠️ **Conditional** |
+| US-18 | Apply via FormSG basic redirect | ✅ | ⚠️ | ✅ | ✅ Finalised | `formsg_url` confirmed | #2 (open) | 🔴 **Blocked** |
+| OTEP-127 | Apply ringfencing criteria | ✅ | ❌ | — | ❌ None | OTEP-183 findings | Eligibility rules undefined | 🔴 **Not ready** |
+| US-03 | Filter by category | ✅ | ❌ | — | ❌ None | Hybrid model validation | Validation outstanding | 🔴 **Blocked** |
+| Search (TBD) | Keyword search | ❌ | ❌ | — | ❌ None | — | Missing story entirely | 🔴 **Missing** |
+
+**Score: 4 ready · 3 conditional/gapped · 4 blocked or missing**
 
 ---
 
-## Step 3 — Risk Areas
+## AC Language Flags
 
-> ⚠️ **OTEP-85** — "Closing soon" label ACs are stranded in the deprecated OTEP-85a section. They did not make it into OTEP-85's must-have list when OTEP-85a was re-absorbed (2026-05-15). The ACs exist — they just need to be moved. Fix this before grooming or Pow Hwee will find the gap.
-> → **Action:** Copy "Closing soon" ACs from OTEP-85a into OTEP-85 must-haves.
+All written ACs passed the mechanism-language test — no "the system will / the API returns / the component renders" found. Two literal TBDs to resolve before sizing:
 
-> ⚠️ **OTEP-128** — Two gaps:
-> 1. "Closing soon" label on the detail page is noted as in scope (via OTEP-85a re-absorption) but is not an explicit AC in OTEP-128. Same fix as above — needs to be written in.
-> 2. "No apply button in Sprint 2 — should officers see messaging explaining why? Currently silent." This open question will come up in grooming. Make a call before the session: silent (no button, no explanation) or add a note like "Apply opens in Sprint 3"? Decide with Amber.
-> → **Action on #1:** Add "Closing soon" AC to OTEP-128. **Action on #2:** Decide and document before grooming.
+**WOG-04:** `"If I've been idle for more than [X minutes — TBD]..."` — government-mandated session timeout is unknown. Either get the compliance answer before Sprint 3, or flag it explicitly at sizing so eng knows the value is a placeholder.
 
-> ⚠️ **OTEP-267** — Edge case: "When there are no opportunities to show, the page controls disappear." OTEP-268 (empty/error states) is deferred to Sprint 3. In Sprint 2, if the listing has zero records (unlikely with OTG data but possible), what does the officer see? The AC covers the controls disappearing, but there's no Sprint 2 story handling the empty page state. Pow Hwee will ask.
-> → **Suggested position:** "Zero-results edge case won't occur in Sprint 2 — OTG import always has data. Empty state is handled in Sprint 3 with filters. We accept the gap for Sprint 2."
-
-> ❌ **OTEP-289** — Not a proper spike. The Jira description reads like a business requirement ("user filters by function, sees matching results"). A spike needs: a time-boxed investigation question, a clear definition of done (decision, proof-of-concept, or doc), and a handoff output. As written, Pow Hwee will flag it as ungroom-able.
-> → **Action:** Reframe as: "Spike — how do we map OTG Job Function and C@G category tags to a shared function taxonomy? Done = a mapping recommendation doc + data model note for OTEP-193." Add a time-box (1–2 days).
-
-> ❌ **OTEP-192 + OTEP-193** — Critical path for Sprint 2 (OTEP-85 has no data without them) but both have empty descriptions in Jira and no ACs. OTEP-193 owner is Léo; OTEP-192 has no owner. These must land in W1 or OTEP-85 is blocked.
-> → **Action for OTEP-193:** Confirm owner (Léo per Jira, not Pow Hwee as noted locally — verify). Write basic ACs before grooming or agree to groom them in the session.
-> → **Action for OTEP-192:** Resolve open item #24 (which OTG Excel reports) before this can move. Michelle owns #24 — share the reports today.
-
-> ⚠️ **OTEP-191** — No description, no owner, no context. Cannot groom.
-> → **Action:** Confirm with Pow Hwee whether this is Sprint 2 scope. If yes, get a description. If no, remove from the board.
-
-**Pow Hwee's refinement pattern to pre-empt:**
-He caught the OTEP-85a re-absorption slip last sprint (mechanism vs outcome, and ticket structure). He will look for:
-1. AC rule conflicts → "Closing soon" gap in both OTEP-85 and OTEP-128
-2. Ungroom-able spikes → OTEP-289 as currently written
-3. Critical path work with no content → OTEP-192, OTEP-193
+**WOG-06:** `"I'm asked to enter my name and agency — [ASSUMPTION: mandatory fields TBD with team]"` — agreed at internal groom (2026-05-13) that basic profile = name + agency. Confirm this is still the position and kill the TBD in the room.
 
 ---
 
-## Step 4 — Recommended Grooming Order
+## Risk Areas
 
-1. **OTEP-193** (data model) — unblock everything else; agree scope and owner in the room
-2. **OTEP-192** (file import) — depends on #24; share reports before the session
-3. **OTEP-85** — foundation story, but fix "Closing soon" AC gap first (**do this today**)
-4. **OTEP-128** — fix two gaps before grooming (see above)
-5. **OTEP-267** — clean, fastest to groom; do this last
-6. **OTEP-289** — reframe as a proper spike first; groom only if time allows
-7. **OTEP-191** — confirm scope with Pow Hwee before placing in the order
+> ⚠️ **OTEP-86** — No AC covers an unrecognised opportunity type. If OTG exports a type not in the list (Internal Job / SJR / STIP/Gig), the card will either break or disappear.
+> → **Pre-empt:** Add AC — "If an opportunity type isn't recognised, the card renders with a generic type label — it doesn't break or disappear."
+
+> ⚠️ **OTEP-87** — "I see a clear Apply button that links to the FormSG form" — but OTEP-87's must-haves don't carry forward US-18's null-URL fallback. Pow Hwee will ask: what if `formsg_url` is missing?
+> → **Pre-empt:** Add AC — "If the FormSG URL is missing on an Internal Job, STIP, or Gig, I see 'Application form unavailable — contact the posting agency' instead of the Apply button."
+
+> ⚠️ **WOG-04** — Session timeout value is a literal TBD in the AC. He will ask.
+> → **Position:** "We need the government compliance answer. Pow Hwee, do you know who owns this — is it the infra team or security team?"
+
+> ⚠️ **WOG-06** — OTEP-183 spike (POCDEX profile lookup) is done. If POCDEX can return officer name and agency from SOE-ID, the first-time login story changes significantly — officer doesn't need to type those fields manually.
+> → **Drive:** "What did OTEP-183 tell us about POCDEX? If name and agency are available, we don't need to collect them at first login." Get this answer in the room.
+
+> ❌ **OTEP-127** — No ACs exist. Nothing to groom.
+> → **Approach:** Open the discussion with "What did OTEP-183 find?" and write ACs live in the session if Pow Hwee has the answers. Otherwise agree explicitly that OTEP-127 can't be sized until eligibility rules are documented.
+
+> ❌ **Search** — No story, no Jira ticket. Confirmed MVP requirement. sprint-allocation.md calls it out as a "Missing Story."
+> → **Action:** Acknowledge in session, commit to a date to write it (before Sprint 3 planning Thu 11 Jun).
 
 ---
 
-## Grooming Briefing — 19 May 2026
+## Grooming Order (recommended)
 
-### Sprint Goal
-By end of Sprint 2, an officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
+| Order | Story | Status | Time |
+|---|---|---|---|
+| 1 | US-05 — Clear filters | ✅ Ready | 5 min |
+| 2 | OTEP-86 — Filter by type | ✅ Ready | 15 min |
+| 3 | WOG-05 — Log out | ✅ Ready | 10 min |
+| 4 | OTEP-110 — Login fail | ✅ Ready | 10 min |
+| 5 | WOG-04 — Stay logged in | ⚠️ 1 gap | 15 min — table session timeout gap explicitly |
+| 6 | WOG-06 — First-time login | ⚠️ 2 gaps | 15 min — get OTEP-183 findings here |
+| 7 | OTEP-87 — Detail page CTA | ⚠️ Conditional | 20 min — must-haves only; declare competency as good-to-have |
+| 8 | US-18 — FormSG redirect | 🔴 Blocked | 5 min — confirm blocked, agree on Rama chase |
+| 9 | OTEP-127 — Ringfencing | 🔴 No ACs | 10 min — write from OTEP-183 findings or surface the gap |
+| 10 | US-03 + Search | 🔴 Missing/blocked | 10 min — acknowledge, commit to write-dates |
 
-### Grooming Order (recommended)
-1. OTEP-193 — Data model ❌ (agree scope + owner in session)
-2. OTEP-192 — File import job ❌ (share OTG reports first — open item #24)
-3. OTEP-85 — Opportunity cards ⚠️ (fix "Closing soon" ACs before session)
-4. OTEP-128 — Detail page ⚠️ (fix "Closing soon" AC + decide "no apply" messaging)
-5. OTEP-267 — Pagination ✅ (clean — quick)
-6. OTEP-289 — Functions spike ❌ (reframe before grooming)
-7. OTEP-191 — Credentials ❌ (confirm scope first)
+---
 
-### Open Items — Assign an Owner in the Session
+## Open Items — Assign an Owner in the Session
 
 | Open Item | Suggested Owner | Needed By |
 |---|---|---|
-| #24 — Which OTG Excel reports to ingest for OTEP-192 | Michelle → share reports before session | Before OTEP-192 can start |
-| #23 — Harmonised data model (OTG now, C@G later) | Pow Hwee to confirm feasibility in OTEP-193 | Before OTEP-193 dev |
-| #27 — OTEP-271 (POCDEX) placement: Sprint 2 or Sprint 3? | Michelle + Pow Hwee | Sprint 2 start |
-| #22 — Design lock date for Sprint 2 | Michelle + Amber | W1 |
-| #26 — Auth test outcome without AzureAD | Pow Hwee + Leo | Sprint 2 start |
-| OTEP-191 scope — Sprint 2 or not? | Pow Hwee to confirm | Before next board update |
-| OTEP-193 owner — Léo (Jira) vs Pow Hwee (local context) | Confirm in session | Today |
-
-### R1 Deflection List
-- "Can we add a search bar?" → "Search is MVP but Sprint 3 — not this sprint."
-- "What about filtering by type?" → "OTEP-86 is Sprint 3. Sprint 2 is unfiltered OTG listing only."
-- "Can officers save opportunities?" → "R1. Not in MVP."
-- "What about the apply button?" → "Sprint 3 — OTEP-87 and US-18. Sprint 2 detail page has no apply action."
-- "Can we show C@G listings too?" → "C@G lands Sprint 3–4 after ingestion is confirmed. Sprint 2 is OTG-only."
-
-### Pow Hwee Will Probably Ask...
-- "Where are the ACs for 'Closing soon' on OTEP-85?" — **pre-empt:** move them from OTEP-85a into OTEP-85 before the session.
-- "What does the officer see when there are no opportunities?" — **position:** zero-results won't occur in Sprint 2 with OTG data; empty state is Sprint 3 with filters.
-- "What does the detail page show instead of an apply button — just nothing?" — **make a call before the session:** silent (no button) or placeholder copy.
-- "What's the spike actually investigating in OTEP-289? What does done look like?" — **reframe it before grooming.**
-- "What are the ACs for OTEP-192 and OTEP-193?" — **share the OTG reports (open item #24) before the session so the import job can be scoped.**
-- "Who owns OTEP-193 — Léo or me?" — **verify before the session; mixed signals between Jira and local context.**
-
-> **Self-check before closing:** Have you fixed the "Closing soon" AC gap in OTEP-85 and OTEP-128? Have you resolved the "no apply button" open question with Amber? Have you shared the OTG reports for open item #24? Have you reframed OTEP-289 as a proper spike?
+| `formsg_url` confirmed (#2) — last unconfirmed OTG field | Rama + PSD Ops | Before Sprint 3 start (1 Jun) |
+| Session timeout policy — government-mandated idle timeout | Pow Hwee (flag to compliance/security) | Before Sprint 3 WOG-04 build |
+| WOG-06 mandatory fields: name + agency is the call? | Close in session — Michelle + Pow Hwee | Today |
+| OTEP-183 spike findings: POCDEX pre-fill of name/agency from SOE-ID? | Pow Hwee to share findings | Today / immediately after |
+| SJR card/detail treatment — which design did Amber land on? (#20) | Amber to confirm | Before OTEP-87 build |
+| Categorisation hybrid model validation (gates US-03) | Michelle — schedule with Adrian/Jacky/XZ | Before Sprint 3 grooming (Thu 22 May) |
+| Search story — write ACs and create Jira ticket | Michelle | Before Sprint 3 planning (Thu 11 Jun) |
+| OTEP-127 eligibility rules — write ACs from OTEP-183 findings | Michelle + Pow Hwee | Before Sprint 3 planning |
 
 ---
 
-*Generated: 2026-05-19 | Sprint 2 | Next grooming: Tue 19 May (squad internal) → Thu 21 May (backlog grooming)*
+## R1 Deflection List
+
+| Topic | Response |
+|---|---|
+| Competency match scoring | "Competency match ratio is R1 — decision 2026-05-08. Sprint 3 shows 'What you'll develop' tags only." |
+| Agency/grade/commitment filters | "Type filter only for MVP — agency, grade, commitment filters are R1 per the brief." |
+| Save / bookmark an opportunity | "R1. Not in MVP." |
+| Supervisor endorsement workflow | "UI copy only in MVP — backend workflow is R1 (decision 2026-05-08)." |
+| FormSG pre-fill from officer profile | "Conditional on open item #14. If FormSG supports URL params, US-P3 gets pulled in. If not, officers fill manually." |
+| SJR apply flow | "SJR apply is deferred to a future release — decision 2026-05-13. Visible in listing but no apply action in MVP." |
+| Notifications | "R1 per MVP guardrails." |
+| Function/Job-function taxonomy mapping | "R1 — decision 2026-05-06. Non-matching taxonomies, mapping cost high vs unclear ROI." |
+
+---
+
+## Pow Hwee Will Probably Ask...
+
+**On OTEP-86:**
+> *"What happens if the API returns an opportunity with a type we don't recognise?"*
+→ Pre-empt: add the generic-label AC before the session (see Risk Areas above).
+
+**On OTEP-87:**
+> *"What does the apply button show if `formsg_url` is null on an Internal Job?"*
+→ Pre-empt: carry US-18's fallback forward — add the missing-URL AC to OTEP-87 before the session.
+
+**On WOG-04:**
+> *"What's the session timeout value?"*
+→ "TBD — government compliance hasn't confirmed. Pow Hwee, do you know who owns this?"
+
+**On WOG-06:**
+> *"Can POCDEX pre-populate name and agency from SOE-ID? If yes, officers don't need to type it."*
+→ "That's exactly what OTEP-183 should tell us. What did the spike find?"
+
+**On OTEP-127:**
+> *"What are the eligibility rules? Grade? Agency? Both?"*
+→ "That depends on OTEP-183. Walk me through what POCDEX returned." — then write ACs from the answer.
+
+**On Sprint 3 capacity:**
+> *"This is a heavy sprint — OTEP-86, OTEP-87, OTEP-127, US-18, auth polish, search. Thomas still can't do everything."*
+→ "Agreed. My read: US-03 and Search move to Sprint 4 unless blockers clear by 1 Jun. OTEP-127 depends on today's POCDEX conversation. What's your view on Thomas's capacity across the FE stories?"
+
+---
+
+## Self-Check Before Walking In
+
+- [ ] Open item #28 resolved: OTEP-85 visibility rule = `closing_date > today`; "Closing soon" badge (<=7 days) is OTEP-129
+- [ ] Open item #29 resolved: OTEP-289 spike has ACs, timebox, and expected output defined
+- [ ] OTEP-86: defensive AC for unrecognised type added to story file
+- [ ] OTEP-87: null-formsg_url fallback AC added to story file
+- [ ] OTEP-183 spike findings: remind Pow Hwee to bring them — WOG-06 and OTEP-127 both depend on this
+
+---
+
+*Generated: 2026-05-19 | Sprint 2 Week 1 | Covers Sprint 3 stories*

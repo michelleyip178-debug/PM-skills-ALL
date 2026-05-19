@@ -8,10 +8,10 @@ Say "meeting capture", "triage meeting notes", or "process meeting notes" after 
 
 ## What This Produces
 
-- Decisions logged in `context/decisions-log.md`
-- Action items routed to `tasks/active.md` (mine) or `context/open-items.md` (theirs)
-- Open questions added to `context/open-items.md` with owner and deadline
-- Optionally: raw notes archived to `archive/meetings/`
+- Decisions logged in `06-skills-and-decisions/decisions-log.md`
+- Action items routed to `00-hub/tasks-active.md` (mine) or `00-hub/open-items.md` (theirs)
+- Open questions added to `00-hub/open-items.md` with owner and deadline
+- Optionally: raw notes archived to `04-ceremonies/archive-meetings/`
 
 ## Key Constraints
 

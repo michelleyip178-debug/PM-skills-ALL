@@ -35,7 +35,7 @@ OTG is the production system officers and agencies use today. Until OTEP ships a
 
 OTG Ops and OTEP MVP share dependencies:
 - OTG → OTEP data pipeline (Sprint 1 deliverable) depends on OTG export schema staying stable
-- 6 unconfirmed OTG fields (`eligibility`, `formsg_url`, `closing_date`, `is_published`, `reporting_line`, `developmental_outcome`) are tracked in `context/open-items.md` items #1–6
+- 6 unconfirmed OTG fields (`eligibility`, `formsg_url`, `closing_date`, `is_published`, `reporting_line`, `developmental_outcome`) are tracked in `00-hub/open-items.md` items #1–6
 - Any OTG schema changes during OTEP build could break the pipeline — flag immediately
 
 ## Scope Boundaries

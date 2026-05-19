@@ -2,9 +2,9 @@
 
 Future work not yet committed to a sprint. Only things that aren't tracked elsewhere.
 
-For sprint-level story tracking, see [sprint-allocation.md](../projects/sprint-allocation.md).
-For open blockers and field confirmations, see [open-items.md](../context/open-items.md).
-For scoping gaps and missing stories, see [scoping-gaps-tracker.md](../projects/otep-mvp/scoping-gaps-tracker.md).
+For sprint-level story tracking, see [sprint-allocation.md](../04-ceremonies/sprint-allocation.md).
+For open blockers and field confirmations, see [open-items.md](open-items.md).
+For scoping gaps and missing stories, see [scoping-gaps-tracker.md](../03-stories/scoping-gaps-tracker.md).
 
 ---
 

@@ -1,6 +1,6 @@
 # Story Readiness Board
 
-> **Superseded for Sprint 2+ by [sprint-checklists.md](../projects/otep-mvp/sprint-checklists.md)** — that file has per-story grooming readiness, DoR blockers, and must-have/good-to-have tiering. This file is kept for reference but no longer actively maintained.
+> **Superseded for Sprint 2+ by [sprint-checklists.md](../sprint-checklists.md)** — that file has per-story grooming readiness, DoR blockers, and must-have/good-to-have tiering. This file is kept for reference but no longer actively maintained.
 
 > Sprint 2 scope reshuffled 2026-05-14: **4 stories** (OTEP-85 listing, OTEP-267 pagination, OTEP-268 states, OTEP-128 detail page) + carry-overs. OTEP-129 absorbed into OTEP-85. OTEP-86/US-05 deferred to Sprint 3. OTEP-128 repurposed from "type badge" to "detail page."
 
@@ -12,7 +12,7 @@
 
 ## ID Reconciliation
 
-Full mapping between PRD IDs, Jira/one-pager IDs, and sprint-allocation IDs lives in [story-id-map.md](../projects/otep-mvp/story-id-map.md). This board uses PRD numbering (US-XX).
+Full mapping between PRD IDs, Jira/one-pager IDs, and sprint-allocation IDs lives in [story-id-map.md](../../03-stories/story-id-map.md). This board uses PRD numbering (US-XX).
 
 ---
 
@@ -24,7 +24,7 @@ Full mapping between PRD IDs, Jira/one-pager IDs, and sprint-allocation IDs live
 |--------|-------|---------------|--------|-------------|----------|-------|
 | OTEP-85 | View all opportunities in one place | Draft | Amber — card designs due 15 May | Pow Hwee — listing endpoint; needs OTG field mapping from Rama | Pipeline must deliver real data by 12 May; `is_published` (#4) | Michelle |
 | OTEP-86 | Filter opportunities by type | Draft | Amber — filter UI pattern not yet chosen | Filter/sort query params | Filter UI pattern (Amber); Secondment affects option list (Jacky) | Michelle |
-| OTEP-128 | ~~Identify opportunity type on card~~ → **View opportunity detail page** (repurposed 2026-05-14) | DoR met | Amber's detail page design finalised | `GET /opportunities/:id` (Pow Hwee) | Type badge absorbed into OTEP-85. Detail in [otg-lifecycle.md](../projects/otep-mvp/stories/otg-lifecycle.md) | Michelle |
+| OTEP-128 | ~~Identify opportunity type on card~~ → **View opportunity detail page** (repurposed 2026-05-14) | DoR met | Amber's detail page design finalised | `GET /opportunities/:id` (Pow Hwee) | Type badge absorbed into OTEP-85. Detail in [otg-lifecycle.md](../../03-stories/otep-stories/otg-lifecycle.md) | Michelle |
 | OTEP-129 | ~~Sort by posting date~~ — **absorbed into OTEP-85** (2026-05-14). Sort, interleave, "Closing soon" label. | Closed | — | — | — | — |
 | US-05 | Clear filters and reset view | Draft | "Clear all" + active-filter indicators (Amber) | None | Depends on OTEP-86 existing | Michelle |
 

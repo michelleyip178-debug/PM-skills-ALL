@@ -279,7 +279,7 @@ Auth failed?
 - [User Stories (Auth)](stories/auth.md)
 - [Story ID Map](story-id-map.md)
 - [Sprint Allocation](../sprint-allocation.md)
-- [Decision Log](../../context/decisions-log.md)
+- [Decision Log](../06-skills-and-decisions/decisions-log.md)
 - [DoR/DoD Guidelines](../../resources/dor-dod-guidelines.md)
 - [GOALS.md](../../GOALS.md)
 

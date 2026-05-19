@@ -1,9 +1,9 @@
 # Sprint Allocation — The Plan
 
-**This is the source of truth for which stories are in which sprint.** Other docs (`tasks/story-readiness.md`, `projects/otep-mvp/sprint-checklists.md`, `context/sprint-calendar.md`, the story-group files in `projects/otep-mvp/stories/`) reference this — they don't restate it. Story IDs are reconciled in [story-id-map.md](otep-mvp/story-id-map.md).
+**This is the source of truth for which stories are in which sprint.** Other docs (`04-ceremonies/archive-tasks/story-readiness.md`, `04-ceremonies/sprint-checklists.md`, `04-ceremonies/sprint-calendar.md`, the story-group files in `projects/otep-mvp/stories/`) reference this — they don't restate it. Story IDs are reconciled in [story-id-map.md](../03-stories/story-id-map.md).
 
 **Last updated:** 2026-05-18 (Sprint 2 start — Sprint 1 closed, Sprint 2 stories reconciled against live Jira board).
-**Cadence:** 2-week sprints, Mon start / Fri end, from Mon 4 May 2026. Sprint 1 ran a combined Backlog-Grooming + Sprint-Planning Thursday; from Sprint 2 those split (Backlog Grooming Thu W1, Sprint Planning Thu W2). Dates + ceremonies: [context/sprint-calendar.md](../context/sprint-calendar.md).
+**Cadence:** 2-week sprints, Mon start / Fri end, from Mon 4 May 2026. Sprint 1 ran a combined Backlog-Grooming + Sprint-Planning Thursday; from Sprint 2 those split (Backlog Grooming Thu W1, Sprint Planning Thu W2). Dates + ceremonies: [04-ceremonies/sprint-calendar.md](../04-ceremonies/sprint-calendar.md).
 **Feature Freeze:** end of Sprint 8 (Fri 21 Aug) — end of Phase 1, Feature Build · **Go-Live:** end of Sprint 12 (Fri 16 Oct) — end of Phase 2, Compliance & Go-Live (Sprints 9–12).
 
 > Sprints 1–3 below are reconciled and current. Sprints 4–12 are a planning sketch — scope is provisional and story IDs aren't fully reconciled against `story-id-map.md` yet; refine at each sprint's grooming.

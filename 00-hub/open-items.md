@@ -4,7 +4,7 @@
 > Add items as they come up in ceremonies or async. Update status; mark resolved items ✅ (don't delete — keep the record).
 > Read by `/daily` and `/mid-sprint-review`.
 >
-> **This is the action layer.** Spec-completeness analysis (what's missing from the PRD, by category, plus the R1-deferred decisions) lives in [scoping-gaps-tracker.md](../projects/otep-mvp/scoping-gaps-tracker.md). That file *links* to rows here for anything being actively chased — it doesn't copy owner/deadline. A live item has exactly one home: this one.
+> **This is the action layer.** Spec-completeness analysis (what's missing from the PRD, by category, plus the R1-deferred decisions) lives in [scoping-gaps-tracker.md](../03-stories/scoping-gaps-tracker.md). That file *links* to rows here for anything being actively chased — it doesn't copy owner/deadline. A live item has exactly one home: this one.
 
 ---
 

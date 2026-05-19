@@ -5,7 +5,7 @@
 **Alignment needed:** Mark, Adrian, Jacky, Xian Zhang
 
 > **This is the analysis layer** — what's still undefined in the Epic 4 spec, which category it sits in, and which gaps have been formally deferred to R1. It pairs with the PRD (Section 11).
-> Anything being actively chased (owner, deadline, status) is tracked in [open-items.md](../../context/open-items.md) — the rows below *link* to it rather than copying it. A live item has one home: open-items.
+> Anything being actively chased (owner, deadline, status) is tracked in [open-items.md](../../00-hub/open-items.md) — the rows below *link* to it rather than copying it. A live item has one home: open-items.
 
 ---
 
@@ -52,7 +52,7 @@
 ## Review Cadence
 
 Reviewed monthly (per PM cadence). Next review: end of May 2026.
-At each review: pull the live status of each linked item from [open-items.md](../../context/open-items.md), confirm nothing new should be added here, and check whether any "Open" gap should now be formally deferred to R1.
+At each review: pull the live status of each linked item from [open-items.md](../../00-hub/open-items.md), confirm nothing new should be added here, and check whether any "Open" gap should now be formally deferred to R1.
 
 ---
 

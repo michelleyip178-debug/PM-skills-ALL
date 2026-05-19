@@ -12,9 +12,9 @@ OTEP (One Talent Engagement Platform) is an internal talent marketplace for the 
 |-------|--------|-------|
 | Development | 4 May – 11 Jul 2026 | 5 sprints |
 | Buffer + UAT + Security | 14 Jul – 30 Sep 2026 | Security review (submit by early Sep), UAT with ESG + PSD |
-| Target Go Live | Sep 2026 (target) / Dec 2026 (outer bound) | Date alignment needed — see `context/decisions-log.md` |
+| Target Go Live | Sep 2026 (target) / Dec 2026 (outer bound) | Date alignment needed — see `06-skills-and-decisions/decisions-log.md` |
 
-Sprint breakdown: see [otep-mvp-release.md](../../resources/otep-mvp-release.md).
+Sprint breakdown: see [otep-mvp-release.md](../../02-prd/otep-mvp-release.md).
 
 ## MVP Scope
 
@@ -27,12 +27,12 @@ Unified discovery experience across two pipelines:
 
 20 user stories across 5 groups: Profile Dependency, Discovery & Filters, OTG Lifecycle, C@G Handoff, Application Tracking.
 
-PRD: [prd-opportunities.md](../../projects/otep-mvp/prd-opportunities.md)
+PRD: [prd-opportunities.md](../../02-prd/prd-opportunities.md)
 
 ### 2. WOG AD Authentication
 Login via Whole-of-Government Active Directory. Gates access to the rest of the product. 7 user stories covering SSO, account creation, error handling, session management.
 
-PRD: [prd-auth.md](../../projects/otep-mvp/prd-auth.md)
+PRD: [prd-auth.md](../../02-prd/prd-auth.md)
 
 ## R1 (Post-MVP) — Deferred Scope
 

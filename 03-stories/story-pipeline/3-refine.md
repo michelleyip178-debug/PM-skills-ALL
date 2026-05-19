@@ -19,11 +19,11 @@ This is the stage where the story goes from "discussed" to "ready for full-team 
 - Field names, request/response shapes, error codes
 - Any spikes or unknowns resolved
 
-**Michelle's job:** Chase Pow Hwee on unresolved fields from `context/open-items.md`. Make it easy — send the specific question, not "can you look at the open items list."
+**Michelle's job:** Chase Pow Hwee on unresolved fields from `00-hub/open-items.md`. Make it easy — send the specific question, not "can you look at the open items list."
 
 ### PM track (Michelle)
 - [ ] Update AC based on internal groom feedback
-- [ ] Resolve open questions (chase owners, check `context/open-items.md`)
+- [ ] Resolve open questions (chase owners, check `00-hub/open-items.md`)
 - [ ] Identify feature flag + entry point per story
 - [ ] Check: does this story touch any unconfirmed OTG fields? If yes, is the field confirmed yet?
 - [ ] Check: does any AC accidentally include R1 scope? Run against MVP guardrails.

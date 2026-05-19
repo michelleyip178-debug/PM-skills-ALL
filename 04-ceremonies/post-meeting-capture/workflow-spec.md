@@ -45,18 +45,18 @@ Most items are **I** (info only). Let those go — they're in your memory and th
 
 | Tag | Route to | Format |
 |-----|----------|--------|
-| **D** — Decision | `context/decisions-log.md` | Date, Decision, Rationale, Owner |
-| **A** — Action item (mine) | `tasks/active.md` | Add to In Progress or Up Next |
-| **A** — Action item (theirs) | `context/open-items.md` | Item, Owner, Needed By, Impacts/why, Status |
-| **Q** — Open question | `context/open-items.md` | Item, Owner, Needed By, Impacts/why, Status |
+| **D** — Decision | `06-skills-and-decisions/decisions-log.md` | Date, Decision, Rationale, Owner |
+| **A** — Action item (mine) | `00-hub/tasks-active.md` | Add to In Progress or Up Next |
+| **A** — Action item (theirs) | `00-hub/open-items.md` | Item, Owner, Needed By, Impacts/why, Status |
+| **Q** — Open question | `00-hub/open-items.md` | Item, Owner, Needed By, Impacts/why, Status |
 | **I** — Info only | Nowhere (or update a people profile if relevant) | — |
 
 ### Special cases
 
-- **Scope decision** → also check: does this affect `context/decisions-log.md` AND the PRD decision tracker (Section 11)?
-- **New risk or dependency** → add to `context/risks.md`
+- **Scope decision** → also check: does this affect `06-skills-and-decisions/decisions-log.md` AND the PRD decision tracker (Section 11)?
+- **New risk or dependency** → add to `00-hub/risks.md`
 - **Design direction** → update the relevant story file's AC or designer notes
-- **Stakeholder insight** → update the person's profile in `areas/stakeholders/people/`
+- **Stakeholder insight** → update the person's profile in `06-skills-and-decisions/stakeholders/people/`
 
 ## Meeting-Specific Playbooks
 
@@ -73,9 +73,9 @@ Most items are **I** (info only). Let those go — they're in your memory and th
 
 ## Archive
 
-If the meeting produced substantive notes (grooming, planning, steering), also save the raw dump to `archive/meetings/` with the date:
+If the meeting produced substantive notes (grooming, planning, steering), also save the raw dump to `04-ceremonies/archive-meetings/` with the date:
 ```
-archive/meetings/{subfolder}/YYYY-MM-DD-{meeting-name}.md
+04-ceremonies/archive-meetings/{subfolder}/YYYY-MM-DD-{meeting-name}.md
 ```
 
 Don't archive standup notes or 1:1s unless something significant happened.

@@ -47,5 +47,5 @@ If documenting → stop. Reframe as a recommendation first.
 
 ---
 
-*Dean Peters skills: ~/Documents/PM-skills-ALL/skills/dean/*
-*Pawel Huryn skills: ~/Documents/PM-skills-ALL/skills/pawel/*
+*Dean Peters skills: ~/Documents/PM-skills-ALL-1/06-skills-and-decisions/dean/*
+*Pawel Huryn skills: ~/Documents/PM-skills-ALL-1/06-skills-and-decisions/pawel/*

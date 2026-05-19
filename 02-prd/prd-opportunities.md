@@ -78,7 +78,7 @@ A unified Opportunities Hub aggregating all five opportunity types:
 | SJRs | **No apply in MVP — discovery only** | Full detail page on OTEP; apply deferred to future release. SJR cards visible but no apply action. UX treatment TBD (Amber, open item #20). Long-term: OTEP owns all apply flows. |
 | C@G Public Jobs | Careers@Gov (deep-link, new tab) | Discovery on OTEP only; no application tracking |
 
-> **Decision 2026-05-13:** MVP apply flow = FormSG for Internal Jobs, STIPs, and Gigs only. SJR apply deferred to future release — all apply flows will go through OTEP, not OTG redirect. Supersedes the 2026-05-08 decision (SJR via OTG redirect). See `context/decisions-log.md`.
+> **Decision 2026-05-13:** MVP apply flow = FormSG for Internal Jobs, STIPs, and Gigs only. SJR apply deferred to future release — all apply flows will go through OTEP, not OTG redirect. Supersedes the 2026-05-08 decision (SJR via OTG redirect). See `06-skills-and-decisions/decisions-log.md`.
 
 ### Key Capabilities
 
@@ -352,7 +352,7 @@ OTEP-71a (Auth) -> OTEP-72 (Account) -> US-P1 (Profile) -> OTEP-85 (Cards, sort,
 - Phase 2 Compliance & Go-Live: Sprints 9-12 (24 Aug - 16 Oct)
 - Go-Live: Fri 16 Oct 2026
 
-For the sprint-by-sprint story breakdown, see [sprint-allocation.md](../sprint-allocation.md) (source of truth) and [sprint-calendar.md](../../context/sprint-calendar.md) (dates + ceremonies).
+For the sprint-by-sprint story breakdown, see [sprint-allocation.md](../04-ceremonies/sprint-allocation.md) (source of truth) and [sprint-calendar.md](../04-ceremonies/sprint-calendar.md) (dates + ceremonies).
 
 ### Milestones
 
@@ -391,7 +391,7 @@ For the sprint-by-sprint story breakdown, see [sprint-allocation.md](../sprint-a
 
 ## 11. Decision Tracker
 
-> **Canonical log:** [context/decisions-log.md](../../context/decisions-log.md). This table is synced as of 2026-05-13.
+> **Canonical log:** [decisions-log.md](../06-skills-and-decisions/decisions-log.md). This table is synced as of 2026-05-13.
 
 | Decision | Owner | Date | Status |
 |----------|-------|------|--------|
@@ -476,8 +476,8 @@ A full audit of all officer workflows against stories is in [workflow-coverage-a
 ### Related Documents
 
 - **Source PRD:** Epic 4 Confluence doc (Apr 6, 2026)
-- **Sprint Plan:** [sprint-allocation.md](../sprint-allocation.md)
-- **Sprint Calendar:** [sprint-calendar.md](../../context/sprint-calendar.md)
+- **Sprint Plan:** [sprint-allocation.md](../04-ceremonies/sprint-allocation.md)
+- **Sprint Calendar:** [sprint-calendar.md](../04-ceremonies/sprint-calendar.md)
 - **Categorisation Research:** [research/categorisation-research.md](research/categorisation-research.md)
 - **User Stories (Index):** [stories/index.md](stories/index.md)
 - **User Stories (Profile Dependency):** [stories/profile-dependency.md](stories/profile-dependency.md)
@@ -487,7 +487,7 @@ A full audit of all officer workflows against stories is in [workflow-coverage-a
 - **User Stories (Tracking):** [stories/tracking.md](stories/tracking.md)
 - **Scoping Gaps Tracker:** [scoping-gaps-tracker.md](scoping-gaps-tracker.md)
 - **Workflow Coverage Audit:** [workflow-coverage-audit.md](workflow-coverage-audit.md)
-- **Decision Log:** [context/decisions-log.md](../../context/decisions-log.md)
+- **Decision Log:** [decisions-log.md](../06-skills-and-decisions/decisions-log.md)
 - **DoR/DoD Guidelines:** [resources/dor-dod-guidelines.md](../../resources/dor-dod-guidelines.md)
 - **Discovery Plan:** [outputs/discovery-plan-2026-05-13.md](../../outputs/discovery-plan-2026-05-13.md)
 

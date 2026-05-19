@@ -1,6 +1,6 @@
 # OTEP-193: Design Data Model for Opportunities
 
-**Status:** Backlog
+**Status:** In Progress
 **Assignee:** Léo Milbor
 **Story Points:** N/A
 
@@ -8,7 +8,7 @@
 
 ## Description
 
-Sources for Data: Career@Gov OTG Get the model for each and see how to represent and map in our system.
+Acceptance Criteria The database schema and Go structs (extending OpportunityDTO in handler.go) must support all fields from both the listing and detail endpoints. Deliver .sql migration file(s) following existing patterns in internal/shared/database/migrations/.
 
 ---
 

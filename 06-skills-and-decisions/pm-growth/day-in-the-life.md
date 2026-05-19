@@ -28,9 +28,9 @@ Run `/meeting-prep` with the attendee names. Go in with:
 - One recommendation you're prepared to make
 
 **Context Claude pulls for you:**
-- `areas/stakeholders/people/` — who you're meeting, what they care about, how to communicate with them
-- `projects/otep-mvp/` — latest research, decisions, blockers (auth + opportunities merged)
-- `tasks/active.md` — what you're working on that's relevant
+- `06-skills-and-decisions/stakeholders/people/` — who you're meeting, what they care about, how to communicate with them
+- `03-stories/otep-stories/` — latest research, decisions, blockers (auth + opportunities merged)
+- `00-hub/tasks-active.md` — what you're working on that's relevant
 
 ---
 
@@ -53,7 +53,7 @@ Don't just take notes. Listen for:
 | 1:1 with Adrian | Show outcomes-thinking, ask for PM coaching | Share a recent PM reflection |
 
 ### After the meeting (2 min)
-Paste raw notes into inbox.md or directly into `archive/meetings/`. Don't format. Just dump. The point is capture, not perfection.
+Paste raw notes into inbox.md or directly into `04-ceremonies/archive-meetings/`. Don't format. Just dump. The point is capture, not perfection.
 
 ---
 
@@ -65,7 +65,7 @@ Paste raw notes into inbox.md or directly into `archive/meetings/`. Don't format
 |------|-------------------|---------------|
 | Write user stories from a feature idea | Describe the outcome, Claude generates stories with acceptance criteria | Pawel: `pm-execution` library |
 | Research a design decision | Share screenshots/data, Claude maps comparisons and trade-offs | Paste + ask |
-| Challenge a scope request | Describe what was asked, check against MVP guardrails in CLAUDE.md | Review `context/decisions-log.md` + MVP guardrails |
+| Challenge a scope request | Describe what was asked, check against MVP guardrails in CLAUDE.md | Review `06-skills-and-decisions/decisions-log.md` + MVP guardrails |
 | Synthesize interview/research notes | Dump raw notes, Claude extracts patterns and insights | `synthesize-research` skill |
 | Draft a PRD section | Give context, Claude writes a section grounded in your project docs | `draft-prd-section` skill |
 | Prepare a recommendation | Describe the options, Claude helps you structure the argument | Ask "help me recommend..." |
@@ -94,9 +94,9 @@ It's OK to describe first. But always end with a recommendation.
 ## Afternoon Check-in (5 min, after last meeting)
 
 ### Quick sweep:
-1. Any decisions made today? → Log in [decisions-log.md](../../context/decisions-log.md)
+1. Any decisions made today? → Log in [decisions-log.md](../decisions-log.md)
 2. Any scope requests? → Did you apply the MVP/R1 filter?
-3. Any blockers surfaced? → Add to Waiting On table in `tasks/active.md`
+3. Any blockers surfaced? → Add to Waiting On table in `00-hub/tasks-active.md`
 4. Did you make progress on your #1 thing?
 5. Any user stories need updating based on today's conversations?
 
@@ -128,14 +128,14 @@ Write one sentence: "Tomorrow I will ___." Make it specific. Examples:
 Run `/weekly-update`. Review the draft. Adjust tone per stakeholder preferences. Send to Jace/Adrian.
 
 Claude uses:
-- `tasks/active.md` for progress
-- `projects/otep-mvp/` for details
+- `00-hub/tasks-active.md` for progress
+- `03-stories/otep-stories/` for details
 - `resources/workflows/weekly-stakeholder-update/stakeholder-preferences.md` for tone
 - `resources/workflows/weekly-stakeholder-update/draft-template.md` for format
 
 ### Sprint end sweep (if applicable)
 - Move completed tasks → archive with impact notes
-- Pull from `tasks/backlog.md` → active for next sprint
+- Pull from `00-hub/tasks-backlog.md` → active for next sprint
 - Update scoping gaps tracker
 - Update decision log with sprint decisions
 
@@ -151,12 +151,12 @@ Look at your PM reflection scores for the week:
 
 | Command/Skill | Trigger | What Claude reads | What you get |
 |---------|---------|-------------------|-------------|
-| `/daily` | Morning | context/, tasks/active.md, sprint-prep-rhythm.md, your pasted calendar | Schedule + PM moves, ceremony check, what's in motion, open items, top 3 focus, PM nudge |
-| `meeting-prep` skill | Before meetings | areas/stakeholders/people/, projects/, archive/meetings/ | Context, talking points, recommendations to bring |
-| `weekly-update` skill | Friday | tasks/active.md, projects/, stakeholder-preferences.md | Draft email for Jace/Adrian |
-| `draft-prd-section` skill | Writing specs | projects/, GOALS.md | PRD section grounded in research |
+| `/daily` | Morning | 00-hub/tasks-active.md, sprint-prep-rhythm.md, your pasted calendar | Schedule + PM moves, ceremony check, what's in motion, open items, top 3 focus, PM nudge |
+| `meeting-prep` skill | Before meetings | 06-skills-and-decisions/stakeholders/people/, 03-stories/, 02-prd/, 04-ceremonies/archive-meetings/ | Context, talking points, recommendations to bring |
+| `weekly-update` skill | Friday | 00-hub/tasks-active.md, 03-stories/, 02-prd/, stakeholder-preferences.md | Draft email for Jace/Adrian |
+| `draft-prd-section` skill | Writing specs | 03-stories/, 02-prd/, GOALS.md | PRD section grounded in research |
 | `synthesize-research` skill | After research | Your raw notes | Structured insights, patterns, gaps |
-| `/endday` | End of day | tasks/active.md, your input | What got done, carry-forward, reflection |
+| `/endday` | End of day | 00-hub/tasks-active.md, your input | What got done, carry-forward, reflection |
 
 ---
 

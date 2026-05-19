@@ -1,6 +1,6 @@
 ### **Structured Planning Guide: OTEP Platform Delivery**
 
-> ⚠️ **Superseded for the sprint plan.** This guide predates the OTEP-Pathfinder Sprint Ceremonies v2 doc and the 2026-05-11 scope reconciliation. For the current plan use **[context/sprint-calendar.md](../context/sprint-calendar.md)** (dates + ceremonies — 12 sprints, 4 May – 16 Oct 2026) and **[projects/sprint-allocation.md](../projects/sprint-allocation.md)** (which stories in which sprint). The Sprint Breakdown in Section 4 below is out of date (old Sprint 2 scope, old dates, "buffer to Sep"). Sections 1–3 (alignment, dependencies, release phasing) and 5–7 (gaps, scope concerns, risks) are still broadly useful.
+> ⚠️ **Superseded for the sprint plan.** This guide predates the OTEP-Pathfinder Sprint Ceremonies v2 doc and the 2026-05-11 scope reconciliation. For the current plan use **[04-ceremonies/sprint-calendar.md](../04-ceremonies/sprint-calendar.md)** (dates + ceremonies — 12 sprints, 4 May – 16 Oct 2026) and **[04-ceremonies/sprint-allocation.md](../04-ceremonies/sprint-allocation.md)** (which stories in which sprint). The Sprint Breakdown in Section 4 below is out of date (old Sprint 2 scope, old dates, "buffer to Sep"). Sections 1–3 (alignment, dependencies, release phasing) and 5–7 (gaps, scope concerns, risks) are still broadly useful.
 
 #### **1. High-Level Alignment**
 Based on the overarching Roadmap, the current focus is on building the "Essential Officer Experience". The uploaded Epics map to the earliest phase of the rollout:
@@ -52,7 +52,7 @@ OTEP-71a (Auth) → OTEP-72 (Account) → OTEP-85 (Listing) → OTEP-128 (Card) 
     *   Focuses on Dynamic Career Profiling and the Competency Gap Detection Engine.
 
 #### **4. Sprint Breakdown (MVP Kickoff)**
-Based on a 2-week sprint cycle with full team capacity (Pow Hwee, Leo, Thomas, Amber). WOGAD is ready for development. **Target ship: Fri 16 Oct 2026** — 12 sprints (Phase 1 Feature Build, Sprints 1–8 to 21 Aug; Phase 2 Compliance & Go-Live, Sprints 9–12). The sprint-by-sprint breakdown below is outdated — see `context/sprint-calendar.md`.
+Based on a 2-week sprint cycle with full team capacity (Pow Hwee, Leo, Thomas, Amber). WOGAD is ready for development. **Target ship: Fri 16 Oct 2026** — 12 sprints (Phase 1 Feature Build, Sprints 1–8 to 21 Aug; Phase 2 Compliance & Go-Live, Sprints 9–12). The sprint-by-sprint breakdown below is outdated — see `04-ceremonies/sprint-calendar.md`.
 
 ---
 

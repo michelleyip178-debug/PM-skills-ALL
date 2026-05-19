@@ -1,4 +1,4 @@
-# OTEP-194: [Discovery/Design] FormSG Integration & Callback Flow
+# OTEP-194: [Spike] FormSG Integration & Callback Flow
 
 **Status:** Backlog
 **Assignee:** Thomas Huchedé

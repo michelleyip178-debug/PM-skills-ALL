@@ -14,7 +14,9 @@ As an  officer,  I want to  view the full details of an opportunity on a dedicat
 
 ## Subtasks
 
-_No subtasks._
+| Key | Summary | Status |
+|-----|---------|--------|
+| OTEP-295 | Mock detail endpoint for opportunity | Backlog |
 
 ---
 
