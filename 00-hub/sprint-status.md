@@ -16,7 +16,7 @@
 ## Sprint goal
 By end of Sprint 2, an officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
 
-> ⚠️ **Sprint goal not set in Jira** (as of 2026-05-18). Paste the above into the Jira sprint before tomorrow's grooming.
+> ✓ **Sprint goal set in Jira** (as of 2026-05-20).
 
 ## Committed stories
 
@@ -40,9 +40,11 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 | OTEP-129 | See whether opportunity is open/closed before applying | Backlog | — | **Re-added as separate Sprint 2 story** (Pow Hwee, 2026-05-18). Overrides May 14 absorption into OTEP-85. Owns: "Closing soon" badge + deep-link behaviour only. |
 | OTEP-268 | Empty, error, and partial-load states for listing | Backlog | — | **Re-added to Sprint 2** (Pow Hwee, 2026-05-18). Overrides May 15 deferral. AC feedback: drop partial-load AC; good-to-haves as separate tickets. |
 | OTEP-170 | Base Layout for Opportunity Listing Page | **In Progress** | Thomas | MR in progress |
-| OTEP-191 | Handle credential manager and vault | Backlog | — | ⚠️ **Deprioritised to Sprint 3+** (Pow Hwee, 2026-05-14). Still on board — remove. |
+| OTEP-191 | Handle credential manager and vault | Backlog | — | ⚠️ **Deprioritised to Sprint 3+** (Pow Hwee, 2026-05-14). Removed from sprint board as of 2026-05-20. |
 | OTEP-288 | Setup a simple backend endpoint with in-memory list | **In Progress** | Léo | Sub-task of OTEP-170 |
 | OTEP-252 | Setup design system in otep-web | **Done** | Thomas | Sub-task of OTEP-170. Flagship/LifeSG confirmed. |
+| OTEP-296 | Prepare defined report format that matches data model | **In Progress** | Michelle | Sub-task. Standardises OTG Excel report format before ingestion. Added to sprint 2026-05-20. |
+| OTEP-295 | Mock detail endpoint for opportunity | Backlog | Léo | Sub-task of OTEP-128. GET /v1/opportunities/:id returns single opportunity with full detail fields + 404 for invalid IDs. Added to sprint 2026-05-20. |
 
 ### Carry-over from Sprint 1 — staying in Sprint 2
 
@@ -107,10 +109,12 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 - [ ] Design lock date (#22) not yet set — agree with Amber in Sprint 2 W1.
 - [ ] `formsg_url` (#2) still unconfirmed — Sprint 3 blocker, not Sprint 2.
 
-## Jira board cleanup needed (as of 2026-05-18 comment sync)
-- [ ] **Remove OTEP-191** from Sprint 2 board — deprioritised to Sprint 3+ (Pow Hwee, 2026-05-14)
-- [ ] **Add OTEP-192, OTEP-193** to Sprint 2 board — Sprint 2 critical path, not currently showing
-- [ ] **Paste sprint goal into Jira** — still not set as of 2026-05-18
+## Jira board cleanup needed (updated 2026-05-20)
+- [x] ~~Remove OTEP-191~~ — confirmed off board as of 2026-05-20
+- [ ] **Add OTEP-192** to Sprint 3 board — moved from Sprint 2 (2026-05-19 decision). Not yet assigned to Sprint 3 in Jira.
+- [x] ~~Add OTEP-193~~ — confirmed on board (Léo, In Progress) as of 2026-05-20
+- [ ] **Remove OTEP-276** from Sprint 2 board — resolved spike; still showing in Backlog
+- [x] **Paste sprint goal into Jira** — set in Jira (2026-05-20)
 - [x] ~~Remove OTEP-268~~ — **overridden: Pow Hwee re-added to Sprint 2 (2026-05-18)**
 - [x] ~~Close or link OTEP-129~~ — **overridden: Pow Hwee re-added as separate Sprint 2 story (2026-05-18)**
 - [x] ~~Confirm OTEP-285~~ — **resolved: absorbed into OTEP-128 (Pow Hwee, 2026-05-18)**

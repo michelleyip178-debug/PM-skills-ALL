@@ -10,7 +10,7 @@
 
 Sprint 3 goal is TBD (set at Sprint 2 mid-point). Provisional: *Officers see only eligible opportunities, can open a full detail page, and can route to apply.*
 
-> ⚠️ **Action before tomorrow:** Paste sprint goal into Jira. Still not set as of 2026-05-18.
+> ✓ **Sprint goal set in Jira** (as of 2026-05-20).
 
 ---
 

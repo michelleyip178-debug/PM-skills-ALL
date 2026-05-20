@@ -10,6 +10,9 @@
 
 <!-- New, untriaged items land here under a channel header. Tag + move them out at next triage. -->
 
+### Ceremony Prep
+- Backlog Grooming (Thu 21 May): run `/groom-prep` today (afternoon), `/groom` tomorrow morning before standup
+
 ### From Slack
 - 
 
