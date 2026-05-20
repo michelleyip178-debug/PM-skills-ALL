@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "count=$(grep -cE '\\[(D|A|Q|I)\\]' inbox.md 2>/dev/null || echo 0); if [ \"$count\" -gt 0 ]; then echo \"inbox.md has $count unprocessed item(s). Run /triage to clear them.\"; fi"
+          }
+        ]
+      }
+    ]
+  }
+}
