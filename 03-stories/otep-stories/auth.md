@@ -2,42 +2,50 @@
 
 **Epic:** WOG AD Authentication (Epic 5)
 **One-pager:** _TODO: Confluence link_
-**Status:** Draft — 20 stories, needs grooming
+**Status:** Draft — reconciled to ~9 MVP stories (2026-05-20). Needs grooming.
 **Criticality:** MVP blocker — all other epics depend on this
-**Scope decision:** Officers only for MVP. Agency admin login + RBAC (WOG-02, WOG-07) deferred to Sprint 6 (decision 2026-05-12).
+**Scope decision:** Officers only for MVP. Agency admin login + RBAC (WOG-02, WOG-07) deferred to Sprint 6 (decision 2026-05-12). Auth accepted as-is (decision 2026-05-12). Sprint 2 auth scope = minimal, check user exists + name (decision 2026-05-13).
+
+---
+
+## Decisions needed before grooming
+
+These are decisions, not open questions. Each blocks at least one story from reaching "ready."
+
+| # | Decision needed | Owner | Blocks |
+|---|---|---|---|
+| 1 | **Idle-timeout value** — what is the government-mandated idle timeout? | Compliance / security | WOG-04 |
+| 2 | **Agency-resolution source** — email domain, SOE-ID prefix, or a lookup table? | Pow Hwee | WOG-10 |
+| 3 | **Rate-limit ownership** — does WOG AD already enforce account lockout, or must OTEP build it? | Pow Hwee | WOG-14 spike |
+| 4 | **Concurrent-session default** — allow multiple sessions (simplest) or enforce single-session? Pick a default; don't build a management feature. | Security team | WOG-18 |
+| 5 | **Mandatory profile field** — name only, or name + something else? (email auto-fills; agency comes from WOG-10) | Michelle + team | WOG-06 |
+| 6 | **OTEP-111 scope** — does the existing Sprint 1 "Officers with no access" ticket already cover the not-onboarded and invalid-officer messages? | Pow Hwee | WOG-08/09 absorbed |
 
 ---
 
 ## Story Summary
 
-| ID | Story | Priority |
-|----|-------|----------|
-| OTEP-71 | Log in with WOG AD credentials (single click) | MVP |
-| WOG-08 | Be told clearly when my agency isn't onboarded | MVP |
-| WOG-09 | Be blocked when I'm not a valid public officer | MVP |
-| WOG-10 | Have OTEP resolve my agency from my AD identity | MVP |
-| WOG-11 | Skip separate account creation (go straight to OTEP) | MVP |
-| OTEP-110 | See a clear error when login fails | MVP |
-| WOG-12 | See a helpful message when my AD account is locked or disabled | MVP |
-| WOG-13 | See a graceful message when WOG AD is unreachable | MVP |
-| WOG-14 | Be protected by rate limiting after repeated failed attempts | MVP |
-| WOG-15 | Not have error messages reveal whether an account exists | MVP |
-| WOG-04 | Stay logged in during my active session | MVP |
-| WOG-16 | Be warned before my idle session expires | MVP |
-| WOG-05 | Log out of OTEP | MVP |
-| WOG-17 | Have a complete logout on shared government devices | MVP |
-| WOG-18 | Manage concurrent sessions across multiple devices | MVP |
-| WOG-06 | First-time login: welcome and profile setup | MVP |
-| WOG-19 | Skip the welcome on subsequent logins | MVP |
-| WOG-20 | Resume an abandoned first-time profile setup | MVP |
-| WOG-02 | Log in as agency admin with elevated permissions | Deferred — Sprint 6 |
-| WOG-07 | Role-based access control | Deferred — Sprint 6 |
+| ID | Story | Sprint | Action |
+|----|-------|--------|--------|
+| OTEP-71 | Log in with WOG AD credentials | 3 | Keep (absorbs WOG-11) |
+| OTEP-111 | Officers with no access | 1 ✓ | Existing ticket — confirm it covers WOG-08/09 ACs |
+| WOG-10 | Resolve agency from AD identity | 3 | Keep — spike decision #2 first |
+| OTEP-110 | Login fail / clear error | 3 | Keep (absorbs WOG-12, WOG-13; NFR from WOG-15) |
+| WOG-04 | Stay logged in during session | 3 | Keep — needs decision #1 |
+| WOG-05 | Log out of OTEP | 3 | Keep |
+| WOG-17 | Complete logout on shared devices | 3 | Keep (trim service-worker AC) |
+| WOG-06 | First-time login + profile setup | 3 | Trim — name only, no welcome screen (R1) |
+| WOG-14 | Rate limiting | — | **Convert to spike** (decision #3) |
+| WOG-16 | Pre-expiry session warning | — | **Defer** — pairs with apply flow (Sprint 3+) |
+| WOG-18 | Concurrent sessions | — | **Replace with default policy decision** (decision #4) |
+| WOG-02 | Agency admin login | 6 | Deferred — Sprint 6 |
+| WOG-07 | Role-based access control | 6 | Deferred — Sprint 6 |
 
 ---
 
 ## Stories
 
-### OTEP-71: Log in with WOG AD credentials (single click)
+### OTEP-71: Log in with WOG AD credentials
 
 **As a** public officer from an onboarded agency,
 **I want to** log in to OTEP via WOG AD with a single click,
@@ -46,395 +54,212 @@
 **Acceptance Criteria:**
 - [ ] When I click "Log in with WOG AD" on the login page, I land on the OTEP home page — no manual credential entry needed.
 - [ ] When OTEP loads after login, my identity shows as my government email and SOE-ID from WOG AD. [ASSUMPTION: AD returns email + SOE-ID only]
-- [ ] If my agency is not yet on OTEP, I see a message explaining my agency isn't onboarded — not a generic error.
-- [ ] If my WOG AD credentials are invalid (not a public officer), login fails and I see a clear error message.
-- [ ] After a successful login, I go straight to OTEP — there's no additional account creation or registration step.
+- [ ] After a successful login, there is no additional account creation or registration step — I go straight to OTEP.
+- [ ] If login fails for any reason (invalid credentials, agency not onboarded, AD unreachable), I see a specific error — not a generic server error. See OTEP-110 for error-state detail.
+- [ ] If my agency is not onboarded or my WOG AD credentials are invalid, I am blocked with a specific message. See OTEP-111 for no-access detail.
 
 **Edge cases:**
-- Officer's WOG AD account is disabled/locked — should show specific message (not generic failure)
-- Officer's agency was onboarded but is later removed — what happens on next login?
-- AD returns only email + SOE-ID — any profile data (name, job title, unit) must come from elsewhere or be collected from officer
-- Network/AD service is down — graceful error message needed
-- Multiple concurrent sessions on different devices — allowed or not?
+- AD returns only email + SOE-ID — profile data (name, job title, unit) must come from officer or a separate source
+- Officer's agency was onboarded but is later removed — fail closed on next login (see OTEP-111)
+- Multiple concurrent sessions on different devices — default policy decision #4 applies
 
 **Priority:** MVP — nothing works without this; all other epics depend on auth.
 
 ---
 
-### WOG-08: Be told clearly when my agency isn't onboarded
+### OTEP-111: Officers with no access
 
-**As a** public officer with a valid WOG AD account whose agency hasn't been onboarded to OTEP,
-**I want to** see a message that explains my agency isn't onboarded yet,
-**So that** I understand why I can't get in and don't assume the platform or my credentials are broken.
+> **Note:** This is an existing Sprint 1 Jira ticket ("Officers with no access"). It is not re-groomed here. Confirm with Pow Hwee that it covers the following two scenarios — if not, raise an amendment to OTEP-111 rather than creating new tickets.
 
-**Acceptance Criteria:**
-- [ ] If my WOG AD credentials are valid but my agency isn't onboarded to OTEP, I'm blocked from the home page and see a message stating my agency isn't onboarded — not a generic error.
-- [ ] When I see the not-onboarded message, it's distinct from the invalid-credentials error so I can tell the two situations apart.
-- [ ] If my agency was onboarded before but has since been removed, my next login shows the same not-onboarded message rather than a broken or blank page.
+**Scenarios that must be covered by OTEP-111:**
 
-**Edge cases:**
-- Officer's agency was onboarded but is later removed — must fail closed at next login, not leave a stale session
-- Message should not leak which agencies are or aren't onboarded beyond the officer's own
-- Officer whose agency onboards later — login should succeed on next attempt with no extra steps
+**Not-onboarded agency (was WOG-08):**
+- [ ] If my WOG AD credentials are valid but my agency isn't onboarded, I'm blocked and see a message stating my agency isn't onboarded — not a generic error.
+- [ ] If my agency was previously onboarded but has since been removed, my next login shows the same not-onboarded message — not a broken or blank page.
+- [ ] The not-onboarded message is distinct from the invalid-credentials error so I can tell the two situations apart.
 
-**Priority:** MVP — without a clear not-onboarded path, valid officers from pending agencies flood the helpdesk.
+**Invalid officer (was WOG-09):**
+- [ ] If my WOG AD credentials are invalid or I'm not a public officer, login fails with a clear error and I'm not let in.
+- [ ] When login fails for any reason, I stay on the login page and can retry — the app doesn't break.
 
----
-
-### WOG-09: Be blocked when I'm not a valid public officer
-
-**As a** person without a valid WOG AD public officer account,
-**I want to** be blocked from OTEP with a clear error,
-**So that** only legitimate public officers can access the platform and I'm not left guessing why login failed.
-
-**Acceptance Criteria:**
-- [ ] If my WOG AD credentials are invalid or I'm not a public officer, login fails and I see a clear error message rather than being let in.
-- [ ] When login fails on invalid credentials, the error doesn't reveal whether a given account exists.
-- [ ] If my WOG AD account is disabled or locked, I see a specific message directing me to my agency's IT helpdesk — not a generic failure. [ASSUMPTION: WOG AD handles password management, MFA, and account lockout — OTEP does not re-implement these]
-- [ ] When login fails for any reason, I stay on the login page and can retry without the app entering a broken state.
-
-**Edge cases:**
-- WOG AD account disabled/locked vs. simply invalid — distinct messages, both non-generic
-- Error copy must avoid leaking account-existence info (security constraint — may need compliance review)
-- Rate limiting after repeated failed attempts — WOG AD policy may govern this
-
-**Priority:** MVP — access gating is a government security requirement; non-officers must never reach OTEP.
+**Priority:** Sprint 1 — already ticketed. Amend OTEP-111 if these scenarios are not covered.
 
 ---
 
-### WOG-10: Have OTEP resolve my agency from my AD identity
+### WOG-10: Resolve my agency from my AD identity
 
 **As a** public officer logging in via WOG AD,
-**I want** OTEP to work out which agency I belong to from my AD identity,
+**I want** OTEP to resolve which agency I belong to from my AD identity,
 **So that** I get the right agency context without typing my agency in by hand.
 
+> **Dependency:** Blocked on decision #2 (agency-resolution source). Raise with Pow Hwee before grooming — once the source is confirmed this becomes straightforward delivery.
+
 **Acceptance Criteria:**
-- [ ] When I log in, my agency is resolved from my WOG AD identity and I'm not asked to select or type it. [ASSUMPTION: AD returns only email + SOE-ID — agency must be derived from email domain, SOE-ID prefix, or a separate lookup]
-- [ ] When my agency is resolved, OTEP uses it to decide whether my agency is onboarded — the same agency drives the access check.
+- [ ] When I log in, my agency is resolved automatically from my WOG AD identity — I'm not asked to select or type it. [ASSUMPTION: AD returns email + SOE-ID only — resolution source TBD: email domain, SOE-ID prefix, or separate lookup]
+- [ ] The resolved agency drives the onboarded-agency access check — the same value powers both.
 - [ ] If my agency can't be resolved from my AD identity, I'm blocked with a clear message rather than dropped into OTEP with no agency context.
 
 **Edge cases:**
-- Resolution source not yet decided — email domain vs. SOE-ID prefix vs. separate lookup table (Open Question #4, confirm with Pow Hwee)
-- Officer's email domain doesn't map cleanly to a single agency — ambiguous resolution needs a defined fallback
-- Agency resolved differs from where the officer actually sits (secondment, cross-posting) — out of MVP scope, flag for later
+- Email domain doesn't map cleanly to one agency — ambiguous resolution needs a defined fallback
+- Secondment / cross-posting — out of MVP scope; flag for later
 
-**Priority:** MVP — agency must be known to run the onboarded-agency access rule; manual entry undermines the single-click flow.
-
----
-
-### WOG-11: Skip separate account creation (go straight to OTEP)
-
-**As a** public officer with WOG AD credentials,
-**I want to** reach OTEP without creating a separate account,
-**So that** I'm not slowed down by a registration step for a platform tied to credentials I already hold.
-
-**Acceptance Criteria:**
-- [ ] After a successful WOG AD login, I go straight to OTEP — there's no additional account creation or registration step.
-- [ ] When I log in for the first time, OTEP recognises me from my WOG AD identity without me signing up. [ASSUMPTION: AD returns email + SOE-ID only — any first-login profile fields are collected, not a separate account]
-- [ ] On every later login, I'm taken straight in with no repeat of any setup step.
-
-**Edge cases:**
-- First login may still need minimal profile fields (name, agency) since AD returns only email + SOE-ID — that's profile collection, not account creation (see WOG-06)
-- Officer abandons any first-login profile step — define whether partial is saved or access is blocked until complete
-- Returning officer must never be re-prompted for setup already completed
-
-**Priority:** MVP — zero-signup access is core to the single-click value proposition.
+**Priority:** MVP — agency must be known to run the access check; manual entry breaks the single-click flow.
 
 ---
 
 ### OTEP-110: See a clear error when login fails
 
-**As a** user attempting to log in,
+**As a** public officer attempting to log in,
 **I want to** see a specific, helpful error message when login fails,
 **So that** I know what went wrong and how to fix it.
 
 **Acceptance Criteria:**
 - [ ] If I enter incorrect credentials, I see "Incorrect credentials. Please try again." — not a generic server error.
-- [ ] If my WOG AD account is locked, I see a message that directs me to my agency's IT helpdesk.
-- [ ] If WOG AD is unreachable or down, I see "Service temporarily unavailable. Please try again later."
+- [ ] If my WOG AD account is locked, I see a message that directs me to my agency's IT helpdesk — not a generic "login failed."
+- [ ] If my WOG AD account is disabled, I see a message explaining the account is inactive and who to contact — distinct from the incorrect-credentials message.
+- [ ] If WOG AD is unreachable or down, I see "Service temporarily unavailable. Please try again later." — not a message that implies my credentials are wrong.
+- [ ] When the AD connection times out, the service-unavailable message appears within a defined wait — not an indefinite hang. [ASSUMPTION: timeout threshold TBD — confirm with Pow Hwee]
+- [ ] Once WOG AD is reachable again, I can log in normally without clearing cache or restarting.
+
+**NFR — account enumeration (from WOG-15):** Error messages must not reveal whether an account exists. An unknown identity and a valid identity with a wrong password must produce the same message and a consistent response time. No AD detail, stack trace, or account-status field is exposed. This constraint applies to all error copy — get compliance sign-off before build.
 
 **Edge cases:**
-- Rate limiting — after X failed attempts, what happens? (WOG AD policy may handle this)
-- Error messages should not leak information about whether an account exists
+- Locked vs. disabled vs. invalid — three distinct messages, none generic, none leaking account existence
+- Timing side-channel — response time must not differ measurably by account existence
+- Locked account copy ("go to IT helpdesk") vs. not confirming account existence — one compliance call resolves both; WOG-15 is the owner
 
 **Priority:** MVP — critical for user trust and reducing helpdesk load
 
 **Risks:**
-- Sprint assignment TBD — could be Sprint 1 carry-over or Sprint 3. Confirm at Sprint 1 finalisation (Fri 15 May). If it carries to Sprint 3, it competes with apply-flow stories for capacity.
-- Error message copy needs to avoid leaking account-existence info (security constraint) — may need compliance review.
-
----
-
-### WOG-12: See a helpful message when my AD account is locked or disabled
-
-**As a** public officer whose WOG AD account is locked or disabled,
-**I want to** see a specific message that tells me where to get help,
-**So that** I can resolve the lockout instead of repeatedly failing a generic login.
-
-**Acceptance Criteria:**
-- [ ] If my WOG AD account is locked, I see a message that directs me to my agency's IT helpdesk — not a generic "login failed".
-- [ ] If my WOG AD account is disabled, I see a message explaining the account is inactive and who to contact — distinct from the incorrect-credentials message.
-- [ ] When I see the locked/disabled message, OTEP does not let me retry endlessly against the same blocked account on this screen.
-- [ ] When my account is locked or disabled, the message does not confirm whether my email or SOE-ID matches a real account.
-
-**Edge cases:**
-- Officer's WOG AD account is disabled/locked — should show specific message (not generic failure)
-- Lockout originates in WOG AD, not OTEP — OTEP must surface AD's state, not re-implement lockout
-- Account is unlocked by IT mid-session — next login attempt should succeed without a stale error
-
-**Priority:** MVP — locked-account users flood the helpdesk if the message is generic
-
----
-
-### WOG-13: See a graceful message when WOG AD is unreachable
-
-**As a** user attempting to log in,
-**I want to** see a graceful message when WOG AD is unreachable or down,
-**So that** I understand the problem is temporary and not my fault.
-
-**Acceptance Criteria:**
-- [ ] If WOG AD is unreachable or down, I see "Service temporarily unavailable. Please try again later." — not a broken or blank page.
-- [ ] When WOG AD is unreachable, I am not told my credentials are wrong — the message clearly states it's a service issue.
-- [ ] When the AD connection times out, I see the service-unavailable message within a reasonable wait rather than an indefinite hang.
-- [ ] Once WOG AD is reachable again, I can log in normally without clearing cache or restarting.
-
-**Edge cases:**
-- Network/AD service is down — graceful error message needed
-- Partial AD outage (slow but not fully down) — timeout threshold needs definition
-- AD recovers between retries — retry should succeed cleanly
-
-**Priority:** MVP — AD outages will happen and must not look like a credential failure
-
----
-
-### WOG-14: Be protected by rate limiting after repeated failed attempts
-
-**As a** user (and the platform on my behalf),
-**I want** repeated failed login attempts to be rate limited,
-**So that** my account and OTEP are protected from brute-force attempts.
-
-**Acceptance Criteria:**
-- [ ] If I make repeated failed login attempts, further attempts are throttled or temporarily blocked rather than accepted indefinitely.
-- [ ] When I am rate limited, I see a clear message that too many attempts were made and when I can try again.
-- [ ] When I am rate limited, the message does not reveal whether the account exists or which field was wrong.
-- [ ] After the cool-down period, I can attempt to log in again with valid credentials.
-
-**Edge cases:**
-- Rate limiting — after X failed attempts, what happens? (WOG AD policy may handle this — confirm with Pow Hwee whether OTEP enforces this or relies on WOG AD)
-- Shared government workstation — one officer's failures should not lock out the next legitimate user unnecessarily
-- Threshold (X attempts) and cool-down duration undefined — pending WOG AD / compliance policy
-
-**Priority:** MVP — security baseline for a government platform
-
-**Risks:**
-- Ownership unclear — WOG AD policy may already enforce account lockout/rate limiting. If so, OTEP must not double-implement. Confirm with Pow Hwee what WOG AD handles before building.
-- Threshold and cool-down values are TBD pending compliance — eng may build with a guess and rework if the mandated policy differs.
-
----
-
-### WOG-15: Not have error messages reveal whether an account exists
-
-**As a** user attempting to log in,
-**I want** login error messages to never reveal whether an account exists,
-**So that** my identity and other officers' accounts cannot be probed by attackers.
-
-**Acceptance Criteria:**
-- [ ] If I enter an unknown identity versus a valid identity with a wrong password, I see the same generic "Incorrect credentials. Please try again." message.
-- [ ] When login fails, the message and response timing do not differ in a way that signals whether the account exists.
-- [ ] When my account is locked, disabled, or rate limited, the message directs me to help without confirming the account is real to an unauthenticated user.
-- [ ] When any login error is shown, no underlying AD detail, stack trace, or account-status field is exposed to me.
-
-**Edge cases:**
-- Error messages should not leak information about whether an account exists
-- Timing side-channel — failure responses should not differ measurably by account existence
-- Locked/disabled messaging must balance helpfulness with not confirming account existence — needs copy review with compliance
-
-**Priority:** MVP — account-enumeration is a security constraint for government platforms
-
-**Risks:**
-- Error message copy must avoid leaking account-existence info (security constraint) — may need compliance review, shared with OTEP-110.
-- Tension between WOG-12's "tell the user it's locked, go to IT helpdesk" and not confirming account existence to an unauthenticated user — resolve the copy with compliance before grooming.
+- Sprint assignment TBD (S1 carry-over vs S3) — confirm at Sprint 1 finalisation.
+- Error message copy needs compliance sign-off to balance locked-account helpfulness against non-enumeration. Don't build until copy is approved.
 
 ---
 
 ### WOG-04: Stay logged in during my active session
 
-**As a** logged-in user (officer or admin),
+**As a** logged-in public officer,
 **I want to** remain authenticated while I'm actively using OTEP,
 **So that** I don't get interrupted by repeated login prompts.
 
 **Acceptance Criteria:**
-- [ ] While I'm actively using OTEP, navigating between pages keeps me logged in — I'm not prompted to re-authenticate mid-session.
-- [ ] If I've been idle for more than [X minutes — TBD], my session expires and I'm redirected to the login page. [ASSUMPTION: idle timeout value TBD — pending government compliance policy]
+- [ ] While I'm actively using OTEP, navigating between pages keeps me logged in — I'm not re-prompted mid-session.
+- [ ] If I've been idle for more than [X minutes — TBD], my session expires and I'm redirected to the login page. [ASSUMPTION: idle timeout value TBD — pending government compliance policy; see decision #1]
 - [ ] If my session has expired and I try to do something, I see "Session expired, please log in again" — not a broken or blank page.
 
 **Edge cases:**
-- Browser tab left open overnight — should auto-expire on next interaction
-- What's the government-mandated session timeout? (Open question #6 in brief)
-- User switches tabs/apps for an extended period — idle timer should still apply
+- Browser tab left open overnight — auto-expire on next interaction
+- User switches tabs/apps for an extended period — idle timer still applies
 
 **Priority:** MVP — broken sessions destroy trust
 
 **Risks:**
-- Government-mandated session timeout unknown — the idle-timeout AC has a TBD value. If the compliance answer comes late, eng builds with a guess and may need to rework.
-- Session expiry during FormSG form fill (edge case) risks data loss. Grace period or warning mechanism needs design input from Amber.
-
----
-
-### WOG-16: Be warned before my idle session expires
-
-**As a** logged-in user filling out an application,
-**I want to** be warned before my idle session expires,
-**So that** I don't lose work I've entered in a FormSG application.
-
-**Acceptance Criteria:**
-- [ ] If I've been idle and my session is about to expire, I see a warning before I'm logged out — not a silent redirect mid-task.
-- [ ] When I see the expiry warning, I can choose to stay signed in, and doing so resets my idle timer and keeps me on the same page.
-- [ ] If I'm part-way through a FormSG application when the warning appears, acting on it keeps my entered data intact — no silent data loss.
-- [ ] If I don't respond to the warning within the grace period, my session expires and I see "Session expired, please log in again" rather than a broken page.
-
-**Edge cases:**
-- Grace period length is tied to the [TBD] idle timeout — pending government compliance policy
-- User dismisses the warning but stays idle — should still expire after the grace period
-- Warning fires while user is on an external FormSG form opened from OTEP — coordinate behaviour with apply flow
-
-**Priority:** MVP — prevents data loss during the core apply flow, which directly destroys user trust
+- Government-mandated idle timeout is unknown. Build with a placeholder; rework is likely if compliance answer lands late.
 
 ---
 
 ### WOG-05: Log out of OTEP
 
-**As a** logged-in user,
+**As a** logged-in public officer,
 **I want to** log out of OTEP,
-**So that** my session is ended and no one else can access my account on this device.
+**So that** my session ends and no one else can access my account on this device.
 
 **Acceptance Criteria:**
 - [ ] When I click "Log out", my session ends and I'm taken to the login page.
-- [ ] After logging out, pressing the browser back button doesn't let me back into OTEP — I'm redirected to login.
+- [ ] After logging out, pressing the browser back button doesn't return me to OTEP — I'm redirected to login.
 - [ ] After logging out, typing any OTEP URL directly into the browser redirects me to the login page.
 
 **Edge cases:**
-- Logging out on one device — does it log out all devices? (Depends on session architecture)
-- Shared computer scenario (common in government) — logout must be complete, no cached credentials
+- Logging out on one device — effect on other sessions governed by the concurrent-session default (decision #4)
+- Shared workstations — see WOG-17 for hardening requirements
 
 **Priority:** MVP — security requirement for government platforms
 
-**Risks:**
-- Shared-device scenario (common in government) means logout must be thorough — cached credentials, service workers, browser back-button all need testing. Low probability of being descoped, but high rework cost if session architecture doesn't account for this upfront.
-
 ---
 
-### WOG-17: Have a complete logout on shared government devices
+### WOG-17: Complete logout on shared government devices
 
 **As a** public officer using a shared government workstation,
 **I want to** be confident that logging out fully clears my session,
 **So that** the next person on that device cannot access my OTEP account or data.
 
 **Acceptance Criteria:**
-- [ ] When I log out on a shared device, no cached credentials or session tokens remain that let the next user resume my session.
-- [ ] After I log out, pressing the browser back button shows no cached OTEP page content — I'm redirected to login instead.
-- [ ] After I log out, any active service worker or background session is invalidated so OTEP can't reload my data without a fresh login.
-- [ ] If a new person logs in on the same device after me, they see only their own account — none of my profile, applications, or history.
+- [ ] After I log out on a shared device, the next person who opens OTEP in the same browser sees the login page — not my account.
+- [ ] After I log out, pressing the browser back button shows the login page — no cached OTEP content from my session.
+- [ ] If a new person logs in after me on the same device, they see only their own account — none of my profile, applications, or history.
+
+**NFR — implementation note:** Session tokens, service workers, and any background processes must be invalidated on logout. This belongs in the engineering acceptance test plan, not an AC.
 
 **Edge cases:**
-- Officer closes the browser without clicking "Log out" — next user should still not inherit the session
-- Multiple officers using the same workstation in sequence through a shift
-- Browser autofill / saved-password prompts on shared devices — out of OTEP's control but flag for IT guidance
+- Officer closes the browser without clicking "Log out" — define expected behaviour (idle timeout is the fallback)
+- Browser autofill / saved-password prompts — out of OTEP's control; flag for IT guidance
 
 **Priority:** MVP — shared workstations are common in government; incomplete logout is a security exposure
 
 **Risks:**
-- Cached credentials, service workers, and the browser back button all need explicit testing on shared-device scenarios. High rework cost if session architecture doesn't account for this upfront.
+- High rework cost if session architecture doesn't account for shared-device scenarios upfront. Raise with Pow Hwee during technical design.
 
 ---
 
-### WOG-18: Manage concurrent sessions across multiple devices
-
-**As a** logged-in user,
-**I want to** understand and control my sessions when I'm logged in on more than one device,
-**So that** session behaviour across my devices is predictable and secure.
-
-**Acceptance Criteria:**
-- [ ] If I'm logged in on more than one device, OTEP applies a defined, consistent rule for concurrent sessions [ASSUMPTION: concurrent-session policy TBD — allow multiple vs. single active session, pending security team].
-- [ ] When I log out on one device, the effect on my other devices follows that same defined rule — not unpredictable behaviour.
-- [ ] If a concurrent session is ended remotely, on the affected device I see "Session expired, please log in again" rather than a broken page.
-- [ ] When I log in on a new device, my existing sessions behave according to the policy and I'm not silently locked out without explanation.
-
-**Edge cases:**
-- Officer logs in on desktop and mobile simultaneously — allowed or single-session enforced?
-- Logging out on one device — does it end all sessions, or only that device's?
-- Stale session on a forgotten device — should still respect the idle timeout independently
-
-**Priority:** MVP — resolves the open concurrent-sessions question from OTEP-71 and WOG-05; security team must confirm the policy before grooming
-
----
-
-### WOG-06: First-time login: welcome and profile setup
+### WOG-06: First-time login and profile setup
 
 **As a** public officer logging into OTEP for the first time,
-**I want to** set up my profile and understand what OTEP offers,
-**So that** I can orient myself and start using the platform.
+**I want to** enter my name so my profile is complete,
+**So that** I can start using the platform with a usable identity.
 
-**Flow:** First login detected (no existing OTEP profile for this SOE-ID) → welcome screen → officer fills in required profile fields → lands on home page.
+**Flow:** First login detected (no existing OTEP profile for this SOE-ID) → profile setup screen → officer enters name → lands on home page.
 
-**Data from AD:** Email + SOE-ID only. Name, agency, job title must come from officer or a separate data source.
+**Data from AD:** Email + SOE-ID only. Name must be entered by officer. Agency resolved via WOG-10 — do not ask the officer to type it.
 
 **Acceptance Criteria:**
-- [ ] The first time I log in, I see a welcome screen that explains what OTEP is.
-- [ ] On first login, my email is already filled in — I don't need to type it. [ASSUMPTION: AD provides email only; name and agency must be entered manually]
-- [ ] On first login, I'm asked to enter my name and agency before continuing. [ASSUMPTION: mandatory fields are name + agency — TBD with team]
+- [ ] The first time I log in, I'm taken to a profile setup screen before the home page.
+- [ ] On the setup screen, my email is already filled in — I don't need to type it. [ASSUMPTION: AD provides email only]
+- [ ] I'm asked to enter my name before continuing. [ASSUMPTION: mandatory field is name only — per decision #5]
+- [ ] On every subsequent login, I go straight to the home page — no setup screen. *(absorbed from WOG-19)*
+- [ ] If I started profile setup on a previous login but didn't finish entering my name, my next login returns me to the setup screen — not the home page. *(absorbed from WOG-20)*
 
 **Edge cases:**
-- Can we derive agency from email domain or SOE-ID format? (Would remove one manual step)
-- What's mandatory vs. optional for profile setup? (Impacts how quickly officers get to value)
+- If agency auto-resolution (WOG-10) fails, what does the setup screen show for agency? Define the fallback before Amber designs the screen.
+- Welcome/explainer screen deferred to R1 — MVP setup screen is name entry only.
 
-**Priority:** MVP — but keep minimal (welcome + mandatory fields only). Rich onboarding is R1.
+**Priority:** MVP — but keep to one field (name). Rich onboarding is R1.
 
 **Risks:**
-- Mandatory profile fields TBD — if the team can't agree on what's required vs optional, scope creeps from "minimal welcome screen" toward a full onboarding flow. Decide before grooming: name + agency is likely sufficient.
-- If POCDEX can pre-populate officer data (name, agency) from SOE-ID, this story simplifies significantly. Depends on OTEP-183 spike outcome from Sprint 1.
+- Mandatory field set must be agreed before Amber designs the screen. Name-only is the recommendation; hold to it.
+- If POCDEX can pre-populate name from SOE-ID, this story collapses to zero — confirm OTEP-183 spike outcome before building.
 
 ---
 
-### WOG-19: Skip the welcome on subsequent logins
+## Parked — not build-ready for MVP
 
-**As a** returning public officer who has already completed first-time setup,
-**I want to** skip the welcome screen and go straight to the home page,
-**So that** I'm not slowed down by onboarding I've already seen.
+### WOG-14: Spike — confirm rate-limiting ownership
 
-**Acceptance Criteria:**
-- [ ] On every subsequent login, I skip the welcome and go straight to the home page.
-- [ ] When OTEP detects an existing profile for my SOE-ID, no welcome or profile-setup screen is shown.
-- [ ] If my profile already has the mandatory fields filled, I'm never asked to re-enter name or agency on login.
+**What to answer:** Does WOG AD already enforce account lockout and rate limiting? The standing assumption says yes ("WOG AD handles password management, MFA, and account lockout — OTEP does not re-implement these"). If confirmed, OTEP builds nothing here. Only create a delivery ticket if WOG AD does *not* cover it.
 
-**Edge cases:**
-- A returning officer whose profile is incomplete from a prior abandoned setup — do they see the home page or get routed back to setup?
-- Profile exists for the SOE-ID but mandatory fields were since cleared — treat as first-time or as resume?
-
-**Priority:** MVP — pairs with WOG-06; returning officers are the common case and must not be re-onboarded.
+**Owner:** Pow Hwee
+**When:** Before Sprint 3 grooming
 
 ---
 
-### WOG-20: Resume an abandoned first-time profile setup
+### WOG-16: Pre-expiry session warning (deferred)
 
-**As a** public officer who left first-time profile setup before completing it,
-**I want to** resume and finish the setup on my next login,
-**So that** I don't lose progress and can still get full access to OTEP.
+Deferred to the sprint that ships the apply flow (Sprint 3+). The FormSG data-loss risk that motivated this story only exists once apply is live.
 
-**Acceptance Criteria:**
-- [ ] If I abandon profile setup mid-way and log in again, I'm returned to profile setup rather than the home page.
-- [ ] When I resume setup, any mandatory fields I already entered are still filled — I don't start from scratch. [ASSUMPTION: mandatory fields are name + agency — TBD with team]
-- [ ] If I have not completed the mandatory fields, I cannot reach the home page until setup is complete.
-- [ ] Once I finish the remaining mandatory fields, I land on the home page and subsequent logins skip setup.
-
-**Edge cases:**
-- What if officer abandons profile setup mid-way? (Save partial? Block access until complete?)
-- Partial data persisted but officer never returns — how long is the incomplete profile retained?
-- Officer abandons setup, agency is removed before they return — what happens on resume?
-
-**Priority:** MVP — resolves the WOG-06 abandonment edge case; without it officers can be locked out or lose entered data.
+**Note:** The AC about "FormSG entered data stays intact" is unachievable — OTEP does not control state inside an external FormSG form. Rescope to "warn before expiry + offer to extend session" when this is picked up.
 
 ---
+
+### WOG-18: Concurrent sessions — policy decision, not a feature
+
+This does not need a delivery ticket. Make a one-line default decision and record it in `decisions-log.md`:
+
+> *"Allow multiple concurrent sessions. Each session respects the idle timeout independently."*
+
+If the security team rules differently, revisit. Do not build a session-management feature in MVP.
+
+---
+
+## Deferred to Sprint 6
 
 ### WOG-02: Log in as agency admin with elevated permissions
 
@@ -448,19 +273,19 @@
 - [ ] As a standard officer, I cannot access admin-only features — they're hidden, not just disabled.
 
 **Edge cases:**
-- An officer is promoted to admin — how quickly does the role update? Real-time from AD, or synced periodically?
-- An admin is demoted — access should be revoked promptly
-- Can a person be both officer AND admin? (e.g. admin who also browses opportunities)
+- Officer promoted to admin — how quickly does the role update? Real-time from AD or synced periodically?
+- Admin demoted — access must be revoked promptly
+- Can a person be both officer and admin? (e.g. admin who also browses opportunities)
 
-**Priority:** Deferred to Sprint 6 — agency admins are a core user type for posting opportunities, but officer login ships first
+**Priority:** Deferred to Sprint 6. Consolidate with WOG-07 — they're the same mechanism.
 
 ---
 
 ### WOG-07: Role-based access control
 
-**As a** platform administrator,
-**I want** OTEP to enforce role-based access based on WOG AD attributes,
-**So that** officers and admins only see features appropriate to their role.
+**As a** public officer or agency admin,
+**I want** OTEP to enforce the correct access level based on my WOG AD role,
+**So that** I only see features appropriate to my role.
 
 **Acceptance Criteria:** [DEFERRED to Sprint 6]
 - [ ] When I log in, OTEP assigns me the correct role (officer or agency admin) based on my WOG AD attributes.
@@ -468,32 +293,19 @@
 - [ ] If my role changes in WOG AD, the next time I log in OTEP reflects the updated role.
 
 **Edge cases:**
-- Role determination: AD groups vs. custom attribute vs. OTEP-managed lookup table? (Technical decision for Pow Hwee)
-- What if AD doesn't clearly indicate admin status? Fallback?
+- Role source: AD groups vs. custom attribute vs. OTEP-managed lookup? (Technical decision for Pow Hwee — resolve before Sprint 6 grooming)
 - Grace period for role changes — immediate or next login?
 
-**Priority:** Deferred to Sprint 6 with WOG-02. Start with 2 roles (officer, agency admin). More granular roles in R1.
+**Priority:** Deferred to Sprint 6 with WOG-02. Start with 2 roles (officer, agency admin).
 
 ---
-
-## Open Questions
-
-1. **Session timeout policy** — What's the government-mandated idle timeout? (30 min? 60 min? Configurable?) Drives WOG-04 / WOG-16.
-2. **Role source** — Are roles determined by AD groups, a custom AD attribute, or an OTEP-managed table synced with AD? Drives WOG-07 / WOG-02.
-3. **MFA** — Does WOG AD enforce MFA at their end, or does OTEP need to implement it?
-4. **Data from AD** — Exactly what fields does WOG AD provide? (name, email, agency, role, job title, unit?) Drives OTEP-71 / WOG-10 / WOG-06.
-5. **Agency resolution** — Is agency derived from email domain, SOE-ID prefix, or a separate lookup? Drives WOG-10.
-6. **Rate limiting ownership** — Does WOG AD policy already enforce lockout/rate limiting, or must OTEP? Drives WOG-14.
-7. **Concurrent sessions** — Allow multiple active sessions or enforce single? Drives WOG-18.
-8. **Shared devices** — Do officers commonly use shared workstations? Drives WOG-17 / WOG-05.
-9. **First-time profile** — What's mandatory to collect on first login vs. what can be deferred? Drives WOG-06 / WOG-20.
 
 ## Assumptions
 
 - WOG AD handles password management, MFA, and account lockout — OTEP does not re-implement these
 - All OTEP users are public officers — no external/public user access in MVP
 - Two roles only in MVP: officer and agency admin
-- AD returns only **email + SOE-ID** on auth — name, agency, job title must come from officer input or separate data source
+- AD returns only **email + SOE-ID** on auth — name must come from officer input; agency resolved via WOG-10
 
 ## Definition of Ready Checklist (from Eng Manager)
 
@@ -511,10 +323,15 @@
 
 ## Next Steps
 
-- [ ] Confirm with Pow Hwee: what data does WOG AD return on auth? What role mechanism is planned? (Open Questions #2, #4, #5, #6)
-- [ ] Review with Amber: login page UX, error states, first-time experience, session-expiry warning (WOG-16)
-- [ ] Confirm session timeout + concurrent-session policy (compliance/security team)
-- [ ] Compliance copy review for error messages (WOG-15 / OTEP-110)
+- [ ] Pow Hwee: confirm agency-resolution source (decision #2) — unblocks WOG-10
+- [ ] Pow Hwee: confirm WOG AD owns rate limiting (decision #3) — likely kills WOG-14
+- [ ] Security team: pick a concurrent-session default (decision #4) — closes WOG-18 without build
+- [ ] Michelle + team: confirm name-only is the mandatory profile field (decision #5) — unblocks WOG-06
+- [ ] Pow Hwee: confirm OTEP-111 covers WOG-08/09 scenarios (decision #6)
+- [ ] Compliance: idle-timeout value (decision #1) — unblocks WOG-04
+- [ ] Compliance: error message copy sign-off for OTEP-110 + NFR from WOG-15
+- [ ] Amber: design WOG-06 profile screen (name entry + email pre-fill) and OTEP-110 error states
+- [ ] Confirm OTEP-183 POCDEX spike outcome — may simplify WOG-06 to zero
 - [ ] Grooming session
 - [ ] Move to Confluence one-pager
 - [ ] DoR met → Jira

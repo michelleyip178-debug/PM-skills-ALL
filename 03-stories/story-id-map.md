@@ -77,20 +77,37 @@
 
 ## All Stories — Auth (WOG AD — Epic 5)
 
-| Jira ID | Title | Old ID | Sprint |
-|---------|-------|--------|--------|
-| OTEP-71 | Login Authentication (parent) | OTEP-71a | **3** *(tracked separately — not in Sprint 2 confirmed scope)* |
-| *(subtask of OTEP-71)* | WOGAD token handling | OTEP-71b | **3** |
-| *(subtask of OTEP-71)* | WOGAD session management | OTEP-71c | **3** |
-| *(subtask of OTEP-71)* | Login UI + error states | OTEP-71d | **3** |
-| OTEP-111 | Officers with no access | OTEP-71e | 1 |
-| OTEP-72 | New Officer account creation | OTEP-72 | 1 |
-| OTEP-110 | Login fail / clear error | WOG-03 | **3** *(deferred from Sprint 2 — capacity review 2026-05-13)* |
-| WOG-04 *(Jira TBD)* | Stay logged in during session | WOG-04 | **3** *(or S1 carry-over)* |
-| WOG-05 *(Jira TBD)* | Log out of OTEP | WOG-05 | **3** *(or S1 carry-over)* |
-| WOG-06 *(Jira TBD)* | First-time login experience | WOG-06 | **3** *(or S1 carry-over)* |
-| WOG-02 *(Jira TBD)* | Log in as agency admin (deferred) | WOG-02 | 6 |
-| WOG-07 *(Jira TBD)* | Role-based access control (deferred) | WOG-07 | 6 |
+*Reconciled 2026-05-20 — reduced from 20 bulk-generated stories to ~9 MVP build stories. See auth.md for full detail.*
+
+| Jira ID | Title | Working ID | Sprint | Notes |
+|---------|-------|------------|--------|-------|
+| OTEP-71 | Log in with WOG AD credentials | OTEP-71a | **3** | Absorbs WOG-11 (no separate account creation) |
+| *(subtask of OTEP-71)* | WOGAD token handling | OTEP-71b | **3** | |
+| *(subtask of OTEP-71)* | WOGAD session management | OTEP-71c | **3** | |
+| *(subtask of OTEP-71)* | Login UI + error states | OTEP-71d | **3** | |
+| OTEP-111 | Officers with no access | OTEP-71e | 1 ✓ | Confirm it covers WOG-08 (agency not onboarded) + WOG-09 (invalid officer) — amend if not |
+| OTEP-72 | New Officer account creation | OTEP-72 | 1 ✓ | |
+| WOG-10 *(Jira TBD)* | Resolve agency from AD identity | WOG-10 | **3** | New — blocked on agency-resolution source decision (Pow Hwee) |
+| OTEP-110 | Login fail / clear error | WOG-03 | **3** | Absorbs WOG-12 (locked/disabled) + WOG-13 (AD unreachable); WOG-15 (no-enumeration) is an NFR constraint on this ticket |
+| WOG-04 *(Jira TBD)* | Stay logged in during session | WOG-04 | **3** | Blocked on idle-timeout compliance value |
+| WOG-05 *(Jira TBD)* | Log out of OTEP | WOG-05 | **3** | |
+| WOG-17 *(Jira TBD)* | Complete logout on shared devices | WOG-17 | **3** | New — pairs with WOG-05 |
+| WOG-06 *(Jira TBD)* | First-time login + profile setup (name only) | WOG-06 | **3** | Trimmed to name-only; absorbs WOG-19 (skip on return) + WOG-20 (resume — collapsed to 1 AC) |
+| WOG-14 *(Jira TBD)* | Spike — confirm rate-limiting ownership | WOG-14 | **3 pre-work** | Spike, not delivery — likely build nothing (WOG AD owns lockout per assumption) |
+| WOG-16 *(Jira TBD)* | Pre-expiry session warning | WOG-16 | **Deferred** | Pairs with apply flow (Sprint 3+); FormSG-data AC dropped |
+| WOG-18 | Concurrent-session default | WOG-18 | **Decision only** | Not a delivery ticket — log a one-line policy decision in decisions-log.md |
+| WOG-02 *(Jira TBD)* | Log in as agency admin (deferred) | WOG-02 | 6 | Consolidate with WOG-07 |
+| WOG-07 *(Jira TBD)* | Role-based access control (deferred) | WOG-07 | 6 | Consolidate with WOG-02 |
+
+**Absorbed / closed working IDs (do not ticket separately):**
+- WOG-08 → OTEP-111 (agency not onboarded — confirm coverage)
+- WOG-09 → OTEP-111 (invalid officer — confirm coverage)
+- WOG-11 → OTEP-71 (no separate account creation)
+- WOG-12 → OTEP-110 (locked/disabled message)
+- WOG-13 → OTEP-110 (AD unreachable message)
+- WOG-15 → NFR on OTEP-110 (no-enumeration constraint)
+- WOG-19 → WOG-06 (skip welcome on return)
+- WOG-20 → WOG-06 (resume setup — collapsed to 1 AC)
 
 ---
 
@@ -110,7 +127,10 @@ These working IDs have no matching Jira ticket in the backlog as of 2026-05-19. 
 | US-P2 | View my competencies | TBD, needs ticket |
 | WOG-04 | Stay logged in during session | Sprint 3, needs ticket |
 | WOG-05 | Log out of OTEP | Sprint 3, needs ticket |
-| WOG-06 | First-time login experience | Sprint 3, needs ticket |
+| WOG-06 | First-time login + profile setup (name only) | Sprint 3, needs ticket |
+| WOG-10 | Resolve agency from AD identity | Sprint 3, needs ticket — blocked on agency-resolution source decision |
+| WOG-17 | Complete logout on shared devices | Sprint 3, needs ticket |
+| WOG-14 | Spike — rate-limiting ownership | Sprint 3 pre-work, spike not delivery |
 | WOG-02 | Log in as agency admin | Sprint 6, deferred |
 | WOG-07 | Role-based access control | Sprint 6, deferred |
 
@@ -123,5 +143,7 @@ These working IDs have no matching Jira ticket in the backlog as of 2026-05-19. 
 3. Stories without Jira tickets are marked *(Jira TBD)* above
 
 ---
+
+*Updated: 2026-05-20 — Auth (Epic 5) reconciled: reduced from 20 bulk-generated stories to ~9 MVP build stories. Added WOG-10, WOG-17 as new tickets. Registered absorbed IDs (WOG-08/09 → OTEP-111, WOG-11 → OTEP-71, WOG-12/13/15 → OTEP-110, WOG-19/20 → WOG-06). WOG-14 reclassified as spike; WOG-16 deferred; WOG-18 converted to policy decision.*
 
 *Updated: 2026-05-19 — Jira backlog sync: added OTEP-131, 132, 172, 196, 197, 231, 232, 281, 282, 283, 284, 290, 295, 296. Fixed OTEP-268 (re-added Sprint 2 by Pow Hwee 2026-05-18). Fixed OTEP-285 (absorbed into OTEP-128). Flagged OTEP-133 title mismatch. Added "Stories still without Jira tickets" table. Added OTEP-284 (Closing soon re-ticketed).*
