@@ -43,6 +43,8 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [ ] Loop Diana into opportunities decisions going forward (Jace's call, PM Weekly 11 May); add `06-skills-and-decisions/stakeholders/people/diana.md`
 - [ ] Load Adrian's OKR doc into NotebookLM — confirm it isn't already `06-skills-and-decisions/otep-roadmap-okrs-2627.md`
 - [ ] Clarify the "OTG test cases — session notes co-innovation" request, then route to `projects/otg-ops/task-log.md`
+- [ ] **Conduct PIM risk assessment (OTG ops)** — scope to the no-PIM scenario: identify worst-case damage if privileged accounts are abused, then submit residual risk for formal acceptance *(captured 2026-05-20)*
+- [ ] Clean up email inbox *(captured 2026-05-20)*
 
 ---
 
