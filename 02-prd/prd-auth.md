@@ -1,292 +1,260 @@
-# PRD: WOG AD Authentication for OTEP
+# Epic 5: WOG Authentication - Identity Verification
 
-**Author:** Michelle
-**Created:** 2026-05-06
-**Last updated:** 2026-05-13
-**Status:** Draft (auth flow accepted for MVP — decision 2026-05-12)
-**Target Release:** Go-Live Fri 16 Oct 2026 (per programme plan, decision 2026-05-12)
+| Doc Created |  |
+|---|---|
+| PM |  |
+| Tech |  |
+| Designer | Name |
+| Business Owner | Name |
+| Infra Eng | Name |
+| Target launch | Date |
+| Epic Link | Link to Jira Epic (PM to input) |
+| Figma Link | Link to Figma file (Designer to input) |
 
-> **Story ID note:** This PRD uses internal reference IDs (OTEP-85, US-03, etc.) that predate Jira ticket creation. The canonical IDs in [story-id-map.md](story-id-map.md) are: OTEP-71 (login parent + subtasks), OTEP-111 (no access), OTEP-72 (account creation), OTEP-110 (login fail), WOG-04 (session), WOG-05 (logout), WOG-06 (first-time login), WOG-02 (admin login), WOG-07 (RBAC). Use the story-id-map IDs in Jira and sprint planning.
+## 1. Background & Context
 
----
+**Purpose:** Help the reader understand why this exists now.
 
-## Problem Statement
+- 
 
-### What problem are we solving?
+Strategic context (org priority / policy / OKR / roadmap theme)
 
-Public officers have no way to securely access OTEP today. Without verified identity, no platform feature — opportunities discovery, applications, competency profiles — can be delivered. OTEP cannot distinguish a legitimate officer from an unauthorized user, meaning the platform is effectively unusable.
+- 
 
-### Who has this problem?
+Who requested this and why
 
-- **Public officers** across onboarded agencies who need to discover and apply for opportunities
-- **OTEP platform team** who cannot ship any user-facing feature without authenticated access
+- 
 
-### How do we know this is a problem?
+What has changed (new data, new constraint, new opportunity)
 
-- **Mandatory requirement:** WOG AD is the required authentication mechanism for Singapore government platforms — non-negotiable for launch
-- **MVP dependency:** Every other OTEP epic (Opportunities, Competency Profiles, Analytics) requires a verified officer identity to function
-- **OKR alignment:** Phase 1 MVP (Oct 2026) cannot be met without authenticated access — all success metrics require officers to be on the platform
+OTG is currently used by…
 
-### What happens if we don't solve it?
+## 2. Problem Statement
 
-OTEP cannot launch. This is a hard blocker to the Oct 2026 MVP. Every other epic is dependent on authenticated access. Without it:
-- Zero officers can access the platform
-- The OTG -> OTEP migration timeline slips entirely
-- Phase 1 OKR targets are unachievable
+**Purpose:** Clearly define the problem before jumping to solution. 
 
----
+[User] struggles to [do what] because [root cause], resulting in [negative outcome].
 
-## Solution Overview
+When officer try to…
 
-### Proposed Solution
+## 3. Data Analysis & Evidence
 
-Integrate WOG AD (Whole-of-Government Active Directory) as the primary authentication mechanism for OTEP, using **Keycloak** as the identity broker. Officers authenticate using their existing government credentials — no new accounts, no separate passwords.
+**Purpose:** Show this is not opinion-driven. What proof do we have that this is real and worth solving?
 
-> **Sprint 1 status (as of 2026-05-15, finalisation):** Simple authentication through Keycloak (OTEP-190) **done**. Auth flow exploration (OTEP-173) **done**. POCDEX profile lookup spike (OTEP-183) **done**. Adrian confirmed the current WOG AD flow ships as-is for MVP (decision 2026-05-12), acknowledged it may not be the final/complete flow.
+Include if available or mark it for development:
 
-### Key Capabilities
+**Examples:**
 
-1. **Single-click login** — Officers click "Log in with WOG AD" and are authenticated in the background via Keycloak -> AD (email + SOE-ID returned)
-2. **Access control** — Only pre-provisioned officers can access OTEP; non-provisioned users are denied with a clear message
-3. **Session management** — Secure sessions with government-compliant timeout, clean logout, and back-button protection
-4. **First-time onboarding** — Officers completing their first login provide mandatory profile fields (name, agency) before accessing the platform
-5. **Clear error handling** — Specific, helpful messages for each failure scenario (wrong credentials, locked account, service down)
+- 
 
-### What we're NOT building (Scope boundaries)
+% of users affected/dropped-off
 
-- Agency admin login and role differentiation (deferred to Sprint 6 — WOG-02)
-- Officer provisioning interface (separate epic — admin creates officer records before they can log in)
-- MFA implementation (WOG AD handles this at their end)
-- Password management / account recovery (WOG AD responsibility)
-- Role-based access control (deferred to Sprint 6 — WOG-07)
-- Rich onboarding experience (MVP = welcome screen + mandatory fields; rich onboarding is R1)
-- External/public user access (all OTEP users are public officers in MVP)
+- 
 
----
+Time taken today vs desired
 
-## User Stories
+- 
 
-### Primary User: Public Officer
+Error or dropout rate
 
-| As a... | I want to... | So that... | Priority | Story-ID-Map Ref |
-|---------|--------------|------------|----------|------------------|
-| Officer | Log in with WOG AD in a single click | I can access OTEP without creating a separate account | P0 | OTEP-71 (parent) |
-| Officer with no access | See that my agency is not onboarded | I understand why I can't access OTEP | P0 | OTEP-111 |
-| New officer | Have my account created on first login | I don't need a separate registration step | P0 | OTEP-72 |
-| Officer | See a clear error when login fails | I know what went wrong and how to fix it | P0 | OTEP-110 |
-| Officer | Stay logged in while actively using OTEP | I'm not interrupted by repeated login prompts | P0 | WOG-04 |
-| Officer | Log out of OTEP | No one else can access my account on this device | P0 | WOG-05 |
-| Officer (first-time) | Set up my profile on first login | I can start using the platform with my identity established | P0 | WOG-06 |
+- 
 
-Full acceptance criteria, edge cases, and DoR checklists: [stories/auth.md](stories/auth.md)
+Support tickets or complaints
 
-### Sprint 1 Stories (in progress)
+- 
 
-| Jira | Story | Status |
-|------|-------|--------|
-| OTEP-190 | Simple authentication through Keycloak | Done (15 May) |
-| OTEP-173 | Exploration: auth flow and tech | Done |
-| OTEP-71 (subtasks) | Login parent — WOGAD SSO, token handling, session management, login UI | In progress |
-| OTEP-111 | Officers with no access — denial/access states | In progress |
-| OTEP-72 | New officer account creation (POCDEX push) | In progress |
+From our survey results on 1380 officers, X% indicated that
 
-### Sprint 3 or carry-over (decide at Sprint 1 finalisation, Fri 15 May)
+- 
 
-| Story-ID-Map Ref | Story | Notes |
-|-------------------|-------|-------|
-| OTEP-110 | Login fail / clear error | Depends on Sprint 1 finalisation |
-| WOG-04 | Stay logged in during session | Depends on Sprint 1 finalisation |
-| WOG-05 | Log out of OTEP | Depends on Sprint 1 finalisation |
-| WOG-06 | First-time login experience | Depends on Sprint 1 finalisation |
+Y% of officers do not have a second login within 3mths of first login.
 
-### Deferred (Sprint 6)
+## 4. Market / Benchmark Scan
 
-| Story-ID-Map Ref | Story | Reason |
-|-------------------|-------|--------|
-| WOG-02 | Log in as agency admin | Officers first; admin login scoped separately |
-| WOG-07 | Role-based access control | No role differentiation needed until admin login exists |
+**Purpose:** Avoid reinventing the wheel. Find out how other teams or companies solves a similar problem. Designers can help with this. 
 
----
+- 
 
-## Success Metrics
+How do others solve this? 
 
-### Primary Metrics (Must hit for launch)
+- 
 
-| Metric | Current | Target | Measurement Method |
-|--------|---------|--------|-------------------|
-| WOG AD login functional end-to-end (officers) | N/A (not built) | 100% working | QA sign-off + UAT |
-| Login success rate (valid, provisioned officers) | N/A | >99% | Server logs |
-| Compliance requirements met | N/A | All mandatory WOG AD standards | Security review sign-off |
+Known best practices or patterns
 
-### Secondary Metrics (Monitor post-launch)
+- 
 
-| Metric | Baseline | Expected Direction |
-|--------|----------|-------------------|
-| Login latency (click to home page) | N/A | < 3 seconds |
-| Auth-related helpdesk tickets | N/A | Trending down post-launch |
-| First-time profile completion rate | N/A | > 95% (mandatory, so should be near-total) |
-| Session timeout-related complaints | N/A | Low / stable |
+What we should copy vs avoid
 
-### Guardrail Metrics (Should not regress)
+**Table (optional):**
 
-- Zero unauthorized access incidents
-- Zero data leakage via error messages (account enumeration)
-- Session security meets government audit requirements
+| Organisation | Approach | What works | What doesn’t |
+|---|---|---|---|
 
----
+## 5. Target User
 
-## Design & UX
+**Purpose:** Clarify who is your target user.
 
-### User Flow
+HR officers posting STIPs or GIGs.
 
-```
-Login page -> Click "Log in with WOG AD" -> Loading state
-    |
-Keycloak -> AD authenticates in background
-    |
-Success? -> Check: officer exists in OTEP?
-    |-- Yes + first time -> Welcome screen -> Profile setup -> Home page
-    |-- Yes + returning -> Home page (skip onboarding)
-    +-- No -> Access denied screen ("Contact your agency admin")
-    |
-Auth failed?
-    |-- Wrong credentials -> "Incorrect credentials. Please try again."
-    |-- Account locked -> "Contact your agency IT helpdesk"
-    +-- Service down -> "Service temporarily unavailable. Try again later."
-```
+## 6. Hypothesis (Value Proposition)
 
-### Key Design Decisions
+**Purpose:** Make your belief explicit and testable.
 
-1. **Single-click login** — No login form; Keycloak -> AD auth happens in background after button click
-2. **Access denied vs auth failed** — Two distinct screens: "not in OTEP" (valid officer, not provisioned) vs "authentication failed" (invalid credentials)
-3. **Single role only** — All authenticated officers have the same access level; no role differentiation in this phase
-4. **Minimal first-time onboarding** — Welcome + mandatory fields only; no multi-step wizard in MVP
-5. **Auth flow ships as-is** — Adrian confirmed current WOG AD flow is accepted for MVP (2026-05-12); acknowledged it may not be the final/complete flow
+Example:
 
-### Accessibility Considerations
+> 
 
-- Error messages meet WCAG colour contrast standards
-- Screen reader-friendly error announcements
-- Keyboard-navigable login flow
-- Loading state communicated to assistive technology
+If we provide a one-stop shop for all government scholarship opportunities[capability/solution], then students [user] will be able to easily and quickly search for suitable scholarships [new behaviour], leading to increase application completion rate [measurable outcome].
 
----
+If officers understand their top competency gaps, they will take action to seek growth opportunities
 
-## Technical Approach
+## 7. Success Metrics
 
-### Architecture Overview
+**Purpose:** Define what “good” looks like. Must be quantifiable. 
 
-- **Identity broker:** Keycloak (OTEP-190, Sprint 1)
-- **Auth protocol:** TBD — SAML / OAuth2 / OIDC (decision for Pow Hwee based on AD documentation, exploration in OTEP-173)
-- **Session management:** Server-issued token (JWT or session cookie) with government-compliant timeout
-- **Access gate:** Middleware checks user existence on every authenticated request
-- **Data from AD:** Email + SOE-ID confirmed. Name, agency, job title come from officer input or POCDEX lookup.
+### 7.1 Outcome Metrics (North Star)
 
-### Dependencies
+Examples
 
-- **External:** WOG AD infrastructure / API access — provisioning in progress (Pow Hwee + Leo)
-- **External:** Government session timeout policy — compliance team confirmation needed
-- **Internal:** Officer provisioning interface (separate epic) — must be available before officers can log in
-- **Internal:** POCDEX integration — lookup for profile data and ringfencing (spike OTEP-183, Sprint 1)
-- **Internal:** Home page / landing experience — where officers land after successful auth
+- 
 
-### Technical Risks
+User outcome metric: Increased scholarship application completion rate
 
-| Risk | Likelihood | Impact | Mitigation | Owner |
-|------|------------|--------|------------|-------|
-| WOG AD provisioning/onboarding takes longer than expected | Medium | Critical — blocks entire MVP | Start provisioning process immediately; identify GovTech contact | Pow Hwee |
-| Unknown compliance/security requirements surface late | Medium | High | Engage security reviewer early; submit by early Sep for Oct go-live | Michelle |
-| Session timeout policy unclear or conflicting | Low | Medium | Research gov standards proactively | Michelle |
-| ESG not onboarded onto COMET for Azure AD access | Unknown | High | Out of Michelle's scope — monitor only | External |
+- 
 
----
+Business/org outcome metric: Improved GES score for XX.
 
-## Launch Plan
+### 7.2 Input Metrics 
 
-### Rollout Strategy
+Examples
 
-- [x] Frontend repo setup (OTEP-171, Sprint 1)
-- [ ] Dev complete in staging with Keycloak -> mock AD
-- [ ] Integration testing with WOG AD sandbox
-- [ ] Security review passed (submit by early Sep)
-- [ ] Internal dogfood (team tests with own WOG AD accounts)
-- [ ] UAT with pilot officers from onboarded agencies (Sprint 8)
-- [ ] GA as part of OTEP MVP launch (16 Oct 2026)
+- 
 
-### Feature Flags
+Officer login rate
 
-- Login flow will be the default (and only) entry point — no feature flag needed
-- Role-based features may be flag-gated if admin features from other epics aren't ready
+- 
 
-### Rollback Plan
+Officer conversion rate from competency gap analysis to opportunity page
 
-- If AD integration fails in production: display maintenance message on login page
-- If session issues arise: revert to shorter timeout as safety measure
-- Auth is all-or-nothing — no partial rollback (platform is inaccessible without it)
+### 7.3 Guardrail Metrics (Events that will lead to rollback or pause)
 
----
+**Purpose:** Early warning signals. What tells us this is breaking or harming users?
 
-## Timeline & Milestones
+- 
 
-| Milestone | Target Date | Status |
-|-----------|-------------|--------|
-| PRD Approved | TBD | Draft |
-| WOG AD sandbox access provisioned | Sprint 1 | In progress (Pow Hwee + Leo) |
-| Keycloak auth working (OTEP-190) | Sprint 1 (May 15) | **Done** (15 May) |
-| Auth flow exploration complete (OTEP-173) | Sprint 1 (May 15) | **Done** |
-| Auth flow accepted for MVP | 12 May 2026 | **Done** (Adrian confirmed) |
-| Auth edge-cases (OTEP-110, WOG-04/05/06) | Sprint 1 carry-over or Sprint 3 | Decide at Sprint 1 finalisation (Fri 15 May) |
-| Design complete (Amber) | TBD | Not started |
-| Admin login (WOG-02) + RBAC (WOG-07) | Sprint 6 (13-24 Jul) | Not started |
-| Security review passed | Early Sep 2026 | Not started |
-| UAT with pilot officers | Sprint 8 (10-21 Aug) | Not started |
-| Feature Freeze | Fri 21 Aug 2026 | Not started |
-| Go-Live | **Fri 16 Oct 2026** | Not started |
+Drop-off rates exceed XX
 
----
+- 
 
-## Open Questions
+Error rates. Scholarship applicant’s profile is inaccurate.
 
-| Question | Owner | Due Date | Resolution |
-|----------|-------|----------|------------|
-| What auth protocol does WOG AD support? (SAML/OAuth2/OIDC) | Pow Hwee | Sprint 1 | Exploration in OTEP-173 |
-| What exactly does AD return on auth? (confirmed: email + SOE-ID — anything else?) | Pow Hwee / Leo | Sprint 1 | |
-| What's the government-mandated session timeout? | Michelle (compliance team) | Before Sprint 3 | |
-| Does WOG AD enforce MFA, or does OTEP need to? | Pow Hwee | TBD | Assumed AD handles it |
-| Do officers commonly use shared workstations? (impacts logout security) | Michelle (user research) | TBD | |
-| What mandatory profile fields for first-time login? (name + agency minimum) | Michelle + Amber | Before WOG-06 build | |
-| Can agency be derived from email domain or SOE-ID? | Pow Hwee | TBD | |
-| Multiple concurrent sessions allowed? | Pow Hwee + Security | TBD | |
-| Which auth edge-cases carry over from Sprint 1 vs move to Sprint 3? | Squad | Fri 15 May (Sprint 1 finalisation) | |
+- 
 
----
+Complaints / tickets
 
-## Appendix
+- 
 
-### Assumptions
+Data freshness
 
-- WOG AD handles password management, MFA, and account lockout — OTEP does not re-implement
-- All OTEP users are public officers — no external/public access in MVP
-- Single role only in this phase — all officers have the same access level
-- AD returns only email + SOE-ID on auth — name, agency, job title come from officer input or POCDEX
-- Officers must be pre-provisioned in OTEP before they can log in (provisioning is a separate epic)
-- Agency admin login and role-based access control will be scoped separately (Sprint 6)
-- Keycloak is the identity broker (confirmed by Sprint 1 implementation choice)
-- Current auth flow ships as-is for MVP (Adrian, 2026-05-12)
+- 
 
-### Related Documents
+Latency / availability
 
-- [User Stories (Auth)](stories/auth.md)
-- [Story ID Map](story-id-map.md)
-- [Sprint Allocation](../sprint-allocation.md)
-- [Decision Log](../06-skills-and-decisions/decisions-log.md)
-- [DoR/DoD Guidelines](../../resources/dor-dod-guidelines.md)
-- [GOALS.md](../../GOALS.md)
+## 8. Scope (Stories + Success Criteria)
 
-### Stakeholder Sign-offs
+| **Jira ID** | **Story** | **Acceptance Criteria** | **Instrumentation** | **Notes to Designer** | **Notes to Tech/Others** |
+|---|---|---|---|---|---|
+| **OTEP-71** | **As a** public officer from an onboarded agency, **I want to** log in to OTEP via WOG AD with a single click, **So that** I can access the platform using my existing government credentials without creating a separate account. | 1.   When I click "Log in with WOG AD" on the login page, I land on the OTEP home page — no manual credential entry needed.   2.   If my agency is not yet on OTEP, I see a message explaining my agency isn't onboarded — not a generic error.   3.   If my WOG AD credentials are invalid (not a public officer), login fails and I see a clear error message.   4.   After a successful login, I go straight to OTEP — there's no additional account creation or registration step. | Login success    Login attempt |  | -   [TBC] Users must have “agency ID”     -   PSD - “13001308-A”     -   ESG - “S-10012020”     -   Singpass Unique Identifier     -   NRIC/ FIN      -   WOGAD - WOG "Active Directory"     -   there are 2 ways of integration 1) ADFS 2) Azure AD (Cloud)     -   ADFS is very seamless, whereas Azure sometimes there is a prompt (unclear why)     -   To check whether both methods can be accessed through internet (ADFS can only be from intranet?) - determines which option we choose     -   does not cover WOGAD universe eg mindef     -   Azure can only be accessed using COMET, and not GSIB     -   Imelda to check whether ESG is onboarded onto COMET     -   We will use Azure     -   Tech effort for Singpass/WOGAD is similar     -   what’s time-consuming is the submission/approval process for WOGAD (2-4weeks)     -   submission/approval process for singpass is shorter     -   Each method will take a full sprint     -   Discovery needed - Rama: Can DLE support WOGAD integration for redirection? |
+| **OTEP-304** | **As a** logged-in user (officer), **I want to** remain authenticated while I'm actively using OTEP, **So that** I don't get interrupted by repeated login prompts. | -   While I'm actively using OTEP, navigating between pages keeps me logged in — I'm not prompted to re-authenticate mid-session.   -   If I've been idle for more than [30 minutes — TBD], my session expires and I'm redirected to the login page.    -   If my session has expired and I try to do something, I see "Session expired, please log in again" — not a broken or blank page. |  |  | [https://importal.mof.gov.sg/portal/home/ict-ss/im8-reform/releases/20250917/system-security-plans/low-risk-cloud.html](https://importal.mof.gov.sg/portal/home/ict-ss/im8-reform/releases/20250917/system-security-plans/low-risk-cloud.html)   -   12 hours session duration, 30 mins of inactivity |
+| **OTEP-72** | **As a** public officer logging into OTEP for the first time, **I want to** set up my profile and understand what OTEP offers, **So that** I can orient myself and start using the platform.        **Flow:** First login detected (no existing OTEP profile for this SOE-ID) → welcome screen → officer fills in required profile fields → lands on home page. | 1.   User will log in using WOGAD   2.   The first time I log in, I see the default landing view of profile details and My Competency section.   3.   On first login, my name, email is already filled in — I don't need to type it.    4.   On every subsequent login, I will land on the default landing view of profile details and My Competency section. |  |  | -   When a new officer onboards, their profile will be created by the respective agency HR in either HRPS or Cumulus   -   This record will get pushed into POCDEX and into OTEP (instantaneously)   -   Account is created on OTEP |
+| **OTEP-110** | As an officer who should have access to OTEP, I want to see clear instructions on what to do if I failed to login so I can troubleshoot. | 1.   If user is part of pilot group and the authentication fails, they should be prompted to retry or troubleshoot | Login failed due to authentication error - ability to troubleshoot the reason for login fail    Retry attempts |  | -   I’m not sure if this is relevant: [https://docs.developer.singpass.gov.sg/docs/technical-specifications/singpass-authentication-api/error-response](https://docs.developer.singpass.gov.sg/docs/technical-specifications/singpass-authentication-api/error-response) |
+| **OTEP-111** | As an officer who have no access or have a deactivated status, I want to be able to see a clear message telling me I do not have access so I am not left wondering or trying multiple times. | 1.   These user groups should not be allowed to login to OTEP     -   Users who are not part of pilot     -   Users who have left the service/gone on long-leave etc and whose profile is considered inactive/deactivated in POCDEX     2.   See a message “Oops, you do not seem to have access at the moment. Please contact your HR for more information.” | Login attempt failed due to access denied |  | 1.   [TBC] Backend check for either “agency name” or “agency” ID |
+| **OTEP-305** | **As a** logged-in user, **I want to** log out of OTEP, **So that** my session is ended and no one else can access my account on this device. | -   When I click "Log out", my session ends and I'm taken to the login page.   -   After logging out, pressing the browser back button doesn't let me back into OTEP — I'm redirected to login.   -   After logging out, typing any OTEP URL directly into the browser redirects me to the login page.      **Edge cases:**   -   Logging out on one device — does it log out all devices? (Depends on session architecture)   -   Shared computer scenario (common in government) — logout must be complete, no cached credentials |  |  |  |
+|  |  |  |  |  |  |
+|  |  |  |  |  |  |
 
-- [ ] Engineering Lead: Pow Hwee
-- [ ] Design: Amber
-- [ ] Security/Compliance: TBD
-- [ ] Manager: Jace
-- [ ] Manager: Adrian
+## 9. Go-To-Market Plan
+
+**Purpose:** Shipping ≠ adoption. Think of what you need to do to drive adoption and scale. 
+
+- 
+
+Target launch group: Which agency/persona first?
+
+- 
+
+Comms plan:
+
+- 
+
+Training / enablement:
+
+- 
+
+Change management:
+
+- 
+
+Support model:
+
+**Phases:**
+
+- 
+
+Pilot: When
+
+- 
+
+Scale: When
+
+- 
+
+Steady state: When
+
+## 10. Risks, Assumptions & Mitigations
+
+**Purpose:** Think ahead. 
+
+| Risk/Assumption | Type (Tech / Ops / Policy / Adoption) | Likelihood | Impact | Mitigation |
+|---|---|---|---|---|
+| Security review only happens once a month |  |  |  |  |
+| Review with pilot agency for suitability |  |  |  |  |
+| If POC with Team A fails |  |  |  |  |
+
+## 11. Dependencies & Assumptions
+
+- 
+
+Systems depended on:
+
+- 
+
+Teams needed:
+
+- 
+
+Policy assumptions:
+
+- 
+
+Data availability assumptions:
+
+## 12. Decision Tracker (If needed)
+
+**Purpose:** Make it actionable.
+
+- 
+
+Decision required from leadership:
+
+- 
+
+If approved, next milestone:
+
+- 
+
+Owner:
+
+- 
+
+Review date:
