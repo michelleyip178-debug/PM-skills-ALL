@@ -14,19 +14,20 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 
 | Dependency | What breaks | Escalation trigger |
 |------------|------------|-------------------|
-| OTG file import (Excel → OTEP) | Sprint 2 listing has nothing to display. OTG has no API — data comes via Excel reports (decided 2026-05-14). Open item #24 resolved (reports shared). | File import job (OTEP-192) must land Sprint 2 W1 |
+| OTG file import (Excel → OTEP) | Risk: Excel format ingestion alignment (OTEP-296) before Sprint 3. (Sprint 2 Listing UI uses Léo's OTEP-288 static mock backend). | File import job (OTEP-192) must land Sprint 3 |
 | ~~C@G ingestion method~~ | ~~Half the "unified" promise~~ — **Resolved 2026-05-14: C@G = API.** | Sprint 2 ships OTG-only regardless; C@G API integration is Sprint 5 |
-| FormSG URL format | STIP/Gig apply flow (OTEP-130) can't be built | Needed by Sprint 4 start (Jun 16) |
-| FormSG pre-fill support | US-P3 stays in limbo — can't groom or defer | Pow Hwee to confirm by Sprint 3 |
+| FormSG URL/redirect format | Complex FormSG Phase 2 callback flow (OTEP-130) deferred to Sprint 5. Basic redirect (US-18) pulled to Sprint 3. | Basic redirect needed for Sprint 3; OTEP-130 callback needed by Sprint 5 start (Jun 29) |
+| FormSG pre-fill support | US-P3 stays in limbo — can't groom or defer | Pow Hwee to confirm by Sprint 3 (deferred to Sprint 5 webhook flow) |
 | WOGAD / Azure AD via COMET | Auth blocked if ESG not onboarded | Out of Michelle's scope — monitor only |
+| No WOG AD UAT environment (Pow Hwee, grooming 2026-05-21) | OTEP-71, OTEP-110, OTEP-304, OTEP-305 can't be validated against real WOG AD before go-live — entire Sprint 3 auth epic affected | Interim mitigation: build against Keycloak stub (OTEP-190 already exists). Confirm with Pow Hwee this is the plan. Escalation: identify who owns the UAT environment request — COMET onboarding, GovTech/WOG AD team, or Adrian. |
 | Rama: `formsg_url` confirmation (#2) | US-18 (Sprint 3 STIP/Gig apply) can't be groomed. 5 of 6 OTG fields resolved 2026-05-13; `formsg_url` is the last unconfirmed field. | No response before Sprint 3 grooming → escalate via Adrian |
 
 ## Schedule Risks
 
 | Risk | Impact | Mitigation |
 |------|--------|------------|
-| OTG file import not delivering by Sprint 2 W1 | Sprint 2 core UI work blocked — OTEP-85 has no data to display | Open item #24 resolved (reports shared 2026-05-20). Monitor OTEP-192 delivery. |
-| Sprint 3 cascade: OTEP-133 depends on OTEP-87 + OTEP-127 | If either slips, OTEP-133 moves to Sprint 4 | Monitor at mid-sprint review |
+| Lack of live OTG file data in Sprint 2 | Core UI listing (OTEP-85) has no real database data to display | Mitigated by Léo's static backend endpoint stub (OTEP-288) for Sprint 2 UI work. Ingestion (OTEP-192) shifted to Sprint 3. |
+| Sprint 3 integration stagger risk | POCDEX DB/API plumbing (OTEP-271, OTEP-203) or basic FormSG redirect (US-18) slipping | Staggering POCDEX plumbing to Sprint 3 explicitly unblocks Sprint 4 ringfencing (OTEP-127) and onboarding (WOG-06). |
 | Security review monthly cycle | Must submit by early Sep to hit the Oct go-live window | Plan submission date now (per Sprint Ceremonies v2, Go-Live is Fri 16 Oct) |
 
 ## Team & Delivery Risks
@@ -38,22 +39,25 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 | Thomas is sole FE developer and fielding dependencies from another squad (standup 13 May) | Single point of failure for all frontend Sprint 2 work (OTEP-85, 267, 268, OTEP-128 detail page). Cross-squad pulls reduce his capacity. OTEP-86/US-05 deferred to Sprint 3 (2026-05-14). | Pow Hwee monitoring; escalate if sprint velocity at risk. Contract-first approach (Pow Hwee, 2026-05-14) decouples FE/BE. |
 | FE and design capacity shared across squads (internal groom 13 May) | Design and frontend resources are not dedicated to OTEP — other squads draw from the same pool. Mid-sprint resource conflicts possible. | Needs alignment with leadership. Dedicated design system story to reduce reliance on single FE dev. Longer-term: engineers own vertical slices (front+back), not strict FE/BE split. |
 
-## Sprint 2 Jira Board — Cleanup Actions Needed
+## Jira Board — Cleanup Actions Needed
 
-Two stories are on the Sprint 2 Jira board but shouldn't be:
-
-| Story | Issue | Action |
-|---|---|---|
-| OTEP-268 | Deferred from Sprint 2 (decision 2026-05-15) — ACs preserved in `deferred-acs.md` | Remove from Sprint 2 board in Jira |
-| OTEP-129 | Absorbed into OTEP-85 (decision 2026-05-14) | Close or link to OTEP-85 in Jira |
-
-Three carry-over stories are NOT on the Sprint 2 board but may need to be:
+### Sprint 2 Board Cleanup Actions Needed
 
 | Story | Issue | Action |
 |---|---|---|
-| OTEP-192, OTEP-193 | Data model + file import — Sprint 2 critical path. Not showing on board. | Confirm placement with Pow Hwee |
-| OTEP-202, OTEP-203, OTEP-271 | POCDEX stories — open item #27 resolved | Confirmed: OTEP-271 and OTEP-203 in Sprint 3; OTEP-202 in Sprint 4. |
-| OTEP-110, WOG-04/05/06 | Auth carry-overs — not on Sprint 2 board | Confirm Sprint 3 placement (OTEP-110 confirmed Sprint 3, others Sprint 4+). |
+| OTEP-276 | Resolved design system spike (Flagship/LifeSG adopted via OTEP-252 Done) | Remove from Sprint 2 board (still showing in Backlog) |
+| OTEP-192 | recurring job to fetch OTG data — confirmed Sprint 3 | Remove from Sprint 2 board |
+| OTEP-191 | credential manager and vault — confirmed Sprint 3 | Remove from Sprint 2 board |
+
+### Sprint 3 Board Prep Actions Needed
+
+| Story | Issue | Action |
+|---|---|---|
+| OTEP-271 | Local POCDEX database (container + schema) — confirmed Sprint 3 | Add to Sprint 3 board and assign to Leo |
+| OTEP-203 | Standalone POCDEX API service — confirmed Sprint 3 | Add to Sprint 3 board and assign to Pow Hwee |
+| OTEP-304 | Stay logged in during session (was WOG-04) — confirmed Sprint 3 | Assign on Sprint 3 board (currently unassigned) |
+| OTEP-305 | Log out of OTEP (was WOG-05) — confirmed Sprint 3 | Assign on Sprint 3 board (currently unassigned) |
+| OTEP-191 | credential manager and vault — confirmed Sprint 3 | Assign on Sprint 3 board (currently unassigned) |
 
 ## Mitigations Already in Place
 
@@ -64,4 +68,4 @@ Three carry-over stories are NOT on the Sprint 2 board but may need to be:
 
 ---
 
-*Updated: 2026-05-18 (Sprint 2 start — Jira board reconciled; cleanup actions added)*
+*Updated: 2026-05-20 (Sprint 2 Week 1 — risks updated per Sprint 3 staggered integration plan; Jira board cleanup actions updated)*
