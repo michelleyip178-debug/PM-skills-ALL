@@ -133,7 +133,34 @@ Sprints are **2 weeks long**. Team grooms **2 sprints ahead**.
 
 I do NOT own facilitation — Rama facilitates ceremonies.
 
+### Recurring Meetings
+
+| Meeting | Cadence | Notes |
+|---|---|---|
+| OTEP Team Standup | Daily, 10am | Blockers and priority changes |
+| BO sync (Jacky / Xian Zhang) | Weekly, Monday 4pm | 1 update + 1 blocker + 1 ask |
+| Design review (Amber) | Weekly, Tuesday | Bring ACs + specific decision needed |
+| Steering (Mark / GK) | Biweekly | Progress, risks, one ask |
+
 **Prep rhythm:** `04-ceremonies/ceremony-prep.md` (what to bring per ceremony) and `04-ceremonies/sprint-prep-rhythm.md` (which prep command to run each day, with a date-filled checklist per sprint). Rule of thumb: run the prep command the day before if you need time to fix gaps, morning-of if you just need a status check.
+
+---
+
+## Integrations
+
+| System | Method | Notes |
+|--------|--------|-------|
+| OTG | Daily Excel export → OTEP | STIPs, Gigs, SJRs, Internal Jobs. `formsg_url` field still unconfirmed (open item #2). |
+| Careers@Gov | API ingestion | Discovery on OTEP; deep-link handoff for apply. |
+| FormSG | Redirect to new tab + webhook callback | Submission confirmation received by OTEP. Pre-fill support unconfirmed. |
+| POCDEX | Profile lookup on login | Powers ringfencing + pre-fill. |
+| WOG AD / Azure AD | SSO via Keycloak | Requires COMET onboarding. |
+
+### Known Constraints
+
+- GovTech managed settings block MCP servers — no automated Linear/Calendar integration.
+- Security reviews run monthly — must submit early September.
+- OTG and C@G use different category taxonomies — cannot unify filters in MVP.
 
 ---
 

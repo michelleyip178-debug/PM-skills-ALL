@@ -58,6 +58,11 @@ def extract_text(node):
     return ""
 
 
+def sanitise(name):
+    name = name.replace(" ", "-")
+    return re.sub(r"[^\w\-]", "", name)
+
+
 def find_sprint(base, auth, name_fragment):
     for state in ("future", "active"):
         data = get(f"{base}/rest/agile/1.0/board/{BOARD_ID}/sprint?state={state}&maxResults=50", auth)
@@ -196,7 +201,8 @@ def main():
     sprint_id = sprint["id"]
     print(f"Found: {sprint['name']} (id={sprint_id})")
 
-    out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "jira-sync", "Backlog")
+    folder_name = sanitise(sprint["name"])
+    out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "jira-sync", folder_name)
     os.makedirs(out_dir, exist_ok=True)
 
     print("Fetching sprint issues...")
@@ -249,11 +255,10 @@ def main():
     else:
         table = "_No changes since last sync._"
     changes_path = os.path.join(out_dir, ".changes.md")
-    # append to existing changes file rather than overwrite
-    with open(changes_path, "a", encoding="utf-8") as f:
-        f.write(f"\n## {sprint['name']} sync — {today}\n\n{table}\n")
+    with open(changes_path, "w", encoding="utf-8") as f:
+        f.write(f"# {sprint['name']} Story Changes — {today}\n\n{table}\n")
 
-    print(f"\nDone. {written} files written to jira-sync/Backlog/")
+    print(f"\nDone. {written} files written to jira-sync/{folder_name}/")
     if change_rows:
         print(f"Changes detected: {len(change_rows)} (see .changes.md)")
 

@@ -2,7 +2,7 @@
 
 **This is the source of truth for which stories are in which sprint.** Other docs (`04-ceremonies/archive-tasks/story-readiness.md`, `04-ceremonies/sprint-checklists.md`, `04-ceremonies/sprint-calendar.md`, the story-group files in `projects/otep-mvp/stories/`) reference this — they don't restate it. Story IDs are reconciled in [story-id-map.md](../03-stories/story-id-map.md).
 
-**Last updated:** 2026-05-20 (Jira sync — Sprint 2 In Progress updated; OTEP-296/295 added; OTEP-192 moved to Sprint 3; Sprint 3 scope locked to 3 stories).
+**Last updated:** 2026-05-20 (Jira sync — Sprint 3 synced; OTEP-304/305 confirmed as WOG-04/WOG-05; OTEP-191 confirmed Sprint 3; Sprint 4 WOG-04/05 entries removed).
 **Cadence:** 2-week sprints, Mon start / Fri end, from Mon 4 May 2026. Sprint 1 ran a combined Backlog-Grooming + Sprint-Planning Thursday; from Sprint 2 those split (Backlog Grooming Thu W1, Sprint Planning Thu W2). Dates + ceremonies: [04-ceremonies/sprint-calendar.md](../04-ceremonies/sprint-calendar.md).
 **Feature Freeze:** end of Sprint 8 (Fri 21 Aug) — end of Phase 1, Feature Build · **Go-Live:** end of Sprint 12 (Fri 16 Oct) — end of Phase 2, Compliance & Go-Live (Sprints 9–12).
 
@@ -35,8 +35,8 @@
 | OTEP-192 | Design recurring job to fetch opportunities data | Epic 4 | **Carried → Sprint 2** |
 | OTEP-194 | [Discovery/Design] FormSG integration & callback flow | Epic 4 | **Carried → Sprint 2** |
 | OTEP-110 | Login fail / clear error | WOG AD | **Carried → Sprint 3** (not on Sprint 2 board) |
-| WOG-04 | Stay logged in during session | WOG AD | **Carried → Sprint 3** (not on Sprint 2 board) |
-| WOG-05 | Log out of OTEP | WOG AD | **Carried → Sprint 3** (not on Sprint 2 board) |
+| WOG-04 | Stay logged in during session | WOG AD | **→ OTEP-304, confirmed Sprint 3** (2026-05-20 sync) |
+| WOG-05 | Log out of OTEP | WOG AD | **→ OTEP-305, confirmed Sprint 3** (2026-05-20 sync) |
 | WOG-06 | First-time login experience | WOG AD | **Carried → Sprint 3** (not on Sprint 2 board) |
 | OTEP-251 | Create ER diagram for OTEP data model | — | Status unknown — confirm |
 
@@ -74,7 +74,8 @@
 
 ### Board cleanup still needed
 - [ ] Remove OTEP-276 from Sprint 2 board (resolved spike)
-- [ ] Add OTEP-192 to Sprint 3 board
+- [ ] Remove OTEP-192 from Sprint 2 board (confirmed Sprint 3)
+- [ ] Remove OTEP-191 from Sprint 2 board (confirmed Sprint 3)
 
 ### Carry-overs — placement TBC (open item #27)
 
@@ -113,6 +114,9 @@
 | OTEP-192 | Design recurring job to fetch OTG data (Excel) | Leo | Ingestion backend. Critical path for data. |
 | OTEP-71 | Log in with WOG AD credentials | Pow Hwee | Auth plumbing. Open question: agency determination logic. |
 | OTEP-110 | Login fail / clear error | Thomas | FE error states. ACs being rewritten. |
+| OTEP-304 | Stay logged in during session (WOG-04) | — | **Confirmed in Sprint 3 board** (2026-05-20 sync). Unassigned. |
+| OTEP-305 | Log out of OTEP (WOG-05) | — | **Confirmed in Sprint 3 board** (2026-05-20 sync). Unassigned. |
+| OTEP-191 | Handle credential manager and vault | — | **Confirmed in Sprint 3 board** (2026-05-20 sync). Unassigned. |
 | OTEP-271 | Local POCDEX database (container + schema) | Leo | **POCDEX Plumbing.** Staggered to S3 to unblock S4 ringfencing. |
 | OTEP-203 | Implement standalone POCDEX API service | Pow Hwee | **POCDEX Plumbing.** Staggered to S3 to unblock S4 ringfencing. |
 | US-18 | Apply via FormSG (basic redirect) | Thomas | **FormSG Phase 1.** Basic new-tab redirect. Completed end-to-end loop early! |
@@ -122,6 +126,7 @@
 - [ ] Agency determination logic for OTEP-71 — raise at Thu 21 May grooming
 - [ ] OTEP-110 ACs rewritten
 - [ ] OTEP-192/271/203 added to Sprint 3 Jira board and assigned
+- [ ] Assign OTEP-304, OTEP-305, OTEP-191 (all unassigned on board)
 
 ---
 
@@ -138,8 +143,6 @@ Staggered backend plumbing in Sprint 3 unblocks frontend personalisation and fil
 | US-05 | Clear filters and reset view | Thomas | Pairs with OTEP-86. |
 | US-03 | Filter opportunities by category | Thomas | Pending categorisation model validation (OTEP-289 spike output). |
 | OTEP-87 | Enhance detail page: apply CTA + competencies | Thomas | Competency display. Builds on OTEP-128. |
-| WOG-04 | Stay logged in during session | Leo | Session management. |
-| WOG-05 | Log out of OTEP | Thomas | Auth logout. |
 
 ---
 
