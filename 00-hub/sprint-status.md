@@ -53,20 +53,25 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 | OTEP-193 | Design data model for Opportunities | Backlog | **Léo** ⚠️ | Local context said Pow Hwee — confirm owner |
 | OTEP-194 | FormSG integration discovery | Backlog | **Thomas** | Owner updated from "—" |
 
-### Sprint 3 — confirmed (2026-05-19, Michelle)
+### Sprint 3 — confirmed (updated 2026-05-20 from Jira screenshot)
+
+> Sprint 3 dates: **1 Jun – 15 Jun**. Jira shows 5 of 6 work items — 6th ticket not yet identified.
 
 | Story ID | Title | Owner | Notes |
 |---|---|---|---|
 | OTEP-192 | Design recurring job to fetch OTG data | — | Moved from Sprint 2 |
-| OTEP-71 | Log in with WOG AD credentials | Pow Hwee / Leo | Auth — open question on agency determination to resolve before grooming |
-| OTEP-110 | Login fail / clear error | Pow Hwee / Leo | ACs being rewritten — DoR pending |
+| OTEP-71 | Login Authentication using WOG AD | Pow Hwee / Leo | Auth — open question on agency determination to resolve before grooming |
+| OTEP-110 | Login fail using WOG AD | Pow Hwee / Leo | ACs being rewritten — DoR pending |
+| OTEP-304 | Logged-in officer remains authenticated while actively using OTEP | — | Pulled forward from Sprint 4+ (was WOG-04). New Jira ID. |
+| OTEP-305 | Log out of OTEP | — | Pulled forward from Sprint 4+ (was WOG-05). New Jira ID. |
+| ⚠️ Unknown | 6th ticket — not visible in screenshot | — | Confirm in Jira |
 
 ### Unscheduled — Sprint 4+ (moved out of Sprint 3, 2026-05-19)
 
 | Story ID | Title | Notes |
 |---|---|---|
-| WOG-04 | Stay logged in during session | Session timeout TBD |
-| WOG-05 | Log out of OTEP | — |
+| ~~WOG-04~~ | ~~Stay logged in during session~~ | **Moved to Sprint 3 as OTEP-304** |
+| ~~WOG-05~~ | ~~Log out of OTEP~~ | **Moved to Sprint 3 as OTEP-305** |
 | WOG-06 | First-time login experience | Mandatory fields TBD + POCDEX dep |
 | OTEP-202 | POCDEX seed database | Placement TBD |
 | OTEP-203 | Standalone POCDEX API service | Placement TBD |

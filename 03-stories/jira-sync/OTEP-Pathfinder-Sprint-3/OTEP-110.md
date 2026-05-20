@@ -1,4 +1,4 @@
-# OTEP-110: Login fail
+# OTEP-110: Login fail using WOG AD
 
 **Type:** Story
 **Status:** Backlog

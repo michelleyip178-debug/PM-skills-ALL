@@ -8,7 +8,7 @@
 
 ## Description
 
-C@G tags their opportunities      OTG tags by Job Family, Job Function. The values for all opportunities needs to be showing the same values.  User filters C@G, STIPs, Gigs, and selects function, all opportunities that is tagged to that function should show in filter results. User search across C@G, STIPs, Gigs, and selects function, all opportunities that is tagged to that function should show in search results.
+C@G tags their opportunities      OTG tags by Job Family, Job Function. The values for all opportunities needs to be showing the same values.  User filters C@G, STIPs, Gigs, and selects function, all opportunities that is tagged to that function should show in filter results. User search across C@G, STIPs, Gigs, and selects function, all opportunities that is tagged to that function should show in search results.  Acceptance Criteria: A unified filter taxonomy is proposed — the exact values an officer would see — OR a documented recommendation to defer with rationale All unmapped values between C@G and OTG are identified with a handling recommendation A go/no-go decision on MVP feasibility is documented   Outcome :   A written recommendation containing: Mapping table: C@G value → OTG value → unified label List of unmapped values + proposed fallback handling Go/no-go call with rationale No prototype required at this stage. Build decisions follow once the mapping is confirmed.
 
 ---
 
