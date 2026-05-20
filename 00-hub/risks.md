@@ -14,7 +14,7 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 
 | Dependency | What breaks | Escalation trigger |
 |------------|------------|-------------------|
-| OTG file import (Excel → OTEP) | Sprint 2 listing has nothing to display. OTG has no API — data comes via Excel reports (decided 2026-05-14). Open item #24 (which reports to ingest) is the critical input. | File import job (OTEP-192) must land Sprint 2 W1 |
+| OTG file import (Excel → OTEP) | Sprint 2 listing has nothing to display. OTG has no API — data comes via Excel reports (decided 2026-05-14). Open item #24 resolved (reports shared). | File import job (OTEP-192) must land Sprint 2 W1 |
 | ~~C@G ingestion method~~ | ~~Half the "unified" promise~~ — **Resolved 2026-05-14: C@G = API.** | Sprint 2 ships OTG-only regardless; C@G API integration is Sprint 5 |
 | FormSG URL format | STIP/Gig apply flow (OTEP-130) can't be built | Needed by Sprint 4 start (Jun 16) |
 | FormSG pre-fill support | US-P3 stays in limbo — can't groom or defer | Pow Hwee to confirm by Sprint 3 |
@@ -25,7 +25,7 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 
 | Risk | Impact | Mitigation |
 |------|--------|------------|
-| OTG file import not delivering by Sprint 2 W1 | Sprint 2 core UI work blocked — OTEP-85 has no data to display | Open item #24 (which Excel reports) must be resolved before OTEP-192 can be built |
+| OTG file import not delivering by Sprint 2 W1 | Sprint 2 core UI work blocked — OTEP-85 has no data to display | Open item #24 resolved (reports shared 2026-05-20). Monitor OTEP-192 delivery. |
 | Sprint 3 cascade: OTEP-133 depends on OTEP-87 + OTEP-127 | If either slips, OTEP-133 moves to Sprint 4 | Monitor at mid-sprint review |
 | Security review monthly cycle | Must submit by early Sep to hit the Oct go-live window | Plan submission date now (per Sprint Ceremonies v2, Go-Live is Fri 16 Oct) |
 

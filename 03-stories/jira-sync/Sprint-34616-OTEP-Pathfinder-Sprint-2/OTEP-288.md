@@ -20,4 +20,5 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**Léo Milbor** (2026-05-19)
+any preference regarding  page_size  and  page  vs  offset  and  limit ? So far I did with  page_size  and  page  but it’s trivial to change, especially now if needed.

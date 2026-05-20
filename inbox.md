@@ -10,15 +10,18 @@
 
 <!-- New, untriaged items land here under a channel header. Tag + move them out at next triage. -->
 
+### Ceremony Prep
+- Backlog Grooming (Thu 21 May): run `/groom-prep` today (afternoon), `/groom` tomorrow morning before standup
+
 ### From Slack
 - 
 
 ### From Teams
-- [D] OTG ops - The project will pursue a risk acceptance approach rather than implementing PIM — i.e. consciously decide not to implement PIM for now, with documented justification.
-- [A] OTG ops for Michelle to Conduct a risk assessment scoped to the scenario of not having PIM, identifying the worst-case damage if privileged accounts are abused — then submit the residual risk for formal acceptance.
+- [D] OTG ops - The project will pursue a risk acceptance approach rather than implementing PIM — i.e. consciously decide not to implement PIM for now, with documented justification. -> task-log.md
+- [A] OTG ops for Michelle to Conduct a risk assessment scoped to the scenario of not having PIM, identifying the worst-case damage if privileged accounts are abused — then submit the residual risk for formal acceptance. -> tasks_active.md
 
 ### From Email
-- [A] Clean up my email inbox
+- [A] Clean up my email inbox -> tasks_active.md
 
 ### From Jira
 - 

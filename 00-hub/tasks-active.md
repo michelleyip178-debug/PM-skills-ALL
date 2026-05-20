@@ -25,7 +25,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 - [ ] **Run `/groom-prep`** — today (Mon 18 May) before noon; Squad Grooming is tomorrow 10am
 - [ ] **Chase Pow Hwee on #23 + #24** — harmonised data model (OTG + C@G) and which OTG Excel reports to ingest; both block OTEP-192/193
-- [ ] **Share OTG opportunity reports (Excel files) with the team** — unblocks #24, OTEP-192, OTEP-193 (overdue — was due Fri 15 May)
+- [x] **Share OTG opportunity reports (Excel files) with the team** — unblocks #24, OTEP-192, OTEP-193 (Completed 2026-05-20)
 - [ ] **[PM action — #28] Confirm OTEP-85 visibility rule** — Pow Hwee asking: is it "closing_date > now" (show all not yet closed) or "closing_date >= 7 days" (hide listings closing soon)? The 7-day rule is likely OTEP-129's "Closing soon" badge, not OTEP-85's filter. Decide before grooming.
 - [ ] **[PM action — #29] Define OTEP-289 ACs, timebox, expected outcome** — Pow Hwee asking: what is the output of the spike (written recommendation, prototype, other)? How long is it timeboxed? Groom this tomorrow.
 - [ ] **[PM action] Clean OTEP-128 AC** — remove "This opportunity is closed" notice AC from OTEP-128 (it belongs to OTEP-129). Raise with Pow Hwee at grooming.
@@ -50,7 +50,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 | Item | Waiting for | Since | Next action |
 |------|-------------|-------|-------------|
-| OTG file import (OTEP-192/193) | Pow Hwee | May 4 | Blocked by #24 (which Excel reports). Michelle to share reports first — **overdue**. |
+| OTG file import (OTEP-192/193) | Pow Hwee | May 4 | Reports shared (2026-05-20). Blocked by #24 resolved. Pow Hwee to build. |
 | POCDEX account creation (OTEP-72) | Pow Hwee | May 4 | Confirm push mechanism works — bundle into Pow Hwee check-in |
 | `formsg_url` field (#2) | Rama + PSD Ops | May 4 | Last unconfirmed OTG field. Sprint 3 blocker. Chase this week. |
 | Auth edge-cases (OTEP-110, WOG-04/05/06) | Pow Hwee / Leo | May 11 | **NOT on Sprint 2 board.** Confirm Sprint 3 placement at mid-sprint review Mon 26 May. |
