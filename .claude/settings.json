@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "count=$(grep -cE '\\[(D|A|Q|I)\\]' inbox.md 2>/dev/null || echo 0); if [ \"$count\" -gt 0 ]; then echo \"inbox.md has $count unprocessed item(s). Run /triage to clear them.\"; fi"
+            "command": "count=$(awk '/^## Raw Capture/{f=1;next} /^## /{f=0} f' inbox.md 2>/dev/null | grep -cE '\\[(D|A|Q|I)\\]'); if [ \"$count\" -gt 0 ]; then echo \"inbox.md has $count unprocessed item(s) in Raw Capture. Run /triage to clear them.\"; fi"
           }
         ]
       }
