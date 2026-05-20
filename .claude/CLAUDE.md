@@ -56,19 +56,9 @@ My PM operating system, organised by workflow. Seven numbered folders cover the 
 
 ## Folder Structure
 
-```
-PM-skills-ALL-1/
-├── inbox.md                    ← Single capture point
-├── GOALS.md                    ← Identity, ownership, quarterly goals
-├── 00-hub/                     ← Daily ops: sprint status, tasks, outputs
-├── 01-discovery/               ← Discovery cycle: Problem Framing → Synthesis → OST
-├── 02-prd/                     ← PRD writing, epic hypothesis, Confluence API (pending)
-├── 03-stories/                 ← Story grooming, Jira scripts, story files
-├── 04-ceremonies/              ← Ceremony prep, sprint rhythm, meeting archive
-├── 05-prototypes/              ← Feature ideation (6-idea generator), UI brief handoff
-├── 06-skills-and-decisions/    ← Skills library, decisions log, OTEP context
-└── .claude/                    ← Commands, agents, skills (untouched)
-```
+`PM-skills-ALL-1/` — seven numbered folders by workflow: `00-hub` (daily ops), `01-discovery`, `02-prd`, `03-stories`, `04-ceremonies`, `05-prototypes`, `06-skills-and-decisions`. Plus `inbox.md`, `GOALS.md`, `.claude/`.
+
+**Full structure and per-file detail: `README.md`.**
 
 ---
 
@@ -83,52 +73,11 @@ PM-skills-ALL-1/
 
 ---
 
-## Sprint Delivery Commands
+## Commands & Skills
 
-Slash commands for daily PM workflows. These live in `.claude/commands/`.
+Slash commands live in `.claude/commands/` (daily rhythm, ceremony prep, weekly/strategic). Named skills live in `.claude/skills/` (`weekly-update`, `meeting-prep`, `draft-prd-section`, `synthesize-research`, `triage`, `standup`). All work from local files.
 
-### Daily Rhythm
-
-| Command | When | What it does |
-|---|---|---|
-| `/daily` | Morning | Schedule, ceremony check, recently completed, open items, top 3 focus, PM growth nudge |
-| `/endday` | End of day | What got done, carry-forward, reflection, PM growth check |
-
-### Ceremony Prep
-
-| Command | When | What it does |
-|---|---|---|
-| `/groom-prep` | Before grooming | Story scores, AC completeness, design status, risk areas |
-| `/groom` | Before grooming | Story readiness, gaps, dependencies, edge cases |
-| `/sprint-plan-prep` | Before planning | Draft sprint goal, candidate stories, capacity flags |
-| `/mid-sprint-review` | Mid-sprint | Sprint health, blockers, scope creep flags, decisions needed |
-| `/retro-prep` | Before retro | Demo-able stories, demo order, Signal/Sense/Shift prompts |
-
-### Weekly / Strategic
-
-| Command | When | What it does |
-|---|---|---|
-| `/week` | Monday | Decisions needed, stakeholder conversations, spec gaps |
-| `/brief` | Before stakeholder meetings | Audience-specific brief (Mark/Jacky/Adrian/etc.) |
-| `/decision` | Before scope calls | Pre-decision brief, audit, post-decision conflict check |
-| `/retro` | Friday | Signal/Sense/Shift using meeting notes + PM growth lens |
-| `/scan` | As needed | Document health: contradictions, undefined reqs, sign-off gaps |
-| `/archive` | Mid-sprint + end-sprint | Snapshot context files, move outputs to archive |
-
-All commands work from local files (00-hub/, 03-stories/, 04-ceremonies/, 06-skills-and-decisions/).
-
----
-
-## Personal OS Skills
-
-Richer experiences invoked by name (not slash commands). These live in `.claude/skills/`.
-
-| Skill | When | What it does |
-|---|---|---|
-| `weekly-update` | Fridays | Draft stakeholder email: headline, metrics, progress, blockers, next week |
-| `meeting-prep` | Before meetings | Context from people profiles, past notes, action items, decisions needed |
-| `draft-prd-section` | Writing specs | PRD section grounded in project research and GOALS.md |
-| `synthesize-research` | After interviews | Structured insights: findings, patterns, quotes, recommendations |
+**Full command + skill list with descriptions: `00-hub/commands-reference.md`.**
 
 ---
 
@@ -152,26 +101,6 @@ Two libraries. Always check these before defaulting to generic answers.
 - **Pawel Huryn** — fast, sharp outputs, slash commands to chain into a workflow
 
 **Full routing tables:** `06-skills-and-decisions/SKILL-INDEX.md`
-
----
-
-## Quick Reference — Most Used Commands
-
-| Situation | Best command |
-|---|---|
-| Start the morning | `/daily` |
-| Frame a problem properly | Dean: `problem-framing-canvas/SKILL.md` |
-| Break down an epic | Dean: `epic-breakdown-advisor/SKILL.md` |
-| Prioritise my backlog | Dean: `prioritization-advisor/SKILL.md` |
-| Prep for a meeting | `meeting-prep` skill |
-| Align stakeholders | Dean: `product-strategy-session/SKILL.md` |
-| Before grooming | `/groom-prep` |
-| Before sprint planning | `/sprint-plan-prep` |
-| Friday retro | `/retro` |
-| Weekly stakeholder email | `weekly-update` skill |
-| Write a PRD section | `draft-prd-section` skill |
-| Synthesize research | `synthesize-research` skill |
-| Check scope creep | Review `06-skills-and-decisions/decisions-log.md` + MVP guardrails below |
 
 ---
 
@@ -204,26 +133,7 @@ Sprints are **2 weeks long**. Team grooms **2 sprints ahead**.
 
 I do NOT own facilitation — Rama facilitates ceremonies.
 
-### Pre-Ceremony Prep Rhythm
-
-Two reference files in `04-ceremonies/`:
-- **`ceremony-prep.md`** — what to bring and how long to prep for each ceremony
-- **`sprint-prep-rhythm.md`** — when to run each prep command, with a date-filled checklist per sprint
-
-#### Quick reference: command schedule
-
-| Day | Ceremony | Prep command | Timing |
-|---|---|---|---|
-| Mon wk 1 | Retro + Demo + Stakeholder walkthrough (Jacky, Mark) | `/retro` then `/groom-prep` | Morning — retro first, then prep before 4pm BO sync |
-| Tue wk 1 | Squad Grooming (internal) | `/groom` | Morning of — `/groom-prep` already done Mon |
-| Wed wk 1 | (Prep day — no ceremony) | `/groom-prep` | Afternoon — catch AC gaps before Thu formal groom |
-| Thu wk 1 | Backlog Grooming | `/groom` | Morning of — `/groom-prep` already done Wed |
-| Mon wk 2 | Mid-Sprint Review | `/mid-sprint-review` | Morning of |
-| Wed wk 2 | (Prep day — no ceremony) | `/sprint-plan-prep` | Afternoon — prep for Thu planning |
-| Thu wk 2 | Sprint Planning | `/sprint-plan-prep` | Refresh morning of |
-| Fri wk 2 | Sprint Ends + Finalisation | `/archive` then `/retro-prep` | After finalisation sign-off |
-
-**Rule of thumb:** Run the prep command the day before if you need time to fix gaps (AC rewrites, design follow-ups). Run it morning-of if you just need a status check. Update the date checklist in `sprint-prep-rhythm.md` at each sprint start.
+**Prep rhythm:** `04-ceremonies/ceremony-prep.md` (what to bring per ceremony) and `04-ceremonies/sprint-prep-rhythm.md` (which prep command to run each day, with a date-filled checklist per sprint). Rule of thumb: run the prep command the day before if you need time to fix gaps, morning-of if you just need a status check.
 
 ---
 
@@ -236,13 +146,8 @@ Two reference files in `04-ceremonies/`:
 - Recommendation / AI-matching engine
 - Notifications
 
-### OTG field status (updated 2026-05-13)
-- ~~`eligibility`~~ — not needed (resolved 2026-05-13)
-- `formsg_url` — **still unconfirmed** (open item #2, Rama + PSD Ops). Last unconfirmed OTG field. Blocks US-18 (Sprint 3).
-- ~~`closing_date`~~ — confirmed as application closing date. Used for visibility (`closing_date > today` = visible) and "closing soon" label. (resolved 2026-05-13)
-- ~~`is_published`~~ — field does not exist. Use `closing_date` for visibility instead. (resolved 2026-05-13)
-- ~~`reporting_line`~~ — not available in OTG export. Removed from detail page design. (resolved 2026-05-13)
-- ~~`developmental_outcome`~~ — confirmed available. "What you'll develop" can populate. (resolved 2026-05-13)
+### OTG field status
+Full field status lives in `00-hub/risks.md` (Unconfirmed OTG Fields). One field still open: **`formsg_url`** (open item #2, Rama + PSD Ops) — blocks US-18 (Sprint 3). The other five resolved 2026-05-13.
 
 ### Application flow logic (updated 2026-05-13)
 - STIP / Gig / Internal Jobs -> FormSG (`formsg_url`)
@@ -269,44 +174,17 @@ When making or revisiting a decision, update that file with: date, decision, rat
 
 ---
 
-## Competitive Landscape
-
-See OTEP-COMPETITORS.md for full competitor reference — commercial platforms and public sector equivalents.
-Path: ~/Documents/PM-skills-ALL/.claude/OTEP-COMPETITORS.md
-
----
-
 ## My Writing Style — Anti-AI Principles
 
-When drafting anything for me — comms, PM artefacts, retros, one-pagers — apply these six rules without being told. They apply to all writing: stakeholder updates, Notion entries, Confluence docs, Slack messages.
+When drafting anything for me — comms, retros, PM artefacts — apply these six rules without being told:
 
-**1. Lead with position, not warm-up**
-First sentence contains the point. Never approach it.
+1. **Lead with position, not warm-up** — first sentence contains the point.
+2. **Specific nouns, not category words** — real names, not "stakeholders / the team / users".
+3. **One sentence does less** — two clauses max; if longer, split it.
+4. **Show the thinking** — one "I noticed" or "I changed my mind because" per major piece.
+5. **Break rhythm** — vary sentence length; perfect rhythm is the AI tell.
+6. **Kill filler openers** — no "It's worth noting", "Moving forward", "Certainly!", "Great question!", "In conclusion".
 
-**2. Use specific nouns, not category words**
-Replace "stakeholders / the team / users" with actual names and details.
+For full rewrites + the phrase swap list, use the `anti-ai-editor` agent.
 
-**3. Let one sentence do less**
-Two clauses maximum per sentence. If longer, split it.
-
-**4. Show the thinking, not just the conclusion**
-Include one "I noticed" or "I changed my mind because" per major piece.
-
-**5. Break rhythm deliberately**
-Vary sentence length. AI writing has perfect rhythm — that's a tell.
-
-**6. Kill filler openers — delete on sight**
-Never use: "It's worth noting that..." / "In today's environment..." / "Certainly!" / "Absolutely!" / "Great question!" / "In conclusion..."
-
-### Quick swap list
-
-| AI phrase | Human version |
-|---|---|
-| "leverage" | use |
-| "utilise" | use |
-| "it is important to note" | [just say it] |
-| "moving forward" | [say when] |
-| "robust solution" | [say what it actually does] |
-| "alignment" | agreement / decision / buy-in |
-| "surface" (as a verb) | show / raise / flag |
-| "pain points" | [name the actual problem] |
+Competitor reference: `.claude/OTEP-COMPETITORS.md`.

@@ -17,8 +17,9 @@ grooming or sign-off.
 ## Source of truth
 
 Read these before reviewing:
-- `.claude/CLAUDE.md` → **MVP Guardrails** section (R1 exclusions, OTG field
-  status, application flow logic)
+- `.claude/CLAUDE.md` → **MVP Guardrails** section (R1 exclusions, application
+  flow logic)
+- `00-hub/risks.md` → **Unconfirmed OTG Fields** (full OTG field status)
 - `06-skills-and-decisions/decisions-log.md` — scope decisions with dates
 
 If a guardrail in CLAUDE.md and a decision in the log conflict, the more
