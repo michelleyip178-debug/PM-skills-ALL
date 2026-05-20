@@ -55,25 +55,34 @@ Per-story grooming readiness and DoR blockers, per sprint. **Which stories are i
 ## Sprint 3 — Auth + OTG Ingestion
 
 **Sprint dates:** 2 Jun – 13 Jun 2026
-**Sprint goal:** *(TBD — populate at Sprint 2 mid-point)*
-**Scope locked (2026-05-19, Michelle):** 3 stories only. All other previously planned Sprint 3 stories moved to Sprint 4+.
+**Sprint goal:** *(Proposed: Officer can log in via WOG AD, stay authenticated, and log out securely — auth end-to-end. OTG recurring job delivers data in background. Confirm at grooming 2026-05-21.)*
+**Scope (updated 2026-05-20 Jira sync):** 5–6 stories. Original scope locked at 3 (OTEP-192, OTEP-71, OTEP-110); OTEP-304 and OTEP-305 confirmed on Jira Sprint 3 board (pulled forward from Sprint 4+, confirmed as WOG-04/05). OTEP-191 also on board — verify if still needed.
 
-### Stories (locked — 3 stories)
+### Stories (confirmed on Jira Sprint 3 board — 2026-05-20)
 
 | ID | Title | Story file | Status | Grooming-ready? |
 |---|---|---|---|---|
-| OTEP-192 | Design recurring job to fetch OTG data | — | Not on Jira Sprint 3 board yet | Moved from Sprint 2. Needs AC + owner. ⚠️ Add to Sprint 3 board. |
-| OTEP-71 | Log in with WOG AD credentials | [auth.md](stories/auth.md) | Backlog | Open question: agency determination logic. Resolve before grooming. |
-| OTEP-110 | Login fail / clear error | [auth.md](stories/auth.md) | Backlog | ACs being rewritten — DoR pending. |
+| OTEP-71 | Log in with WOG AD credentials | [auth.md](stories/auth.md) | Backlog | ⚠️ Jira ACs weak — auth.md is complete. Agency determination (decision #2) unresolved. |
+| OTEP-110 | Login fail / clear error | [auth.md](stories/auth.md) | Backlog | ❌ Jira AC is 1 mechanism sentence. Paste auth.md ACs to Jira before grooming. Needs compliance sign-off (WOG-15 NFR). |
+| OTEP-192 | Design recurring job to fetch OTG data | — | Backlog | ❌ No user story format; mechanism AC only. Rewrite before grooming. Trigger/frequency TBD. |
+| OTEP-304 | Remain authenticated during active session | — | Backlog | ⚠️ ACs present; timeout value TBD (compliance). Was WOG-04. |
+| OTEP-305 | Log out of OTEP | — | Backlog | ⚠️ ACs present; concurrent-session default unresolved. Was WOG-05. |
+| OTEP-191 | Handle credential manager and vault | — | Backlog | ❌ No description or ACs. Pow Hwee flagged: may be resolved by AWS infra — verify at grooming. |
 
-**All other stories deferred to Sprint 4+:** OTEP-86, US-05, US-03, OTEP-87, US-18, OTEP-127, WOG-04, WOG-05, WOG-06, OTEP-202, OTEP-203, OTEP-271, OTEP-191.
+**Deferred to Sprint 4+:** OTEP-86, US-05, US-03, OTEP-87, US-18, OTEP-127, WOG-06, OTEP-202, OTEP-203, OTEP-271.
 
 ### DoR Blockers (Sprint 3)
 
 - [ ] Auth test outcome without AzureAD defined (open item #26) — Pow Hwee / Leo. Overdue.
-- [ ] Agency determination logic for OTEP-71 resolved — open question, raise at Thu grooming
-- [ ] OTEP-110 ACs rewritten and reviewed
-- [ ] OTEP-192 added to Sprint 3 Jira board and assigned
+- [ ] Agency determination source for OTEP-71 (decision #2) — Pow Hwee. Raise at grooming.
+- [ ] OTEP-110 ACs pasted from auth.md into Jira **before grooming (21 May)**
+- [ ] OTEP-110 error copy compliance sign-off (WOG-15 non-enumeration NFR) — Michelle to route
+- [ ] OTEP-192 rewritten as user story with job trigger/frequency confirmed — Pow Hwee
+- [ ] Concurrent session default decided (OTEP-305 / decision #4) — policy call, not a build item
+- [ ] Idle timeout value confirmed (OTEP-304 / decision #1) — compliance / Pow Hwee
+- [ ] OTEP-191 verified or closed — Pow Hwee (AWS infra may have resolved)
+- [ ] Amber: design login error states (OTEP-110), logout (OTEP-305), session expiry (OTEP-304)
+- [ ] Sprint 3 goal confirmed in Jira
 
 ---
 
