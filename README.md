@@ -31,6 +31,8 @@ PM-skills-ALL-1/
 │   ├── research/                  Interview notes, hallway tests
 │   ├── user-research-synthesis/   Synthesis workflow (4 steps)
 │   ├── frameworks/                Dean + Pawel discovery frameworks
+│   ├── discovery-full-ats-vs-otep-native-2026-05-19.md   ATS-pivot discovery
+│   ├── discovery-plan-ats-pivot-2026-05-19.md            ATS-pivot plan
 │   ├── OTEP-Discovery.docx        OTEP discovery document
 │   └── notebookLM-research-discovery.md
 │
@@ -122,8 +124,8 @@ Full descriptions: [.claude/CLAUDE.md](.claude/CLAUDE.md)
 | Daily | `/daily` · `/midday` · `/endday` |
 | Ceremony prep | `/groom-prep` · `/groom` · `/sprint-plan-prep` · `/mid-sprint-review` · `/retro-prep` |
 | Strategic | `/week` · `/brief` · `/decision` · `/retro` · `/scan` · `/archive` |
-| Skills | `weekly-update` · `meeting-prep` · `draft-prd-section` · `synthesize-research` |
-| Agent | `pm-reviewer` — checks user story + AC quality |
+| Skills | `weekly-update` · `meeting-prep` · `draft-prd-section` · `synthesize-research` · `standup` |
+| Agents | `pm-reviewer` (story + AC quality) · `scope-guardian` (MVP scope creep) · `anti-ai-editor` (writing-style enforcement) · `decision-auditor` (decision-log conflicts) |
 
 PM skills library routing: [06-skills-and-decisions/SKILL-INDEX.md](06-skills-and-decisions/SKILL-INDEX.md)
 
