@@ -27,7 +27,7 @@
 | 24 | Specify which OTG reports to ingest (STIPs & Gigs, SJR, audience filters, etc.) for OTEP-192 | Michelle / Pow Hwee | Before Sprint 2 dev | Ingestion story needs to name the exact Excel reports and fields. Agreed at internal groom 2026-05-13. | ✅ Resolved |
 | 25 | Profile story split: identify which parts are feasible for Sprint 2 (basic: name, email) vs deferred (competency — depends on another team) | Michelle / Pow Hwee | Sprint 2 planning (Thu 14 May) | Large profile story too big as-is. Only basic auth profile goes into Sprint 2. | 🔴 Open |
 | 26 | Define expected auth test outcome without AzureAD access — team has an alternative tool for testing but expected outcomes need to be explicit | Pow Hwee / Leo | Sprint 2 start | Auth stories (OTEP-71a–d, OTEP-111) can't be finalised without agreement on what "done" looks like in a non-AzureAD test env. Source: Thomas (Slack, 14 May). | 🔴 Open |
-| 27 | **OTEP-271** (local POCDEX DB + seed 5 profiles) — confirm sprint placement: Sprint 2 carry-over vs backlog? Split from **OTEP-202** (Leo): OTEP-271 = infra setup; OTEP-202 = seed data only (Pow Hwee, Sprint 1). Parent OTEP-99. | Michelle / Pow Hwee | Sprint 2 start | Sequences POCDEX vs seed work; affects capacity and OTEP-192/193 dependencies | 🔴 Open |
+| 27 | **OTEP-271** (local POCDEX DB + seed 5 profiles) — confirm sprint placement: Sprint 2 carry-over vs backlog? Split from **OTEP-202** (Leo): OTEP-271 = infra setup; OTEP-202 = seed data only (Pow Hwee, Sprint 1). Parent OTEP-99. | Michelle / Pow Hwee | Sprint 2 start | Sequences POCDEX vs seed work; affects capacity and OTEP-192/193 dependencies | ✅ Resolved |
 | 28 | **OTEP-85 visibility rule conflict** — current AC says "Closing Date >= 7 days" AND "strictly in the future." Pow Hwee (2026-05-18 comment) suspects the 7-day rule belongs in OTEP-129 (Closing soon badge), not the visibility filter. Confirm: should OTEP-85 show all opportunities where closing_date > today (regardless of how soon), with OTEP-129 handling the "Closing soon" badge for those within 7 days? | Michelle | Before Sprint 2 grooming | OTEP-85 AC is ambiguous — engineers will build to whichever rule is written. OTEP-129 "Closing soon" badge logic depends on same threshold. | ✅ Resolved |
 | 29 | **OTEP-289 spike definition** — Pow Hwee (2026-05-18 comment) asking Michelle to define: What are the ACs? Is it timeboxed? If so, how long? What is the expected output — written recommendation, prototype, or something else? | Michelle | Before Sprint 2 grooming (Tue 19 May) | Spike has no ACs or timebox. Engineers can't start until this is defined. | ✅ Resolved |
 
@@ -51,7 +51,8 @@
 | 24 | OTG Excel reports shared with Pow Hwee — reports specified for OTEP-192 ingestion | Michelle | 2026-05-18 |
 | 28 | OTEP-85 visibility rule: clean split confirmed — OTEP-85 shows all `closing_date > today`; OTEP-129 owns "Closing soon" badge (within 7 days) | Michelle | 2026-05-19 |
 | 29 | OTEP-289 spike defined: 2-day timebox (19–20 May), ACs cover C@G + OTG taxonomy mapping, output = written recommendation + go/no-go. Cut-line: defer to Sprint 3 if mapping is messy. | Michelle | 2026-05-19 |
+| 27 | OTEP-271/202/203 (POCDEX stories) sprint placement confirmed — staggered backend DB container & standalone service setup to Sprint 3 to avoid Sprint 4 bottleneck | Michelle / Pow Hwee | 2026-05-20 |
 
 ---
 
-*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-18 (resolved #24 — OTG Excel reports shared).*
+*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-20 (resolved #27 — Confirm OTEP-271/202/203 placement).*

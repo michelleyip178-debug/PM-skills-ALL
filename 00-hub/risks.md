@@ -52,8 +52,8 @@ Three carry-over stories are NOT on the Sprint 2 board but may need to be:
 | Story | Issue | Action |
 |---|---|---|
 | OTEP-192, OTEP-193 | Data model + file import — Sprint 2 critical path. Not showing on board. | Confirm placement with Pow Hwee |
-| OTEP-202, OTEP-203, OTEP-271 | POCDEX stories — open item #27 unresolved | Confirm Sprint 2 vs Sprint 3 with Pow Hwee / Leo |
-| OTEP-110, WOG-04/05/06 | Auth carry-overs — not on Sprint 2 board | Confirm Sprint 3 placement at mid-sprint review Mon 26 May |
+| OTEP-202, OTEP-203, OTEP-271 | POCDEX stories — open item #27 resolved | Confirmed: OTEP-271 and OTEP-203 in Sprint 3; OTEP-202 in Sprint 4. |
+| OTEP-110, WOG-04/05/06 | Auth carry-overs — not on Sprint 2 board | Confirm Sprint 3 placement (OTEP-110 confirmed Sprint 3, others Sprint 4+). |
 
 ## Mitigations Already in Place
 

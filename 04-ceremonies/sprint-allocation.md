@@ -102,60 +102,58 @@
 
 ---
 
-## Sprint 3 (1–12 Jun) — Auth Polish + OTG Ingestion
+## Sprint 3 (1–12 Jun) — Auth Polish + OTG Ingestion + Plumbing Stagger
 
-**Sprint goal:** *(set at Sprint 2 mid-point)*
-**Scope locked (2026-05-19, Michelle) — 3 stories only.**
+**Sprint goal:** Officers can log in securely via WOG AD (or handle login failures cleanly), the backend can ingest OTG opportunity reports, the local POCDEX infrastructure is set up, and officers can click "Apply" to be redirected to FormSG.
+
+**Scope updated to stagger integration efforts (2026-05-20, PM alignment with Pow Hwee):**
 
 | Jira | Story | Owner | Notes |
 |------|-------|-------|-------|
-| OTEP-192 | Design recurring job to fetch OTG data (Excel) | — | Moved from Sprint 2. ⚠️ Not yet on Sprint 3 Jira board — add. No assignee. |
-| OTEP-71 | Log in with WOG AD credentials | Pow Hwee / Leo | Open question: agency determination logic. Resolve before grooming. |
-| OTEP-110 | Login fail / clear error | Pow Hwee / Leo | ACs being rewritten. DoR pending. |
-
-**All other previously planned Sprint 3 stories moved to Sprint 4+** (2026-05-19 decision):
-OTEP-86, US-05, US-03, OTEP-87, US-18, OTEP-127, WOG-04, WOG-05, WOG-06, OTEP-202, OTEP-203, OTEP-271, OTEP-191.
+| OTEP-192 | Design recurring job to fetch OTG data (Excel) | Leo | Ingestion backend. Critical path for data. |
+| OTEP-71 | Log in with WOG AD credentials | Pow Hwee | Auth plumbing. Open question: agency determination logic. |
+| OTEP-110 | Login fail / clear error | Thomas | FE error states. ACs being rewritten. |
+| OTEP-271 | Local POCDEX database (container + schema) | Leo | **POCDEX Plumbing.** Staggered to S3 to unblock S4 ringfencing. |
+| OTEP-203 | Implement standalone POCDEX API service | Pow Hwee | **POCDEX Plumbing.** Staggered to S3 to unblock S4 ringfencing. |
+| US-18 | Apply via FormSG (basic redirect) | Thomas | **FormSG Phase 1.** Basic new-tab redirect. Completed end-to-end loop early! |
 
 **DoR blockers:**
 - [ ] Auth test outcome without AzureAD (open item #26) — Pow Hwee / Leo. Overdue.
 - [ ] Agency determination logic for OTEP-71 — raise at Thu 21 May grooming
 - [ ] OTEP-110 ACs rewritten
-- [ ] OTEP-192 added to Sprint 3 Jira board and assigned
+- [ ] OTEP-192/271/203 added to Sprint 3 Jira board and assigned
 
 ---
 
-## Sprint 4 (15–26 Jun) — Ringfencing, Apply Redirects, Auth Edge-Cases — *provisional*
+## Sprint 4 (15–26 Jun) — Ringfencing, Onboarding, and Filters — *provisional*
 
-Stories moved from Sprint 3 (2026-05-19) plus original Sprint 4 scope. Refine at Sprint 3 grooming.
+Staggered backend plumbing in Sprint 3 unblocks frontend personalisation and filters in Sprint 4.
 
-| Jira | Story | Notes |
-|------|-------|-------|
-| OTEP-86 | Filter opportunities by type | Deferred from Sprint 2. Design finalised. ACs written. |
-| US-05 | Clear filters and reset view | Pairs with OTEP-86. |
-| US-18 | Apply via FormSG (basic redirect) | Blocked on `formsg_url` (open item #2). |
-| OTEP-87 | Enhance detail page: apply CTA + competencies | Builds on OTEP-128. |
-| OTEP-127 | Apply ringfencing criteria | Depends on OTEP-183 spike. |
-| US-03 | Filter opportunities by category | Pending categorisation model validation. |
-| WOG-04 | Stay logged in during session | Auth edge-case carry-over. |
-| WOG-05 | Log out of OTEP | Auth edge-case carry-over. |
-| WOG-06 | First-time login experience | Auth edge-case carry-over. |
-| OTEP-202 | Create POCDEX seed database for local dev | Placement TBC (open item #27). |
-| OTEP-203 | Implement standalone POCDEX API service | Placement TBC (open item #27). |
-| OTEP-271 | Local POCDEX database (container + schema) | Placement TBC (open item #27). |
-| OTEP-130 | Apply to OTG opportunity via FormSG (full) | Webhook confirmation, email notifications. |
-| US-10 | Receive application confirmation | Depends on FormSG webhook + email delivery. |
+| Jira | Story | Owner | Notes |
+|------|-------|-------|-------|
+| OTEP-127 | Apply ringfencing criteria | Thomas / Leo | **POCDEX Phase 2.** Filters cards by officer profile. Needs S3 POCDEX DB/API. |
+| OTEP-202 | Create POCDEX seed database for local dev | Leo | Seeding test profiles for ringfencing/onboarding validation. |
+| WOG-06 | First-time login experience | Thomas | Onboarding screen + mandatory profile setup. |
+| OTEP-86 | Filter opportunities by type | Thomas | FE filtering by Gig, STIP, etc. Design locked. |
+| US-05 | Clear filters and reset view | Thomas | Pairs with OTEP-86. |
+| US-03 | Filter opportunities by category | Thomas | Pending categorisation model validation (OTEP-289 spike output). |
+| OTEP-87 | Enhance detail page: apply CTA + competencies | Thomas | Competency display. Builds on OTEP-128. |
+| WOG-04 | Stay logged in during session | Leo | Session management. |
+| WOG-05 | Log out of OTEP | Thomas | Auth logout. |
+
+---
+
+## Sprint 5 (29 Jun – 10 Jul) — Careers@Gov Integration + Full FormSG Integration — *provisional*
+
+| Jira | Story | Owner | Notes |
+|------|-------|-------|-------|
+| OTEP-130 | Apply to OTG opportunity via FormSG (full) | Thomas / Leo | **FormSG Phase 2.** Webhook callback, auto-sync application status, profile pre-fill. |
+| US-10 | Receive application confirmation | Thomas | Confirmation screen. Depends on FormSG webhook + email delivery. |
+| OTEP-89 | View Careers@Gov opportunity summary on OTEP | Thomas | C@G detail in OTEP, "Apply via Careers@Gov" CTA, deep-link to C@G. |
+| OTEP-133 | Redirect to Careers@Gov to apply / access hub via EDM deep link | Leo | Email → opportunity detail; ineligible shows a message. |
+| OTEP-88 | Understand the difference between OTG and C@G flows | Thomas | Button labels, visual cues. |
+| US-10 *(C@G label)* | Identify Careers@Gov listings | Thomas | "Careers@Gov" label on card. Depends on C@G API ingestion. |
 | — | Handle missing/broken FormSG link | Disabled CTA + "contact Agency POC" fallback. |
-
----
-
-## Sprint 5 (29 Jun – 10 Jul) — Careers@Gov Integration + EDM — *provisional*
-
-| Jira | Story | Notes |
-|------|-------|-------|
-| US-10 *(C@G label — distinct from the confirmation story above; ID to reconcile)* | Identify Careers@Gov listings | "Careers@Gov" label on card. Depends on C@G ingestion being live. |
-| OTEP-89 | View Careers@Gov opportunity summary on OTEP | C@G detail in OTEP, "Apply via Careers@Gov" CTA, deep-link to C@G. |
-| OTEP-133 | Redirect to Careers@Gov to apply / access hub via EDM deep link | Email → opportunity detail; ineligible shows a message. |
-| OTEP-88 | Understand the difference between OTG and C@G flows | Button labels, visual cues. |
 
 ---
 
