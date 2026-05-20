@@ -9,67 +9,71 @@ Per-story grooming readiness and DoR blockers, per sprint. **Which stories are i
 ## Sprint 2 — Opportunities Listing Hub
 
 **Sprint dates:** 18 May – 29 May 2026
-**Sprint goal:** Officers can browse and filter every OTG opportunity on a single authenticated page, newest first, published-only.
+**Sprint goal:** An officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
 
-### Stories (5 stories — reconciled against Jira Sprint 2 board 2026-05-15)
+### Stories (reconciled against Jira Sprint 2 board 2026-05-20)
 
-| ID | Title | Story file | Grooming-ready? |
-|---|---|---|---|
-| OTEP-85 | Display opportunity cards with real/mock OTG data | [filters.md](stories/filters.md) | Ready — rendering foundation. Absorbs "Closing soon" label (formerly OTEP-85a). Field rendering rules defined. Loading state AC added. **Must ship first.** |
-| OTEP-285 | Click-through to detail + return-to-page | [filters.md](stories/filters.md) | Ready — split from OTEP-85. **Highest-risk story** (state persistence architecture). Needs contract sync decision. |
-| OTEP-128 | View opportunity detail page | [otg-lifecycle.md](stories/otg-lifecycle.md) | Ready — Loading state AC added. |
-| OTEP-267 | Pagination for listing page | [filters.md](stories/filters.md) | Ready — page indicator promoted to must-have. Hidden-on-empty AC added. |
-| OTEP-276 | [Spike] Investigate custom design system reimplementation | — | New 2026-05-15. Thomas owns. Confirms or replaces LifeSG as base. AC to be drafted. |
+| ID | Title | Story file | Status | Grooming-ready? |
+|---|---|---|---|---|
+| OTEP-85 | Display opportunity cards with real OTG data | [filters.md](stories/filters.md) | Backlog | AC updated: visibility = `closing_date > today` (open item #28 resolved). "Closing soon" badge moved to OTEP-129. |
+| OTEP-128 | View opportunity detail page | [otg-lifecycle.md](stories/otg-lifecycle.md) | Backlog | Absorbs OTEP-285 ACs (click-through + return-to-page). Remove "opportunity is closed" AC — belongs to OTEP-129. |
+| OTEP-129 | See whether opportunity is open/closed before applying | [otg-lifecycle.md](stories/otg-lifecycle.md) | Backlog | Re-added as separate story (Pow Hwee, 2026-05-18). Owns: "Closing soon" badge (≤7 days) + deep-link error state. |
+| OTEP-267 | Pagination for listing page | [filters.md](stories/filters.md) | Backlog | API dep: `total_count` needed in GET /opportunities response. |
+| OTEP-268 | Empty, error, and partial-load states for listing | — | Backlog | Re-added (Pow Hwee, 2026-05-18). Drop partial-load AC (not possible with single API fetch). |
+| OTEP-289 | [Spike] Filter Opportunities by Functions | [OTEP-289-spike-definition.md](stories/OTEP-289-spike-definition.md) | Backlog | Spike defined: 2-day timebox (19–20 May), output = written recommendation + go/no-go. |
+| OTEP-170 | Base Layout for Opportunity Listing Page | — | In Progress | Thomas. MR in progress. Sub-task of OTEP-85. |
+| OTEP-193 | Design Data Model for Opportunities | — | In Progress | Léo. .sql migration + Go structs. Must support OTG now, C@G later (open item #23). |
+| OTEP-288 | Setup simple backend endpoint with in-memory list | — | In Progress | Léo. Sub-task of OTEP-85. Léo has WIP risk (2 In Progress). |
+| OTEP-296 | Prepare defined report format matching data model | — | In Progress | Michelle. Standardises OTG Excel format before ingestion. Must align with OTEP-193. |
+| OTEP-194 | [Spike] FormSG Integration & Callback Flow | — | Backlog | Thomas. Sprint 2 carry-over. |
+| OTEP-295 | Mock detail endpoint for opportunity | — | Backlog | Léo. GET /v1/opportunities/:id — sub-task of OTEP-128. |
+| OTEP-252 | Setup design system in otep-web | — | Done | Thomas. Flagship/LifeSG confirmed. |
+| ~~OTEP-276~~ | ~~[Spike] Custom design system reimplementation~~ | — | Resolved | Spike complete — OTEP-252 Done confirms Flagship/LifeSG. Remove from board. |
 
-**Absorbed:** ~~OTEP-129~~ (sort + type interleave) → into OTEP-85. ~~Old OTEP-128~~ (type badge) → into OTEP-85. ~~OTEP-85a~~ ("Closing soon") → re-absorbed into OTEP-85 (2026-05-15).
-**Removed from Sprint 2 (2026-05-15):** OTEP-268 (empty/error/partial states) — deferred / unticketed / unplanned.
-**Deferred to Sprint 3 (2026-05-14):** OTEP-86 (type filter) + US-05 (clear filters) — to make room for detail page.
-**Also Sprint 3:** US-18 (apply via FormSG), OTEP-127 (ringfencing), auth edge-cases (OTEP-110, WOG-04/05/06).
-**Dropped:** ~~US-19~~ (SJR apply deferred — decision 2026-05-13).
-**Not in Sprint 2:** C@G data, US-03 category filter, search.
+**Scope notes (2026-05-20):**
+- ~~OTEP-285~~ absorbed into OTEP-128 (Pow Hwee, 2026-05-18) — no Sprint 3 ticket needed
+- ~~OTEP-191~~ removed from Sprint 2 board — deprioritised to Sprint 3+ (Pow Hwee, 2026-05-14)
+- OTEP-192 (recurring OTG import job) moved to Sprint 3 (2026-05-19 decision)
+- Cut-line: do not cut OTEP-85 or OTEP-128 — they are the end-to-end goal
 
 ### DoR Blockers (Sprint 2)
 
-- [x] ~~Amber's card + filter UI + pagination + empty/error state designs finalised~~ — **resolved 2026-05-13**
-- [x] ~~Rama confirms `closing_date` vs `end_date` (open item #3)~~ — **resolved 2026-05-13:** `closing_date` = application closing date. "Closing soon" label unblocked.
-- [x] ~~Rama confirms `is_published` field name + values (open item #4)~~ — **resolved 2026-05-13:** field doesn't exist. Visibility = `closing_date` > today.
-- [x] ~~Jacky confirms Secondment classification (open item #12)~~ — **resolved 2026-05-13:** subsumed under SJR. No separate type.
-- [ ] OTG file import testable with real Excel data — OTG has no API; data comes via Excel reports (decided 2026-05-14). Depends on open item #24 (which reports to ingest).
-- [ ] Listing-endpoint API contract documented (Pow Hwee) — OTEP-85 subtask #1. This is OTEP's internal API (frontend ↔ backend), not OTG ingestion.
+- [x] ~~Amber's designs finalised (card, pagination, detail page)~~ — resolved 2026-05-13
+- [x] ~~`closing_date` confirmed~~ — resolved 2026-05-13: application closing date
+- [x] ~~`is_published` confirmed~~ — resolved 2026-05-13: field doesn't exist; use `closing_date > today`
+- [x] ~~Secondment classification~~ — resolved 2026-05-13: subsumed under SJR
 - [x] ~~Sort key confirmed~~ — `posting_date`, newest first (Michelle)
+- [x] ~~OTEP-85 visibility rule~~ — resolved 2026-05-19: `closing_date > today` (open item #28)
+- [x] ~~OTEP-289 spike defined~~ — resolved 2026-05-19: 2-day timebox, written output (open item #29)
+- [ ] Listing API contract documented (Pow Hwee) — OTEP-85 internal API (frontend ↔ backend)
+- [ ] Detail page API contract documented (Pow Hwee) — GET /opportunities/:id
+- [ ] Harmonised data model supports OTG + C@G (open item #23) — Léo building OTEP-193 now; alignment needed
+- [ ] Design lock date agreed with Amber (open item #22) — overdue, Sprint 2 W1
 
 ---
 
-## Sprint 3 — Apply Routing, Detail Pages, Personalisation
+## Sprint 3 — Auth + OTG Ingestion
 
 **Sprint dates:** 2 Jun – 13 Jun 2026
 **Sprint goal:** *(TBD — populate at Sprint 2 mid-point)*
+**Scope locked (2026-05-19, Michelle):** 3 stories only. All other previously planned Sprint 3 stories moved to Sprint 4+.
 
-### Stories (provisional — from story-id-map + Sprint 2 deferrals)
+### Stories (locked — 3 stories)
 
-| ID | Title | Story file | Grooming-ready? |
-|---|---|---|---|
-| OTEP-86 | Filter opportunities by type | [filters.md](stories/filters.md) | Written + tiered. Deferred from Sprint 2 (2026-05-14). Design finalised. |
-| US-05 | Clear filters and reset view | [filters.md](stories/filters.md) | Written + tiered. Pairs with OTEP-86. |
-| US-18 *(Jira TBD)* | Apply via FormSG (basic redirect) — Internal Jobs, STIPs, Gigs | [otg-lifecycle.md](stories/otg-lifecycle.md) | Written. Blocked on `formsg_url` (Rama, open item #2). |
-| OTEP-87 | Enhance detail page: apply CTA + competencies | [otg-lifecycle.md](stories/otg-lifecycle.md) | Updated 2026-05-14. Builds on OTEP-128 (Sprint 2 base). Only Sprint 3 additions: apply CTA, SJR treatment, competencies. |
-| OTEP-127 | Apply ringfencing criteria | [filters.md](stories/filters.md) | Not started |
-| US-03 | Filter opportunities by category | [filters.md](stories/filters.md) | Blocked on categorisation research |
-| OTEP-110 | Login fail / clear error | [auth.md](stories/auth.md) | Sprint 3 or Sprint 1 carry-over — confirm at finalisation Fri 15 May |
-| WOG-04 *(Jira TBD)* | Stay logged in during session | [auth.md](stories/auth.md) | Same as above |
-| WOG-05 *(Jira TBD)* | Log out of OTEP | [auth.md](stories/auth.md) | Same as above |
-| WOG-06 *(Jira TBD)* | First-time login experience | [auth.md](stories/auth.md) | Same as above |
+| ID | Title | Story file | Status | Grooming-ready? |
+|---|---|---|---|---|
+| OTEP-192 | Design recurring job to fetch OTG data | — | Not on Jira Sprint 3 board yet | Moved from Sprint 2. Needs AC + owner. ⚠️ Add to Sprint 3 board. |
+| OTEP-71 | Log in with WOG AD credentials | [auth.md](stories/auth.md) | Backlog | Open question: agency determination logic. Resolve before grooming. |
+| OTEP-110 | Login fail / clear error | [auth.md](stories/auth.md) | Backlog | ACs being rewritten — DoR pending. |
 
-**Deferred from Sprint 2 (2026-05-14):** OTEP-86 (type filter) + US-05 (clear filters) — to make room for OTEP-128 (detail page).
-**Dropped from Sprint 3:** ~~US-19~~ (SJR apply deferred — decision 2026-05-13).
+**All other stories deferred to Sprint 4+:** OTEP-86, US-05, US-03, OTEP-87, US-18, OTEP-127, WOG-04, WOG-05, WOG-06, OTEP-202, OTEP-203, OTEP-271, OTEP-191.
 
-### DoR Blockers
+### DoR Blockers (Sprint 3)
 
-- [ ] Rama confirms `formsg_url` field name and structure (open item #2) — gates US-18. **Last unconfirmed OTG field.**
-- [ ] Categorisation hybrid model validated (Amber, Pow Hwee, Adrian, Jacky/XZ) — gates US-03
-- [ ] Auth edge-case stories reviewed and sharpened — confirm scope at Sprint 1 finalisation
-- [x] ~~Amber's detail page designs for OTEP-87 (including SJR card treatment without apply action)~~ — **resolved 2026-05-13**
-- [x] ~~Opportunity lifecycle (open item #17)~~ — **resolved 2026-05-13:** date-driven, `closing_date` > today. Pow Hwee agreed.
+- [ ] Auth test outcome without AzureAD defined (open item #26) — Pow Hwee / Leo. Overdue.
+- [ ] Agency determination logic for OTEP-71 resolved — open question, raise at Thu grooming
+- [ ] OTEP-110 ACs rewritten and reviewed
+- [ ] OTEP-192 added to Sprint 3 Jira board and assigned
 
 ---
 

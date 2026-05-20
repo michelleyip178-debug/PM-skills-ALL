@@ -28,7 +28,7 @@
 | OTEP-295 | Mock detail endpoint for opportunity | — | **2** *(tech story, Léo)* |
 | OTEP-128 | **View opportunity detail page** *(repurposed 2026-05-14 — was "type badge on card"; type badge absorbed into OTEP-85; absorbs OTEP-285)* | US-04 | **2** |
 | OTEP-283 | Opportunity Detail — Ministry icons on detail page | — | **TBD** |
-| OTEP-129 | ~~Sort by posting date~~ → **fully absorbed into OTEP-85** (sort, interleave, "Closing soon" label). Closed. | US-06 | **Absorbed** (2026-05-14) |
+| OTEP-129 | **See whether an opportunity is open or closed before applying** — re-added as separate Sprint 2 story (Pow Hwee, 2026-05-18). Owns: "Closing soon" badge (within 7 days) + deep-link error state. Overrides 2026-05-14 absorption into OTEP-85. | US-06 | **2** |
 | OTEP-86 | Filter opportunities by type | US-02 | **3** *(deferred from Sprint 2 — 2026-05-14, to make room for detail page)* |
 | US-05 *(Jira TBD)* | Clear filters and reset view | US-05 | **3** *(deferred from Sprint 2 — 2026-05-14, pairs with OTEP-86)* |
 | US-03 *(Jira TBD)* | Filter opportunities by category | US-03 | 3 |

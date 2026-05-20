@@ -111,7 +111,7 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 
 ## Jira board cleanup needed (updated 2026-05-20)
 - [x] ~~Remove OTEP-191~~ — confirmed off board as of 2026-05-20
-- [ ] **Add OTEP-192** to Sprint 2 board — critical path for OTG ingestion; OTEP-193 is on board but OTEP-192 is not
+- [ ] **Add OTEP-192** to Sprint 3 board — moved from Sprint 2 (2026-05-19 decision). Not yet assigned to Sprint 3 in Jira.
 - [x] ~~Add OTEP-193~~ — confirmed on board (Léo, In Progress) as of 2026-05-20
 - [ ] **Remove OTEP-276** from Sprint 2 board — resolved spike; still showing in Backlog
 - [x] **Paste sprint goal into Jira** — set in Jira (2026-05-20)

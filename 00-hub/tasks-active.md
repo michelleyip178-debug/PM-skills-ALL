@@ -1,7 +1,7 @@
 # Active Tasks
 
 Current sprint: **Sprint 2 (May 18 – May 29)** — Opportunities Listing → Detail end-to-end.
-Sprint 1 closed 2026-05-15 (partial sign-off). Jira comment sync 2026-05-18: **In Progress:** OTEP-170 (Thomas), OTEP-288 (Léo) · **Done:** OTEP-252 (Thomas) · **Backlog:** OTEP-85, OTEP-128, OTEP-129, OTEP-267, OTEP-268, OTEP-289, OTEP-192, OTEP-193, OTEP-194. **Scope changes:** OTEP-285 absorbed into OTEP-128 (no Sprint 3 ticket); OTEP-129 and OTEP-268 re-added to Sprint 2 by Pow Hwee; OTEP-191 deprioritised to Sprint 3+; OTEP-276 resolved.
+Jira sync 2026-05-20: **In Progress:** OTEP-170 (Thomas), OTEP-193 (Léo), OTEP-288 (Léo), OTEP-296 (Michelle) · **Done:** OTEP-252 (Thomas) · **Backlog:** OTEP-85, OTEP-128, OTEP-129, OTEP-267, OTEP-268, OTEP-289, OTEP-194, OTEP-276, OTEP-295.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
@@ -15,19 +15,21 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## In Progress
 
-**Engineering (Jira):**
-- [ ] **OTEP-170** (Thomas) — Base layout for Opportunity Listing Page. MR in progress — not closed in Jira despite local "done" note from May 15.
-- [ ] **OTEP-288** (Léo) — Setup simple backend endpoint with in-memory list. Sub-task of OTEP-170.
+**Engineering (Jira — as of 2026-05-20):**
+- [ ] **OTEP-170** (Thomas) — Base layout for Opportunity Listing Page. MR in progress.
+- [ ] **OTEP-193** (Léo) — Design data model for Opportunities. .sql migration + Go structs. ⚠️ Must align with OTEP-296.
+- [ ] **OTEP-288** (Léo) — Setup simple backend endpoint with in-memory list. ⚠️ WIP risk — Léo has 2 In Progress items. New comment 2026-05-19.
+- [ ] **OTEP-296** (Michelle) — Prepare defined report format matching data model. Standardises OTG Excel format.
 
 ---
 
 ## Up Next
 
-- [ ] **Run `/groom-prep`** — today (Mon 18 May) before noon; Squad Grooming is tomorrow 10am
-- [ ] **Chase Pow Hwee on #23 + #24** — harmonised data model (OTG + C@G) and which OTG Excel reports to ingest; both block OTEP-192/193
-- [x] **Share OTG opportunity reports (Excel files) with the team** — unblocks #24, OTEP-192, OTEP-193 (Completed 2026-05-20)
-- [ ] **[PM action — #28] Confirm OTEP-85 visibility rule** — Pow Hwee asking: is it "closing_date > now" (show all not yet closed) or "closing_date >= 7 days" (hide listings closing soon)? The 7-day rule is likely OTEP-129's "Closing soon" badge, not OTEP-85's filter. Decide before grooming.
-- [ ] **[PM action — #29] Define OTEP-289 ACs, timebox, expected outcome** — Pow Hwee asking: what is the output of the spike (written recommendation, prototype, other)? How long is it timeboxed? Groom this tomorrow.
+- [ ] **Run `/groom-prep`** — today (Wed 20 May) afternoon; Backlog Grooming is tomorrow 14:00 (L11 Anson)
+- [ ] **Chase Pow Hwee on #23** — harmonised data model (OTG + C@G); Léo is building OTEP-193 now, alignment is urgent
+- [x] **Share OTG opportunity reports (Excel files) with the team** — resolved 2026-05-18, open item #24 closed
+- [x] **[PM action — #28] Confirm OTEP-85 visibility rule** — resolved 2026-05-19: `closing_date > today`; "Closing soon" badge (≤7 days) is OTEP-129's
+- [x] **[PM action — #29] Define OTEP-289 ACs, timebox, expected outcome** — resolved 2026-05-19: 2-day timebox, written recommendation output
 - [ ] **[PM action] Clean OTEP-128 AC** — remove "This opportunity is closed" notice AC from OTEP-128 (it belongs to OTEP-129). Raise with Pow Hwee at grooming.
 - [ ] **Heads-up to Thomas: OTEP-285 absorbed into OTEP-128, OTEP-276 resolved.** No new Sprint 3 ticket needed for OTEP-285.
 - [ ] **Sharpen ACs for Sprint 2 stories** — OTEP-85, OTEP-128, OTEP-267 before tomorrow's grooming; cross-check [sprint-checklists.md](../04-ceremonies/sprint-checklists.md)
