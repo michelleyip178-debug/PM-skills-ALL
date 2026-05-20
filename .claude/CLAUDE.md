@@ -132,13 +132,16 @@ Richer experiences invoked by name (not slash commands). These live in `.claude/
 
 ---
 
-## PM Agent
+## PM Agents
 
-A reusable agent in `.claude/agents/pm-reviewer.md` checks user stories and AC for:
-- Story format and outcome orientation
-- AC quality (testable, edge cases, no vague language)
-- MVP compliance (no deferred features, no unconfirmed fields)
-- Sprint readiness (size, dependencies, design status)
+Reusable agents in `.claude/agents/`. Each is grounded in this repo's files.
+
+| Agent | When | What it checks |
+|---|---|---|
+| `pm-reviewer` | Writing/revising stories | Story format + outcome orientation, AC quality (testable, edge cases, no vague or mechanism language), AC conflicts, MVP compliance, sprint readiness, ticket structure |
+| `scope-guardian` | Any story/PRD/brief | Scope creep against the MVP Guardrails — R1 exclusions, OTG field status, application flow logic |
+| `anti-ai-editor` | Before sending comms | Enforces the six anti-AI writing rules + swap list; returns the rewritten draft, not just flags |
+| `decision-auditor` | Before logging a decision | Conflicts, supersessions, and duplicates against `decisions-log.md`; outputs a ready-to-paste row |
 
 ---
 
