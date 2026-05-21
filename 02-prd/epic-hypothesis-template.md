@@ -54,6 +54,5 @@ We'll know this worked when ≥30% of logged-in users initiate at least one oppo
 - Saved/bookmarked opportunities
 - Application status tracking
 
-**Open questions before spec:**
-- Is `formsg_url` confirmed for all STIP/Gig/Internal Jobs in OTG?
-- What is the fallback when `formsg_url` is null?
+- ~~Is `formsg_url` confirmed for all STIP/Gig/Internal Jobs in OTG?~~ — **Yes, confirmed 2026-05-21 (SJRs excluded — no apply flow in MVP)**
+- ~~What is the fallback when `formsg_url` is null?~~ — **Resolved: "Application form unavailable — contact the posting agency" (AC in US-18)**

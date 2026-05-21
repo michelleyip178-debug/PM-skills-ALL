@@ -92,6 +92,8 @@ The page needs all mandatory fields to render. If a mandatory field is missing, 
 ### OTEP-87: Enhance detail page with apply CTA + competencies (Sprint 3)
 
 > **Updated 2026-05-14.** Builds on OTEP-128 (Sprint 2 base). Adds: apply CTA (for Internal Jobs/STIPs/Gigs), SJR no-apply treatment, competency display. Only ACs NOT already in OTEP-128 are listed here.
+>
+> **⚠️ Jira ACs mismatch (2026-05-21 sync):** Jira title is "View Opportunity Detail" and ACs include competency match ratio ("X / Y competencies matched") and a competency section — scope we've deferred from Sprint 3. Reconcile Jira story before grooming: Sprint 3 scope = apply CTA only. Competency section is Sprint 4+.
 
 **As an** officer,
 **I want to** see how to apply and what competencies an opportunity requires,
@@ -108,20 +110,22 @@ The page needs all mandatory fields to render. If a mandatory field is missing, 
 - [ ] I can see required competencies on the detail page. [ASSUMPTION: competency data model confirmed — open item #18]
 - [ ] If my profile is incomplete, I see a warning before I apply. [ASSUMPTION: design decision on where to surface this TBD with Amber — open item #20]
 
-**Dependencies:** OTEP-128 (base detail page), US-18 (FormSG redirect), competency data model (#18)
+**Dependencies:** OTEP-128 (base detail page), OTEP-319 (FormSG redirect), competency data model (#18)
 
 **Priority:** MVP
 
 ---
 
-### US-18: Apply via FormSG — basic redirect (Internal Jobs, STIPs, Gigs)
+### OTEP-319: Apply via FormSG — basic redirect (Internal Jobs, STIPs, Gigs) *(was US-18)*
+
+> **Ticketed 2026-05-21 (Sprint 3 Jira sync).** `formsg_url` confirmed in OTG Export — 2026-05-21.
 
 **As an** officer viewing an Internal Job, STIP, or Gig,
 **I want to** click "Apply" and be taken to the corresponding FormSG form,
 **So that** I can submit my application from the opportunity detail page.
 
 **Acceptance Criteria:** [DEFERRED to Sprint 3]
-- [ ] If I'm on an Internal Job, STIP, or Gig detail page and I click "Apply", I'm taken to the FormSG form for that opportunity in a new tab. [ASSUMPTION: `formsg_url` confirmed in OTG export — open item #2, last unconfirmed OTG field]
+- [ ] If I'm on an Internal Job, STIP, or Gig detail page and I click "Apply", I'm taken to the FormSG form for that opportunity in a new tab. [`formsg_url` confirmed in OTG export — 2026-05-21]
 - [ ] If the `formsg_url` for an opportunity is missing, I see "Application form unavailable — contact the posting agency" instead of the Apply button.
 - [ ] If I'm on an SJR detail page, there's no Apply button. [DEFERRED to future release — decision 2026-05-13]
 
@@ -131,13 +135,13 @@ The page needs all mandatory fields to render. If a mandatory field is missing, 
 
 **Dependencies:**
 - OTEP-87 (detail page must exist)
-- `formsg_url` field confirmed in OTG export (open item #2, Rama + PSD Ops — **last unconfirmed OTG field**)
+- `formsg_url` field confirmed in OTG export (2026-05-21 — Rama + PSD Ops ✔). Field present for Internal Jobs, STIPs, Gigs. SJRs excluded (no apply flow in MVP — decision 2026-05-13).
 
 **Sprint:** 3
+**Jira:** OTEP-319 (ticketed 2026-05-21)
 **Priority:** MVP — this is the core apply action for three of four opportunity types
 
 **Risks:**
-- `formsg_url` still unconfirmed (open item #2, Rama + PSD Ops). This is the last unconfirmed OTG field and the single-point blocker for this story. If it doesn't land before Sprint 3 grooming, US-18 can't be groomed.
 - FormSG form quality is outside OTEP's control — broken or closed forms create a bad officer experience with no OTEP-side fix beyond the fallback error state.
 
 **Open questions:**

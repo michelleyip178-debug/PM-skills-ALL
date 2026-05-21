@@ -24,7 +24,7 @@
 
 | # | Gap Item | Category | Status | Chase / resolution |
 |---|----------|----------|--------|--------------------|
-| 1 | OTG → OTEP data pipeline: no ACs for sync frequency, schema mapping, failure handling — ~~and several export fields unconfirmed~~ | Technical | Open | Field-level confirmations mostly resolved 2026-05-13: #1 `eligibility` not needed, #3 `closing_date` confirmed, #4 `is_published` doesn't exist, #5 `reporting_line` not available, #6 `developmental_outcome` confirmed. Only #2 `formsg_url` still open. Pipeline ACs: write the story before Sprint 2. |
+| 1 | OTG → OTEP data pipeline: no ACs for sync frequency, schema mapping, failure handling — ~~and several export fields unconfirmed~~ | Technical | Open | All 6 OTG field confirmations resolved: #1 `eligibility` not needed, #2 `formsg_url` confirmed for Internal Jobs/STIPs/Gigs \u2014 SJRs excluded (2026-05-21), #3 `closing_date` confirmed, #4 `is_published` doesn't exist, #5 `reporting_line` not available, #6 `developmental_outcome` confirmed. Pipeline ACs: write the story before Sprint 2. |
 | 2 | Careers@Gov → OTEP ingestion method unconfirmed (API vs manual feed) | Technical | Open | → open-items #11 (Pow Hwee, by end Sprint 1). OTEP-89/OTEP-133 assume C@G data already in OTEP. |
 | 3 | Email/notification service: US-10 references submission email; OTEP-133 references email with deep-link — existing platform service or new build? | Technical | Open | → open-items #15 (Pow Hwee) |
 | 4 | Search indexing infrastructure: OTEP-86 assumes elastic matching | Technical | Open | → open-items #16 (Pow Hwee) — story or spike before Sprint 3 |

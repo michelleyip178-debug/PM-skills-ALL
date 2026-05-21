@@ -16,7 +16,7 @@ OTEP-85 is the rendering foundation — all other stories depend on it. OTEP-285
 **Sprint 2 boundary (applies to all six):**
 - OTG data only — no C@G this sprint
 - Desktop only — mobile/tablet comes later
-- No apply flow — apply actions are Sprint 3 (US-18)
+- No apply flow — apply actions are Sprint 3 (OTEP-319)
 - No filters or search — Sprint 3
 - Auth states (logged-out, session expired) handled by OTEP-71 family, not these stories
 
@@ -220,11 +220,9 @@ A card needs all mandatory fields to show up. If any mandatory field is missing,
 
 ---
 
-### OTEP-268: Error and empty states for the listing — **DEFERRED, UNTICKETED (2026-05-15)**
+### OTEP-268: Error and empty states for the listing — **re-added to Sprint 2 (2026-05-18)**
 
-> **Deferred 2026-05-15.** Removed from Sprint 2 Jira board — unticketed / unplanned. ACs preserved here for future grooming.
->
-> **Refined 2026-05-19 [PH].** Partial-load AC removed — Tailwind stack fetches a single API response; either all cards render or none do. No mechanism for individual cards to fail independently. Good-to-haves (truncation, correlation IDs) spun out as separate low-priority backlog tickets to keep this story closeable. Empty state re-added with confirmed copy.
+> **Re-added 2026-05-18 by Pow Hwee** — overrides May 15 deferral. ACs refined 2026-05-19 [PH]: partial-load AC removed (Tailwind stack fetches all-or-nothing); good-to-haves (truncation, correlation IDs) spun to separate backlog tickets.
 
 **As an** officer,
 **I want to** see clear guidance when the opportunities page is empty or fails to load,
@@ -278,11 +276,11 @@ Sort by posting date, "Closing soon" label, interleave-by-date, and stable order
 
 ---
 
-## Deferred Stories (Sprint 3+)
+## Sprint 3 Stories
 
 ### OTEP-86: Filter by opportunity type
-**Status:** Deferred from Sprint 2 to Sprint 3 (decision 2026-05-14) to make room for detail page (OTEP-128).
-**When:** Sprint 3. Design finalised. ACs written and tiered.
+**Status:** Sprint 3 (deferred from Sprint 2, 2026-05-14). **In Jira Sprint 3 ✔**
+**When:** Sprint 3.
 
 **Acceptance Criteria:** [DEFERRED to Sprint 3]
 
@@ -299,10 +297,10 @@ Sort by posting date, "Closing soon" label, interleave-by-date, and stable order
 
 *Not in scope:* Filter counts per type. Category/function filter (US-03). Competency filter.
 
-### US-05: Clear filters and reset view
-**Status:** Deferred from Sprint 2 to Sprint 3 — pairs with OTEP-86.
+### OTEP-317: Clear filters and reset view *(was US-05)*
+**Status:** Sprint 3. **Ticketed OTEP-317 (2026-05-21 sync) ✔**
 
-**Acceptance Criteria:** [DEFERRED to Sprint 3]
+**Acceptance Criteria:** [Sprint 3]
 
 *Must-have:*
 - [ ] If one or more filters are active, I can see a "Clear all" option.
@@ -313,9 +311,9 @@ Sort by posting date, "Closing soon" label, interleave-by-date, and stable order
 - [ ] "Clear all" also resets the URL back to the default unfiltered state.
 - [ ] "Clear all" takes me back to page 1.
 
-### US-03: Filter opportunities by category
-**Status:** Blocked on categorisation research + no function filter in Sprint 2 scope.
-**When:** Sprint 3 earliest, pending hybrid model validation.
+### OTEP-318: Filter opportunities by category *(was US-03)*
+**Status:** Sprint 3 — conditional on OTEP-289 spike output. **Ticketed OTEP-318 (2026-05-21 sync) ✔. No Jira description yet — ACs below to be added.**
+**When:** Sprint 3 if OTEP-289 spike is green.
 
 ### US-07: Persist filter selections across sessions
 **Status:** R1. Within-session persistence via URL params (OTEP-86) is sufficient for MVP.
@@ -355,4 +353,4 @@ Sort by posting date, "Closing soon" label, interleave-by-date, and stable order
 
 ---
 
-*Updated: 2026-05-14*
+*Updated: 2026-05-21 — Sprint 3 Jira sync: US-05 → OTEP-317, US-03 → OTEP-318 (ticketed; no Jira description yet). OTEP-268 re-added to Sprint 2 (Pow Hwee, 2026-05-18). Deferred section header updated to Sprint 3 (now current). OTEP-319 reference added for apply flow.*

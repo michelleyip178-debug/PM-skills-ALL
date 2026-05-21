@@ -116,19 +116,21 @@
 | OTEP-271 | Local POCDEX database (container + schema) | Leo | POCDEX plumbing. Unblocks Sprint 4 ringfencing (OTEP-127). |
 | OTEP-203 | Implement standalone POCDEX API service | Pow Hwee | POCDEX plumbing. Staggered from Sprint 4 to unblock ringfencing. |
 | OTEP-86 | Filter opportunities by type | — | Builds on Sprint 2 listing page. Moved from Sprint 4. |
-| US-05 | Clear filters and reset view | — | Pairs with OTEP-86. Moved from Sprint 4. |
-| US-03 | Filter opportunities by category | — | ⚠️ Conditional on OTEP-289 spike output — proceed only if taxonomy mapping is clean. |
+| OTEP-317 | Clear filters and reset view *(was US-05)* | — | Pairs with OTEP-86. Moved from Sprint 4. Ticketed 2026-05-21. |
+| OTEP-318 | Filter opportunities by category *(was US-03)* | — | ⚠️ Conditional on OTEP-289 spike output — proceed only if taxonomy mapping is clean. Ticketed 2026-05-21; no description in Jira yet. |
+| OTEP-319 | Apply via FormSG basic redirect *(was US-18)* | — | ✅ `formsg_url` confirmed 2026-05-21. Ticketed. Ready to groom. |
 | OTEP-87 | Enhanced detail page — apply CTA only | — | Builds on Sprint 2 OTEP-128. Competency section deferred pending open item #18. |
-| US-18 | Apply via FormSG (basic redirect) | — | ⚠️ Conditional on `formsg_url` confirmation (open item #2). Pull in if #2 resolves before Sprint 3 start. |
 
 **DoR blockers:**
 - [ ] OTEP-289 spike output reviewed — go/no-go for US-03
-- [ ] `formsg_url` confirmed (open item #2) — gates US-18
+- [x] `formsg_url` confirmed (open item #2 resolved 2026-05-21) — US-18 unblocked
 - [ ] Open item #18 (competency data source) checked — OTEP-87 scoped accordingly
 - [ ] OTEP-192, OTEP-271, OTEP-203 added to Sprint 3 Jira board and assigned
-- [ ] OTEP-86, US-05, US-03, OTEP-87 added to Sprint 3 Jira board
-- [ ] Auth stories (OTEP-71, 110, 304, 305) moved to Sprint 4+ in Jira
+- [ ] OTEP-86, OTEP-317, OTEP-318, OTEP-87 added to Sprint 3 Jira board
+- [x] Auth stories (OTEP-71, 110, 304, 305) moved to Sprint 4+ in Jira — **still in Sprint 3 per 2026-05-21 sync; Pow Hwee/team to move in Jira**
 - [ ] Open item #26 escalated to Adrian before auth is rescheduled
+- [ ] OTEP-191 (credential manager) placement confirmed — in Jira Sprint 3; verify if resolved by AWS infra or needs active work
+- [ ] OTEP-92 ("Tracking" subtask of OTEP-86) — no story file; confirm purpose and whether it needs ACs
 
 ---
 
@@ -225,7 +227,7 @@ No new development. Security review, pen testing, compliance sign-off, go-live r
 | Dependency | Owner | Status | Blocks |
 |-----------|-------|--------|--------|
 | WOG AD / Keycloak integration | Pow Hwee + Leo | **Partial** — OTEP-190 (Keycloak stub) done Sprint 1. Auth edge-cases (OTEP-71, OTEP-110, OTEP-304, OTEP-305) moved to Sprint 4+ (2026-05-21) — no WOG AD UAT environment (open item #26). Escalation: Michelle → Adrian. | Sprint 4 auth |
-| OTG data import (Excel file-based, not API) — schema/fields confirmed | Rama / Pow Hwee | 5 of 6 fields resolved (2026-05-13). Only `formsg_url` still unconfirmed (open item #2). OTG = file import; C@G = API (decided 2026-05-14). | Listing (Sprint 2), Apply (Sprint 3) |
+| OTG data import (Excel file-based, not API) — schema/fields confirmed | Rama / Pow Hwee | All 6 fields resolved: 5 on 2026-05-13, `formsg_url` confirmed 2026-05-21 (SJRs excluded — no apply flow in MVP). OTG = file import; C@G = API (decided 2026-05-14). | Listing (Sprint 2), Apply (Sprint 3) |
 | POCDEX profile lookup | Eng (spike Sprint 1, OTEP-183) | Discovery | Ringfencing (Sprint 3) |
 | Careers@Gov API integration | Pow Hwee | **Confirmed: API** (open item #11 resolved 2026-05-14) | C@G work (Sprint 5) |
 | FormSG webhook integration | Eng (discovery Sprint 1, OTEP-194) | Design | Full apply flow (Sprint 4) |

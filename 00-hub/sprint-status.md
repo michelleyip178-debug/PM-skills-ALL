@@ -55,7 +55,10 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 
 ### Sprint 3 — reallocated (updated 2026-05-21)
 
-> Sprint 3 dates: **1 Jun – 15 Jun**. Auth epic (OTEP-71, OTEP-110, OTEP-304, OTEP-305) moved to Sprint 4+ — no WOG AD UAT environment available (open item #26, raised at grooming 2026-05-21). Sprint 3 reallocated to filter + enhanced detail work building on Sprint 2 delivery.
+> **⚠️ Jira Sprint 3 board discrepancies (2026-05-21 sync):**
+- OTEP-71, OTEP-110, OTEP-304, OTEP-305 — auth stories still showing in Sprint 3. **Must be moved to Sprint 4+ in Jira by Pow Hwee.**
+- OTEP-191 (credential manager) — in Jira Sprint 3; verify if resolved by AWS infra or needs active work.
+- OTEP-92 — "Tracking" subtask of OTEP-86; no story file in our docs. Clarify with Pow Hwee.
 
 | Story ID | Title | Owner | Notes |
 |---|---|---|---|
@@ -63,10 +66,10 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 | OTEP-271 | Local POCDEX database (container + schema) | Leo | Backend plumbing — committed 2026-05-20. Unblocks Sprint 4 ringfencing (OTEP-127). |
 | OTEP-203 | Standalone POCDEX API service | Pow Hwee | Backend plumbing — committed 2026-05-20. |
 | OTEP-86 | Filter by opportunity type | — | Builds on Sprint 2 listing page. Moved from Sprint 4+. |
-| US-05 | Clear filters and reset view | — | Pairs with OTEP-86. Moved from Sprint 4+. |
-| US-03 | Filter by category | — | ⚠️ Conditional: proceed only if OTEP-289 spike output is green. Defer if taxonomy mapping is messy. |
-| OTEP-87 | Enhanced detail page — apply CTA only | — | Builds on Sprint 2 OTEP-128. Scoped to apply CTA only — competency section deferred pending open item #18. |
-| US-18 | Apply via FormSG (basic redirect) | — | ⚠️ Conditional on `formsg_url` confirmation (open item #2). Pull in if #2 resolves before Sprint 3 start. |
+| OTEP-317 | Clear filters and reset view *(was US-05)* | — | Ticketed 2026-05-21. Pairs with OTEP-86. |
+| OTEP-318 | Filter by category *(was US-03)* | — | ⚠️ Conditional: proceed only if OTEP-289 spike output is green. No Jira description yet. |
+| OTEP-87 | Enhanced detail page — apply CTA only | — | Builds on Sprint 2 OTEP-128. Scoped to apply CTA only — competency section deferred pending open item #18. ⚠️ Jira ACs include competency scope; reconcile before grooming. |
+| OTEP-319 | Apply via FormSG basic redirect *(was US-18)* | — | ✅ `formsg_url` confirmed 2026-05-21. Ticketed. Ready to groom. |
 
 ### Unscheduled — Sprint 4+ (updated 2026-05-21)
 
@@ -84,7 +87,7 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 > **Sprint 1 sign-off status (2026-05-15):** Partial. Headline stories done — auth (OTEP-190), explorations, foundation. Auth edge-cases (OTEP-110, WOG-04/05/06) moved to Sprint 3 (2026-05-19).
 
 ## Scope decisions
-- (2026-05-21) **Auth epic deferred to Sprint 4+:** OTEP-71, OTEP-110, OTEP-304, OTEP-305 moved out of Sprint 3 — no WOG AD UAT environment, can't validate against real auth before go-live (open item #26). Sprint 3 reallocated to filter work (OTEP-86, US-05, US-03 conditional) and enhanced detail page (OTEP-87, apply CTA only). Escalation to Adrian required before auth is rescheduled. Owner: Michelle. **Overrides 2026-05-19 decision.**
+- (2026-05-21) **Auth epic deferred to Sprint 4+:** OTEP-71, OTEP-110, OTEP-304, OTEP-305 moved out of Sprint 3 — no WOG AD UAT environment, can't validate against real auth before go-live (open item #26). Sprint 3 reallocated to filter work (OTEP-86, OTEP-317, OTEP-318 conditional) and enhanced detail page (OTEP-87, apply CTA only). Escalation to Adrian required before auth is rescheduled. Owner: Michelle. **Overrides 2026-05-19 decision.**
 - ~~(2026-05-19) Sprint 3 locked to 3 stories: OTEP-192, OTEP-71, OTEP-110~~ — *reversed 2026-05-21: auth deferred, Sprint 3 reallocated.*
 - (2026-05-18) **OTEP-285 ACs absorbed into OTEP-128** (Pow Hwee) — click-through + return-to-page state folded into the detail page story. No Sprint 3 ticket needed. Overrides earlier deferral decision.
 - (2026-05-18) **OTEP-129 re-added to Sprint 2 as separate story** (Pow Hwee) — owns "Closing soon" badge + deep-link error state. Overrides May 14 absorption into OTEP-85. Business rule split: OTEP-85 = visibility filter (closing_date > now); OTEP-129 = label + deep-link behaviour.
@@ -111,7 +114,7 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 - [ ] Open item #23: harmonised data model must support OTG (file) now + C@G (API) later.
 - [ ] Open item #26: auth test outcome without AzureAD — carries from Sprint 1, Pow Hwee / Leo to resolve early Sprint 2.
 - [ ] Design lock date (#22) not yet set — agree with Amber in Sprint 2 W1.
-- [ ] `formsg_url` (#2) still unconfirmed — Sprint 3 blocker, not Sprint 2.
+- [x] ~~`formsg_url` (#2) still unconfirmed~~ — **confirmed 2026-05-21 ✅ (Internal Jobs, STIPs, Gigs; SJRs excluded) — US-18 unblocked**
 
 ## Jira board cleanup needed (updated 2026-05-21)
 
@@ -142,7 +145,7 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 
 ## Sprint 2 DoR status
 - [x] Amber's designs finalised (card, pagination, detail page)
-- [x] OTG field questions resolved (5 of 6 — only `formsg_url` open)
+- [x] OTG field questions resolved (all 6 — `formsg_url` confirmed 2026-05-21)
 - [x] Sort key confirmed (`posting_date`, newest first)
 - [x] Secondment classification resolved (SJR)
 - [x] Opportunity lifecycle resolved (date-driven, `closing_date > today`)

@@ -2,9 +2,9 @@
 
 **Epic:** WOG AD Authentication (Epic 5)
 **One-pager:** _TODO: Confluence link_
-**Status:** Draft — reconciled to ~9 MVP stories (2026-05-20). Needs grooming.
+**Status:** Draft — Auth epic deferred to Sprint 4+ (2026-05-21). Needs grooming before Sprint 4 planning. Auth stories still showing in Jira Sprint 3 — must be moved in Jira by Pow Hwee.
 **Criticality:** MVP blocker — all other epics depend on this
-**Scope decision:** Officers only for MVP. Agency admin login + RBAC (WOG-02, WOG-07) deferred to Sprint 6 (decision 2026-05-12). Auth accepted as-is (decision 2026-05-12). Sprint 2 auth scope = minimal, check user exists + name (decision 2026-05-13).
+**Scope decision:** Officers only for MVP. Agency admin login + RBAC (WOG-02, WOG-07) deferred to Sprint 6 (decision 2026-05-12). Auth accepted as-is (decision 2026-05-12). Sprint 2 auth scope = minimal, check user exists + name (decision 2026-05-13). **Auth epic (OTEP-71, OTEP-110, OTEP-304, OTEP-305) moved from Sprint 3 to Sprint 4+ (decision 2026-05-21) — no WOG AD UAT environment available (open item #26).**
 
 ---
 
@@ -27,14 +27,14 @@ These are decisions, not open questions. Each blocks at least one story from rea
 
 | ID | Story | Sprint | Action |
 |----|-------|--------|--------|
-| OTEP-71 | Log in with WOG AD credentials | 3 | Keep (absorbs WOG-11) |
-| OTEP-111 | Officers with no access | 1 ✓ | Existing ticket — confirm it covers WOG-08/09 ACs |
-| WOG-10 | Resolve agency from AD identity | 3 | Keep — spike decision #2 first |
-| OTEP-110 | Login fail / clear error | 3 | Keep (absorbs WOG-12, WOG-13; NFR from WOG-15) |
-| WOG-04 | Stay logged in during session | 3 | Keep — needs decision #1 |
-| WOG-05 | Log out of OTEP | 3 | Keep |
-| WOG-17 | Complete logout on shared devices | 3 | Keep (trim service-worker AC) |
-| WOG-06 | First-time login + profile setup | 3 | Trim — name only, no welcome screen (R1) |
+| OTEP-71 | Log in with WOG AD credentials | **4+** ⚠️ *(was 3, deferred 2026-05-21 — no WOG AD UAT env)* | Keep (absorbs WOG-11). Still in Jira Sprint 3 — move to Sprint 4+ |
+| OTEP-111 | Officers with no access | 1 ✔ | Existing ticket — confirm it covers WOG-08/09 ACs |
+| WOG-10 | Resolve agency from AD identity | **4+** *(was 3)* | Keep — spike decision #2 first |
+| OTEP-110 | Login fail / clear error | **4+** ⚠️ *(was 3, deferred 2026-05-21)* | Keep (absorbs WOG-12, WOG-13; NFR from WOG-15). Still in Jira Sprint 3 — move to Sprint 4+ |
+| OTEP-304 | Stay logged in during session *(was WOG-04)* | **4+** ⚠️ *(was 3, deferred 2026-05-21)* | Ticketed OTEP-304. Still in Jira Sprint 3 — move to Sprint 4+ |
+| OTEP-305 | Log out of OTEP *(was WOG-05)* | **4+** ⚠️ *(was 3, deferred 2026-05-21)* | Ticketed OTEP-305. Still in Jira Sprint 3 — move to Sprint 4+ |
+| WOG-17 | Complete logout on shared devices | **4+** *(was 3)* | Keep (trim service-worker AC) |
+| WOG-06 | First-time login + profile setup | **4+** *(was 3)* | Trim — name only, no welcome screen (R1) |
 | WOG-14 | Rate limiting | — | **Convert to spike** (decision #3) |
 | WOG-16 | Pre-expiry session warning | — | **Defer** — pairs with apply flow (Sprint 3+) |
 | WOG-18 | Concurrent sessions | — | **Replace with default policy decision** (decision #4) |
@@ -136,7 +136,9 @@ These are decisions, not open questions. Each blocks at least one story from rea
 
 ---
 
-### WOG-04: Stay logged in during my active session
+### WOG-04 (now OTEP-304): Stay logged in during my active session
+
+> **Ticketed OTEP-304 (2026-05-21 sync). Deferred to Sprint 4+ (2026-05-21).** Still showing in Jira Sprint 3 — move to Sprint 4+ in Jira.
 
 **As a** logged-in public officer,
 **I want to** remain authenticated while I'm actively using OTEP,
@@ -158,7 +160,9 @@ These are decisions, not open questions. Each blocks at least one story from rea
 
 ---
 
-### WOG-05: Log out of OTEP
+### WOG-05 (now OTEP-305): Log out of OTEP
+
+> **Ticketed OTEP-305 (2026-05-21 sync). Deferred to Sprint 4+ (2026-05-21).** Still showing in Jira Sprint 3 — move to Sprint 4+ in Jira.
 
 **As a** logged-in public officer,
 **I want to** log out of OTEP,

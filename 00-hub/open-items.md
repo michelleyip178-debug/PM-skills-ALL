@@ -12,7 +12,7 @@
 
 | # | Item | Owner | Needed By | Impacts / why | Status |
 |---|---|---|---|---|---|
-| 2 | Confirm `formsg_url` field name and structure | Rama + PSD Ops | Before Sprint 2 | STIP/Gig apply flow | 🔴 Open |
+
 | 8 | Agency contact field name for OTEP-133 fallback | Rama | Before Sprint 3 | Email deep-link fallback state | 🔴 Open |
 | 14 | Does FormSG support pre-fill via URL params? | Pow Hwee | Before Sprint 3 | Determines whether US-P3 is MVP or R1 | 🔴 Open |
 | 15 | Email/notification service — existing platform service or new build? | Pow Hwee | Before Sprint 3 | US-10 submission email, OTEP-133 deep-link email — scopes notification work for MVP | 🔴 Open |
@@ -45,10 +45,11 @@
 | 17 | Opportunity lifecycle = date-driven (`closing_date > today`) | Michelle / Pow Hwee | 2026-05-13 |
 | 11 | C@G ingestion = API; OTG ingestion = file import (Excel) | Michelle | 2026-05-14 |
 | 24 | OTG Excel reports shared with Pow Hwee — reports specified for OTEP-192 ingestion | Michelle | 2026-05-18 |
+| 2 | `formsg_url` confirmed in OTG Export — field present for Internal Jobs, STIPs, Gigs. SJRs excluded (no apply flow in MVP — decision 2026-05-13). Unblocks US-18. | Rama + PSD Ops | 2026-05-21 |
 | 28 | OTEP-85 visibility rule: clean split confirmed — OTEP-85 shows all `closing_date > today`; OTEP-129 owns "Closing soon" badge (within 7 days) | Michelle | 2026-05-19 |
 | 29 | OTEP-289 spike defined: 2-day timebox (19–20 May), ACs cover C@G + OTG taxonomy mapping, output = written recommendation + go/no-go. Cut-line: defer to Sprint 3 if mapping is messy. | Michelle | 2026-05-19 |
 | 27 | OTEP-271/202/203 (POCDEX stories) sprint placement confirmed — staggered backend DB container & standalone service setup to Sprint 3 to avoid Sprint 4 bottleneck | Michelle / Pow Hwee | 2026-05-20 |
 
 ---
 
-*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-21 (updated #26 — auth epic moved to Sprint 4+; escalation to Adrian still required).*
+*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-21 (resolved #2 — `formsg_url` confirmed in OTG Export, SJRs excepted; unblocks US-18).*

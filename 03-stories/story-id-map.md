@@ -30,13 +30,13 @@
 | OTEP-283 | Opportunity Detail — Ministry icons on detail page | — | **TBD** |
 | OTEP-129 | **See whether an opportunity is open or closed before applying** — re-added as separate Sprint 2 story (Pow Hwee, 2026-05-18). Owns: "Closing soon" badge (within 7 days) + deep-link error state. Overrides 2026-05-14 absorption into OTEP-85. | US-06 | **2** |
 | OTEP-86 | Filter opportunities by type | US-02 | **3** *(deferred from Sprint 2 — 2026-05-14, to make room for detail page)* |
-| US-05 *(Jira TBD)* | Clear filters and reset view | US-05 | **3** *(deferred from Sprint 2 — 2026-05-14, pairs with OTEP-86)* |
-| US-03 *(Jira TBD)* | Filter opportunities by category | US-03 | 3 |
-| US-18 *(Jira TBD)* | Apply via FormSG (basic redirect) — Internal Jobs, STIPs, Gigs | — | **3** |
-| OTEP-131 | Handle missing or broken FormSG application link (error state) | — | **TBD** *(pairs with US-18 / OTEP-130)* |
+| OTEP-317 | Clear filters and reset view *(was US-05)* | US-05 | **3** *(ticketed 2026-05-21 sync)* |
+| OTEP-318 | Filter opportunities by category *(was US-03)* | US-03 | **3** *(ticketed 2026-05-21 sync — no description in Jira yet)* |
+| OTEP-319 | Apply via FormSG — basic redirect, Internal Jobs/STIPs/Gigs *(was US-18)* | — | **3** *(ticketed 2026-05-21 sync — `formsg_url` confirmed ✔)* |
+| OTEP-131 | Handle missing or broken FormSG application link (error state) | — | **TBD** *(pairs with OTEP-319 / OTEP-130)* |
 | ~~US-19~~ | ~~Apply via OTG redirect (SJR)~~ | — | **Dropped** — SJR apply deferred to future release; all apply flows will go through OTEP (decision 2026-05-13) |
 | OTEP-127 | Apply ringfencing criteria | US-01b | 3 |
-| OTEP-87 | Enhance detail page: apply CTA + competencies *(builds on OTEP-128 Sprint 2 base)* | US-08 | 3 |
+| OTEP-87 | Enhance detail page: apply CTA + competencies *(builds on OTEP-128 Sprint 2 base)* | US-08 | 3 — ⚠️ **Jira ACs mismatch**: Jira title is "View Opportunity Detail" and includes competency match ratio — scope we've deferred. Jira story needs AC reconciliation before grooming. |
 | OTEP-130 | Apply to OTG opportunity via FormSG (full, with webhook) | US-09 | 4 |
 | OTEP-132 | Apply for an SJR or internal job via OTG redirect | — | **TBD** |
 | US-10 *(Jira TBD)* | Receive application confirmation | US-10 | 4 |
@@ -117,20 +117,20 @@ These working IDs have no matching Jira ticket in the backlog as of 2026-05-19. 
 
 | Working ID | Title | Status |
 |---|---|---|
-| US-05 | Clear filters and reset view | Sprint 3 planned, needs ticket |
-| US-03 | Filter opportunities by category | Sprint 3 planned, needs ticket |
-| US-18 | Apply via FormSG (basic redirect) | Sprint 3 planned, needs ticket — blocked on `formsg_url` confirmation |
+| ~~US-05~~ | ~~Clear filters and reset view~~ | **Ticketed: OTEP-317** (2026-05-21 sync) |
+| ~~US-03~~ | ~~Filter opportunities by category~~ | **Ticketed: OTEP-318** (2026-05-21 sync — no description yet) |
+| ~~US-18~~ | ~~Apply via FormSG (basic redirect)~~ | **Ticketed: OTEP-319** (2026-05-21 sync — `formsg_url` confirmed ✔) |
 | US-10 | Receive application confirmation | Sprint 4 planned, needs ticket |
 | US-07 | Persist filter selections | R1, no ticket needed yet |
 | US-14–17 | Application tracking stories | TBD, no ticket needed yet |
 | US-P1 | View my HR-sourced profile | TBD, needs ticket |
 | US-P2 | View my competencies | TBD, needs ticket |
-| WOG-04 | Stay logged in during session | Sprint 3, needs ticket |
-| WOG-05 | Log out of OTEP | Sprint 3, needs ticket |
-| WOG-06 | First-time login + profile setup (name only) | Sprint 3, needs ticket |
-| WOG-10 | Resolve agency from AD identity | Sprint 3, needs ticket — blocked on agency-resolution source decision |
-| WOG-17 | Complete logout on shared devices | Sprint 3, needs ticket |
-| WOG-14 | Spike — rate-limiting ownership | Sprint 3 pre-work, spike not delivery |
+| ~~WOG-04~~ | ~~Stay logged in during session~~ | **Ticketed: OTEP-304** *(Sprint 4+ — moved out 2026-05-21)* |
+| ~~WOG-05~~ | ~~Log out of OTEP~~ | **Ticketed: OTEP-305** *(Sprint 4+ — moved out 2026-05-21)* |
+| WOG-06 | First-time login + profile setup (name only) | Sprint 4+, needs ticket |
+| WOG-10 | Resolve agency from AD identity | Sprint 4+, needs ticket — blocked on agency-resolution source decision |
+| WOG-17 | Complete logout on shared devices | Sprint 4+, needs ticket |
+| WOG-14 | Spike — rate-limiting ownership | Sprint 4+ pre-work, spike not delivery |
 | WOG-02 | Log in as agency admin | Sprint 6, deferred |
 | WOG-07 | Role-based access control | Sprint 6, deferred |
 
@@ -143,6 +143,8 @@ These working IDs have no matching Jira ticket in the backlog as of 2026-05-19. 
 3. Stories without Jira tickets are marked *(Jira TBD)* above
 
 ---
+
+*Updated: 2026-05-21 — Sprint 3 Jira sync: US-05 → OTEP-317, US-03 → OTEP-318, US-18 → OTEP-319 (all ticketed). WOG-04 → OTEP-304, WOG-05 → OTEP-305 (Sprint 4+). Flagged OTEP-87 ACs mismatch (Jira includes competency scope we deferred; needs reconciliation). Flagged OTEP-92 (Tracking sub-task of OTEP-86 — no story in our docs). Flagged auth stories (OTEP-71, 110, 304, 305) still in Jira Sprint 3 — need to be moved to Sprint 4+ in Jira.*
 
 *Updated: 2026-05-20 — Auth (Epic 5) reconciled: reduced from 20 bulk-generated stories to ~9 MVP build stories. Added WOG-10, WOG-17 as new tickets. Registered absorbed IDs (WOG-08/09 → OTEP-111, WOG-11 → OTEP-71, WOG-12/13/15 → OTEP-110, WOG-19/20 → WOG-06). WOG-14 reclassified as spike; WOG-16 deferred; WOG-18 converted to policy decision.*
 

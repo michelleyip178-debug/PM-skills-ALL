@@ -6,7 +6,7 @@
 
 ## Unconfirmed OTG Fields
 
-Six fields were tracked in [open-items.md](open-items.md) items #1–6. Five now resolved (2026-05-13): `eligibility` not needed (#1); `closing_date` confirmed as application closing date (#3); `is_published` does not exist — use `closing_date` for visibility (#4); `reporting_line` not available (#5); `developmental_outcome` confirmed available (#6). Only `formsg_url` (#2) remains open — Rama + PSD Ops to confirm before Sprint 2.
+Six fields were tracked in [open-items.md](open-items.md) items #1–6. All six now resolved: `eligibility` not needed (#1); `formsg_url` confirmed for Internal Jobs/STIPs/Gigs, SJRs excluded — no apply flow (#2, 2026-05-21); `closing_date` confirmed as application closing date (#3); `is_published` does not exist — use `closing_date` for visibility (#4); `reporting_line` not available (#5); `developmental_outcome` confirmed available (#6). All OTG fields resolved — US-18 unblocked.
 
 ## Cross-Team Dependencies
 
@@ -20,7 +20,7 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 | FormSG pre-fill support | US-P3 stays in limbo — can't groom or defer | Pow Hwee to confirm by Sprint 3 (deferred to Sprint 5 webhook flow) |
 | WOGAD / Azure AD via COMET | Auth blocked if ESG not onboarded | Out of Michelle's scope — monitor only |
 | No WOG AD UAT environment (Pow Hwee, grooming 2026-05-21) | OTEP-71, OTEP-110, OTEP-304, OTEP-305 can't be validated against real WOG AD before go-live. **Auth epic moved to Sprint 4+ (2026-05-21) as a direct result.** Must resolve before auth is rescheduled into any sprint. | Escalation path: Michelle → Adrian. Identify who owns the UAT environment request — COMET onboarding, GovTech/WOG AD team, or Adrian. Interim: Keycloak stub (OTEP-190) available for local dev. |
-| Rama: `formsg_url` confirmation (#2) | US-18 (Sprint 3 STIP/Gig apply) can't be groomed. 5 of 6 OTG fields resolved 2026-05-13; `formsg_url` is the last unconfirmed field. | No response before Sprint 3 grooming → escalate via Adrian |
+| ~~Rama: `formsg_url` confirmation (#2)~~ | **Resolved 2026-05-21.** `formsg_url` confirmed in OTG Export for Internal Jobs, STIPs, Gigs. SJRs excluded (no apply flow in MVP — decision 2026-05-13). US-18 is unblocked and ready to groom. |
 
 ## Schedule Risks
 
@@ -57,18 +57,21 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 | OTEP-271 | Local POCDEX database (container + schema) — confirmed Sprint 3 | Add to Sprint 3 board and assign to Leo |
 | OTEP-203 | Standalone POCDEX API service — confirmed Sprint 3 | Add to Sprint 3 board and assign to Pow Hwee |
 | OTEP-86 | Filter by opportunity type — moved to Sprint 3 (2026-05-21) | Add to Sprint 3 board |
-| US-05 | Clear filters and reset view — moved to Sprint 3 (2026-05-21) | Add to Sprint 3 board |
-| US-03 | Filter by category — conditional on OTEP-289 spike output | Add to Sprint 3 board only if spike is green |
+| OTEP-317 | Clear filters and reset view *(was US-05)* — ticketed 2026-05-21 | Confirm on Sprint 3 board |
+| OTEP-318 | Filter by category *(was US-03)* — conditional on OTEP-289 spike output | Add to Sprint 3 board only if spike is green; no Jira description yet |
 | OTEP-87 | Enhanced detail page, apply CTA only — moved to Sprint 3 (2026-05-21) | Add to Sprint 3 board; note competency section deferred |
+| OTEP-319 | Apply via FormSG basic redirect *(was US-18)* — ticketed 2026-05-21, `formsg_url` ✔ | Confirm on Sprint 3 board; ready to groom |
+| OTEP-191 | Credential manager / vault — in Jira Sprint 3 (sync 2026-05-21) | Verify: resolved by AWS infra or needs active Sprint 3 work? |
+| OTEP-92 | "Tracking" subtask of OTEP-86 — no story file in our docs | Clarify purpose with Pow Hwee; confirm if ACs needed |
 
 ### Sprint 4+ Board Actions Needed (updated 2026-05-21)
 
 | Story | Issue | Action |
 |---|---|---|
-| OTEP-71 | Login Authentication — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira |
-| OTEP-110 | Login fail — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira |
-| OTEP-304 | Stay logged in (was WOG-04) — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira |
-| OTEP-305 | Log out (was WOG-05) — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira |
+| OTEP-71 | Login Authentication — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira — **still in Sprint 3 (2026-05-21 sync)** |
+| OTEP-110 | Login fail — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira — **still in Sprint 3 (2026-05-21 sync)** |
+| OTEP-304 | Stay logged in (was WOG-04) — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira — **still in Sprint 3 (2026-05-21 sync)** |
+| OTEP-305 | Log out (was WOG-05) — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira — **still in Sprint 3 (2026-05-21 sync)** |
 
 ## Mitigations Already in Place
 
