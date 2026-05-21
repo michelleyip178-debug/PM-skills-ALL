@@ -25,7 +25,7 @@
 | 22 | Set a design lock date for Sprint 2 — no major design changes after that point | Michelle / Amber | Sprint 2 W1 | Prevents mid-sprint design churn. Screenshots + behavior notes to be attached to Jira. Agreed at internal groom 2026-05-13. | 🔴 Open |
 | 23 | Harmonised data model: confirm it supports both OTG (now) and C@G (later) before finalising OTEP-193 | Pow Hwee | Before Sprint 2 dev | Data model must be extensible. Agreed at internal groom 2026-05-13. | 🔴 Open |
 | 25 | Profile story split: identify which parts are feasible for Sprint 2 (basic: name, email) vs deferred (competency — depends on another team) | Michelle / Pow Hwee | Sprint 2 planning (Thu 14 May) | Large profile story too big as-is. Only basic auth profile goes into Sprint 2. | 🔴 Open |
-| 26 | No WOG AD UAT environment — entire Sprint 3 auth epic (OTEP-71, OTEP-110, OTEP-304, OTEP-305) can't be validated against real WOG AD. Scope broader than originally captured: this is not just about defining test outcomes — there is no environment to test against. Raised by Pow Hwee at Sprint 3 grooming 2026-05-21. Interim mitigation: Keycloak stub (OTEP-190 already exists). Escalation path: confirm who owns the UAT environment request — COMET onboarding, GovTech/WOG AD team, or Adrian. | Michelle → Adrian | Before Sprint 3 build starts (1 Jun) | Blocks go-live validation of all WOG AD auth stories. | 🔴 Open |
+| 26 | No WOG AD UAT environment — OTEP-71, OTEP-110, OTEP-304, OTEP-305 can't be validated against real WOG AD. Raised by Pow Hwee at Sprint 3 grooming 2026-05-21. Auth epic moved to Sprint 4+ as a result (decision 2026-05-21). Escalation path: confirm who owns the UAT environment request — COMET onboarding, GovTech/WOG AD team, or Adrian. Must resolve before auth is rescheduled. Interim: Keycloak stub (OTEP-190) available for local dev. | Michelle → Adrian | Before auth is rescheduled (currently Sprint 4+) | Blocks go-live validation of all WOG AD auth stories. Auth cannot re-enter sprint until this is resolved. | 🔴 Open |
 
 ---
 
@@ -51,4 +51,4 @@
 
 ---
 
-*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-20 (resolved #27 — Confirm OTEP-271/202/203 placement).*
+*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-21 (updated #26 — auth epic moved to Sprint 4+; escalation to Adrian still required).*

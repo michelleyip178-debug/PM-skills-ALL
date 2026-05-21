@@ -19,7 +19,7 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 | FormSG URL/redirect format | Complex FormSG Phase 2 callback flow (OTEP-130) deferred to Sprint 5. Basic redirect (US-18) pulled to Sprint 3. | Basic redirect needed for Sprint 3; OTEP-130 callback needed by Sprint 5 start (Jun 29) |
 | FormSG pre-fill support | US-P3 stays in limbo — can't groom or defer | Pow Hwee to confirm by Sprint 3 (deferred to Sprint 5 webhook flow) |
 | WOGAD / Azure AD via COMET | Auth blocked if ESG not onboarded | Out of Michelle's scope — monitor only |
-| No WOG AD UAT environment (Pow Hwee, grooming 2026-05-21) | OTEP-71, OTEP-110, OTEP-304, OTEP-305 can't be validated against real WOG AD before go-live — entire Sprint 3 auth epic affected | Interim mitigation: build against Keycloak stub (OTEP-190 already exists). Confirm with Pow Hwee this is the plan. Escalation: identify who owns the UAT environment request — COMET onboarding, GovTech/WOG AD team, or Adrian. |
+| No WOG AD UAT environment (Pow Hwee, grooming 2026-05-21) | OTEP-71, OTEP-110, OTEP-304, OTEP-305 can't be validated against real WOG AD before go-live. **Auth epic moved to Sprint 4+ (2026-05-21) as a direct result.** Must resolve before auth is rescheduled into any sprint. | Escalation path: Michelle → Adrian. Identify who owns the UAT environment request — COMET onboarding, GovTech/WOG AD team, or Adrian. Interim: Keycloak stub (OTEP-190) available for local dev. |
 | Rama: `formsg_url` confirmation (#2) | US-18 (Sprint 3 STIP/Gig apply) can't be groomed. 5 of 6 OTG fields resolved 2026-05-13; `formsg_url` is the last unconfirmed field. | No response before Sprint 3 grooming → escalate via Adrian |
 
 ## Schedule Risks
@@ -49,15 +49,26 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 | OTEP-192 | recurring job to fetch OTG data — confirmed Sprint 3 | Remove from Sprint 2 board |
 | OTEP-191 | credential manager and vault — confirmed Sprint 3 | Remove from Sprint 2 board |
 
-### Sprint 3 Board Prep Actions Needed
+### Sprint 3 Board Prep Actions Needed (updated 2026-05-21)
 
 | Story | Issue | Action |
 |---|---|---|
+| OTEP-192 | Recurring OTG job — confirmed Sprint 3 | Add to Sprint 3 board |
 | OTEP-271 | Local POCDEX database (container + schema) — confirmed Sprint 3 | Add to Sprint 3 board and assign to Leo |
 | OTEP-203 | Standalone POCDEX API service — confirmed Sprint 3 | Add to Sprint 3 board and assign to Pow Hwee |
-| OTEP-304 | Stay logged in during session (was WOG-04) — confirmed Sprint 3 | Assign on Sprint 3 board (currently unassigned) |
-| OTEP-305 | Log out of OTEP (was WOG-05) — confirmed Sprint 3 | Assign on Sprint 3 board (currently unassigned) |
-| OTEP-191 | credential manager and vault — confirmed Sprint 3 | Assign on Sprint 3 board (currently unassigned) |
+| OTEP-86 | Filter by opportunity type — moved to Sprint 3 (2026-05-21) | Add to Sprint 3 board |
+| US-05 | Clear filters and reset view — moved to Sprint 3 (2026-05-21) | Add to Sprint 3 board |
+| US-03 | Filter by category — conditional on OTEP-289 spike output | Add to Sprint 3 board only if spike is green |
+| OTEP-87 | Enhanced detail page, apply CTA only — moved to Sprint 3 (2026-05-21) | Add to Sprint 3 board; note competency section deferred |
+
+### Sprint 4+ Board Actions Needed (updated 2026-05-21)
+
+| Story | Issue | Action |
+|---|---|---|
+| OTEP-71 | Login Authentication — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira |
+| OTEP-110 | Login fail — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira |
+| OTEP-304 | Stay logged in (was WOG-04) — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira |
+| OTEP-305 | Log out (was WOG-05) — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira |
 
 ## Mitigations Already in Place
 
@@ -68,4 +79,4 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 
 ---
 
-*Updated: 2026-05-20 (Sprint 2 Week 1 — risks updated per Sprint 3 staggered integration plan; Jira board cleanup actions updated)*
+*Updated: 2026-05-21 (Sprint 3 reallocation — auth epic moved to Sprint 4+; Sprint 3 board prep updated to reflect filter + detail work; WOG AD UAT dependency note updated)*
