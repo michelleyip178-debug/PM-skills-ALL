@@ -41,10 +41,13 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 | OTEP-268 | Empty, error, and partial-load states for listing | Backlog | — | **Re-added to Sprint 2** (Pow Hwee, 2026-05-18). Overrides May 15 deferral. AC feedback: drop partial-load AC; good-to-haves as separate tickets. |
 | OTEP-170 | Base Layout for Opportunity Listing Page | **In Progress** | Thomas | MR in progress |
 | OTEP-191 | Handle credential manager and vault | Backlog | — | ⚠️ **Deprioritised to Sprint 3+** (Pow Hwee, 2026-05-14). Removed from sprint board as of 2026-05-20. |
-| OTEP-288 | Setup a simple backend endpoint with in-memory list | **In Progress** | Léo | Sub-task of OTEP-170 |
+| OTEP-288 | Setup a simple backend endpoint with in-memory list | **Done** | Léo | Sub-task of OTEP-170 |
 | OTEP-252 | Setup design system in otep-web | **Done** | Thomas | Sub-task of OTEP-170. Flagship/LifeSG confirmed. |
-| OTEP-296 | Prepare defined report format that matches data model | **In Progress** | Michelle | Sub-task. Standardises OTG Excel report format before ingestion. Added to sprint 2026-05-20. |
+| OTEP-296 | Prepare defined report format that matches data model | **Done** | Michelle | Sub-task. Standardises OTG Excel report format before ingestion. Added to sprint 2026-05-20. |
 | OTEP-295 | Mock detail endpoint for opportunity | Backlog | Léo | Sub-task of OTEP-128. GET /v1/opportunities/:id returns single opportunity with full detail fields + 404 for invalid IDs. Added to sprint 2026-05-20. |
+| OTEP-313 | OTG raw ingest table and source model | Backlog | Léo | Sub-task (added 2026-05-21). |
+| OTEP-314 | Detail page consuming OTEP-295 response shape | Backlog | Thomas | Sub-task (added 2026-05-21). |
+| OTEP-316 | Replace mock detail endpoint with real DB query | Backlog | Léo | Sub-task (added 2026-05-21). |
 
 ### Carry-over from Sprint 1 — staying in Sprint 2
 
@@ -55,8 +58,11 @@ By end of Sprint 2, an officer can open OTEP, see every published OTG opportunit
 
 ### Sprint 3 — reallocated (updated 2026-05-21)
 
+## Sprint 3 goal
+By end of Sprint 3, an officer can find relevant opportunities using filters and successfully initiate an application to any active OTG opportunity (except SJRs), powered by live imported data.
+
 > **⚠️ Jira Sprint 3 board discrepancies (2026-05-21 sync):**
-- OTEP-71, OTEP-110, OTEP-304, OTEP-305 — auth stories still showing in Sprint 3. **Must be moved to Sprint 4+ in Jira by Pow Hwee.**
+- ~~OTEP-71, OTEP-110, OTEP-304, OTEP-305 still showing in Sprint 3.~~ **Resolved 2026-05-21 (moved to Sprint 4+ by Pow Hwee).**
 - OTEP-191 (credential manager) — in Jira Sprint 3; verify if resolved by AWS infra or needs active work.
 - OTEP-92 — "Tracking" subtask of OTEP-86; no story file in our docs. Clarify with Pow Hwee.
 

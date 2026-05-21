@@ -68,10 +68,10 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 
 | Story | Issue | Action |
 |---|---|---|
-| OTEP-71 | Login Authentication — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira — **still in Sprint 3 (2026-05-21 sync)** |
-| OTEP-110 | Login fail — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira — **still in Sprint 3 (2026-05-21 sync)** |
-| OTEP-304 | Stay logged in (was WOG-04) — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira — **still in Sprint 3 (2026-05-21 sync)** |
-| OTEP-305 | Log out (was WOG-05) — moved from Sprint 3 (2026-05-21) | Move to Sprint 4+ in Jira — **still in Sprint 3 (2026-05-21 sync)** |
+| OTEP-71 | Login Authentication — moved from Sprint 3 (2026-05-21) | Moved to Sprint 4+ in Jira ✔ |
+| OTEP-110 | Login fail — moved from Sprint 3 (2026-05-21) | Moved to Sprint 4+ in Jira ✔ |
+| OTEP-304 | Stay logged in (was WOG-04) — moved from Sprint 3 (2026-05-21) | Moved to Sprint 4+ in Jira ✔ |
+| OTEP-305 | Log out (was WOG-05) — moved from Sprint 3 (2026-05-21) | Moved to Sprint 4+ in Jira ✔ |
 
 ## Mitigations Already in Place
 

@@ -1,6 +1,6 @@
 # OTEP-288: Setup a simple backend endpoint with in-memory list
 
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Léo Milbor
 **Story Points:** N/A
 

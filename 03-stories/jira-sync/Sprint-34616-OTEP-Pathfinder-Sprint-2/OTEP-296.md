@@ -1,6 +1,6 @@
 # OTEP-296: Prepare defined report format that matches data model
 
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Michelle Yip
 **Story Points:** N/A
 

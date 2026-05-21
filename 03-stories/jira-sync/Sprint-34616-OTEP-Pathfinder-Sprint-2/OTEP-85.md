@@ -18,8 +18,9 @@ User Story As an  officer,  I want to  see open opportunities displayed as cards
 |-----|---------|--------|
 | OTEP-170 | Base Layout for Opportunity Listing Page | In Progress |
 | OTEP-193 | Design Data Model for Opportunities | In Progress |
-| OTEP-288 | Setup a simple backend endpoint with in-memory list | In Progress |
-| OTEP-296 | Prepare defined report format that matches data model | In Progress |
+| OTEP-288 | Setup a simple backend endpoint with in-memory list | Done |
+| OTEP-296 | Prepare defined report format that matches data model | Done |
+| OTEP-313 | OTG raw ingest table and source model | Backlog |
 
 ---
 

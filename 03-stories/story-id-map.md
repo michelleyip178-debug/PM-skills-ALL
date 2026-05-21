@@ -144,7 +144,7 @@ These working IDs have no matching Jira ticket in the backlog as of 2026-05-19. 
 
 ---
 
-*Updated: 2026-05-21 — Sprint 3 Jira sync: US-05 → OTEP-317, US-03 → OTEP-318, US-18 → OTEP-319 (all ticketed). WOG-04 → OTEP-304, WOG-05 → OTEP-305 (Sprint 4+). Flagged OTEP-87 ACs mismatch (Jira includes competency scope we deferred; needs reconciliation). Flagged OTEP-92 (Tracking sub-task of OTEP-86 — no story in our docs). Flagged auth stories (OTEP-71, 110, 304, 305) still in Jira Sprint 3 — need to be moved to Sprint 4+ in Jira.*
+*Updated: 2026-05-21 — Sprint 3 Jira sync: US-05 → OTEP-317, US-03 → OTEP-318, US-18 → OTEP-319 (all ticketed). WOG-04 → OTEP-304, WOG-05 → OTEP-305 (Sprint 4+). Flagged OTEP-87 ACs mismatch (Jira includes competency scope we deferred; needs reconciliation). Flagged OTEP-92 (Tracking sub-task of OTEP-86 — no story in our docs). Auth stories (OTEP-71, 110, 304, 305) successfully moved to Sprint 4+ in Jira by Pow Hwee.*
 
 *Updated: 2026-05-20 — Auth (Epic 5) reconciled: reduced from 20 bulk-generated stories to ~9 MVP build stories. Added WOG-10, WOG-17 as new tickets. Registered absorbed IDs (WOG-08/09 → OTEP-111, WOG-11 → OTEP-71, WOG-12/13/15 → OTEP-110, WOG-19/20 → WOG-06). WOG-14 reclassified as spike; WOG-16 deferred; WOG-18 converted to policy decision.*
 

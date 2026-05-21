@@ -127,7 +127,7 @@
 - [ ] Open item #18 (competency data source) checked — OTEP-87 scoped accordingly
 - [ ] OTEP-192, OTEP-271, OTEP-203 added to Sprint 3 Jira board and assigned
 - [ ] OTEP-86, OTEP-317, OTEP-318, OTEP-87 added to Sprint 3 Jira board
-- [x] Auth stories (OTEP-71, 110, 304, 305) moved to Sprint 4+ in Jira — **still in Sprint 3 per 2026-05-21 sync; Pow Hwee/team to move in Jira**
+- [x] Auth stories (OTEP-71, 110, 304, 305) moved to Sprint 4+ in Jira — **resolved 2026-05-21 (moved by Pow Hwee)**
 - [ ] Open item #26 escalated to Adrian before auth is rescheduled
 - [ ] OTEP-191 (credential manager) placement confirmed — in Jira Sprint 3; verify if resolved by AWS infra or needs active work
 - [ ] OTEP-92 ("Tracking" subtask of OTEP-86) — no story file; confirm purpose and whether it needs ACs
