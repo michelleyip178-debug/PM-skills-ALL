@@ -25,7 +25,9 @@
 | 22 | Set a design lock date for Sprint 2 — no major design changes after that point | Michelle / Amber | Sprint 2 W1 | Prevents mid-sprint design churn. Screenshots + behavior notes to be attached to Jira. Agreed at internal groom 2026-05-13. | 🔴 Open |
 | 23 | Harmonised data model: confirm it supports both OTG (now) and C@G (later) before finalising OTEP-193 | Pow Hwee | Before Sprint 2 dev | Data model must be extensible. Agreed at internal groom 2026-05-13. | 🔴 Open |
 | 25 | Profile story split: identify which parts are feasible for Sprint 2 (basic: name, email) vs deferred (competency — depends on another team) | Michelle / Pow Hwee | Sprint 2 planning (Thu 14 May) | Large profile story too big as-is. Only basic auth profile goes into Sprint 2. | 🔴 Open |
-| 26 | No WOG AD UAT environment — OTEP-71, OTEP-110, OTEP-304, OTEP-305 can't be validated against real WOG AD. Raised by Pow Hwee at Sprint 3 grooming 2026-05-21. Auth epic moved to Sprint 4+ as a result (decision 2026-05-21). Escalation path: confirm who owns the UAT environment request — COMET onboarding, GovTech/WOG AD team, or Adrian. Must resolve before auth is rescheduled. Interim: Keycloak stub (OTEP-190) available for local dev. | Michelle → Adrian | Before auth is rescheduled (currently Sprint 4+) | Blocks go-live validation of all WOG AD auth stories. Auth cannot re-enter sprint until this is resolved. | 🔴 Open |
+| 26 | WOG AD onboarding — domain confirmed: `careercompass.gov.sg`. Onboarding process can start once: (1) COMET onboarding status confirmed — is ESG/OTEP onboarded? (2) Approval to test against WOG AD Prod. Raised at Sprint 3 grooming 2026-05-21. Auth epic in Sprint 4+. Keycloak stub (OTEP-190) available for local dev. | Michelle → Adrian | Before auth is rescheduled (currently Sprint 4+) | Gates WOG AD auth (OTEP-71/110/304/305) AND CSC SSO (#30). 6-week total chain (2 wks WOG AD + 4 wks CSC) — every day delayed pushes both. | 🔴 Open |
+| 30 | CSC SSO — confirmed by Imelda (OTEP-Core Squad PM) 2026-05-21. Sequential after WOG AD (#26): WOG AD must complete before documents passed to CSC. CSC needs 4 weeks. Ownership TBC: Imelda's squad, Pathfinder, or joint? | Michelle + Imelda | Before Sprint 5 (~2 Jul best case) | WOG AD (#26) must close first. 6-week total SSO chain from WOG AD kickoff. Who passes documents to CSC? | 🔴 Open |
+| 31 | POCDEX go-live prep — first project using POCDEX API; support structure not settled. Need planning session with Daryll (POCDEX team lead). OTEP-202 (seed database) has no sprint assigned — needed before Sprint 4 ringfencing (OTEP-127). | Michelle | Before Sprint 4 planning | POCDEX plumbing (Sprint 3: OTEP-271/203) can't be validated without Daryll's team. Ringfencing (OTEP-127) blocked without seed data (OTEP-202). | 🔴 Open |
 
 ---
 
@@ -52,4 +54,4 @@
 
 ---
 
-*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-21 (resolved #2 — `formsg_url` confirmed in OTG Export, SJRs excepted; unblocks US-18).*
+*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-21 (#26 updated — domain careercompass.gov.sg confirmed; #30 CSC SSO added; #31 POCDEX go-live prep added).*

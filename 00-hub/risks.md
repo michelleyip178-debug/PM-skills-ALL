@@ -18,8 +18,10 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 | ~~C@G ingestion method~~ | ~~Half the "unified" promise~~ — **Resolved 2026-05-14: C@G = API.** | Sprint 2 ships OTG-only regardless; C@G API integration is Sprint 5 |
 | FormSG URL/redirect format | Complex FormSG Phase 2 callback flow (OTEP-130) deferred to Sprint 5. Basic redirect (US-18) pulled to Sprint 3. | Basic redirect needed for Sprint 3; OTEP-130 callback needed by Sprint 5 start (Jun 29) |
 | FormSG pre-fill support | US-P3 stays in limbo — can't groom or defer | Pow Hwee to confirm by Sprint 3 (deferred to Sprint 5 webhook flow) |
-| WOGAD / Azure AD via COMET | Auth blocked if ESG not onboarded | Out of Michelle's scope — monitor only |
-| No WOG AD UAT environment (Pow Hwee, grooming 2026-05-21) | OTEP-71, OTEP-110, OTEP-304, OTEP-305 can't be validated against real WOG AD before go-live. **Auth epic moved to Sprint 4+ (2026-05-21) as a direct result.** Must resolve before auth is rescheduled into any sprint. | Escalation path: Michelle → Adrian. Identify who owns the UAT environment request — COMET onboarding, GovTech/WOG AD team, or Adrian. Interim: Keycloak stub (OTEP-190) available for local dev. |
+| WOG AD onboarding (`careercompass.gov.sg`) | Auth blocked (OTEP-71/110/304/305) AND CSC SSO blocked (#30) if onboarding delayed. Domain confirmed 2026-05-21. Remaining: COMET status + prod testing approval. 2-week process once started. | Michelle → Adrian. Two asks: (1) COMET status — is ESG/OTEP onboarded? (2) Approval to test against WOG AD Prod. Domain = careercompass.gov.sg. (#26) |
+| No WOG AD UAT environment (Pow Hwee, grooming 2026-05-21) | OTEP-71, OTEP-110, OTEP-304, OTEP-305 can't be validated against real WOG AD before go-live. **Auth epic moved to Sprint 4+ (2026-05-21) as a direct result.** Must resolve before auth is rescheduled into any sprint. | Domain careercompass.gov.sg confirmed 2026-05-21. Remaining blockers: COMET onboarding status + prod testing approval (Adrian, #26). Once confirmed, 2-week onboarding starts. Then CSC SSO can start (4 weeks, #30). Interim: Keycloak stub (OTEP-190) available for local dev. |
+| CSC SSO (Imelda, 2026-05-21) | SSO blocked until WOG AD completes. 4-week CSC lead time after documents received. 6-week total chain. Ownership TBC. | Start WOG AD onboarding today. Sync with Imelda: who owns passing documents to CSC? (#30) |
+| POCDEX API go-live (Daryll's team) | First POCDEX API project — no support structure settled. No planning session booked. OTEP-202 (seed data) unassigned. Sprint 3 plumbing can't be validated without Daryll's team engaged. | Schedule planning session with Daryll before Sprint 4 planning. Assign OTEP-202. (#31) |
 | ~~Rama: `formsg_url` confirmation (#2)~~ | **Resolved 2026-05-21.** `formsg_url` confirmed in OTG Export for Internal Jobs, STIPs, Gigs. SJRs excluded (no apply flow in MVP — decision 2026-05-13). US-18 is unblocked and ready to groom. |
 
 ## Schedule Risks
@@ -29,6 +31,7 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 | Lack of live OTG file data in Sprint 2 | Core UI listing (OTEP-85) has no real database data to display | Mitigated by Léo's static backend endpoint stub (OTEP-288) for Sprint 2 UI work. Ingestion (OTEP-192) shifted to Sprint 3. |
 | Sprint 3 integration stagger risk | POCDEX DB/API plumbing (OTEP-271, OTEP-203) or basic FormSG redirect (US-18) slipping | Staggering POCDEX plumbing to Sprint 3 explicitly unblocks Sprint 4 ringfencing (OTEP-127) and onboarding (WOG-06). |
 | Security review monthly cycle | Must submit by early Sep to hit the Oct go-live window | Plan submission date now (per Sprint Ceremonies v2, Go-Live is Fri 16 Oct) |
+| 6-week SSO chain (WOG AD + CSC) | Auth + CSC SSO both slip if WOG AD onboarding delayed. Every day's delay cascades to CSC. Best case: SSO live ~2 Jul (Sprint 5) if started today. | Adrian ping today with domain careercompass.gov.sg. Clock starts on his confirmation. |
 
 ## Team & Delivery Risks
 
@@ -82,4 +85,4 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 
 ---
 
-*Updated: 2026-05-21 (Sprint 3 reallocation — auth epic moved to Sprint 4+; Sprint 3 board prep updated to reflect filter + detail work; WOG AD UAT dependency note updated)*
+*Updated: 2026-05-21 (domain careercompass.gov.sg confirmed; CSC SSO sequential dependency added; POCDEX go-live risk added; 6-week SSO chain schedule risk added)*

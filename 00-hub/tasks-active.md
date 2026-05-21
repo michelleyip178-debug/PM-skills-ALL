@@ -25,6 +25,10 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## Up Next
 
+- [ ] **Ping Adrian — WOG AD onboarding**: Domain is `careercompass.gov.sg`. Two asks: (1) COMET onboarding status — is ESG/OTEP onboarded? (2) Approval to test against WOG AD Prod. Starts the 6-week SSO chain (WOG AD 2 wks → CSC 4 wks). Before EOD today. (#26)
+- [ ] **Sync with Imelda (OTEP-Core Squad PM)** — three asks: (1) Who owns passing documents to CSC after WOG AD completes — her squad, Pathfinder, or joint? (2) Timeline for job function/family test data delivery? (3) Does she have context on open item #18 (competency data source)? (#30)
+- [ ] **Schedule POCDEX planning session with Daryll** — POCDEX team lead. First project with POCDEX API, support not settled. Must happen before Sprint 4 planning. Loop Pow Hwee in. (#31)
+- [ ] **Create high-level dependency stories** (Pow Hwee's ask from Teams thread) — one placeholder story each for POCDEX go-live prep (#31), WOG AD onboarding (#26), CSC SSO (#30). No ACs yet — titles and sprint-window targets in Jira.
 - [ ] **Run `/groom-prep`** — today (Wed 20 May) afternoon; Backlog Grooming is tomorrow 14:00 (L11 Anson)
 - [ ] **Chase Pow Hwee on #23** — harmonised data model (OTG + C@G); Léo is building OTEP-193 now, alignment is urgent
 - [x] **Share OTG opportunity reports (Excel files) with the team** — resolved 2026-05-18, open item #24 closed
@@ -58,6 +62,8 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 | POCDEX account creation (OTEP-72) | Pow Hwee | May 4 | Confirm push mechanism works — bundle into Pow Hwee check-in |
 | `formsg_url` field (#2) | Rama + PSD Ops | May 4 | Last unconfirmed OTG field. Sprint 3 blocker. Chase this week. |
 | Auth edge-cases (OTEP-110, WOG-04/05/06) | Pow Hwee / Leo | May 11 | **NOT on Sprint 2 board.** Confirm Sprint 3 placement at mid-sprint review Mon 26 May. |
+| POCDEX go-live support structure | Daryll (POCDEX team) | 2026-05-21 | Schedule planning session with Daryll (#31) |
+| CSC SSO ownership decision | Imelda (Core Squad PM) | 2026-05-21 | Who passes documents to CSC after WOG AD completes? (#30) |
 | ~~OTEP-276 design system spike~~ | Thomas | — | **Resolved** — OTEP-252 Done confirms Flagship/LifeSG adopted. No further action. |
 | QA review session with Rethna | Michelle (doc first) | May 13 | Create Sprint 2 AC summary doc first; schedule session after grooming settles. |
 
@@ -91,7 +97,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [x] Competency match ratio descoped to R1 (May 8)
 - [x] Align with Adrian on target launch date — resolved (May 12)
 - [x] Review Amber's Hub UI + card designs — alignment check done
-- [x] Verify COMET onboarding with Imelda — out of scope for Michelle
+- [x] ~~Verify COMET onboarding with Imelda~~ — stale. COMET = Michelle → Adrian (#26). Imelda's scope = CSC SSO (#30).
 
 ---
 

@@ -26,7 +26,7 @@
 - 
 
 ### From Meetings
-- 
+- [A] Do up the report defined in excel and share to Leo via the user story. Include some sample records. 
 
 ### From Confluence
 - 
