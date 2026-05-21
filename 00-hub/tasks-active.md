@@ -27,7 +27,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 - [ ] **Map out dependencies in high-level Jira stories → `00-hub/risks.md`** — document cross-story dependency map *(captured 2026-05-21)*
 - [ ] **Do up the OTG report in Excel format and share to Leo via the user story** — include sample records *(captured 2026-05-21)*
-- [ ] **Ping Adrian — WOG AD onboarding**: Domain is `careercompass.gov.sg`. Two asks: (1) COMET onboarding status — is ESG/OTEP onboarded? (2) Approval to test against WOG AD Prod. Starts the 6-week SSO chain (WOG AD 2 wks → CSC 4 wks). Before EOD today. (#26)
+- [x] **Ping Adrian — WOG AD onboarding**: Domain is `careercompass.gov.sg`. Two asks: (1) COMET onboarding status — is ESG/OTEP onboarded? (2) Approval to test against WOG AD Prod. ✅ Pinged 2026-05-21. Waiting on response. (#26)
 - [ ] **Sync with Imelda (OTEP-Core Squad PM)** — four asks: (1) Who owns passing documents to CSC after WOG AD completes — her squad, Pathfinder, or joint? (#30) (2) How does OTEP consume job family, job function, agency, competency data from her squad — API? file? push? (#18) (3) Schema + field names for that reference data? (4) Timeline — when is it available for OTEP to integrate? (#18)
 - [ ] **Schedule POCDEX planning session with Daryll** — POCDEX team lead. First project with POCDEX API, support not settled. Must happen before Sprint 4 planning. Loop Pow Hwee in. (#31)
 - [ ] **Create high-level dependency stories** (Pow Hwee's ask from Teams thread) — one placeholder story each for POCDEX go-live prep (#31), WOG AD onboarding (#26), CSC SSO (#30). No ACs yet — titles and sprint-window targets in Jira.
