@@ -11,30 +11,18 @@
 <!-- New, untriaged items land here under a channel header. Tag + move them out at next triage. -->
 
 ### Ceremony Prep
-- Backlog Grooming (Thu 21 May): run `/groom-prep` today (afternoon), `/groom` tomorrow morning before standup
 
 ### From Slack
-- 
 
 ### From Teams
-- 
 
 ### From Email
-- 
 
 ### From Jira
-- 
 
 ### From Meetings
-- [A] Do up the report defined in excel and share to Leo via the user story. Include some sample records. 
 
 ### From Confluence
-- 
-
-### Ceremony Prep
-- **Mon 18 May:** Sprint 2 W1 — Sprint 1 retro/demo deferred (PH + Michelle out). Check with squad.
-- **Tue 19 May (today):** Squad Grooming (Sprint 2 internal) — run `/groom` before 9:30am. ⚠️ Resolve #28 + #29 BEFORE the session.
-- **Wed 20 May (tomorrow):** Prep day — run `/groom-prep` in the afternoon to catch AC gaps before Thu Backlog Grooming (Sprint 3).
 
 
 

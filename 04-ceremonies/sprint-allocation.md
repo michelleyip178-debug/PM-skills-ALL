@@ -2,7 +2,7 @@
 
 **This is the source of truth for which stories are in which sprint.** Other docs (`04-ceremonies/archive-tasks/story-readiness.md`, `04-ceremonies/sprint-checklists.md`, `04-ceremonies/sprint-calendar.md`, the story-group files in `projects/otep-mvp/stories/`) reference this — they don't restate it. Story IDs are reconciled in [story-id-map.md](../03-stories/story-id-map.md).
 
-**Last updated:** 2026-05-21 (Sprint 3 reallocation — auth epic OTEP-71/110/304/305 moved to Sprint 4+; Sprint 3 reallocated to filter + enhanced detail work; OTEP-271/203 confirmed Sprint 3; Sprint 4 now leads with auth).
+**Last updated:** 2026-05-21 (Sprint 3 reallocation — auth deferred; Sprint 4 restructured with contingency-first stream; **working assumption = auth lands Sprint 5** — WOG AD is a formal process, min 2 wks + back and forth; Sprint 5 carries auth realistic + C@G; Sprint 6 carries CSC SSO realistic + admin).
 **Cadence:** 2-week sprints, Mon start / Fri end, from Mon 4 May 2026. Sprint 1 ran a combined Backlog-Grooming + Sprint-Planning Thursday; from Sprint 2 those split (Backlog Grooming Thu W1, Sprint Planning Thu W2). Dates + ceremonies: [04-ceremonies/sprint-calendar.md](../04-ceremonies/sprint-calendar.md).
 **Feature Freeze:** end of Sprint 8 (Fri 21 Aug) — end of Phase 1, Feature Build · **Go-Live:** end of Sprint 12 (Fri 16 Oct) — end of Phase 2, Compliance & Go-Live (Sprints 9–12).
 
@@ -134,44 +134,73 @@
 
 ---
 
-## Sprint 4 (15–26 Jun) — Auth + Ringfencing + Onboarding — *provisional*
+## Sprint 4 (15–26 Jun) — C@G + FormSG Phase 2 + Auth if WOG AD clean — *provisional*
 
-Auth epic lands here once open item #26 (WOG AD UAT environment) is resolved. POCDEX plumbing from Sprint 3 unblocks ringfencing. Escalation to Adrian required before Sprint 4 planning.
+> **Working assumption (updated 2026-05-21): WOG AD onboarding is a formal process — minimum 2 weeks from Adrian's approval, longer if errors or back and forth. Auth landing in Sprint 4 requires both Adrian responding this week AND a clean onboarding run. Treat that as the lucky case. Sprint 4 is now planned with a contingency-first stream that ships regardless of WOG AD status.**
 
-| Jira | Story | Owner | Notes |
-|------|-------|-------|-------|
-| OTEP-71 | Log in with WOG AD credentials | Pow Hwee | ⚠️ Moved from Sprint 3 (2026-05-21) — blocked on WOG AD UAT env (open item #26). |
-| OTEP-110 | Login fail / clear error | Thomas | ⚠️ Moved from Sprint 3 (2026-05-21). ACs being rewritten. |
-| OTEP-304 | Stay logged in during session (WOG-04) | — | ⚠️ Moved from Sprint 3 (2026-05-21). |
-| OTEP-305 | Log out of OTEP (WOG-05) | — | ⚠️ Moved from Sprint 3 (2026-05-21). |
-| OTEP-127 | Apply ringfencing criteria | Thomas / Leo | POCDEX Phase 2. Filters cards by officer profile. Needs Sprint 3 POCDEX DB/API. |
-| OTEP-202 | Create POCDEX seed database for local dev | Leo | Seeding test profiles for ringfencing/onboarding validation. |
-| WOG-06 | First-time login experience | Thomas | Onboarding screen + mandatory profile setup. POCDEX dep. |
-
----
-
-## Sprint 5 (29 Jun – 10 Jul) — Careers@Gov Integration + Full FormSG Integration — *provisional*
+**Stream A — WOG AD-independent (ships regardless):**
 
 | Jira | Story | Owner | Notes |
 |------|-------|-------|-------|
-| OTEP-130 | Apply to OTG opportunity via FormSG (full) | Thomas / Leo | **FormSG Phase 2.** Webhook callback, auto-sync application status, profile pre-fill. |
-| US-10 | Receive application confirmation | Thomas | Confirmation screen. Depends on FormSG webhook + email delivery. |
-| OTEP-89 | View Careers@Gov opportunity summary on OTEP | Thomas | C@G detail in OTEP, "Apply via Careers@Gov" CTA, deep-link to C@G. |
-| OTEP-133 | Redirect to Careers@Gov to apply / access hub via EDM deep link | Leo | Email → opportunity detail; ineligible shows a message. |
-| OTEP-88 | Understand the difference between OTG and C@G flows | Thomas | Button labels, visual cues. |
-| US-10 *(C@G label)* | Identify Careers@Gov listings | Thomas | "Careers@Gov" label on card. Depends on C@G API ingestion. |
-| — | Handle missing/broken FormSG link | Disabled CTA + "contact Agency POC" fallback. |
+| Story D | C@G API ingestion setup | Pow Hwee | Unwritten story — C@G schema mapping, sync frequency, error handling. Prerequisite for OTEP-89. Pulled forward from S05. |
+| OTEP-202 | Create POCDEX seed database for local dev | Leo | No WOG AD dep. Seeds test profiles for ringfencing validation. |
+| OTEP-130 | Apply to OTG opportunity via FormSG (full) | Thomas / Leo | FormSG Phase 2. Webhook callback. No WOG AD dep. Pulled forward from S05. |
+| OTEP-88 | Understand the difference between OTG and C@G flows | Thomas | Button labels, visual cues. No WOG AD dep. |
+| — | Instrumentation: all success metrics tracked | — | oppr_list_view, oppr_detail_view, filter_applied, click_to_formsg, etc. No WOG AD dep. |
+
+**Stream B — WOG AD-dependent (start only if onboarding complete by 15 Jun):**
+
+| Jira | Story | Owner | Notes |
+|------|-------|-------|-------|
+| OTEP-71 | Log in with WOG AD credentials | Pow Hwee | ⚠️ Best case only. If WOG AD not done by 15 Jun → moves to Sprint 5. |
+| OTEP-110 | Login fail / clear error | Thomas | ⚠️ Best case only. |
+| OTEP-304 | Stay logged in during session (WOG-04) | — | ⚠️ Best case only. |
+| OTEP-305 | Log out of OTEP (WOG-05) | — | ⚠️ Best case only. |
+| OTEP-127 | Apply ringfencing criteria | Thomas / Leo | ⚠️ Best case only. Needs WOG AD + Sprint 3 POCDEX plumbing. |
+| WOG-06 | First-time login experience | Thomas | ⚠️ Best case only. POCDEX dep + WOG AD dep. |
 
 ---
 
-## Sprint 6 (13–24 Jul) — Admin Login + Instrumentation + Polish — *provisional*
+## Sprint 5 (29 Jun – 10 Jul) — Auth (realistic) + C@G detail + CSC SSO process — *provisional*
 
-| Jira | Story | Notes |
-|------|-------|-------|
-| WOG-02 | Log in as agency admin | Deferred from earlier. |
-| WOG-07 | Role-based access control | 2 roles: officer, admin. |
-| — | Instrumentation: all success metrics tracked | oppr_list_view, oppr_detail_view, search_performed, filter_applied, click_to_formsg, click_to_OTG, click_to_C@G. |
-| — | Bug fixes + polish from Sprints 2–5 | Address mid-sprint review issues. |
+> **Realistic scenario: WOG AD completes ~19 Jun (3 weeks from late-May approval, with some back and forth). Auth stories start Sprint 5.**
+
+**Stream A — Auth (realistic landing):**
+
+| Jira | Story | Owner | Notes |
+|------|-------|-------|-------|
+| OTEP-71 | Log in with WOG AD credentials | Pow Hwee | Moves here if WOG AD not done by Sprint 4 start. |
+| OTEP-110 | Login fail / clear error | Thomas | |
+| OTEP-304 | Stay logged in during session | — | |
+| OTEP-305 | Log out of OTEP | — | |
+| OTEP-127 | Apply ringfencing criteria | Thomas / Leo | Needs WOG AD + Sprint 3 POCDEX plumbing. |
+| WOG-06 | First-time login experience | Thomas | |
+
+**Stream B — C@G (depends on S04 ingestion):**
+
+| Jira | Story | Owner | Notes |
+|------|-------|-------|-------|
+| OTEP-89 | View Careers@Gov opportunity summary on OTEP | Thomas | C@G detail + "Apply via C@G" CTA. Depends on C@G ingestion landing in S04. |
+| US-10 | Receive application confirmation | Thomas | Confirmation screen. FormSG webhook dep (S04 OTEP-130). |
+
+**CSC SSO track (external, running in parallel):**
+- Documents sent to CSC ~end Sprint 4 (best case) / ~end Sprint 5 (realistic)
+- CSC 4-week clock: SSO ready ~end Sprint 5 (best) / ~end Sprint 6 (realistic)
+- CSC SSO integration story (Story B from dependency map) — **placeholder story needed in Jira**
+
+---
+
+## Sprint 6 (13–24 Jul) — CSC SSO + C@G deep-links + Admin — *provisional*
+
+> **Realistic: CSC SSO external process completes ~17 Jul. Integration work lands here.**
+
+| Jira | Story | Owner | Notes |
+|------|-------|-------|-------|
+| Story B | CSC SSO integration | Michelle (owner) | ⚠️ No story in Jira yet. Scope TBC with Imelda. Realistic landing sprint. |
+| OTEP-133 | Redirect to Careers@Gov / EDM deep-link | Leo | Email → opportunity detail. Needs OTEP-127 (ringfencing) done. Moved from S05. |
+| WOG-02 | Log in as agency admin | — | |
+| WOG-07 | Role-based access control | — | 2 roles: officer, admin. |
+| — | Bug fixes + polish from Sprints 2–5 | — | Address mid-sprint review issues. |
 
 ---
 
@@ -226,7 +255,7 @@ No new development. Security review, pen testing, compliance sign-off, go-live r
 
 | Dependency | Owner | Status | Blocks |
 |-----------|-------|--------|--------|
-| WOG AD / Keycloak integration | Pow Hwee + Leo | **Partial** — OTEP-190 (Keycloak stub) done Sprint 1. Auth edge-cases (OTEP-71, OTEP-110, OTEP-304, OTEP-305) moved to Sprint 4+ (2026-05-21) — no WOG AD UAT environment (open item #26). Escalation: Michelle → Adrian. | Sprint 4 auth |
+| WOG AD / Keycloak integration | Pow Hwee + Leo | **Partial** — OTEP-190 (Keycloak stub) done Sprint 1. Auth stories moved to Sprint 4+ (2026-05-21). **Working assumption (2026-05-21): auth lands Sprint 5.** WOG AD is a formal onboarding process — min 2 weeks from Adrian's approval, longer with back and forth. Best case (clean run + Adrian this week) = auth Sprint 4. Realistic = auth Sprint 5. Escalation: Michelle → Adrian (#26). | Sprint 4 (best case) / Sprint 5 (working assumption) |
 | OTG data import (Excel file-based, not API) — schema/fields confirmed | Rama / Pow Hwee | All 6 fields resolved: 5 on 2026-05-13, `formsg_url` confirmed 2026-05-21 (SJRs excluded — no apply flow in MVP). OTG = file import; C@G = API (decided 2026-05-14). | Listing (Sprint 2), Apply (Sprint 3) |
 | POCDEX profile lookup | Eng (spike Sprint 1, OTEP-183) | Discovery | Ringfencing (Sprint 3) |
 | Careers@Gov API integration | Pow Hwee | **Confirmed: API** (open item #11 resolved 2026-05-14) | C@G work (Sprint 5) |

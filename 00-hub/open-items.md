@@ -12,13 +12,11 @@
 
 | # | Item | Owner | Needed By | Impacts / why | Status |
 |---|---|---|---|---|---|
-
 | 8 | Agency contact field name for OTEP-133 fallback | Rama | Before Sprint 3 | Email deep-link fallback state | 🔴 Open |
 | 14 | Does FormSG support pre-fill via URL params? | Pow Hwee | Before Sprint 3 | Determines whether US-P3 is MVP or R1 | 🔴 Open |
 | 15 | Email/notification service — existing platform service or new build? | Pow Hwee | Before Sprint 3 | US-10 submission email, OTEP-133 deep-link email — scopes notification work for MVP | 🔴 Open |
 | 16 | Search indexing infrastructure — provisioning + refresh strategy | Pow Hwee | Before Sprint 3 | OTEP-86 assumes elastic matching; needs a story or spike | 🔴 Open |
-| 18 | Officer competency data model — where does opportunity competency data come from? In OTG export? | Pow Hwee | Before Sprint 3 | US-P2, opportunity detail pages | 🔴 Open |
-| 20 | SJR card UX when no apply action exists — no button, "Coming soon" indicator, or hide SJRs from listing? | Amber | Before Sprint 3 (US-18 build) | SJRs appear in OTG listing but have no apply flow in MVP (decision 2026-05-13). Card needs a clear treatment so officers aren't confused by a missing action. | 🟡 Design finalised 2026-05-13 — confirm treatment at grooming |
+| 18 | Officer competency data model — source confirmed 2026-05-21: Imelda's squad owns master source of truth for job family, job function, agency, and competencies. Open questions: (1) How does OTEP consume this data — API? file sync? push? (2) Schema + field names? (3) Availability timeline — when can OTEP integrate? (4) **New (grooming 2026-05-21):** OTG opportunities carry competency tags — how do these map to the OTEP competency bank? Backend mapping required before ingestion can be considered clean and before OTEP-87 competency section can be built. | Michelle → Imelda | Before Sprint 4 planning | Competency section of OTEP-87 (deferred), WOG-10 (agency resolution), any future competency features. Competency mapping (OTG tags → bank) also blocks complete ingestion correctness. | 🟡 Source confirmed — method, schema, timeline, and OTG mapping all TBC |
 | 19 | Is a competency page in OTEP MVP scope? PM Weekly (11 May) said it must be in formal design reviews + sprints; Imelda drafts the template, Adrian gets it into reviews — but it's not in the MVP guardrails as a build item | Adrian / Michelle | Before it lands in a sprint | Could expand MVP scope; ties to #18 | 🔴 Open |
 | 9 | Search UX approach — typeahead vs submit | Amber | Design review | OTEP-86 search interaction | 🟡 In discussion |
 | 21 | Set up Confluence/Jira view for async BO visibility on sprint goals and key tickets | Michelle | Sprint 2 start | BO involvement working agreement (2026-05-11) — BOs need async visibility without attending grooming | 🔴 Open |
@@ -26,7 +24,7 @@
 | 23 | Harmonised data model: confirm it supports both OTG (now) and C@G (later) before finalising OTEP-193 | Pow Hwee | Before Sprint 2 dev | Data model must be extensible. Agreed at internal groom 2026-05-13. | 🔴 Open |
 | 25 | Profile story split: identify which parts are feasible for Sprint 2 (basic: name, email) vs deferred (competency — depends on another team) | Michelle / Pow Hwee | Sprint 2 planning (Thu 14 May) | Large profile story too big as-is. Only basic auth profile goes into Sprint 2. | 🔴 Open |
 | 26 | WOG AD onboarding — domain confirmed: `careercompass.gov.sg`. Onboarding process can start once: (1) COMET onboarding status confirmed — is ESG/OTEP onboarded? (2) Approval to test against WOG AD Prod. Raised at Sprint 3 grooming 2026-05-21. Auth epic in Sprint 4+. Keycloak stub (OTEP-190) available for local dev. | Michelle → Adrian | Before auth is rescheduled (currently Sprint 4+) | Gates WOG AD auth (OTEP-71/110/304/305) AND CSC SSO (#30). 6-week total chain (2 wks WOG AD + 4 wks CSC) — every day delayed pushes both. | 🔴 Open |
-| 30 | CSC SSO — confirmed by Imelda (OTEP-Core Squad PM) 2026-05-21. Sequential after WOG AD (#26): WOG AD must complete before documents passed to CSC. CSC needs 4 weeks. Ownership TBC: Imelda's squad, Pathfinder, or joint? | Michelle + Imelda | Before Sprint 5 (~2 Jul best case) | WOG AD (#26) must close first. 6-week total SSO chain from WOG AD kickoff. Who passes documents to CSC? | 🔴 Open |
+| 30 | CSC SSO — confirmed by Imelda (OTEP-Core Squad PM) 2026-05-21. Sequential after WOG AD (#26): WOG AD must complete before documents passed to CSC. CSC needs 4 weeks. Michelle owns end-to-end. Imelda = context source (process, test data, #18). | Michelle | Before Sprint 5 (~2 Jul best case) | WOG AD (#26) must close first. 6-week total SSO chain from WOG AD kickoff. | 🔴 Open |
 | 31 | POCDEX go-live prep — first project using POCDEX API; support structure not settled. Need planning session with Daryll (POCDEX team lead). OTEP-202 (seed database) has no sprint assigned — needed before Sprint 4 ringfencing (OTEP-127). | Michelle | Before Sprint 4 planning | POCDEX plumbing (Sprint 3: OTEP-271/203) can't be validated without Daryll's team. Ringfencing (OTEP-127) blocked without seed data (OTEP-202). | 🔴 Open |
 
 ---
@@ -51,7 +49,8 @@
 | 28 | OTEP-85 visibility rule: clean split confirmed — OTEP-85 shows all `closing_date > today`; OTEP-129 owns "Closing soon" badge (within 7 days) | Michelle | 2026-05-19 |
 | 29 | OTEP-289 spike defined: 2-day timebox (19–20 May), ACs cover C@G + OTG taxonomy mapping, output = written recommendation + go/no-go. Cut-line: defer to Sprint 3 if mapping is messy. | Michelle | 2026-05-19 |
 | 27 | OTEP-271/202/203 (POCDEX stories) sprint placement confirmed — staggered backend DB container & standalone service setup to Sprint 3 to avoid Sprint 4 bottleneck | Michelle / Pow Hwee | 2026-05-20 |
+| 20 | SJR card UX when no apply action exists — resolved by excluding SJRs from MVP ingestion entirely (decision 2026-05-21). No card, no UX question. | Grooming 2026-05-21 | 2026-05-21 |
 
 ---
 
-*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-21 (#26 updated — domain careercompass.gov.sg confirmed; #30 CSC SSO added; #31 POCDEX go-live prep added).*
+*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-21 (SJR exclusion from ingestion decided; #20 closed; #18 updated with OTG competency mapping requirement).*
