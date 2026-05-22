@@ -75,6 +75,58 @@
 | OTEP-295 | Mock detail endpoint for opportunity | Sprint 2, Léo — already listed above under detail page row |
 | OTEP-296 | Prepare defined report format matching data model | Sprint 2, Michelle — PM-owned data model |
 
+## All Stories — Officer Profile (Epic 1)
+
+*PM: Imelda Mo. Epic: OTEP-67. Cross-squad visibility only — do not change ACs without Imelda. Coordination via open items #18/#30.*
+
+| Jira ID | Title | Notes | Sprint |
+|---------|-------|-------|--------|
+| OTEP-71 | Log in with WOG AD credentials | ⚠️ Also in Epic 5 (Auth) — cross-reference prd-auth.md before changing ACs | 4+ |
+| OTEP-110 | Login fail / clear error | ⚠️ Also in Epic 5 (Auth) — Jira ACs simplified vs PRD; confirm scope before grooming | 4+ |
+| OTEP-72 | New Officer account creation | Also in Epic 5 (Auth) | 1 ✓ |
+| OTEP-111 | Officers with no access | Also in Epic 5 (Auth) | 1 ✓ |
+| OTEP-106 | OTEP navigation / header bar | Nav story shared across epics | TBD |
+| OTEP-74 | View officer profile page | Core Epic 1 story | TBD |
+| OTEP-75 | View primary position and employment info | POCDEX-sourced | TBD |
+| OTEP-105 | Display officer name and basic info | POCDEX-sourced | TBD |
+| OTEP-112 | Handle missing or partial profile data | Empty/error states | TBD |
+| OTEP-205 | Infer competencies from CV (CIE) | CIE — WOG FC bank only; .docx or text input; top 8 competencies | TBD |
+| OTEP-126 | Display inferred competencies from CIE | Depends on OTEP-205 | TBD |
+| OTEP-77 | View self-assessed competencies from OTG | OTG export/import; no API | TBD |
+| OTEP-79 | View job role profile competencies | OTG Role Profile Bank | TBD |
+| OTEP-78 | View additional competencies | Agency-level competencies from OTG | TBD |
+
+---
+
+## All Stories — My Development (Epic 2)
+
+*PM: Imelda Mo. Epic: OTEP-68. Cross-squad visibility only — do not change ACs without Imelda. Coordination via open items #18/#30.*
+*Note: Jira IDs for Epic 2 stories are not yet assigned as of 2026-05-22. Raise at next grooming with Imelda's squad.*
+
+| Jira ID | Title | Notes | Sprint |
+|---------|-------|-------|--------|
+| TBD | Compare current competencies against next job grade (promotion path) | "My Next Progression" — filters by agency + Job Family/Function/Next Grade concatenation | TBD |
+| TBD | Compare current competencies against target job role (role change) | Search + filter by Agency / Job Family / Job Function / Grade; MX7+ hidden | TBD |
+| TBD | View competency definition | Tooltip or expandable section per competency | TBD |
+| TBD | See recommended courses for missing competencies | Rule-based match: missing competencies → courses tagged to those competencies; swimlane | TBD |
+| TBD | No-role-profile fallback state | No next grade comparison; show target role search bar + "Explore popular courses" swimlane | TBD |
+
+---
+
+## All Stories — Learning and Course Discovery (Epic 3)
+
+*PM: Imelda Mo. Epic: TBD (PM to input). Cross-squad visibility only — do not change ACs without Imelda. Coordination via open items #18/#30.*
+
+| Jira ID | Title | Notes | Sprint |
+|---------|-------|-------|--------|
+| **OTEP-82** | Jumpstart Reco POC1 — "Recommended for you" swimlane | Based on job profile + learning history (PMI model); call via DLE (not Jumpstart directly); Backlog | TBD |
+| **OTEP-323** | Course tiles on discovery page | Fields from LEARN SFTP: name, product type, start date, duration, provider; Backlog | TBD |
+| **OTEP-84** | Course detail page | Full course info + "Learn more" CTA → LEARN deep-link; Backlog. Pending SFTP file from DLE. | TBD |
+| **OTEP-83** | Course discovery page (search and filter) | Filters: Product Type, Domain, Competency, Provider; autocomplete; clear all; alphabetical default; Backlog | TBD |
+| TBD | No-data fallback — browse for courses | Officers with no learning history or role profile → go straight to Search and Browse page | TBD |
+
+---
+
 ## All Stories — Auth (WOG AD — Epic 5)
 
 *Reconciled 2026-05-20 — reduced from 20 bulk-generated stories to ~9 MVP build stories. See auth.md for full detail.*
