@@ -18,8 +18,12 @@
 - Run `/retro` for the 16:00 Weekly Retro session
 
 ### From Slack
+- [A] Send Slack update to Jace & Adrian regarding POCDEX Epic and WOG AD → already done
+- [A] Send meeting invite to Daryll for the POCDEX Timeline & Support Sync → open-items #31
+- [A] Create the new "POCDEX Integration" Epic in Jira and move OTEP-271, 203, 202, 127 under it → open-items #31
 
 ### From Teams
+- [A] 
 
 ### From Email
 
@@ -42,6 +46,9 @@
 *Routing log for 2026-05-22:*
 - **[D] POCDEX epic to be created and under Me** → `06-skills-and-decisions/decisions-log.md`
 - **[I] OTEP-110 Jira ACs and design spec has mismatch, in PM** → `00-hub/open-items.md` #32
+- **[A] Complete Cybersecurity quiz** → `tasks/active.md`
+- **[A] Completed OTEP-296** → `tasks/active.md` and `open-items.md`
+- **[D] Lock down design sprint with Amber today** → `decisions-log.md` & `open-items.md #22`
 
 *Routing log for 2026-05-15:*
 - **[I] OTEP-202 / OTEP-271 split (POCDEX DB + seed)** → `context/open-items.md` #27 (confirm Sprint 2 carry-over vs backlog at finalisation / planning)

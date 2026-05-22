@@ -19,12 +19,14 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [ ] **OTEP-170** (Thomas) — Base layout for Opportunity Listing Page. MR in progress.
 - [ ] **OTEP-193** (Léo) — Design data model for Opportunities. .sql migration + Go structs. ⚠️ Must align with OTEP-296.
 - [ ] **OTEP-288** (Léo) — Setup simple backend endpoint with in-memory list. ⚠️ WIP risk — Léo has 2 In Progress items. New comment 2026-05-19.
-- [ ] **OTEP-296** (Michelle) — Prepare defined report format matching data model. Standardises OTG Excel format.
+- [x] **OTEP-296** (Michelle) — Prepare defined report format matching data model. Standardises OTG Excel format.
 
 ---
 
 ## Up Next
 
+- [ ] **Work out next steps for WOG AD onboarding with Fabian and Pow Hwee** — following the decision to submit the intranet URL to unblock the process.
+- [ ] **Complete Cybersecurity quiz by 2026-12-31**
 - [ ] **Map out dependencies in high-level Jira stories → `00-hub/risks.md`** — document cross-story dependency map *(captured 2026-05-21)*
 - [ ] **Do up the OTG report in Excel format and share to Leo via the user story** — include sample records *(captured 2026-05-21)*
 - [x] **Ping Adrian — WOG AD onboarding**: Domain is `careercompass.gov.sg`. Two asks: (1) COMET onboarding status — is ESG/OTEP onboarded? (2) Approval to test against WOG AD Prod. ✅ Pinged 2026-05-21. Waiting on response. (#26)
