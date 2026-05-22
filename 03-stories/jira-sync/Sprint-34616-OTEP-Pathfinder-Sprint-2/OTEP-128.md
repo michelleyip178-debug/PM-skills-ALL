@@ -19,6 +19,7 @@ As an  officer,  I want to  view the full details of an opportunity on a dedicat
 | OTEP-295 | Mock detail endpoint for opportunity | Backlog |
 | OTEP-314 | Opportunity detail page consuming OTEP-295 response shape | Backlog |
 | OTEP-316 | Replace mock detail endpoint with real DB query | Backlog |
+| OTEP-327 | Opportunity detail page using design system  | Backlog |
 
 ---
 

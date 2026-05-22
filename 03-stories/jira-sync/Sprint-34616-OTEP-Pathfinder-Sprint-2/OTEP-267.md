@@ -1,7 +1,7 @@
 # OTEP-267: Pagination for listing page
 
 **Status:** Backlog
-**Assignee:** N/A
+**Assignee:** Thomas Huchedé
 **Story Points:** N/A
 
 ---
@@ -21,4 +21,4 @@ _No subtasks._
 ## Latest Comments
 
 **Pow Hwee TAN (PSD)** (2026-05-18)
-Clean and well-scoped. Two notes: API contract dependency: GET /opportunities needs to include total_count or total_pages in the response so the frontend can render the page counter. Will capture this in the API spec on Day 1. Loading indicator: the ACs mention a "simple spinner". Suggest upgrading to a skeleton loading state (shimmer placeholders) — it’s ~half a day of work and gives a noticeably more polished feel. Recommend treating this as must-have rather than nice-to-have.
+API contract dependency: GET /opportunities needs to include total_count or total_pages in the response so the frontend can render the page counter. Will capture this in the API spec on Day 1.

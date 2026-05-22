@@ -1,7 +1,7 @@
 # OTEP-129: See whether an opportunity is open or closed before applying.
 
 **Status:** Backlog
-**Assignee:** N/A
+**Assignee:** Thomas Huchedé
 **Story Points:** N/A
 
 ---

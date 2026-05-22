@@ -21,6 +21,7 @@ User Story As an  officer,  I want to  see open opportunities displayed as cards
 | OTEP-288 | Setup a simple backend endpoint with in-memory list | Done |
 | OTEP-296 | Prepare defined report format that matches data model | Done |
 | OTEP-313 | OTG raw ingest table and source model | Backlog |
+| OTEP-320 | Replace mock /opportunities endpoint with real db access | In Progress |
 
 ---
 

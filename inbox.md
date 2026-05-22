@@ -12,10 +12,10 @@
 
 ### Ceremony Prep
 
-**Today (Fri 22 May) — Squad Sync**
+**Today (Fri 22 May) — Squad Sync + Sprint 2 Weekly Retro (16:00)**
 - Bring unresolved DoR blockers from `04-ceremonies/sprint-checklists.md`
-- Priority ask: design lock date (#22) — get Amber to commit to a specific date today (W1 deadline)
-- No prep command needed
+- Priority ask: design lock date (#22) — get Amber to commit to a specific date before 16:00 retro
+- Run `/retro` for the 16:00 Weekly Retro session
 
 ### From Slack
 

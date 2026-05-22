@@ -8,20 +8,23 @@
 
 ## Description
 
-As an officer, I want to see clear guidance when there are no opportunities or when something goes wrong, so that I'm not confused by a blank or broken page.   Acceptance Criteria The system must display an empty state ("No opportunities available right now", with supporting text and an illustration) when there are zero open opportunities. The system must not display a "Try again" button on the empty state. The system must display an error state ("We couldn't load opportunities", with supporting text and an illustration) if the page fails to load due to a server or network error. The system must maintain accurate pagination totals based on the server response, regardless of whether some individual cards failed to render locally.
+As an officer, I want to see clear guidance when there are no opportunities or when something goes wrong, so that I'm not confused by a blank or broken page.   Acceptance Criteria The system must display an empty state ("No opportunities available right now", with supporting text and an illustration) when there are zero open opportunities. The system must not display any pagination tools.
 
 ---
 
 ## Subtasks
 
-_No subtasks._
+| Key | Summary | Status |
+|-----|---------|--------|
+| OTEP-325 | Create an empty state for opportunity listing | Backlog |
+| OTEP-326 | Create an error state for opportunity listing | Backlog |
 
 ---
 
 ## Latest Comments
 
 **Rathika Ramalingam** (2026-05-19)
-High level test cases: Scenario 1: Valid response returns zero opportunities Given  the user navigates to the Opportunities listing page When  the listing API successfully responds with an empty array ( [] ) Then  the UI displays the empty state illustration (as per figma) And  the heading reads: "No opportunities available right now." And  the body reads: "Check back soon — new opportunities are posted regularly." And  no retry or refresh button is rendered on the screen. Scenario 2: API failure triggers the error state Given  the user navigates to the Opportunities listing page When  the listing API request fails (e.g., 500 Internal Server Error or network timeout) Then  the UI displays the error state illustration (per Amber's design) And  the heading strictly reads: "We couldn't load opportunities." And  the body strictly reads: "Something went wrong on our end. Please try again." And  a "Try again" button is rendered on the screen. Scenario 3: User initiates a retry from the error state Given  the user is viewing the Error state screen When  the user clicks the "Try again" button Then  the system immediately re-triggers the listing API fetch request And  transitions the UI back to the Loading state. Scenario 4: Graceful handling of missing optional fields Given  the listing API returns an array of opportunities And  one or more missing optional fields ( Ex.commitment_type  ,  ministry_icon) are null or missing When  the UI renders the opportunity cards Then  the cards missing the data render successfully without breaking the CSS layout And  the UI completely hides the missing elements rather than displaying empty space, broken image icons, or placeholder text like "N/A".
+High level test cases: Scenario 1: Valid response returns zero opportunities Given  the user navigates to the Opportunities listing page When  the listing API successfully responds with an empty array ( [] ) Then  the UI displays the empty state illustration (as per figma) And  the heading reads: "No opportunities available right now." And  no pagination is shown
 
 ---
 
