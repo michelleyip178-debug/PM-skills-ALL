@@ -12,6 +12,11 @@
 
 ### Ceremony Prep
 
+**Today (Fri 22 May) — Squad Sync**
+- Bring unresolved DoR blockers from `04-ceremonies/sprint-checklists.md`
+- Priority ask: design lock date (#22) — get Amber to commit to a specific date today (W1 deadline)
+- No prep command needed
+
 ### From Slack
 
 ### From Teams

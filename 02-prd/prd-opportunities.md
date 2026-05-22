@@ -22,7 +22,7 @@
 
 OTEP is positioned as the platform for officer development - the front-door discovery hub for courses and opportunities across the Singapore public service. The Opportunities pillar (aggregating STIPs, Gigs, SJRs, internal jobs and C@G public facing jobs job rotations) is one of two confirmed MVP pillars alongside “My Development.”
 
-**Current State **
+**Current State**
 
 Prior to OTEP, all applications went through standalone FormSG links distributed by host agencies or via Careers@Gov. There is no central discovery point. The decision to replace FormSG with an OTEP-hosted application flow was confirmed at the 12 March session.
 
@@ -39,11 +39,9 @@ Prior to OTEP, all applications went through standalone FormSG links distributed
 
 [User] struggles to [do what] because [root cause], resulting in [negative outcome].
 
-> 
+> *Officers **struggle to discover and apply for development opportunities** because they are **fragmented across multiple portals**, resulting in confusion on validity of job postings and friction for officers to have a single view of all short term and long term opportunities.*
 
-*Officers ***struggle to discover and apply for development opportunities **because they are **fragmented across multiple portals, **resulting in confusion on validity of job postings and friction for officers to have a single view of all short term and long term opportunities.
-
-*Host agencies face the same problem in reverse: no operational visibility into applicants, manual sign-up tracking, and no feedback loop on whether opportunities actually filled. *
+> *Host agencies face the same problem in reverse: no operational visibility into applicants, manual sign-up tracking, and no feedback loop on whether opportunities actually filled.*
 
 ## 3. Data Analysis & Evidence 
 
@@ -67,43 +65,22 @@ Prior to OTEP, all applications went through standalone FormSG links distributed
 
 **STIP vs Gig split:**
 
-- 
-
-STIPs: 4,056 vacancies vs 6,411 sign-ups — this is where OTEP’s application standardisation has the biggest impact by volume
-
-- 
-
-Gigs: 696 vacancies vs 686 sign-ups — roughly balanced; concentrated in Q2 with near-zero in Q4
+- STIPs: 4,056 vacancies vs 6,411 sign-ups — this is where OTEP’s application standardisation has the biggest impact by volume
+- Gigs: 696 vacancies vs 686 sign-ups — roughly balanced; concentrated in Q2 with near-zero in Q4
 
 **Data caveat:**
 
-- 
-
-This dataset captures sign-ups/interest, not attendance or confirmed fill rates. Attendance data is incomplete and not tracked centrally.
-
-- 
-
-What we can claim: scale of officer demand and supply capacity. What we cannot claim from this data alone: actual fill rates or conversion to confirmed placements.
-
-- 
-
-FormSG submission volumes (channel baseline for OTEP migration target) still to be pulled by Engineering.
+- This dataset captures sign-ups/interest, not attendance or confirmed fill rates. Attendance data is incomplete and not tracked centrally.
+- What we can claim: scale of officer demand and supply capacity. What we cannot claim from this data alone: actual fill rates or conversion to confirmed placements.
+- FormSG submission volumes (channel baseline for OTEP migration target) still to be pulled by Engineering.
 
 ## 4. Market / Benchmark Scan
 
 **Purpose:** Avoid reinventing the wheel. Find out how other teams or companies solves a similar problem. Designers can help with this. 
 
-- 
-
-How do others solve this? 
-
-- 
-
-Known best practices or patterns
-
-- 
-
-What we should copy vs avoid
+- How do others solve this? 
+- Known best practices or patterns
+- What we should copy vs avoid
 
 **Table (optional):**
 
@@ -124,9 +101,7 @@ What we should copy vs avoid
 
 **Purpose:** Make your belief explicit and testable.
 
-> 
-
-If we provide a unified Opportunities Hub within OTEP *[capability]*, then government officers *[user]* will be able to discover and apply for development opportunities in one place, without relying on informal networks or navigating multiple systems *[new behaviour]*, leading to increased application completion rate and channel migration from FormSG to OTEP *[measurable outcome]*.
+> If we provide a unified Opportunities Hub within OTEP *[capability]*, then government officers *[user]* will be able to discover and apply for development opportunities in one place, without relying on informal networks or navigating multiple systems *[new behaviour]*, leading to increased application completion rate and channel migration from FormSG to OTEP *[measurable outcome]*.
 
 ## 7. Success Metrics
 
@@ -134,37 +109,19 @@ If we provide a unified Opportunities Hub within OTEP *[capability]*, then gover
 
 **7.1  Outcome Metrics (North Star)**
 
-- 
-
-Application Completion Rate — forms submitted ÷ Apply button clicks × 100
-
-- 
-
-Channel migration: ≥50% of total STIP/Gigs applications submitted via OTEP by Month 3
+- Application Completion Rate — forms submitted ÷ Apply button clicks × 100
+- Channel migration: ≥50% of total STIP/Gigs applications submitted via OTEP by Month 3
 
 **7.2  Input Metrics**
 
-- 
-
-% of Click-through rate (listing page → detail page)
-
-- 
-
-% of Apply click rate (detail page → form)
-
-- 
-
-% of Form field drop-off rate: no single field should cause abandonment
+- % of Click-through rate (listing page → detail page)
+- % of Apply click rate (detail page → form)
+- % of Form field drop-off rate: no single field should cause abandonment
 
 **7.3  Guardrail Metrics (Events that will lead to rollback or pause)**
 
-- 
-
-% of Submission error rate → pause and investigate (Engineering)
-
-- 
-
-% of Confirmation email delivery rate → escalate to Infra 
+- % of Submission error rate → pause and investigate (Engineering)
+- % of Confirmation email delivery rate → escalate to Infra 
 
 ## 8. Scope (Stories + Success Criteria)
 
@@ -195,51 +152,20 @@ Channel migration: ≥50% of total STIP/Gigs applications submitted via OTEP by 
 
 **Purpose:** Shipping ≠ adoption. Think of what you need to do to drive adoption and scale. 
 
-- 
-
-Target launch group: 1-2 Agencies that actively post Gigs
-
-  - 
-
-prefer agencies with:
-
-    - 
-
-higher posting volume
-
-    - 
-
-willing HR partner
-
-- 
-
-Comms plan:
-
-- 
-
-Training / enablement:
-
-- 
-
-Change management:
-
-- 
-
-Support model:
+- Target launch group: 1-2 Agencies that actively post Gigs
+  - prefer agencies with:
+    - higher posting volume
+    - willing HR partner
+- Comms plan:
+- Training / enablement:
+- Change management:
+- Support model:
 
 **Phases:**
 
-- 
-
-Pilot: When
-
-- 
-
-Scale: When
-
-- 
-
-Steady state: When 
+- Pilot: When
+- Scale: When
+- Steady state: When 
 
 ## 10. Risks, Assumptions & Mitigations
 
@@ -274,5 +200,5 @@ System Dependencies
 | **Decision required** | **Owner** | **Review date** | **Status** |
 |---|---|---|---|
 | Steering approval to proceed with Opportunities MVP build | PS/DS | **2 April 2026** | *Approved on 2 April* |
-| **US-09 - Apply for a STIP or Gig via FormSG link**    **Auto-Populated Fields:** The BO also noted that since the officer must log into OTEP before signing up, the system should capture their basic profile information on the backend so they do not have to manually fill it out again. These fields include:   -   Full Name   -   Designation   -   Division & Department   -   Ministry / Agency   -   Work Email |  |  |  |
-| ## ** Proposed changes for Application fields (for MVP, we keep it as current ie no changes to the FormSG forms)    **Fields to Retain / Add:**   -   **Contact Number**.   -   **Reporting Officer’s Name and Email:** These are retained specifically to trigger an automated email notifying the supervisor of the application, helping keep the process transparent and combat dropout rates.   -   **Job Grade:** This replaces the legacy question asking if the officer is an individual contributor or team leader. It will be a dropdown list of MX grades with an "Others" option for non-MX tracks.   -   **Main reason for application**.   -   **Meet pre-requisites**.   -   **Declarations:** Retained, though the BO noted that different sets of declarations may be needed depending on whether the posting is a STIP or a Gig.   -   **Custom Questions:** The BO requested functionality allowing opportunity posters to add custom questions for their specific postings, similar to the FormSG form builder.      **Fields to Drop:**   -   **HR Officer’s Name and Email:** Dropped because this information was rarely utilized and often caused confusion for applicants.   -   **"Where did you find out about this opportunity?":** Dropped because all traffic will now route centrally through OTEP. |  |  |  |
+| **US-09 - Apply for a STIP or Gig via FormSG link**<br><br>**Auto-Populated Fields:** The BO also noted that since the officer must log into OTEP before signing up, the system should capture their basic profile information on the backend so they do not have to manually fill it out again. These fields include:<br>- Full Name<br>- Designation<br>- Division & Department<br>- Ministry / Agency<br>- Work Email |  |  |  |
+| **Proposed changes for Application fields** (for MVP, we keep it as current ie no changes to the FormSG forms)<br><br>**Fields to Retain / Add:**<br>- **Contact Number**.<br>- **Reporting Officer’s Name and Email:** These are retained specifically to trigger an automated email notifying the supervisor of the application, helping keep the process transparent and combat dropout rates.<br>- **Job Grade:** This replaces the legacy question asking if the officer is an individual contributor or team leader. It will be a dropdown list of MX grades with an "Others" option for non-MX tracks.<br>- **Main reason for application**.<br>- **Meet pre-requisites**.<br>- **Declarations:** Retained, though the BO noted that different sets of declarations may be needed depending on whether the posting is a STIP or a Gig.<br>- **Custom Questions:** The BO requested functionality allowing opportunity posters to add custom questions for their specific postings, similar to the FormSG form builder.<br><br>**Fields to Drop:**<br>- **HR Officer’s Name and Email:** Dropped because this information was rarely utilized and often caused confusion for applicants.<br>- **"Where did you find out about this opportunity?":** Dropped because all traffic will now route centrally through OTEP. |  |  |  |
