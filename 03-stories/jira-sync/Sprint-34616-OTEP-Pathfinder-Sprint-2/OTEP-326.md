@@ -20,5 +20,10 @@ _No subtasks._
 
 ## Latest Comments
 
+**Michelle Yip** (2026-05-22)
+[22 May] Use LifeSG error page
+
+---
+
 **Pow Hwee TAN (PSD)** (2026-05-21)
 I think this page is not about ‘no results’, but some kind of error 500 or 404.  A system error handling page,
