@@ -50,4 +50,4 @@
 | 2026-05-22 | POCDEX epic to be created and owned by Michelle | Centralises tracking of all POCDEX dependencies. | Michelle |
 | 2026-05-22 | Design lock date for Sprint 2 set to today (2026-05-22) | Prevents mid-sprint design churn. Agreed with Amber. | Michelle |
 | 2026-05-22 | Submit `careercompass.gov.sg` as intranet URL for WOG AD Login | Tactical move by Adrian to unblock onboarding and start the 2-4 week approval clock immediately. Single URL policy investigation continues separately. | Fabian / Pow Hwee |
-| 2026-05-22 | Team Capacity Update: New fullstack dev joining Sprint 4; Léo on leave S7-S10 | Injects much-needed backend velocity from Sprint 4 onwards. Handover planning required for Léo's S7-S10 leave. | Michelle / Pow Hwee |
+| 2026-05-22 | Team Capacity Update: Fullstack dev from Core squad joining Sprint 4; Léo on leave S7-S10 | Injects much-needed backend velocity from Sprint 4 onwards (pending Rama/Pow Hwee confirmation). Handover planning required for Léo's S7-S10 leave. | Michelle / Pow Hwee |

@@ -12,18 +12,9 @@
 
 ### Ceremony Prep
 
-**Today (Fri 22 May) — Squad Sync + Sprint 2 Weekly Retro (16:00)**
-- Bring unresolved DoR blockers from `04-ceremonies/sprint-checklists.md`
-- Priority ask: design lock date (#22) — get Amber to commit to a specific date before 16:00 retro
-- Run `/retro` for the 16:00 Weekly Retro session
-
 ### From Slack
-- [A] Send Slack update to Jace & Adrian regarding POCDEX Epic and WOG AD → already done
-- [A] Send meeting invite to Daryll for the POCDEX Timeline & Support Sync → open-items #31
-- [A] Create the new "POCDEX Integration" Epic in Jira and move OTEP-271, 203, 202, 127 under it → open-items #31
 
 ### From Teams
-- [A] 
 
 ### From Email
 
@@ -41,7 +32,16 @@
 
 > Tagged items not yet moved to their destination. Each line ends with `→ where it goes`. Delete once routed.
 
-*(Empty — all items routed. Last cleared 2026-05-15.)*
+*(Empty — all items routed. Last cleared 2026-05-22.)*
+
+*Routing log for 2026-05-22 (Triage Pass 2):*
+- **[A] Run `/retro` for the 16:00 Weekly Retro session** → `tasks-active.md`
+- **[A] Bring unresolved DoR blockers...** → deleted (part of retro routine)
+- **[A] Priority ask: design lock date...** → already addressed (logged in triage pass 1)
+- **[A] Send Slack update to Jace & Adrian...** → deleted (marked "already done")
+- **[A] Send meeting invite to Daryll for the POCDEX Timeline...** → deleted (tracked in `tasks-active.md` & `open-items.md #31`)
+- **[A] Create the new "POCDEX Integration" Epic in Jira...** → `tasks-active.md`
+- **[A] Pow Hwee to Daryll: OTEP code table in UAT read replica is very unclean...** → `open-items.md` #33 & `tasks-active.md`
 
 *Routing log for 2026-05-22:*
 - **[D] POCDEX epic to be created and under Me** → `06-skills-and-decisions/decisions-log.md`

@@ -25,6 +25,9 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## Up Next
 
+- [ ] **Run `/retro` for the 16:00 Weekly Retro session** (Squad Sync + Sprint 2 Weekly Retro)
+- [ ] **Create the new "POCDEX Integration" Epic in Jira** and move OTEP-271, 203, 202, 127 under it
+- [ ] **Follow up with Daryll/Pow Hwee on raising DQ issue** for OTEP code table in UAT read replica
 - [ ] **Work out next steps for WOG AD onboarding with Fabian and Pow Hwee** — following the decision to submit the intranet URL to unblock the process.
 - [ ] **Complete Cybersecurity quiz by 2026-12-31**
 - [ ] **Map out dependencies in high-level Jira stories → `00-hub/risks.md`** — document cross-story dependency map *(captured 2026-05-21)*
