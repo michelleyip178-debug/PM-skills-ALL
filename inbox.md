@@ -39,6 +39,10 @@
 
 *(Empty — all items routed. Last cleared 2026-05-15.)*
 
+*Routing log for 2026-05-22:*
+- **[D] POCDEX epic to be created and under Me** → `06-skills-and-decisions/decisions-log.md`
+- **[I] OTEP-110 Jira ACs and design spec has mismatch, in PM** → `00-hub/open-items.md` #32
+
 *Routing log for 2026-05-15:*
 - **[I] OTEP-202 / OTEP-271 split (POCDEX DB + seed)** → `context/open-items.md` #27 (confirm Sprint 2 carry-over vs backlog at finalisation / planning)
 - **[A] Sharpen Sprint 2 story ACs (Pow Hwee)** → `tasks/active.md` "Up Next"

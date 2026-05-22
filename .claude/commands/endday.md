@@ -17,13 +17,14 @@ Anything unfinished becomes tomorrow's starting point. Be specific — not "cont
 ### Step 3 — One thing I'd do differently
 One honest reflection on today's work. Did I spend time on the right things? Did I avoid a hard conversation? Did I get pulled into detail when I should have stayed strategic?
 
-### Step 4 — PM growth check
-Connect today's work to one of Michelle's three growth areas:
+### Step 4 — PM growth check & Appraisal Evidence
+Connect today's work to one of Michelle's three growth areas (from GOALS.md) OR her Level 2 Manager expectations:
 1. Thinking in outcomes vs requirements
 2. Stakeholder influence and vision
 3. Roadmapping and prioritisation
+4. **Level 2 Manager Evidence:** Ownership, Strategic Alignment, or Culture & Org Influence.
 
-One sentence: what did I practise today, or what did I miss an opportunity to practise?
+One sentence: what did I practise today, what did I miss an opportunity to practise, or what concrete evidence can be saved for the CY appraisal?
 
 ---
 
@@ -45,5 +46,5 @@ Save as: `outputs/endday-YYYY-MM-DD.md`
 **One thing I'd do differently:**
 [One honest sentence]
 
-**PM growth check:**
-[One sentence connecting today to a growth area]
+**PM growth & appraisal check:**
+[One sentence connecting today to a growth area or Level 2 Manager evidence]

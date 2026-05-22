@@ -118,3 +118,25 @@ The three gaps I'm closing in the BA→PM transition:
 3. **Roadmapping & prioritization** — develop the muscle to sequence work against outcomes and tradeoffs, not just deliverables.
 
 **Anchor:** Reforge Product Foundations (Phase 1), supplemented by mentor + PM community touchpoints.
+
+---
+
+## Level 2 Manager Expectations (Appraisal CY2026)
+
+These are the criteria for consolidating appraisal evidence:
+
+### Ownership (Own problem outcomes, help peers)
+* Independently own assigned tasks and projects
+* Identify and address issues proactively with minimal guidance, and know when to engage appropriate help
+* Identify opportunities and recommend next steps to improve processes or outcomes in own work
+
+### Strategic Alignment (Align own work with team strategy)
+* Align tasks with team goals and priorities
+* Focus on tasks that provide most expected business value
+* Adapt to changing priorities independently
+
+### Culture and Organizational Influence (Contribute to team culture)
+* Collaborate with peers and stakeholders to ensure tasks are executed effectively
+* Address minor conflicts constructively and respectfully
+* Suggest improvements that enhance team effectiveness
+* Share knowledge, resources, as well as successes and failures openly to ensure team success
