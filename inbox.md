@@ -21,8 +21,6 @@
 ### From Teams
 
 ### From Email
-- [A] Prepare for OTG handover checklist to Jobelle. ->  task-log.md
-- [A] Review CEG's test cases for session-notes -> task-log.md
 
 ### From Jira
 
@@ -38,7 +36,11 @@
 
 > Tagged items not yet moved to their destination. Each line ends with `→ where it goes`. Delete once routed.
 
-*(Empty — all items routed. Last cleared 2026-05-22.)*
+*(Empty — all items routed. Last cleared 2026-05-25.)*
+
+*Routing log for 2026-05-25:*
+- **[A] OTG handover checklist for Jobelle** → first draft complete. Move to `tasks-active.md` as Waiting On (Jobelle feedback / next iteration).
+- **[A] CEG test cases coverage review** → reverted to CEG with feedback on intended behaviour coverage. Move to `tasks-active.md` as Waiting On (CEG response).
 
 *Routing log for 2026-05-22 (Triage Pass 2):*
 - **[A] Run `/retro` for the 16:00 Weekly Retro session** → `tasks-active.md`

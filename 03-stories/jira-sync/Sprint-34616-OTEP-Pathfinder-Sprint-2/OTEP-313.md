@@ -1,6 +1,6 @@
 # OTEP-313: OTG raw ingest table and source model
 
-**Status:** Backlog
+**Status:** In Progress
 **Assignee:** Léo Milbor
 **Story Points:** N/A
 

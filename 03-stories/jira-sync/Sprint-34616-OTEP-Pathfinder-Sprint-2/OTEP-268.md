@@ -1,6 +1,6 @@
 # OTEP-268: Empty, error, and partial-load states for the listing
 
-**Status:** Backlog
+**Status:** In Progress
 **Assignee:** N/A
 **Story Points:** N/A
 
