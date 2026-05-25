@@ -1,6 +1,6 @@
 # OTEP-320: Replace mock /opportunities endpoint with real db access
 
-**Status:** In Progress
+**Status:** QA
 **Assignee:** Léo Milbor
 **Story Points:** N/A
 

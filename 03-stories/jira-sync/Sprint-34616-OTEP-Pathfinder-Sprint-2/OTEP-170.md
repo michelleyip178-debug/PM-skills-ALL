@@ -1,6 +1,6 @@
 # OTEP-170: Base Layout for Opportunity Listing Page
 
-**Status:** In Progress
+**Status:** QA
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 

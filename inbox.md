@@ -12,11 +12,17 @@
 
 ### Ceremony Prep
 
+**Mon 25 May — Mid-Sprint Review**
+- Run `/mid-sprint-review` (morning of)
+- Tick resolved blockers in `sprint-checklists.md`
+
 ### From Slack
 
 ### From Teams
 
 ### From Email
+- [A] Prepare for OTG handover checklist to Jobelle. ->  task-log.md
+- [A] Review CEG's test cases for session-notes -> task-log.md
 
 ### From Jira
 

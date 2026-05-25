@@ -1,6 +1,6 @@
 # OTEP-325: Create an empty state for opportunity listing
 
-**Status:** Backlog
+**Status:** In Progress
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 

@@ -1,6 +1,6 @@
 # OTEP-193: Design Data Model for Opportunities
 
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Léo Milbor
 **Story Points:** N/A
 

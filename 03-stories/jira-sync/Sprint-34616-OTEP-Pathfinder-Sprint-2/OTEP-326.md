@@ -1,6 +1,6 @@
 # OTEP-326: Create an error state for opportunity listing
 
-**Status:** Backlog
+**Status:** In Progress
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 
