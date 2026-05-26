@@ -26,6 +26,18 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 ## Up Next
 
 - [ ] **Run `/retro` for the 16:00 Weekly Retro session** (Squad Sync + Sprint 2 Weekly Retro)
+- [ ] **Design PostHog OKR + metric instrumentation** — Rama completed tooling evaluation; PostHog confirmed. Michelle's task: define event taxonomy and metric definitions to measure OTEP OKRs and North Star (50% officers complete a development action by Dec '28). Work with Rama. Deadline: w/c 1 Jun. Relevant to PM appraisal evidence. *(Squad-Sync 2026-05-26)*
+- [ ] **Send post-Design Review async follow-up to Xian Zhang + Jacky** — decisions made, open items with named owners, next steps. P0 from 14:00 Design Review 2026-05-26. *(today)*
+- [ ] **Update FormSG PRD** — remove pre-fill from MVP scope; note R1 direction (native in-OTEP application form). This week, before next grooming. *(Squad-Sync 2026-05-26)*
+- [ ] **Update OTEP-130 in Jira** — re-scope to MVP: basic FormSG redirect + webhook only, no pre-fill. This week. *(Squad-Sync 2026-05-26)*
+- [ ] **Check in with Pathfinder team on current demo state** — what can be shown to users right now? Get the URL and share with the team for early checks. *(Squad-Sync 2026-05-26)*
+- [ ] **Run through with Amber: design-vs-implementation check** — verify the implemented UI matches Amber's intended design. Bring any gaps back to standup before sprint ends. Note Amber also has user testing by end of week — flag potential capacity conflict. *(Squad-Sync 2026-05-26)*
+- [ ] **Check with Acacia on POCDEX data model familiarity** — Pow Hwee flagged Acacia has stronger data model knowledge; loop her in before Daryll session to come prepared. *(Pow Hwee adhoc 2026-05-25)*
+- [ ] **Attend/track Thursday WD×DO job family model discussion** — 29 May 2026. POCDEX requirements depend on its outcome. Capture any implications for Daryll session. *(Pow Hwee adhoc 2026-05-25)*
+- [ ] **Write user story: opportunity matching using competencies** — not yet in backlog. Flagged by Pow Hwee. For Sprint 3 planning. *(Pow Hwee adhoc 2026-05-25)*
+- [ ] **Research in-platform application form vs FormSG** — Pow Hwee proposing Sprint 3 spike; Michelle to research pilot agency customisation needs before spike scoping. Before Sprint 3 planning. *(Pow Hwee adhoc 2026-05-25)*
+- [ ] **WOG Auth success metrics** — committed to Adrian this week. Grounded in Dec '26 OKR baselines from BO deck. Start Thursday at latest. *(daily plan 2026-05-26)*
+- [ ] **OTEP-87 + OTEP-318 AC alignment** — needed before Sprint 3 grooming. If design review didn't cover it, schedule async with Amber. *(daily plan 2026-05-26)*
 - [ ] **Create the new "POCDEX Integration" Epic in Jira** and move OTEP-271, 203, 202, 127 under it
 - [ ] **Follow up with Daryll/Pow Hwee on raising DQ issue** for OTEP code table in UAT read replica
 - [ ] **Work out next steps for WOG AD onboarding with Fabian and Pow Hwee** — following the decision to submit the intranet URL to unblock the process.
