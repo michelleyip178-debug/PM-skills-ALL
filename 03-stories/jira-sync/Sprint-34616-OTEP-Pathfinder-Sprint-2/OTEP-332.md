@@ -1,6 +1,6 @@
 # OTEP-332: Implement shared reference data repository for cross-domain table lookups
 
-**Status:** Backlog
+**Status:** QA
 **Assignee:** Pow Hwee TAN (PSD)
 **Story Points:** N/A
 

@@ -20,5 +20,15 @@ _No subtasks._
 
 ## Latest Comments
 
-**Pow Hwee TAN (PSD)** (2026-05-24)
-Hi Kingsley, *What is implemented:* * Source System: * We will update `source_system` across our endpoints to reflect the original source exactly as it appears in the upstream data (`HRP` or `CUMULUS`) instead of generically returning "pocdex”.  Note that we are returning it as is and not reformatting to otep-only.    * Job ID: *  `job_id` is exposed in `getPosition` payload,     *What we cannot implement* * Flag Synchronization: * `is_primary` and `is_main_position` are passed through exactly as they come from HRP. We cannot artificially synchronize them because real-world HR data edge cases occasionally cause them to diverge. For example, when an officer is on secondment, their primary employment contract remains with their home agency (`is_primary=true`), but the actual position they occupy is at the seconded agency, meaning their home agency position is no longer their active main position (`is_main_position=false`). OTEP must handle this logic and prioritize the correct record. * CUMULUS Array Ordering: * We will not guarantee that the primary employment is always at `[0]` in the `getEmployment` array. This is presentation/consumer logic. OTEP should filter the array on your end for the record where `is_primary == true`. I have created the MRs for these changes (cc    ) https://sgts.gitlab-dedicated.com/wog/psd/pdo/otep/otep-pocdex/-/merge_requests/2 https://sgts.gitlab-dedicated.com/wog/psd/pdo/otep/otep-service/-/merge_requests/49
+**Kingsley Low** (2026-05-25)
+Q1: Noted  Q2: Yes, understood that Pocdex is the “middle layer” between Cumulus + HRP and OTEP. Also get the context where Cumulus do not have the concept of “main position”. Thus my question is simply asking that, will Pocdex handle main position before passing to OTEP. If not, how should OTEP now which one is the main position if multiple position appeared?
+
+---
+
+**Pow Hwee TAN (PSD)** (2026-05-25)
+Q1 - I don't have an answer on this.  I will have to check because it depends on the business decisions that were coded.  Intuitively I would think there shouldn’t be but if that is the case it is a DQ problem on pocdex side.  But I can’t confirm without checking with the current pocdex team.    Is this a blocker to u now? Q2.  You mean you are checking Workday’s own API that they don't have a is_main_position?  The pocdex api provided here is independent of Cumulus or HRP.
+
+---
+
+**Kingsley Low** (2026-05-25)
+Hi    , Thanks for the clarification; noted on the implemented changes from the Pocdex side. I just have a couple of points I'd like to clarify regarding  HRP  and  CUMULUS : HRP:  Based on the Position API, if  is_main_position = true , it will be treated as the main position, regardless of whether the employment's  is_primary  is set to  false . Question:  For HRP, is it possible to have multiple records where  is_main_position = true ? CUMULUS:  Since CUMULUS does not have  is_main_position  in their Position API, we will refer to the  is_primary  field in their  Employment API  instead.
