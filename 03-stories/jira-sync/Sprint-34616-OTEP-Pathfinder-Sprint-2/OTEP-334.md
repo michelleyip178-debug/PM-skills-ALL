@@ -1,6 +1,6 @@
 # OTEP-334: backend endpoint for opportunity detail
 
-**Status:** In Progress
+**Status:** QA
 **Assignee:** Léo Milbor
 **Story Points:** N/A
 
