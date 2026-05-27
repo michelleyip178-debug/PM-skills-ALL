@@ -9,7 +9,7 @@
 
 ## Description
 
-Acceptance Criteria If one or more filters are active, I can see a "Clear all" option. When I click "Clear all", all my filter selections are removed and the full listing is shown again. If no filters are active, "Clear all" is hidden.
+User story:  As an officer who has applied filters, I want to clear them all in one action and return to the full listing. Acceptance Criteria When one or more filters are active, a "Clear all" option is visible. Clicking "Clear all" removes all active filter selections across all filter types and shows the full unfiltered listing. The result count updates to reflect the full unfiltered set. When no filters are active, "Clear all" is not shown. Dependencies OTEP-86 (type filter) OTEP-318 (category filter, conditional on OTEP-289 spike output)
 
 ---
 

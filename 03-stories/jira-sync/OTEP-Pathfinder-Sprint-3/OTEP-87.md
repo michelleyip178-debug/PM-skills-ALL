@@ -1,4 +1,4 @@
-# OTEP-87: View Opportunity Detail
+# OTEP-87: View Opportunity Detail (Internal Jobs, STIPs, Gigs)
 
 **Type:** Story
 **Status:** Backlog
