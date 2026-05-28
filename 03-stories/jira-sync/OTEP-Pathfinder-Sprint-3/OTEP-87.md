@@ -1,34 +1,15 @@
-# OTEP-87: View Opportunity Detail — Enhanced with Apply CTA (Internal Jobs, STIPs, Gigs)
+# OTEP-87: View Careers@Gov Opportunity Detail
 
 **Type:** Story
 **Status:** Backlog
 **Assignee:** N/A
 **Story Points:** N/A
-**Sprint 3 scope note:** Apply CTA only. Competency section is explicitly out of scope for Sprint 3 — deferred to R1.
 
 ---
 
 ## Description
 
-User Story: As an officer, I want to view the complete details of an opportunity and see a clear Apply button, so I can decide whether to apply and take action from the detail page.
-
-**Acceptance Criteria (Sprint 3 scope)**
-
-- Detail page displays all available fields from OTG data: eligibility criteria, duration, developmental outcomes, commitment, duration window, application window.
-- “About this opportunity” section shows what exists in the loaded opportunity. If a mandatory field has no data, it shows “Not specified” — no blank gaps.
-- Apply CTA is visible without scrolling to the bottom of the page.
-- Apply CTA is shown for Internal Jobs, STIPs, and Gigs. No Apply button on SJR detail pages.
-- I can navigate back to the listing and my search and filter state is exactly as I left it.
-
-**Out of Scope (Sprint 3)**
-
-- Competency section (competencies I already match, competencies I can develop) — deferred to R1.
-- Competency match ratio for Jobs (“X / Y competencies matched”) — deferred to R1.
-- “What you’ll develop” labelling for Gigs and STIPs — deferred to R1.
-
-**Dependencies**
-
-- OTEP-319 (Apply via FormSG redirect) — apply CTA wires to OTEP-319 logic.
+User story:  As an officer viewing an opportunity, I want to see a clear Apply button without hunting for it, so I can start my application from the detail page. Sprint 3 scope: Apply CTA only. Competency section is deferred — see Out of Scope below. Acceptance Criteria The Apply CTA is visible - no scrolling needed to find it. For Internal Jobs, STIPs, and Gigs: Apply button is shown and triggers the FormSG redirect (OTEP-319). If  formsg_url  is missing: replace Apply button with “Application form unavailable — contact the posting agency.” If a mandatory display field has no data: show “Not specified.” When I navigate back to the listing (clicking on the “back” link (not- browser)), my filter and pagination state is exactly as I left it. Out of Scope (Sprint 3) Competency match section — deferred pending open item #18 (officer competency data model from Imelda’s squad) Proficiency-level matching Personalisation of any kind For SJRs: no Apply button. Show: “Applications for secondments are managed externally.”
 
 ---
 
