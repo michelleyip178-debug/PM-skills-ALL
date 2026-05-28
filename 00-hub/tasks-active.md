@@ -27,7 +27,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 - [ ] **Run `/retro` for the 16:00 Weekly Retro session** (Squad Sync + Sprint 2 Weekly Retro)
 - [ ] **Design PostHog OKR + metric instrumentation** — Rama completed tooling evaluation; PostHog confirmed. Michelle's task: define event taxonomy and metric definitions to measure OTEP OKRs and North Star (50% officers complete a development action by Dec '28). Work with Rama. Deadline: w/c 1 Jun. Relevant to PM appraisal evidence. *(Squad-Sync 2026-05-26)*
-- [ ] **Send post-Design Review async follow-up to Xian Zhang + Jacky** — decisions made, open items with named owners, next steps. P0 from 14:00 Design Review 2026-05-26. *(today)*
+- [x] **Send post-Design Review async follow-up to Xian Zhang + Jacky** — sent 2026-05-28. ✅
 - [ ] **Update FormSG PRD** — remove pre-fill from MVP scope; note R1 direction (native in-OTEP application form). This week, before next grooming. *(Squad-Sync 2026-05-26)*
 - [ ] **Update OTEP-130 in Jira** — re-scope to MVP: basic FormSG redirect + webhook only, no pre-fill. This week. *(Squad-Sync 2026-05-26)*
 - [ ] **Check in with Pathfinder team on current demo state** — what can be shown to users right now? Get the URL and share with the team for early checks. *(Squad-Sync 2026-05-26)*

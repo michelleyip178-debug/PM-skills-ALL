@@ -17,7 +17,7 @@ User story:  As an officer, I want to filter the listing by opportunity type so 
 
 | Key | Summary | Status |
 |-----|---------|--------|
-| OTEP-92 | Tracking | Backlog |
+| OTEP-92 | Tracking | Removed from board (2026-05-28) |
 
 ---
 

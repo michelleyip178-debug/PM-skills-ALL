@@ -1,6 +1,6 @@
 # OTEP-128: View opportunity detail page
 
-**Status:** Backlog
+**Status:** In Progress
 **Assignee:** N/A
 **Story Points:** N/A
 
