@@ -1,3 +1,5 @@
+> ⚠️ Superseded — OTEP-88 is confirmed in Jira Sprint 3 (Sprint 34617). Canonical copy: `OTEP-Pathfinder-Sprint-3/OTEP-88.md`.
+
 # OTEP-88: Identify Careers@Gov listings
 
 **Type:** Story

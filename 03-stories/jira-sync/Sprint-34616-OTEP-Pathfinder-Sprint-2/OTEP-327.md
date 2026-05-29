@@ -1,6 +1,6 @@
 # OTEP-327: Opportunity detail page using design system 
 
-**Status:** Backlog
+**Status:** In Progress
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 

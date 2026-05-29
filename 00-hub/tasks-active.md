@@ -1,7 +1,7 @@
 # Active Tasks
 
-Current sprint: **Sprint 2 (May 18 – May 29)** — Opportunities Listing → Detail end-to-end.
-Jira sync 2026-05-20: **In Progress:** OTEP-170 (Thomas), OTEP-193 (Léo), OTEP-288 (Léo), OTEP-296 (Michelle) · **Done:** OTEP-252 (Thomas) · **Backlog:** OTEP-85, OTEP-128, OTEP-129, OTEP-267, OTEP-268, OTEP-289, OTEP-194, OTEP-276, OTEP-295.
+Current sprint: **Sprint 2 closing (ceremonies Fri 29 May) → Sprint 3 starts Mon 2 Jun.**
+Jira sync 2026-05-29: **In Progress:** OTEP-267 (Thomas), OTEP-313 (Léo), OTEP-322 (Rathika), OTEP-327 (Thomas) · **In QA:** OTEP-170, OTEP-314, OTEP-320, OTEP-325, OTEP-326, OTEP-303, OTEP-332, OTEP-334 · **Done:** OTEP-193, OTEP-252, OTEP-288, OTEP-296, OTEP-194.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
@@ -9,24 +9,29 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 2 Week 1 kick-off. Unblock Pow Hwee on data model and file import (#24), run Squad Grooming, lock design lock date (#22) with Amber.
+**Theme:** Sprint 2 close ceremonies (Fri 29 May). Sprint 3 starts Mon 2 Jun. Key gates: Amber's Figma audit (needs Rama answer), pilot agency restriction decision (Michelle), job family meeting outcomes capture.
 
 ---
 
 ## In Progress
 
-**Engineering (Jira — as of 2026-05-20):**
-- [ ] **OTEP-170** (Thomas) — Base layout for Opportunity Listing Page. MR in progress.
-- [ ] **OTEP-193** (Léo) — Design data model for Opportunities. .sql migration + Go structs. ⚠️ Must align with OTEP-296.
-- [ ] **OTEP-288** (Léo) — Setup simple backend endpoint with in-memory list. ⚠️ WIP risk — Léo has 2 In Progress items. New comment 2026-05-19.
-- [x] **OTEP-296** (Michelle) — Prepare defined report format matching data model. Standardises OTG Excel format.
+**Engineering (Jira — as of 2026-05-29):**
+- [ ] **OTEP-267** (Thomas) — Pagination for listing page.
+- [ ] **OTEP-313** (Léo) — OTG raw ingest table and source model.
+- [ ] **OTEP-327** (Thomas) — Opportunity detail page using design system.
+- [ ] **OTEP-322** (Rathika) — Setup Playwright E2E Testing Framework.
+
+**In QA:** OTEP-170 (base layout), OTEP-314 (detail page), OTEP-320 (replace mock endpoint), OTEP-325/326 (empty/error states), OTEP-303 (POCDEX field check), OTEP-332 (reference data repo), OTEP-334 (backend detail endpoint).
 
 ---
 
 ## Up Next
 
-- [ ] **Run `/retro` for the 16:00 Weekly Retro session** (Squad Sync + Sprint 2 Weekly Retro)
-- [ ] **Design PostHog OKR + metric instrumentation** — Rama completed tooling evaluation; PostHog confirmed. Michelle's task: define event taxonomy and metric definitions to measure OTEP OKRs and North Star (50% officers complete a development action by Dec '28). Work with Rama. Deadline: w/c 1 Jun. Relevant to PM appraisal evidence. *(Squad-Sync 2026-05-26)*
+- [ ] **Email DDs on PSC — send today (Fri 29 May, this afternoon)** — stakeholder update email on PSC matters. Hard deadline today.
+- [ ] **Prepare Jobelle handover** — Jobelle joins 3 Jun. Step 1: share Phoebe's copy first. Step 2: share Daniel's handover after 30–60 days (i.e. ~3 Jul–3 Aug).
+- [ ] **Follow up on session-notes test cases** — no hard due date; follow up when opportunity arises.
+- [ ] **Revert to Clarissa by 4 Jun — Malaysian NRIC + downstream OTG impact** — Clarissa needs confirmation by Thu 4 Jun. Assess downstream OTG impact before responding.
+- [ ] **Design PostHog OKR + metric instrumentation** — Rama scheduling a call w/c 2 Jun to work through event taxonomy together. Attend and define metric definitions to measure OTEP OKRs and North Star. *(Squad-Sync 2026-05-26; updated 2026-05-29)*
 - [x] **Send post-Design Review async follow-up to Xian Zhang + Jacky** — sent 2026-05-28. ✅
 - [ ] **Update FormSG PRD** — remove pre-fill from MVP scope; note R1 direction (native in-OTEP application form). This week, before next grooming. *(Squad-Sync 2026-05-26)*
 - [ ] **Update OTEP-130 in Jira** — re-scope to MVP: basic FormSG redirect + webhook only, no pre-fill. This week. *(Squad-Sync 2026-05-26)*
@@ -40,31 +45,16 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [ ] **OTEP-87 + OTEP-318 AC alignment** — needed before Sprint 3 grooming. If design review didn't cover it, schedule async with Amber. *(daily plan 2026-05-26)*
 - [ ] **Create the new "POCDEX Integration" Epic in Jira** and move OTEP-271, 203, 202, 127 under it
 - [ ] **Follow up with Daryll/Pow Hwee on raising DQ issue** for OTEP code table in UAT read replica
-- [ ] **Work out next steps for WOG AD onboarding with Fabian and Pow Hwee** — following the decision to submit the intranet URL to unblock the process.
+- [ ] **Work out next steps for WOG AD onboarding with Fabian and Pow Hwee** — OTEP-350 (Onboard WOG AD, Fabian Peh) now in Sprint 3; coordinate next steps.
 - [ ] **Complete Cybersecurity quiz by 2026-12-31**
 - [ ] **Map out dependencies in high-level Jira stories → `00-hub/risks.md`** — document cross-story dependency map *(captured 2026-05-21)*
-- [ ] **Do up the OTG report in Excel format and share to Leo via the user story** — include sample records *(captured 2026-05-21)*
 - [x] **Ping Adrian — WOG AD onboarding**: Domain is `careercompass.gov.sg`. Two asks: (1) COMET onboarding status — is ESG/OTEP onboarded? (2) Approval to test against WOG AD Prod. ✅ Pinged 2026-05-21. Waiting on response. (#26)
 - [ ] **Sync with Imelda (OTEP-Core Squad PM)** — four asks: (1) Who owns passing documents to CSC after WOG AD completes — her squad, Pathfinder, or joint? (#30) (2) How does OTEP consume job family, job function, agency, competency data from her squad — API? file? push? (#18) (3) Schema + field names for that reference data? (4) Timeline — when is it available for OTEP to integrate? (#18)
-- [ ] **Schedule POCDEX planning session with Daryll** — POCDEX team lead. First project with POCDEX API, support not settled. Must happen before Sprint 4 planning. Loop Pow Hwee in. (#31)
+- [ ] **Schedule POCDEX planning session with Daryll** — POCDEX team lead. Must happen before Sprint 4 planning. Loop Pow Hwee in. (#31)
 - [ ] **Create high-level dependency stories** (Pow Hwee's ask from Teams thread) — one placeholder story each for POCDEX go-live prep (#31), WOG AD onboarding (#26), CSC SSO (#30). No ACs yet — titles and sprint-window targets in Jira.
-- [ ] **Run `/groom-prep`** — today (Wed 20 May) afternoon; Backlog Grooming is tomorrow 14:00 (L11 Anson)
-- [ ] **Chase Pow Hwee on #23** — harmonised data model (OTG + C@G); Léo is building OTEP-193 now, alignment is urgent
-- [x] **Share OTG opportunity reports (Excel files) with the team** — resolved 2026-05-18, open item #24 closed
 - [x] **[PM action — #28] Confirm OTEP-85 visibility rule** — resolved 2026-05-19: `closing_date > today`; "Closing soon" badge (≤7 days) is OTEP-129's
 - [x] **[PM action — #29] Define OTEP-289 ACs, timebox, expected outcome** — resolved 2026-05-19: 2-day timebox, written recommendation output
-- [ ] **[PM action] Clean OTEP-128 AC** — remove "This opportunity is closed" notice AC from OTEP-128 (it belongs to OTEP-129). Raise with Pow Hwee at grooming.
-- [ ] **Heads-up to Thomas: OTEP-285 absorbed into OTEP-128, OTEP-276 resolved.** No new Sprint 3 ticket needed for OTEP-285.
-- [ ] **Sharpen ACs for Sprint 2 stories** — OTEP-85, OTEP-128, OTEP-267 before tomorrow's grooming; cross-check [sprint-checklists.md](../04-ceremonies/sprint-checklists.md)
-- [ ] Consolidate sprint stories + ACs into a doc for Rethna (ThoughtWorks QA)
-- [ ] Run test script review session with Rethna — story by story against AC; log gaps before sign-off
-- [ ] Chase Rama on `formsg_url` (#2) — last unconfirmed OTG field. Blocks US-18 (Sprint 3).
-- [ ] **[Carry-over] OTEP-192 & OTEP-193** — Design data model and file import job (Sprint 2 blockers; NOT yet on Sprint 2 board — confirm placement with Pow Hwee)
-- [ ] **[Carry-over] OTEP-202, OTEP-203, OTEP-271** — POCDEX seed DB, API service, local DB — NOT on Sprint 2 board; confirm Sprint 2 vs Sprint 3 placement with Pow Hwee (open item #27)
-- [ ] **[Carry-over] OTEP-194** — FormSG integration discovery (Thomas, in Sprint 2 Backlog)
-- [ ] Clarify OTEP-133 email deep-link: OTEP auto-sends or manually composed link? Determines notification service scope (#15) — Sprint 4+, low priority
-- [ ] Clarify OTEP-130 auto-populate: backend capture only (MVP) or programmatic pre-fill (R1)? Confirm with Pow Hwee (#14) — Sprint 3
-- [ ] Validate categorisation hybrid model (Option C) with Adrian on officer-facing labelling
+- [ ] **[PM action] Clean OTEP-128 AC** — remove "This opportunity is closed" notice AC from OTEP-128 (it belongs to OTEP-129).
 - [ ] Loop Diana into opportunities decisions going forward (Jace's call, PM Weekly 11 May); add `06-skills-and-decisions/stakeholders/people/diana.md`
 - [ ] Load Adrian's OKR doc into NotebookLM — confirm it isn't already `06-skills-and-decisions/otep-roadmap-okrs-2627.md`
 - [ ] Clarify the "OTG test cases — session notes co-innovation" request, then route to `projects/otg-ops/task-log.md`
@@ -90,7 +80,12 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## Done This Sprint
 
-- [x] **OTEP-252** — Setup design system in otep-web (Thomas). Done in Jira as of Sprint 2 start. Sub-task of OTEP-276 spike — design system foundation complete.
+- [x] **OTEP-193** (Léo) — Design data model for Opportunities. Done ✅
+- [x] **OTEP-288** (Léo) — Setup simple backend endpoint with in-memory list. Done ✅
+- [x] **OTEP-296** (Michelle) — Prepare defined report format matching data model. Done ✅
+- [x] **OTEP-252** — Setup design system in otep-web (Thomas). Done ✅
+- [x] **OTEP-194** — FormSG integration discovery (Thomas). Done ✅
+- [x] **OTG sync cadence decision** — D-016 logged 2026-05-29. One-time port only; no ongoing automated sync. See open-items #34.
 - [x] **OTEP-190 — Simple auth through Keycloak** done (Fri 15 May, finalisation day). Closes the Sprint 1 auth goal.
 - [ ] ~~OTEP-170 base listing page layout and navbar MR completed (May 15)~~ — **reverted to In Progress** (Jira shows In Progress; MR not yet merged)
 - [x] OTEP-173 (Auth exploration), OTEP-183 (POCDEX spike), and OTEP-223 (OTG data preparation) completed (May 15)
@@ -120,4 +115,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-05-18 — Jira comment sync. Scope changes applied (OTEP-285 absorbed, OTEP-129/268 re-added, OTEP-191 deprioritised). Three new PM action items added: #28 OTEP-85 visibility, #29 OTEP-289 ACs/timebox, OTEP-128 AC cleanup.*
+*Updated: 2026-05-29 — Jira live sync (Board 12541). Sprint 2 final state captured. ~15 stale/past-event items archived. Sprint 3 starts Mon 2 Jun.*

@@ -1,6 +1,6 @@
 # OTEP-314: Opportunity detail page consuming OTEP-295 response shape
 
-**Status:** In Progress
+**Status:** QA
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 

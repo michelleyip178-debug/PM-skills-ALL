@@ -77,7 +77,7 @@
 | Ceremony | Date |
 |----------|------|
 | Sprint Start | Mon 01 Jun |
-| Squad Grooming (internal) | Tue 03 Jun |
+| Squad Grooming (internal) | Wed 03 Jun |
 | Mid-Sprint Check-in | Wed 04 Jun |
 | Backlog Grooming (Sprint 4) | Thu 05 Jun |
 | OTEP Squad Sync | Fri 06 Jun |

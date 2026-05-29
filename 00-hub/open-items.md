@@ -27,6 +27,8 @@
 | 31 | POCDEX go-live prep — first project using POCDEX API; support structure not settled. Need planning session with Daryll (POCDEX team lead). OTEP-202 (seed database) has no sprint assigned — needed before Sprint 4 ringfencing (OTEP-127). **New (2026-05-22):** Imelda's squad also depends on POCDEX (Epic 1 officer profile, Epic 2 competency personalisation, Epic 3 course recommendations). Both squads competing for Daryll's team. Make clear in the planning session which squad's use cases have priority and whether Daryll's team can support both simultaneously. | Michelle | Before Sprint 4 planning | POCDEX plumbing (Sprint 3: OTEP-271/203) can't be validated without Daryll's team. Ringfencing (OTEP-127) blocked without seed data (OTEP-202). If POCDEX is deprioritised toward Imelda's squad, Sprint 4 ringfencing slips. | 🔴 Open |
 | 32 | OTEP-110 Jira ACs and design spec mismatch | Michelle | Before Sprint 4 | Conflicting requirements block implementation | 🔴 Open |
 | 33 | UAT read replica code table is very unclean. Need to raise DQ (Data Quality) issue to de-risk development/UAT and data alignment. | Pow Hwee / Daryll | Before UAT | Dirty data blocks testing and data alignment | 🔴 Open |
+| 34 | OTG sync cadence after initial import — ongoing automated sync or one-time only? | Michelle / Pow Hwee | Decided 2026-05-29 | Gates OTG ingestion design for Sprint 3 (OTEP-192/OTEP-348) and Fanxu's bulk import scope | ✅ Resolved — one-time port only; no ongoing automated sync. Pilot agencies driven to adopt Compass directly. See D-016. |
+| 35 | OTEP-358 [Spike] Robust nil-date handling for OTG Excel import — "00/01/1900" currently intercepted as a one-off string match in `internal/service/opportunity/otg`. Spike to investigate: all OTG nil-date sentinels, correct parser/mapper/validation layer, and permanent approach. Output = written recommendation + follow-up story or PR. Timebox: 2 days. | Léo / Michelle | Before Sprint 4 planning | Current hardcoded fix is fragile — breaks if OTG changes export format or introduces other nil-date values. | 🔴 Open |
 ---
 
 ## Resolved items
@@ -54,4 +56,4 @@
 
 ---
 
-*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-22 (#18 updated with reference data schema agenda item; #31 updated with Imelda squad cross-dependency on POCDEX; #32 added).*
+*New items: append the next number (don't renumber — `risks.md` and `scoping-gaps-tracker.md` reference these by #). Last updated: 2026-05-29 (#35 added — nil-date spike).*

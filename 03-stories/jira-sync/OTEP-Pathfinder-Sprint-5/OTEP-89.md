@@ -1,3 +1,5 @@
+> ⚠️ Superseded — OTEP-89 moved to Sprint 3 per live Jira (2026-05-29). Canonical copy: `OTEP-Pathfinder-Sprint-3/OTEP-89.md`.
+
 # OTEP-89: View Careers@Gov Job (Deep-Link)
 
 **Type:** Story

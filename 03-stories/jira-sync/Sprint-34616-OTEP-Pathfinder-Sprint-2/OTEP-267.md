@@ -1,6 +1,6 @@
 # OTEP-267: Pagination for listing page
 
-**Status:** Backlog
+**Status:** In Progress
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 

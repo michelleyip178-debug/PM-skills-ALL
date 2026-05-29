@@ -1,3 +1,5 @@
+> ⚠️ Superseded — OTEP-305 moved back to Sprint 3 per live Jira (2026-05-29). Canonical copy: `OTEP-Pathfinder-Sprint-3/OTEP-305.md`. Confirm with Pow Hwee if Sprint 3 placement is intended.
+
 # OTEP-305: Log out of OTEP
 
 **Type:** Story
