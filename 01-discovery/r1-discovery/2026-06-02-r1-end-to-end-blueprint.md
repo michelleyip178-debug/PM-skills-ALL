@@ -1,9 +1,9 @@
 # R1 Service Blueprint — Opportunity Creation → Application Submission → Review
 
-**Date:** 2026-06-02
-**Product:** CareerCompass (OTEP) — internal talent platform, Singapore Public Service
-**Owner:** Michelle Yip
-**State:** R1 reality (Q1'27 target). Maps the chain as it will actually work in R1, given current decisions.
+**Date:** 2026-06-02  
+**Product:** CareerCompass (OTEP) — internal talent platform, Singapore Public Service  
+**Owner:** Michelle Yip  
+**State:** R1 reality (Q1'27 target). Maps the chain as it will actually work in R1, given current decisions.  
 **Purpose:** The connective tissue between the two existing journey maps. The officer-apply plan and the posting-manager journey each cover one end; this shows the **full chain and the handoff seam** where an application leaves the officer and lands in the manager's queue — the exact point where the World A/B (ATS) fork lives and where integration risk concentrates.
 
 > **Reads with:** [`2026-05-20-r1-discovery-plan.md`](2026-05-20-r1-discovery-plan.md) (officer side), [`journey-map-posting-manager-r1.md`](journey-map-posting-manager-r1.md) (manager side), [`discovery-plan-ats-pivot-2026-05-19.md`](../discovery-plan-ats-pivot-2026-05-19.md) (the ATS fork), [`r1-candidate-list.md`](r1-candidate-list.md) (Conflict C1).
@@ -25,33 +25,36 @@ So "creation → submission" in R1 really means: **OTG creates → CareerCompass
 ## End-to-end chain (both swimlanes)
 
 ```
-  OTG / C@G          CareerCompass (OTEP)              Posting Manager
-  (creation)         (officer-facing)                  (agency-facing)
- ─────────────────────────────────────────────────────────────────────
+  OTG / C@G            CareerCompass (OTEP)            Posting Manager
+  (creation)           (officer-facing)               (agency-facing)
+ ──────────────────────────────────────────────────────────────────────
+
   1. Create posting
-     in OTG  ──ingest──►  2. Posting appears in listing
-                          3. Officer discovers (filter/search/saved)
-                          4. Officer opens detail page
-                          5. Officer clicks Apply
-                             │
-                    ┌────────┴─── THE FORK (C1) ───────────┐
-            World A │ apply in-app (ATS-backed)             │ World B: FormSG redirect
-                    └────────┬──────────────────────────────┘
-                          6. Application submitted
-                             │
-                    ════════ THE SEAM (handoff) ════════
-                             │
-                             ▼
-                                              7. Application lands in manager queue
-                                              8. Manager reviews (POCDEX profile) ⭐
-                                              9. Manager shortlists / updates status
-                             ◄──── status sync ────┘
-                         10. Officer sees status update
-                         11. Decision → notify officer
-                                             12. Manager marks filled / closes
+     in OTG ──ingest──► 2. Posting appears in listing
+                        3. Officer discovers (filter / search / saved)
+                        4. Officer opens detail page
+                        5. Officer clicks Apply
+                              │
+              ┌───────────────┴─── THE FORK (C1) ───────────────┐
+        World A: apply in-app (ATS-backed)      World B: FormSG redirect
+              └───────────────┬─────────────────────────────────┘
+                              │
+                        6. Application submitted
+                              │
+              ═══════════════ THE SEAM (handoff) ═══════════════
+                              │
+                              ▼
+                                          7. Lands in manager queue
+                                          8. Manager reviews profile ⭐
+                                          9. Shortlist / update status
+                              ┌──── status sync ◄────┘
+                              ▼
+                       10. Officer sees status update
+                       11. Decision → notify officer
+                                         12. Manager marks filled / closes
 ```
 
-⭐ = the posting-manager aha moment (structured profile, no HR chase).
+⭐ = the posting-manager aha moment (structured profile, no HR chase).  
 The `════ SEAM ════` is the part neither existing journey map owns. **That is what this blueprint exists to interrogate.**
 
 ---
@@ -121,5 +124,5 @@ The reframe on your original question: in R1, "creation → submission" is reall
 
 ---
 
-*Living document — update when C1 (ATS fork) resolves; that decision rewrites stages 5a-12.*
+*Living document — update when C1 (ATS fork) resolves; that decision rewrites stages 5a-12.*  
 *Source: synthesis of r1-discovery-plan, journey-map-posting-manager-r1, discovery-plan-ats-pivot, r1-candidate-list (C1-C3), user-personas. Current as of 2026-06-02.*
