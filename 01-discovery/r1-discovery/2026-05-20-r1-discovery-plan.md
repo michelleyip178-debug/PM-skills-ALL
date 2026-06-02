@@ -17,6 +17,7 @@
 | Pre-filled applications — STIP, GIG, C@G, Internal Jobs | ✅ In |
 | Pre-filled applications — SJR | ⚠️ Unconfirmed — SJR excluded from MVP entirely (no apply flow, not ingested; D 2026-05-21). Re-introducing SJR apply in R1 is a major new integration track. Needs explicit confirmation (see Scope Concern #3) |
 | Post jobs on ATS | ✅ In |
+| **Agency-native opportunity creation (form in OTEP)** | ✅ **In — moved from R4 (D 2026-06-02).** Net-new lane; needs its own discovery + capacity check. See end-to-end blueprint stage 1a |
 | Status tracking: end-to-end with ATS integration | ✅ In |
 | Application within CareerCompass (no redirects) | ✅ In |
 | Saved Jobs | ✅ In |

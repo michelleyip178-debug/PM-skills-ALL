@@ -11,6 +11,7 @@ Our current sprints are heavily focused on Epic 4 (Opportunity Discovery) and Ep
 **2. Shaping Release 1 & 2 (Target: Q2 '27)**
 As we move past the MVP into the Q2 2027 OKRs ("Partial Completion of required OTG features"), the focus shifts to engagement and operational efficiency:
 *   **Application Tracking:** The OKR target to reduce **"application status update latency to within 24 hours"** directly informs the theme of Release 1 ("Seamless Application for Opportunities"), which promises a "Click-apply-track" experience with status tracking and an Intelligence Dashboard.
+*   **Agency Posting Creation (moved into R1, 2026-06-02):** R1 now also includes **agency-native opportunity creation** — agency HR authors postings via a structured form inside CareerCompass (the posting lives in OTEP, not OTG). This **supersedes the 2026-05-12 direction that scoped creation to R4** (see decisions-log). It is a material scope expansion ("World B" native path) and pairs the officer-apply experience with the agency-create experience in the same release. ⚠️ Needs BO ratification + a capacity check before R1 grooming; confirm interaction with the ATS decision.
 *   **Early Adoption:** The OKR goal for **20% of onboarded officers to have applied** for at least one opportunity within 6 months of launch means our foundational sprints must ensure a frictionless application process (like Epic 4's FormSG and OTG redirects).
 
 **3. Guiding the Long-Term Ecosystem (Target: Q3 - Q4 '27)**

@@ -14,23 +14,24 @@
 
 Three constraints shape the entire chain. None are negotiable for R1:
 
-1. **Creation stays in OTG.** Agency-side opportunity creation in OTEP is **deferred to R4** (BO Senior Level, 2026-05-12). In R1, postings are created in OTG/C@G and *ingested* into CareerCompass. CareerCompass does not create opportunities in R1.
-2. **The apply mechanism is the ATS fork.** Whether the officer applies *inside* CareerCompass (no redirect) or via FormSG depends on the unresolved **World A vs World B** decision (Conflict C1). This is the single biggest unknown in the chain.
+1. **Creation moves into R1 (changed 2026-06-02).** Agencies now author postings via an **OTEP-native creation form** — the posting lives in OTEP's DB, not OTG. This **supersedes the 2026-05-12 R4 deferral** (see decisions-log). It's the "World B" native path: net-new agency-admin UI, a creation data model, and a validate/publish workflow. Existing OTG/C@G postings still flow in via ingestion alongside it. ⚠️ Material scope expansion — needs BO ratification + a capacity check.
+2. **The apply mechanism is the ATS fork.** Whether the officer applies *inside* CareerCompass (no redirect) or via FormSG depends on the unresolved **World A vs World B** decision (Conflict C1). This is the single biggest unknown in the chain — and it now also touches *creation* (native form vs ATS-owned creation are different builds).
 3. **The handoff is the risk.** Submission → routing → manager-dashboard → status-back-to-officer is the seam. In World A the ATS owns it; in World B OTEP builds it. Either way, this is where R1 succeeds or fails.
 
-So "creation → submission" in R1 really means: **OTG creates → CareerCompass ingests, lists, and applies → application routes to the manager → status flows back.** The genuinely new R1 build is the middle and the seam, not creation.
+So "creation → submission" in R1 now genuinely means end-to-end inside OTEP: **agency creates (native form) → CareerCompass lists → officer applies → application routes to the manager → status flows back.** Existing OTG/C@G postings still ingest in parallel. The new R1 build is now *both* ends (creation + the seam), not just the middle.
 
 ---
 
 ## End-to-end chain (both swimlanes)
 
 ```
-  OTG / C@G            CareerCompass (OTEP)            Posting Manager
-  (creation)           (officer-facing)               (agency-facing)
+  Agency / OTG          CareerCompass (OTEP)            Posting Manager
+  (creation)            (officer-facing)               (agency-facing)
  ──────────────────────────────────────────────────────────────────────
 
-  1. Create posting
-     in OTG ──ingest──► 2. Posting appears in listing
+  1a. Agency authors ─native─► 2. Posting appears in listing
+      posting in OTEP form              ▲
+  1b. OTG/C@G posting ──ingest──────────┘
                         3. Officer discovers (filter / search / saved)
                         4. Officer opens detail page
                         5. Officer clicks Apply
@@ -54,6 +55,8 @@ So "creation → submission" in R1 really means: **OTG creates → CareerCompass
                                          12. Manager marks filled / closes
 ```
 
+**1a is the new R1 work** — agencies create postings natively in OTEP (was R4). 1b (ingest existing OTG/C@G postings) continues in parallel.
+
 ⭐ = the posting-manager aha moment (structured profile, no HR chase).  
 The `════ SEAM ════` is the part neither existing journey map owns. **That is what this blueprint exists to interrogate.**
 
@@ -63,8 +66,9 @@ The `════ SEAM ════` is the part neither existing journey map ow
 
 | # | Stage | Owner | R1 status | The open question |
 |---|-------|-------|-----------|-------------------|
-| 1 | Posting created | OTG/C@G | ✅ Exists today | None — out of OTEP scope until R4 |
-| 2 | Ingested + listed | OTEP | 🟢 MVP (Sprint 2/3) | Sync freshness — "where's my posting?" trust risk (manager Stage 2/7) |
+| **1a** | **Posting authored (native form)** | **OTEP (agency HR)** | 🔴 **NEW R1 build** (was R4) | **Net-new: agency-admin UI, creation data model, validate/publish workflow. Native vs ATS-owned? Who can post? Field schema across types?** |
+| 1b | Posting ingested (existing) | OTG/C@G → OTEP | 🟢 MVP | Continues in parallel with 1a; sync freshness trust risk |
+| 2 | Listed | OTEP | 🟢 MVP (Sprint 2/3) | Native + ingested postings must look consistent in one listing |
 | 3 | Discovery (filter/saved) | OTEP | 🟡 R1 (Saved Jobs, filter persistence) | Activation feature for the Passive Watcher persona |
 | 4 | Detail page | OTEP | 🟢 MVP | C@G detail overlap (OTEP-87/319) |
 | 5 | Apply CTA | OTEP | 🟢 MVP redirect stub | Fake-door signal for A1 (channel choice) |
@@ -98,6 +102,7 @@ What has to be true for the seam to work:
 2. **The 24-hr latency OKR depends on the seam, not the apply flow.** Teams tend to over-invest in the visible apply UX (stage 5a) and under-invest in stage 10 (status back). The OKR lives in the invisible half.
 3. **Three "leap of faith" assumptions cluster on the seam, not the officer experience.** A9 (webhook), A14 (vendor agreement), and the World A/B fork all sit at stages 7/10. The officer-facing assumptions (A1, A2) are real but better understood. **The seam is where discovery effort should concentrate.**
 4. **SJR drops out cleanly.** With SJR excluded from MVP ingestion (D 2026-05-21), it never enters this chain at stage 1. If R1 re-adds it (open Scope Concern #3), it's a *new entry at stage 1* — a full lane, not a tweak.
+5. **Creation (stage 1a) is now the biggest undiscovered lane.** Moving it from R4 into R1 (2026-06-02) added agency-native authoring with zero existing discovery — no journey map, no assumptions, no experiments — on top of an already-tight R1. Combined with native apply and the seam, this is the central delivery-capacity risk: one FE dev, three months, three net-new builds.
 
 ---
 
@@ -105,22 +110,27 @@ What has to be true for the seam to work:
 
 | # | Need | Why | Owner | When |
 |---|------|-----|-------|------|
-| 1 | **Resolve the ATS fork (C1)** — World A vs B decision doc | Unblocks stages 7-12; everything downstream is conditional on it | Michelle → Adrian/Barry | 🔴 This sprint (decision due June) |
-| 2 | **Seam spike** — define routing + status-return for the chosen world | The OKR and the manager persona live here; currently undesigned | Pow Hwee | After C1, Sprint 4-5 |
-| 3 | **Confirm creation is R4** — one-line check with Adrian | Your question implied creation might be R1; current decision says R4. Confirm before assuming | Michelle | 🔴 This week |
-| 4 | **Manager-side validation** — is the posting-manager journey a real R1 commitment or aspirational? | The journey map exists but the persona is unserved in World B. Confirm it's funded | Michelle → Adrian | Before R1 grooming |
-| 5 | **External profile scope (C3)** — who sees it, what fields | Stage 8 (manager review) depends on it; unresolved | Amber + Pow Hwee | R1 grooming kickoff |
-| 6 | **Notification mechanism** — none exists in MVP | Stages 10-11 (status back) need it regardless of World A/B | Pow Hwee | Sprint 4-5 |
+| 1 | **BO ratification + capacity check for creation-in-R1** | Reverses a BO call and is a 2-3x scope add against a 3-month window with one FE dev. Confirm it's real and feasible before anything else | Michelle → Adrian/BO | 🔴 This week |
+| 2 | **Creation-side discovery** — net-new, currently zero | Stage 1a has no journey map, no assumptions, no experiments. Who posts? What fields? Native vs ATS? Approval/publish workflow? | Michelle | 🔴 Before R1 grooming |
+| 3 | **Resolve the ATS fork (C1)** — World A vs B decision doc | Unblocks stages 7-12 *and* decides native-vs-ATS creation; everything is conditional on it | Michelle → Adrian/Barry | 🔴 This sprint (due June) |
+| 4 | **Seam spike** — define routing + status-return for the chosen world | The 24-hr OKR and the manager persona live here; currently undesigned | Pow Hwee | After C1, Sprint 4-5 |
+| 5 | **Manager-side validation** — is the posting-manager journey funded in R1? | Journey map exists but persona is unserved in World B; now even more load-bearing since agencies also create | Michelle → Adrian | Before R1 grooming |
+| 6 | **External profile scope (C3)** — who sees it, what fields | Stage 8 (manager review) depends on it; unresolved | Amber + Pow Hwee | R1 grooming kickoff |
+| 7 | **Notification mechanism** — none exists in MVP | Stages 10-11 (status back) need it regardless of World A/B | Pow Hwee | Sprint 4-5 |
 
-The other R1 discovery experiments (Exp 1-6 in the discovery plan) cover the officer half well. **Items 1, 2, and 4 above are the genuinely missing pieces** — they're all on the manager side and the seam, which is exactly the half your two journey maps don't connect.
+**Items 1 and 2 are the new top priority.** Moving creation into R1 added a whole lane (stage 1a) that has *no discovery at all* — no journey map, no assumption register, no experiments. The officer half (Exp 1-6) is well covered; the seam (items 4-5) was the previous gap; **creation is now a second, larger gap on top.** Before R1 grooming you need a creation-side discovery pass and a hard capacity reality-check, because one FE dev building native creation + native apply + the seam in three months is the central delivery risk.
 
 ---
 
 ## So what
 
-You don't need a new discovery from scratch — you've already mapped both ends. What's missing is the **seam between them**, and a **forced decision on the ATS fork** that determines whether that seam is an integration (World A) or a build (World B). Force C1 first; everything else sequences off it.
+With creation now in R1, the shape of the work changed. You'd mapped both *ends* of the apply chain, but creation-in-OTEP is a **third, net-new lane (stage 1a) with no discovery behind it** — and it's the largest single addition. The two previous gaps (the seam, and forcing the ATS fork) still stand. So three things now sequence:
 
-The reframe on your original question: in R1, "creation → submission" is really "**ingestion → submission → routing → review → status-back**." Creation is OTG's job until R4. The new, risky, under-discovered part is the routing-and-status seam — and that's where the next discovery effort should go.
+1. **Confirm creation-in-R1 is real and feasible** (BO ratification + capacity check) — it reverses a BO call and is a 2-3x scope add.
+2. **Run a creation-side discovery pass** — who posts, what fields, native vs ATS, the publish workflow. None of this exists yet.
+3. **Force the ATS fork (C1)** — it now decides both the apply seam *and* whether creation is native or ATS-owned.
+
+The reframe on your original question: in R1, "creation → submission" really is end-to-end inside OTEP now — agency-native create → list → apply → route → review → status-back. That's the right ambition, but it roughly doubles the R1 build. The honest next step isn't more mapping; it's a **capacity reality-check** before grooming, because one FE dev cannot build native creation, native apply, and the seam in a 3-month R1 without something giving.
 
 ---
 

@@ -5,7 +5,7 @@
 **Created:** 2026-05-20
 **Dependencies:** ATS architecture decision (Conflict C1 in r1-candidate-list.md) — this journey is blocked until that call is made
 
-> **Important caveat:** Posting creation still happens in OTG in R1 (agency-owner side deferred to R4, per 2026-05-12 BO Senior Level direction). This map starts from the point where a posting already exists in CareerCompass and officers are beginning to apply.
+> **Scope update (2026-06-02):** Posting *creation* moved from R4 into R1 — agencies now author postings via an OTEP-native form (supersedes the 2026-05-12 R4 deferral; see decisions-log). **This map covers the review→close half only and now has a creation prequel that is not yet mapped.** The agency's create-a-posting journey (fill form → validate → publish → it appears in the listing) needs its own journey map — it's the net-new R1 work and currently has no discovery. This map still starts from "a posting exists"; treat stages below as the *second half* of the agency experience.
 
 ---
 
@@ -152,9 +152,12 @@
 
 ---
 
-## What's Out of Scope Until R4+
+## Scope notes
 
-- Posting creation and editing (currently in OTG — R4 per BO Senior Level direction 2026-05-12)
+**Now in R1 (moved from R4, 2026-06-02):**
+- Posting creation and editing — agency-native form in OTEP. **Needs its own journey map + discovery; not covered here.** This is the prequel to Stage 1 of this map.
+
+**Still out of scope until R2+:**
 - Competency-based applicant filtering ("show me only officers with Foundation-level competency X") — R2
 - Cross-agency posting visibility — not scoped
 
