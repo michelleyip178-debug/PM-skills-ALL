@@ -29,15 +29,17 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## Up Next
 
+> **LNO re-sort applied 2026-06-02** ([analysis](../../../PM-OS/outputs/analyses/2026-06-02-lno-prioritization.md)). This week's **Leverage** (do deeply): feed Adrian the R1 resource ask · drive R1 design alignment w/ designers · force the ATS fork (C1) · CSC SSO feasibility · finish WOG Auth metrics. Overhead items below struck/delegated/deferred to protect that time.
+
 > **BAU / standing tasks — prioritised** (linked from daily plans):
 > - **🔴 P1 (this week, unblocks others):** WOG AD response — Adrian (#26) · CSC SSO + ref data — Imelda (#18/#30)
-> - **🟠 P2 (batch soon):** Jira housekeeping (POCDEX epic, OTEP-128 AC, placeholder stories) · DQ issue — Daryll (#33) · dependency map → risks.md
-> - **🟡 P3 (whenever):** Diana loop-in + stakeholder file · Adrian OKR doc → NotebookLM · clean inbox
-> - **🗓️ Deadline-bound:** Cybersecurity quiz (due 2026-12-31) · PIM risk assessment (OTG ops)
+> - **🟠 P2 (batch soon):** Jira housekeeping (POCDEX epic, OTEP-128 AC, placeholder stories) · DQ issue — Daryll (#33) · ~~dependency map~~ → delegated to Pow Hwee
+> - **🟡 P3 (whenever):** Diana loop-in + stakeholder file · ~~OKR doc → NotebookLM~~ (killed) · clean inbox (15-min timebox)
+> - **🗓️ Deferred out of June:** Cybersecurity quiz (Dec) · PIM risk assessment (post-feature-freeze)
 
-- [ ] **Email DDs on PSC — send today (Fri 29 May, this afternoon)** — stakeholder update email on PSC matters. Hard deadline today.
+- [ ] ~~**Email DDs on PSC — send today (Fri 29 May)**~~ — ⚠️ **STALE (LNO 2026-06-02): deadline 4 days past. Verify it was sent, then close. If not sent, it's likely moot.**
 - [ ] **Prepare Jobelle handover** — Jobelle joins 3 Jun. Step 1: share Phoebe's copy first. Step 2: share Daniel's handover after 30–60 days (i.e. ~3 Jul–3 Aug).
-- [ ] **Follow up on session-notes test cases** — no hard due date; follow up when opportunity arises.
+- [ ] **Follow up on session-notes test cases** — no hard due date; follow up when opportunity arises. **DEFER (LNO 2026-06-02): "whenever" = not June.**
 - [ ] **Revert to Clarissa by 4 Jun — Malaysian NRIC + downstream OTG impact** — Clarissa needs confirmation by Thu 4 Jun. Assess downstream OTG impact before responding. **Ties to Cumulus Phase 3 (open-item #36): OTG must be production-ready for Malaysia ID changes by 6 Jul 2026.** The 4 Jun reply is the near-term gate; 6 Jul is the production deadline.
 - [ ] **Design PostHog OKR + metric instrumentation** — Rama scheduling a call w/c 2 Jun to work through event taxonomy together. Attend and define metric definitions to measure OTEP OKRs and North Star. *(Squad-Sync 2026-05-26; updated 2026-05-29)*
 - [x] **Send post-Design Review async follow-up to Xian Zhang + Jacky** — sent 2026-05-28. ✅
@@ -57,8 +59,8 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [ ] **Create the new "POCDEX Integration" Epic in Jira** and move OTEP-271, 203, 202, 127 under it
 - [ ] **Follow up with Daryll/Pow Hwee on raising DQ issue** for OTEP code table in UAT read replica
 - [ ] **Work out next steps for WOG AD onboarding with Fabian and Pow Hwee** — OTEP-350 (Onboard WOG AD, Fabian Peh) now in Sprint 3; coordinate next steps.
-- [ ] **Complete Cybersecurity quiz by 2026-12-31**
-- [ ] **Map out dependencies in high-level Jira stories → `00-hub/risks.md`** — document cross-story dependency map *(captured 2026-05-21)*
+- [ ] **Complete Cybersecurity quiz by 2026-12-31** — **DEFER out of June (LNO 2026-06-02): 7 months out, not on the MVP/R1 spine.**
+- [ ] **Map out dependencies in high-level Jira stories → `00-hub/risks.md`** — document cross-story dependency map. **→ DELEGATE to Pow Hwee (LNO 2026-06-02): he asked for it and owns the technical map; Michelle reviews, doesn't author.** *(captured 2026-05-21)*
 - [x] **Ping Adrian — WOG AD onboarding**: Domain is `careercompass.gov.sg`. Two asks: (1) COMET onboarding status — is ESG/OTEP onboarded? (2) Approval to test against WOG AD Prod. ✅ Pinged 2026-05-21. Waiting on response. (#26)
 - [ ] **Sync with Imelda (OTEP-Core Squad PM)** — four asks: (1) Who owns passing documents to CSC after WOG AD completes — her squad, Pathfinder, or joint? (#30) (2) How does OTEP consume job family, job function, agency, competency data from her squad — API? file? push? (#18) (3) Schema + field names for that reference data? (4) Timeline — when is it available for OTEP to integrate? (#18)
 - [ ] **Schedule POCDEX planning session with Daryll** — POCDEX team lead. Must happen before Sprint 4 planning. Loop Pow Hwee in. (#31)
@@ -67,9 +69,9 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [x] **[PM action — #29] Define OTEP-289 ACs, timebox, expected outcome** — resolved 2026-05-19: 2-day timebox, written recommendation output
 - [ ] **[PM action] Clean OTEP-128 AC** — remove "This opportunity is closed" notice AC from OTEP-128 (it belongs to OTEP-129).
 - [ ] Loop Diana into opportunities decisions going forward (Jace's call, PM Weekly 11 May); add `06-skills-and-decisions/stakeholders/people/diana.md`
-- [ ] Load Adrian's OKR doc into NotebookLM — confirm it isn't already `06-skills-and-decisions/otep-roadmap-okrs-2627.md`
+- [ ] ~~Load Adrian's OKR doc into NotebookLM~~ — **KILL (LNO 2026-06-02): it's already `06-skills-and-decisions/otep-roadmap-okrs-2627.md`. No action.**
 - [ ] Clarify the "OTG test cases — session notes co-innovation" request, then route to `projects/otg-ops/task-log.md`
-- [ ] **Conduct PIM risk assessment (OTG ops)** — scope to the no-PIM scenario: identify worst-case damage if privileged accounts are abused, then submit residual risk for formal acceptance *(captured 2026-05-20)*
+- [ ] **Conduct PIM risk assessment (OTG ops)** — scope to the no-PIM scenario: identify worst-case damage if privileged accounts are abused, then submit residual risk for formal acceptance. **DEFER out of June (LNO 2026-06-02): important but not on the MVP/R1 critical spine; revisit post-feature-freeze.** *(captured 2026-05-20)*
 - [ ] Clean up email inbox *(captured 2026-05-20)*
 
 ---
