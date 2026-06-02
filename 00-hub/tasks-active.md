@@ -1,7 +1,7 @@
 # Active Tasks
 
-Current sprint: **Sprint 3 active — Day 1 = Tue 2 Jun. Sprint 2 board still has open QA/In-Progress items.**
-Jira sync 2026-06-02 (live): **Sprint 3:** all 16 active stories still Backlog (no pickup yet) — only OTEP-191 Done. New: OTEP-358 (Michelle, nil-date OTG spike), OTEP-361 (Pow Hwee, ADR forum). · **Sprint 2 In Progress:** OTEP-85/128/268 (parents), OTEP-313 (Léo), OTEP-322 (Rathika) · **Sprint 2 QA:** OTEP-170, OTEP-314, OTEP-327, OTEP-320, OTEP-325, OTEP-326, OTEP-303, OTEP-332, OTEP-334 · **Sprint 2 Done:** OTEP-267, OTEP-252, OTEP-194, OTEP-193, OTEP-288, OTEP-296. · ⚠️ OTEP-129 still Sprint 2 Backlog (carry, not on S3 board).
+Current sprint: **Sprint 3 active (started Tue 2 Jun). Sprint 2 closed — carry-over QA/In-Progress pulled into S3.**
+Jira sync 2026-06-02 (live): **Sprint 3:** carry-over QA in flight (finish first), new-scope stories in Backlog. New: OTEP-358 (Michelle, nil-date OTG spike), OTEP-361 (Pow Hwee, ADR forum). **OTEP-129 now on the S3 board, split into OTEP-362 (backend) + OTEP-363 (UI).** · **Sprint 2 (closed) In Progress carried to S3:** OTEP-85, OTEP-322 (Rathika) · **In QA (carried):** OTEP-128, OTEP-170, OTEP-268, OTEP-314, OTEP-320, OTEP-325/326, OTEP-327, OTEP-332, OTEP-334, OTEP-303 · **Done:** OTEP-191, OTEP-267, OTEP-313 (Léo), OTEP-252, OTEP-194, OTEP-193, OTEP-288, OTEP-296.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
@@ -9,7 +9,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 2 close ceremonies (Fri 29 May). Sprint 3 starts Mon 2 Jun. Key gates: Amber's Figma audit (needs Rama answer), pilot agency restriction decision (Michelle), job family meeting outcomes capture.
+**Theme:** Sprint 3 in flight (started 2 Jun) — finish carried-over QA, then new-scope pickup. Key gates: R1 capacity + ATS-fork decisions (this session's work), CSC SSO feasibility, design-lock confirmation. *(Prior week's Sprint 2-close theme retired 2026-06-02.)*
 
 ---
 
@@ -19,11 +19,11 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 *Sprint 3 (all Backlog — no pickup yet, Day 1):* OTEP-86/317 (filters), OTEP-87/88/89 (C@G), OTEP-319 (FormSG redirect), OTEP-305 (login/logout), OTEP-192/348 (OTG ingestion), OTEP-324 (token rotation, Thomas), OTEP-349/351 (spikes), OTEP-350 (WOG AD, Fabian), OTEP-352 (POCDEX code table, Pow Hwee), **OTEP-358 (nil-date OTG spike, Michelle)**, OTEP-361 (ADR forum, Pow Hwee).
 
-*Sprint 2 still In Progress:* OTEP-313 (Léo, raw ingest), OTEP-322 (Rathika, Playwright), parents OTEP-85/128/268.
+*Carried-over In Progress (live 2026-06-02):* OTEP-85 (cards w/ real OTG data), OTEP-322 (Rathika, Playwright).
 
-*Sprint 2 In QA:* OTEP-170 (base layout), OTEP-314 (detail page), OTEP-327 (detail w/ design system), OTEP-320 (replace mock endpoint), OTEP-325/326 (empty/error states), OTEP-303 (POCDEX field check), OTEP-332 (reference data repo), OTEP-334 (backend detail endpoint).
+*Carried-over In QA:* OTEP-128 (detail page), OTEP-268 (empty/error parent), OTEP-170 (base layout), OTEP-314 (detail page), OTEP-327 (detail w/ design system), OTEP-320 (replace mock endpoint), OTEP-325/326 (empty/error states), OTEP-303 (POCDEX field check), OTEP-332 (reference data repo), OTEP-334 (backend detail endpoint).
 
-*Newly Done since 05-29:* OTEP-267 (pagination).
+*Newly Done since 05-29:* OTEP-267 (pagination), OTEP-313 (Léo, raw ingest).
 
 ---
 
@@ -118,7 +118,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [x] Sprint plan brief generated (sprint-plan-brief-2026-05-14.md) (May 13)
 - [x] Auth flow accepted for MVP — Adrian confirmed (May 12)
 - [x] Programme plan adopted: 12 sprints, Go-Live Fri 16 Oct 2026 (May 12)
-- [x] Release 4 prioritised on opportunity creation & posting (May 12)
+- [x] ~~Release 4 prioritised on opportunity creation & posting (May 12)~~ — **superseded 2026-06-02: creation moved to R1** (see decisions-log)
 - [x] PRD updated with 5-group user story structure, timeline, scoping gaps, risks (May 11)
 - [x] Scoping gaps tracker populated with 13 items (May 11)
 - [x] Projects reorganised: otep-opportunities + otep-wog-ad-login merged into otep-mvp (May 11)
@@ -130,4 +130,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-05-29 — Jira live sync (Board 12541). Sprint 2 final state captured. ~15 stale/past-event items archived. Sprint 3 starts Mon 2 Jun.*
+*Updated: 2026-06-02 — stale-check + live Jira sync (Board 12541). Header refreshed: Sprint 2 CLOSED, Sprint 3 active with carry-overs; OTEP-129→362/363, OTEP-313 Done, OTEP-128/268 in QA. LNO re-sort applied. R4-creation entry marked superseded (creation→R1).*
