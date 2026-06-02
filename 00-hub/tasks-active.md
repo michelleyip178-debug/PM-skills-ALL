@@ -51,6 +51,9 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [ ] **Research in-platform application form vs FormSG** — Pow Hwee proposing Sprint 3 spike; Michelle to research pilot agency customisation needs before spike scoping. Before Sprint 3 planning. *(Pow Hwee adhoc 2026-05-25)*
 - [ ] **WOG Auth success metrics** — committed to Adrian this week. Grounded in Dec '26 OKR baselines from BO deck. Start Thursday at latest. *(daily plan 2026-05-26)*
 - [ ] **OTEP-87 + OTEP-318 AC alignment** — needed before Sprint 3 grooming. If design review didn't cover it, schedule async with Amber. *(daily plan 2026-05-26)*
+- [ ] **Drive R1 design alignment + discovery WITH the designers** — R1 deep-dive praised at PM Weekly, but the ask is to move it from PM-solo to a real cross-functional effort. Get Amber (+ Michelle Chen's design capacity if it lands) aligned on the three R1 surfaces: apply, agency-creation, manager dashboard. Before R1 grooming. *(PM Weekly 2026-06-02)*
+- [ ] **Feed Adrian the specific R1 resource ask** — concrete framing for his Michelle Chen conversation: three net-new R1 builds (native apply + native creation + the seam), one FE dev. Reference the R1 capacity reality-check. This week. *(PM Weekly 2026-06-02)*
+- [ ] **CSC SSO technical-feasibility deep-dive** — with Pow Hwee/Fabian; surface why there's an intentional re-login. Feeds open-item #30. Before Sprint 5 (~2 Jul). *(PM Weekly 2026-06-02)*
 - [ ] **Create the new "POCDEX Integration" Epic in Jira** and move OTEP-271, 203, 202, 127 under it
 - [ ] **Follow up with Daryll/Pow Hwee on raising DQ issue** for OTEP code table in UAT read replica
 - [ ] **Work out next steps for WOG AD onboarding with Fabian and Pow Hwee** — OTEP-350 (Onboard WOG AD, Fabian Peh) now in Sprint 3; coordinate next steps.
