@@ -35,7 +35,7 @@
 | Sprint | Date | Holiday | Impact |
 |--------|------|---------|--------|
 | S02 | Tue 27 May | Hari Raya Haji | 1 dev day lost. Standup cancelled. Sprint Planning still Thu 29 May — confirm quorum. |
-| S03 | Tue 02 Jun | Vesak Day | 1 dev day lost. Standup cancelled. No ceremony shift. |
+| S03 | Mon 01 Jun | Vesak Day | 1 dev day lost. Standup cancelled. Sprint Start shifts to Tue 02 Jun. |
 | S08 | Mon 10 Aug | National Day (in lieu) | Sprint Start → Tue 11 Aug. Confirm capacity before Planning. |
 | — | Mon 26 Oct | Deepavali | After go-live. No impact. |
 
@@ -70,13 +70,13 @@
 
 ## Next Sprint — Sprint 3 (Mon 01 Jun – Fri 12 Jun)
 
-⚠️ **Vesak Day Tue 02 Jun** — 1 dev day lost, standup cancelled, no ceremony shift.
+⚠️ **Vesak Day Mon 01 Jun** — 1 dev day lost. Standup cancelled. Sprint Start shifts to Tue 02 Jun.
 
 ### Ceremony Dates
 
 | Ceremony | Date |
 |----------|------|
-| Sprint Start | Mon 01 Jun |
+| Sprint Start | Tue 02 Jun |
 | Squad Grooming (internal) | Wed 03 Jun |
 | Mid-Sprint Check-in | Wed 04 Jun |
 | Backlog Grooming (Sprint 4) | Thu 05 Jun |

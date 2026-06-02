@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTEP — Opportunities Hub (Lo-Fi Prototype)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: #f5f5f5; color: #333; }
+
+    /* ── Proto meta bar ── */
+    .proto-bar { background: #222; color: #ccc; padding: 6px 24px; font-size: 11px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 300; }
+    .proto-bar strong { color: #fff; margin-right: 8px; }
+    .proto-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .proto-links a { color: #aaa; text-decoration: none; cursor: pointer; white-space: nowrap; }
+    .proto-links a:hover { color: #fff; }
+
+    /* ── Nav ── */
+    .nav { background: #fff; border-bottom: 2px solid #333; padding: 0 40px; height: 56px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 28px; z-index: 200; }
+    .nav-logo { font-weight: 800; font-size: 17px; letter-spacing: 2px; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a { text-decoration: none; color: #888; font-size: 14px; cursor: pointer; padding: 4px 0; }
+    .nav-links a.active { color: #333; font-weight: 600; border-bottom: 2px solid #333; }
+    .nav-avatar { width: 32px; height: 32px; background: #e0e0e0; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; }
+
+    /* ── Screen management ── */
+    .screen { display: none; min-height: calc(100vh - 84px); }
+    .screen.active { display: block; }
+
+    /* ══════════════════════════════════════
+       LISTING PAGE
+    ══════════════════════════════════════ */
+    .listing-container { max-width: 1280px; margin: 0 auto; padding: 32px 40px; }
+    .listing-header { margin-bottom: 28px; }
+    .listing-header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+    .listing-header p { color: #666; font-size: 15px; }
+    .listing-body { display: flex; gap: 28px; }
+
+    /* Sidebar */
+    .sidebar { width: 216px; flex-shrink: 0; }
+    .search-wrap { position: relative; margin-bottom: 24px; }
+    .search-input { width: 100%; padding: 9px 32px 9px 12px; border: 1.5px solid #ccc; border-radius: 4px; font-size: 13px; background: #fff; }
+    .search-input:focus { outline: none; border-color: #888; }
+    .search-clear { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer; color: #aaa; font-size: 14px; display: none; }
+    .sidebar-section { margin-bottom: 22px; }
+    .sidebar-label { font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #888; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .tooltip-icon { font-size: 10px; color: #aaa; cursor: help; border: 1px solid #ccc; border-radius: 50%; width: 15px; height: 15px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .filter-item { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; cursor: pointer; }
+    .filter-item input { cursor: pointer; width: 14px; height: 14px; }
+    .filter-item label { font-size: 13px; cursor: pointer; }
+    .cat-placeholder { font-size: 12px; color: #aaa; font-style: italic; }
+
+    /* Cards area */
+    .cards-area { flex: 1; min-width: 0; }
+    .filters-strip { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .filter-pill { background: #e8e8e8; border-radius: 20px; padding: 4px 10px; font-size: 12px; display: flex; align-items: center; gap: 5px; }
+    .pill-remove { cursor: pointer; color: #888; font-weight: 700; line-height: 1; }
+    .pill-remove:hover { color: #333; }
+    .clear-all { font-size: 12px; color: #888; text-decoration: underline; cursor: pointer; margin-left: auto; white-space: nowrap; }
+    .clear-all:hover { color: #333; }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+
+    /* Card */
+    .card { background: #fff; border: 1.5px solid #e0e0e0; border-radius: 6px; padding: 16px; cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s; }
+    .card:hover { border-color: #999; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; gap: 6px; }
+    .card-badges { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+    .type-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; border-radius: 3px; padding: 2px 7px; border: 1.5px solid #bbb; background: #ebebeb; white-space: nowrap; }
+    .type-badge.stip { background: #e8e8e8; border-color: #bbb; }
+    .type-badge.gig  { background: #e0e0e0; border-color: #aaa; border-style: dashed; }
+    .type-badge.sjr  { background: #f0f0f0; border-color: #b0b0b0; }
+    .type-badge.internal { background: #dce8dc; border-color: #a0b8a0; }
+    .type-badge.cag  { background: #e8dcd0; border-color: #b8a090; }
+    .closing-soon-badge { font-size: 10px; font-weight: 600; color: #555; background: #f0f0f0; border: 1px solid #ccc; border-radius: 3px; padding: 2px 7px; white-space: nowrap; }
+    .pinned-indicator { font-size: 10px; color: #888; }
+    .card-title { font-size: 14px; font-weight: 600; line-height: 1.4; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .card-meta { font-size: 12px; color: #888; display: flex; flex-direction: column; gap: 3px; }
+
+    /* Empty state */
+    .empty-state { text-align: center; padding: 80px 40px; }
+    .empty-icon { width: 72px; height: 72px; background: #e0e0e0; border-radius: 8px; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+    .empty-state h3 { font-size: 17px; font-weight: 600; margin-bottom: 8px; color: #444; }
+    .empty-state p { font-size: 13px; color: #888; }
+
+    /* Pagination */
+    .pagination { display: flex; align-items: center; gap: 12px; justify-content: center; padding: 8px 0 24px; }
+    .pagination button { padding: 7px 16px; border: 1.5px solid #ccc; background: #fff; border-radius: 4px; cursor: pointer; font-size: 13px; }
+    .pagination button:hover:not(:disabled) { background: #f0f0f0; }
+    .pagination button:disabled { opacity: 0.35; cursor: not-allowed; }
+    .page-info { font-size: 13px; color: #888; }
+
+    /* ══════════════════════════════════════
+       DETAIL PAGE
+    ══════════════════════════════════════ */
+    .detail-container { max-width: 1280px; margin: 0 auto; padding: 24px 40px 60px; }
+    .back-link { font-size: 13px; color: #888; cursor: pointer; margin-bottom: 20px; display: inline-flex; align-items: center; gap: 5px; }
+    .back-link:hover { color: #333; }
+    .detail-body { display: flex; gap: 40px; align-items: flex-start; }
+    .detail-main { flex: 1; min-width: 0; }
+    .detail-sidebar { width: 272px; flex-shrink: 0; }
+
+    .detail-badge-row { margin-bottom: 12px; }
+    .detail-title { font-size: 24px; font-weight: 700; line-height: 1.3; margin-bottom: 16px; }
+    .detail-meta { margin-bottom: 28px; display: flex; flex-direction: column; gap: 7px; }
+    .detail-meta-row { font-size: 13px; display: flex; gap: 8px; }
+    .detail-meta-row .label { color: #888; min-width: 140px; flex-shrink: 0; }
+    .detail-meta-row .value { color: #333; }
+    .null-value { color: #bbb; font-style: italic; }
+
+    .detail-section { margin-bottom: 28px; }
+    .detail-section h3 { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #888; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1.5px solid #e8e8e8; }
+    .detail-section p { font-size: 14px; line-height: 1.7; color: #444; }
+    .competency-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .competency-list li { font-size: 13px; padding: 8px 12px; background: #f5f5f5; border-radius: 4px; border-left: 3px solid #ccc; }
+    .r1-note { font-size: 11px; color: #aaa; margin-top: 10px; font-style: italic; }
+
+    /* Sticky panel */
+    .sticky-panel { position: sticky; top: 100px; background: #fff; border: 1.5px solid #e0e0e0; border-radius: 6px; padding: 20px; }
+    .panel-close-label { font-size: 12px; color: #888; margin-bottom: 4px; }
+    .panel-close-date { font-size: 15px; font-weight: 600; color: #333; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .closing-soon-inline { font-size: 10px; font-weight: 600; color: #666; background: #f0f0f0; border: 1px solid #ccc; border-radius: 3px; padding: 2px 6px; }
+    .apply-btn { display: block; width: 100%; padding: 12px; background: #333; color: #fff; border: none; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer; text-align: center; }
+    .apply-btn:hover { background: #555; }
+    .apply-btn.secondary { background: #fff; color: #333; border: 1.5px solid #333; }
+    .apply-btn.secondary:hover { background: #f5f5f5; }
+    .apply-btn.disabled { background: #e0e0e0; color: #aaa; cursor: not-allowed; }
+    .apply-sub { font-size: 11px; color: #aaa; margin-top: 8px; text-align: center; }
+    .apply-error-msg { margin-top: 12px; font-size: 12px; color: #666; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px; padding: 10px 12px; }
+    .no-apply-note { font-size: 12px; color: #777; background: #f9f9f9; border-left: 3px solid #ccc; border-radius: 0 4px 4px 0; padding: 10px 12px; margin-bottom: 14px; }
+    .proto-toggle { margin-top: 14px; font-size: 11px; color: #ccc; cursor: pointer; text-align: center; border-top: 1px solid #f0f0f0; padding-top: 12px; }
+    .proto-toggle:hover { color: #999; }
+
+    /* ══════════════════════════════════════
+       DEEP-LINK STATES
+    ══════════════════════════════════════ */
+    .deeplink-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 40px; text-align: center; }
+    .deeplink-icon { width: 80px; height: 80px; background: #e8e8e8; border-radius: 10px; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-size: 36px; }
+    .deeplink-wrap h2 { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+    .deeplink-wrap p { font-size: 14px; color: #777; line-height: 1.7; max-width: 480px; margin-bottom: 32px; }
+    .deeplink-wrap .primary-btn { display: inline-block; padding: 12px 24px; background: #333; color: #fff; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; }
+    .deeplink-wrap .primary-btn:hover { background: #555; }
+    .alt-section { width: 100%; max-width: 700px; margin-bottom: 28px; }
+    .alt-section h4 { font-size: 13px; font-weight: 600; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 14px; text-align: left; }
+    .alt-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+    /* ══════════════════════════════════════
+       OVERLAYS
+    ══════════════════════════════════════ */
+    .overlay-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 500; display: none; align-items: center; justify-content: center; }
+    .overlay-backdrop.active { display: flex; }
+    .overlay-card { background: #fff; border-radius: 8px; padding: 32px; max-width: 460px; width: 90%; box-shadow: 0 8px 40px rgba(0,0,0,0.15); }
+    .overlay-card h2 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+    .overlay-card p { font-size: 13px; color: #666; line-height: 1.7; margin-bottom: 24px; }
+    .overlay-actions { display: flex; gap: 10px; justify-content: flex-end; }
+    .btn-cancel { padding: 9px 18px; border: 1.5px solid #ccc; background: #fff; border-radius: 4px; font-size: 13px; font-weight: 500; cursor: pointer; color: #555; }
+    .btn-cancel:hover { background: #f5f5f5; }
+    .btn-continue { padding: 9px 18px; border: 1.5px solid #333; background: #333; border-radius: 4px; font-size: 13px; font-weight: 600; cursor: pointer; color: #fff; }
+    .btn-continue:hover { background: #555; }
+
+    /* ══════════════════════════════════════
+       ANNOTATIONS
+    ══════════════════════════════════════ */
+    .annotation { background: #fffbe6; border: 1px solid #f0d070; border-radius: 4px; padding: 8px 12px; font-size: 11px; color: #777; margin-top: 12px; }
+  </style>
+</head>
+<body>
+
+<!-- ── Prototype nav bar ── -->
+<div class="proto-bar">
+  <span><strong>🔲 OTEP Prototype</strong> Opportunities Hub · Lo-Fi · Sprint 3</span>
+  <div class="proto-links">
+    <a onclick="showScreen('f01')">F-01 Listing</a>
+    <a onclick="goToDetail('stip-mof')">F-04 Detail (STIP)</a>
+    <a onclick="showScreen('f05')">F-05 Detail (SJR)</a>
+    <a onclick="showScreen('f06')">F-06 Detail (C@G)</a>
+    <a onclick="showScreen('f11')">F-11 Closed link</a>
+    <a onclick="showScreen('f12')">F-12 Not authorised</a>
+  </div>
+</div>
+
+<!-- ── OTEP Top Nav ── -->
+<nav class="nav">
+  <div class="nav-logo">OTEP</div>
+  <div class="nav-links">
+    <a onclick="showScreen('f01')">My Development</a>
+    <a onclick="showScreen('f01')" class="active">Opportunities</a>
+  </div>
+  <div class="nav-avatar">MY</div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════
+     F-01 / F-02 / F-03 — LISTING PAGE
+══════════════════════════════════════════════════ -->
+<div id="f01" class="screen active">
+  <div class="listing-container">
+    <div class="listing-header">
+      <h1>Opportunities</h1>
+      <p>Discover short-term postings, gigs, and roles across the public service.</p>
+    </div>
+    <div class="listing-body">
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="search-wrap">
+          <input id="search-input" class="search-input" type="text"
+            placeholder="Search by role, agency or keyword"
+            oninput="handleSearch(this.value)">
+          <span id="search-clear-btn" class="search-clear" onclick="clearSearch()">✕</span>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">
+            Filter by type
+            <span class="tooltip-icon" title="Filter opportunities by posting type — STIP, Gig, SJR, Internal Job, or Careers@Gov">?</span>
+          </div>
+          <div class="filter-item"><input type="checkbox" id="f-stip"     onchange="handleFilter()"><label for="f-stip">STIP</label></div>
+          <div class="filter-item"><input type="checkbox" id="f-gig"      onchange="handleFilter()"><label for="f-gig">Gig</label></div>
+          <div class="filter-item"><input type="checkbox" id="f-sjr"      onchange="handleFilter()"><label for="f-sjr">SJR</label></div>
+          <div class="filter-item"><input type="checkbox" id="f-internal" onchange="handleFilter()"><label for="f-internal">Internal Job</label></div>
+          <div class="filter-item"><input type="checkbox" id="f-cag"      onchange="handleFilter()"><label for="f-cag">Careers@Gov</label></div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">Filter by category</div>
+          <div class="cat-placeholder">ACs TBC — Sprint 3 grooming</div>
+        </div>
+      </div>
+
+      <!-- CARDS AREA -->
+      <div class="cards-area">
+        <!-- Active filter pills -->
+        <div id="filters-strip" class="filters-strip" style="display:none;"></div>
+
+        <!-- Card grid -->
+        <div id="cards-grid" class="cards-grid"></div>
+
+        <!-- Empty state (F-03) -->
+        <div id="empty-state" class="empty-state" style="display:none;">
+          <div class="empty-icon">📭</div>
+          <h3>No opportunities available right now.</h3>
+          <p>Try adjusting your filters or check back later.</p>
+        </div>
+
+        <!-- Pagination -->
+        <div id="pagination" class="pagination">
+          <button disabled>← Prev</button>
+          <span class="page-info">Page 1 of 5</span>
+          <button onclick="protoPaginationClick()">Next →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     F-04 — DETAIL: STIP / GIG / INTERNAL JOB
+══════════════════════════════════════════════════ -->
+<div id="f04" class="screen">
+  <div class="detail-container">
+    <div class="back-link" onclick="showScreen('f01')">← Back to Opportunities</div>
+    <div class="detail-body">
+
+      <!-- Main content -->
+      <div class="detail-main">
+        <div class="detail-badge-row">
+          <span class="type-badge" id="d4-badge">STIP</span>
+        </div>
+        <h1 class="detail-title" id="d4-title">Policy Analyst Attachment — Ministry of Finance</h1>
+
+        <div class="detail-meta" id="d4-meta">
+          <div class="detail-meta-row"><span class="label">Posted by</span><span class="value" id="d4-agency">Ministry of Finance</span></div>
+          <div class="detail-meta-row"><span class="label">Duration</span><span class="value" id="d4-duration">3 months (Jul – Sep 2026)</span></div>
+          <div class="detail-meta-row"><span class="label">Application closes</span><span class="value" id="d4-close">30 Jun 2026 <span class="closing-soon-inline" id="d4-closing-soon" style="display:none;">Closing soon</span></span></div>
+          <div class="detail-meta-row"><span class="label">Location</span><span class="value" id="d4-location">MOF HQ, Maxwell Road</span></div>
+          <div class="detail-meta-row"><span class="label">Commitment</span><span class="value" id="d4-commitment">Full-time</span></div>
+          <div class="detail-meta-row"><span class="label">Eligible grades</span><span class="value null-value" id="d4-grades">Not specified</span></div>
+        </div>
+
+        <div class="detail-section">
+          <h3>About this opportunity</h3>
+          <p id="d4-desc">Gain hands-on experience supporting fiscal policy review and budget preparation. You will work alongside senior analysts to research and synthesise policy options across government ministries. Suitable for officers with an interest in economics or public finance.</p>
+        </div>
+
+        <div class="detail-section">
+          <h3>What you'll develop</h3>
+          <ul class="competency-list" id="d4-competencies">
+            <li>Policy Analysis and Research</li>
+            <li>Written Communication</li>
+            <li>Stakeholder Engagement</li>
+          </ul>
+          <p class="r1-note">Competency match ratio deferred to R1 — no personalisation in MVP.</p>
+        </div>
+      </div>
+
+      <!-- Right sticky panel -->
+      <div class="detail-sidebar">
+        <!-- Normal apply panel -->
+        <div class="sticky-panel" id="d4-panel-normal">
+          <div class="panel-close-label">Application closes</div>
+          <div class="panel-close-date" id="d4-panel-date">30 Jun 2026 <span class="closing-soon-inline" id="d4-panel-soon" style="display:none;">Closing soon</span></div>
+          <button class="apply-btn" id="d4-apply-btn" onclick="showOverlay('overlay-formsg')">Apply</button>
+          <div class="apply-sub">You'll be redirected to FormSG</div>
+          <div class="proto-toggle" onclick="activateMissingLink()">
+            [Proto: simulate missing FormSG link →]
+          </div>
+        </div>
+
+        <!-- Missing FormSG link panel (F-08) -->
+        <div class="sticky-panel" id="d4-panel-error" style="display:none;">
+          <div class="panel-close-label">Application closes</div>
+          <div class="panel-close-date">30 Jun 2026</div>
+          <button class="apply-btn disabled" disabled>Application form unavailable</button>
+          <div class="apply-error-msg">Application form unavailable — contact the posting agency directly.</div>
+          <div class="proto-toggle" onclick="deactivateMissingLink()">
+            [Proto: restore FormSG link →]
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     F-05 — DETAIL: SJR
+══════════════════════════════════════════════════ -->
+<div id="f05" class="screen">
+  <div class="detail-container">
+    <div class="back-link" onclick="showScreen('f01')">← Back to Opportunities</div>
+    <div class="detail-body">
+      <div class="detail-main">
+        <div class="detail-badge-row"><span class="type-badge sjr">SJR</span></div>
+        <h1 class="detail-title">Senior Manager, Digital Transformation — Ministry of Health</h1>
+        <div class="detail-meta">
+          <div class="detail-meta-row"><span class="label">Posted by</span><span class="value">Ministry of Health</span></div>
+          <div class="detail-meta-row"><span class="label">Duration</span><span class="value">12–24 months (from Aug 2026)</span></div>
+          <div class="detail-meta-row"><span class="label">Application closes</span><span class="value">15 Jul 2026</span></div>
+          <div class="detail-meta-row"><span class="label">Location</span><span class="value">MOH Building, College Road</span></div>
+          <div class="detail-meta-row"><span class="label">Commitment</span><span class="value">Full-time secondment</span></div>
+          <div class="detail-meta-row"><span class="label">Eligible grades</span><span class="value">MX11 and above</span></div>
+        </div>
+        <div class="detail-section">
+          <h3>About this opportunity</h3>
+          <p>Drive the digital transformation agenda within MOH's operations division. You will oversee technology adoption projects, coordinate with GovTech, and engage clinical and operational stakeholders to implement workflow improvements at scale.</p>
+        </div>
+        <div class="detail-section">
+          <h3>What you'll develop</h3>
+          <ul class="competency-list">
+            <li>Digital Transformation Leadership</li>
+            <li>Project Management</li>
+            <li>Stakeholder Management</li>
+            <li>Change Management</li>
+          </ul>
+          <p class="r1-note">Competency match ratio deferred to R1.</p>
+        </div>
+      </div>
+      <div class="detail-sidebar">
+        <div class="sticky-panel">
+          <div class="no-apply-note">SJR applications are processed via OTG. You'll be redirected there to complete your application.</div>
+          <div class="panel-close-label">Application closes</div>
+          <div class="panel-close-date" style="margin-bottom:16px;">15 Jul 2026</div>
+          <button class="apply-btn secondary" onclick="showOverlay('overlay-otg')">Apply via OTG</button>
+          <div class="apply-sub">You'll need to re-login on OTG</div>
+          <div class="annotation">No FormSG or OTEP-hosted application for SJRs in MVP. OTG redirect is the apply path.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     F-06 — DETAIL: CAREERS@GOV
+══════════════════════════════════════════════════ -->
+<div id="f06" class="screen">
+  <div class="detail-container">
+    <div class="back-link" onclick="showScreen('f01')">← Back to Opportunities</div>
+    <div class="detail-body">
+      <div class="detail-main">
+        <div class="detail-badge-row"><span class="type-badge cag">Careers@Gov</span></div>
+        <h1 class="detail-title">Assistant Director, Data & Analytics — Ministry of Education</h1>
+        <div class="detail-meta">
+          <div class="detail-meta-row"><span class="label">Posted by</span><span class="value">Ministry of Education</span></div>
+          <div class="detail-meta-row"><span class="label">Duration</span><span class="value">Permanent appointment</span></div>
+          <div class="detail-meta-row"><span class="label">Application closes</span><span class="value">30 Jul 2026</span></div>
+          <div class="detail-meta-row"><span class="label">Location</span><span class="value">MOE HQ, Buona Vista</span></div>
+          <div class="detail-meta-row"><span class="label">Commitment</span><span class="value">Full-time</span></div>
+          <div class="detail-meta-row"><span class="label">Grade</span><span class="value null-value">Not specified</span></div>
+        </div>
+        <div class="detail-section">
+          <h3>About this opportunity</h3>
+          <p>Lead the development of data analytics capabilities across MOE's planning and policy divisions. You will build a team of analysts, establish data governance practices, and drive evidence-based decision making across school operations and resource planning.</p>
+        </div>
+        <div class="detail-section">
+          <h3>What you'll develop</h3>
+          <ul class="competency-list">
+            <li>Data Analysis and Visualisation</li>
+            <li>People Leadership</li>
+            <li>Strategic Planning</li>
+          </ul>
+          <p class="r1-note">Competency match ratio deferred to R1.</p>
+        </div>
+      </div>
+      <div class="detail-sidebar">
+        <div class="sticky-panel">
+          <div class="panel-close-label">Application closes</div>
+          <div class="panel-close-date" style="margin-bottom:16px;">30 Jul 2026</div>
+          <button class="apply-btn" onclick="showOverlay('overlay-cag')">Apply via Careers@Gov</button>
+          <div class="apply-sub">Opens on Careers@Gov in a new tab</div>
+          <div class="annotation">If listing expires on C@G after OTEP ingestion, the error is handled by C@G — no OTEP error state.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     F-11 — DEEP-LINK: CLOSED OPPORTUNITY
+══════════════════════════════════════════════════ -->
+<div id="f11" class="screen">
+  <div class="deeplink-wrap">
+    <div class="deeplink-icon">🔒</div>
+    <h2>This opportunity is no longer available.</h2>
+    <p>The posting you followed may have closed or been removed. Browse current openings below.</p>
+    <button class="primary-btn" onclick="showScreen('f01')">Browse open opportunities →</button>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     F-12 — DEEP-LINK: NOT AUTHORISED (RINGFENCED)
+══════════════════════════════════════════════════ -->
+<div id="f12" class="screen">
+  <div class="deeplink-wrap">
+    <div class="deeplink-icon">🚫</div>
+    <h2>This opportunity isn't available to you.</h2>
+    <p>It may be ringfenced to specific agencies or grades. Try one of the opportunities you're eligible for, or browse the full listing.</p>
+    <div class="alt-section">
+      <h4>Opportunities you may like</h4>
+      <div class="alt-cards">
+        <div class="card" onclick="goToDetail('stip-mof')">
+          <div class="card-top"><span class="type-badge stip">STIP</span></div>
+          <div class="card-title">Policy Analyst Attachment — MOF</div>
+          <div class="card-meta"><div>Ministry of Finance</div><div>3 months</div></div>
+        </div>
+        <div class="card" onclick="goToDetail('gig-sndgg')">
+          <div class="card-top"><span class="type-badge gig">Gig</span></div>
+          <div class="card-title">UX Research Sprint — Smart Nation Group</div>
+          <div class="card-meta"><div>Smart Nation & Digital Govt</div><div>4 weeks</div></div>
+        </div>
+        <div class="card" onclick="goToDetail('stip-mci')">
+          <div class="card-top"><span class="type-badge stip">STIP</span></div>
+          <div class="card-title">Communications Attachment — MCI</div>
+          <div class="card-meta"><div>Ministry of Communications</div><div>2 months</div></div>
+        </div>
+      </div>
+    </div>
+    <button class="primary-btn" onclick="showScreen('f01')">Browse all opportunities →</button>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     OVERLAYS
+══════════════════════════════════════════════════ -->
+
+<!-- FormSG redirect overlay (F-07) -->
+<div id="overlay-formsg" class="overlay-backdrop" onclick="closeOnBackdrop(event,'overlay-formsg')">
+  <div class="overlay-card">
+    <h2>You're leaving OTEP</h2>
+    <p>You'll be taken to FormSG to complete your application. The form opens in a new tab.</p>
+    <div class="overlay-actions">
+      <button class="btn-cancel" onclick="hideOverlay('overlay-formsg')">Cancel</button>
+      <button class="btn-continue" onclick="hideOverlay('overlay-formsg'); protoExternalLink('FormSG')">Continue to FormSG →</button>
+    </div>
+  </div>
+</div>
+
+<!-- C@G redirect overlay (F-09) -->
+<div id="overlay-cag" class="overlay-backdrop" onclick="closeOnBackdrop(event,'overlay-cag')">
+  <div class="overlay-card">
+    <h2>You're leaving OTEP</h2>
+    <p>You'll be taken to Careers@Gov to complete your application. The listing opens in a new tab.</p>
+    <div class="overlay-actions">
+      <button class="btn-cancel" onclick="hideOverlay('overlay-cag')">Cancel</button>
+      <button class="btn-continue" onclick="hideOverlay('overlay-cag'); protoExternalLink('Careers@Gov')">Continue to Careers@Gov →</button>
+    </div>
+  </div>
+</div>
+
+<!-- OTG redirect overlay (F-10) -->
+<div id="overlay-otg" class="overlay-backdrop" onclick="closeOnBackdrop(event,'overlay-otg')">
+  <div class="overlay-card">
+    <h2>You're leaving OTEP</h2>
+    <p>You'll be taken to OTG to complete your application. You will need to re-login on OTG.</p>
+    <div class="overlay-actions">
+      <button class="btn-cancel" onclick="hideOverlay('overlay-otg')">Cancel</button>
+      <button class="btn-continue" onclick="hideOverlay('overlay-otg'); protoExternalLink('OTG')">Continue to OTG →</button>
+    </div>
+  </div>
+</div>
+
+<!-- External link toast (replaces actual new tab in prototype) -->
+<div id="ext-toast" style="position:fixed;bottom:28px;right:28px;background:#333;color:#fff;padding:12px 20px;border-radius:6px;font-size:13px;display:none;z-index:600;box-shadow:0 4px 20px rgba(0,0,0,0.2);">
+  ↗ In production, <span id="ext-dest"></span> would open in a new tab.
+</div>
+
+
+<!-- ══════════════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════════════ -->
+<script>
+// ─── Mock opportunity data ─────────────────────────────────────────────────
+const TODAY = new Date('2026-06-02');
+
+const opps = [
+  // Internal Jobs (pinned)
+  { id:'internal-psd', type:'internal', label:'Internal Job', title:'Manager, Workforce Planning — PSD', agency:'Public Service Division', duration:'Permanent', close:'2026-07-15', pinned:true, formsgNull:false, detailScreen:'f04' },
+  { id:'internal-csc', type:'internal', label:'Internal Job', title:'Senior Analyst, HR Analytics — Civil Service College', agency:'Civil Service College', duration:'Permanent', close:'2026-07-20', pinned:true, formsgNull:false, detailScreen:'f04' },
+  // STIPs
+  { id:'stip-mof',  type:'stip', label:'STIP', title:'Policy Analyst Attachment — Ministry of Finance', agency:'Ministry of Finance', duration:'3 months', close:'2026-06-06', pinned:false, formsgNull:false, detailScreen:'f04' },
+  { id:'stip-mot',  type:'stip', label:'STIP', title:'Operations Strategy Attachment — Ministry of Transport', agency:'Ministry of Transport', duration:'3 months', close:'2026-08-01', pinned:false, formsgNull:false, detailScreen:'f04' },
+  { id:'stip-mci',  type:'stip', label:'STIP', title:'Communications Attachment — MCI', agency:'Ministry of Communications & Information', duration:'2 months', close:'2026-07-31', pinned:false, formsgNull:false, detailScreen:'f04' },
+  { id:'stip-agc',  type:'stip', label:'STIP', title:'Legal Services Attachment — AGC', agency:"Attorney-General's Chambers", duration:'3 months', close:'2026-09-01', pinned:false, formsgNull:false, detailScreen:'f04' },
+  { id:'stip-mof2', type:'stip', label:'STIP', title:'Finance Analyst Attachment — MOF', agency:'Ministry of Finance', duration:'2 months', close:'2026-08-25', pinned:false, formsgNull:false, detailScreen:'f04' },
+  // Gigs
+  { id:'gig-sndgg', type:'gig', label:'Gig', title:'UX Research Sprint — Smart Nation Group', agency:'Smart Nation & Digital Govt Group', duration:'4 weeks', close:'2026-07-10', pinned:false, formsgNull:false, detailScreen:'f04' },
+  { id:'gig-mom',   type:'gig', label:'Gig', title:'Data Visualisation Sprint — MOM', agency:'Ministry of Manpower', duration:'3 weeks', close:'2026-07-05', pinned:false, formsgNull:false, detailScreen:'f04' },
+  { id:'gig-mti',   type:'gig', label:'Gig', title:'Policy Review Hackathon — MTI', agency:'Ministry of Trade & Industry', duration:'2 weeks', close:'2026-07-18', pinned:false, formsgNull:true,  detailScreen:'f04' },
+  { id:'gig-msf',   type:'gig', label:'Gig', title:'Service Design Sprint — MSF', agency:'Ministry of Social & Family Development', duration:'3 weeks', close:'2026-08-20', pinned:false, formsgNull:false, detailScreen:'f04' },
+  // SJRs
+  { id:'sjr-moh',   type:'sjr', label:'SJR', title:'Senior Manager, Digital Transformation — Ministry of Health', agency:'Ministry of Health', duration:'12–24 months', close:'2026-07-15', pinned:false, detailScreen:'f05' },
+  { id:'sjr-mnd',   type:'sjr', label:'SJR', title:'Deputy Director, Infrastructure Planning — MND', agency:'Ministry of National Development', duration:'12 months', close:'2026-08-10', pinned:false, detailScreen:'f05' },
+  // C@G
+  { id:'cag-moe',   type:'cag', label:'Careers@Gov', title:'Assistant Director, Data & Analytics — Ministry of Education', agency:'Ministry of Education', duration:'Permanent', close:'2026-07-30', pinned:false, detailScreen:'f06' },
+  { id:'cag-mccy',  type:'cag', label:'Careers@Gov', title:'Director, Strategy & Planning — MCCY', agency:'Ministry of Culture, Community & Youth', duration:'Permanent', close:'2026-08-15', pinned:false, detailScreen:'f06' },
+];
+
+// ─── State ─────────────────────────────────────────────────────────────────
+let activeFilters = new Set();
+let searchQuery   = '';
+
+// ─── Screen switcher ───────────────────────────────────────────────────────
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+// ─── Detail navigation ─────────────────────────────────────────────────────
+function goToDetail(oppId) {
+  const opp = opps.find(o => o.id === oppId);
+  if (!opp) return;
+
+  if (opp.detailScreen === 'f04') {
+    // Populate detail fields
+    const badge = document.getElementById('d4-badge');
+    badge.textContent = opp.label;
+    badge.className   = 'type-badge ' + opp.type;
+    document.getElementById('d4-title').textContent    = opp.title;
+    document.getElementById('d4-agency').textContent   = opp.agency;
+    document.getElementById('d4-duration').textContent = opp.duration;
+
+    const daysLeft = Math.ceil((new Date(opp.close) - TODAY) / 864e5);
+    const closeStr = formatDate(opp.close);
+    document.getElementById('d4-close').innerHTML = closeStr +
+      (daysLeft <= 7 && daysLeft >= 0
+        ? ' <span class="closing-soon-inline">Closing soon</span>' : '');
+    document.getElementById('d4-panel-date').innerHTML = closeStr +
+      (daysLeft <= 7 && daysLeft >= 0
+        ? ' <span class="closing-soon-inline">Closing soon</span>' : '');
+
+    // Reset to correct panel state
+    if (opp.formsgNull) { activateMissingLink(); } else { deactivateMissingLink(); }
+  }
+
+  showScreen(opp.detailScreen);
+}
+
+// ─── Filters & search ─────────────────────────────────────────────────────
+function handleFilter() {
+  activeFilters.clear();
+  ['stip','gig','sjr','internal','cag'].forEach(t => {
+    if (document.getElementById('f-'+t).checked) activeFilters.add(t);
+  });
+  renderCards();
+}
+
+function handleSearch(val) {
+  searchQuery = val.toLowerCase().trim();
+  const clearBtn = document.getElementById('search-clear-btn');
+  clearBtn.style.display = searchQuery ? 'block' : 'none';
+  renderCards();
+}
+
+function clearSearch() {
+  searchQuery = '';
+  document.getElementById('search-input').value = '';
+  document.getElementById('search-clear-btn').style.display = 'none';
+  renderCards();
+}
+
+function removeFilter(type) {
+  document.getElementById('f-'+type).checked = false;
+  activeFilters.delete(type);
+  renderCards();
+}
+
+function clearAll() {
+  activeFilters.clear();
+  searchQuery = '';
+  document.getElementById('search-input').value = '';
+  document.getElementById('search-clear-btn').style.display = 'none';
+  ['stip','gig','sjr','internal','cag'].forEach(t =>
+    document.getElementById('f-'+t).checked = false);
+  renderCards();
+}
+
+// ─── Render ────────────────────────────────────────────────────────────────
+function renderCards() {
+  const typeLabels = { stip:'STIP', gig:'Gig', sjr:'SJR', internal:'Internal Job', cag:'Careers@Gov' };
+
+  // Filter
+  const results = opps.filter(o => {
+    const typeOk   = activeFilters.size === 0 || activeFilters.has(o.type);
+    const searchOk = !searchQuery ||
+      o.title.toLowerCase().includes(searchQuery) ||
+      o.agency.toLowerCase().includes(searchQuery) ||
+      o.label.toLowerCase().includes(searchQuery);
+    return typeOk && searchOk;
+  });
+
+  // Filter pills
+  const strip = document.getElementById('filters-strip');
+  const pills = [];
+  activeFilters.forEach(f =>
+    pills.push(`<div class="filter-pill">${typeLabels[f]} <span class="pill-remove" onclick="removeFilter('${f}')">✕</span></div>`)
+  );
+  if (searchQuery)
+    pills.push(`<div class="filter-pill">"${searchQuery}" <span class="pill-remove" onclick="clearSearch()">✕</span></div>`);
+  if (pills.length) {
+    strip.style.display = 'flex';
+    strip.innerHTML = pills.join('') + '<span class="clear-all" onclick="clearAll()">Clear all</span>';
+  } else {
+    strip.style.display = 'none';
+  }
+
+  const grid   = document.getElementById('cards-grid');
+  const empty  = document.getElementById('empty-state');
+  const pager  = document.getElementById('pagination');
+
+  if (results.length === 0) {
+    grid.style.display  = 'none';
+    empty.style.display = 'block';
+    pager.style.display = 'none';
+    return;
+  }
+
+  grid.style.display  = 'grid';
+  empty.style.display = 'none';
+  pager.style.display = 'flex';
+
+  // Pinned first
+  const sorted = [
+    ...results.filter(o => o.pinned),
+    ...results.filter(o => !o.pinned),
+  ].slice(0, 15);
+
+  grid.innerHTML = sorted.map(o => {
+    const daysLeft    = Math.ceil((new Date(o.close) - TODAY) / 864e5);
+    const closingSoon = daysLeft <= 7 && daysLeft >= 0;
+
+    return `<div class="card" onclick="goToDetail('${o.id}')">
+      <div class="card-top">
+        <div class="card-badges">
+          <span class="type-badge ${o.type}">${o.label}</span>
+          ${closingSoon ? '<span class="closing-soon-badge">Closing soon</span>' : ''}
+          ${o.pinned    ? '<span style="font-size:11px;color:#888;">📌 Pinned</span>' : ''}
+        </div>
+      </div>
+      <div class="card-title">${o.title}</div>
+      <div class="card-meta">
+        <div>${o.agency}</div>
+        <div>${o.duration}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ─── Detail panel state ────────────────────────────────────────────────────
+function activateMissingLink() {
+  document.getElementById('d4-panel-normal').style.display = 'none';
+  document.getElementById('d4-panel-error').style.display  = 'block';
+}
+function deactivateMissingLink() {
+  document.getElementById('d4-panel-normal').style.display = 'block';
+  document.getElementById('d4-panel-error').style.display  = 'none';
+}
+
+// ─── Overlays ──────────────────────────────────────────────────────────────
+function showOverlay(id)  { document.getElementById(id).classList.add('active'); }
+function hideOverlay(id)  { document.getElementById(id).classList.remove('active'); }
+function closeOnBackdrop(e, id) { if (e.target === e.currentTarget) hideOverlay(id); }
+
+// ─── External link simulation ──────────────────────────────────────────────
+function protoExternalLink(dest) {
+  const toast = document.getElementById('ext-toast');
+  document.getElementById('ext-dest').textContent = dest;
+  toast.style.display = 'block';
+  setTimeout(() => toast.style.display = 'none', 3000);
+}
+
+// ─── Pagination ────────────────────────────────────────────────────────────
+function protoPaginationClick() {
+  protoExternalLink('page 2');
+  const toast = document.getElementById('ext-toast');
+  document.getElementById('ext-dest').textContent = 'the next page (static in prototype)';
+  toast.style.display = 'block';
+  setTimeout(() => toast.style.display = 'none', 2500);
+}
+
+// ─── Helpers ───────────────────────────────────────────────────────────────
+function formatDate(str) {
+  const d = new Date(str);
+  return d.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' });
+}
+
+// ─── Init ──────────────────────────────────────────────────────────────────
+renderCards();
+</script>
+</body>
+</html>
