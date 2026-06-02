@@ -6,7 +6,7 @@ Here is how the OKRs directly shape the OTEP platform delivery and the work outl
 Our current sprints are heavily focused on Epic 4 (Opportunity Discovery) and Epic 5 (WOG Authentication) to build the MVP's "Essential Officer Experience." The OKRs explicitly mandate what this MVP must achieve by December 2026:
 *   **Centralizing Opportunities:** The OKR target to have **"≥80% of job opportunities (STIPs, GIGs, SJR, C@G) are listed on OTEP"** is the direct business driver for Epic 4, which is why our immediate sprints focus on building the Unified Opportunity Hub to aggregate these exact posting types.
 *   **Establishing Baselines:** The MVP OKRs require us to establish baselines for the percentage of officers applying for opportunities through OTEP. This ties directly to Epic 4's North Star metric of migrating ≥50% of STIP/Gigs applications from FormSG to OTEP by Month 3. 
-*   **Pilot Success:** The OKR demands a **"UAT/Pilot officers satisfaction score ≥ 3.5/5"**. This is why Epic 5 (WOG Authentication) is scoped to first roll out safely to a restricted pilot group (officers in ESG and PSD) before scaling.
+*   **Pilot Success:** The OKR demands a **"UAT/Pilot officers satisfaction score ≥ 3.5/5"**. This is why Epic 5 (WOG Authentication) is scoped to first roll out safely to a restricted pilot group before scaling. **MVP pilot = 6 agencies (~5,400 officers): PSD, ESG, MDDI, URA, MCCY, CAAS, onboarded in staggered pairs** (Implementation Details, 2026-06-02). *(Earlier drafts named only ESG + PSD — updated to the confirmed 6.)*
 
 **2. Shaping Release 1 & 2 (Target: Q2 '27)**
 As we move past the MVP into the Q2 2027 OKRs ("Partial Completion of required OTG features"), the focus shifts to engagement and operational efficiency:

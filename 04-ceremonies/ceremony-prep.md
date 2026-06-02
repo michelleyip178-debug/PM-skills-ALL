@@ -81,6 +81,16 @@ What to prepare and bring for each ceremony. For the command schedule and sprint
   - Come with 1 specific thing to improve (not generic "communicate better")
   - Come with 1 thing that worked well (recognise the team)
 
+**Two-tier demo format** (working agreement with Imelda + Rama, 2026-06-02):
+
+| Tier | Audience | Format | Prep |
+|------|----------|--------|------|
+| **Regular demos** | Working level up to Jacky | Each PM/owner presents their own part. Scoped to **just the previous sprint's output** — these are *working sessions*, not a showcase. | Low. No cross-learning of each other's parts. |
+| **Special sessions** | Mark, GK | Consolidate into **one coherent narrative** — PMs cover each other's parts, unified storyline. | High. Smoother Q&A, shared story. |
+
+- Set expectations explicitly: tell the working level (up to Jacky) that regular demos are working sessions covering only the prev sprint — don't let them creep into showcase expectations.
+- Reserve the consolidated-narrative effort for Mark/GK, where it pays off.
+
 ---
 
 ## PM-Only Cadences

@@ -1,7 +1,7 @@
 # Active Tasks
 
-Current sprint: **Sprint 2 closing (ceremonies Fri 29 May) → Sprint 3 starts Mon 2 Jun.**
-Jira sync 2026-05-29: **In Progress:** OTEP-267 (Thomas), OTEP-313 (Léo), OTEP-322 (Rathika), OTEP-327 (Thomas) · **In QA:** OTEP-170, OTEP-314, OTEP-320, OTEP-325, OTEP-326, OTEP-303, OTEP-332, OTEP-334 · **Done:** OTEP-193, OTEP-252, OTEP-288, OTEP-296, OTEP-194.
+Current sprint: **Sprint 3 active — Day 1 = Tue 2 Jun. Sprint 2 board still has open QA/In-Progress items.**
+Jira sync 2026-06-02 (live): **Sprint 3:** all 16 active stories still Backlog (no pickup yet) — only OTEP-191 Done. New: OTEP-358 (Michelle, nil-date OTG spike), OTEP-361 (Pow Hwee, ADR forum). · **Sprint 2 In Progress:** OTEP-85/128/268 (parents), OTEP-313 (Léo), OTEP-322 (Rathika) · **Sprint 2 QA:** OTEP-170, OTEP-314, OTEP-327, OTEP-320, OTEP-325, OTEP-326, OTEP-303, OTEP-332, OTEP-334 · **Sprint 2 Done:** OTEP-267, OTEP-252, OTEP-194, OTEP-193, OTEP-288, OTEP-296. · ⚠️ OTEP-129 still Sprint 2 Backlog (carry, not on S3 board).
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
@@ -15,29 +15,37 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## In Progress
 
-**Engineering (Jira — as of 2026-05-29):**
-- [ ] **OTEP-267** (Thomas) — Pagination for listing page.
-- [ ] **OTEP-313** (Léo) — OTG raw ingest table and source model.
-- [ ] **OTEP-327** (Thomas) — Opportunity detail page using design system.
-- [ ] **OTEP-322** (Rathika) — Setup Playwright E2E Testing Framework.
+**Engineering (Jira — live 2026-06-02):**
 
-**In QA:** OTEP-170 (base layout), OTEP-314 (detail page), OTEP-320 (replace mock endpoint), OTEP-325/326 (empty/error states), OTEP-303 (POCDEX field check), OTEP-332 (reference data repo), OTEP-334 (backend detail endpoint).
+*Sprint 3 (all Backlog — no pickup yet, Day 1):* OTEP-86/317 (filters), OTEP-87/88/89 (C@G), OTEP-319 (FormSG redirect), OTEP-305 (login/logout), OTEP-192/348 (OTG ingestion), OTEP-324 (token rotation, Thomas), OTEP-349/351 (spikes), OTEP-350 (WOG AD, Fabian), OTEP-352 (POCDEX code table, Pow Hwee), **OTEP-358 (nil-date OTG spike, Michelle)**, OTEP-361 (ADR forum, Pow Hwee).
+
+*Sprint 2 still In Progress:* OTEP-313 (Léo, raw ingest), OTEP-322 (Rathika, Playwright), parents OTEP-85/128/268.
+
+*Sprint 2 In QA:* OTEP-170 (base layout), OTEP-314 (detail page), OTEP-327 (detail w/ design system), OTEP-320 (replace mock endpoint), OTEP-325/326 (empty/error states), OTEP-303 (POCDEX field check), OTEP-332 (reference data repo), OTEP-334 (backend detail endpoint).
+
+*Newly Done since 05-29:* OTEP-267 (pagination).
 
 ---
 
 ## Up Next
 
+> **BAU / standing tasks — prioritised** (linked from daily plans):
+> - **🔴 P1 (this week, unblocks others):** WOG AD response — Adrian (#26) · CSC SSO + ref data — Imelda (#18/#30)
+> - **🟠 P2 (batch soon):** Jira housekeeping (POCDEX epic, OTEP-128 AC, placeholder stories) · DQ issue — Daryll (#33) · dependency map → risks.md
+> - **🟡 P3 (whenever):** Diana loop-in + stakeholder file · Adrian OKR doc → NotebookLM · clean inbox
+> - **🗓️ Deadline-bound:** Cybersecurity quiz (due 2026-12-31) · PIM risk assessment (OTG ops)
+
 - [ ] **Email DDs on PSC — send today (Fri 29 May, this afternoon)** — stakeholder update email on PSC matters. Hard deadline today.
 - [ ] **Prepare Jobelle handover** — Jobelle joins 3 Jun. Step 1: share Phoebe's copy first. Step 2: share Daniel's handover after 30–60 days (i.e. ~3 Jul–3 Aug).
 - [ ] **Follow up on session-notes test cases** — no hard due date; follow up when opportunity arises.
-- [ ] **Revert to Clarissa by 4 Jun — Malaysian NRIC + downstream OTG impact** — Clarissa needs confirmation by Thu 4 Jun. Assess downstream OTG impact before responding.
+- [ ] **Revert to Clarissa by 4 Jun — Malaysian NRIC + downstream OTG impact** — Clarissa needs confirmation by Thu 4 Jun. Assess downstream OTG impact before responding. **Ties to Cumulus Phase 3 (open-item #36): OTG must be production-ready for Malaysia ID changes by 6 Jul 2026.** The 4 Jun reply is the near-term gate; 6 Jul is the production deadline.
 - [ ] **Design PostHog OKR + metric instrumentation** — Rama scheduling a call w/c 2 Jun to work through event taxonomy together. Attend and define metric definitions to measure OTEP OKRs and North Star. *(Squad-Sync 2026-05-26; updated 2026-05-29)*
 - [x] **Send post-Design Review async follow-up to Xian Zhang + Jacky** — sent 2026-05-28. ✅
 - [ ] **Update FormSG PRD** — remove pre-fill from MVP scope; note R1 direction (native in-OTEP application form). This week, before next grooming. *(Squad-Sync 2026-05-26)*
 - [ ] **Update OTEP-130 in Jira** — re-scope to MVP: basic FormSG redirect + webhook only, no pre-fill. This week. *(Squad-Sync 2026-05-26)*
 - [ ] **Check in with Pathfinder team on current demo state** — what can be shown to users right now? Get the URL and share with the team for early checks. *(Squad-Sync 2026-05-26)*
 - [ ] **Run through with Amber: design-vs-implementation check** — verify the implemented UI matches Amber's intended design. Bring any gaps back to standup before sprint ends. Note Amber also has user testing by end of week — flag potential capacity conflict. *(Squad-Sync 2026-05-26)*
-- [ ] **Check with Acacia on POCDEX data model familiarity** — Pow Hwee flagged Acacia has stronger data model knowledge; loop her in before Daryll session to come prepared. *(Pow Hwee adhoc 2026-05-25)*
+- [x] ~~**Check with Acacia on POCDEX data model familiarity**~~ — **Cancelled 2026-06-02.** No longer needed.
 - [ ] **Attend/track Thursday WD×DO job family model discussion** — 29 May 2026. POCDEX requirements depend on its outcome. Capture any implications for Daryll session. *(Pow Hwee adhoc 2026-05-25)*
 - [ ] **Write user story: opportunity matching using competencies** — not yet in backlog. Flagged by Pow Hwee. For Sprint 3 planning. *(Pow Hwee adhoc 2026-05-25)*
 - [ ] **Research in-platform application form vs FormSG** — Pow Hwee proposing Sprint 3 spike; Michelle to research pilot agency customisation needs before spike scoping. Before Sprint 3 planning. *(Pow Hwee adhoc 2026-05-25)*
@@ -65,16 +73,18 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## Waiting On
 
+> Reconciled against live Jira + open-items 2026-06-02. Resolved/active-now rows struck through.
+
 | Item | Waiting for | Since | Next action |
 |------|-------------|-------|-------------|
-| OTG file import (OTEP-192/193) | Pow Hwee | May 4 | Reports shared (2026-05-20). Blocked by #24 resolved. Pow Hwee to build. |
-| POCDEX account creation (OTEP-72) | Pow Hwee | May 4 | Confirm push mechanism works — bundle into Pow Hwee check-in |
-| `formsg_url` field (#2) | Rama + PSD Ops | May 4 | Last unconfirmed OTG field. Sprint 3 blocker. Chase this week. |
-| Auth edge-cases (OTEP-110, WOG-04/05/06) | Pow Hwee / Leo | May 11 | **NOT on Sprint 2 board.** Confirm Sprint 3 placement at mid-sprint review Mon 26 May. |
-| POCDEX go-live support structure | Daryll (POCDEX team) | 2026-05-21 | Schedule planning session with Daryll (#31) |
-| CSC SSO ownership decision | Imelda (Core Squad PM) | 2026-05-21 | Who passes documents to CSC after WOG AD completes? (#30) |
+| ~~OTG file import (OTEP-192/193)~~ | Pow Hwee | May 4 | ✅ **Moved to active work 2026-06-02** — OTEP-193 Done; OTEP-192 now in Sprint 3 Backlog (active build, no longer a "waiting on"). Tracked in sprint-status. |
+| POCDEX account creation (OTEP-72) | — | May 4 | Live: OTEP-72 "New Officer account creation" still Backlog, unassigned. Confirm push mechanism works — bundle into Pow Hwee check-in. Still open. |
+| ~~`formsg_url` field (#2)~~ | ~~Rama + PSD Ops~~ | May 4 | ✅ **RESOLVED 2026-05-21** — confirmed present for Internal Jobs/STIPs/Gigs, SJRs excluded. US-18 → OTEP-319 unblocked. |
+| Auth edge-cases (OTEP-110, WOG-04/05/06) | Pow Hwee / Leo | May 11 | Live: OTEP-110 "Login fail using WOG AD" now in Sprint 3 Backlog (auth epic deferred to S4+ per 2026-05-21 decision). Stale "next action" removed — no longer pending a 26 May review. |
+| POCDEX go-live support structure | Daryll (POCDEX team) | 2026-05-21 | Schedule planning session with Daryll (#31). **Still open.** |
+| CSC SSO ownership decision | Imelda (Core Squad PM) | 2026-05-21 | Who passes documents to CSC after WOG AD completes? (#30). **Still open.** |
 | ~~OTEP-276 design system spike~~ | Thomas | — | **Resolved** — OTEP-252 Done confirms Flagship/LifeSG adopted. No further action. |
-| QA review session with Rethna | Michelle (doc first) | May 13 | Create Sprint 2 AC summary doc first; schedule session after grooming settles. |
+| ~~QA review session with Rethna~~ | Michelle | May 13 | ✅ **Closed 2026-06-02** — Sprint 2 closing; AC-summary-doc prerequisite moot. No longer needed. |
 
 ---
 

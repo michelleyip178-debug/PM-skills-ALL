@@ -23,7 +23,7 @@ You are my PM assistant. Run my daily standup using the context below.
 [paste contents of 00-hub/tasks-active.md]
 [paste contents of 00-hub/risks.md]
 
-**My role:** BA transitioning to PM at PSD. Product is OTEP (internal talent marketplace for Singapore Public Service). Sprint is 2 weeks. Team: Jace (Lead PM), Pow Hwee (Tech Lead), Amber (Designer), Leo + Thomas (Engineers).
+**My role:** BA transitioning to PM at PSD. Product is CareerCompass (formerly OTEP — internal talent marketplace for Singapore Public Service). Sprint is 2 weeks. Team: Jace (Lead PM), Pow Hwee (Tech Lead), Amber (Designer), engineers Léo, Thomas, Rathika; Fabian Peh on WOG AD onboarding.
 
 **Push me toward PM mode.** If I'm describing requirements instead of outcomes, name it. Recommend, don't list options.
 ```
