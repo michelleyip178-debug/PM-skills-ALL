@@ -14,7 +14,8 @@
 
 | Feature | Status |
 |---|---|
-| Pre-filled applications — STIP, GIG, SJR, C@G, Internal Jobs | ✅ In |
+| Pre-filled applications — STIP, GIG, C@G, Internal Jobs | ✅ In |
+| Pre-filled applications — SJR | ⚠️ Unconfirmed — SJR excluded from MVP entirely (no apply flow, not ingested; D 2026-05-21). Re-introducing SJR apply in R1 is a major new integration track. Needs explicit confirmation (see Scope Concern #3) |
 | Post jobs on ATS | ✅ In |
 | Status tracking: end-to-end with ATS integration | ✅ In |
 | Application within CareerCompass (no redirects) | ✅ In |
@@ -30,11 +31,11 @@
 - Officer satisfaction ≥ 3.5/5
 - 50% of required OTG features built on CareerCompass
 
-### What MVP tells us (as of Sprint 2)
-- Application flow in MVP = FormSG redirect (STIP/GIG), C@G deep-link, SJR = no apply action
-- `formsg_url` field still unconfirmed — blocks US-18 (Sprint 3)
-- No WOG AD UAT environment confirmed yet — auth risk in Sprint 3
-- Scope instability from senior stakeholders (logged risk)
+### What MVP tells us (as of Sprint 3, updated 2026-06-02)
+- Application flow in MVP = FormSG redirect (Internal Jobs/STIP/GIG), C@G deep-link. SJR = not ingested at all (D 2026-05-21, supersedes "visible but no apply")
+- `formsg_url` field confirmed ✅ (2026-05-21, open-items #2) — unblocked OTEP-319 (was US-18)
+- No WOG AD UAT environment yet, but auth FE is de-risked: login/logout build now against Keycloak, WOG AD swaps in later (D 2026-06-02, OTEP-305)
+- Scope instability from senior stakeholders (logged risk) — CareerCompass branding + MVP-6 pilot confirmed 2026-06-02
 - Thomas is sole FE developer — bandwidth is a constraint into R1 planning
 - No abandonment data yet — MVP analytics baseline not established
 
@@ -72,7 +73,7 @@ Five ideas carried forward — chosen because they are directly load-bearing for
 |---|---|---|
 | 1 | Unified application inbox | Directly tied to the 20% applied OKR — won't hit the number if officers can't see and trust their applications |
 | 2 | Smart pre-fill service | Core UVP of R1; if profile data isn't good enough, this is an illusion |
-| 3 | Application type router | Usability backbone — officers applying across 5 types need a consistent mental model |
+| 3 | Application type router | Usability backbone — officers applying across the in-scope types (STIP, GIG, C@G, Internal; SJR pending Concern #3) need a consistent mental model |
 | 7 | Save draft + progress stepper | Abandonment is unvalidated but plausible — needs evidence before building |
 | 10 | ATS webhook layer | Technical foundation without which ideas 1, 3, 8 cannot work |
 
@@ -137,8 +138,8 @@ Five ideas carried forward — chosen because they are directly load-bearing for
 ### Experiment 3 — Test A2: Profile data quality at R1 launch
 
 **Hypothesis:** ≥70% of officer profiles at R1 launch will have sufficient data (name, role, agency, competency tags) to pre-fill at least 50% of application form fields without requiring correction.  
-**Method:** During MVP UAT (Sep–Oct'26), audit profile completion across the pilot cohort (ESG + PSD officers). Map CareerCompass profile fields against STIP and GIG form schemas (the highest-volume application types). Run one usability session: give 5 officers a pre-filled application draft and observe correction behaviour.  
-**Success criteria:** Field coverage ≥ 70% average across sampled profiles. Correction rate < 20% in usability session (officers accept, not rewrite, pre-filled content).  
+**Method:** During MVP UAT (Sep–Oct'26), audit profile completion across the **MVP-6 pilot cohort (PSD, ESG, MDDI, URA, MCCY, CAAS — ~5,400 officers)**. Sample across all 6 agencies, not just one — profile completeness likely varies by agency HR practice, and that variance is itself a finding. Map CareerCompass profile fields against STIP and GIG form schemas (the highest-volume application types). Run one usability session: give 5 officers a pre-filled application draft and observe correction behaviour.  
+**Success criteria:** Field coverage ≥ 70% average across sampled profiles, **and no single pilot agency below 50%** (a low-coverage agency drags down that agency's pilot experience). Correction rate < 20% in usability session (officers accept, not rewrite, pre-filled content).  
 **Effort:** Medium — requires actual pilot profile data and OTG form schemas. One usability session.  
 **Timeline:** UAT (Sep–Oct'26).  
 **Decision rule:** Coverage < 50% or correction rate > 40% → descope smart pre-fill; prioritise profile enrichment as R1's primary feature instead of form pre-fill. Reframe R1 value prop from "apply faster" to "build your profile, then apply."
@@ -158,12 +159,25 @@ Five ideas carried forward — chosen because they are directly load-bearing for
 
 ### Experiment 5 — Test A11: Profile-to-form field mapping
 
-**Hypothesis:** CareerCompass profile fields cover ≥60% of required fields across STIP, GIG, SJR, C@G, and Internal Job application schemas.  
-**Method:** Engineering spike — Pow Hwee maps current data model fields to each of the 5 form schemas. Output: a field coverage matrix with gap count and gap severity (nice-to-have vs. required field).  
+**Hypothesis:** CareerCompass profile fields cover ≥60% of required fields across STIP, GIG, C@G, and Internal Job application schemas.  
+**Method:** Engineering spike — Pow Hwee maps current data model fields to each form schema. **SJR is excluded** — it has no apply flow and isn't ingested (D 2026-05-21); only re-add it here if Scope Concern #3 resolves SJR back into R1. Output: a field coverage matrix with gap count and gap severity (nice-to-have vs. required field).  
 **Success criteria:** Coverage matrix completed; gap count defined; recommendation made on whether to add missing fields to the R1 profile model or flag as out-of-scope.  
 **Effort:** Low-medium — 1 sprint sub-task for Pow Hwee, combined with ATS spike (Experiment 2).  
 **Timeline:** Sprint 4–5 (Jun–Jul'26).  
 **Decision rule:** If ≥3 required fields are missing across all form types → add profile enrichment stories to R1 backlog before pre-fill stories. Don't build pre-fill on an incomplete profile model.
+
+---
+
+### Experiment 6 — Test A14: Vendor access agreements (split from Exp 2)
+
+> Carved out of Experiment 2 because A14 is a different risk with a different owner and a longer lead time. A webhook can exist technically (A9) while the vendor still won't sign an access agreement (A14) — that's a legal/procurement gate, not an engineering one, and it's the single longest-lead item in R1. It needs its own trigger, earlier.
+
+**Hypothesis:** OTG, C@G, and the relevant ATS will grant written API/webhook access agreements in time for R1 design (Aug–Sep'26).  
+**Method:** Non-technical track owned by Michelle (not Pow Hwee). Identify the agreement owner in each of OTG, C@G, and the ATS org. Get the access request into each one's process early — government data-sharing agreements have multi-week approval cycles. Output: written confirmation (email or signed agreement) of access terms from each system.  
+**Success criteria:** Agreement-in-principle (email) from OTG + C@G by **end of June'26**; ATS confirmed once "which ATS" resolves (Scope Concern #2). Full written terms by Aug'26.  
+**Effort:** Low engineering, high coordination — stakeholder identification + follow-through across three orgs.  
+**Timeline:** Start **now (Sprint 3)** — earliest of any experiment, because the approval clock is external and out of your control.  
+**Decision rule:** No agreement-in-principle from a given system by end of June → escalate to Adrian as a viability risk, not a technical one. If OTG won't agree → status tracking descopes to R2 regardless of whether the webhook exists (ties to Exp 2's decision rule).
 
 ---
 
@@ -175,10 +189,13 @@ Five ideas carried forward — chosen because they are directly load-bearing for
 - Form complexity audit: Pow Hwee retrieves STIP/GIG schemas; Amber sketches drawer at 375px
 - Output: drawer fit confirmed or full-page fallback decided before Amber starts R1 design
 
+**Sprint 3 onward — Vendor access track (earliest start)**
+- Experiment 6: vendor access agreements for OTG/C@G/ATS (Michelle) — start now; external approval clock is the longest lead in R1
+
 **Sprint 4–5 (Jun–Jul'26) — Validate technical foundations**
-- Experiment 2: OTG webhook spike + vendor agreement (Pow Hwee)
-- Experiment 5: Profile-to-form field mapping + schema stability check (Pow Hwee)
-- FE capacity estimate: Pow Hwee + Thomas size effort per application type
+- Experiment 2: OTG/C@G webhook spike — technical feasibility only (Pow Hwee); vendor-agreement half split out to Exp 6
+- Experiment 5: Profile-to-form field mapping + schema stability check (Pow Hwee) — 4 in-scope types, SJR excluded pending Concern #3
+- FE capacity estimate: Pow Hwee + Thomas size effort per in-scope application type
 
 **Sprint 5 onward — Instrument MVP for behavioural signals**
 - Experiment 4: Abandonment funnel live from MVP launch; first data Jul '26
@@ -225,7 +242,7 @@ These aren't assumptions for experiments — they're questions that need a decis
 
 2. **Which ATS?** The deck references "ATS integration" but OTEP integrates with OTG (file import), C@G (API), and potentially a separate ATS for internal jobs. Which system(s) is "ATS" in the R1 status tracking feature? Confirm with Jacky/Xian Zhang.
 
-3. **SJR in R1.** SJR was explicitly "no apply action in MVP" (deferred to future release). The R1 revised scope includes SJR in the pre-filled applications list. Does this mean the apply-via-OTEP flow for SJR is now R1? That's a major addition with its own integration track. Needs explicit confirmation.
+3. **SJR in R1.** Update (2026-06-02): the MVP position hardened — decision **2026-05-21** excludes 2026 SJRs from ingestion entirely (supersedes "visible but no apply"). So SJR has no MVP footprint at all: not ingested, no apply flow, no card. The R1 deck still lists SJR under pre-filled applications. Re-introducing SJR in R1 therefore isn't an increment on MVP — it's a net-new integration track (ingestion + apply + schema mapping) with its own engineering cost. **Decision needed before R1 grooming:** is SJR genuinely in R1, or did it carry over from an older deck? Confirm with Adrian/Jace. Until confirmed, treat SJR as out and exclude it from Exp 5 schema mapping.
 
 4. **External-facing Profile security model.** Sharing an officer's profile externally (to hiring managers) raises data classification questions. Is this a public link, a permissioned link, or a system-to-system API call? Government data handling rules apply. Needs a decision and a security review scope update.
 
@@ -233,16 +250,18 @@ These aren't assumptions for experiments — they're questions that need a decis
 
 ## Next Steps
 
+> Re-baselined 2026-06-02 (now Sprint 3). The five items originally tagged "Sprint 2 W2 / this week" are still open and now **overdue** — they were the discovery's earliest gates and need clearing this sprint before they block R1 design lockdown.
+
 | Action | Owner | When | Urgency |
 |---|---|---|---|
-| Raise vendor API access agreements with Adrian (A14) | Michelle | Sprint 2 W2 | 🔴 This week |
-| Confirm draft data security classification with security contact (A13) | Michelle | Sprint 2 W2 | 🔴 This week |
-| Clarify "application within CareerCompass" definition (Adrian/Jace) | Michelle | Sprint 2 W2 | 🔴 This week |
-| Confirm which systems count as "ATS" in R1 status tracking | Michelle + Jacky/Xian Zhang | BO sync Mon 25 May | 🔴 This week |
-| Confirm SJR apply flow is in R1 scope | Michelle | Sprint 2 W2 | 🔴 This week |
+| Run vendor access-agreement track (A14 — now Exp 6) | Michelle | **Sprint 3 — start now** | 🔴 Overdue — longest external lead time |
+| Confirm draft data security classification with security contact (A13) | Michelle | **Sprint 3** | 🔴 Overdue |
+| Clarify "application within CareerCompass" definition (Adrian/Jace) | Michelle | **Sprint 3** | 🔴 Overdue — sets technical scope by an order of magnitude |
+| Confirm which systems count as "ATS" in R1 status tracking | Michelle + Jacky/Xian Zhang | **Next BO sync** | 🔴 Overdue |
+| Confirm whether SJR apply flow is in R1 at all (Scope Concern #3) | Michelle | **Sprint 3** | 🔴 Overdue — gates Exp 5 schema scope |
 | Form complexity audit — drawer fit decision | Pow Hwee + Amber | Sprint 3 | 🟡 Blocks design |
 | Run Experiment 2 + 5 as combined spike (OTG/C@G APIs + schema mapping) | Pow Hwee | Sprint 4–5 | 🟡 Blocks backlog |
-| FE capacity estimate for 5 application types | Pow Hwee + Thomas | Sprint 4–5 | 🟡 Blocks backlog |
+| FE capacity estimate for in-scope application types (4; +SJR if confirmed) | Pow Hwee + Thomas | Sprint 4–5 | 🟡 Blocks backlog |
 | Instrument apply CTR and abandonment funnel | Leo/Thomas | Sprint 5 | 🟡 Before MVP |
 | Recruit proxy research participants (PSD staff or BO network) | Michelle | Sprint 5 | 🟡 Before Sprint 6-7 |
 | Run Sprint 6-7 research sessions (pre-fill WoZ, STIP task test, prototype) | Michelle + Amber | Sprint 6–7 (Jul–Aug) | 🟠 Before Sep grooming |
@@ -260,4 +279,5 @@ These aren't assumptions for experiments — they're questions that need a decis
 ---
 
 *Living document — update as experiments run and scope decisions are logged in `decisions-log.md`.*  
-*Source: Project OTEP OKR Review and Roadmap deck (uploaded 2026-05-20) + sprint-status.md + risks.md*
+*Source: Project OTEP OKR Review and Roadmap deck (uploaded 2026-05-20) + sprint-status.md + risks.md*  
+*Reconciled 2026-06-02 against current state: pilot → MVP-6; SJR excluded from MVP (D 2026-05-21); formsg_url confirmed; auth de-risked via Keycloak (D 2026-06-02); A14 split into Experiment 6; Next Steps re-baselined to Sprint 3.*
