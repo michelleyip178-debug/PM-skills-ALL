@@ -48,7 +48,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [x] **Check in with Pathfinder team on current demo state** — ✅ Done 2026-06-02. *(Squad-Sync 2026-05-26)*
 - [x] **Run through with Amber: design-vs-implementation check** — ✅ Done 2026-06-02. *(Squad-Sync 2026-05-26)*
 - [x] ~~**Check with Acacia on POCDEX data model familiarity**~~ — **Cancelled 2026-06-02.** No longer needed.
-- [ ] **Attend/track Thursday WD×DO job family model discussion** — 29 May 2026. POCDEX requirements depend on its outcome. Capture any implications for Daryll session. *(Pow Hwee adhoc 2026-05-25)*
+- [x] **Attend/track Thursday WD×DO job family model discussion** — ✅ Done 29 May 2026. *(Pow Hwee adhoc 2026-05-25)*
 - [ ] **Write user story: opportunity matching using competencies** — not yet in backlog. Flagged by Pow Hwee. For Sprint 3 planning. *(Pow Hwee adhoc 2026-05-25)*
 - [ ] **Research in-platform application form vs FormSG** — Pow Hwee proposing Sprint 3 spike; Michelle to research pilot agency customisation needs before spike scoping. Before Sprint 3 planning. *(Pow Hwee adhoc 2026-05-25)*
 - [ ] **WOG Auth success metrics** — committed to Adrian this week. Grounded in Dec '26 OKR baselines from BO deck. Start Thursday at latest. *(daily plan 2026-05-26)*
@@ -56,7 +56,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [ ] **Drive R1 design alignment + discovery WITH the designers** — R1 deep-dive praised at PM Weekly, but the ask is to move it from PM-solo to a real cross-functional effort. Get Amber (+ Michelle Chen's design capacity if it lands) aligned on the three R1 surfaces: apply, agency-creation, manager dashboard. Before R1 grooming. *(PM Weekly 2026-06-02)*
 - [ ] **Feed Adrian the specific R1 resource ask** — concrete framing for his Michelle Chen conversation: three net-new R1 builds (native apply + native creation + the seam), one FE dev. Reference the R1 capacity reality-check. This week. *(PM Weekly 2026-06-02)*
 - [ ] **CSC SSO technical-feasibility deep-dive** — with Pow Hwee/Fabian; surface why there's an intentional re-login. Feeds open-item #30. Before Sprint 5 (~2 Jul). *(PM Weekly 2026-06-02)*
-- [ ] **Create the new "POCDEX Integration" Epic in Jira** and move OTEP-271, 203, 202, 127 under it
+- [x] **Create the new "POCDEX Integration" Epic in Jira** and move OTEP-271, 203, 202, 127 under it — ✅ Done 2026-06-02
 - [ ] **Follow up with Daryll/Pow Hwee on raising DQ issue** for OTEP code table in UAT read replica
 - [ ] **Work out next steps for WOG AD onboarding with Fabian and Pow Hwee** — OTEP-350 (Onboard WOG AD, Fabian Peh) now in Sprint 3; coordinate next steps.
 - [ ] **Complete Cybersecurity quiz by 2026-12-31** — **DEFER out of June (LNO 2026-06-02): 7 months out, not on the MVP/R1 spine.**
@@ -68,9 +68,9 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [x] **[PM action — #28] Confirm OTEP-85 visibility rule** — resolved 2026-05-19: `closing_date > today`; "Closing soon" badge (≤7 days) is OTEP-129's
 - [x] **[PM action — #29] Define OTEP-289 ACs, timebox, expected outcome** — resolved 2026-05-19: 2-day timebox, written recommendation output
 - [ ] **[PM action] Clean OTEP-128 AC** — remove "This opportunity is closed" notice AC from OTEP-128 (it belongs to OTEP-129).
-- [ ] Loop Diana into opportunities decisions going forward (Jace's call, PM Weekly 11 May); add `06-skills-and-decisions/stakeholders/people/diana.md`
+- [x] Loop Diana into opportunities decisions going forward (Jace's call, PM Weekly 11 May) — ✅ Done 2026-06-02
 - [ ] ~~Load Adrian's OKR doc into NotebookLM~~ — **KILL (LNO 2026-06-02): it's already `06-skills-and-decisions/otep-roadmap-okrs-2627.md`. No action.**
-- [ ] Clarify the "OTG test cases — session notes co-innovation" request, then route to `projects/otg-ops/task-log.md`
+- [x] Clarify the "OTG test cases — session notes co-innovation" request, then route to `projects/otg-ops/task-log.md` — ✅ Done 2026-06-02
 - [ ] **Conduct PIM risk assessment (OTG ops)** — scope to the no-PIM scenario: identify worst-case damage if privileged accounts are abused, then submit residual risk for formal acceptance. **DEFER out of June (LNO 2026-06-02): important but not on the MVP/R1 critical spine; revisit post-feature-freeze.** *(captured 2026-05-20)*
 - [ ] Clean up email inbox *(captured 2026-05-20)*
 
