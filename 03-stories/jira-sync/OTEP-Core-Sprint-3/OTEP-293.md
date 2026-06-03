@@ -1,8 +1,8 @@
-# OTEP-310: Competency Search API
+# OTEP-293: Gitlab 05 - Deployment & Environment Segregation for Web.
 
 **Type:** Sub-task
-**Status:** In Progress
-**Assignee:** Kingsley Low
+**Status:** Backlog
+**Assignee:** N/A
 **Story Points:** N/A
 
 ---

@@ -1,8 +1,8 @@
-# OTEP-310: Competency Search API
+# OTEP-187: Procure Comet laptop for testing
 
-**Type:** Sub-task
-**Status:** In Progress
-**Assignee:** Kingsley Low
+**Type:** Story
+**Status:** To Do
+**Assignee:** rama moorthy
 **Story Points:** N/A
 
 ---

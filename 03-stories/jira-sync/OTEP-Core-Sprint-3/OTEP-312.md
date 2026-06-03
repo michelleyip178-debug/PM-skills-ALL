@@ -2,7 +2,7 @@
 
 **Type:** Sub-task
 **Status:** Backlog
-**Assignee:** N/A
+**Assignee:** Pei Ern Lim
 **Story Points:** N/A
 
 ---
@@ -22,3 +22,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-03*

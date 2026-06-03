@@ -1,7 +1,7 @@
 # OTEP-324: Implement OAuth 2.0 Refresh Token Rotation in NextAuth and Keycloak
 
 **Type:** Task
-**Status:** Backlog
+**Status:** QA
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 
@@ -22,3 +22,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-03*

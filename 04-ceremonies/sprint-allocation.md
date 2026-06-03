@@ -2,8 +2,12 @@
 
 **This is the source of truth for which stories are in which sprint.** Other docs (`04-ceremonies/archive-tasks/story-readiness.md`, `04-ceremonies/sprint-checklists.md`, `04-ceremonies/sprint-calendar.md`, the story-group files in `projects/otep-mvp/stories/`) reference this — they don't restate it. Story IDs are reconciled in [story-id-map.md](../03-stories/story-id-map.md).
 
-**Last updated:** 2026-05-21 (Sprint 3 reallocation — auth deferred; Sprint 4 restructured with contingency-first stream; **working assumption = auth lands Sprint 5** — WOG AD is a formal process, min 2 wks + back and forth; Sprint 5 carries auth realistic + C@G; Sprint 6 carries CSC SSO realistic + admin).
+**Last updated:** 2026-06-03 (Sprints 2–3 reconciled to live Jira post-rollover — both S2 closed, both S3 active; Pathfinder S3 = 49 issues, Core S3 = 92. Sprints 4–12 below remain the 2026-05-21 planning sketch.)
+
+**Prior:** 2026-05-21 (Sprint 3 reallocation — auth deferred; Sprint 4 restructured with contingency-first stream; **working assumption = auth lands Sprint 5** — WOG AD is a formal process, min 2 wks + back and forth; Sprint 5 carries auth realistic + C@G; Sprint 6 carries CSC SSO realistic + admin).
+
 **Cadence:** 2-week sprints, Mon start / Fri end, from Mon 4 May 2026. Sprint 1 ran a combined Backlog-Grooming + Sprint-Planning Thursday; from Sprint 2 those split (Backlog Grooming Thu W1, Sprint Planning Thu W2). Dates + ceremonies: [04-ceremonies/sprint-calendar.md](../04-ceremonies/sprint-calendar.md).
+
 **Feature Freeze:** end of Sprint 8 (Fri 21 Aug) — end of Phase 1, Feature Build · **Go-Live:** end of Sprint 12 (Fri 16 Oct) — end of Phase 2, Compliance & Go-Live (Sprints 9–12).
 
 > Sprints 1–3 below are reconciled and current. Sprints 4–12 are a planning sketch — scope is provisional and story IDs aren't fully reconciled against `story-id-map.md` yet; refine at each sprint's grooming.
@@ -42,11 +46,13 @@
 
 ---
 
-## Sprint 2 (18–29 May) — CURRENT — Listing → Detail End-to-End
+## Sprint 2 (18–29 May) — CLOSED ✅ (2026-06-02) — Listing → Detail End-to-End
 
 **Sprint goal:** By end of Sprint 2, an officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
 
-### Live Jira status (2026-05-20)
+> **Closed 2026-06-02.** 6 stories Done at close (OTEP-267, 252, 194, 193, 288, 296). Unfinished work (11 QA + OTEP-85/313/322 In Progress + OTEP-128/268/129) carried into Sprint 3 — see below. Table retained as historical record of the sprint as it stood mid-flight.
+
+### Live Jira status (snapshot 2026-05-20 — historical)
 
 | Jira | Story | Owner | Jira Status | Notes |
 |------|-------|-------|-------------|-------|
@@ -104,60 +110,97 @@
 
 ---
 
-## Sprint 3 (1–15 Jun) — Filters + Enhanced Detail + OTG Ingestion + POCDEX Plumbing
+## Sprint 3 (2–14 Jun) — ACTIVE (Day 2) — Filters + Apply Flow + OTG Ingestion (live data)
 
-**Sprint goal:** Officers can filter opportunities by type and category, click through to a detail page with a working Apply CTA, and the backend is ingesting live OTG data via recurring job. POCDEX local infrastructure in place to unblock Sprint 4 ringfencing.
+**Sprint goal:** By end of Sprint 3, an officer can find relevant opportunities using filters and successfully initiate an application to any active OTG opportunity (except SJRs), powered by live imported data.
 
-**Reallocated 2026-05-21:** Auth epic (OTEP-71, OTEP-110, OTEP-304, OTEP-305) moved to Sprint 4+ — no WOG AD UAT environment available to validate auth stories (open item #26). Sprint 3 now delivers discoverability and apply-flow work that builds directly on Sprint 2 output.
+**Live pull 2026-06-03** (Sprint 34617, state=active). **49 issues:** 4 Done, 5 In Progress, 12 QA, 28 Backlog. Both Sprint 2 boards closed 2026-06-02; unfinished QA + In-Progress work bulk-carried here. **Design lock:** Wed 3 Jun. **Mid-sprint review:** Mon 8 Jun.
 
-| Jira | Story | Owner | Notes |
-|------|-------|-------|-------|
-| OTEP-192 | Design recurring job to fetch OTG data (Excel) | Leo | Critical path — listing has no live data without it. |
-| OTEP-271 | Local POCDEX database (container + schema) | Leo | POCDEX plumbing. Unblocks Sprint 4 ringfencing (OTEP-127). |
-| OTEP-203 | Implement standalone POCDEX API service | Pow Hwee | POCDEX plumbing. Staggered from Sprint 4 to unblock ringfencing. |
-| OTEP-86 | Filter opportunities by type | — | Builds on Sprint 2 listing page. Moved from Sprint 4. |
-| OTEP-317 | Clear filters and reset view *(was US-05)* | — | Pairs with OTEP-86. Moved from Sprint 4. Ticketed 2026-05-21. |
-| OTEP-318 | Filter opportunities by category *(was US-03)* | — | ⚠️ Conditional on OTEP-289 spike output — proceed only if taxonomy mapping is clean. Ticketed 2026-05-21; no description in Jira yet. |
-| OTEP-319 | Apply via FormSG basic redirect *(was US-18)* | — | ✅ `formsg_url` confirmed 2026-05-21. Ticketed. Ready to groom. |
-| OTEP-87 | Enhanced detail page — apply CTA only | — | Builds on Sprint 2 OTEP-128. Competency section deferred pending open item #18. |
+**New scope since 05-21 plan:** OTEP-129 split into **OTEP-362 (BE, In Progress) + OTEP-363 (UI)**; C@G stories OTEP-87/88/89 + 374–379 landed; login/logout OTEP-305/368/369/370; spikes OTEP-349/351/358; filtering split OTEP-380 (BE) / OTEP-381 (FE).
 
-**DoR blockers:**
-- [ ] OTEP-289 spike output reviewed — go/no-go for US-03
-- [x] `formsg_url` confirmed (open item #2 resolved 2026-05-21) — US-18 unblocked
-- [ ] Open item #18 (competency data source) checked — OTEP-87 scoped accordingly
-- [ ] OTEP-192, OTEP-271, OTEP-203 added to Sprint 3 Jira board and assigned
-- [ ] OTEP-86, OTEP-317, OTEP-318, OTEP-87 added to Sprint 3 Jira board
-- [x] Auth stories (OTEP-71, 110, 304, 305) moved to Sprint 4+ in Jira — **resolved 2026-05-21 (moved by Pow Hwee)**
-- [ ] Open item #26 escalated to Adrian before auth is rescheduled
-- [ ] OTEP-191 (credential manager) placement confirmed — in Jira Sprint 3; verify if resolved by AWS infra or needs active work
+### New S3 scope — the sprint-goal spine
+
+| Jira | Story | Owner | Status (live 06-03) | Notes |
+|------|-------|-------|---------------------|-------|
+| OTEP-85 | Display opportunity cards with real OTG data | — | **In Progress** | Critical path. ⚠️ Still no assignee. |
+| OTEP-192 | Recurring OTG data ingestion job (Excel) | — | Backlog | Critical path — listing has no live data without it. ⚠️ Unassigned. |
+| OTEP-86 | Filter opportunities by type | — | Backlog | Builds on S2 listing. ⚠️ Unassigned. |
+| OTEP-317 | Clear filters and reset view *(was US-05)* | — | Backlog | Pairs with OTEP-86. ⚠️ Unassigned. |
+| OTEP-380 | [BE] Handle filtering params | Léo | **In Progress** | Backend half of category/type filtering. |
+| OTEP-381 | [FE] Handle filtering params | Thomas | Backlog | Frontend half. |
+| OTEP-319 | Apply via FormSG — basic redirect *(was US-18)* | — | Backlog | ✅ `formsg_url` confirmed. ⚠️ Unassigned. |
+| OTEP-87 | View Careers@Gov opportunity detail | — | Backlog | Includes competency section (scope firm). Open dependency is **data**: whether each C@G opp carries competencies depends on ingestion landing first. Unassigned. |
+| OTEP-362 | Update backend to not return closed opportunities | Thomas | **In Progress** | Split from OTEP-129. |
+| OTEP-363 | UI component to display closed opportunity | — | Backlog | Split from OTEP-129. ⚠️ Unassigned. |
+
+### Carried over from Sprint 2 (finish first)
+
+| Jira | Story | Owner | Status (live 06-03) |
+|------|-------|-------|---------------------|
+| OTEP-128 | View opportunity detail page | — | QA |
+| OTEP-170 | Base layout for listing page | Thomas | QA |
+| OTEP-268 | Empty/error/partial-load states | — | QA |
+| OTEP-314 | Detail page consuming response | Thomas | QA |
+| OTEP-320 | Replace mock endpoint with real DB | Léo | QA |
+| OTEP-324 | OAuth refresh token rotation | Thomas | QA |
+| OTEP-325 / 326 | Empty / error state UI | Thomas | QA |
+| OTEP-327 | Detail page using design system | Thomas | QA |
+| OTEP-332 | Shared reference data repository | Pow Hwee | QA |
+| OTEP-334 | Backend detail endpoint | Léo | QA |
+| OTEP-303 | POCDEX field check | Pow Hwee | QA |
+| OTEP-322 | Playwright E2E framework | Rathika | In Progress |
+| OTEP-276 | [Spike] design system reimplementation | Pow Hwee | In Progress |
+| OTEP-129 | See open/closed before applying | Thomas | Backlog (parent of 362/363) |
+
+> **Moved off the live S3 board (were assumed here in the 05-21 plan):** OTEP-271, OTEP-203 (POCDEX plumbing — now under the POCDEX Integration epic), OTEP-318 (category filter — not ticketed on board), OTEP-191 (credential mgr — closed). Verify placement before relying on this.
+
+**DoR blockers / open at Day 2:**
+- [ ] OTEP-289 spike output reviewed — go/no-go for category filtering
+- [x] `formsg_url` confirmed (open item #2 resolved 2026-05-21) — OTEP-319 unblocked
+- [ ] Open item #18 (competency data source) checked — **BO Working Level 2 Jun surfaced no SSOT for competencies; consumer-vs-system-of-record fork still open.** OTEP-87's competency section is *in scope*; what's unconfirmed is whether each C@G opp will have competency data (depends on ingestion landing first).
+- [x] Core S3 stories on board — confirmed live (49 Pathfinder issues now on the active board)
+- [ ] **Owner assignment gap** — OTEP-85, 86, 192, 317, 319, 87, 363 all still **Unassigned** on the live board. Assign at grooming.
+- [ ] Open item #26 escalated to Adrian before auth is rescheduled (WOG AD onboarding)
 - [ ] OTEP-92 ("Tracking" subtask of OTEP-86) — no story file; confirm purpose and whether it needs ACs
 
 ---
 
-## Sprint 4 (15–26 Jun) — C@G + FormSG Phase 2 + Auth if WOG AD clean — *provisional*
+## Sprint 4 (16–27 Jun) — Finish the S3 spine + C@G + Auth if WOG AD clean — *provisional, re-based 2026-06-03*
 
-> **Working assumption (updated 2026-05-21): WOG AD onboarding is a formal process — minimum 2 weeks from Adrian's approval, longer if errors or back and forth. Auth landing in Sprint 4 requires both Adrian responding this week AND a clean onboarding run. Treat that as the lucky case. Sprint 4 is now planned with a contingency-first stream that ships regardless of WOG AD status.**
+> **Re-based 2026-06-03 against live S3.** Sprint 4 is no longer a clean "new C@G + auth" sprint. Sprint 3 carries 45 open issues on Day 2 with **one FE dev (Thomas) and ~20 FE stories** — the apply/filter spine and the entire C@G UI stream will mostly carry into S4. Plan S4 as *finish-the-spine first*, new work second. Full reasoning: [Sprint 3 FE capacity + S4 impact analysis](../../../PM-OS/outputs/analyses/2026-06-03-sprint3-fe-capacity-and-sprint4-impact.md).
+>
+> **🟢 Capacity boost in S4: a second full-stack dev joins** (productive day 1, even FE/BE split) → ~1.5 FE-equivalent + extra BE. This makes S4 the *catch-up* sprint that can absorb the S3 carry-over AND start some new work. Sprint 3 itself gets no relief — the catch-up only starts 16 Jun.
+>
+> **Auth note:** WOG AD onboarding (OTEP-350, Fabian) + login/logout UI (OTEP-305/368/369/370) already landed in **Sprint 3**, so the auth clock started earlier than the 05-21 plan assumed. Good news *if* OTEP-350 progresses — but it's unassigned/Backlog at S3 Day 2.
 
-**Stream A — WOG AD-independent (ships regardless):**
-
-| Jira | Story | Owner | Notes |
-|------|-------|-------|-------|
-| Story D | C@G API ingestion setup | Pow Hwee | Unwritten story — C@G schema mapping, sync frequency, error handling. Prerequisite for OTEP-89. Pulled forward from S05. |
-| OTEP-202 | Create POCDEX seed database for local dev | Leo | No WOG AD dep. Seeds test profiles for ringfencing validation. |
-| OTEP-130 | Apply to OTG opportunity via FormSG (full) | Thomas / Leo | FormSG Phase 2. Webhook callback. No WOG AD dep. Pulled forward from S05. |
-| OTEP-88 | Understand the difference between OTG and C@G flows | Thomas | Button labels, visual cues. No WOG AD dep. |
-| — | Instrumentation: all success metrics tracked | — | oppr_list_view, oppr_detail_view, filter_applied, click_to_formsg, etc. No WOG AD dep. |
-
-**Stream B — WOG AD-dependent (start only if onboarding complete by 15 Jun):**
+**Stream 0 — Carry-over from S3 (plan for these FIRST — they're the realistic intake):**
 
 | Jira | Story | Owner | Notes |
 |------|-------|-------|-------|
-| OTEP-71 | Log in with WOG AD credentials | Pow Hwee | ⚠️ Best case only. If WOG AD not done by 15 Jun → moves to Sprint 5. |
+| OTEP-319 | Apply via FormSG — basic redirect | — | The other half of the S3 goal. Likely slips if S3 FE does filters first. **Recommend apply-first in S3 to avoid this.** |
+| OTEP-87/88/89 | C@G detail / listing / deep-link | — | C@G UI stream — was "new" in the 05-21 plan, but already groomed into S3. Will mostly carry. OTEP-87 includes competency section (data depends on ingestion). |
+| OTEP-374–379 | C@G API + payload + UI mapping + tests | — | Backend + FE for C@G. Carries from S3. |
+| OTEP-305, 368, 369, 370 | Login/logout UI, session redirect | — | Auth UI carried from S3. FE-bound (Thomas). |
+| OTEP-348 | OTG ingestion — scheduler & observability | — | Ingestion polish; carries if OTEP-192 lands late. |
+
+**Stream A — New, WOG AD-independent (only if S3 spine actually lands):**
+
+| Jira | Story | Owner | Notes |
+|------|-------|-------|-------|
+| OTEP-130 | Apply to OTG opportunity via FormSG (full) | Thomas / Leo | FormSG Phase 2 webhook callback. **Depends on OTEP-319 (S3) being done.** |
+| OTEP-202 | Create POCDEX seed database for local dev | Leo | Seeds test profiles for ringfencing validation. |
+| — | Instrumentation: success metrics tracked | — | oppr_list_view, detail_view, filter_applied, click_to_formsg. |
+
+**Stream B — WOG AD-dependent (start only if OTEP-350 onboarding complete by ~16 Jun):**
+
+| Jira | Story | Owner | Notes |
+|------|-------|-------|-------|
+| OTEP-71 | Log in with WOG AD credentials | Pow Hwee | ⚠️ Best case only. Onboarding clock started S3 (OTEP-350). If not done → Sprint 5. |
 | OTEP-110 | Login fail / clear error | Thomas | ⚠️ Best case only. |
-| OTEP-304 | Stay logged in during session (WOG-04) | — | ⚠️ Best case only. |
-| OTEP-305 | Log out of OTEP (WOG-05) | — | ⚠️ Best case only. |
-| OTEP-127 | Apply ringfencing criteria | Thomas / Leo | ⚠️ Best case only. Needs WOG AD + Sprint 3 POCDEX plumbing. |
-| WOG-06 | First-time login experience | Thomas | ⚠️ Best case only. POCDEX dep + WOG AD dep. |
+| OTEP-127 | Apply ringfencing criteria | Thomas / Leo | ⚠️ Best case only. Needs WOG AD + POCDEX plumbing. ⚠️ **POCDEX dep gap: OTEP-271/203 moved off the S3 board to the POCDEX epic — confirm they're done before relying on ringfencing here.** |
+| WOG-06 | First-time login experience | Thomas | ⚠️ Best case only. POCDEX + WOG AD dep. |
+
+> **FE constraint eases in S4 (second full-stack dev), but doesn't vanish.** ~1.5 FE-equivalent against a backlog this deep is still tight, and at an even split FE only gets ~0.5 of the new dev. Consider weighting the new dev toward FE for their first sprint or two to clear the carry-over faster. The R1 ask to Adrian/Michelle Chen now targets *sustained* FE capacity for the net-new R1 builds (native apply + creation + the seam), not plugging this S3/S4 hole.
 
 ---
 
@@ -246,7 +289,9 @@ No new development. Security review, pen testing, compliance sign-off, go-live r
 ## Success Metrics (from the Epic 4 one-pager)
 
 **Outcome (North Star):** Application Completion Rate (forms submitted ÷ Apply clicks × 100); channel migration ≥ 50% of STIP/Gig applications via OTEP by Month 3.
+
 **Input:** click-through rate (listing → detail), apply-click rate (detail → form), form field drop-off rate.
+
 **Guardrails:** submission error rate (pause & investigate if it spikes); confirmation-email delivery rate (escalate to Infra).
 
 ---

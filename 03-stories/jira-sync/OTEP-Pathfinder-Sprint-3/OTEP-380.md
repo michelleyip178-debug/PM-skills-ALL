@@ -1,26 +1,21 @@
-# OTEP-310: Competency Search API
+# OTEP-380: [BE] Handle filtering params
 
 **Type:** Sub-task
 **Status:** In Progress
-**Assignee:** Kingsley Low
+**Assignee:** Léo Milbor
 **Story Points:** N/A
+**Sprint:** OTEP-Pathfinder Sprint 3
 
 ---
 
 ## Description
 
-No description provided.
+_No description in Jira._
 
 ---
 
 ## Subtasks
 
 _No subtasks._
-
----
-
-## Latest Comments
-
-_No comments._
 
 *Synced from Jira: 2026-06-03*

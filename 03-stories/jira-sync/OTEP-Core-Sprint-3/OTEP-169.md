@@ -1,8 +1,8 @@
-# OTEP-310: Competency Search API
+# OTEP-169: IAC for provisioning the services(UAT)
 
 **Type:** Sub-task
-**Status:** In Progress
-**Assignee:** Kingsley Low
+**Status:** Backlog
+**Assignee:** Soumya Routa
 **Story Points:** N/A
 
 ---

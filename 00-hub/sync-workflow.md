@@ -1,6 +1,6 @@
 # Cache & Tracker Sync Workflow
 
-> Last updated: 2026-06-02
+> Last updated: 2026-06-03
 > How `/jira-sync` and `/stale-check` keep this hub honest. Both are PM-OS skills
 > (run from the PM-OS workspace) that read and write files here in PM-skills-ALL-1.
 
@@ -64,7 +64,13 @@ The default is fast: it diffs a manifest against live Jira in memory and only op
 
 ## Notes
 
-- **Needs the Atlassian MCP live** for the ticket refresh. If it's not loaded, `/jira-sync` stops (no file-only fallback). `/stale-check` can still run file-vs-file + decisions-log without it.
-- The cache is **198 files, one per ticket, zero duplicates** (deduped 2026-06-02). Keep it that way — `/jira-sync` flags new duplicates for a batched delete.
-- Board IDs and the Jira host live in PM-OS memory `reference_jira.md`.
+- **Live Jira works two ways** (confirmed 2026-06-03): the Atlassian MCP *or* the REST API directly via basic auth (`michelle_yip@psd.gov.sg` : `JIRA_API_TOKEN` from PM-OS `.mcp.json`). If the MCP isn't loaded into the session, the REST path still pulls live data — no need to stop. `/stale-check` can also run file-vs-file + decisions-log without either.
+- The cache is **~198 files, one per ticket** (last big dedupe 2026-06-02; both Sprint 2s rolled into Sprint 3 on 2026-06-03). `/jira-sync` flags new duplicates for a batched delete.
+- Board IDs, Jira host, and the REST-auth method live in PM-OS memory `reference_jira.md`. Active sprints (2026-06-03): Pathfinder S3 = Sprint 34617, Core S3 = Sprint 34607.
 - Fix-vs-flag discipline (both skills): unambiguous factual swaps get fixed inline; judgement calls (freeform ACs, sprint-date shifts, file deletions) get flagged for you.
+
+---
+
+## Formatting backstop (both workspaces)
+
+A `PostToolUse` hook (`.claude/hooks/format-md-check.py`) runs after every Write/Edit on a `.md` file in **both** PM-OS and PM-skills-ALL-1. It auto-inserts blank lines between consecutive `**Bold:**` lines (the recurring line-break issue) and flags headers missing a blank line. Silent when files are clean. Keeps the trackers here readable without manual fixes.

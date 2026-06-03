@@ -1,26 +1,21 @@
-# OTEP-311: User Competency CRUD API- Add
+# OTEP-342: Build UI actions to API.
 
 **Type:** Sub-task
 **Status:** Backlog
-**Assignee:** Kingsley Low
+**Assignee:** Pei Ern Lim
 **Story Points:** N/A
+**Sprint:** OTEP-Core Sprint 3
 
 ---
 
 ## Description
 
-No description provided.
+_No description in Jira._
 
 ---
 
 ## Subtasks
 
 _No subtasks._
-
----
-
-## Latest Comments
-
-_No comments._
 
 *Synced from Jira: 2026-06-03*

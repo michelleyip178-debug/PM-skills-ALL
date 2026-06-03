@@ -31,18 +31,19 @@
 
 ## Sprint 3 — ACTIVE (started 2 Jun 2026, with carry-overs)
 
-> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-02. **39 issues** total (carry-overs from S2 + new S3 scope). 4 Done, 3 In Progress, 11 QA, 21 Backlog.
+> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-03. **49 issues** total (carry-overs from S2 + new S3 scope). 4 Done, 5 In Progress, 12 QA, 28 Backlog.
+> **OTEP-Core Sprint 3** (Sprint 34607) also active: **92 issues** — 29 Done, 10 In Progress, 25 QA, 27 Backlog, 1 To Do.
 
 ### Carried over from Sprint 2 (finish these first)
 
-**In QA (11)** — closest to done:
-OTEP-170 (base layout), OTEP-128 (detail page), OTEP-268 (empty/error states), OTEP-314 (detail consuming response), OTEP-320 (real DB endpoint), OTEP-325/326 (empty/error UI), OTEP-327 (detail w/ design system), OTEP-332 (shared ref data), OTEP-334 (backend detail endpoint), OTEP-303 (POCDEX field check).
+**In QA (12)** — closest to done:
+OTEP-170 (base layout), OTEP-128 (detail page), OTEP-268 (empty/error states), OTEP-314 (detail consuming response), OTEP-320 (real DB endpoint), OTEP-324 (token rotation, Thomas), OTEP-325/326 (empty/error UI), OTEP-327 (detail w/ design system), OTEP-332 (shared ref data), OTEP-334 (backend detail endpoint), OTEP-303 (POCDEX field check).
 
-**In Progress (3):** OTEP-85 (cards w/ real OTG data), OTEP-313 (OTG raw ingest, Léo), OTEP-322 (Playwright E2E, Rathika).
+**In Progress (5):** OTEP-85 (cards w/ real OTG data), OTEP-276 (design-system spike, Pow Hwee), OTEP-322 (Playwright E2E, Rathika), OTEP-362 (BE no closed opps, Thomas), OTEP-380 (BE filtering params, Léo).
 
-**Backlog carry:** OTEP-129 (open/closed before applying, Thomas) — now **split into OTEP-362 + OTEP-363** (see new tickets).
+**Backlog carry:** OTEP-129 (open/closed before applying, Thomas) — now **split into OTEP-362 (In Progress) + OTEP-363**.
 
-**Done (4):** OTEP-191 (credential vault), plus OTEP-193/288/296 (carried from S2 as done).
+**Done (4):** OTEP-193 (data model, Léo), OTEP-288 (backend stub, Léo), OTEP-296 (report format, Michelle), OTEP-313 (OTG raw ingest, Léo).
 
 ### New Sprint 3 scope (Backlog)
 
@@ -107,7 +108,7 @@ OTEP-170 (base layout), OTEP-128 (detail page), OTEP-268 (empty/error states), O
 - [ ] Confirm OTEP-271 + OTEP-203 — add to Sprint 3 board if still committed (still NOT on board)
 - [ ] **Assign OTEP-305 an owner** — login/logout pages buildable now via Keycloak; unassigned. Raise at standup.
 - [ ] OTEP-289 spike output — go/no-go for OTEP-318 (still Backlog)
-- [ ] OTEP-87 vs OTEP-319 scope split — align PM afternoon, confirm Wed grooming
+- [ ] OTEP-87 competency section — scope is firm (it's included); open dependency is **data, not scope**: ingestion lands first, so whether each C@G opportunity actually carries competencies isn't confirmed yet. Track via ingestion.
 - [ ] OTEP-358 (Michelle, nil-date spike) — scope + timebox
 - [ ] OTEP-361 (Pow Hwee, ADR forum) — confirm timing + PM involvement
 - [x] ~~Confirm OTEP-305 Sprint 3 vs 4+~~ — resolved: in Sprint 3, build via Keycloak (D 2026-06-02)

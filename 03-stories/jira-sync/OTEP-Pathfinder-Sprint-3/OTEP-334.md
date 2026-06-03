@@ -1,8 +1,7 @@
-# OTEP-310: Competency Search API
+# OTEP-334: backend endpoint for opportunity detail
 
-**Type:** Sub-task
-**Status:** In Progress
-**Assignee:** Kingsley Low
+**Status:** QA
+**Assignee:** Léo Milbor
 **Story Points:** N/A
 
 ---

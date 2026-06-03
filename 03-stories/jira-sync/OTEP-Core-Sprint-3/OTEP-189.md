@@ -1,8 +1,8 @@
-# OTEP-310: Competency Search API
+# OTEP-189: Snapshot Policy
 
-**Type:** Sub-task
-**Status:** In Progress
-**Assignee:** Kingsley Low
+**Type:** Story
+**Status:** Backlog
+**Assignee:** Fabian PEH
 **Story Points:** N/A
 
 ---

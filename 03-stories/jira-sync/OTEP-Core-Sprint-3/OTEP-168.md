@@ -1,15 +1,19 @@
-# OTEP-310: Competency Search API
+# OTEP-168: IAC for provisioning the services(QA)
 
 **Type:** Sub-task
 **Status:** In Progress
-**Assignee:** Kingsley Low
+**Assignee:** Soumya Routa
 **Story Points:** N/A
 
 ---
 
 ## Description
 
-No description provided.
+Set up  prerequisites  (OIDC , Role_ARN, ECR, TF state)
+
+Set up env variable for Deployment
+
+Deploy for service.
 
 ---
 

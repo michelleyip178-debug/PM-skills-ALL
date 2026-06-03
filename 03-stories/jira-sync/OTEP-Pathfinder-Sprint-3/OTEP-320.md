@@ -1,8 +1,7 @@
-# OTEP-310: Competency Search API
+# OTEP-320: Replace mock /opportunities endpoint with real db access
 
-**Type:** Sub-task
-**Status:** In Progress
-**Assignee:** Kingsley Low
+**Status:** QA
+**Assignee:** Léo Milbor
 **Story Points:** N/A
 
 ---

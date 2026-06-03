@@ -29,7 +29,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## Up Next
 
-> 📌 **REVIEW TOMORROW (parked 2026-06-02):** Pow Hwee's **Sprint 3 Proposed Backlog** — [Confluence](https://sgtechstack.atlassian.net/wiki/spaces/OTEP/pages/2302903856/Pathfinder+-+Sprint+3+Proposed+Backlog). Review his proposed backlog against current sprint-status (39 issues, carry-over QA + new scope) and the OTEP-87/319 split. Act/comment after reading.
+> 📌 **REVIEW TOMORROW (parked 2026-06-02):** Pow Hwee's **Sprint 3 Proposed Backlog** — [Confluence](https://sgtechstack.atlassian.net/wiki/spaces/OTEP/pages/2302903856/Pathfinder+-+Sprint+3+Proposed+Backlog). Review his proposed backlog against current sprint-status (49 issues, carry-over QA + new scope). Act/comment after reading.
 
 > **LNO re-sort applied 2026-06-02** ([analysis](../../../PM-OS/outputs/analyses/2026-06-02-lno-prioritization.md)). This week's **Leverage** (do deeply): feed Adrian the R1 resource ask · drive R1 design alignment w/ designers · force the ATS fork (C1) · CSC SSO feasibility · finish WOG Auth metrics. Overhead items below struck/delegated/deferred to protect that time.
 

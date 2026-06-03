@@ -1,8 +1,8 @@
-# OTEP-310: Competency Search API
+# OTEP-188: Whitelisting for Working Team
 
 **Type:** Sub-task
-**Status:** In Progress
-**Assignee:** Kingsley Low
+**Status:** Backlog
+**Assignee:** Fabian PEH
 **Story Points:** N/A
 
 ---
@@ -21,6 +21,6 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**rama moorthy:** We need to provision SEED for PM/BOs or other ways?
 
 *Synced from Jira: 2026-06-03*

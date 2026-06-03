@@ -1,26 +1,21 @@
-# OTEP-311: User Competency CRUD API- Add
+# OTEP-381: [FE] Handle filtering params
 
 **Type:** Sub-task
 **Status:** Backlog
-**Assignee:** Kingsley Low
+**Assignee:** Thomas Huchedé
 **Story Points:** N/A
+**Sprint:** OTEP-Pathfinder Sprint 3
 
 ---
 
 ## Description
 
-No description provided.
+_No description in Jira._
 
 ---
 
 ## Subtasks
 
 _No subtasks._
-
----
-
-## Latest Comments
-
-_No comments._
 
 *Synced from Jira: 2026-06-03*

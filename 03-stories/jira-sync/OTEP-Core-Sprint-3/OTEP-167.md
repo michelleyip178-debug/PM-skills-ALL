@@ -1,8 +1,8 @@
-# OTEP-310: Competency Search API
+# OTEP-167: IAC for provisioning the services(Dev)
 
 **Type:** Sub-task
-**Status:** In Progress
-**Assignee:** Kingsley Low
+**Status:** QA
+**Assignee:** Soumya Routa
 **Story Points:** N/A
 
 ---
@@ -21,6 +21,6 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**Soumya Routa:** Duplicate cards
 
 *Synced from Jira: 2026-06-03*
