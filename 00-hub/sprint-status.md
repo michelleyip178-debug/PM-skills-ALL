@@ -9,8 +9,8 @@
 ## Sprint details
 - **Sprint number:** **Sprint 3 active** (started 2 Jun). **Sprint 2 closed** — unfinished work carried into Sprint 3.
 - **Sprint 2:** closed (Sprint 34616) — 6 stories Done at close.
-- **Sprint 3 dates:** 2–12 Jun 2026 (Pathfinder Sprint 3 / Sprint 34617). 39 issues (carry-overs + new scope).
-- **Note:** Design lock = Wed 3 Jun. Mid-sprint review = Mon 8 Jun.
+- **Sprint 3 dates:** 2–14 Jun 2026 (Pathfinder Sprint 3 / Sprint 34617). 49 issues (carry-overs + new scope).
+- **Note:** Design lock = Wed 3 Jun (passed). Mid-sprint review = Mon 8 Jun.
 
 ## Sprint goal
 **Sprint 2:** By end of Sprint 2, an officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
@@ -116,5 +116,5 @@ OTEP-170 (base layout), OTEP-128 (detail page), OTEP-268 (empty/error states), O
 
 ---
 
-*Updated: 2026-06-02 (PM) — live Jira sync. **Sprint 2 CLOSED; Sprint 3 ACTIVE** (39 issues = carry-overs + new scope).*
+*Updated: 2026-06-04 (stale-check — header dates 2–12→2–14 Jun, count 39→49 to match live Jira). Prior: 2026-06-02 (PM) — live Jira sync. **Sprint 2 CLOSED; Sprint 3 ACTIVE** (49 issues = carry-overs + new scope).*
 *Key changes this sync: S2 closed with 6 Done; 11 QA + 3 In Progress + OTEP-129 carried into S3. OTEP-129 split → OTEP-362 (backend) + OTEP-363 (UI). OTEP-305 confirmed in S3 (build via Keycloak now).*

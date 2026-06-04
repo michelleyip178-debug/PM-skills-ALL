@@ -96,7 +96,7 @@ What to prepare and bring for each ceremony. For the command schedule and sprint
 ## PM-Only Cadences
 
 ### Monday morning — Personal Planning (30 min)
-**Prep:** Just show up. Run `/daily`. Pick your #1 thing.
+**Prep:** Just show up. Run `/daily-plan`. Pick your #1 thing.
 
 ### Friday — Weekly Update
 **Prep (10 min):**

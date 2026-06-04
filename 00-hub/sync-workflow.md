@@ -21,11 +21,13 @@
 
 | When | Command | Note |
 |---|---|---|
-| Morning | `/daily-plan` | unchanged |
+| Morning | `/daily-plan` | now pulls live Jira (via `jira-sprint.sh` / `jira-sync.py`) + adds a standup lens on sprint days. Absorbed the old `/daily` command (2026-06-03). |
 | After meetings | `/meeting-notes` | unchanged |
 | **End of day** | **`/stale-check`** → `/slack-message` | new EOD habit — catch drift the same day it happens |
 
 `/stale-check` is the one new daily step. It stops a stale fact (a closed sprint, a moved ticket, a passed deadline) from walking into the next morning's standup.
+
+> **Sprint-day prep** runs through the OTEP commands (`/groom-prep`, `/mid-sprint-review`, `/sprint-plan-prep`, `/retro-prep`) on their ceremony days — see [04-ceremonies/sprint-prep-rhythm.md](../04-ceremonies/sprint-prep-rhythm.md). For a deeper three-lens read, spawn the **sprint-trio** agent.
 
 ---
 

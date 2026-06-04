@@ -1,6 +1,6 @@
 # Daily Standup Prompt
 
-Use this when you're not in Claude Code and can't run `/daily`.
+Use this when you're not in Claude Code and can't run `/daily-plan`.
 
 ---
 
@@ -34,7 +34,7 @@ You are my PM assistant. Run my daily standup using the context below.
 
 | Situation | Command |
 |---|---|
-| Morning standup | `/daily` |
+| Morning standup | `/daily-plan` |
 | End of day | `/endday` |
 | Mid-day check | `/midday` |
 | Before grooming | `/groom-prep` then `/groom` |

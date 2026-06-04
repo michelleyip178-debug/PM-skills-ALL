@@ -90,10 +90,10 @@ Open `03-stories/deferred-acs.md`: scan rows tagged for the active sprint — pu
 - `Sprint goal:` line — match `00-hub/sprint-status.md`
 - Project table sprint number and theme
 
-### 13. Run /daily
+### 13. Run /daily-plan
 If the output matches reality, the sprint is open. If something looks wrong, a context file still has a placeholder.
 
-**Monday done when:** `00-hub/sprint-status.md` has zero placeholders · sprint-checklists shows active sprint · README updated · `/daily` produces accurate output
+**Monday done when:** `00-hub/sprint-status.md` has zero placeholders · sprint-checklists shows active sprint · README updated · `/daily-plan` produces accurate output
 
 ---
 

@@ -6,13 +6,13 @@
 
 ## Slash Commands
 
-These live in `.claude/commands/`. Invoke by name (e.g. "run /daily" or just "/daily").
+These live in `.claude/commands/`. Invoke by name (e.g. "run /groom" or just "/groom"). Morning planning is the `/daily-plan` PM-OS skill, not a command here.
 
 ### Daily Rhythm
 
 | Command | When to use | What it does |
 |---|---|---|
-| `/daily` | Morning | Schedule, ceremony check, recently completed, open items, top 3 focus, PM growth nudge |
+| `/daily-plan` | Morning | PM-OS skill — schedule + meeting context, live Jira (sprint pulse, story changes), standup lens, top 3 focus, growth nudge. Merged in the old `/daily` standup orientation 2026-06-03. |
 | `/midday` | Midday | Quick pulse check against your morning plan |
 | `/endday` | End of day | What got done, carry-forward, reflection, PM growth check |
 
@@ -36,6 +36,7 @@ These live in `.claude/commands/`. Invoke by name (e.g. "run /daily" or just "/d
 | `/retro` | Friday | Signal/Sense/Shift using meeting notes + PM growth lens |
 | `/scan` | As needed | Document health: contradictions, undefined reqs, sign-off gaps |
 | `/archive` | Mid-sprint + end-sprint | Snapshot context files, move outputs to archive |
+| `/triage` | After capturing notes | Routes `[D]`/`[A]`/`[Q]`/`[I]`-tagged inbox items to decisions-log / tasks-active / open-items, then clears the inbox |
 
 ---
 
@@ -49,7 +50,7 @@ These live in `.claude/skills/`. Invoke by name (e.g. "run meeting-prep for Adri
 | `weekly-update` | — | Drafts stakeholder email: headline, metrics, progress, blockers, next week |
 | `draft-prd-section` | `[section-name] [project-path]` | Writes a PRD section grounded in project research and GOALS.md |
 | `synthesize-research` | `[path-to-research-folder]` | Turns raw interview notes into structured insights: findings, patterns, quotes |
-| ~~`standup`~~ | — | **Deprecated** — use `/daily` instead |
+| ~~`standup`~~ | — | **Deprecated** — use `/daily-plan` instead |
 
 ---
 
@@ -153,7 +154,7 @@ Installed via your PM plugins. Invoke by describing the task or saying the skill
 
 ## How to Invoke
 
-- **Commands** — say the command name: `/daily`, `/groom`, `/retro`
+- **Commands** — say the command name: `/groom`, `/retro`, `/week` (morning planning is `/daily-plan`)
 - **Personal skills** — say the skill name with context: "run meeting-prep for Jacky", "draft-prd-section for the search feature"
 - **Plugin skills** — describe what you need and I'll pick the right one, or name it explicitly: "run a pre-mortem on this PRD", "use the opportunity-solution-tree skill"
 - **File skills** — mention the file type: "save this as a Word doc", "create a slide deck for this"

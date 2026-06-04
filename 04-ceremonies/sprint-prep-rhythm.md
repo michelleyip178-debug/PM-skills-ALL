@@ -13,7 +13,7 @@ Update the "This Sprint" section at sprint start. The pattern stays the same.
 
 | Day | Ceremony | Prep steps | Timing |
 |-----|----------|-----------|--------|
-| Mon | Sprint starts · Retro & Demo (prev sprint) | Run `/retro` (prep done last Fri), `/daily`, `/week` | Morning |
+| Mon | Sprint starts · Retro & Demo (prev sprint) | Run `/retro` (prep done last Fri), `/daily-plan`, `/week` | Morning |
 | Tue | Squad Grooming (next sprint, internal) | `/groom-prep` done Mon; run `/groom` morning-of | Morning of |
 | Wed | (prep day — no ceremony) | `/groom-prep` to catch AC gaps before Thu Backlog Grooming | Afternoon |
 | Thu | Backlog Grooming (next sprint) | Run `/groom` | Morning of |
@@ -58,7 +58,7 @@ Copy this block at sprint start. Fill in dates.
 ## This Sprint: Sprint __ (date – date)
 
 ### Week 1
-- [ ] **Mon ___** — Sprint starts + Retro & Demo (prev sprint): run `/retro`, `/daily`, `/week`
+- [ ] **Mon ___** — Sprint starts + Retro & Demo (prev sprint): run `/retro`, `/daily-plan`, `/week`
 - [ ] **Tue ___** — Squad Grooming: run `/groom`
 - [ ] **Wed ___** — Prep day: run `/groom-prep` (afternoon)
 - [ ] **Thu ___** — Backlog Grooming: run `/groom`
@@ -85,6 +85,8 @@ Copy this block at sprint start. Fill in dates.
 `/sprint-plan-prep` runs after grooming on Thursday because grooming surfaces last-minute scope changes that affect which stories are sprint-ready.
 
 `/retro-prep` runs Friday (not Monday morning) so you have the weekend buffer if you need to chase a demo recording or clarify a shipped story with eng.
+
+> **Optional deeper layer:** for a high-conflict sprint, a tricky reprioritisation, or any time you want the backlog read through PM + Tech Lead + Designer lenses at once, spawn the **sprint-trio** agent alongside `/groom-prep` (or `/mid-sprint-review` / `/sprint-plan-prep`). It pulls live Jira and produces story-shaping / backlog-prep output you take into the session. It preps the backlog; the team sizes at grooming. Use it as an add-on, not a replacement for the commands.
 
 **When to update sprint-checklists.md:** Three touchpoints — mid-sprint review (tick resolved blockers), sprint planning (populate next sprint), and new sprint Monday (fill in dates).
 

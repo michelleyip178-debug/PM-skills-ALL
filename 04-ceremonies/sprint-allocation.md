@@ -10,103 +10,9 @@
 
 **Feature Freeze:** end of Sprint 8 (Fri 21 Aug) — end of Phase 1, Feature Build · **Go-Live:** end of Sprint 12 (Fri 16 Oct) — end of Phase 2, Compliance & Go-Live (Sprints 9–12).
 
-> Sprints 1–3 below are reconciled and current. Sprints 4–12 are a planning sketch — scope is provisional and story IDs aren't fully reconciled against `story-id-map.md` yet; refine at each sprint's grooming.
-
----
-
-## Sprint 1 (4–15 May) — CLOSED — Login + Foundation + Discovery/Design
-
-**Sprint goal:** Login and navigate to Jobs and Opportunities. Auth flows end-to-end; OTG → OTEP data pipeline delivering records; C@G ingestion method confirmed; Amber's Hub UI + card designs finalised.
-
-**Final sign-off (2026-05-15): Partial.** Headline auth story done. OTEP-170 MR not merged by close. OTEP-202/203 and data model/pipeline stories carried to Sprint 2. Auth edge-cases (OTEP-110, WOG-04/05/06) not on Sprint 2 board — confirm Sprint 3 placement.
-
-| Jira | Story | Area | Final Status |
-|------|-------|------|--------|
-| OTEP-209 | Baseline database conventions with team | Foundation | Done |
-| OTEP-171 | Frontend repo setup | Foundation | Done |
-| OTEP-201 | Create ref table schema migration for local dev | Foundation | Done |
-| OTEP-207 | Seed ref tables with POCDEX data for local dev | Foundation | Done |
-| OTEP-204 | Seed core entity tables for local dev | Foundation | Done |
-| OTEP-224 | Create core entity table schema migration for local dev | Foundation | Done |
-| OTEP-223 | Prepare data for OTG ingestion of Oppr types | Epic 4 | Done |
-| OTEP-190 | Implement simple authentication through Keycloak | WOG AD | Done |
-| OTEP-173 | Exploration: auth flow and tech | WOG AD | Done |
-| OTEP-183 | [Spike] POCDEX profile lookup integration pattern | WOG AD | Done |
-| OTEP-170 | Base layout for Opportunity Listing Page | Epic 4 | **Carried → Sprint 2** (MR not merged) |
-| OTEP-202 | Create POCDEX seed database for local dev | Foundation | **Carried → Sprint 2/3** (not on Sprint 2 board) |
-| OTEP-203 | Implement standalone POCDEX API service | Foundation | **Carried → Sprint 2/3** (not on Sprint 2 board) |
-| OTEP-193 | Design data model for Opportunities | Epic 4 | **Carried → Sprint 2** |
-| OTEP-192 | Design recurring job to fetch opportunities data | Epic 4 | **Carried → Sprint 2** |
-| OTEP-194 | [Discovery/Design] FormSG integration & callback flow | Epic 4 | **Carried → Sprint 2** |
-| OTEP-110 | Login fail / clear error | WOG AD | **Carried → Sprint 3** (not on Sprint 2 board) |
-| WOG-04 | Stay logged in during session | WOG AD | **→ OTEP-304, moved to Sprint 4+** (Sprint 3 → Sprint 4, 2026-05-21 reallocation) |
-| WOG-05 | Log out of OTEP | WOG AD | **→ OTEP-305, moved to Sprint 4+** (Sprint 3 → Sprint 4, 2026-05-21 reallocation) |
-| WOG-06 | First-time login experience | WOG AD | **Carried → Sprint 3** (not on Sprint 2 board) |
-| OTEP-251 | Create ER diagram for OTEP data model | — | Status unknown — confirm |
-
----
-
-## Sprint 2 (18–29 May) — CLOSED ✅ (2026-06-02) — Listing → Detail End-to-End
-
-**Sprint goal:** By end of Sprint 2, an officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
-
-> **Closed 2026-06-02.** 6 stories Done at close (OTEP-267, 252, 194, 193, 288, 296). Unfinished work (11 QA + OTEP-85/313/322 In Progress + OTEP-128/268/129) carried into Sprint 3 — see below. Table retained as historical record of the sprint as it stood mid-flight.
-
-### Live Jira status (snapshot 2026-05-20 — historical)
-
-| Jira | Story | Owner | Jira Status | Notes |
-|------|-------|-------|-------------|-------|
-| OTEP-170 | Base Layout for Opportunity Listing Page | Thomas | **In Progress** | MR in progress. Sub-task of OTEP-85. |
-| OTEP-193 | Design Data Model for Opportunities | Léo | **In Progress** | .sql migration + Go structs. Must support OTG now, C@G later (#23). |
-| OTEP-288 | Setup simple backend endpoint with in-memory list | Léo | **In Progress** | ⚠️ Léo has 2 In Progress — WIP risk. New comment 2026-05-19. Sub-task of OTEP-85. |
-| OTEP-296 | Prepare defined report format matching data model | Michelle | **In Progress** | Standardises OTG Excel format before ingestion. Must align with OTEP-193. |
-| OTEP-252 | Setup design system in otep-web | Thomas | **Done** | Flagship/LifeSG confirmed. Sub-task of OTEP-170. |
-| OTEP-85 | Display opportunity cards with real OTG data | — | Backlog | Critical path — must ship first. Visibility = `closing_date > today`. ⚠️ No assignee. |
-| OTEP-128 | View opportunity detail page | — | Backlog | Absorbs OTEP-285 ACs (click-through + return-to-page). ⚠️ No assignee. |
-| OTEP-129 | See whether opportunity is open/closed before applying | — | Backlog | Re-added (Pow Hwee, 2026-05-18). Owns "Closing soon" badge (≤7 days) + deep-link error state. ⚠️ No assignee. |
-| OTEP-267 | Pagination for listing page | — | Backlog | Depends on OTEP-85. API dep: `total_count` in response. ⚠️ No assignee. |
-| OTEP-268 | Empty, error, and partial-load states for listing | — | Backlog | Re-added (Pow Hwee, 2026-05-18). Drop partial-load AC. ⚠️ No assignee. |
-| OTEP-289 | [Spike] Filter Opportunities by Functions | — | Backlog | 2-day timebox (19–20 May). Output = written recommendation + go/no-go (open item #29 resolved). ⚠️ No assignee. |
-| OTEP-194 | [Spike] FormSG Integration & Callback Flow | Thomas | Backlog | Carry-over Sprint 1. Discovery/design. |
-| OTEP-295 | Mock detail endpoint for opportunity | Léo | Backlog | Sub-task of OTEP-128. GET /v1/opportunities/:id + 404. |
-| ~~OTEP-276~~ | ~~[Spike] Custom design system reimplementation~~ | — | Backlog | **Resolved** — OTEP-252 Done confirms Flagship/LifeSG. Remove from board. |
-
-**Scope changes since Sprint 2 start:**
-- ~~OTEP-285~~ — **absorbed into OTEP-128** (Pow Hwee, 2026-05-18). No Sprint 3 ticket needed.
-- ~~OTEP-191~~ — removed from Sprint 2 board (deprioritised to Sprint 3+, Pow Hwee, 2026-05-14).
-- ~~OTEP-192~~ — **moved to Sprint 3** (2026-05-19 decision). Not a Sprint 2 story.
-- OTEP-129 and OTEP-268 — **re-added** to Sprint 2 by Pow Hwee (2026-05-18), overriding earlier absorptions/deferrals.
-- OTEP-296, OTEP-295 — **new sub-tasks** added to Sprint 2 board (2026-05-20).
-
-### Board cleanup still needed
-- [ ] Remove OTEP-276 from Sprint 2 board (resolved spike)
-- [ ] Remove OTEP-192 from Sprint 2 board (confirmed Sprint 3)
-- [ ] Remove OTEP-191 from Sprint 2 board (confirmed Sprint 3)
-
-### Carry-overs — resolved (open item #27 closed 2026-05-20)
-
-| Jira | Story | Owner | Placement |
-|------|-------|-------|-----------|
-| OTEP-202 | Create POCDEX seed database for local dev | Leo | **Sprint 4** |
-| OTEP-203 | Implement standalone POCDEX API service | Pow Hwee | **Sprint 3** ✓ |
-| OTEP-271 | Local POCDEX database (container + schema) | Leo | **Sprint 3** ✓ |
-
-### Capacity
-
-- 18 May PM — public holiday + Pow Hwee + Michelle out. Sprint effectively starts Tue 19.
-- 22 May PM — Leo out.
-- **27 May — Hari Raya Haji public holiday.** 1 dev day lost. Sprint Planning Thu 29 May still on — confirm quorum.
-- Thomas is sole FE — binding constraint across all frontend stories.
-
-### Deferred from Sprint 2
-
-- ~~OTEP-85a~~ — "Closing soon" label re-absorbed into OTEP-85, then split to OTEP-129 (2026-05-18)
-- **OTEP-86 / US-05** → Sprint 3 (moved from Sprint 4+, 2026-05-21 reallocation)
-- ~~OTEP-192~~ → Sprint 3 (moved 2026-05-19)
-- ~~OTEP-191~~ → Sprint 3+ (deprioritised 2026-05-14; placement TBD)
-- **OTEP-110, OTEP-304 (WOG-04), OTEP-305 (WOG-05)** → Sprint 4+ (auth epic deferred 2026-05-21 — no WOG AD UAT env)
-- WOG-06 → Sprint 4+ (POCDEX dep; mandatory fields TBD)
-- **OTEP-203, OTEP-271** → Sprint 3 confirmed (2026-05-20); **OTEP-202** → Sprint 4
+> Sprints 1–3 are reconciled and current. Sprints 4–12 are a planning sketch — scope is provisional and story IDs aren't fully reconciled against `story-id-map.md` yet; refine at each sprint's grooming.
+>
+> **Layout:** active + upcoming sprints lead. **Closed sprints (1 & 2) are at the bottom** under "Closed Sprints — historical record."
 
 ---
 
@@ -171,14 +77,16 @@
 >
 > **🟢 Capacity boost in S4: a second full-stack dev joins** (productive day 1, even FE/BE split) → ~1.5 FE-equivalent + extra BE. This makes S4 the *catch-up* sprint that can absorb the S3 carry-over AND start some new work. Sprint 3 itself gets no relief — the catch-up only starts 16 Jun.
 >
-> **Auth note:** WOG AD onboarding (OTEP-350, Fabian) + login/logout UI (OTEP-305/368/369/370) already landed in **Sprint 3**, so the auth clock started earlier than the 05-21 plan assumed. Good news *if* OTEP-350 progresses — but it's unassigned/Backlog at S3 Day 2.
+> **Auth note:** WOG AD onboarding (OTEP-350, Fabian) + login/logout UI (OTEP-305/368/369/370) already landed in **Sprint 3**, so the auth clock started earlier than the 05-21 plan assumed. **Correction (trio 2026-06-03):** OTEP-350 *has* an owner (Fabian) but zero movement — it's not an ownership gap, it's that the onboarding steps aren't mapped yet (open-item #26). The real unblock is a Michelle→Fabian session to map the process, not an eng assignment. Hold auth at Sprint 5 as the working assumption regardless.
 
 **Stream 0 — Carry-over from S3 (plan for these FIRST — they're the realistic intake):**
 
 | Jira | Story | Owner | Notes |
 |------|-------|-------|-------|
 | OTEP-319 | Apply via FormSG — basic redirect | — | The other half of the S3 goal. Likely slips if S3 FE does filters first. **Recommend apply-first in S3 to avoid this.** |
-| OTEP-87/88/89 | C@G detail / listing / deep-link | — | C@G UI stream — was "new" in the 05-21 plan, but already groomed into S3. Will mostly carry. OTEP-87 includes competency section (data depends on ingestion). |
+| OTEP-88/89 | C@G listing / deep-link | — | C@G UI stream — was "new" in the 05-21 plan, but already groomed into S3. Will mostly carry. |
+| OTEP-87 (core) | C@G opportunity detail — non-competency fields | — | **SPLIT (trio 2026-06-03):** build the detail page from the fields C@G already provides. In scope for S4. |
+| OTEP-87 (competency block) | Competency section on C@G detail | — | **CUT from S4 (trio 2026-06-03):** no data SSOT yet (open-item #18), no schema = unbuildable, designing against placeholder = guaranteed re-design. Defer until Imelda's squad confirms schema + mapping. |
 | OTEP-374–379 | C@G API + payload + UI mapping + tests | — | Backend + FE for C@G. Carries from S3. |
 | OTEP-305, 368, 369, 370 | Login/logout UI, session redirect | — | Auth UI carried from S3. FE-bound (Thomas). |
 | OTEP-348 | OTG ingestion — scheduler & observability | — | Ingestion polish; carries if OTEP-192 lands late. |
@@ -191,14 +99,16 @@
 | OTEP-202 | Create POCDEX seed database for local dev | Leo | Seeds test profiles for ringfencing validation. |
 | — | Instrumentation: success metrics tracked | — | oppr_list_view, detail_view, filter_applied, click_to_formsg. |
 
-**Stream B — WOG AD-dependent (start only if OTEP-350 onboarding complete by ~16 Jun):**
+**Stream B — WOG AD-dependent — DEMOTED out of S4 grooming (trio 2026-06-03). Carry as a watch-item; S5 is the working assumption.**
 
-| Jira | Story | Owner | Notes |
+> **Why demoted:** OTEP-350 (WOG AD onboarding) has an owner (Fabian) but zero movement — and it *can't* move until the onboarding steps are mapped (open-item #26), so it's structurally stuck, not just unstarted. POCDEX plumbing (OTEP-271/203) is off the S3 board, OTEP-127 has no contract, and OTEP-110's error spec is contradicted (open-item #32). Don't groom these into S4. Re-evaluate at S4 mid-sprint once #26 + #31 have moved.
+
+| Jira | Story | Owner | Gate before it can be groomed |
 |------|-------|-------|-------|
-| OTEP-71 | Log in with WOG AD credentials | Pow Hwee | ⚠️ Best case only. Onboarding clock started S3 (OTEP-350). If not done → Sprint 5. |
-| OTEP-110 | Login fail / clear error | Thomas | ⚠️ Best case only. |
-| OTEP-127 | Apply ringfencing criteria | Thomas / Leo | ⚠️ Best case only. Needs WOG AD + POCDEX plumbing. ⚠️ **POCDEX dep gap: OTEP-271/203 moved off the S3 board to the POCDEX epic — confirm they're done before relying on ringfencing here.** |
-| WOG-06 | First-time login experience | Thomas | ⚠️ Best case only. POCDEX + WOG AD dep. |
+| OTEP-71 | Log in with WOG AD credentials | Pow Hwee | OTEP-350 onboarding steps mapped (#26) |
+| OTEP-110 | Login fail / clear error | Thomas | #32 (AC vs design spec mismatch) resolved first |
+| OTEP-127 | Apply ringfencing criteria | Thomas / Leo | WOG AD + POCDEX 271/203 confirmed done (#31) + a written ringfencing contract |
+| WOG-06 | First-time login experience | Thomas | POCDEX + WOG AD both cleared |
 
 > **FE constraint eases in S4 (second full-stack dev), but doesn't vanish.** ~1.5 FE-equivalent against a backlog this deep is still tight, and at an even split FE only gets ~0.5 of the new dev. Consider weighting the new dev toward FE for their first sprint or two to clear the carry-over faster. The R1 ask to Adrian/Michelle Chen now targets *sustained* FE capacity for the net-new R1 builds (native apply + creation + the seam), not plugging this S3/S4 hole.
 
@@ -306,6 +216,91 @@ No new development. Security review, pen testing, compliance sign-off, go-live r
 | Careers@Gov API integration | Pow Hwee | **Confirmed: API** (open item #11 resolved 2026-05-14) | C@G work (Sprint 5) |
 | FormSG webhook integration | Eng (discovery Sprint 1, OTEP-194) | Design | Full apply flow (Sprint 4) |
 | Email delivery service | Infra (Fabian?) | Unknown (open item #15) | Confirmation emails, EDM deep-links |
+
+---
+
+# Closed Sprints — historical record
+
+> Kept for the record. These reflect each sprint as it stood at close; carry-overs are tracked in the active sprint above.
+
+## Sprint 2 (18–29 May) — CLOSED ✅ (2026-06-02) — Listing → Detail End-to-End
+
+**Sprint goal:** By end of Sprint 2, an officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
+
+> **Closed 2026-06-02.** 6 stories Done at close (OTEP-267, 252, 194, 193, 288, 296). Unfinished work (11 QA + OTEP-85/313/322 In Progress + OTEP-128/268/129) carried into Sprint 3 — see the active Sprint 3 section above. Table retained as historical record of the sprint as it stood mid-flight.
+
+### Live Jira status (snapshot 2026-05-20 — historical)
+
+| Jira | Story | Owner | Jira Status | Notes |
+|------|-------|-------|-------------|-------|
+| OTEP-170 | Base Layout for Opportunity Listing Page | Thomas | **In Progress** | MR in progress. Sub-task of OTEP-85. |
+| OTEP-193 | Design Data Model for Opportunities | Léo | **In Progress** | .sql migration + Go structs. Must support OTG now, C@G later (#23). |
+| OTEP-288 | Setup simple backend endpoint with in-memory list | Léo | **In Progress** | ⚠️ Léo has 2 In Progress — WIP risk. New comment 2026-05-19. Sub-task of OTEP-85. |
+| OTEP-296 | Prepare defined report format matching data model | Michelle | **In Progress** | Standardises OTG Excel format before ingestion. Must align with OTEP-193. |
+| OTEP-252 | Setup design system in otep-web | Thomas | **Done** | Flagship/LifeSG confirmed. Sub-task of OTEP-170. |
+| OTEP-85 | Display opportunity cards with real OTG data | — | Backlog | Critical path — must ship first. Visibility = `closing_date > today`. ⚠️ No assignee. |
+| OTEP-128 | View opportunity detail page | — | Backlog | Absorbs OTEP-285 ACs (click-through + return-to-page). ⚠️ No assignee. |
+| OTEP-129 | See whether opportunity is open/closed before applying | — | Backlog | Re-added (Pow Hwee, 2026-05-18). Owns "Closing soon" badge (≤7 days) + deep-link error state. ⚠️ No assignee. |
+| OTEP-267 | Pagination for listing page | — | Backlog | Depends on OTEP-85. API dep: `total_count` in response. ⚠️ No assignee. |
+| OTEP-268 | Empty, error, and partial-load states for listing | — | Backlog | Re-added (Pow Hwee, 2026-05-18). Drop partial-load AC. ⚠️ No assignee. |
+| OTEP-289 | [Spike] Filter Opportunities by Functions | — | Backlog | 2-day timebox (19–20 May). Output = written recommendation + go/no-go (open item #29 resolved). ⚠️ No assignee. |
+| OTEP-194 | [Spike] FormSG Integration & Callback Flow | Thomas | Backlog | Carry-over Sprint 1. Discovery/design. |
+| OTEP-295 | Mock detail endpoint for opportunity | Léo | Backlog | Sub-task of OTEP-128. GET /v1/opportunities/:id + 404. |
+| ~~OTEP-276~~ | ~~[Spike] Custom design system reimplementation~~ | — | Backlog | **Resolved** — OTEP-252 Done confirms Flagship/LifeSG. Remove from board. |
+
+**Scope changes since Sprint 2 start:**
+- ~~OTEP-285~~ — **absorbed into OTEP-128** (Pow Hwee, 2026-05-18). No Sprint 3 ticket needed.
+- ~~OTEP-191~~ — removed from Sprint 2 board (deprioritised to Sprint 3+, Pow Hwee, 2026-05-14).
+- ~~OTEP-192~~ — **moved to Sprint 3** (2026-05-19 decision). Not a Sprint 2 story.
+- OTEP-129 and OTEP-268 — **re-added** to Sprint 2 by Pow Hwee (2026-05-18), overriding earlier absorptions/deferrals.
+- OTEP-296, OTEP-295 — **new sub-tasks** added to Sprint 2 board (2026-05-20).
+
+### Carry-overs — resolved (open item #27 closed 2026-05-20)
+
+| Jira | Story | Owner | Placement |
+|------|-------|-------|-----------|
+| OTEP-202 | Create POCDEX seed database for local dev | Leo | **Sprint 4** |
+| OTEP-203 | Implement standalone POCDEX API service | Pow Hwee | **Sprint 3** ✓ |
+| OTEP-271 | Local POCDEX database (container + schema) | Leo | **Sprint 3** ✓ |
+
+### Capacity (historical)
+
+- 18 May PM — public holiday + Pow Hwee + Michelle out. Sprint effectively started Tue 19.
+- 22 May PM — Leo out.
+- **27 May — Hari Raya Haji public holiday.** 1 dev day lost.
+- Thomas was sole FE — binding constraint across all frontend stories.
+
+---
+
+## Sprint 1 (4–15 May) — CLOSED — Login + Foundation + Discovery/Design
+
+**Sprint goal:** Login and navigate to Jobs and Opportunities. Auth flows end-to-end; OTG → OTEP data pipeline delivering records; C@G ingestion method confirmed; Amber's Hub UI + card designs finalised.
+
+**Final sign-off (2026-05-15): Partial.** Headline auth story done. OTEP-170 MR not merged by close. OTEP-202/203 and data model/pipeline stories carried to Sprint 2. Auth edge-cases (OTEP-110, WOG-04/05/06) carried forward.
+
+| Jira | Story | Area | Final Status |
+|------|-------|------|--------|
+| OTEP-209 | Baseline database conventions with team | Foundation | Done |
+| OTEP-171 | Frontend repo setup | Foundation | Done |
+| OTEP-201 | Create ref table schema migration for local dev | Foundation | Done |
+| OTEP-207 | Seed ref tables with POCDEX data for local dev | Foundation | Done |
+| OTEP-204 | Seed core entity tables for local dev | Foundation | Done |
+| OTEP-224 | Create core entity table schema migration for local dev | Foundation | Done |
+| OTEP-223 | Prepare data for OTG ingestion of Oppr types | Epic 4 | Done |
+| OTEP-190 | Implement simple authentication through Keycloak | WOG AD | Done |
+| OTEP-173 | Exploration: auth flow and tech | WOG AD | Done |
+| OTEP-183 | [Spike] POCDEX profile lookup integration pattern | WOG AD | Done |
+| OTEP-170 | Base layout for Opportunity Listing Page | Epic 4 | **Carried → Sprint 2** (MR not merged) |
+| OTEP-202 | Create POCDEX seed database for local dev | Foundation | **Carried → Sprint 2/3** (not on Sprint 2 board) |
+| OTEP-203 | Implement standalone POCDEX API service | Foundation | **Carried → Sprint 2/3** (not on Sprint 2 board) |
+| OTEP-193 | Design data model for Opportunities | Epic 4 | **Carried → Sprint 2** |
+| OTEP-192 | Design recurring job to fetch opportunities data | Epic 4 | **Carried → Sprint 2** |
+| OTEP-194 | [Discovery/Design] FormSG integration & callback flow | Epic 4 | **Carried → Sprint 2** |
+| OTEP-110 | Login fail / clear error | WOG AD | **Carried → Sprint 3** (not on Sprint 2 board) |
+| WOG-04 | Stay logged in during session | WOG AD | **→ OTEP-304, moved to Sprint 4+** (Sprint 3 → Sprint 4, 2026-05-21 reallocation) |
+| WOG-05 | Log out of OTEP | WOG AD | **→ OTEP-305, moved to Sprint 4+** (Sprint 3 → Sprint 4, 2026-05-21 reallocation) |
+| WOG-06 | First-time login experience | WOG AD | **Carried → Sprint 3** (not on Sprint 2 board) |
+| OTEP-251 | Create ER diagram for OTEP data model | — | Status unknown — confirm |
 
 ---
 

@@ -3,7 +3,9 @@
 A workflow-oriented prompt bank and Claude Code workspace for product management.
 
 **Owner:** Michelle Yip, BA-to-PM transition, PSD Singapore
+
 **Product:** OTEP (One Talent Engagement Platform) — internal talent marketplace for the Singapore Public Service
+
 **Programme:** 12 sprints, 4 May – 16 Oct 2026 (Feature Freeze Sprint 8 · Go-Live 16 Oct)
 
 ---
@@ -38,7 +40,7 @@ Everything else follows from these. If they're stale, every command output is wr
 
 ## Daily rhythm
 
-- **Morning** — capture into [inbox.md](inbox.md), run `/triage`, then `/daily`
+- **Morning** — capture into [inbox.md](inbox.md), run `/triage`, then `/daily-plan` (the PM-OS skill; pulls calendar + live Jira)
 - **After meetings** — dump notes into [inbox.md](inbox.md), tag D/A/Q/I
 - **Evening** — update [tasks-active.md](00-hub/tasks-active.md), run `/endday`
 - **Sprint boundary** — update [sprint-status.md](00-hub/sprint-status.md), archive outputs, refresh [risks.md](00-hub/risks.md)
@@ -51,7 +53,7 @@ Full descriptions: [00-hub/commands-reference.md](00-hub/commands-reference.md)
 
 | Type | Items |
 |---|---|
-| Daily | `/daily` · `/midday` · `/endday` · `/triage` |
+| Daily | `/daily-plan` (PM-OS) · `/midday` · `/endday` · `/triage` |
 | Ceremony prep | `/groom-prep` · `/groom` · `/sprint-plan-prep` · `/mid-sprint-review` · `/retro-prep` |
 | Strategic | `/week` · `/brief` · `/decision` · `/retro` · `/scan` · `/archive` |
 | Skills | `weekly-update` · `meeting-prep` · `draft-prd-section` · `synthesize-research` · `standup` |
