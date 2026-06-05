@@ -29,6 +29,22 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## Up Next
 
+> 🎯 **SPRINT 4 & 5 GATES (added 2026-06-04)** — what each sprint needs from *Michelle specifically*. Plan-of-record = [Pow Hwee's Confluence plan](https://sgtechstack.atlassian.net/wiki/spaces/OTEP/pages/2293796526/Planning+draft+for+sprint+3+and+after) (adopted 2026-06-04, native apply→R1). See [S4/S5 reconciliation](../../../PM-OS/outputs/analyses/2026-06-04-adopt-powhwee-plan-reconciliation.md).
+>
+> **Sprint 4 (14–28 Jun) — decisions + reconciliation (mostly groomable if you make the calls):**
+> - [ ] **Lock the Sprint 4 goal** — undecided; grooming needs an outcome (breadth-led vs catch-up). **Before 14:00 today.**
+> - [ ] **Fix OTEP-87 AC conflict in Jira** — FormSG vs C@G deep-link; Pow Hwee flagged ×2. **Before 14:00.**
+> - [ ] **Call OTEP-127 + OTEP-130 in-or-out** — both now on the S4 board but un-contracted (no ringfencing/webhook contract). Flag "13=unknown" or pull.
+> - [ ] **Reconcile S4 board to plan** — OTEP-71 flipped off again (no sprint, verify); spine (319/86/87/88/89/192) not pulled forward yet.
+> - [ ] Sharpen OTEP-348 (✅ draft ready) · confirm new-dev 70/30 FE split · C@G deep-link UX at design review.
+>
+> **Sprint 5 (28 Jun–12 Jul) — unblock 4 external gates (each is a Michelle→someone session; book this week — lead times):**
+> - [ ] **WOG AD onboarding session — Fabian** (#26) — gates ALL S5 auth. OTEP-350 has zero movement; needs steps mapped. 2+ wk lead → book now. *(see line ~63)*
+> - [ ] **POCDEX planning session — Daryll** (#31) — gates S5 ringfencing (127). No date confirmed yet. *(see line ~68)*
+> - [ ] **CSC SSO requirements + ownership — #30** — his plan starts CSC SSO in S5; 6-wk chain, owner TBC. *(see line ~60 feasibility deep-dive)*
+> - [ ] **Competency SSOT — Imelda** (#18) — gates full OTEP-87 / C@G detail competency block. *(see line ~67)*
+> - *Also: resolve OTEP-110 error-spec mismatch (#32) before auth grooms clean.*
+
 > 📌 **REVIEW TOMORROW (parked 2026-06-02):** Pow Hwee's **Sprint 3 Proposed Backlog** — [Confluence](https://sgtechstack.atlassian.net/wiki/spaces/OTEP/pages/2302903856/Pathfinder+-+Sprint+3+Proposed+Backlog). Review his proposed backlog against current sprint-status (49 issues, carry-over QA + new scope). Act/comment after reading.
 
 > **LNO re-sort applied 2026-06-02** ([analysis](../../../PM-OS/outputs/analyses/2026-06-02-lno-prioritization.md)). This week's **Leverage** (do deeply): feed Adrian the R1 resource ask · drive R1 design alignment w/ designers · force the ATS fork (C1) · CSC SSO feasibility · finish WOG Auth metrics. Overhead items below struck/delegated/deferred to protect that time.
