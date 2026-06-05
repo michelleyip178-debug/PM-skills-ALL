@@ -1,8 +1,8 @@
 # OTEP-311: User Competency CRUD API- Add
 
 **Type:** Sub-task
-**Status:** Backlog
-**Assignee:** Kingsley Low
+**Status:** In Progress
+**Assignee:** Pei Ern Lim
 **Story Points:** N/A
 
 ---
@@ -23,4 +23,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-06-03*
+*Synced from Jira: 2026-06-05*

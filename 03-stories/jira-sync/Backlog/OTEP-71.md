@@ -1,8 +1,11 @@
 # OTEP-71: Login Authentication using WOG AD
 
 **Type:** Story
+
 **Status:** Backlog
+
 **Assignee:** N/A
+
 **Story Points:** N/A
 
 ---
@@ -22,3 +25,7 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+---
+
+*Synced from Jira: 2026-06-04 (PM) — no sprint assigned in live Jira (plain backlog). Flipped 3× today: was S4 → synced out → Michelle re-added → now out again. Live truth = no sprint. Verify intended placement with whoever's editing the board (likely Pow Hwee restructuring per adopted plan).*

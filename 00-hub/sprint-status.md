@@ -17,6 +17,12 @@
 
 **Sprint 3:** By end of Sprint 3, an officer can find relevant opportunities using filters and successfully initiate an application to any active OTG opportunity (except SJRs), powered by live imported data.
 
+**Sprint 4 (proposed — confirm at grooming):** By end of Sprint 4, an officer sees both OTG and Careers@Gov opportunities in one listing, can tell which is which, and reaches the right way to apply for each — FormSG for OTG, a deep-link out to Careers@Gov.
+> *Breadth-led: C@G is the new capability and is hittable. OTG apply loop = the floor it sits on. Auth ("if WOG AD clean") and FormSG Phase 2 (OTEP-130) stay out of the goal — stretch, not the promise. Fallback goal if OTG apply (319) carries as real work: "OTG discovery-to-apply verified Done + C@G appears in listing with a working apply path."*
+
+**Sprint 5 (draft — gates must clear first):** By end of Sprint 5, an officer can log in with their real WOG AD credentials and view full Careers@Gov opportunity details before applying — with the CSC SSO integration scoped and started.
+> *Auth "realistic landing" per the adopted plan. Conditional on 4 gates: WOG AD onboarding (#26), POCDEX (#31), competency SSOT (#18), CSC SSO ownership (#30). If WOG AD slips, S5 auth slips — goal de-scopes to "C@G detail complete + CSC SSO scoped," auth carries to S6.*
+
 ---
 
 ## Sprint 2 — CLOSED ✅ (synced 2026-06-02)
@@ -31,8 +37,8 @@
 
 ## Sprint 3 — ACTIVE (started 2 Jun 2026, with carry-overs)
 
-> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-03. **49 issues** total (carry-overs from S2 + new S3 scope). 4 Done, 5 In Progress, 12 QA, 28 Backlog.
-> **OTEP-Core Sprint 3** (Sprint 34607) also active: **92 issues** — 29 Done, 10 In Progress, 25 QA, 27 Backlog, 1 To Do.
+> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-05. **49 issues** total (carry-overs from S2 + new S3 scope). 4 Done, 7 In Progress, 12 QA, 26 Backlog.
+> **OTEP-Core Sprint 3** (Sprint 34607) also active: **96 issues** — 32 Done, 10 In Progress, 27 QA, 26 Backlog, 1 To Do. (Live 2026-06-05.)
 
 ### Carried over from Sprint 2 (finish these first)
 
@@ -94,6 +100,7 @@ OTEP-170 (base layout), OTEP-128 (detail page), OTEP-268 (empty/error states), O
 ---
 
 ## Scope decisions
+- (2026-06-04) **Plan of record = Pow Hwee's "Planning draft for sprint 3 and after"** (Confluence, PSD-OTEP) — adopted as the team's S2–S6 shape. **Amendment:** native apply = R1, not an S4 spike (MVP apply = FormSG redirect, OTEP-319). S4 dates corrected to **14–28 Jun** (Sprint 34618). See decisions-log + [adoption reconciliation](../../PM-OS/outputs/analyses/2026-06-04-adopt-powhwee-plan-reconciliation.md).
 - (2026-05-29) **OTG sync cadence: one-time port only** — no ongoing automated sync. Pilot agencies driven to adopt Compass directly. See D-016. Resolves open question from Sprint 3 Planning.
 - (2026-05-28) **Design lock: Wednesday 3 June** (D-013)
 - (2026-05-28) **OTG competency migration: file ingestion, not live API** (D-010) — Fanxu owns Sprint 3 one-time bulk import
@@ -116,5 +123,5 @@ OTEP-170 (base layout), OTEP-128 (detail page), OTEP-268 (empty/error states), O
 
 ---
 
-*Updated: 2026-06-04 (stale-check — header dates 2–12→2–14 Jun, count 39→49 to match live Jira). Prior: 2026-06-02 (PM) — live Jira sync. **Sprint 2 CLOSED; Sprint 3 ACTIVE** (49 issues = carry-overs + new scope).*
+*Updated: 2026-06-05 (stale-check — S3 pulse 5IP/28BL→7IP/26BL to match live Jira; S4/S5 goals + plan-of-record added 06-04). Prior: 2026-06-04 (dates, counts). **Sprint 2 CLOSED; Sprint 3 ACTIVE** (49 issues).*
 *Key changes this sync: S2 closed with 6 Done; 11 QA + 3 In Progress + OTEP-129 carried into S3. OTEP-129 split → OTEP-362 (backend) + OTEP-363 (UI). OTEP-305 confirmed in S3 (build via Keycloak now).*

@@ -1,8 +1,11 @@
 # OTEP-216: Import competencies from CFTP
 
 **Type:** Sub-task
-**Status:** In Progress
+
+**Status:** QA
+
 **Assignee:** Kingsley Low
+
 **Story Points:** N/A
 
 ---
@@ -103,4 +106,4 @@ Need to figure out the below:
 
 **Kingsley Low:** [~accountid:70121:9d369513-d725-4e3d-a2b8-675d4d862e3a] As of context from Rama, it’s a webhook
 
-*Synced from Jira: 2026-06-03*
+*Synced from Jira: 2026-06-05*

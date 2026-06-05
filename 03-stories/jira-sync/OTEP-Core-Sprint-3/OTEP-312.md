@@ -1,7 +1,7 @@
 # OTEP-312: User Competency CRUD API -  Hide, Delete
 
 **Type:** Sub-task
-**Status:** Backlog
+**Status:** In Progress
 **Assignee:** Pei Ern Lim
 **Story Points:** N/A
 
@@ -23,4 +23,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-06-03*
+*Synced from Jira: 2026-06-05*

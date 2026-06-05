@@ -1,7 +1,7 @@
 # OTEP-217: UI to view the competencies
 
 **Type:** Sub-task
-**Status:** In Progress
+**Status:** QA
 **Assignee:** Fanxu Wang
 **Story Points:** N/A
 
@@ -23,4 +23,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-06-03*
+*Synced from Jira: 2026-06-05*
