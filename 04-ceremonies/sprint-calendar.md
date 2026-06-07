@@ -1,9 +1,12 @@
 # OTEP MVP Release — Sprint Calendar
 
-**Release:** MVP + Compliance/Security
+**Release:** MVP + UAT + VAPT/Security
+
 **Start:** Mon 4 May 2026
-**Go-live:** Fri 16 Oct 2026
-**Total sprints:** 12 (S01–S08 MVP · S09–S12 Compliance + Security)
+
+**Go-live:** Week of 19–23 Oct 2026
+
+**Total dev sprints:** 9 (S01–S09)
 
 > Roll this forward at each sprint boundary — keep current sprint + next sprint ceremony detail only. Everything beyond that lives in the phase overview and public holiday log.
 
@@ -13,20 +16,36 @@
 
 | Sprint | Phase | Dates | Retro? |
 |--------|-------|-------|--------|
-| S01 | MVP | Mon 04 May – Fri 15 May | Yes |
-| S02 | MVP | Mon 18 May – Fri 29 May | Yes |
-| S03 | MVP | Mon 01 Jun – Fri 12 Jun | Yes |
-| S04 | MVP | Mon 15 Jun – Fri 26 Jun | No (async check-in) |
-| S05 | MVP | Mon 29 Jun – Fri 10 Jul | Yes |
-| S06 | MVP | Mon 13 Jul – Fri 24 Jul | No (async check-in) |
-| S07 | MVP | Mon 27 Jul – Fri 07 Aug | Yes |
-| S08 | MVP — Feature Freeze | **Tue 11 Aug** – Fri 21 Aug | No (async check-in) |
-| S09 | Compliance + Security | Mon 24 Aug – Fri 04 Sep | Yes |
-| S10 | Compliance + Security | Mon 07 Sep – Fri 18 Sep | No (async check-in) |
-| S11 | Compliance + Security | Mon 21 Sep – Fri 02 Oct | Yes |
-| S12 | Compliance + Security — GO-LIVE | Mon 05 Oct – **Fri 16 Oct** | No (async check-in) |
+| S01 | Development | Mon 04 May – Fri 15 May | Yes |
+| S02 | Development | Mon 18 May – Fri 29 May | Yes |
+| S03 | Development | Mon 01 Jun – Fri 12 Jun | Yes |
+| S04 | Development | Mon 15 Jun – Fri 26 Jun | No (async check-in) |
+| S05 | Development | Mon 29 Jun – Fri 10 Jul | Yes |
+| S06 | Development | Mon 13 Jul – Fri 24 Jul | No (async check-in) |
+| S07 | Development | Mon 27 Jul – Fri 07 Aug | Yes |
+| S08 | Development — Feature Freeze | **Tue 11 Aug** – Fri 21 Aug | No (async check-in) |
+| S09 | Development — Final | Mon 24 Aug – Fri 04 Sep | Yes |
+| — | UAT | Mon 07 Sep – Fri 18 Sep | — |
+| — | VAPT / Security Testing | Mon 21 Sep – Thu 16 Oct | — |
+| — | **GO-LIVE** | Week of Mon 19 Oct – Fri 23 Oct | — |
 
-**Retro cadence:** Every sprint for S01–S03. Every 2nd sprint from S04 (S05, S07, S09, S11). Non-retro sprints: PM async check-in instead.
+**Retro cadence:** Every sprint for S01–S03. Every 2nd sprint from S04 (S05, S07, S09). Non-retro sprints: PM async check-in instead.
+
+---
+
+## Key Dates & Leave
+
+| Date | Event | Notes |
+|------|-------|-------|
+| Mon 04 May | Dev start (S01) | |
+| Fri 04 Sep | Dev sprints end (S09) | Last day of development |
+| Mon 07 Sep | UAT begins | 2-week window |
+| Fri 18 Sep | UAT ends | |
+| Mon 21 Sep | VAPT / Security testing begins | 4-week window |
+| Thu 16 Oct | VAPT ends | |
+| **Week 19–23 Oct** | **First release (go-live)** | Target week |
+| Week of 05 Oct | ⚠️ Adrian away | Overlaps VAPT window — no approvals/decisions that week |
+| 26 Oct – 05 Nov | ⚠️ Jace away | Post go-live; plan handover/support coverage |
 
 ---
 
@@ -41,36 +60,9 @@
 
 ---
 
-## Current Sprint — Sprint 2 (Mon 18 May – Fri 29 May)
+## Current Sprint — Sprint 3 (Tue 02 Jun – Fri 12 Jun)
 
-### Ceremony Dates
-
-| Ceremony | Date |
-|----------|------|
-| Sprint Start | Mon 18 May |
-| Squad Grooming (internal) | Tue 19 May |
-| Mid-Sprint Check-in | Wed 20 May |
-| Backlog Grooming (Sprint 3) | Thu 21 May |
-| OTEP Squad Sync | Fri 22 May |
-| Mid-Sprint Review | Mon 25 May |
-| Sprint Planning (Sprint 3) | Thu 29 May |
-| Sprint Review + Retro | Fri 29 May |
-| Sprint End | Fri 29 May |
-
-### Prep Deadlines
-
-| Task | Due |
-|------|-----|
-| ACs complete | EOD Wed 20 May |
-| BO pre-read sent | EOD Fri 22 May |
-| Demo script ready | EOD Thu 28 May |
-| Sprint summary to Confluence | Fri 29 May |
-
----
-
-## Next Sprint — Sprint 3 (Mon 01 Jun – Fri 12 Jun)
-
-⚠️ **Vesak Day Mon 01 Jun** — 1 dev day lost. Standup cancelled. Sprint Start shifts to Tue 02 Jun.
+⚠️ **Vesak Day Mon 01 Jun** — Sprint Start shifted to Tue 02 Jun.
 
 ### Ceremony Dates
 
@@ -82,7 +74,7 @@
 | Backlog Grooming (Sprint 4) | Thu 05 Jun |
 | OTEP Squad Sync | Fri 06 Jun |
 | Mid-Sprint Review | Mon 09 Jun |
-| Sprint Planning (Sprint 4) | Thu 12 Jun |
+| Sprint Planning (Sprint 4) | Thu 11 Jun |
 | Sprint Review + Retro | Fri 12 Jun |
 | Sprint End | Fri 12 Jun |
 
@@ -97,4 +89,31 @@
 
 ---
 
-*Updated: 2026-05-19 · Roll current/next sprint forward at each sprint boundary*
+## Next Sprint — Sprint 4 (Mon 15 Jun – Fri 26 Jun)
+
+### Ceremony Dates
+
+| Ceremony | Date |
+|----------|------|
+| Sprint Start | Mon 15 Jun |
+| Squad Grooming (internal) | Tue 16 Jun |
+| Mid-Sprint Check-in | Wed 17 Jun |
+| Backlog Grooming (Sprint 5) | Thu 18 Jun |
+| OTEP Squad Sync | Fri 19 Jun |
+| Mid-Sprint Review | Mon 22 Jun |
+| Sprint Planning (Sprint 5) | Thu 25 Jun |
+| Sprint Review + Demo | Fri 26 Jun |
+| Sprint End | Fri 26 Jun |
+
+### Prep Deadlines
+
+| Task | Due |
+|------|-----|
+| ACs complete | EOD Wed 17 Jun |
+| BO pre-read sent | EOD Fri 19 Jun |
+| Demo script ready | EOD Thu 25 Jun |
+| Sprint summary to Confluence | Fri 26 Jun |
+
+---
+
+*Updated: 2026-06-05 · Go-live shifted to week of 19–23 Oct · Dev sprints confirmed S01–S09 · UAT 7–18 Sep · VAPT 21 Sep–16 Oct · Adrian away 5 Oct wk · Jace away 26 Oct–5 Nov*

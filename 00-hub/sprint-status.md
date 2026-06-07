@@ -37,15 +37,15 @@
 
 ## Sprint 3 — ACTIVE (started 2 Jun 2026, with carry-overs)
 
-> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-05. **49 issues** total (carry-overs from S2 + new S3 scope). 4 Done, 7 In Progress, 12 QA, 26 Backlog.
+> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-05 (stale-check). **48 issues** total (carry-overs from S2 + new S3 scope). 4 Done, 6 In Progress, 14 QA, 24 Backlog.
 > **OTEP-Core Sprint 3** (Sprint 34607) also active: **96 issues** — 32 Done, 10 In Progress, 27 QA, 26 Backlog, 1 To Do. (Live 2026-06-05.)
 
 ### Carried over from Sprint 2 (finish these first)
 
-**In QA (12)** — closest to done:
-OTEP-170 (base layout), OTEP-128 (detail page), OTEP-268 (empty/error states), OTEP-314 (detail consuming response), OTEP-320 (real DB endpoint), OTEP-324 (token rotation, Thomas), OTEP-325/326 (empty/error UI), OTEP-327 (detail w/ design system), OTEP-332 (shared ref data), OTEP-334 (backend detail endpoint), OTEP-303 (POCDEX field check).
+**In QA (13)** — closest to done:
+OTEP-128 (detail page), OTEP-170 (base layout), OTEP-268 (empty/error states), OTEP-303 (POCDEX field check), OTEP-314 (detail consuming response), OTEP-320 (real DB endpoint), OTEP-324 (token rotation, Thomas), OTEP-325/326 (empty/error UI), OTEP-327 (detail w/ design system), OTEP-332 (shared ref data), OTEP-334 (backend detail endpoint), OTEP-380 (BE filtering params, Léo).
 
-**In Progress (5):** OTEP-85 (cards w/ real OTG data), OTEP-276 (design-system spike, Pow Hwee), OTEP-322 (Playwright E2E, Rathika), OTEP-362 (BE no closed opps, Thomas), OTEP-380 (BE filtering params, Léo).
+**In Progress (6):** OTEP-85 (cards w/ real OTG data, unassigned), OTEP-192 (recurring OTG ingestion job, Léo), OTEP-276 (design-system spike, Pow Hwee), OTEP-322 (Playwright E2E, Rathika), OTEP-362 (BE no closed opps, Thomas), OTEP-368 (session expiry redirect, Thomas). **Note:** OTEP-369 (custom login page) moved to QA.
 
 **Backlog carry:** OTEP-129 (open/closed before applying, Thomas) — now **split into OTEP-362 (In Progress) + OTEP-363**.
 
@@ -62,7 +62,7 @@ OTEP-170 (base layout), OTEP-128 (detail page), OTEP-268 (empty/error states), O
 | OTEP-89 | View C@G Job (Deep-Link) | — | |
 | OTEP-319 | Apply via FormSG — basic redirect | — | `formsg_url` confirmed ✅ |
 | OTEP-305 | Login and Logout (replace keycloak w/ actual) | — | **Build actual pages now against Keycloak; WOG AD swaps in later (D 2026-06-02).** Needs owner. |
-| OTEP-192 | Recurring OTG data ingestion job | — | Critical path — no live data without it |
+| OTEP-192 | Recurring OTG data ingestion job | Léo Milbor | **In Progress** — critical path |
 | OTEP-324 | OAuth 2.0 Refresh Token Rotation | Thomas | |
 | OTEP-348 | OTG ingestion — scheduler & observability | — | |
 | OTEP-349 | [Spike] Competency matching w/ OTEP-Core | — | Cross-squad |
@@ -123,5 +123,5 @@ OTEP-170 (base layout), OTEP-128 (detail page), OTEP-268 (empty/error states), O
 
 ---
 
-*Updated: 2026-06-05 (stale-check — S3 pulse 5IP/28BL→7IP/26BL to match live Jira; S4/S5 goals + plan-of-record added 06-04). Prior: 2026-06-04 (dates, counts). **Sprint 2 CLOSED; Sprint 3 ACTIVE** (49 issues).*
-*Key changes this sync: S2 closed with 6 Done; 11 QA + 3 In Progress + OTEP-129 carried into S3. OTEP-129 split → OTEP-362 (backend) + OTEP-363 (UI). OTEP-305 confirmed in S3 (build via Keycloak now).*
+*Updated: 2026-06-05 (stale-check — counts corrected to live Jira: 48 issues, 6IP/14QA/4Done/24BL; OTEP-369 moved QA, OTEP-85 unassigned noted). Prior: 2026-06-05 (S3 pulse). **Sprint 2 CLOSED; Sprint 3 ACTIVE** (48 issues).*
+*Key changes this sync: OTEP-369 now QA (not In Progress); In Progress count 7→6; QA count 13→14; Backlog 25→24; total 49→48.*

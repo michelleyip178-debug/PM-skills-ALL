@@ -1,7 +1,7 @@
 # Active Tasks
 
-Current sprint: **Sprint 3 active (started Tue 2 Jun). Sprint 2 closed — carry-over QA/In-Progress pulled into S3.**
-Jira sync 2026-06-02 (live): **Sprint 3:** carry-over QA in flight (finish first), new-scope stories in Backlog. New: OTEP-358 (Michelle, nil-date OTG spike), OTEP-361 (Pow Hwee, ADR forum). **OTEP-129 now on the S3 board, split into OTEP-362 (backend) + OTEP-363 (UI).** · **Sprint 2 (closed) In Progress carried to S3:** OTEP-85, OTEP-322 (Rathika) · **In QA (carried):** OTEP-128, OTEP-170, OTEP-268, OTEP-314, OTEP-320, OTEP-325/326, OTEP-327, OTEP-332, OTEP-334, OTEP-303 · **Done:** OTEP-191, OTEP-267, OTEP-313 (Léo), OTEP-252, OTEP-194, OTEP-193, OTEP-288, OTEP-296.
+Current sprint: **Sprint 3 active (2–14 Jun 2026). Sprint 2 closed.**
+Jira sync 2026-06-05 (stale-check): **48 issues — 4 Done, 6 In Progress, 14 QA, 24 Backlog.** OTEP-369 (login page) now QA. OTEP-85 (listing cards) In Progress, unassigned. Sprint goal (filters + apply) still Backlog — OTEP-86/317/319 not started. Sprint Planning Thu 11 Jun.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
@@ -9,7 +9,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 3 in flight (started 2 Jun) — finish carried-over QA, then new-scope pickup. Key gates: R1 capacity + ATS-fork decisions (this session's work), CSC SSO feasibility, design-lock confirmation. *(Prior week's Sprint 2-close theme retired 2026-06-02.)*
+**Theme:** Sprint 3 W2 (8–14 Jun) — close QA tail, unblock sprint goal (OTEP-319 apply + OTEP-86 filters), prep S4 planning Thu 11 Jun. Three P0 bookings still open: Fabian (WOG AD #26), Daryll (POCDEX #31), S4 C@G grooming. July SteerCo deliverables (transition plan, North Star brief, gap analysis) now active. *(Updated 2026-06-05)*
 
 ---
 
@@ -148,4 +148,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-06-02 — stale-check + live Jira sync (Board 12541). Header refreshed: Sprint 2 CLOSED, Sprint 3 active with carry-overs; OTEP-129→362/363, OTEP-313 Done, OTEP-128/268 in QA. LNO re-sort applied. R4-creation entry marked superseded (creation→R1).*
+*Updated: 2026-06-05 — stale-check. Header + This Week's Focus refreshed to Sprint 3 W2 state (48 issues, 6IP/14QA/4Done/24BL). OTEP-369 QA noted. Sprint goal status (filters+apply still Backlog) flagged. Prior: 2026-06-02.*
