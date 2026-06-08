@@ -1,7 +1,7 @@
 # OTEP-308: Research Service Discovery
 
 **Type:** Sub-task
-**Status:** QA
+**Status:** Done
 **Assignee:** Fanxu Wang
 **Story Points:** N/A
 
@@ -23,4 +23,4 @@ _No subtasks._
 
 **Fanxu Wang:** [https://sgtechstack.atlassian.net/wiki/spaces/OTEP/pages/2279179902/OTEP+Service+Discovery|https://sgtechstack.atlassian.net/wiki/spaces/OTEP/pages/2279179902/OTEP+Service+Discovery|smart-link]
 
-*Synced from Jira: 2026-06-03*
+*Synced from Jira: 2026-06-08*

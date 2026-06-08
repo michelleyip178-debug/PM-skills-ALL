@@ -1,7 +1,8 @@
-# OTEP-369: Custom login page 
+# OTEP-200: Create New UAT AWS Account for CIE
 
-**Status:** QA
-**Assignee:** Thomas Huchedé
+**Type:** Sub-task
+**Status:** Done
+**Assignee:** Fabian PEH
 **Story Points:** N/A
 
 ---

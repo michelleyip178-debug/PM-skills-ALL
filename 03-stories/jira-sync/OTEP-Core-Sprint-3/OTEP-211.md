@@ -1,7 +1,7 @@
 # OTEP-211: Create IaC for OTEP
 
 **Type:** Sub-task
-**Status:** QA
+**Status:** Done
 **Assignee:** boonsiangteh
 **Story Points:** N/A
 
@@ -75,4 +75,4 @@ _No subtasks._
 
 **Adrian Lo:** [~accountid:712020:4c101a3f-bd57-44f2-90a8-f36ea3d3ddb4] Please fill in the description of the ticket
 
-*Synced from Jira: 2026-06-03*
+*Synced from Jira: 2026-06-08*

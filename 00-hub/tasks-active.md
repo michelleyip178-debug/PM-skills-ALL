@@ -55,6 +55,9 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 > - **🟡 P3 (whenever):** Diana loop-in + stakeholder file · ~~OKR doc → NotebookLM~~ (killed) · clean inbox (15-min timebox)
 > - **🗓️ Deferred out of June:** Cybersecurity quiz (Dec) · PIM risk assessment (post-feature-freeze)
 
+- [ ] **Send ARK request email for Jobelle** — ⚠️ due before Wed 10 Jun. Ad-hoc, added 2026-06-08.
+- [ ] **Review monthly progress report for OTG** — ⚠️ due before Wed 10 Jun. Ad-hoc, added 2026-06-08.
+- [ ] **Set up Working Level deck for WD's update** — ⚠️ due before Wed 10 Jun. Ad-hoc, added 2026-06-08.
 - [ ] ~~**Email DDs on PSC — send today (Fri 29 May)**~~ — ⚠️ **STALE (LNO 2026-06-02): deadline 4 days past. Verify it was sent, then close. If not sent, it's likely moot.**
 - [ ] **Prepare Jobelle handover** — Jobelle joins 3 Jun. Step 1: share Phoebe's copy first. Step 2: share Daniel's handover after 30–60 days (i.e. ~3 Jul–3 Aug).
 - [x] **Follow up on session-notes test cases** — ✅ Done 2026-06-02.

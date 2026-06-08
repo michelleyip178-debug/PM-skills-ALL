@@ -1,7 +1,8 @@
-# OTEP-369: Custom login page 
+# OTEP-226: Setup CFTP
 
-**Status:** QA
-**Assignee:** Thomas Huchedé
+**Type:** Sub-task
+**Status:** In Progress
+**Assignee:** rama moorthy
 **Story Points:** N/A
 
 ---

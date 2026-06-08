@@ -37,15 +37,15 @@
 
 ## Sprint 3 — ACTIVE (started 2 Jun 2026, with carry-overs)
 
-> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-05 (stale-check). **48 issues** total (carry-overs from S2 + new S3 scope). 4 Done, 6 In Progress, 14 QA, 24 Backlog.
-> **OTEP-Core Sprint 3** (Sprint 34607) also active: **96 issues** — 32 Done, 10 In Progress, 27 QA, 26 Backlog, 1 To Do. (Live 2026-06-05.)
+> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-08 (jira-sync). **49 issues** total. 4 Done, 6 In Progress, 14 QA, 25 Backlog.
+> **OTEP-Core Sprint 3** (Sprint 34607) also active: **96 issues** — 32 Done, 9 In Progress, 28 QA, 26 Backlog, 1 To Do. (Live 2026-06-08.)
 
 ### Carried over from Sprint 2 (finish these first)
 
 **In QA (13)** — closest to done:
 OTEP-128 (detail page), OTEP-170 (base layout), OTEP-268 (empty/error states), OTEP-303 (POCDEX field check), OTEP-314 (detail consuming response), OTEP-320 (real DB endpoint), OTEP-324 (token rotation, Thomas), OTEP-325/326 (empty/error UI), OTEP-327 (detail w/ design system), OTEP-332 (shared ref data), OTEP-334 (backend detail endpoint), OTEP-380 (BE filtering params, Léo).
 
-**In Progress (6):** OTEP-85 (cards w/ real OTG data, unassigned), OTEP-192 (recurring OTG ingestion job, Léo), OTEP-276 (design-system spike, Pow Hwee), OTEP-322 (Playwright E2E, Rathika), OTEP-362 (BE no closed opps, Thomas), OTEP-368 (session expiry redirect, Thomas). **Note:** OTEP-369 (custom login page) moved to QA.
+**In Progress (6):** OTEP-85 (cards w/ real OTG data, unassigned), OTEP-192 (recurring OTG ingestion job, Léo), OTEP-276 (design-system spike, Pow Hwee — re-prioritised to In Progress W23; reason TBC, ask at 10:30 review), OTEP-322 (Playwright E2E, Rathika), OTEP-362 (BE no closed opps, Thomas), OTEP-368 (session expiry redirect, Thomas). OTEP-369 (custom login page, Thomas) now in **QA**. Note: Thomas also has OTEP-381 (FE filtering params) in Backlog — 3 active/queued items, capacity risk for filters closing this sprint.
 
 **Backlog carry:** OTEP-129 (open/closed before applying, Thomas) — now **split into OTEP-362 (In Progress) + OTEP-363**.
 
@@ -123,5 +123,6 @@ OTEP-128 (detail page), OTEP-170 (base layout), OTEP-268 (empty/error states), O
 
 ---
 
-*Updated: 2026-06-05 (stale-check — counts corrected to live Jira: 48 issues, 6IP/14QA/4Done/24BL; OTEP-369 moved QA, OTEP-85 unassigned noted). Prior: 2026-06-05 (S3 pulse). **Sprint 2 CLOSED; Sprint 3 ACTIVE** (48 issues).*
-*Key changes this sync: OTEP-369 now QA (not In Progress); In Progress count 7→6; QA count 13→14; Backlog 25→24; total 49→48.*
+*Updated: 2026-06-08 (jira-sync). **Sprint 2 CLOSED; Sprint 3 ACTIVE.***
+
+*Key changes this sync (2026-06-08): Pathfinder +1 issue (OTEP-391 added, Hao Eng, Backlog); total 48→49. Core: OTEP-211/308/366 Done (was QA/In Progress); 28 S2 tickets relocated to S3 folder; 5 stub files created (OTEP-339/365/384/385/389). OTEP-370 flagged — not in Jira (no access/deleted).*
