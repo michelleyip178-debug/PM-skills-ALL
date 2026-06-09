@@ -1,7 +1,7 @@
 # Active Tasks
 
 Current sprint: **Sprint 3 active (2–14 Jun 2026). Sprint 2 closed.**
-Jira sync 2026-06-05 (stale-check): **48 issues — 4 Done, 6 In Progress, 14 QA, 24 Backlog.** OTEP-369 (login page) now QA. OTEP-85 (listing cards) In Progress, unassigned. Sprint goal (filters + apply) still Backlog — OTEP-86/317/319 not started. Sprint Planning Thu 11 Jun.
+Jira sync 2026-06-08 (stale-check): **49 issues — 5 Done, 8 In Progress, 13 QA, 24 Backlog.** OTEP-303 (POCDEX field check) and OTEP-313 (OTG raw ingest) now Done. OTEP-381 (FE filtering params, Thomas) now In Progress. Sprint goal (filters + apply) still Backlog — OTEP-86/317/319 not started. Sprint Planning Thu 11 Jun.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
@@ -57,7 +57,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 - [ ] **Send ARK request email for Jobelle** — ⚠️ due before Wed 10 Jun. Ad-hoc, added 2026-06-08.
 - [ ] **Review monthly progress report for OTG** — ⚠️ due before Wed 10 Jun. Ad-hoc, added 2026-06-08.
-- [ ] **Set up Working Level deck for WD's update** — ⚠️ due before Wed 10 Jun. Ad-hoc, added 2026-06-08.
+- [x] **Set up Working Level deck for WD's update** — ✅ Done 2026-06-08.
 - [ ] ~~**Email DDs on PSC — send today (Fri 29 May)**~~ — ⚠️ **STALE (LNO 2026-06-02): deadline 4 days past. Verify it was sent, then close. If not sent, it's likely moot.**
 - [ ] **Prepare Jobelle handover** — Jobelle joins 3 Jun. Step 1: share Phoebe's copy first. Step 2: share Daniel's handover after 30–60 days (i.e. ~3 Jul–3 Aug).
 - [x] **Follow up on session-notes test cases** — ✅ Done 2026-06-02.

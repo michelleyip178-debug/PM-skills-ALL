@@ -37,7 +37,7 @@
 
 ## Sprint 3 — ACTIVE (started 2 Jun 2026, with carry-overs)
 
-> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-08 (jira-sync). **49 issues** total. 4 Done, 6 In Progress, 14 QA, 25 Backlog.
+> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-08 (stale-check). **49 issues** total. 5 Done, 8 In Progress, 13 QA, 24 Backlog.
 > **OTEP-Core Sprint 3** (Sprint 34607) also active: **96 issues** — 32 Done, 9 In Progress, 28 QA, 26 Backlog, 1 To Do. (Live 2026-06-08.)
 
 ### Carried over from Sprint 2 (finish these first)
