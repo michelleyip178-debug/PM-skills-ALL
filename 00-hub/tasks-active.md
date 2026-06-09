@@ -15,11 +15,11 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## In Progress
 
-**Engineering (Jira — live 2026-06-02):**
+**Engineering (Jira — live 2026-06-09):**
 
-*Sprint 3 (all Backlog — no pickup yet, Day 1):* OTEP-86/317 (filters), OTEP-87/88/89 (C@G), OTEP-319 (FormSG redirect), OTEP-305 (login/logout), OTEP-192/348 (OTG ingestion), OTEP-324 (token rotation, Thomas), OTEP-349/351 (spikes), OTEP-350 (WOG AD, Fabian), OTEP-352 (POCDEX code table, Pow Hwee), **OTEP-358 (nil-date OTG spike, Michelle)**, OTEP-361 (ADR forum, Pow Hwee).
+*Sprint 3 Backlog (sprint goal — not yet picked up):* OTEP-86/317 (filters), OTEP-87/88/89 (C@G), OTEP-319 (FormSG redirect), OTEP-305 (login/logout), OTEP-348 (OTG scheduler), OTEP-324 (token rotation, Thomas), OTEP-349/351 (spikes), OTEP-350 (WOG AD, Fabian), OTEP-352 (POCDEX code table, Pow Hwee), **OTEP-358 (nil-date OTG spike, Michelle)**, OTEP-361 (ADR forum, Pow Hwee).
 
-*Carried-over In Progress (live 2026-06-02):* OTEP-85 (cards w/ real OTG data), OTEP-322 (Rathika, Playwright).
+*Sprint 3 In Progress (Day 6):* OTEP-85 (cards/real OTG data, unassigned), OTEP-192 (OTG ingestion, Léo), OTEP-276 (design-system spike, Pow Hwee), OTEP-322 (Playwright, Rathika), OTEP-362 (BE closed opps, Thomas), OTEP-368 (session expiry, Thomas), OTEP-381 (FE filtering params, Thomas), OTEP-391 (virus scanning spike, Hao Eng).
 
 *Carried-over In QA:* OTEP-128 (detail page), OTEP-268 (empty/error parent), OTEP-170 (base layout), OTEP-314 (detail page), OTEP-327 (detail w/ design system), OTEP-320 (replace mock endpoint), OTEP-325/326 (empty/error states), OTEP-303 (POCDEX field check), OTEP-332 (reference data repo), OTEP-334 (backend detail endpoint).
 
@@ -46,7 +46,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 > - [ ] **Competency SSOT — Imelda** (#18) — gates full OTEP-87 / C@G detail competency block. *(see line ~67)*
 > - *Also: resolve OTEP-110 error-spec mismatch (#32) before auth grooms clean.*
 
-> 📌 **REVIEW TOMORROW (parked 2026-06-02):** Pow Hwee's **Sprint 3 Proposed Backlog** — [Confluence](https://sgtechstack.atlassian.net/wiki/spaces/OTEP/pages/2302903856/Pathfinder+-+Sprint+3+Proposed+Backlog). Review his proposed backlog against current sprint-status (49 issues, carry-over QA + new scope). Act/comment after reading.
+> 📌 ~~**REVIEW TOMORROW (parked 2026-06-02):** Pow Hwee's **Sprint 3 Proposed Backlog** — review against sprint-status (50 issues, carry-over QA + new scope). Act/comment after reading.~~ **STALE — now Day 6 of Sprint 3. Board is live at 50 issues. Action moot.**
 
 > **LNO re-sort applied 2026-06-02** ([analysis](../../../PM-OS/outputs/analyses/2026-06-02-lno-prioritization.md)). This week's **Leverage** (do deeply): feed Adrian the R1 resource ask · drive R1 design alignment w/ designers · force the ATS fork (C1) · CSC SSO feasibility · finish WOG Auth metrics. Overhead items below struck/delegated/deferred to protect that time.
 
@@ -152,4 +152,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-06-05 — stale-check. Header + This Week's Focus refreshed to Sprint 3 W2 state (48 issues, 6IP/14QA/4Done/24BL). OTEP-369 QA noted. Sprint goal status (filters+apply still Backlog) flagged. Prior: 2026-06-02.*
+*Updated: 2026-06-09 — stale-check. Engineering block updated from Day 1 Backlog snapshot (live 2026-06-02) to Day 6 live state (50 issues, 8IP/13QA/6Done/23BL). "REVIEW TOMORROW" note on Pow Hwee's S3 backlog marked stale. Prior: 2026-06-05.*
