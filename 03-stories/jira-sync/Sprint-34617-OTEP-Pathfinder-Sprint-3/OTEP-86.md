@@ -16,8 +16,8 @@ User story:  As an officer, I want to filter the listing by opportunity type so 
 
 | Key | Summary | Status |
 |-----|---------|--------|
-| OTEP-380 | [BE] Handle filtering params | In Progress |
-| OTEP-381 | [FE] Handle filtering params | Backlog |
+| OTEP-380 | [BE] Handle filtering params | QA |
+| OTEP-381 | [FE] Handle filtering params | In Progress |
 
 ---
 

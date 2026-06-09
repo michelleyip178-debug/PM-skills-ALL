@@ -37,19 +37,19 @@
 
 ## Sprint 3 — ACTIVE (started 2 Jun 2026, with carry-overs)
 
-> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-08 (stale-check). **49 issues** total. 5 Done, 8 In Progress, 13 QA, 24 Backlog.
+> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-09 (jira-sync). **50 issues** total. 6 Done, 8 In Progress, 13 QA, 23 Backlog.
 > **OTEP-Core Sprint 3** (Sprint 34607) also active: **96 issues** — 32 Done, 9 In Progress, 28 QA, 26 Backlog, 1 To Do. (Live 2026-06-08.)
 
 ### Carried over from Sprint 2 (finish these first)
 
 **In QA (13)** — closest to done:
-OTEP-128 (detail page), OTEP-170 (base layout), OTEP-268 (empty/error states), OTEP-303 (POCDEX field check), OTEP-314 (detail consuming response), OTEP-320 (real DB endpoint), OTEP-324 (token rotation, Thomas), OTEP-325/326 (empty/error UI), OTEP-327 (detail w/ design system), OTEP-332 (shared ref data), OTEP-334 (backend detail endpoint), OTEP-380 (BE filtering params, Léo).
+OTEP-128 (detail page), OTEP-170 (base layout), OTEP-268 (empty/error states), OTEP-314 (detail consuming response), OTEP-320 (real DB endpoint), OTEP-324 (token rotation, Thomas), OTEP-325/326 (empty/error UI), OTEP-327 (detail w/ design system), OTEP-332 (shared ref data), OTEP-334 (backend detail endpoint), OTEP-369 (custom login page, Thomas), OTEP-380 (BE filtering params, Léo).
 
-**In Progress (6):** OTEP-85 (cards w/ real OTG data, unassigned), OTEP-192 (recurring OTG ingestion job, Léo), OTEP-276 (design-system spike, Pow Hwee — re-prioritised to In Progress W23; reason TBC, ask at 10:30 review), OTEP-322 (Playwright E2E, Rathika), OTEP-362 (BE no closed opps, Thomas), OTEP-368 (session expiry redirect, Thomas). OTEP-369 (custom login page, Thomas) now in **QA**. Note: Thomas also has OTEP-381 (FE filtering params) in Backlog — 3 active/queued items, capacity risk for filters closing this sprint.
+**In Progress (8):** OTEP-85 (cards w/ real OTG data, unassigned), OTEP-192 (recurring OTG ingestion job, Léo), OTEP-276 (design-system spike, Pow Hwee), OTEP-322 (Playwright E2E, Rathika), OTEP-362 (BE no closed opps, Thomas), OTEP-368 (session expiry redirect, Thomas), OTEP-381 (FE filtering params, Thomas — moved In Progress 2026-06-09), OTEP-391 (virus scanning spike, Hao Eng — moved In Progress 2026-06-09). Note: Thomas has 3 active items (362, 368, 381) — capacity risk for filters closing this sprint.
 
 **Backlog carry:** OTEP-129 (open/closed before applying, Thomas) — now **split into OTEP-362 (In Progress) + OTEP-363**.
 
-**Done (4):** OTEP-193 (data model, Léo), OTEP-288 (backend stub, Léo), OTEP-296 (report format, Michelle), OTEP-313 (OTG raw ingest, Léo).
+**Done (6):** OTEP-193 (data model, Léo), OTEP-288 (backend stub, Léo), OTEP-296 (report format, Michelle), OTEP-303 (POCDEX field check, Pow Hwee — Done 2026-06-09), OTEP-313 (OTG raw ingest, Léo), OTEP-397 (UI for OTG excel file upload — new story added 2026-06-09).
 
 ### New Sprint 3 scope (Backlog)
 

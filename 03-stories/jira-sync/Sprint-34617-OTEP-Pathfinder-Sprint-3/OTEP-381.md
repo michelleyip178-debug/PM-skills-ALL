@@ -1,6 +1,6 @@
 # OTEP-381: [FE] Handle filtering params
 
-**Status:** Backlog
+**Status:** In Progress
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 

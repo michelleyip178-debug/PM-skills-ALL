@@ -1,7 +1,7 @@
 # Active Tasks
 
 Current sprint: **Sprint 3 active (2–14 Jun 2026). Sprint 2 closed.**
-Jira sync 2026-06-08 (stale-check): **49 issues — 5 Done, 8 In Progress, 13 QA, 24 Backlog.** OTEP-303 (POCDEX field check) and OTEP-313 (OTG raw ingest) now Done. OTEP-381 (FE filtering params, Thomas) now In Progress. Sprint goal (filters + apply) still Backlog — OTEP-86/317/319 not started. Sprint Planning Thu 11 Jun.
+Jira sync 2026-06-09 (jira-sync): **50 issues — 6 Done, 8 In Progress, 13 QA, 23 Backlog.** OTEP-303 Done. OTEP-381 (FE filtering params, Thomas) + OTEP-391 (virus scanning spike, Hao Eng) now In Progress. OTEP-397 (OTG excel upload UI) added as new story. Sprint goal (filters + apply) still Backlog — OTEP-86/317/319 not started. Thomas has 3 active items — capacity risk. Sprint Planning Thu 11 Jun.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
@@ -39,8 +39,9 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 > - [ ] Sharpen OTEP-348 (✅ draft ready) · confirm new-dev 70/30 FE split · C@G deep-link UX at design review.
 >
 > **Sprint 5 (28 Jun–12 Jul) — unblock 4 external gates (each is a Michelle→someone session; book this week — lead times):**
-> - [ ] **WOG AD onboarding session — Fabian** (#26) — gates ALL S5 auth. OTEP-350 has zero movement; needs steps mapped. 2+ wk lead → book now. *(see line ~63)*
-> - [ ] **POCDEX planning session — Daryll** (#31) — gates S5 ringfencing (127). No date confirmed yet. *(see line ~68)*
+>
+> - [x] ~~**WOG AD onboarding session — Fabian** (#26)~~ — no longer required (2026-06-09).
+> - [x] ~~**POCDEX planning session — Daryll** (#31)~~ — no longer required (2026-06-09).
 > - [ ] **CSC SSO requirements + ownership — #30** — his plan starts CSC SSO in S5; 6-wk chain, owner TBC. *(see line ~60 feasibility deep-dive)*
 > - [ ] **Competency SSOT — Imelda** (#18) — gates full OTEP-87 / C@G detail competency block. *(see line ~67)*
 > - *Also: resolve OTEP-110 error-spec mismatch (#32) before auth grooms clean.*
