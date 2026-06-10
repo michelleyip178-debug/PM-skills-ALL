@@ -1,7 +1,7 @@
 # OTEP-367: Update UI for competencies of opened opportunities
 
-**Status:** Backlog
-**Assignee:** N/A
+**Status:** In Progress
+**Assignee:** Thomas Huchedé
 **Story Points:** N/A
 
 ---
@@ -21,3 +21,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-10*

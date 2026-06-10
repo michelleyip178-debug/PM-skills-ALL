@@ -1,6 +1,6 @@
 # OTEP-86: Filter Opportunities by type (Internal Jobs, STIPs, Gigs)
 
-**Status:** Backlog
+**Status:** QA
 **Assignee:** N/A
 **Story Points:** N/A
 
@@ -25,3 +25,5 @@ User story:  As an officer, I want to filter the listing by opportunity type so 
 
 **Pow Hwee TAN (PSD)** (2026-05-28)
 Careers@Gov is not listed as a filter option. Suggest creating a Sprint 4 ticket to add C@G as a filter option once C@G listings are live.
+
+*Synced from Jira: 2026-06-10*

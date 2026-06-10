@@ -1,6 +1,6 @@
 # OTEP-361: Conduct ADR review forum with all squads
 
-**Status:** Backlog
+**Status:** In Progress
 **Assignee:** Pow Hwee TAN (PSD)
 **Story Points:** N/A
 
@@ -21,3 +21,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-10*

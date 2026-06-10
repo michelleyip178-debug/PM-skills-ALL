@@ -1,7 +1,7 @@
 # OTEP-363: Create UI component to display closed opportunity
 
 **Status:** Backlog
-**Assignee:** Léo Milbor
+**Assignee:** Thomas Huchedé
 **Story Points:** N/A
 
 ---
@@ -21,3 +21,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-10*

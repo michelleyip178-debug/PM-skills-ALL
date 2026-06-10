@@ -1,7 +1,9 @@
 # OTEP-192: OTG data ingestion
 
-**Status:** In Progress
+**Status:** QA
+
 **Assignee:** Léo Milbor
+
 **Story Points:** N/A
 
 ---
@@ -23,6 +25,9 @@ _No subtasks._
 **Léo Milbor** (2026-06-05)
 in the story it’s said “Invalid or incomplete records are skipped”. How rigorous should that be? As soon as one reference cannot be matched → skip the row Be more lenient on some rows (I’m thinking of competencies for instance) something else?
 
+**Michelle Yip** (2026-06-10)
+Hard-skip on all fields including competencies — if any required mapped field is missing or unresolvable, skip the whole row. Consistent with pipeline rule confirmed with Pow Hwee 2026-06-08. Competency matching on ingested opportunities is a separate concern handled in OTEP-127 (spike, S4). OTEP-192 can close on this basis.
+
 ---
 
 **Léo Milbor** (2026-06-05)
@@ -41,3 +46,5 @@ Here is temporary query that can be used to query created opportunities: select 
   from opportunity as o
   left join ref_agency as a on a.id = o.agency_id
   left join ref_opportunity_type as ot on ot.id = o.opportunity_type_id
+
+*Synced from Jira: 2026-06-10*

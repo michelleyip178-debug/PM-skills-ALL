@@ -1,7 +1,7 @@
 # OTEP-319: Apply via FormSG — basic redirect (Internal Jobs, STIPs, Gigs)
 
 **Status:** Backlog
-**Assignee:** N/A
+**Assignee:** Thomas Huchedé
 **Story Points:** N/A
 
 ---
@@ -22,3 +22,5 @@ _No subtasks._
 
 **Pow Hwee TAN (PSD)** (2026-05-28)
 Open question on tracking params should be resolved before sprint starts. Otherwise AC looks good.
+
+*Synced from Jira: 2026-06-10*

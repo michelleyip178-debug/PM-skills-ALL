@@ -1,14 +1,20 @@
-# OTEP-378: Map C@G payload to Detail Page UI
+# OTEP-404: Handle different page size on tablet and mobile
+
+**Type:** Task
 
 **Status:** Backlog
+
 **Assignee:** Thomas Huchedé
+
 **Story Points:** N/A
+
+**Sprint:** OTEP-Pathfinder Sprint 4
 
 ---
 
 ## Description
 
-Build/adjust the UI layout to handle C@G-specific data without breaking the existing STIPs/Gigs layout.
+On the opportunity listing, the page size on mobile and tablet should be 10, not 15.
 
 ---
 

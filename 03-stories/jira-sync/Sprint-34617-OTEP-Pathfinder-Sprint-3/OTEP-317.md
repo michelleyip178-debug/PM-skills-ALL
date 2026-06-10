@@ -1,6 +1,6 @@
 # OTEP-317: Clear filters and reset view
 
-**Status:** Backlog
+**Status:** QA
 **Assignee:** N/A
 **Story Points:** N/A
 
@@ -21,3 +21,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-10*

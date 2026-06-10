@@ -1,7 +1,7 @@
 # Active Tasks
 
 Current sprint: **Sprint 3 active (2–14 Jun 2026). Sprint 2 closed.**
-Jira sync 2026-06-09 (jira-sync): **50 issues — 6 Done, 8 In Progress, 13 QA, 23 Backlog.** OTEP-303 Done. OTEP-381 (FE filtering params, Thomas) + OTEP-391 (virus scanning spike, Hao Eng) now In Progress. OTEP-397 (OTG excel upload UI) added as new story. Sprint goal (filters + apply) still Backlog — OTEP-86/317/319 not started. Thomas has 3 active items — capacity risk. Sprint Planning Thu 11 Jun.
+Jira sync 2026-06-10 (stale-check): **48 issues — 18 Done, 11 In Progress, 7 QA, 12 Backlog.** OTEP-303 Done. OTEP-381 (FE filtering params, Thomas) + OTEP-391 (virus scanning spike, Hao Eng) now In Progress. OTEP-397 (OTG excel upload UI) added as new story. Sprint goal (filters + apply) still Backlog — OTEP-86/317/319 not started. Thomas has 3 active items — capacity risk. Sprint Planning Thu 11 Jun.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
@@ -31,7 +31,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 > 🎯 **SPRINT 4 & 5 GATES (added 2026-06-04)** — what each sprint needs from *Michelle specifically*. Plan-of-record = [Pow Hwee's Confluence plan](https://sgtechstack.atlassian.net/wiki/spaces/OTEP/pages/2293796526/Planning+draft+for+sprint+3+and+after) (adopted 2026-06-04, native apply→R1). See [S4/S5 reconciliation](../../../PM-OS/outputs/analyses/2026-06-04-adopt-powhwee-plan-reconciliation.md).
 >
-> **Sprint 4 (14–28 Jun) — decisions + reconciliation (mostly groomable if you make the calls):**
+> **Sprint 4 (15–26 Jun) — decisions + reconciliation (mostly groomable if you make the calls):**
 > - [ ] **Lock the Sprint 4 goal** — undecided; grooming needs an outcome (breadth-led vs catch-up). **Before 14:00 today.**
 > - [ ] **Fix OTEP-87 AC conflict in Jira** — FormSG vs C@G deep-link; Pow Hwee flagged ×2. **Before 14:00.**
 > - [ ] **Call OTEP-127 + OTEP-130 in-or-out** — both now on the S4 board but un-contracted (no ringfencing/webhook contract). Flag "13=unknown" or pull.
@@ -42,8 +42,8 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 >
 > - [x] ~~**WOG AD onboarding session — Fabian** (#26)~~ — no longer required (2026-06-09).
 > - [x] ~~**POCDEX planning session — Daryll** (#31)~~ — no longer required (2026-06-09).
-> - [ ] **CSC SSO requirements + ownership — #30** — his plan starts CSC SSO in S5; 6-wk chain, owner TBC. *(see line ~60 feasibility deep-dive)*
-> - [ ] **Competency SSOT — Imelda** (#18) — gates full OTEP-87 / C@G detail competency block. *(see line ~67)*
+> - [ ] **CSC SSO requirements + ownership — #30** — Dependencies Sync rescheduled to Thu 11 Jun; 6-wk chain, owner TBC. *(see line ~60 feasibility deep-dive)*
+> - [ ] **Competency SSOT — Imelda** (#18) — Dependencies Sync rescheduled to Thu 11 Jun; gates full OTEP-87 / C@G detail competency block. *(see line ~67)*
 > - *Also: resolve OTEP-110 error-spec mismatch (#32) before auth grooms clean.*
 
 > 📌 ~~**REVIEW TOMORROW (parked 2026-06-02):** Pow Hwee's **Sprint 3 Proposed Backlog** — review against sprint-status (50 issues, carry-over QA + new scope). Act/comment after reading.~~ **STALE — now Day 6 of Sprint 3. Board is live at 50 issues. Action moot.**
@@ -80,7 +80,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [ ] **CSC SSO technical-feasibility deep-dive** — with Pow Hwee/Fabian; surface why there's an intentional re-login. Feeds open-item #30. Before Sprint 5 (~2 Jul). *(PM Weekly 2026-06-02)*
 - [x] **Create the new "POCDEX Integration" Epic in Jira** and move OTEP-271, 203, 202, 127 under it — ✅ Done 2026-06-02
 - [ ] **Follow up with Daryll/Pow Hwee on raising DQ issue** for OTEP code table in UAT read replica
-- [ ] **Work out next steps for WOG AD onboarding with Fabian and Pow Hwee** — OTEP-350 (Onboard WOG AD, Fabian Peh) now in Sprint 3; coordinate next steps.
+- [x] **Work out next steps for WOG AD onboarding with Fabian and Pow Hwee** — WOG AD form submitted by Pow Hwee 2026-06-10; 2-4 week approval clock now running. (#26)
 - [ ] **Complete Cybersecurity quiz by 2026-12-31** — **DEFER out of June (LNO 2026-06-02): 7 months out, not on the MVP/R1 spine.**
 - [ ] **Map out dependencies in high-level Jira stories → `00-hub/risks.md`** — document cross-story dependency map. **→ DELEGATE to Pow Hwee (LNO 2026-06-02): he asked for it and owns the technical map; Michelle reviews, doesn't author.** *(captured 2026-05-21)*
 - [x] **Ping Adrian — WOG AD onboarding**: Domain is `careercompass.gov.sg`. Two asks: (1) COMET onboarding status — is ESG/OTEP onboarded? (2) Approval to test against WOG AD Prod. ✅ Pinged 2026-05-21. Waiting on response. (#26)
@@ -152,4 +152,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-06-09 — stale-check. Engineering block updated from Day 1 Backlog snapshot (live 2026-06-02) to Day 6 live state (50 issues, 8IP/13QA/6Done/23BL). "REVIEW TOMORROW" note on Pow Hwee's S3 backlog marked stale. Prior: 2026-06-05.*
+*Updated: 2026-06-10 — stale-check (EOD). Dependencies Sync rescheduled Thu 11 Jun; Design Review Tue cancelled.*

@@ -17,8 +17,7 @@
 
 **Sprint 3:** By end of Sprint 3, an officer can find relevant opportunities using filters and successfully initiate an application to any active OTG opportunity (except SJRs), powered by live imported data.
 
-**Sprint 4 (proposed — confirm at grooming):** By end of Sprint 4, an officer sees both OTG and Careers@Gov opportunities in one listing, can tell which is which, and reaches the right way to apply for each — FormSG for OTG, a deep-link out to Careers@Gov.
-> *Breadth-led: C@G is the new capability and is hittable. OTG apply loop = the floor it sits on. Auth ("if WOG AD clean") and FormSG Phase 2 (OTEP-130) stay out of the goal — stretch, not the promise. Fallback goal if OTG apply (319) carries as real work: "OTG discovery-to-apply verified Done + C@G appears in listing with a working apply path."*
+**Sprint 4 (agreed at planning 2026-06-11):** Deliver a complete, usable opportunity listing experience — officers can search, filter, and sort opportunities, understand what each type means, and trust that the data they're seeing is current and accurate.
 
 **Sprint 5 (draft — gates must clear first):** By end of Sprint 5, an officer can log in with their real WOG AD credentials and view full Careers@Gov opportunity details before applying — with the CSC SSO integration scoped and started.
 > *Auth "realistic landing" per the adopted plan. Conditional on 4 gates: WOG AD onboarding (#26), POCDEX (#31), competency SSOT (#18), CSC SSO ownership (#30). If WOG AD slips, S5 auth slips — goal de-scopes to "C@G detail complete + CSC SSO scoped," auth carries to S6.*
@@ -37,19 +36,18 @@
 
 ## Sprint 3 — ACTIVE (started 2 Jun 2026, with carry-overs)
 
-> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-09 (jira-sync). **50 issues** total. 6 Done, 8 In Progress, 13 QA, 23 Backlog.
+> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-10 (jira-sync). **48 issues** total. 18 Done, 11 In Progress, 7 QA, 12 Backlog.
 > **OTEP-Core Sprint 3** (Sprint 34607) also active: **96 issues** — 32 Done, 9 In Progress, 28 QA, 26 Backlog, 1 To Do. (Live 2026-06-08.)
 
-### Carried over from Sprint 2 (finish these first)
+### Sprint 3 live state (2026-06-10 EOD)
 
-**In QA (13)** — closest to done:
-OTEP-128 (detail page), OTEP-170 (base layout), OTEP-268 (empty/error states), OTEP-314 (detail consuming response), OTEP-320 (real DB endpoint), OTEP-324 (token rotation, Thomas), OTEP-325/326 (empty/error UI), OTEP-327 (detail w/ design system), OTEP-332 (shared ref data), OTEP-334 (backend detail endpoint), OTEP-369 (custom login page, Thomas), OTEP-380 (BE filtering params, Léo).
+**Done (18):** OTEP-170, OTEP-193, OTEP-288, OTEP-296, OTEP-303, OTEP-313, OTEP-314, OTEP-320, OTEP-325, OTEP-326, OTEP-327, OTEP-332, OTEP-334, OTEP-362, OTEP-368, OTEP-369, OTEP-380, OTEP-381
 
-**In Progress (8):** OTEP-85 (cards w/ real OTG data, unassigned), OTEP-192 (recurring OTG ingestion job, Léo), OTEP-276 (design-system spike, Pow Hwee), OTEP-322 (Playwright E2E, Rathika), OTEP-362 (BE no closed opps, Thomas), OTEP-368 (session expiry redirect, Thomas), OTEP-381 (FE filtering params, Thomas — moved In Progress 2026-06-09), OTEP-391 (virus scanning spike, Hao Eng — moved In Progress 2026-06-09). Note: Thomas has 3 active items (362, 368, 381) — capacity risk for filters closing this sprint.
+**In QA (7):** OTEP-85 (listing cards), OTEP-86 (filters), OTEP-128 (detail page), OTEP-192 (OTG ingestion, Léo), OTEP-268 (empty/error states), OTEP-305 (login/logout), OTEP-317 (clear filters)
 
-**Backlog carry:** OTEP-129 (open/closed before applying, Thomas) — now **split into OTEP-362 (In Progress) + OTEP-363**.
+**In Progress (11):** OTEP-88 (C@G listing, unassigned), OTEP-276 (design-system spike, Pow Hwee), OTEP-322 (Playwright, Rathika), OTEP-324 (OAuth token rotation, Thomas), OTEP-349 (competency spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-352 (POCDEX code table, Hao Eng), OTEP-361 (ADR forum, Pow Hwee), OTEP-367 (Thomas), OTEP-374 (Léo), OTEP-391 (virus scanning spike, Hao Eng)
 
-**Done (6):** OTEP-193 (data model, Léo), OTEP-288 (backend stub, Léo), OTEP-296 (report format, Michelle), OTEP-303 (POCDEX field check, Pow Hwee — Done 2026-06-09), OTEP-313 (OTG raw ingest, Léo), OTEP-397 (UI for OTG excel file upload — new story added 2026-06-09).
+**Backlog (12):** OTEP-87, OTEP-89, OTEP-129, OTEP-289, OTEP-319, OTEP-348, OTEP-351, OTEP-358, OTEP-363, OTEP-375, OTEP-377, OTEP-378
 
 ### New Sprint 3 scope (Backlog)
 
@@ -100,7 +98,8 @@ OTEP-128 (detail page), OTEP-170 (base layout), OTEP-268 (empty/error states), O
 ---
 
 ## Scope decisions
-- (2026-06-04) **Plan of record = Pow Hwee's "Planning draft for sprint 3 and after"** (Confluence, PSD-OTEP) — adopted as the team's S2–S6 shape. **Amendment:** native apply = R1, not an S4 spike (MVP apply = FormSG redirect, OTEP-319). S4 dates corrected to **14–28 Jun** (Sprint 34618). See decisions-log + [adoption reconciliation](../../PM-OS/outputs/analyses/2026-06-04-adopt-powhwee-plan-reconciliation.md).
+
+- (2026-06-04) **Plan of record = Pow Hwee's "Planning draft for sprint 3 and after"** (Confluence, PSD-OTEP) — adopted as the team's S2–S6 shape. **Amendment:** native apply = R1, not an S4 spike (MVP apply = FormSG redirect, OTEP-319). S4 dates corrected to **15–26 Jun** (Sprint 34618, planning ceremony 14 Jun, engineers start 15 Jun). See decisions-log + [adoption reconciliation](../../PM-OS/outputs/analyses/2026-06-04-adopt-powhwee-plan-reconciliation.md).
 - (2026-05-29) **OTG sync cadence: one-time port only** — no ongoing automated sync. Pilot agencies driven to adopt Compass directly. See D-016. Resolves open question from Sprint 3 Planning.
 - (2026-05-28) **Design lock: Wednesday 3 June** (D-013)
 - (2026-05-28) **OTG competency migration: file ingestion, not live API** (D-010) — Fanxu owns Sprint 3 one-time bulk import
@@ -123,6 +122,4 @@ OTEP-128 (detail page), OTEP-170 (base layout), OTEP-268 (empty/error states), O
 
 ---
 
-*Updated: 2026-06-08 (jira-sync). **Sprint 2 CLOSED; Sprint 3 ACTIVE.***
-
-*Key changes this sync (2026-06-08): Pathfinder +1 issue (OTEP-391 added, Hao Eng, Backlog); total 48→49. Core: OTEP-211/308/366 Done (was QA/In Progress); 28 S2 tickets relocated to S3 folder; 5 stub files created (OTEP-339/365/384/385/389). OTEP-370 flagged — not in Jira (no access/deleted).*
+*Updated: 2026-06-10 (jira-sync EOD). Sprint 3 ACTIVE. 48 issues, 18D/11IP/7QA/12BL. Ticket-level breakdown refreshed from live Jira REST API. 28 field diffs applied to cache.*

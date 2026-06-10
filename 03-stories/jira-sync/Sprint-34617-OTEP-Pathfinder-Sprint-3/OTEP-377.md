@@ -1,7 +1,7 @@
 # OTEP-377: Fetch C@G specific payload in detail API
 
 **Status:** Backlog
-**Assignee:** N/A
+**Assignee:** Léo Milbor
 **Story Points:** N/A
 
 ---
@@ -21,3 +21,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-10*

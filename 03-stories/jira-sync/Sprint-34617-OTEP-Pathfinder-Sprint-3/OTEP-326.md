@@ -1,6 +1,6 @@
 # OTEP-326: Create an error state for opportunity listing
 
-**Status:** QA
+**Status:** Done
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 
@@ -27,3 +27,5 @@ _No subtasks._
 
 **Pow Hwee TAN (PSD)** (2026-05-21)
 I think this page is not about ‘no results’, but some kind of error 500 or 404.  A system error handling page,
+
+*Synced from Jira: 2026-06-10*
