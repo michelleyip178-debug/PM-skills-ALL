@@ -9,7 +9,7 @@
 ## Sprint details
 - **Sprint number:** **Sprint 3 active** (started 2 Jun). **Sprint 2 closed** — unfinished work carried into Sprint 3.
 - **Sprint 2:** closed (Sprint 34616) — 6 stories Done at close.
-- **Sprint 3 dates:** 2–14 Jun 2026 (Pathfinder Sprint 3 / Sprint 34617). 49 issues (carry-overs + new scope).
+- **Sprint 3 dates:** 2–14 Jun 2026 (Pathfinder Sprint 3 / Sprint 34617). 46 issues (carry-overs + new scope).
 - **Note:** Design lock = Wed 3 Jun (passed). Mid-sprint review = Mon 8 Jun.
 
 ## Sprint goal
@@ -36,18 +36,18 @@
 
 ## Sprint 3 — ACTIVE (started 2 Jun 2026, with carry-overs)
 
-> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-10 (jira-sync). **48 issues** total. 18 Done, 11 In Progress, 7 QA, 12 Backlog.
+> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-11 (jira-sync). **46 issues** total. 19 Done, 13 In Progress, 7 QA, 7 Backlog.
 > **OTEP-Core Sprint 3** (Sprint 34607) also active: **96 issues** — 32 Done, 9 In Progress, 28 QA, 26 Backlog, 1 To Do. (Live 2026-06-08.)
 
-### Sprint 3 live state (2026-06-10 EOD)
+### Sprint 3 live state (2026-06-11 EOD)
 
-**Done (18):** OTEP-170, OTEP-193, OTEP-288, OTEP-296, OTEP-303, OTEP-313, OTEP-314, OTEP-320, OTEP-325, OTEP-326, OTEP-327, OTEP-332, OTEP-334, OTEP-362, OTEP-368, OTEP-369, OTEP-380, OTEP-381
+**Done (19):** OTEP-170, OTEP-193, OTEP-288, OTEP-296, OTEP-303, OTEP-313, OTEP-314, OTEP-320, OTEP-325, OTEP-326, OTEP-327, OTEP-332, OTEP-334, OTEP-362, OTEP-368, OTEP-369, OTEP-380, OTEP-381, OTEP-192
 
-**In QA (7):** OTEP-85 (listing cards), OTEP-86 (filters), OTEP-128 (detail page), OTEP-192 (OTG ingestion, Léo), OTEP-268 (empty/error states), OTEP-305 (login/logout), OTEP-317 (clear filters)
+**In QA (7):** OTEP-85 (listing cards), OTEP-86 (filters), OTEP-128 (detail page), OTEP-268 (empty/error states), OTEP-305 (login/logout), OTEP-317 (clear filters), OTEP-391 (virus scanning spike)
 
-**In Progress (11):** OTEP-88 (C@G listing, unassigned), OTEP-276 (design-system spike, Pow Hwee), OTEP-322 (Playwright, Rathika), OTEP-324 (OAuth token rotation, Thomas), OTEP-349 (competency spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-352 (POCDEX code table, Hao Eng), OTEP-361 (ADR forum, Pow Hwee), OTEP-367 (Thomas), OTEP-374 (Léo), OTEP-391 (virus scanning spike, Hao Eng)
+**In Progress (13):** OTEP-88 (C@G listing, unassigned), OTEP-276 (design-system spike, Pow Hwee), OTEP-322 (Playwright, Rathika), OTEP-324 (OAuth token rotation, Thomas), OTEP-349 (competency spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-352 (POCDEX code table, Hao Eng), OTEP-361 (ADR forum, Pow Hwee), OTEP-367 (Thomas), OTEP-374 (Léo), OTEP-358 (nil-date spike, Michelle), OTEP-375, OTEP-363
 
-**Backlog (12):** OTEP-87, OTEP-89, OTEP-129, OTEP-289, OTEP-319, OTEP-348, OTEP-351, OTEP-358, OTEP-363, OTEP-375, OTEP-377, OTEP-378
+**Backlog (7):** OTEP-87, OTEP-89, OTEP-129, OTEP-289, OTEP-319, OTEP-348, OTEP-351
 
 ### New Sprint 3 scope (Backlog)
 
@@ -122,4 +122,4 @@
 
 ---
 
-*Updated: 2026-06-10 (jira-sync EOD). Sprint 3 ACTIVE. 48 issues, 18D/11IP/7QA/12BL. Ticket-level breakdown refreshed from live Jira REST API. 28 field diffs applied to cache.*
+*Updated: 2026-06-11 (jira-sync). Sprint 3 ACTIVE. 46 issues (was 48 — jira-sync corrected). 19 Done, 13 In Progress, 7 QA, 7 Backlog. Sprint 4 goal added (agreed at planning 2026-06-11).*

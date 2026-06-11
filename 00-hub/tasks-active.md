@@ -1,7 +1,7 @@
 # Active Tasks
 
-Current sprint: **Sprint 3 active (2–14 Jun 2026). Sprint 2 closed.**
-Jira sync 2026-06-10 (stale-check): **48 issues — 18 Done, 11 In Progress, 7 QA, 12 Backlog.** OTEP-303 Done. OTEP-381 (FE filtering params, Thomas) + OTEP-391 (virus scanning spike, Hao Eng) now In Progress. OTEP-397 (OTG excel upload UI) added as new story. Sprint goal (filters + apply) still Backlog — OTEP-86/317/319 not started. Thomas has 3 active items — capacity risk. Sprint Planning Thu 11 Jun.
+Current sprint: **Sprint 3 active (2–14 Jun 2026). Sprint 2 closed. Sprint 4 goal agreed 2026-06-11.**
+Jira sync 2026-06-11 (jira-sync): **46 issues — 19 Done, 13 In Progress, 7 QA, 7 Backlog.** OTEP-192 now Done. Sprint goal partially met (filters in QA, apply still Backlog — OTEP-319). Sprint 4 Planning completed Thu 11 Jun.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
@@ -31,12 +31,12 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 > 🎯 **SPRINT 4 & 5 GATES (added 2026-06-04)** — what each sprint needs from *Michelle specifically*. Plan-of-record = [Pow Hwee's Confluence plan](https://sgtechstack.atlassian.net/wiki/spaces/OTEP/pages/2293796526/Planning+draft+for+sprint+3+and+after) (adopted 2026-06-04, native apply→R1). See [S4/S5 reconciliation](../../../PM-OS/outputs/analyses/2026-06-04-adopt-powhwee-plan-reconciliation.md).
 >
-> **Sprint 4 (15–26 Jun) — decisions + reconciliation (mostly groomable if you make the calls):**
-> - [ ] **Lock the Sprint 4 goal** — undecided; grooming needs an outcome (breadth-led vs catch-up). **Before 14:00 today.**
-> - [ ] **Fix OTEP-87 AC conflict in Jira** — FormSG vs C@G deep-link; Pow Hwee flagged ×2. **Before 14:00.**
-> - [ ] **Call OTEP-127 + OTEP-130 in-or-out** — both now on the S4 board but un-contracted (no ringfencing/webhook contract). Flag "13=unknown" or pull.
+> **Sprint 4 (15–26 Jun) — goal agreed at planning 2026-06-11:**
+> - [x] ~~**Lock the Sprint 4 goal**~~ — ✅ Done 2026-06-11. Goal: complete, usable listing experience — search, filter, sort, data currency.
+> - [ ] **Fix OTEP-87 AC conflict in Jira** — FormSG vs C@G deep-link; Pow Hwee flagged ×2. Before S4 starts (Mon 15 Jun).
+> - [ ] **Call OTEP-127 + OTEP-130 in-or-out** — both on S4 board but un-contracted. Flag "unknown" or pull.
 > - [ ] **Reconcile S4 board to plan** — OTEP-71 flipped off again (no sprint, verify); spine (319/86/87/88/89/192) not pulled forward yet.
-> - [ ] Sharpen OTEP-348 (✅ draft ready) · confirm new-dev 70/30 FE split · C@G deep-link UX at design review.
+> - [ ] Sharpen OTEP-348 · confirm new-dev 70/30 FE split · C@G deep-link UX at design review.
 >
 > **Sprint 5 (28 Jun–12 Jul) — unblock 4 external gates (each is a Michelle→someone session; book this week — lead times):**
 >
@@ -152,4 +152,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-06-10 — stale-check (EOD). Dependencies Sync rescheduled Thu 11 Jun; Design Review Tue cancelled.*
+*Updated: 2026-06-11 — jira-sync. S4 goal locked at planning. Sprint header counts corrected to 46. OTEP-192 Done confirmed.*

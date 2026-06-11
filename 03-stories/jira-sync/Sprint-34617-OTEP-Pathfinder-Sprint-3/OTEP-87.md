@@ -4,7 +4,9 @@
 
 **Assignee:** N/A
 
-**Story Points:** N/A
+**Story Points:** BE = 3 · FE = 3
+
+**Sprint:** OTEP-Pathfinder Sprint 4
 
 ---
 
@@ -34,12 +36,13 @@ User story: As an officer, I want to view the full details of a Careers@Gov oppo
 
 - When the officer navigates back to the listing using the in-page "back" link (not the browser back button), their filter and pagination state is exactly as they left it.
 
-#### Out of Scope
+#### Out of Scope (S4)
 
-- Competency match section — deferred pending open item #18 (officer competency data model, Imelda's squad)
+- Competency match section — deferred until Imelda's squad confirms schema + field mapping (open item #18). Do not build a placeholder or empty section.
 - Proficiency-level matching
 - Personalisation of any kind
 - SJR apply handling (no C@G SJR flow in MVP)
+- Responsibilities and pre-requisites inline — replaced by Amber's "Apply via C@G to find out more" message (already in AC above)
 
 #### Dependencies
 
@@ -49,13 +52,14 @@ User story: As an officer, I want to view the full details of a Careers@Gov oppo
 - OTEP-89 — Deep-link CTA behaviour
 
 *AC updated 2026-06-10: responsibilities and pre-requisites not shown inline; Amber's "Apply via C@G" message covers that section. D 2026-06-10 (Michelle + Thomas).*
+*AC updated 2026-06-11: competency block explicitly cut from S4 scope (no placeholder); story points set (BE 3, FE 3); sprint assigned to S4. D 2026-06-11 (Michelle).*
 
 ---
 
 ## Subtasks
 
 | Key | Summary | Status |
-|-----|---------|--------|
+| --- | ------- | ------ |
 | OTEP-377 | Fetch C@G specific payload in detail API | Backlog |
 | OTEP-378 | Map C@G payload to Detail Page UI | Backlog |
 | OTEP-379 | Automated tests for C@G detail rendering | Backlog |

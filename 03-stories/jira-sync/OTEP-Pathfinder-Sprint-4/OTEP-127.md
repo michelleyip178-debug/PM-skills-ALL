@@ -4,7 +4,7 @@
 
 **Status:** Backlog
 
-**Assignee:** N/A
+**Assignee:** Michelle Yip
 
 **Story Points:** 3
 
@@ -39,4 +39,4 @@
 - Implementation — spike output only
 - Competency matching (separate concern, R1)
 
-*Synced from Jira: 2026-06-10*
+*Synced from Jira: 2026-06-11*

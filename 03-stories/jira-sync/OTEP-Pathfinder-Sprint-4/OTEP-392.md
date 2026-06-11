@@ -6,7 +6,7 @@
 
 **Assignee:** N/A
 
-**Story Points:** N/A
+**Story Points:** 2
 
 **Sprint:** OTEP-Pathfinder Sprint 4
 
@@ -45,4 +45,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-06-10*
+*Synced from Jira: 2026-06-11*

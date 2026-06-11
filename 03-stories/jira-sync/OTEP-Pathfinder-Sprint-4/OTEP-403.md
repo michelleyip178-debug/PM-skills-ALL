@@ -6,7 +6,7 @@
 
 **Assignee:** Léo Milbor
 
-**Story Points:** N/A
+**Story Points:** 5
 
 **Sprint:** OTEP-Pathfinder Sprint 4
 
@@ -60,4 +60,4 @@ _No subtasks._
 **Léo Milbor** (2026-06-10)
 I added this story to highlight current limitations and possible solutions.
 
-*Synced from Jira: 2026-06-10*
+*Synced from Jira: 2026-06-11*

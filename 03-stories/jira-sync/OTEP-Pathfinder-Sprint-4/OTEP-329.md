@@ -6,7 +6,7 @@
 
 **Assignee:** Pow Hwee TAN (PSD)
 
-**Story Points:** N/A
+**Story Points:** 1
 
 ---
 
@@ -33,6 +33,6 @@ _No comments._
 
 ---
 
-*Synced from Jira: 2026-06-04*
+*Synced from Jira: 2026-06-11*
 
-*Synced from Jira: 2026-06-10*
+*Synced from Jira: 2026-06-11*

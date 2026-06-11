@@ -6,7 +6,7 @@
 
 **Assignee:** N/A
 
-**Story Points:** N/A
+**Story Points:** 1
 
 ---
 
@@ -52,4 +52,4 @@ _No comments._
 
 *Synced from Jira: 2026-06-04 — relocated from Backlog (added to Sprint 4 / Sprint 34618 in Jira).*
 
-*Synced from Jira: 2026-06-10*
+*Synced from Jira: 2026-06-11*
