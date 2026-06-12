@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OTEP-Pathfinder Sprint 3 — Sprint Dashboard</title>
+<style>
+  :root{--bg:#0f172a;--card:#1e293b;--mut:#94a3b8;--fg:#e2e8f0;--line:#334155;}
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:var(--bg);color:var(--fg);padding:24px;max-width:1100px;margin:0 auto}
+  h1{font-size:22px;margin:0 0 2px}
+  .sub{color:var(--mut);font-size:13px}
+  .goal{color:#fbbf24;margin:8px 0 0;font-size:14px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:20px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .card h2{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mut);margin:0 0 10px}
+  .big{font-size:30px;font-weight:700}
+  .big small{font-size:14px;color:var(--mut);font-weight:400}
+  .progbar{height:22px;border-radius:6px;overflow:hidden;display:flex;background:#0b1220}
+  .seg{display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;min-width:2px}
+  .legend{display:flex;flex-wrap:wrap;gap:10px 16px;margin-top:12px;font-size:12px;color:var(--mut)}
+  .lg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
+  .track{background:#0b1220;border-radius:5px;height:16px;overflow:hidden}
+  .fill{background:#3b82f6;height:100%;border-radius:5px;position:relative}
+  .filldone{background:#22c55e;height:100%;position:absolute;left:0;top:0;border-radius:5px}
+  table{width:100%;border-collapse:collapse}
+  .atbl td{padding:6px 8px;vertical-align:middle}
+  .atbl .nm{width:160px;color:var(--fg)}
+  .atbl .bar{width:auto}
+  .atbl .num{text-align:right;width:50px;color:var(--mut);font-variant-numeric:tabular-nums}
+  .atbl thead th{font-size:11px;text-transform:uppercase;color:var(--mut);text-align:right;padding:4px 8px}
+  .atbl thead th:first-child,.atbl thead th:nth-child(2){text-align:left}
+  .chip{display:inline-block;background:#0b1220;border:1px solid var(--line);border-radius:999px;
+    padding:4px 12px;margin:0 6px 6px 0;font-size:13px}
+  .chip b{color:#60a5fa}
+  .tbl{font-size:13px;margin-top:6px}
+  .tbl th{text-align:left;font-size:11px;text-transform:uppercase;color:var(--mut);
+    border-bottom:1px solid var(--line);padding:6px 8px}
+  .tbl td{padding:6px 8px;border-bottom:1px solid #243044}
+  .k{font-family:ui-monospace,monospace;color:#60a5fa;white-space:nowrap}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
+  .ok{color:#22c55e}
+  section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;margin:16px 0}
+  section h2{font-size:14px;margin:0 0 14px}
+  .filters{margin-bottom:10px}
+  .filters button{background:#0b1220;color:var(--fg);border:1px solid var(--line);
+    border-radius:6px;padding:5px 12px;margin-right:6px;cursor:pointer;font-size:12px}
+  .filters button.on{background:#3b82f6;border-color:#3b82f6}
+  canvas{display:block;width:100%;border-radius:6px}
+  .chart-wrap{position:relative;height:220px}
+  .chart-legend{display:flex;gap:16px;margin-top:10px;font-size:12px;color:var(--mut)}
+  .chart-legend span{display:flex;align-items:center;gap:6px}
+  .chart-legend i{display:inline-block;width:24px;height:3px;border-radius:2px}
+  .foot{color:var(--mut);font-size:12px;margin-top:24px;text-align:center}
+</style></head><body>
+
+<header>
+  <h1>OTEP-Pathfinder Sprint 3</h1>
+  <div class="sub">2026-06-02 → 2026-06-14 · Day 10/12 · 46 issues</div>
+  <p class="goal">🎯 By end of Sprint 3, an officer can find relevant opportunities using filters and successfully initiate an application to any active OTG opportunity (except SJRs), powered by live imported data.</p>
+</header>
+
+<div class="grid">
+  <div class="card"><h2>Issues Done</h2>
+    <div class="big">50%<small> · 23/46</small></div></div>
+  <div class="card"><h2>Pace</h2><div class="big" style="color:#ef4444">behind<small> · -33pt vs time</small></div></div>
+  <div class="card"><h2>In Progress</h2>
+    <div class="big">19<small> issues</small></div></div>
+  <div class="card"><h2>Time Elapsed</h2>
+    <div class="big">83%<small> of sprint</small></div></div>
+</div>
+
+<section>
+  <h2>Burndown</h2>
+  <div class="chart-wrap"><canvas id="burndown-canvas"></canvas></div>
+  <div class="chart-legend">
+    <span><i style="background:#22c55e"></i>Done</span>
+    <span><i style="background:#3b82f6"></i>Remaining</span>
+    <span><i style="background:#475569;opacity:.7"></i>Ideal</span>
+  </div>
+</section>
+
+<section>
+  <h2>Status Breakdown</h2>
+  <div class="progbar"><div class="seg" style="width:21.7%;background:#3b82f6" title="In Progress: 10">10</div><div class="seg" style="width:19.6%;background:#3b82f6" title="QA: 9">9</div><div class="seg" style="width:50.0%;background:#22c55e" title="Done: 23">23</div><div class="seg" style="width:8.7%;background:#94a3b8" title="Backlog: 4">4</div></div>
+  <div class="legend"><span class="lg"><i style="background:#3b82f6"></i>In Progress (10)</span><span class="lg"><i style="background:#3b82f6"></i>QA (9)</span><span class="lg"><i style="background:#22c55e"></i>Done (23)</span><span class="lg"><i style="background:#94a3b8"></i>Backlog (4)</span></div>
+</section>
+
+<section>
+  <h2>Workload by Assignee <span class="sub" style="font-size:12px">(blue = total · green = done)</span></h2>
+  <table class="atbl"><thead><tr>
+    <th>Assignee</th><th></th><th>Issues</th><th>Done</th>
+  </tr></thead><tbody><tr><td class="nm">Thomas Huchedé</td><td class="bar"><div class="track"><div class="fill" style="width:100%"><div class="filldone" style="width:61%"></div></div></div></td><td class="num">18</td><td class="num">11</td></tr><tr><td class="nm">Léo Milbor</td><td class="bar"><div class="track"><div class="fill" style="width:50%"><div class="filldone" style="width:78%"></div></div></div></td><td class="num">9</td><td class="num">7</td></tr><tr><td class="nm">Unassigned</td><td class="bar"><div class="track"><div class="fill" style="width:39%"><div class="filldone" style="width:14%"></div></div></div></td><td class="num">7</td><td class="num">1</td></tr><tr><td class="nm">Pow Hwee TAN (PSD)</td><td class="bar"><div class="track"><div class="fill" style="width:28%"><div class="filldone" style="width:40%"></div></div></div></td><td class="num">5</td><td class="num">2</td></tr><tr><td class="nm">Hao Eng</td><td class="bar"><div class="track"><div class="fill" style="width:17%"><div class="filldone" style="width:33%"></div></div></div></td><td class="num">3</td><td class="num">1</td></tr><tr><td class="nm">Michelle Yip</td><td class="bar"><div class="track"><div class="fill" style="width:11%"><div class="filldone" style="width:50%"></div></div></div></td><td class="num">2</td><td class="num">1</td></tr><tr><td class="nm">Rathika Ramalingam</td><td class="bar"><div class="track"><div class="fill" style="width:6%"><div class="filldone" style="width:0%"></div></div></div></td><td class="num">1</td><td class="num">0</td></tr><tr><td class="nm">Fabian PEH</td><td class="bar"><div class="track"><div class="fill" style="width:6%"><div class="filldone" style="width:0%"></div></div></div></td><td class="num">1</td><td class="num">0</td></tr></tbody></table>
+</section>
+
+<section><h2>Issue Types</h2><span class="chip">Sub-task <b>20</b></span><span class="chip">Story <b>16</b></span><span class="chip">Task <b>10</b></span></section>
+
+<section><h2>Blockers &amp; High Priority (0)</h2><p class="ok">No flagged blockers. 🎉</p></section>
+
+<section>
+  <h2>All Issues</h2>
+  <div class="filters">
+    <button class="on" data-f="all">All (46)</button>
+    <button data-f="inprogress">In Progress (19)</button>
+    <button data-f="todo">To Do (4)</button>
+    <button data-f="done">Done (23)</button>
+  </div>
+  <table class="tbl"><thead><tr>
+    <th>Key</th><th>Status</th><th>Type</th><th>Assignee</th><th>Summary</th>
+  </tr></thead><tbody id="issues"><tr data-b="inprogress"><td class="k">OTEP-128</td><td><span class="dot" style="background:#3b82f6"></span>QA</td><td>Story</td><td>Unassigned</td><td>View opportunity detail page</td></tr><tr data-b="inprogress"><td class="k">OTEP-192</td><td><span class="dot" style="background:#3b82f6"></span>QA</td><td>Story</td><td>Léo Milbor</td><td>OTG data ingestion</td></tr><tr data-b="inprogress"><td class="k">OTEP-268</td><td><span class="dot" style="background:#3b82f6"></span>QA</td><td>Story</td><td>Unassigned</td><td>Empty, error, and partial-load states for the listing</td></tr><tr data-b="inprogress"><td class="k">OTEP-276</td><td><span class="dot" style="background:#3b82f6"></span>In Progress</td><td>Task</td><td>Pow Hwee TAN (PSD)</td><td>[Spike] Investigate custom design system reimplementation</td></tr><tr data-b="inprogress"><td class="k">OTEP-305</td><td><span class="dot" style="background:#3b82f6"></span>QA</td><td>Story</td><td>Unassigned</td><td>Login and Logout (replace keycloak page with actual)</td></tr><tr data-b="inprogress"><td class="k">OTEP-317</td><td><span class="dot" style="background:#3b82f6"></span>QA</td><td>Story</td><td>Thomas Huchedé</td><td>Clear filters and reset view</td></tr><tr data-b="inprogress"><td class="k">OTEP-319</td><td><span class="dot" style="background:#3b82f6"></span>QA</td><td>Story</td><td>Thomas Huchedé</td><td>Apply via FormSG — basic redirect (Internal Jobs, STIPs, Gigs)</td></tr><tr data-b="inprogress"><td class="k">OTEP-322</td><td><span class="dot" style="background:#3b82f6"></span>In Progress</td><td>Task</td><td>Rathika Ramalingam</td><td>test: setup Playwright E2E Testing Framework</td></tr><tr data-b="inprogress"><td class="k">OTEP-324</td><td><span class="dot" style="background:#3b82f6"></span>In Progress</td><td>Task</td><td>Thomas Huchedé</td><td>Implement OAuth 2.0 Refresh Token Rotation in NextAuth and Keycloak</td></tr><tr data-b="inprogress"><td class="k">OTEP-349</td><td><span class="dot" style="background:#3b82f6"></span>In Progress</td><td>Story</td><td>Pow Hwee TAN (PSD)</td><td>spike: competency matching integration with OTEP-Core squad</td></tr><tr data-b="inprogress"><td class="k">OTEP-350</td><td><span class="dot" style="background:#3b82f6"></span>In Progress</td><td>Task</td><td>Fabian PEH</td><td>Onboard WOG AD</td></tr><tr data-b="inprogress"><td class="k">OTEP-351</td><td><span class="dot" style="background:#3b82f6"></span>In Progress</td><td>Story</td><td>Léo Milbor</td><td>spike: Azure AD mock solution for testing (no WOG AD test env)</td></tr><tr data-b="inprogress"><td class="k">OTEP-352</td><td><span class="dot" style="background:#3b82f6"></span>In Progress</td><td>Task</td><td>Hao Eng</td><td>chore: load POCDEX production code table</td></tr><tr data-b="inprogress"><td class="k">OTEP-361</td><td><span class="dot" style="background:#3b82f6"></span>In Progress</td><td>Task</td><td>Pow Hwee TAN (PSD)</td><td>chore: conduct ADR review forum with all squads</td></tr><tr data-b="inprogress"><td class="k">OTEP-363</td><td><span class="dot" style="background:#3b82f6"></span>In Progress</td><td>Sub-task</td><td>Thomas Huchedé</td><td>Create UI component to display closed opportunity</td></tr><tr data-b="inprogress"><td class="k">OTEP-438</td><td><span class="dot" style="background:#3b82f6"></span>In Progress</td><td>Task</td><td>Hao Eng</td><td>Placeholder UI for admin view</td></tr><tr data-b="inprogress"><td class="k">OTEP-85</td><td><span class="dot" style="background:#3b82f6"></span>QA</td><td>Story</td><td>Unassigned</td><td>Display opportunity cards with real OTG data</td></tr><tr data-b="inprogress"><td class="k">OTEP-86</td><td><span class="dot" style="background:#3b82f6"></span>QA</td><td>Story</td><td>Unassigned</td><td>Filter Opportunities by type (Internal Jobs, STIPs, Gigs)</td></tr><tr data-b="inprogress"><td class="k">OTEP-89</td><td><span class="dot" style="background:#3b82f6"></span>QA</td><td>Story</td><td>Thomas Huchedé</td><td>View Careers@Gov Job (Deep-Link)</td></tr><tr data-b="todo"><td class="k">OTEP-129</td><td><span class="dot" style="background:#94a3b8"></span>Backlog</td><td>Story</td><td>Thomas Huchedé</td><td>See whether an opportunity is open or closed before applying.</td></tr><tr data-b="todo"><td class="k">OTEP-289</td><td><span class="dot" style="background:#94a3b8"></span>Backlog</td><td>Task</td><td>Thomas Huchedé</td><td>[Spike] Filter Opportunities by Functions - C@G and OTG Opportunity Type tagging by Functions </td></tr><tr data-b="todo"><td class="k">OTEP-348</td><td><span class="dot" style="background:#94a3b8"></span>Backlog</td><td>Story</td><td>Unassigned</td><td>OTG data ingestion — scheduler &amp; observability</td></tr><tr data-b="todo"><td class="k">OTEP-358</td><td><span class="dot" style="background:#94a3b8"></span>Backlog</td><td>Story</td><td>Michelle Yip</td><td>[Spike] Robust nil-date handling for OTG Excel import</td></tr><tr data-b="done"><td class="k">OTEP-170</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Thomas Huchedé</td><td>Base Layout for Opportunity Listing Page</td></tr><tr data-b="done"><td class="k">OTEP-193</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Léo Milbor</td><td>Design Data Model for Opportunities</td></tr><tr data-b="done"><td class="k">OTEP-288</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Léo Milbor</td><td>Setup a simple backend endpoint with in-memory list</td></tr><tr data-b="done"><td class="k">OTEP-296</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Michelle Yip</td><td>Prepare defined report format that matches data model</td></tr><tr data-b="done"><td class="k">OTEP-303</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Task</td><td>Pow Hwee TAN (PSD)</td><td>chore: Pocdex Field check</td></tr><tr data-b="done"><td class="k">OTEP-313</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Léo Milbor</td><td>OTG raw ingest table and source model</td></tr><tr data-b="done"><td class="k">OTEP-314</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Thomas Huchedé</td><td>Opportunity detail page consuming OTEP-295 response shape</td></tr><tr data-b="done"><td class="k">OTEP-320</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Léo Milbor</td><td>Replace mock /opportunities endpoint with real db access</td></tr><tr data-b="done"><td class="k">OTEP-325</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Thomas Huchedé</td><td>Create an empty state for opportunity listing</td></tr><tr data-b="done"><td class="k">OTEP-326</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Thomas Huchedé</td><td>Create an error state for opportunity listing</td></tr><tr data-b="done"><td class="k">OTEP-327</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Thomas Huchedé</td><td>Opportunity detail page using design system </td></tr><tr data-b="done"><td class="k">OTEP-332</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Story</td><td>Pow Hwee TAN (PSD)</td><td>feat: implement shared reference data repository for cross-domain table lookups</td></tr><tr data-b="done"><td class="k">OTEP-334</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Léo Milbor</td><td>backend endpoint for opportunity detail</td></tr><tr data-b="done"><td class="k">OTEP-362</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Thomas Huchedé</td><td>Update backend to not return closed opportunities</td></tr><tr data-b="done"><td class="k">OTEP-367</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Thomas Huchedé</td><td>Update UI for competencies of opened opportunities</td></tr><tr data-b="done"><td class="k">OTEP-368</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Thomas Huchedé</td><td>Automatic redirection to login page when session expires</td></tr><tr data-b="done"><td class="k">OTEP-369</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Thomas Huchedé</td><td>Custom login page </td></tr><tr data-b="done"><td class="k">OTEP-374</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Léo Milbor</td><td>Expose source and agency fields in listing API</td></tr><tr data-b="done"><td class="k">OTEP-375</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Thomas Huchedé</td><td>Add Careers@Gov badge/metadata to OpportunityCard</td></tr><tr data-b="done"><td class="k">OTEP-380</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Léo Milbor</td><td>[BE] Handle filtering params</td></tr><tr data-b="done"><td class="k">OTEP-381</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Sub-task</td><td>Thomas Huchedé</td><td>[FE] Handle filtering params</td></tr><tr data-b="done"><td class="k">OTEP-391</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Task</td><td>Hao Eng</td><td>Spike: Virus scanning capability on AWS GuardDuty vs CFT</td></tr><tr data-b="done"><td class="k">OTEP-88</td><td><span class="dot" style="background:#22c55e"></span>Done</td><td>Story</td><td>Unassigned</td><td>C@G opportunities in the listing page</td></tr></tbody></table>
+</section>
+
+<div class="foot">Generated 2026-06-12 14:59 · live from Jira · 1 burndown snapshot(s)</div>
+
+<script>
+const HISTORY = [{"date": "2026-06-12", "done": 23, "remaining": 23, "total": 46}];
+const SPRINT_START = "2026-06-02";
+const SPRINT_END = "2026-06-14";
+const TOTAL_DAYS = 12;
+
+// Filter buttons
+document.querySelectorAll('.filters button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.filters button').forEach(x => x.classList.remove('on'));
+  b.classList.add('on');
+  const f = b.dataset.f;
+  document.querySelectorAll('#issues tr').forEach(tr => {
+    tr.style.display = (f === 'all' || tr.dataset.b === f) ? '' : 'none';
+  });
+});
+
+// Burndown chart (vanilla canvas — no CDN needed)
+(function() {
+  const canvas = document.getElementById('burndown-canvas');
+  if (!canvas || !HISTORY.length) return;
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const wrap = canvas.parentElement;
+  const W = wrap.clientWidth || 800;
+  const H = 220;
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  canvas.style.width = W + 'px';
+  canvas.style.height = H + 'px';
+  ctx.scale(dpr, dpr);
+
+  const PAD = {top: 16, right: 16, bottom: 36, left: 44};
+  const cw = W - PAD.left - PAD.right;
+  const ch = H - PAD.top - PAD.bottom;
+
+  // Data range
+  const maxIssues = Math.max(...HISTORY.map(d => d.total), 1);
+  const allDates = HISTORY.map(d => d.date);
+
+  // Build full date axis from sprint start → end
+  function addDays(dateStr, n) {
+    const d = new Date(dateStr);
+    d.setDate(d.getDate() + n);
+    return d.toISOString().slice(0, 10);
+  }
+  const axis = [];
+  for (let i = 0; i <= TOTAL_DAYS; i++) axis.push(addDays(SPRINT_START, i));
+
+  function xOf(dateStr) {
+    const idx = axis.indexOf(dateStr);
+    if (idx < 0) return null;
+    return PAD.left + (idx / (axis.length - 1)) * cw;
+  }
+  function yOf(val) {
+    return PAD.top + ch - (val / maxIssues) * ch;
+  }
+
+  // Grid
+  ctx.strokeStyle = '#1e3050';
+  ctx.lineWidth = 1;
+  const yTicks = 5;
+  for (let i = 0; i <= yTicks; i++) {
+    const v = Math.round((maxIssues / yTicks) * i);
+    const y = yOf(v);
+    ctx.beginPath(); ctx.moveTo(PAD.left, y); ctx.lineTo(PAD.left + cw, y); ctx.stroke();
+    ctx.fillStyle = '#64748b';
+    ctx.font = '11px system-ui';
+    ctx.textAlign = 'right';
+    ctx.fillText(v, PAD.left - 6, y + 4);
+  }
+
+  // X axis date labels (show every 2nd day or so)
+  ctx.fillStyle = '#64748b';
+  ctx.font = '10px system-ui';
+  ctx.textAlign = 'center';
+  const step = Math.max(1, Math.ceil(axis.length / 8));
+  axis.forEach((d, i) => {
+    if (i % step !== 0 && i !== axis.length - 1) return;
+    const x = PAD.left + (i / (axis.length - 1)) * cw;
+    ctx.fillText(d.slice(5), x, H - 8);  // MM-DD
+  });
+
+  // Ideal burndown line (total → 0, start → end)
+  const idealTotal = HISTORY[0]?.total || maxIssues;
+  ctx.setLineDash([6, 4]);
+  ctx.strokeStyle = '#475569';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(PAD.left, yOf(idealTotal));
+  ctx.lineTo(PAD.left + cw, yOf(0));
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Done line (green)
+  ctx.strokeStyle = '#22c55e';
+  ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  let first = true;
+  HISTORY.forEach(d => {
+    const x = xOf(d.date);
+    if (x === null) return;
+    const y = yOf(d.done);
+    if (first) { ctx.moveTo(x, y); first = false; } else ctx.lineTo(x, y);
+  });
+  ctx.stroke();
+
+  // Remaining line (blue)
+  ctx.strokeStyle = '#3b82f6';
+  ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  first = true;
+  HISTORY.forEach(d => {
+    const x = xOf(d.date);
+    if (x === null) return;
+    const y = yOf(d.remaining);
+    if (first) { ctx.moveTo(x, y); first = false; } else ctx.lineTo(x, y);
+  });
+  ctx.stroke();
+
+  // Dots
+  HISTORY.forEach(d => {
+    const x = xOf(d.date);
+    if (x === null) return;
+    [[d.done, '#22c55e'], [d.remaining, '#3b82f6']].forEach(([v, c]) => {
+      ctx.beginPath();
+      ctx.arc(x, yOf(v), 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = c;
+      ctx.fill();
+    });
+  });
+})();
+</script>
+</body></html>
