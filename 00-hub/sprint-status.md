@@ -7,10 +7,10 @@
 ---
 
 ## Sprint details
-- **Sprint number:** **Sprint 3 active** (started 2 Jun). **Sprint 2 closed** — unfinished work carried into Sprint 3.
+- **Sprint number:** **Sprint 3 closed (12 Jun). Sprint 4 active from Mon 15 Jun.**
 - **Sprint 2:** closed (Sprint 34616) — 6 stories Done at close.
-- **Sprint 3 dates:** 2–14 Jun 2026 (Pathfinder Sprint 3 / Sprint 34617). 46 issues (carry-overs + new scope).
-- **Note:** Design lock = Wed 3 Jun (passed). Mid-sprint review = Mon 8 Jun.
+- **Sprint 3 dates:** 2–14 Jun 2026 (Pathfinder Sprint 3 / Sprint 34617). Final state: 23 Done, 9 in QA at close (carry-in to S4), 4 Backlog carry-in.
+- **Sprint 4 dates:** 15–28 Jun 2026. Goal: complete, usable listing experience — search, filter, sort, data currency.
 
 ## Sprint goal
 **Sprint 2:** By end of Sprint 2, an officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
@@ -34,10 +34,10 @@
 
 ---
 
-## Sprint 3 — ACTIVE (started 2 Jun 2026, with carry-overs)
+## Sprint 3 — CLOSED (ended 12 Jun 2026)
 
-> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = active**. Live pull 2026-06-11 (jira-sync). **46 issues** total. 19 Done, 13 In Progress, 7 QA, 7 Backlog.
-> **OTEP-Core Sprint 3** (Sprint 34607) also active: **96 issues** — 32 Done, 9 In Progress, 28 QA, 26 Backlog, 1 To Do. (Live 2026-06-08.)
+> Source: OTEP-Pathfinder Sprint 3 (Sprint 34617), **state = closed 12 Jun**. Final live pull 2026-06-12. **46 issues** total. ~23 Done, 9 QA carry-in to S4 (85/86/89/128/192/268/305/317/319), 4 Backlog carry-in.
+> **OTEP-Core Sprint 3** (Sprint 34607): closed. (Live 2026-06-08.)
 
 ### Sprint 3 live state (2026-06-11 EOD)
 
@@ -122,4 +122,4 @@
 
 ---
 
-*Updated: 2026-06-11 (jira-sync). Sprint 3 ACTIVE. 46 issues (was 48 — jira-sync corrected). 19 Done, 13 In Progress, 7 QA, 7 Backlog. Sprint 4 goal added (agreed at planning 2026-06-11).*
+*Updated: 2026-06-12 (stale-check). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE from 15 Jun. S4 goal: complete, usable listing experience — search, filter, sort, data currency.*

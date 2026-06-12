@@ -1,7 +1,7 @@
 # Active Tasks
 
-Current sprint: **Sprint 3 active (2–14 Jun 2026). Sprint 2 closed. Sprint 4 goal agreed 2026-06-11.**
-Jira sync 2026-06-11 (jira-sync): **46 issues — 19 Done, 13 In Progress, 7 QA, 7 Backlog.** OTEP-192 now Done. Sprint goal partially met (filters in QA, apply still Backlog — OTEP-319). Sprint 4 Planning completed Thu 11 Jun.
+Current sprint: **Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE from Mon 15 Jun.**
+Sprint 3 final state (2026-06-12): ~23 Done, 9 in QA carry-in (85/86/89/128/192/268/305/317/319), 4 Backlog carry-in. Sprint goal near-met (filters + apply + deep-link all reached QA). Sprint 4 goal: complete, usable listing experience — search, filter, sort, data currency.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
@@ -9,7 +9,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 3 W2 (8–14 Jun) — close QA tail, unblock sprint goal (OTEP-319 apply + OTEP-86 filters), prep S4 planning Thu 11 Jun. Three P0 bookings still open: Fabian (WOG AD #26), Daryll (POCDEX #31), S4 C@G grooming. July SteerCo deliverables (transition plan, North Star brief, gap analysis) now active. *(Updated 2026-06-05)*
+**Theme:** Sprint 4 W1 (15–28 Jun) — reconcile S4 board, OTG ingestion unblocks (v3 ACs, 5-cat mapping to Xian Zhang), Rama interview on upload module scope. July SteerCo deliverables (transition plan, North Star brief, gap analysis) still have zero momentum — must start this sprint. *(Updated 2026-06-12)*
 
 ---
 
