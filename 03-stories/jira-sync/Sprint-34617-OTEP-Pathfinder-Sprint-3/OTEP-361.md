@@ -1,4 +1,4 @@
-# OTEP-361: Conduct ADR review forum with all squads
+# OTEP-361: chore: conduct ADR review forum with all squads
 
 **Status:** In Progress
 **Assignee:** Pow Hwee TAN (PSD)
@@ -21,5 +21,3 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
-
-*Synced from Jira: 2026-06-10*

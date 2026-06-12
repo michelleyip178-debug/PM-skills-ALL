@@ -1,7 +1,7 @@
 # OTEP-317: Clear filters and reset view
 
 **Status:** QA
-**Assignee:** N/A
+**Assignee:** Thomas Huchedé
 **Story Points:** N/A
 
 ---
@@ -20,6 +20,10 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**Thomas Huchedé** (2026-06-11)
+on Figma the label of the button is just  Clear  and not  Clear all . Should we amend the story?
 
-*Synced from Jira: 2026-06-10*
+---
+
+**Thomas Huchedé** (2026-06-10)
+Already done in OTEP-86

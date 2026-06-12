@@ -1,4 +1,4 @@
-# OTEP-332: Implement shared reference data repository for cross-domain table lookups
+# OTEP-332: feat: implement shared reference data repository for cross-domain table lookups
 
 **Status:** Done
 **Assignee:** Pow Hwee TAN (PSD)
@@ -20,6 +20,10 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**Pow Hwee TAN (PSD)** (2026-06-10)
+This issue was already completed and merged into main. See merge commit: ffaa60d Merge branch 'feat/OTEP-332-shared-refdata-repository' into 'main'.
 
-*Synced from Jira: 2026-06-10*
+---
+
+**Rathika Ramalingam** (2026-06-10)
+Testing in LOCAL:

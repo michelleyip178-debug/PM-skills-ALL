@@ -16,8 +16,8 @@ As an officer, I want to see clear guidance when there are no opportunities or w
 
 | Key | Summary | Status |
 |-----|---------|--------|
-| OTEP-326 | Create an error state for opportunity listing | QA |
-| OTEP-325 | Create an empty state for opportunity listing | QA |
+| OTEP-326 | Create an error state for opportunity listing | Done |
+| OTEP-325 | Create an empty state for opportunity listing | Done |
 
 ---
 

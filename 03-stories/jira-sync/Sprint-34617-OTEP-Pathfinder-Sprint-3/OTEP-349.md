@@ -1,4 +1,4 @@
-# OTEP-349: [Spike] Competency matching integration with OTEP-Core squad
+# OTEP-349: spike: competency matching integration with OTEP-Core squad
 
 **Status:** In Progress
 **Assignee:** Pow Hwee TAN (PSD)
@@ -21,5 +21,3 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
-
-*Synced from Jira: 2026-06-10*

@@ -20,8 +20,8 @@ User Story As an  officer,  I want to  see open opportunities displayed as cards
 | OTEP-288 | Setup a simple backend endpoint with in-memory list | Done |
 | OTEP-296 | Prepare defined report format that matches data model | Done |
 | OTEP-313 | OTG raw ingest table and source model | Done |
-| OTEP-320 | Replace mock /opportunities endpoint with real db access | QA |
-| OTEP-170 | Base Layout for Opportunity Listing Page | QA |
+| OTEP-320 | Replace mock /opportunities endpoint with real db access | Done |
+| OTEP-170 | Base Layout for Opportunity Listing Page | Done |
 
 ---
 
@@ -39,5 +39,3 @@ Have removed >= 7 days and will put into the closing soon label ticket. have rem
 
 **Pow Hwee TAN (PSD)** (2026-05-18)
 Clarification needed on the visibility rule: The AC currently says "Closing Date >= 7 days" and also "strictly in the future." These are different rules: "Strictly in the future" = show everything that hasn’t closed yet. ">= 7 days" = hide listings that close within the next week. I suspect the 7-day rule is meant for the "Closing soon" label in OTEP-129, not the visibility filter here. Can you confirm? Also, the AC "silently drop and log any card missing mandatory data" — suggest reframing as: "The system must exclude any opportunity with incomplete mandatory data (ID, Title, Agency, Type, Posting Date, or Closing Date) from the listing and log the exclusion for investigation." In our contract-first approach, the API guarantees complete data, so data completeness belongs in the API contract, not the frontend story.
-
-*Synced from Jira: 2026-06-10*

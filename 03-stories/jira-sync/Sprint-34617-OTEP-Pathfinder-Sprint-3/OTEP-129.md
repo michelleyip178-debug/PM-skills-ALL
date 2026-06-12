@@ -16,9 +16,9 @@ User Story As an officer, I want to know whether an opportunity is still accepti
 
 | Key | Summary | Status |
 |-----|---------|--------|
-| OTEP-362 | Update backend to not return closed opportunities | In Progress |
-| OTEP-363 | Create UI component to display closed opportunity | Backlog |
-| OTEP-367 | Update UI for competencies of opened opportunities | Backlog |
+| OTEP-362 | Update backend to not return closed opportunities | Done |
+| OTEP-367 | Update UI for competencies of opened opportunities | Done |
+| OTEP-363 | Create UI component to display closed opportunity | In Progress |
 
 ---
 

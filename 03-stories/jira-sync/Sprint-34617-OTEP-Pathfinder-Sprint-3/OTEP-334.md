@@ -20,6 +20,5 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
-
-*Synced from Jira: 2026-06-10*
+**Rathika Ramalingam** (2026-06-10)
+Testing in LOCAL: The Full Time tag is not displaying when time-commitment-quantity is NULL and time-commitment-unit is 'Full-time’/any text

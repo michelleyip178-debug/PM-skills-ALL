@@ -1,4 +1,4 @@
-# OTEP-303: Pocdex Field check
+# OTEP-303: chore: Pocdex Field check
 
 **Status:** Done
 **Assignee:** Pow Hwee TAN (PSD)

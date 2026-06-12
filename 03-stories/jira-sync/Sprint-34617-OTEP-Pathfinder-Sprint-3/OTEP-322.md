@@ -1,4 +1,4 @@
-# OTEP-322: Setup Playwright E2E Testing Framework
+# OTEP-322: test: setup Playwright E2E Testing Framework
 
 **Status:** In Progress
 **Assignee:** Rathika Ramalingam

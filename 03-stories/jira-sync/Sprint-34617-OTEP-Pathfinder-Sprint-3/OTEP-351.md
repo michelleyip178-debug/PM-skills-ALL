@@ -1,6 +1,6 @@
-# OTEP-351: [Spike] Azure AD mock solution for testing (no WOG AD test env)
+# OTEP-351: spike: Azure AD mock solution for testing (no WOG AD test env)
 
-**Status:** Backlog
+**Status:** In Progress
 **Assignee:** Léo Milbor
 **Story Points:** N/A
 

@@ -16,9 +16,9 @@ As an  officer,  I want to  view the full details of an opportunity on a dedicat
 
 | Key | Summary | Status |
 |-----|---------|--------|
-| OTEP-334 | backend endpoint for opportunity detail | QA |
-| OTEP-327 | Opportunity detail page using design system  | QA |
-| OTEP-314 | Opportunity detail page consuming OTEP-295 response shape | QA |
+| OTEP-334 | backend endpoint for opportunity detail | Done |
+| OTEP-327 | Opportunity detail page using design system  | Done |
+| OTEP-314 | Opportunity detail page consuming OTEP-295 response shape | Done |
 
 ---
 

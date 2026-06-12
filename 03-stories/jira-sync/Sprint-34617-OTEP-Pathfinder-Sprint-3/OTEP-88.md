@@ -1,6 +1,6 @@
 # OTEP-88: C@G opportunities in the listing page
 
-**Status:** In Progress
+**Status:** Done
 **Assignee:** N/A
 **Story Points:** N/A
 
@@ -16,8 +16,8 @@ User story: As an officer, I want to see Careers@Gov opportunities alongside OTG
 
 | Key | Summary | Status |
 |-----|---------|--------|
-| OTEP-374 | Expose source and agency fields in listing API | Backlog |
-| OTEP-375 | Add Careers@Gov badge/metadata to OpportunityCard | Backlog |
+| OTEP-375 | Add Careers@Gov badge/metadata to OpportunityCard | Done |
+| OTEP-374 | Expose source and agency fields in listing API | Done |
 
 ---
 
@@ -30,5 +30,3 @@ Hi   , this ticket should be the actual listing page for Careers@Gov opportuniti
 
 **Pow Hwee TAN (PSD)** (2026-05-28)
 AC is clear on the UI requirement (label on card, visible without hover). Missing: where does C@G data come from? Is there a dependency on a C@G ingest pipeline or data source? Suggest noting the data dependency so this isn’t blocked at implementation time.
-
-*Synced from Jira: 2026-06-10*
