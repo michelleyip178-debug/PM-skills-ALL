@@ -1,6 +1,6 @@
 # OTEP-89: View Careers@Gov Job (Deep-Link)
 
-**Status:** In Progress
+**Status:** QA
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 

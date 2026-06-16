@@ -1,6 +1,6 @@
 # OTEP-352: chore: load POCDEX production code table
 
-**Status:** In Progress
+**Status:** QA
 **Assignee:** Hao Eng
 **Story Points:** N/A
 
