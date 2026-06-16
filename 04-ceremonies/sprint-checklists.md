@@ -9,6 +9,7 @@ Per-story grooming readiness and DoR blockers, per sprint. **Which stories are i
 ## Sprint 2 — Opportunities Listing Hub
 
 **Sprint dates:** 18 May – 29 May 2026
+
 **Sprint goal:** An officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
 
 ### Stories (reconciled against Jira Sprint 2 board 2026-05-20)
@@ -55,7 +56,9 @@ Per-story grooming readiness and DoR blockers, per sprint. **Which stories are i
 ## Sprint 3 — Auth + OTG Ingestion
 
 **Sprint dates:** 2 Jun – 13 Jun 2026
+
 **Sprint goal:** *(Proposed: Officer can log in via WOG AD, stay authenticated, and log out securely — auth end-to-end. OTG recurring job delivers data in background. Confirm at grooming 2026-05-21.)*
+
 **Scope (updated 2026-05-20 Jira sync):** 5–6 stories. Original scope locked at 3 (OTEP-192, OTEP-71, OTEP-110); OTEP-304 and OTEP-305 confirmed on Jira Sprint 3 board (pulled forward from Sprint 4+, confirmed as WOG-04/05). OTEP-191 also on board — verify if still needed.
 
 ### Stories (confirmed on Jira Sprint 3 board — 2026-05-20)
@@ -89,6 +92,7 @@ Per-story grooming readiness and DoR blockers, per sprint. **Which stories are i
 ## Sprint 4 — Application Routes End-to-End
 
 **Sprint dates:** 16 Jun – 27 Jun 2026
+
 **Sprint goal:** *(TBD)*
 
 ### Stories (provisional from story-id-map)
@@ -107,6 +111,7 @@ Per-story grooming readiness and DoR blockers, per sprint. **Which stories are i
 ## Sprint 5 — C@G Handoff, Integration Testing, Polish
 
 **Sprint dates:** 30 Jun – 11 Jul 2026
+
 **Sprint goal:** *(TBD)*
 
 ### Stories (provisional from story-id-map)
@@ -123,4 +128,25 @@ Per-story grooming readiness and DoR blockers, per sprint. **Which stories are i
 
 ---
 
-*Updated: 2026-05-13*
+---
+
+## Strategic Skills — Sprint Phase Triggers
+
+Use this as a standing prompt at each ceremony. Not every skill every sprint — pick the one that fits where you are.
+
+| Sprint phase | When | Strategic skill | Why |
+|---|---|---|---|
+| Sprint planning | Day before ceremony | `/impact-sizing` | Size the top 2 stories before committing — do we know the value of what we're building? |
+| Sprint planning | Day before ceremony | `/journey-map` | Is there a user journey gap in the scope we're about to commit to? |
+| Grooming prep | Grooming week | `/competitor-analysis` | Is there competitive context the team should know before scoping? |
+| Mid-sprint review | Sprint week 2 | `/feature-metrics` | Are success metrics defined for In Progress stories? Would QA know "done" from a user outcome perspective? |
+| Sprint close / retro | Sprint close day | `/feature-results` | What did the sprint teach us? Capture delivery outcomes while fresh. |
+| Sprint close / retro | Sprint close day | `/experiment-decision` | For any A/B or rollout decision pending — should we test or ship? |
+| SteerCo / quarterly prep | Week before SteerCo | `/write-prod-strategy` | Does the delivery narrative ladder up to the product strategy? |
+| SteerCo / quarterly prep | Week before SteerCo | `/define-north-star` | Is the North Star still the right metric given what we've learned? |
+| Post-pilot (week 1) | First week of pilot | `/activation-analysis` | Are pilot officers activating? Where are they dropping off? |
+| Post-pilot (week 4) | 4 weeks post-launch | `/retention-analysis` | Are officers coming back? What's the return visit pattern? |
+
+**How to use:** At each ceremony, scan this table and ask: "Does the matching skill give us useful context today?" If yes, run it before or after the ceremony. If not, skip it.
+
+*Updated: 2026-06-16*
