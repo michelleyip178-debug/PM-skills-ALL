@@ -36,16 +36,16 @@
 
 ## Sprint 4 — ACTIVE (15–28 Jun 2026)
 
-> Source: OTEP-Pathfinder Sprint 4 (Sprint 34618). **Live pull: 2026-06-16.** 64 issues total.
+> Source: OTEP-Pathfinder Sprint 4 (Sprint 34618). **Live pull: 2026-06-17.** 65 issues total.
 > Goal: Deliver a complete, usable opportunity listing experience — officers can search, filter, and sort opportunities, understand what each type means, and trust that the data they're seeing is current and accurate.
 
-**In Progress (10):** OTEP-88 (C@G listing), OTEP-482 (import C@G, Léo), OTEP-324 (OAuth token rotation, Thomas), OTEP-322 (Playwright, Rathika), OTEP-276 (design-system spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-349 (competency spike, Pow Hwee), OTEP-361 (ADR forum, Pow Hwee), OTEP-438 (admin view placeholder, Hao Eng), OTEP-397 (OTG upload spike, Michelle)
+**In Progress (11):** OTEP-88 (C@G listing), OTEP-482 (import C@G, Léo), OTEP-405 (keyword search), OTEP-495 (search backend, Thomas), OTEP-322 (Playwright, Rathika), OTEP-276 (design-system spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-349 (competency spike, Pow Hwee), OTEP-361 (ADR forum, Pow Hwee), OTEP-397 (OTG upload spike, Michelle), OTEP-499 (upload refactor, Hao Eng)
 
-**In QA (6):** OTEP-86 (filters), OTEP-268 (empty/error states), OTEP-85 (listing cards), OTEP-305 (login/logout), OTEP-128 (detail page), OTEP-129 (open/closed before applying, Thomas)
+**In QA (8):** OTEP-86 (filters), OTEP-268 (empty/error states), OTEP-85 (listing cards), OTEP-305 (login/logout), OTEP-128 (detail page), OTEP-129 (open/closed before applying, Thomas), OTEP-324 (OAuth token rotation, Thomas), OTEP-438 (admin view placeholder, Hao Eng)
 
 **Done (20):** OTEP-380, OTEP-381, OTEP-375, OTEP-374, OTEP-326, OTEP-325, OTEP-193, OTEP-288, OTEP-296, OTEP-313, OTEP-320, OTEP-170, OTEP-369, OTEP-368, OTEP-334, OTEP-327, OTEP-314, OTEP-362, OTEP-363, OTEP-367
 
-**Backlog (28):** OTEP-87, OTEP-377, OTEP-378, OTEP-405, OTEP-406, OTEP-386, OTEP-439, OTEP-284, OTEP-440, OTEP-441, OTEP-283, OTEP-131, OTEP-289, OTEP-404, OTEP-328, OTEP-329, OTEP-348, OTEP-358 (Michelle), OTEP-392, OTEP-393, OTEP-403, OTEP-127 (Michelle), OTEP-427 (Michelle), OTEP-444, OTEP-445, OTEP-483, OTEP-484, OTEP-485
+**Backlog (25+1 To Do):** OTEP-87, OTEP-496, OTEP-406, OTEP-386, OTEP-439, OTEP-284, OTEP-440, OTEP-441, OTEP-283, OTEP-131, OTEP-289, OTEP-404, OTEP-328, OTEP-329, OTEP-348, OTEP-358 (Michelle), OTEP-392, OTEP-393, OTEP-403, OTEP-127 (Michelle), OTEP-427 (Michelle), OTEP-444, OTEP-483, OTEP-484, OTEP-485 + OTEP-445 (To Do)
 
 **PM-owned In Progress:** OTEP-397 (upload spike, Michelle)
 
@@ -137,4 +137,4 @@
 
 ---
 
-*Updated: 2026-06-16 (jira-sync). Sprint 3 CLOSED 12 Jun (25 Done, 4 stale dupes removed). Sprint 4 ACTIVE 15–28 Jun. S4: 10 In Progress, 6 QA, 20 Done, 28 Backlog.*
+*Updated: 2026-06-17 (jira-sync). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE 15–28 Jun. S4: 11 In Progress, 8 QA, 20 Done, 26 Backlog (+ 1 To Do). 65 issues total. New: OTEP-499 (upload refactor, Hao Eng), OTEP-500 (PostHog tracking epic, Backlog).*

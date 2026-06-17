@@ -1,7 +1,9 @@
 # OTEP-405: [FE/BE] Keyword Search for Opportunities
 
-**Status:** Backlog
+**Status:** In Progress
+
 **Assignee:** N/A
+
 **Story Points:** 3
 
 ---
@@ -27,3 +29,5 @@ Check with Amber if there’s a “cross” button inside the search bar.
 
 **Michelle Yip** (2026-06-11)
 Put into backlog - Suggested Search, Partial Match
+
+*Synced from Jira: 2026-06-17*

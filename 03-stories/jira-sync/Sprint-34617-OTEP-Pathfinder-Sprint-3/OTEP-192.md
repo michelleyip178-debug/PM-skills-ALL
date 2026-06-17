@@ -1,7 +1,9 @@
 # OTEP-192: OTG data ingestion
 
-**Status:** QA
+**Status:** Done
+
 **Assignee:** Léo Milbor
+
 **Story Points:** N/A
 
 ---

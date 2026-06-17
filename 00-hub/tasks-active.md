@@ -57,7 +57,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 > - **🗓️ Deferred out of June:** Cybersecurity quiz (Dec) · PIM risk assessment (post-feature-freeze)
 
 - [ ] **Send ARK request email for Jobelle** — ⚠️ due before Wed 10 Jun. Ad-hoc, added 2026-06-08.
-- [ ] **Review monthly progress report for OTG** — ⚠️ due before Wed 10 Jun. Ad-hoc, added 2026-06-08.
+- [x] **Review monthly progress report for OTG** — ~~due before Wed 10 Jun~~ **Delegated to Jobelle 2026-06-17.** Jobelle to own going forward.
 - [x] **Set up Working Level deck for WD's update** — ✅ Done 2026-06-08.
 - [ ] ~~**Email DDs on PSC — send today (Fri 29 May)**~~ — ⚠️ **STALE (LNO 2026-06-02): deadline 4 days past. Verify it was sent, then close. If not sent, it's likely moot.**
 - [ ] **Prepare Jobelle handover** — Jobelle joins 3 Jun. Step 1: share Phoebe's copy first. Step 2: share Daniel's handover after 30–60 days (i.e. ~3 Jul–3 Aug).
@@ -65,8 +65,8 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [x] **Revert to Clarissa by 4 Jun — Malaysian NRIC + downstream OTG impact** — ✅ Done 2026-06-02. **Note:** Cumulus Phase 3 (open-item #36) production deadline (OTG ready for Malaysia ID by 6 Jul 2026) still stands — the 4 Jun reply was the near-term gate only.
 - [ ] **Design PostHog OKR + metric instrumentation** — Rama scheduling a call w/c 2 Jun to work through event taxonomy together. Attend and define metric definitions to measure OTEP OKRs and North Star. *(Squad-Sync 2026-05-26; updated 2026-05-29)*
 - [x] **Send post-Design Review async follow-up to Xian Zhang + Jacky** — sent 2026-05-28. ✅
-- [ ] **Update FormSG PRD** — remove pre-fill from MVP scope; note R1 direction (native in-OTEP application form). This week, before next grooming. *(Squad-Sync 2026-05-26)*
-- [ ] **Update OTEP-130 in Jira** — re-scope to MVP: basic FormSG redirect + webhook only, no pre-fill. This week. *(Squad-Sync 2026-05-26)*
+- [x] ~~**Update FormSG PRD**~~ — **Dropped 2026-06-17. No longer required.** Pre-fill already deferred (decisions-log I-013); PRD update not needed.
+- [x] ~~**Update OTEP-130 in Jira**~~ — **Superseded 2026-06-10.** Webhook removed from S4 and moved to Backlog. BO alignment needed before it re-enters planning. No Jira update required until BOs confirm MVP value. *(decisions-log 2026-06-10)*
 - [x] **Check in with Pathfinder team on current demo state** — ✅ Done 2026-06-02. *(Squad-Sync 2026-05-26)*
 - [x] **Run through with Amber: design-vs-implementation check** — ✅ Done 2026-06-02. *(Squad-Sync 2026-05-26)*
 - [x] ~~**Check with Acacia on POCDEX data model familiarity**~~ — **Cancelled 2026-06-02.** No longer needed.

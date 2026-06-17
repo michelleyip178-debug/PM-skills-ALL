@@ -1,7 +1,9 @@
 # OTEP-444: Azure/Entra AD mock solution for testing (no WOG AD test env)
 
 **Status:** Backlog
-**Assignee:** Léo Milbor
+
+**Assignee:** Unassigned
+
 **Story Points:** N/A
 
 ---
@@ -21,3 +23,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-17*

@@ -101,7 +101,7 @@
 
 | Jira | Story | Owner | Notes |
 |------|-------|-------|-------|
-| OTEP-130 | Apply to OTG opportunity via FormSG (full) | Thomas / Leo | FormSG Phase 2 webhook callback. **Depends on OTEP-319 (S3) being done.** |
+| ~~OTEP-130~~ | ~~Apply to OTG opportunity via FormSG (full)~~ | — | **REMOVED from S4 (2026-06-10). Moved back to Backlog — pending BO alignment. Decision 2026-06-10.** |
 | OTEP-202 | Create POCDEX seed database for local dev | Leo | Seeds test profiles for ringfencing validation. |
 | — | Instrumentation: success metrics tracked | — | oppr_list_view, detail_view, filter_applied, click_to_formsg. |
 | ~~Native apply spike~~ | ~~[Spike] Native apply in OTEP~~ | — | **DROPPED from S4 (Michelle, 2026-06-04).** Pow Hwee's draft proposed it; native apply moves to R1 (ATS pivot, D 2026-06-02). MVP apply = FormSG redirect (319). |
@@ -141,7 +141,7 @@
 | Jira | Story | Owner | Notes |
 |------|-------|-------|-------|
 | OTEP-89 | View Careers@Gov opportunity summary on OTEP | Thomas | C@G detail + "Apply via C@G" CTA. Depends on C@G ingestion landing in S04. |
-| US-10 | Receive application confirmation | Thomas | Confirmation screen. FormSG webhook dep (S04 OTEP-130). |
+| US-10 | Receive application confirmation | Thomas | Confirmation screen. FormSG webhook dep (OTEP-130 — moved to Backlog 2026-06-10; US-10 dependency unresolved). |
 
 **CSC SSO track (external, running in parallel):**
 - Documents sent to CSC ~end Sprint 4 (best case) / ~end Sprint 5 (realistic)
@@ -189,7 +189,7 @@ No new development. Security review, pen testing, compliance sign-off, go-live r
 |------|--------|
 | Agency, grade, commitment filters | Brief explicit: type filter only for MVP |
 | Persist filter selections across sessions (US-07) | Within-session via URL params is enough for MVP |
-| Function/Job-function taxonomy mapping | Hybrid model adopted; contextual mapping is R1 (decision 2026-05-06) |
+| ~~Function/Job-function taxonomy mapping~~ | ~~Hybrid model adopted; contextual mapping is R1 (decision 2026-05-06)~~ **SUPERSEDED 2026-06-16 — job family filter pulled into MVP. See decisions-log.md 2026-06-16.** |
 | Autocomplete / suggested search | Brief: not MVP |
 | Competency match ratio / scoring | High cost, low proven value (decision 2026-05-08) |
 | Auto-populate OTG form fields from POCDEX | Keep FormSG as-is for MVP |
