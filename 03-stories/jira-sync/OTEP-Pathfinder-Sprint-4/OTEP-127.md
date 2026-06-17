@@ -1,4 +1,4 @@
-# OTEP-127: [Spike] Define ringfencing eligibility contract
+# OTEP-127: [Spike] Define ringfencing display contract — OTG rules → CareerCompass listing
 
 **Type:** Spike
 
@@ -6,7 +6,7 @@
 
 **Assignee:** Michelle Yip
 
-**Story Points:** 3
+**Story Points:** 1
 
 **Sprint:** OTEP-Pathfinder Sprint 4
 
@@ -16,27 +16,31 @@
 
 ## Description
 
-**Goal:** Define the eligibility contract that drives ringfencing — what POCDEX fields determine whether an officer is eligible for a given opportunity, and what the listing API contract looks like. This unblocks OTEP-127-B and OTEP-127-C.
+**Goal:** Determine how CareerCompass enforces OTG ringfencing rules in the listing display. As-is ringfencing field mapping is known. Null/missing field = treat as open to all (resolved). This spike closes the remaining display UX questions so OTEP-408 (BE) and OTEP-409 (FE) can be estimated for S5.
 
-**Timebox:** 2 days
+**Timebox:** 0.5 day
 
-**Questions to answer:**
+**Questions to answer** *(BO sign-off needed — open-item #43):*
 
-1. What POCDEX fields drive eligibility for each opportunity type (Internal Job, Gig, STIP, SJR)?
-2. What does the eligibility check look like at the API level — what does the listing API receive, and what does it return?
-3. Are there edge cases in the eligibility matrix (e.g. grade bands, agency exceptions, scheme-of-service rules) that need to be scoped in or explicitly deferred?
-4. What happens if POCDEX returns partial data — is an officer eligible, ineligible, or treated as unfiltered?
+1. Display rule: hide the listing entirely vs show-but-disable the apply CTA for ineligible officers?
+2. What is the ineligibility message copy, and how specific can it be?
+
+**Already resolved:**
+
+- OTG ringfencing field mapping — as-is known
+- Storage at ingestion time — field on opportunity record
+- Null/missing ringfencing field → treat as open to all
+- EXCLUDE/blocklist format (MDDI edge case) → follow OTG behaviour: invert the blocklist at ingestion to derive the eligible agency set (all WOG agencies minus blocked list). Ingestion pipeline must handle both INCLUDE and EXCLUDE mode records from `RAW_GIG_AUDIENCE_FILTERS`.
 
 **Expected output:**
 
-- Written eligibility matrix: POCDEX field → opportunity type → eligible/ineligible rule
-- Draft API contract for the listing endpoint (what params, what filter logic)
-- List of edge cases with in/out scope decisions
-- Go/no-go recommendation on whether 127-B can start in S5 as planned
+- Confirmed display rule (hide vs disable) + message copy, signed off by BO
+- Go/no-go on OTEP-408 (BE) and OTEP-409 (FE) for S5
 
 ## Out of scope
 
-- Implementation — spike output only
-- Competency matching (separate concern, R1)
+- POCDEX eligibility check — criteria are set in OTG, not derived from officer profile
+- Criteria authoring UI — stays in OTG
+- Competency matching (R1)
 
-*Synced from Jira: 2026-06-11*
+*Updated: 2026-06-17 — resolved questions removed (field mapping known, null = open to all). 2 open questions remain, both BO-gated. Points 3→1, timebox 2 days→0.5 day.*

@@ -9,7 +9,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 4 W1 (15–28 Jun) — reconcile S4 board, OTG ingestion unblocks (v3 ACs, 5-cat mapping to Xian Zhang), Rama interview on upload module scope. July SteerCo deliverables (transition plan, North Star brief, gap analysis) still have zero momentum — must start this sprint. *(Updated 2026-06-12)*
+**Theme:** Sprint 4 W1 (15–28 Jun) — reconcile S4 board, OTG ingestion unblocks (v3 ACs, 4-cat mapping to Xian Zhang). ~~Rama interview on upload module scope~~ ✅ Done 15 Jun. July SteerCo deliverables (transition plan, North Star brief, gap analysis) still have zero momentum — must start this sprint. *(Updated 2026-06-17)*
 
 ---
 
@@ -152,4 +152,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-06-11 — jira-sync. S4 goal locked at planning. Sprint header counts corrected to 46. OTEP-192 Done confirmed.*
+*Updated: 2026-06-17 — stale-check. Theme updated: Rama upload sync done, 5-cat → 4-cat.*

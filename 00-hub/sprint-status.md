@@ -49,7 +49,7 @@
 
 **PM-owned In Progress:** OTEP-397 (upload spike, Michelle)
 
-**PM-owned Backlog:** OTEP-358 (nil-date spike), OTEP-127 (ringfencing contract), OTEP-427 (ingestion logic tighten)
+**PM-owned Backlog:** OTEP-358 (nil-date spike), OTEP-127 (ringfencing display — creation/criteria stays in OTG), OTEP-427 (ingestion logic tighten)
 
 ---
 
@@ -137,4 +137,4 @@
 
 ---
 
-*Updated: 2026-06-17 (jira-sync). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE 15–28 Jun. S4: 11 In Progress, 8 QA, 20 Done, 26 Backlog (+ 1 To Do). 65 issues total. New: OTEP-499 (upload refactor, Hao Eng), OTEP-500 (PostHog tracking epic, Backlog).*
+*Updated: 2026-06-17 (stale-check). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE 15–28 Jun. S4: 11 In Progress, 8 QA, 20 Done, 25 Backlog + 1 To Do. 65 issues total. New: OTEP-499 (upload refactor, Hao Eng), OTEP-500 (PostHog tracking epic, Backlog), OTEP-502 (opportunity PostHog tracking, child of OTEP-500, Backlog).*
