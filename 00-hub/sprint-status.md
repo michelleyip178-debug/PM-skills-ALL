@@ -36,7 +36,7 @@
 
 ## Sprint 4 — ACTIVE (15–28 Jun 2026)
 
-> Source: OTEP-Pathfinder Sprint 4 (Sprint 34618). **Live pull: 2026-06-17.** 65 issues total.
+> Source: OTEP-Pathfinder Sprint 4 (Sprint 34618) · OTEP-Core Sprint 4 (Sprint 34608). **Live pull: 2026-06-18.** Pathfinder: 50 issues (agile endpoint). Core: sprint active 16–25 Jun.
 > Goal: Deliver a complete, usable opportunity listing experience — officers can search, filter, and sort opportunities, understand what each type means, and trust that the data they're seeing is current and accurate.
 
 **In Progress (11):** OTEP-88 (C@G listing), OTEP-482 (import C@G, Léo), OTEP-405 (keyword search), OTEP-495 (search backend, Thomas), OTEP-322 (Playwright, Rathika), OTEP-276 (design-system spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-349 (competency spike, Pow Hwee), OTEP-361 (ADR forum, Pow Hwee), OTEP-397 (OTG upload spike, Michelle), OTEP-499 (upload refactor, Hao Eng)
