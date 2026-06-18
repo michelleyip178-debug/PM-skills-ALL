@@ -17,14 +17,14 @@ What to prepare and bring for each ceremony. For the command schedule and sprint
 - [ ] Have 1 update and 1 blocker ready (if any)
 - [ ] Know your "ask" if you have one
 
-### Tuesday — [Weekly] Design review with BO (2pm)
+### Tuesday W1 — Design review (stories for sprint after next)
 **Prep (15 min):**
-- [ ] Which Sprint 2 / Sprint 3 designs are ready to walk the BO through?
+- [ ] Which designs for the sprint-after-next are ready to walk the BO through?
 - [ ] Have ACs and the screen flow ready for what's being reviewed
-- [ ] Know the BO decisions you need closed here — bring positions, not options (e.g. Secondment classification, apply-flow scope)
+- [ ] Know the BO decisions you need closed here — bring positions, not options
 - [ ] Bring any user feedback / hallway-test findings
 
-> No separate "Design review with Amber" appears on the calendar — Amber feedback happens async or inside this BO review. If a design decision needs a dedicated session with Amber (e.g. the OTEP-86 filter UI pattern), schedule one; don't assume a recurring slot exists.
+> No separate "Design review with Amber" appears on the calendar — Amber feedback happens async or inside this BO review. If a design decision needs a dedicated session with Amber, schedule one; don't assume a recurring slot exists.
 
 ### Biweekly — Mark & GK (1 hr)
 **Prep (30 min) — high stakes, use `/meeting-prep`:**
@@ -45,26 +45,27 @@ What to prepare and bring for each ceremony. For the command schedule and sprint
 - [ ] Know which stories Jacky/Mark need to weigh in on
 - [ ] One clear framing per story: what it does, why now
 
-### Squad Grooming (Tue wk 1, 30 min prep)
-- [ ] Draft user stories written for the upcoming sprint
+### Design Review (Tue W1, 30 min prep)
+- [ ] Draft user stories written for the sprint after next
 - [ ] Acceptance criteria drafted (doesn't need to be final)
 - [ ] Identify which stories need design, API contracts, or tech spikes
-- [ ] Know your priorities — what MUST go in next sprint vs. nice-to-have
+- [ ] Know your priorities — what MUST go in that sprint vs. nice-to-have
 
-### Mid-Sprint Review (Mon wk 2, 15 min prep)
-- [ ] Check: are current sprint items on track to finish by Friday?
-- [ ] Identify at-risk items — what might not make it?
-- [ ] Any scope or priority changes needed mid-sprint?
-
-### Backlog Grooming (Thu wk 1, 45 min prep)
+### Backlog Grooming (Thu W1, 45 min prep — replaces Squad Grooming)
 - [ ] Stories prioritised — high/urgent at the top
 - [ ] Large stories broken down into sprint-sized items
 - [ ] Acceptance criteria, descriptions, requirements clear enough to discuss
 - [ ] Designs attached where available (or flag what's missing)
 - [ ] Dependencies identified
 - [ ] Be ready to answer "why this priority?" for each item
+- [ ] Run `/grooming-close` after the session to gate stories and check shelf depth
 
-### Sprint Planning (Thu wk 2, 1 hr prep — the big one)
+### Mid-Sprint Review (Mon wk 2, 15 min prep)
+- [ ] Check: are current sprint items on track to finish by Friday?
+- [ ] Identify at-risk items — what might not make it?
+- [ ] Any scope or priority changes needed mid-sprint?
+
+### Sprint Planning (Thu W2, 1 hr prep — the big one)
 - [ ] **All stories must meet DoR:**
   - [ ] UI assets and UX flows designed and linked to Acceptance Criteria (Amber)
   - [ ] Feature flag designed with entry point identified
@@ -114,11 +115,11 @@ What to prepare and bring for each ceremony. For the command schedule and sprint
 
 | Ceremony | Stories need to be at... | By when |
 |----------|------------------------|---------|
-| Internal Squad Grooming (Tue) | Draft (AC written, priority clear) | Monday before |
-| Backlog Grooming (Thu) | Refined (designs in progress, requirements clear) | Wednesday before |
-| Sprint Planning (Thu next week) | **DoR met** (designs done, API contract, subtasks, test cases) | Wednesday of week 2 |
+| Design Review (Tue W1) | Draft (AC written, priority clear) | Monday of W1 |
+| Backlog Grooming (Thu W1) | Refined (designs in progress, requirements clear) | Wednesday of W1 |
+| Sprint Planning (Thu W2) | **DoR met** (designs done, API contract, subtasks, test cases) | Wednesday of W2 |
 
-You need to be writing stories **2 weeks before they're built**. Right now (Sprint 1), you should be prepping Sprint 3 stories while Sprint 2 stories get to DoR.
+You need to be writing stories **2 weeks before they're built** — prepping the sprint-after-next while the current sprint runs.
 
 ---
 
@@ -127,8 +128,8 @@ You need to be writing stories **2 weeks before they're built**. Right now (Spri
 | Meeting | Bring | Don't bring |
 |---------|-------|-------------|
 | Standup | Blockers, priority changes | Long explanations |
-| Squad Grooming | Draft stories, open questions | Final designs |
-| Backlog Grooming | Prioritised stories, requirements, designs-in-progress | Unwritten stories |
+| Design Review (Tue W1) | Draft stories, open questions | Final designs |
+| Backlog Grooming (Thu W1) | Prioritised stories, requirements, designs-in-progress | Unwritten stories |
 | Sprint Planning | DoR-ready stories, sprint goal | Anything that still needs design |
 | Mid-Sprint Review | Risk assessment, at-risk items | New scope |
 | Demo | What shipped, impact | Excuses for what didn't |
@@ -137,4 +138,4 @@ You need to be writing stories **2 weeks before they're built**. Right now (Spri
 
 ---
 
-*Updated: 2026-05-12*
+*Updated: 2026-06-18 — ceremony cadence updated: Tue W1 = design review, Thu W1 = backlog grooming, Thu W2 = sprint planning*

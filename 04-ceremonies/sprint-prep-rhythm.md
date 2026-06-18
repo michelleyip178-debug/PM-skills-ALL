@@ -14,9 +14,9 @@ Update the "This Sprint" section at sprint start. The pattern stays the same.
 | Day | Ceremony | Prep steps | Timing |
 |-----|----------|-----------|--------|
 | Mon | Sprint starts · Retro & Demo (prev sprint) | Run `/retro` (prep done last Fri), `/daily-plan`, `/week` | Morning |
-| Tue | Squad Grooming (next sprint, internal) | `/groom-prep` done Mon; run `/groom` morning-of | Morning of |
-| Wed | (prep day — no ceremony) | `/groom-prep` to catch AC gaps before Thu Backlog Grooming | Afternoon |
-| Thu | Backlog Grooming (next sprint) | Run `/groom` | Morning of |
+| Tue | Design review (stories for sprint after next) | `/groom-prep` done Mon; run `/groom` morning-of | Morning of |
+| Wed | (prep day — no ceremony) | `/groom-prep` to catch AC gaps before Thu grooming | Afternoon |
+| Thu | Backlog grooming (stories for coming sprint) | Run `/groom`; run `/grooming-close` after session | Morning of |
 | Fri | OTEP Squad Sync · dependency sync | Bring unresolved DoR blockers from sprint-checklists.md | — |
 
 ### Week 2
@@ -24,29 +24,29 @@ Update the "This Sprint" section at sprint start. The pattern stays the same.
 | Day | Ceremony | Prep steps | Timing |
 |-----|----------|-----------|--------|
 | Mon | Mid-Sprint Review | Run `/mid-sprint-review`; tick resolved blockers in sprint-checklists.md | Morning of |
-| Wed | (prep day — no ceremony) | `/sprint-plan-prep` to catch gaps before Thu planning | Afternoon |
+| Wed | (prep day — no ceremony) | Run `/sprint-check` to verify shelf depth; `/sprint-plan-prep` to catch gaps | Afternoon |
 | Thu | Sprint Planning (next sprint) | Run `/sprint-plan-prep` (refresh); populate next sprint in sprint-checklists.md | Morning of |
 | Fri | Sprint Ends + Finalisation | Run `/archive` then `/retro-prep` | After finalisation sign-off |
 
 ---
 
-## This Sprint: Sprint 2 (Mon 18 May – Fri 29 May)
+## This Sprint: Sprint 4 (Mon 15 Jun – Sat 28 Jun)
 
 ### Week 1
-- [ ] **Mon 18 May** — Sprint starts + Retro & Demo (Sprint 1): run `/retro` (deferred — PH + Michelle out)
-- [ ] **Tue 19 May** — Squad Grooming (Sprint 2 internal): run `/groom` (morning of). ⚠️ Resolve #28 + #29 BEFORE session.
-- [ ] **Wed 20 May** — Prep day: run `/groom-prep` (afternoon)
-- [ ] **Thu 21 May** — Backlog Grooming (Sprint 3): run `/groom` (morning of; Leo out PM)
-- [ ] **Fri 22 May** — Squad Sync: bring unresolved DoR blockers
+- [x] **Mon 16 Jun** — Sprint starts + Retro & Demo (Sprint 3): run `/retro`
+- [x] **Tue 16 Jun** — Design review (S5+ stories)
+- [x] **Wed 17 Jun** — Prep day: run `/groom-prep` (afternoon)
+- [ ] **Thu 18 Jun** — Backlog Grooming (Sprint 5): run `/groom` morning-of; run `/grooming-close` after
+- [ ] **Fri 19 Jun** — Squad Sync: bring unresolved DoR blockers
 
 ### Week 2
-- [ ] **Mon 25 May** — Mid-Sprint Review: run `/mid-sprint-review`, tick resolved blockers in sprint-checklists.md
-- [ ] **Wed 27 May** — Prep day: run `/sprint-plan-prep` (afternoon)
-- [ ] **Thu 29 May** — Sprint Planning (Sprint 3): run `/sprint-plan-prep` refresh; populate Sprint 3 in sprint-checklists.md
-- [ ] **Fri 30 May** — Sprint Ends: run `/archive` then `/retro-prep`
+- [ ] **Mon 22 Jun** — Mid-Sprint Review: run `/mid-sprint-review`, tick resolved blockers in sprint-checklists.md
+- [ ] **Wed 24 Jun** — Prep day: run `/sprint-check` then `/sprint-plan-prep` (afternoon)
+- [ ] **Thu 25 Jun** — Sprint Planning (Sprint 5): run `/sprint-plan-prep` refresh; populate Sprint 5 in sprint-checklists.md
+- [ ] **Fri 27 Jun** — Sprint Ends: run `/archive` then `/retro-prep`
 
 ### New Sprint Monday
-- [ ] **Mon 01 Jun** — Retro + Demo (Sprint 2): run `/retro`, fill in Sprint 3 dates + DoR blockers in sprint-checklists.md
+- [ ] **Mon 29 Jun** — Retro + Demo (Sprint 4): run `/retro`, fill in Sprint 5 dates + DoR blockers in sprint-checklists.md
 
 ---
 
@@ -59,15 +59,15 @@ Copy this block at sprint start. Fill in dates.
 
 ### Week 1
 - [ ] **Mon ___** — Sprint starts + Retro & Demo (prev sprint): run `/retro`, `/daily-plan`, `/week`
-- [ ] **Tue ___** — Squad Grooming: run `/groom`
-- [ ] **Wed ___** — Prep day: run `/groom-prep` (afternoon)
-- [ ] **Thu ___** — Backlog Grooming: run `/groom`
+- [ ] **Tue ___** — Design review (stories for sprint after next): run `/groom-prep` Mon; run `/groom` morning-of
+- [ ] **Wed ___** — Prep day: run `/groom-prep` (afternoon) to catch AC gaps before Thu
+- [ ] **Thu ___** — Backlog grooming (stories for coming sprint): run `/groom` morning-of; run `/grooming-close` after
 - [ ] **Fri ___** — Squad Sync: bring unresolved DoR blockers
 
 ### Week 2
 - [ ] **Mon ___** — Mid-Sprint Review: run `/mid-sprint-review`, tick resolved blockers in sprint-checklists.md
-- [ ] **Wed ___** — Prep day: run `/sprint-plan-prep` (afternoon)
-- [ ] **Thu ___** — Sprint Planning: run `/sprint-plan-prep` refresh; populate next sprint in sprint-checklists.md
+- [ ] **Wed ___** — Prep day: run `/sprint-check` then `/sprint-plan-prep` (afternoon)
+- [ ] **Thu ___** — Sprint Planning (next sprint): run `/sprint-plan-prep` refresh; populate next sprint in sprint-checklists.md
 - [ ] **Fri ___** — Sprint Ends: run `/archive` then `/retro-prep`
 
 ### New Sprint Monday
@@ -92,4 +92,4 @@ Copy this block at sprint start. Fill in dates.
 
 ---
 
-*Updated: 2026-05-19*
+*Updated: 2026-06-18 — ceremony cadence updated: Tue W1 = design review, Thu W1 = backlog grooming, Thu W2 = sprint planning. New commands added: `/grooming-close` (post-Thu grooming), `/sprint-check` (Wed W2 prep).*

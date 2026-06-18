@@ -60,50 +60,31 @@
 
 ---
 
-## Current Sprint — Sprint 3 (Tue 02 Jun – Fri 12 Jun)
+## Fixed Ceremony Cadence (every sprint)
 
-⚠️ **Vesak Day Mon 01 Jun** — Sprint Start shifted to Tue 02 Jun.
-
-### Ceremony Dates
-
-| Ceremony | Date |
-|----------|------|
-| Sprint Start | Tue 02 Jun |
-| Squad Grooming (internal) | Wed 03 Jun |
-| Mid-Sprint Check-in | Wed 04 Jun |
-| Backlog Grooming (Sprint 4) | Thu 05 Jun |
-| OTEP Squad Sync | Fri 06 Jun |
-| Mid-Sprint Review | Mon 09 Jun |
-| Sprint Planning (Sprint 4) | Thu 11 Jun |
-| Sprint Review + Retro | Fri 12 Jun |
-| Sprint End | Fri 12 Jun |
-
-### Prep Deadlines
-
-| Task | Due |
-|------|-----|
-| ACs complete | EOD Wed 04 Jun |
-| BO pre-read sent | EOD Fri 06 Jun |
-| Demo script ready | EOD Thu 11 Jun |
-| Sprint summary to Confluence | Fri 12 Jun |
+| Week | Day | Ceremony | Scope |
+|------|-----|----------|-------|
+| W1 | Tuesday | Design review | Stories targeting sprint after next |
+| W1 | Thursday | Backlog grooming | Stories targeting the coming sprint |
+| W2 | Thursday | Sprint planning | Next sprint |
 
 ---
 
-## Next Sprint — Sprint 4 (Mon 15 Jun – Fri 26 Jun)
+## Current Sprint — Sprint 4 (Mon 15 Jun – Sat 28 Jun)
 
 ### Ceremony Dates
 
 | Ceremony | Date |
 |----------|------|
 | Sprint Start | Mon 15 Jun |
-| Squad Grooming (internal) | Tue 16 Jun |
+| Design Review (S5+ stories) | Tue 16 Jun |
 | Mid-Sprint Check-in | Wed 17 Jun |
 | Backlog Grooming (Sprint 5) | Thu 18 Jun |
 | OTEP Squad Sync | Fri 19 Jun |
 | Mid-Sprint Review | Mon 22 Jun |
 | Sprint Planning (Sprint 5) | Thu 25 Jun |
-| Sprint Review + Demo | Fri 26 Jun |
-| Sprint End | Fri 26 Jun |
+| Sprint Review + Demo | Fri 27 Jun |
+| Sprint End | Sat 28 Jun |
 
 ### Prep Deadlines
 
@@ -112,7 +93,32 @@
 | ACs complete | EOD Wed 17 Jun |
 | BO pre-read sent | EOD Fri 19 Jun |
 | Demo script ready | EOD Thu 25 Jun |
-| Sprint summary to Confluence | Fri 26 Jun |
+| Sprint summary to Confluence | Fri 27 Jun |
+
+---
+
+## Next Sprint — Sprint 5 (Mon 29 Jun – Fri 10 Jul)
+
+### Ceremony Dates
+
+| Ceremony | Date |
+|----------|------|
+| Sprint Start | Mon 29 Jun |
+| Design Review (S6+ stories) | Tue 01 Jul |
+| Backlog Grooming (Sprint 6) | Thu 03 Jul |
+| Mid-Sprint Review | Mon 06 Jul |
+| Sprint Planning (Sprint 6) | Thu 10 Jul |
+| Sprint Review + Demo | Fri 11 Jul |
+| Sprint End | Fri 11 Jul |
+
+### Prep Deadlines
+
+| Task | Due |
+|------|-----|
+| ACs complete | EOD Wed 02 Jul |
+| BO pre-read sent | EOD Fri 04 Jul |
+| Demo script ready | EOD Thu 10 Jul |
+| Sprint summary to Confluence | Fri 11 Jul |
 
 ---
 
