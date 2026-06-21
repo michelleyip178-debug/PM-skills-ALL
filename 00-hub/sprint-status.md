@@ -39,17 +39,17 @@
 > Source: OTEP-Pathfinder Sprint 4 (Sprint 34618) · OTEP-Core Sprint 4 (Sprint 34608). **Live pull: 2026-06-18.** Pathfinder: 50 issues (agile endpoint). Core: sprint active 16–25 Jun.
 > Goal: Deliver a complete, usable opportunity listing experience — officers can search, filter, and sort opportunities, understand what each type means, and trust that the data they're seeing is current and accurate.
 
-**In Progress (11):** OTEP-88 (C@G listing), OTEP-482 (import C@G, Léo), OTEP-405 (keyword search), OTEP-495 (search backend, Thomas), OTEP-322 (Playwright, Rathika), OTEP-276 (design-system spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-349 (competency spike, Pow Hwee), OTEP-361 (ADR forum, Pow Hwee), OTEP-397 (OTG upload spike, Michelle), OTEP-499 (upload refactor, Hao Eng)
+**In Progress (14):** OTEP-88 (C@G listing), OTEP-482 (import C@G, Léo), OTEP-405 (keyword search), OTEP-495 (search backend, Thomas), OTEP-322 (Playwright, Rathika), OTEP-276 (design-system spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-349 (competency spike, Pow Hwee), OTEP-361 (ADR forum, Pow Hwee), OTEP-397 (OTG upload spike, Michelle), OTEP-499 (upload refactor, Hao Eng), OTEP-505 (CFT integration upload/webhook, Hao Eng), OTEP-127 (ringfencing, Michelle), OTEP-427 (ingestion logic, Michelle)
 
 **In QA (8):** OTEP-86 (filters), OTEP-268 (empty/error states), OTEP-85 (listing cards), OTEP-305 (login/logout), OTEP-128 (detail page), OTEP-129 (open/closed before applying, Thomas), OTEP-324 (OAuth token rotation, Thomas), OTEP-438 (admin view placeholder, Hao Eng)
 
 **Done (20):** OTEP-380, OTEP-381, OTEP-375, OTEP-374, OTEP-326, OTEP-325, OTEP-193, OTEP-288, OTEP-296, OTEP-313, OTEP-320, OTEP-170, OTEP-369, OTEP-368, OTEP-334, OTEP-327, OTEP-314, OTEP-362, OTEP-363, OTEP-367
 
-**Backlog (25+1 To Do):** OTEP-87, OTEP-496, OTEP-406, OTEP-386, OTEP-439, OTEP-284, OTEP-440, OTEP-441, OTEP-283, OTEP-131, OTEP-289, OTEP-404, OTEP-328, OTEP-329, OTEP-348, OTEP-358 (Michelle), OTEP-392, OTEP-393, OTEP-403, OTEP-127 (Michelle), OTEP-427 (Michelle), OTEP-444, OTEP-483, OTEP-484, OTEP-485 + OTEP-445 (To Do)
+**Backlog (23):** OTEP-87, OTEP-496, OTEP-406, OTEP-386, OTEP-439, OTEP-284, OTEP-440, OTEP-441, OTEP-283, OTEP-131, OTEP-289, OTEP-404, OTEP-328, OTEP-329, OTEP-348, OTEP-358 (Michelle), OTEP-392, OTEP-393, OTEP-403, OTEP-444, OTEP-483, OTEP-484, OTEP-485 · **To Do (1):** OTEP-445
 
-**PM-owned In Progress:** OTEP-397 (upload spike, Michelle)
+**PM-owned In Progress:** OTEP-397 (upload spike), OTEP-127 (ringfencing display — creation/criteria stays in OTG), OTEP-427 (ingestion logic tighten) — all Michelle. ⚠️ 3 In Progress at once = WIP overload; land or park one.
 
-**PM-owned Backlog:** OTEP-358 (nil-date spike), OTEP-127 (ringfencing display — creation/criteria stays in OTG), OTEP-427 (ingestion logic tighten)
+**PM-owned Backlog:** OTEP-358 (nil-date spike)
 
 ---
 
@@ -114,7 +114,7 @@
 
 ## Scope decisions
 
-- (2026-06-04) **Plan of record = Pow Hwee's "Planning draft for sprint 3 and after"** (Confluence, PSD-OTEP) — adopted as the team's S2–S6 shape. **Amendment:** native apply = R1, not an S4 spike (MVP apply = FormSG redirect, OTEP-319). S4 dates corrected to **15–26 Jun** (Sprint 34618, planning ceremony 14 Jun, engineers start 15 Jun). See decisions-log + [adoption reconciliation](../../PM-OS/outputs/analyses/2026-06-04-adopt-powhwee-plan-reconciliation.md).
+- (2026-06-04) **Plan of record = Pow Hwee's "Planning draft for sprint 3 and after"** (Confluence, PSD-OTEP) — adopted as the team's S2–S6 shape. **Amendment:** native apply = R1, not an S4 spike (MVP apply = FormSG redirect, OTEP-319). S4 dates **15–28 Jun** (Sprint 34618, planning ceremony 14 Jun, engineers start 15 Jun). See decisions-log + [adoption reconciliation](../../PM-OS/outputs/analyses/2026-06-04-adopt-powhwee-plan-reconciliation.md).
 - (2026-05-29) **OTG sync cadence: one-time port only** — no ongoing automated sync. Pilot agencies driven to adopt Compass directly. See D-016. Resolves open question from Sprint 3 Planning.
 - (2026-05-28) **Design lock: Wednesday 3 June** (D-013)
 - (2026-05-28) **OTG competency migration: file ingestion, not live API** (D-010) — Fanxu owns Sprint 3 one-time bulk import
@@ -137,4 +137,4 @@
 
 ---
 
-*Updated: 2026-06-17 (stale-check). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE 15–28 Jun. S4: 11 In Progress, 8 QA, 20 Done, 25 Backlog + 1 To Do. 65 issues total. New: OTEP-499 (upload refactor, Hao Eng), OTEP-500 (PostHog tracking epic, Backlog), OTEP-502 (opportunity PostHog tracking, child of OTEP-500, Backlog).*
+*Updated: 2026-06-19 (stale-check — OTEP-127/427 Backlog→In Progress per live Jira; OTEP-505 added to In Progress; counts 11→14 IP, 25→23 Backlog. PM WIP overload flagged). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE 15–28 Jun. S4: 14 In Progress, 8 QA, 20 Done, 23 Backlog + 1 To Do. Prior: 2026-06-18 (S4 date residue; OTEP-499/500/502 added).*

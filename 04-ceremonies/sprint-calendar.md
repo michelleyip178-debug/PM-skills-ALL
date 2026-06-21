@@ -19,7 +19,7 @@
 | S01 | Development | Mon 04 May – Fri 15 May | Yes |
 | S02 | Development | Mon 18 May – Fri 29 May | Yes |
 | S03 | Development | Mon 01 Jun – Fri 12 Jun | Yes |
-| S04 | Development | Mon 15 Jun – Fri 26 Jun | No (async check-in) |
+| S04 | Development | Mon 15 Jun – Fri 28 Jun | ⚠️ Planned: No (async check-in) — but a retro is booked on the calendar Fri 19 Jun 16:00. Confirm format. |
 | S05 | Development | Mon 29 Jun – Fri 10 Jul | Yes |
 | S06 | Development | Mon 13 Jul – Fri 24 Jul | No (async check-in) |
 | S07 | Development | Mon 27 Jul – Fri 07 Aug | Yes |

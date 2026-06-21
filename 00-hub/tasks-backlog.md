@@ -13,7 +13,7 @@ For scoping gaps and missing stories, see [scoping-gaps-tracker.md](../03-storie
 - [ ] Pull FormSG baseline submission volumes — needed to measure North Star metric (channel migration >= 50%)
 - [ ] Draft launch readiness checklist — what needs to be true before go-live
 - [ ] Identify pilot officer cohort for UAT — MVP-6 confirmed: PSD, ESG, MDDI, URA, MCCY, CAAS (~5,400 officers), onboarded in staggered pairs (D 2026-06-02)
-- [ ] Security review (VAPT) submission — confirm monthly cycle dates and lead time (VAPT must start **early Aug** per squad sync 2026-06-02)
+- [ ] Security review (VAPT) submission — confirm monthly cycle dates and lead time (VAPT/Security **21 Sep – 16 Oct**, confirmed 2026-06-05 — open-item #39; build VAPT-ready by 21 Sep, Feature Freeze 21 Aug)
 
 ## Process / Operations
 
@@ -37,4 +37,4 @@ For scoping gaps and missing stories, see [scoping-gaps-tracker.md](../03-storie
 
 ---
 
-*Last reviewed: 2026-06-02 (pilot cohort → MVP-6, VAPT → early Aug)*
+*Last reviewed: 2026-06-18 (VAPT early Aug → 21 Sep–16 Oct per #39). Prior: 2026-06-02 (pilot → MVP-6).*

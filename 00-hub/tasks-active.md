@@ -9,7 +9,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 4 W1 (15–28 Jun) — reconcile S4 board, OTG ingestion unblocks (v3 ACs, 4-cat mapping to Xian Zhang). ~~Rama interview on upload module scope~~ ✅ Done 15 Jun. July SteerCo deliverables (transition plan, North Star brief, gap analysis) still have zero momentum — must start this sprint. *(Updated 2026-06-17)*
+**Theme:** Sprint 4 W1 (15–28 Jun) — reconcile S4 board, OTG ingestion unblocks (v3 ACs, 4-cat mapping to Xian Zhang). ~~Rama interview on upload module scope~~ ✅ Done 15 Jun. July SteerCo deliverables (transition plan, North Star brief, gap analysis) are owned by other teams (for-info), NOT Michelle — corrected 2026-06-19. Michelle's SteerCo job = co-prep the consolidated-narrative demo with Imelda/Rama/Pow Hwee. *(Updated 2026-06-19)*
 
 ---
 
@@ -31,7 +31,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 > 🎯 **SPRINT 4 & 5 GATES (added 2026-06-04)** — what each sprint needs from *Michelle specifically*. Plan-of-record = [Pow Hwee's Confluence plan](https://sgtechstack.atlassian.net/wiki/spaces/OTEP/pages/2293796526/Planning+draft+for+sprint+3+and+after) (adopted 2026-06-04, native apply→R1). See [S4/S5 reconciliation](../../../PM-OS/outputs/analyses/2026-06-04-adopt-powhwee-plan-reconciliation.md).
 >
-> **Sprint 4 (15–26 Jun) — goal agreed at planning 2026-06-11:**
+> **Sprint 4 (15–28 Jun) — goal agreed at planning 2026-06-11:**
 > - [x] ~~**Lock the Sprint 4 goal**~~ — ✅ Done 2026-06-11. Goal: complete, usable listing experience — search, filter, sort, data currency.
 > - [ ] **Fix OTEP-87 AC conflict in Jira** — FormSG vs C@G deep-link; Pow Hwee flagged ×2. Before S4 starts (Mon 15 Jun).
 > - [ ] **Call OTEP-127 + OTEP-130 in-or-out** — both on S4 board but un-contracted. Flag "unknown" or pull.
@@ -56,7 +56,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 > - **🟡 P3 (whenever):** Diana loop-in + stakeholder file · ~~OKR doc → NotebookLM~~ (killed) · clean inbox (15-min timebox)
 > - **🗓️ Deferred out of June:** Cybersecurity quiz (Dec) · PIM risk assessment (post-feature-freeze)
 
-- [ ] **Send ARK request email for Jobelle** — ⚠️ due before Wed 10 Jun. Ad-hoc, added 2026-06-08.
+- [x] **Send ARK request email for Jobelle** — ✅ Done (confirmed 2026-06-19).
 - [x] **Review monthly progress report for OTG** — ~~due before Wed 10 Jun~~ **Delegated to Jobelle 2026-06-17.** Jobelle to own going forward.
 - [x] **Set up Working Level deck for WD's update** — ✅ Done 2026-06-08.
 - [ ] ~~**Email DDs on PSC — send today (Fri 29 May)**~~ — ⚠️ **STALE (LNO 2026-06-02): deadline 4 days past. Verify it was sent, then close. If not sent, it's likely moot.**
@@ -152,4 +152,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-06-17 — stale-check. Theme updated: Rama upload sync done, 5-cat → 4-cat.*
+*Updated: 2026-06-18 — stale-check. S4 date 15–26 → 15–28 Jun (line 34 residue). Prior: Rama upload done, 5-cat → 4-cat (06-17).*
