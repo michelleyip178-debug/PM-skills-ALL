@@ -9,7 +9,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 4 W1 (15–28 Jun) — reconcile S4 board, OTG ingestion unblocks (v3 ACs, 4-cat mapping to Xian Zhang). ~~Rama interview on upload module scope~~ ✅ Done 15 Jun. July SteerCo deliverables (transition plan, North Star brief, gap analysis) are owned by other teams (for-info), NOT Michelle — corrected 2026-06-19. Michelle's SteerCo job = co-prep the consolidated-narrative demo with Imelda/Rama/Pow Hwee. *(Updated 2026-06-19)*
+**Theme:** Sprint 4 W2 (22–28 Jun) — reconcile S4 board, OTG ingestion unblocks (v3 ACs, 4-cat mapping to Xian Zhang). ~~Rama interview on upload module scope~~ ✅ Done 15 Jun. July SteerCo deliverables (transition plan, North Star brief, gap analysis) are owned by other teams (for-info), NOT Michelle — corrected 2026-06-19. Michelle's SteerCo job = co-prep the consolidated-narrative demo with Imelda/Rama/Pow Hwee. *(Updated 2026-06-19)*
 
 ---
 
@@ -152,4 +152,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-06-18 — stale-check. S4 date 15–26 → 15–28 Jun (line 34 residue). Prior: Rama upload done, 5-cat → 4-cat (06-17).*
+*Updated: 2026-06-24 — stale-check. Jira MCP unavailable; file-only check. Engineering In Progress section reflects Sprint 3 state (live 2026-06-09) — use sprint-status.md for current S4 counts. Prior: 2026-06-23 (W1→W2 update).*

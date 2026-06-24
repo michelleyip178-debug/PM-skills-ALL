@@ -10,7 +10,19 @@
 - **Sprint number:** **Sprint 3 closed (12 Jun). Sprint 4 active from Mon 15 Jun.**
 - **Sprint 2:** closed (Sprint 34616) — 6 stories Done at close.
 - **Sprint 3 dates:** 2–14 Jun 2026 (Pathfinder Sprint 3 / Sprint 34617). Final state: 23 Done, 9 in QA at close (carry-in to S4), 4 Backlog carry-in.
-- **Sprint 4 dates:** 15–28 Jun 2026. Goal: complete, usable listing experience — search, filter, sort, data currency.
+- **Sprint 4 dates:** 15–26 Jun 2026 (closes Fri 26 Jun). Goal: complete, usable listing experience — search, filter, sort, data currency.
+
+**Confirmed sprint schedule (updated 2026-06-23):**
+
+| Sprint | Dates | Notes |
+|--------|-------|-------|
+| S5 | 29 Jun – 12 Jul | |
+| S6 | 13 Jul – 26 Jul | |
+| S7 | 27 Jul – 9 Aug | |
+| S8 | 11–21 Aug | UAT starts 11 Aug (Profile + Opportunities modules) |
+| S9 | 24 Aug – 4 Sep | UAT continues (remaining modules from 17 Aug); dev ends 4 Sep |
+
+**Post-dev timeline:** Code freeze → VAPT 7 Sep–16 Oct → Deploy 19–23 Oct → Soft launch 26–30 Oct → **First release: week of 2 Nov**
 
 ## Sprint goal
 **Sprint 2:** By end of Sprint 2, an officer can open OTEP, see every published OTG opportunity on a listing page (newest first), and click into a detail page for any opportunity — proving the Listing → Detail end-to-end journey works.
@@ -137,4 +149,4 @@
 
 ---
 
-*Updated: 2026-06-19 (stale-check — OTEP-127/427 Backlog→In Progress per live Jira; OTEP-505 added to In Progress; counts 11→14 IP, 25→23 Backlog. PM WIP overload flagged). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE 15–28 Jun. S4: 14 In Progress, 8 QA, 20 Done, 23 Backlog + 1 To Do. Prior: 2026-06-18 (S4 date residue; OTEP-499/500/502 added).*
+*Updated: 2026-06-24 (timeline update — S4 close corrected to Fri 26 Jun; S5–S9 confirmed dates added; post-dev schedule locked: UAT 11 Aug–4 Sep, VAPT 7 Sep–16 Oct, deploy 19–23 Oct, soft launch 26–30 Oct, first release 2 Nov). Prior: 2026-06-19 (stale-check — OTEP-127/427 Backlog→In Progress per live Jira; OTEP-505 added; counts 11→14 IP, 25→23 Backlog). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE 15–26 Jun. S4: 14 In Progress, 8 QA, 20 Done, 23 Backlog + 1 To Do.*
