@@ -186,7 +186,7 @@ Officers struggle to identify which competencies to develop and subsequently tak
 
 **Systems:**
 - POCDEX — officer identity (employmentID, primary position, job grade)
-- OTG Role Profile Bank — 750+ role profiles across ~17 job families
+- OTG Role Profile Bank — 750+ role profiles across 27 job families (HR source, confirmed 2026-06-25)
 - OTG Competency Bank — ~938 codes (WOG FC bank ~539 + agency-level ~400)
 - OTG self-assessed competencies — export/import only, no API
 - HRPS/Cumulus — designation field for role naming (WD to confirm availability)
@@ -201,9 +201,9 @@ Officers struggle to identify which competencies to develop and subsequently tak
 ### 11.3 Data Audit
 
 **Role Profiles:**
-- OTG Central Role Profiles Bank: 750+ complete profiles across ~17 job families + agency-requested additions
+- OTG Central Role Profiles Bank: 750+ complete profiles across 27 job families + agency-requested additions
 - Each profile includes: job family, function, role level (needs grade mapping), Competency ID, competency name, skillsID (= WOG FC), skills name, proficiency levels
-- 7 job families created by Functional Leaders (cross-agency); agencies may create their own if FL profiles not relevant
+- 27 confirmed job families (HR source, confirmed 2026-06-25): Arts & Culture, Education & Skills Development, Emergency Preparedness & Response, Environment & Resources, Finance, Governance Risk & Controls, Human Resource, Industry & Sector Development, Infocomm Technology & Smart Systems, Internal Audit, International Relations, Land & Estate Management, Legal, Organisation Development, Planning, Policy & Planning, Procurement, Programme & Project Management, Programme Evaluation, Public Communications, Regulatory, Research & Innovation, Science Tech & Engineering, Service Delivery, Social & Community Services, Trade & Economy, Urban & Physical Planning
 - Grade mapping: "Role Level" in OTG Central Role Profiles Bank → MX levels (via Proxy & Job Grade Mapping file)
 
 **Competency Bank:**

@@ -20,33 +20,52 @@
 
 ## Acceptance Criteria
 
-### Eligible officer (default detail experience)
+**AC1 — Eligible officer: page renders normally**
 
-1. When an eligible officer views a ringfenced opportunity, the detail page renders normally with no additional eligibility notice. The Apply CTA is shown as standard.
-2. For ringfenced Internal Jobs only, a subtle indicator is shown (e.g. "Available to you") to acknowledge the officer's eligibility without being intrusive. Design treatment to be confirmed by Amber.
+Given an eligible officer views a ringfenced opportunity detail page,
+When the page loads,
+Then the detail page renders as standard — no eligibility indicator or additional notice is shown.
+The Apply CTA is visible.
 
-### Ineligible officer — arrives via direct URL or shared link
+**AC2 — Ineligible officer via direct link: ineligibility notice shown**
 
-3. When an officer who is not eligible for a ringfenced opportunity lands on its detail page (e.g. via a shared URL, EDM, or bookmark), the page loads but displays a clear ineligibility notice: "This opportunity is not available to you."
-4. The Apply CTA is hidden. No application path is shown.
-5. Below the notice, the page surfaces up to 3 alternative opportunities the officer is eligible for, drawn from the live listing. If no alternatives exist, show the standard empty state copy.
-6. A link back to the full listing is always visible.
+Given an officer who is not eligible for a ringfenced opportunity arrives via a direct URL, shared link, or EDM,
+When the detail page loads,
+Then a clear ineligibility notice is displayed per Amber's confirmed design.
+The notice does not block the rest of the page content from loading.
 
-### POCDEX unavailable (fallback)
+**AC3 — Ineligible officer: Apply CTA is hidden**
 
-7. If POCDEX data cannot be resolved at the time of the detail page load (lookup failure), the page renders normally without an eligibility indicator. The system does not block access on a failed lookup — degrade silently.
+Given an ineligible officer is on the ringfenced opportunity detail page,
+When the page renders,
+Then the Apply CTA is not shown. No application path is available.
 
-### Unauthenticated access
+**AC4 — Ineligible officer: link back to listing is shown**
 
-8. An unauthenticated officer accessing any opportunity detail page via direct URL is redirected to login first, then returned to the original URL after authentication.
+Given an ineligible officer is on the ringfenced opportunity detail page,
+When the page renders,
+Then a link back to the full opportunity listing is visible so the officer can continue browsing.
+
+**AC5 — POCDEX unavailable: fail open**
+
+Given POCDEX data cannot be resolved at the time of the detail page load,
+When an officer lands on the page,
+Then the page renders normally as if the officer is eligible. Access is not blocked on a failed lookup. No error is shown to the officer.
+
+**AC6 — Unauthenticated officer: redirect to login then return**
+
+Given an unauthenticated officer accesses an opportunity detail page via direct URL,
+When they land on the page,
+Then they are redirected to login. After successful authentication, they are returned to the original URL.
 
 ---
 
 ## Out of Scope (Sprint 5)
 
-- Competency match ratio on the detail page — deferred to R1
+- Eligible indicator ("Available to you") on the detail page — not in scope, page renders normally for eligible officers
+- Alternative opportunity recommendations for ineligible officers — not in scope
 - Agency/grade/scheme-level eligibility display (e.g. "Open to MX officers only") — R1+
-- Personalised alternative opportunity recommendations — basic eligibility match only
+- Competency match ratio on the detail page — OTEP-570 (S5 separate story)
 
 ---
 
@@ -68,9 +87,8 @@
 
 ## Open questions (resolve before Sprint 5 planning)
 
-1. What is the eligible indicator treatment on the detail page? Amber to propose — AC2 is intentionally loose on visual spec.
-2. How are "alternative opportunities" selected for the ineligible state? Pure eligibility filter, or also ranked by relevance? Recommend eligibility-only for MVP.
-3. Does the EDM deep-link carry a `source` param for analytics tracking? If yes, confirm with comms/EDM owner.
+1. Does the EDM deep-link carry a `source` param for analytics tracking? If yes, confirm with comms/EDM owner.
+2. Ineligibility notice copy ("This opportunity is not available to you") — confirm BO sign-off received (#43) before dev starts.
 
 ---
 
