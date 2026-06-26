@@ -59,9 +59,7 @@
 
 **Backlog (23):** OTEP-87, OTEP-496, OTEP-406, OTEP-386, OTEP-439, OTEP-284, OTEP-440, OTEP-441, OTEP-283, OTEP-131, OTEP-289, OTEP-404, OTEP-328, OTEP-329, OTEP-348, OTEP-358 (Michelle), OTEP-392, OTEP-393, OTEP-403, OTEP-444, OTEP-483, OTEP-484, OTEP-485 · **To Do (1):** OTEP-445
 
-**PM-owned In Progress:** OTEP-397 (upload spike), OTEP-127 (ringfencing display — creation/criteria stays in OTG), OTEP-427 (ingestion logic tighten) — all Michelle. ⚠️ 3 In Progress at once = WIP overload; land or park one.
-
-**PM-owned Backlog:** OTEP-358 (nil-date spike)
+**PM-owned In Progress:** OTEP-427 (ingestion logic tighten), OTEP-358 (nil-date spike) — Michelle. ⚠️ 2 In Progress. OTEP-397 ✅ Done. OTEP-127 ✅ Done (ringfencing display contract).
 
 ---
 
@@ -149,4 +147,4 @@
 
 ---
 
-*Updated: 2026-06-24 (timeline update — S4 close corrected to Fri 26 Jun; S5–S9 confirmed dates added; post-dev schedule locked: UAT 11 Aug–4 Sep, VAPT 7 Sep–16 Oct, deploy 19–23 Oct, soft launch 26–30 Oct, first release 2 Nov). Prior: 2026-06-19 (stale-check — OTEP-127/427 Backlog→In Progress per live Jira; OTEP-505 added; counts 11→14 IP, 25→23 Backlog). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE 15–26 Jun. S4: 14 In Progress, 8 QA, 20 Done, 23 Backlog + 1 To Do.*
+*Updated: 2026-06-25 (stale-check — OTEP-127 + OTEP-397 Done; OTEP-358 In Progress not Backlog; counts 14 IP→12, 8 QA→10, 20 Done→29). Prior: 2026-06-24 (timeline update — S4 close Fri 26 Jun; S5–S9 dates; VAPT 7 Sep–16 Oct; first release 2 Nov). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE 15–26 Jun. S4: 12 In Progress, 10 QA, 29 Done, 1 To Do (live 2026-06-25).*

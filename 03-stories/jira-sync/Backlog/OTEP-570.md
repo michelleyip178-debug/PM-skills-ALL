@@ -73,6 +73,17 @@ Given an officer views the "What you'll develop" section,
 When they interact with any competency item,
 Then there is no edit action available. The officer cannot update their profile from the detail page.
 
+**AC9 — Competency profile nudge banner shown on detail page**
+
+Given an officer views a Gig or STIP detail page,
+When the "What you'll develop" section renders,
+Then a banner is shown encouraging the officer to keep their competency profile current.
+
+If the officer has no competency profile, the banner copy is a clear CTA to add competencies so they can see how they match against this opportunity.
+If the officer has a competency profile, the banner copy is a softer nudge — acknowledging their existing profile while encouraging them to keep it up to date for accurate matches.
+
+The banner is read-only. It does not provide an inline edit path — profile editing is R1.
+
 ---
 
 ## Out of Scope (MVP)
@@ -89,7 +100,7 @@ Then there is no edit action available. The officer cannot update their profile 
 |---|---|---|---|
 | 1 | BE | Confirm competency list in Gig/STIP detail API response | Verify field is returned by opportunity detail endpoint; add if missing |
 | 2 | BE | Expose officer competency profile via OTEP API | Shared with OTEP-336 (listing card); build once, used in both |
-| 3 | FE | Render "What you'll develop" section — static | Competency tags on detail page, no match states; can ship before subtask 2 is done |
+| 3 | FE | Render "What you'll develop" section — static | Competency tags on detail page, no match states; can ship before subtask 2 is done. **Layout note:** competency section renders before time commitment section (decision: S5 planning 2026-06-25) |
 | 4 | FE | Add match state computation and visual treatment | Intersect opportunity competencies vs officer profile; render matched/unmatched; sort matched first |
 | 5 | FE | Loading and fallback states | Loading skeleton while profile fetches; degrade to unmatched-only display if profile is empty or errors |
 | 6 | QA | Unit tests | Cover: all matched, none matched, partial match, empty profile, profile load failure, no competency data (section hidden) |

@@ -25,11 +25,12 @@ When their competency profile is successfully retrieved,
 Then each Gig and STIP card shows a match count (e.g. "3 of 5 competencies match your profile").
 No proficiency level is compared — presence only.
 
-**AC2 — No match indicator when officer has no profile**
+**AC2 — No competency profile: no match indicator + update banner shown**
 
 Given an officer has no competency data in their POCDEX profile,
-When they view the listing,
-Then Gig and STIP cards render without a competency match count. No error is shown. The card is otherwise unchanged.
+When they view the opportunity listing,
+Then Gig and STIP cards render without a competency match count.
+A banner is shown at the top of the listing directing the officer to update their competency profile so they can see match signals.
 
 **AC3 — No match indicator when profile fails to load**
 

@@ -1,6 +1,6 @@
-# OTEP-437: C@G ingestion: store job category directly (no translation needed)
+# OTEP-437: Job category filter shows consistent labels across all opportunity sources
 
-**Type:** Chore
+**Type:** Story
 
 **Status:** Backlog
 
@@ -8,100 +8,91 @@
 
 **Story Points:** TBC at grooming
 
-**Note:** Can be bundled with Story 4 (OTG → C@G Indus translation, OTEP-ingestion-v3-rule-updates.md) or tracked separately. Confirm at grooming — the C@G side is simpler, so bundling likely makes more sense.
+**Note:** Bundle with Story 4 (OTG → WOG, OTEP-ingestion-v3-rule-updates.md) at grooming — same build, same sprint.
 
 ---
 
-## Why this exists
-
-CareerCompass uses C@G's 33 job categories as the filter taxonomy (decision: OTEP-289, 2026-06-25). C@G already tags each opportunity with an `Indus` code — the canonical value we want to show in the filter. There's no translation step needed.
-
-This story makes sure we store that value cleanly at ingestion, so C@G opportunities show up in the right filter bucket from day one. OTG opportunities are the ones that need a translation map (Story 4 / OTEP-ingestion-v3-rule-updates). C@G is a straight passthrough.
-
----
-
-## Story
+## User Story
 
 As an officer browsing CareerCompass,
-I want to filter opportunities by job category and see relevant C@G listings under the right label,
+I want to filter opportunities by job category and see all relevant listings under the right label — regardless of whether they came from C@G or OTG,
 so that I don't miss opportunities just because they came from a different source.
 
 ---
 
 ## Acceptance Criteria
 
-**AC1 — C@G opportunities appear under the correct job category filter**
+**AC1 — C@G opportunities appear under the correct WOG job category filter**
 
 Given an officer is on the opportunity listing page,
-When they filter by a job category (e.g. Healthcare),
+When they filter by a job category (e.g. Finance, Healthcare, Legal, Education & Skills Development),
 Then they see C@G opportunities tagged with that category in the results.
 
 **AC2 — C@G and OTG opportunities appear together under the same filter label**
 
-Given an officer filters by Education,
+Given an officer filters by a WOG job category,
 When results load,
-Then they see both C@G Education listings and OTG Education & Skills Development listings in the same results — with no indication of which pipeline each came from.
+Then C@G and OTG opportunities in that category appear together in the same results list. No source label or distinction is shown.
 
-**AC3 — Opportunities with a missing job category still appear**
+**AC3 — C@G opportunities without a job category still appear**
 
-Given a C@G listing arrives with no job category,
-When the officer browses or filters by Others,
-Then the listing is visible — it is not silently dropped from the results.
+Given a C@G listing has no job category,
+When the officer browses the listing without a filter applied,
+Then the opportunity is still visible. It is not silently dropped from the results.
 
-**AC4 — An unrecognised job category does not break the listing**
+**AC4 — An unrecognised C@G job category does not cause the opportunity to disappear**
 
-Given C@G introduces a new job category code not yet in the system,
-When the officer browses the opportunity listing,
-Then the listing appears under Others and the officer can still find it — no error, no missing record.
-
----
-
-## C@G job category reference (35 codes, 33 active)
-
-| Code | Description | Live listings |
-|---|---|---|
-| 0001 | Accounting, Audit, Finance | high |
-| 0002 | Administration Support | 82 |
-| 0003 | Arts/Cultural/Heritage | 7 |
-| 0004 | Building and Estate Management | 65 |
-| 0005 | Conciliation/Mediation | 4 |
-| 0006 | Conciliation/Mediation and Statistics | ~0 |
-| 0007 | Corporate Strategy/Top Management | 17 |
-| 0008 | Customer Service | 32 |
-| 0009 | Economics/Statistics | 33 |
-| 0010 | Education | high |
-| 0011 | Enforcement | high |
-| 0012 | Engineering | high |
-| 0013 | Foreign Service | 10 |
-| 0014 | Healthcare | 31 |
-| 0015 | Home Team Uniformed Services | 16 |
-| 0016 | Human Resources | high |
-| 0017 | InfoComm, Technology, New Media Communications | high |
-| 0018 | International Relations | high |
-| 0019 | Investigation | ~5 |
-| 0020 | Landscape/Horticulture | 7 |
-| 0021 | Law/Legal Services | 23 |
-| 0022 | Marketing/Business Development | high |
-| 0023 | Occupational Safety and Health | 6 |
-| 0024 | Organisation Development | high |
-| 0025 | Others | — |
-| 0026 | Policy Formulation | high |
-| 0027 | Public Relations/Corporate Communications/Psychology | high |
-| 0028 | Public Service Leadership | 2 |
-| 0029 | Research and Analysis | high |
-| 0030 | Sciences (e.g. life sciences, bio-technology etc.) | ~10 |
-| 0031 | Singapore Armed Forces | 0 |
-| 0032 | Social and Community Development | high |
-| 0033 | Statistics | ~5 |
-| 0034 | Training and Development | ~15 |
-| 0035 | Translators/Interpreters | 0 |
-
-Source: `cag_field_set.json` (SAP OData v2). Listing counts as of May 2026.
+Given C@G introduces a job category not yet mapped to a WOG label,
+When the officer browses the listing,
+Then the opportunity still appears — it is not missing from results and does not cause an error.
 
 ---
 
-## Not in scope
+## Job Category Mapping Reference
 
-- OTG job family → C@G Indus translation (Story 4 / OTEP-ingestion-v3-rule-updates.md)
-- The filter UI itself (OTEP-318)
-- ref_job_family reference table (OTEP-333)
+Both C@G and OTG translate to a WOG filter label at ingestion. The table below shows what maps to each WOG filter. For engineering use — officers see only the WOG label.
+
+C@G source: `cag_field_set.json` (SAP OData v2). OTG source: job_family field in OTG Excel import. Volumes as of May 2026.
+
+| WOG Filter Label | C@G Code(s) | C@G Label(s) | OTG Job Family |
+|---|---|---|---|
+| Arts & Culture | 0003 | Arts/Cultural/Heritage | Arts & Culture; Library & Archives |
+| Corporate Administration | 0002, 0025 | Administration Support; Others | Corporate Administration |
+| Education & Skills Development | 0010, 0034 | Education; Training and Development | Academic Operations; Education & Skills Devt |
+| Emergency Preparedness & Response | 0015, 0031 | Home Team Uniformed Services; Singapore Armed Forces (inactive) | Emergency Preparedness & Response |
+| Environment & Resources | 0020 | Landscape/Horticulture | Environment & Resources |
+| Finance | 0001 | Accounting, Audit, Finance | Finance and Accounting |
+| Governance, Risk & Controls | — | — | Governance, Risk & Controls |
+| Healthcare | 0014 | Healthcare | — |
+| Human Resource | 0016 | Human Resources | Human Resources |
+| Industry & Sector Development | — | — | Industry & Sector Development; Industry & Sector Devt |
+| Infocomm Technology & Smart Systems | 0017 | InfoComm, Technology, New Media Communications | Infocomm Tech & Smart Systems; Infocomm Technology & Smart Systems |
+| Internal Audit | — | — | Internal Audit |
+| International Relations | 0013, 0018 | Foreign Service; International Relations | Int'l Relations |
+| Land & Estate Management | 0004 | Building and Estate Management | Land & Estate Mgmt; Land Sales Admin |
+| Legal | 0005, 0006 (inactive), 0021 | Conciliation/Mediation; Conciliation/Mediation and Statistics; Law/Legal Services | Legal |
+| Organisation Development | 0024, 0028 | Organisation Development; Public Service Leadership | Corporate Development; Organisation Devt |
+| Partnership & Engagement | — | — | Citizen Engagement; Partnership & Engagement |
+| Planning | 0007 | Corporate Strategy/Top Management | Planning |
+| Policy & Planning | 0026 | Policy Formulation | Policy & Planning |
+| Procurement | — | — | Procurement |
+| Programme & Project Management | — | — | Programme & Project Mgmt |
+| Programme Evaluation | — | — | Programme Eval |
+| Public Communications | 0022, 0027, 0035 (inactive) | Marketing/Business Development; Public Relations/Corporate Communications/Psychology; Translators/Interpreters | Public Comms; Strategic Communications |
+| Regulatory | 0011, 0019, 0023 | Enforcement; Investigation; Occupational Safety and Health | Compliance & Enforcement; Enforcement; Regulatory |
+| Research & Innovation | 0009, 0029, 0033 | Economics/Statistics; Research and Analysis; Statistics | Research; Research & Innovation |
+| Science, Tech & Engineering | 0012, 0030 | Engineering; Sciences (life sciences, bio-technology) | Science, Tech & Engrg; Technical Capbability |
+| Service Delivery | 0008 | Customer Service | Service Delivery |
+| Social & Community Services | 0032 | Social and Community Development | Social & Community Services |
+| Trade & Economy | — | — | Trade & Economy |
+| Urban & Physical Planning | — | — | Development Services and Planning; Urban & Physical Planning; Urban Planning and Design |
+
+Full mapping reference and BO decision log: `context-library/decisions/wog-taxonomy-mapping.md`
+
+---
+
+## Out of Scope
+
+- OTG job category mapping (Story 4 / OTEP-ingestion-v3-rule-updates.md)
+- The filter UI and filter labels (OTEP-318)
+- Job category reference table (OTEP-333)
