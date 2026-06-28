@@ -1,7 +1,7 @@
 # OTEP-392: chore: implement Keycloak federated logout in otep-web
 
-**Status:** Backlog
-**Assignee:** N/A
+**Status:** QA
+**Assignee:** Thomas Huchedé
 **Story Points:** 2
 
 ---
@@ -21,3 +21,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-26*

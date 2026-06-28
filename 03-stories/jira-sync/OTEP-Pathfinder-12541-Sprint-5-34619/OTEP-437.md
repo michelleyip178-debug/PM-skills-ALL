@@ -4,9 +4,9 @@
 
 **Status:** Backlog
 
-**Assignee:** Léo Milbor (suggested)
+**Assignee:** N/A
 
-**Story Points:** TBC at grooming
+**Story Points:** 3
 
 **Note:** Bundle with Story 4 (OTG → WOG, OTEP-ingestion-v3-rule-updates.md) at grooming — same build, same sprint.
 
@@ -96,3 +96,5 @@ Full mapping reference and BO decision log: `context-library/decisions/wog-taxon
 - OTG job category mapping (Story 4 / OTEP-ingestion-v3-rule-updates.md)
 - The filter UI and filter labels (OTEP-318)
 - Job category reference table (OTEP-333)
+
+*Synced from Jira: 2026-06-26*

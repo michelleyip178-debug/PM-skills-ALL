@@ -22,3 +22,5 @@ _No subtasks._
 
 **Michelle Yip** (2026-06-11)
 Find where we can get the list of agencies icon.  BO mentioned that for sub-agencies like AgilePSD may want to have their own icon to represent their opportunities but this is out of MVP.
+
+*Synced from Jira: 2026-06-26*

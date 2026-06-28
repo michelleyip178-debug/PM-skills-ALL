@@ -2,9 +2,9 @@
 
 **Status:** Backlog
 
-**Assignee:** Unassigned
+**Assignee:** Léo Milbor
 
-**Story Points:** N/A
+**Story Points:** 3
 
 ---
 
@@ -24,4 +24,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-06-17*
+*Synced from Jira: 2026-06-26*

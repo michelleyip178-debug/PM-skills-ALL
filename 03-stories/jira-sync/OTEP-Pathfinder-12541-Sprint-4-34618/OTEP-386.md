@@ -1,7 +1,7 @@
 # OTEP-386: Officers clicks on tooltip link to view a page/popup on the different opportunity types 
 
 **Status:** Backlog
-**Assignee:** N/A
+**Assignee:** Thomas Huchedé
 **Story Points:** 2
 
 ---
@@ -23,3 +23,5 @@ As an officer who is new to CareerCompass, I want a quick explanation of what ea
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-26*

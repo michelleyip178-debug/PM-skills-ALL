@@ -93,3 +93,5 @@ Then they are redirected to login. After successful authentication, they are ret
 ---
 
 *Created 2026-06-05. Absorbs OTEP-133. Companion to OTEP-127 (listing ringfencing). Gates: same as OTEP-127 (WOG AD #26, POCDEX #31).*
+
+*Synced from Jira: 2026-06-26*

@@ -1,10 +1,10 @@
 # OTEP-127: [Spike] Define ringfencing display contract — OTG rules → CareerCompass listing
 
-**Status:** Backlog
+**Status:** Done
 
 **Assignee:** Michelle Yip
 
-**Story Points:** 2
+**Story Points:** 3
 
 ---
 
@@ -38,3 +38,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-26*

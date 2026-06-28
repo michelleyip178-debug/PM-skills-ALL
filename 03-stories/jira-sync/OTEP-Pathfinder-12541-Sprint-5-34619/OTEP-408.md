@@ -45,4 +45,4 @@
 - POCDEX read replica confirmed (#31)
 - OTEP-127 spike output reviewed and accepted
 
-*Synced from Jira: 2026-06-10*
+*Synced from Jira: 2026-06-26*

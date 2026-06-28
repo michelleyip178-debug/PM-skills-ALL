@@ -1,8 +1,8 @@
 # OTEP-496: Wire frontend search bar to backend api
 
-**Status:** Backlog
+**Status:** Done
 
-**Assignee:** Unassigned
+**Assignee:** Thomas Huchedé
 
 **Story Points:** N/A
 
@@ -26,4 +26,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-06-17*
+*Synced from Jira: 2026-06-26*

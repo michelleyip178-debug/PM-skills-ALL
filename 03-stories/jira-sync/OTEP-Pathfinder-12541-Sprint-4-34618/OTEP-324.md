@@ -1,10 +1,10 @@
 # OTEP-324: Implement OAuth 2.0 Refresh Token Rotation in NextAuth and Keycloak
 
-**Status:** QA
+**Status:** Done
 
 **Assignee:** Thomas Huchedé
 
-**Story Points:** N/A
+**Story Points:** 3
 
 ---
 
@@ -30,4 +30,4 @@ Testing in LOCAL:  Checked by adding console logs.  Issue When an access token e
 **Pow Hwee TAN (PSD)** (2026-05-28)
 AC is quite thin — "refresh token when expired" and "redirect to temp login page". Suggest expanding to cover: what triggers expiry detection (API 401? proactive check?), token rotation strategy (one-time use refresh tokens?), session lifetime expectations, and edge cases (concurrent tabs, token reuse after rotation).
 
-*Synced from Jira: 2026-06-17*
+*Synced from Jira: 2026-06-26*

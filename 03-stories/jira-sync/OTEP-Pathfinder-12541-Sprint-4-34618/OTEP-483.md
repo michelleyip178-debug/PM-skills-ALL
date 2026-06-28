@@ -2,7 +2,7 @@
 
 **Status:** Backlog
 **Assignee:** N/A
-**Story Points:** N/A
+**Story Points:** 3
 
 ---
 
@@ -24,3 +24,5 @@ No description provided.
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-26*

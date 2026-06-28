@@ -36,4 +36,4 @@
 - OTEP-408 (BE eligibility filter) — must be complete before FE can be built
 - OTEP-390 — Ringfenced detail page states (companion story)
 
-*Synced from Jira: 2026-06-10*
+*Synced from Jira: 2026-06-26*

@@ -108,3 +108,5 @@ The banner is read-only. It does not provide an inline edit path — profile edi
 **Parallelisation note:** Subtask 3 (static section) can start as soon as subtask 1 is confirmed. Subtask 4 depends on subtask 2. Thomas (FE) and Léo (BE) can work in parallel.
 
 **Dependency:** BE subtask 2 (officer profile endpoint) is shared with OTEP-336. Whichever story is picked up first should build the endpoint; the other story picks it up from there.
+
+*Synced from Jira: 2026-06-26*

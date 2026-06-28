@@ -1,6 +1,6 @@
 # OTEP-499: Refactoring upload flow to under opportunity
 
-**Status:** In Progress
+**Status:** Done
 
 **Assignee:** Hao Eng
 
@@ -22,4 +22,4 @@ TBC
 
 ---
 
-*Synced from Jira: 2026-06-17*
+*Synced from Jira: 2026-06-26*

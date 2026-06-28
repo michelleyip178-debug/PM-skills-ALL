@@ -1,6 +1,6 @@
 # Active Tasks
 
-Current sprint: **Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE from Mon 15 Jun.**
+Current sprint: **Sprint 4 CLOSED 26 Jun. Sprint 5 starts Sun 29 Jun.**
 Sprint 3 final state (2026-06-12): ~23 Done, 9 in QA carry-in (85/86/89/128/192/268/305/317/319), 4 Backlog carry-in. Sprint goal near-met (filters + apply + deep-link all reached QA). Sprint 4 goal: complete, usable listing experience — search, filter, sort, data currency.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
@@ -15,15 +15,13 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## In Progress
 
-**Engineering (Jira — live 2026-06-09):**
+**Engineering (Jira — live 2026-06-26):**
 
-*Sprint 3 Backlog (sprint goal — not yet picked up):* OTEP-86/317 (filters), OTEP-87/88/89 (C@G), OTEP-319 (FormSG redirect), OTEP-305 (login/logout), OTEP-348 (OTG scheduler), OTEP-324 (token rotation, Thomas), OTEP-349/351 (spikes), OTEP-350 (WOG AD, Fabian), OTEP-352 (POCDEX code table, Pow Hwee), **OTEP-358 (nil-date OTG spike, Michelle)**, OTEP-361 (ADR forum, Pow Hwee).
+*Sprint 4 In Progress (12):* OTEP-88 (C@G listing, Léo), OTEP-276 (design-system spike, Pow Hwee), OTEP-322 (Playwright, Rathika), OTEP-349 (competency spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-361 (ADR forum, Pow Hwee), OTEP-386 (ringfencing tooltip FE, Thomas), OTEP-405 (keyword search FE/BE, Thomas), OTEP-439 (ineligible states design, Amber), OTEP-495 (search backend, Thomas), OTEP-505 (CFT upload/webhook, Hao Eng), OTEP-539 (C@G background import, Léo).
 
-*Sprint 3 In Progress (Day 6):* OTEP-85 (cards/real OTG data, unassigned), OTEP-192 (OTG ingestion, Léo), OTEP-276 (design-system spike, Pow Hwee), OTEP-322 (Playwright, Rathika), OTEP-362 (BE closed opps, Thomas), OTEP-368 (session expiry, Thomas), OTEP-381 (FE filtering params, Thomas), OTEP-391 (virus scanning spike, Hao Eng).
+*Sprint 4 In QA (10):* OTEP-85 (listing cards), OTEP-86 (filters), OTEP-128 (detail page), OTEP-129 (open/closed), OTEP-268 (empty/error states), OTEP-284 (closing soon label), OTEP-305 (login/logout), OTEP-392 (federated logout), OTEP-406 (sort opportunities), OTEP-438 (admin view placeholder).
 
-*Carried-over In QA:* OTEP-128 (detail page), OTEP-268 (empty/error parent), OTEP-170 (base layout), OTEP-314 (detail page), OTEP-327 (detail w/ design system), OTEP-320 (replace mock endpoint), OTEP-325/326 (empty/error states), OTEP-303 (POCDEX field check), OTEP-332 (reference data repo), OTEP-334 (backend detail endpoint).
-
-*Newly Done since 05-29:* OTEP-267 (pagination), OTEP-313 (Léo, raw ingest).
+*Sprint 4 Done (31):* See sprint-status.md for full list.
 
 ---
 
@@ -60,7 +58,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 - [x] **Review monthly progress report for OTG** — ~~due before Wed 10 Jun~~ **Delegated to Jobelle 2026-06-17.** Jobelle to own going forward.
 - [x] **Set up Working Level deck for WD's update** — ✅ Done 2026-06-08.
 - [ ] ~~**Email DDs on PSC — send today (Fri 29 May)**~~ — ⚠️ **STALE (LNO 2026-06-02): deadline 4 days past. Verify it was sent, then close. If not sent, it's likely moot.**
-- [ ] **Prepare Jobelle handover** — Jobelle joins 3 Jun. Step 1: share Phoebe's copy first. Step 2: share Daniel's handover after 30–60 days (i.e. ~3 Jul–3 Aug).
+- [x] **Prepare Jobelle handover** — ✅ Complete. Jobelle operating independently as of 2026-06-26. Full 12-session 4-week plan delivered.
 - [x] **Follow up on session-notes test cases** — ✅ Done 2026-06-02.
 - [x] **Revert to Clarissa by 4 Jun — Malaysian NRIC + downstream OTG impact** — ✅ Done 2026-06-02. **Note:** Cumulus Phase 3 (open-item #36) production deadline (OTG ready for Malaysia ID by 6 Jul 2026) still stands — the 4 Jun reply was the near-term gate only.
 - [ ] **Design PostHog OKR + metric instrumentation** — Rama scheduling a call w/c 2 Jun to work through event taxonomy together. Attend and define metric definitions to measure OTEP OKRs and North Star. *(Squad-Sync 2026-05-26; updated 2026-05-29)*
@@ -152,4 +150,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-06-24 — stale-check. Jira MCP unavailable; file-only check. Engineering In Progress section reflects Sprint 3 state (live 2026-06-09) — use sprint-status.md for current S4 counts. Prior: 2026-06-23 (W1→W2 update).*
+*Updated: 2026-06-26 — stale-check. Sprint line S4 active→S4 closed. Jobelle handover marked done. Jira MCP unavailable; file-only check. Engineering In Progress section reflects Sprint 3 state (live 2026-06-09) — use sprint-status.md for current S4 counts. Prior: 2026-06-23 (W1→W2 update).*

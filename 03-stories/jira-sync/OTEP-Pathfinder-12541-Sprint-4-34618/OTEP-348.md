@@ -2,7 +2,7 @@
 
 **Status:** Backlog
 **Assignee:** N/A
-**Story Points:** N/A
+**Story Points:** 3
 
 ---
 
@@ -22,3 +22,5 @@ _No subtasks._
 
 **Rathika Ramalingam** (2026-06-05)
 Test Cases Document:
+
+*Synced from Jira: 2026-06-26*

@@ -1,7 +1,7 @@
 # OTEP-328: Integration with OpenTelemetry for otep-web
 
 **Status:** Backlog
-**Assignee:** N/A
+**Assignee:** Thomas Huchedé
 **Story Points:** 3
 
 ---
@@ -21,3 +21,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-26*

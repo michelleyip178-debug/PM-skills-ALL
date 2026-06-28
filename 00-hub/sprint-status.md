@@ -7,10 +7,11 @@
 ---
 
 ## Sprint details
-- **Sprint number:** **Sprint 3 closed (12 Jun). Sprint 4 active from Mon 15 Jun.**
+- **Sprint number:** **Sprint 4 closes TODAY (26 Jun). Sprint 5 starts Sun 29 Jun.**
 - **Sprint 2:** closed (Sprint 34616) — 6 stories Done at close.
 - **Sprint 3 dates:** 2–14 Jun 2026 (Pathfinder Sprint 3 / Sprint 34617). Final state: 23 Done, 9 in QA at close (carry-in to S4), 4 Backlog carry-in.
 - **Sprint 4 dates:** 15–26 Jun 2026 (closes Fri 26 Jun). Goal: complete, usable listing experience — search, filter, sort, data currency.
+- **Sprint 5 dates:** 29 Jun – 12 Jul 2026. 11 issues in sprint (1 Done, 10 Backlog). Goal (draft): ringfencing on listing + detail, competency match signal, agency icons, auth session persistence, job family filter.
 
 **Confirmed sprint schedule (updated 2026-06-23):**
 
@@ -46,20 +47,20 @@
 
 ---
 
-## Sprint 4 — ACTIVE (15–28 Jun 2026)
+## Sprint 4 — CLOSING TODAY (15–26 Jun 2026)
 
-> Source: OTEP-Pathfinder Sprint 4 (Sprint 34618) · OTEP-Core Sprint 4 (Sprint 34608). **Live pull: 2026-06-18.** Pathfinder: 50 issues (agile endpoint). Core: sprint active 16–25 Jun.
+> Source: OTEP-Pathfinder Sprint 4 (Sprint 34618). **Live pull: 2026-06-26.** 66 issues total.
 > Goal: Deliver a complete, usable opportunity listing experience — officers can search, filter, and sort opportunities, understand what each type means, and trust that the data they're seeing is current and accurate.
 
-**In Progress (14):** OTEP-88 (C@G listing), OTEP-482 (import C@G, Léo), OTEP-405 (keyword search), OTEP-495 (search backend, Thomas), OTEP-322 (Playwright, Rathika), OTEP-276 (design-system spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-349 (competency spike, Pow Hwee), OTEP-361 (ADR forum, Pow Hwee), OTEP-397 (OTG upload spike, Michelle), OTEP-499 (upload refactor, Hao Eng), OTEP-505 (CFT integration upload/webhook, Hao Eng), OTEP-127 (ringfencing, Michelle), OTEP-427 (ingestion logic, Michelle)
+**In Progress (12):** OTEP-88 (C@G listing, Léo), OTEP-405 (keyword search, Thomas), OTEP-495 (search backend, Thomas), OTEP-322 (Playwright, Rathika), OTEP-276 (design-system spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-349 (competency spike, Pow Hwee), OTEP-361 (ADR forum, Pow Hwee), OTEP-505 (CFT upload/webhook, Hao Eng), OTEP-539 (C@G background import, Léo), OTEP-386 (ringfencing tooltip, Amber), OTEP-439 (filter ineligible states, Amber)
 
-**In QA (8):** OTEP-86 (filters), OTEP-268 (empty/error states), OTEP-85 (listing cards), OTEP-305 (login/logout), OTEP-128 (detail page), OTEP-129 (open/closed before applying, Thomas), OTEP-324 (OAuth token rotation, Thomas), OTEP-438 (admin view placeholder, Hao Eng)
+**In QA (10):** OTEP-86 (filters), OTEP-268 (empty/error states), OTEP-85 (listing cards), OTEP-305 (login/logout), OTEP-128 (detail page), OTEP-129 (open/closed, Thomas), OTEP-284 (closing soon label, Thomas), OTEP-392 (federated logout, Thomas), OTEP-406 (sort opportunities, Thomas), OTEP-438 (admin view placeholder, Hao Eng)
 
-**Done (20):** OTEP-380, OTEP-381, OTEP-375, OTEP-374, OTEP-326, OTEP-325, OTEP-193, OTEP-288, OTEP-296, OTEP-313, OTEP-320, OTEP-170, OTEP-369, OTEP-368, OTEP-334, OTEP-327, OTEP-314, OTEP-362, OTEP-363, OTEP-367
+**Done (31):** OTEP-127 ✅, OTEP-170, OTEP-193, OTEP-288, OTEP-296, OTEP-313, OTEP-314, OTEP-320, OTEP-324, OTEP-325, OTEP-326, OTEP-327, OTEP-334, OTEP-358 ✅, OTEP-362, OTEP-363, OTEP-367, OTEP-368, OTEP-369, OTEP-374, OTEP-375, OTEP-380, OTEP-381, OTEP-397 ✅, OTEP-427 ✅, OTEP-440, OTEP-441, OTEP-482, OTEP-496, OTEP-499, OTEP-536
 
-**Backlog (23):** OTEP-87, OTEP-496, OTEP-406, OTEP-386, OTEP-439, OTEP-284, OTEP-440, OTEP-441, OTEP-283, OTEP-131, OTEP-289, OTEP-404, OTEP-328, OTEP-329, OTEP-348, OTEP-358 (Michelle), OTEP-392, OTEP-393, OTEP-403, OTEP-444, OTEP-483, OTEP-484, OTEP-485 · **To Do (1):** OTEP-445
+**Backlog (13):** OTEP-87, OTEP-131, OTEP-289, OTEP-328, OTEP-329, OTEP-348, OTEP-393, OTEP-403, OTEP-404, OTEP-444, OTEP-483, OTEP-484, OTEP-485
 
-**PM-owned In Progress:** OTEP-427 (ingestion logic tighten), OTEP-358 (nil-date spike) — Michelle. ⚠️ 2 In Progress. OTEP-397 ✅ Done. OTEP-127 ✅ Done (ringfencing display contract).
+**PM-owned:** OTEP-127 ✅ Done, OTEP-358 ✅ Done, OTEP-397 ✅ Done, OTEP-427 ✅ Done. All Michelle PM stories closed at sprint end.
 
 ---
 
@@ -147,4 +148,4 @@
 
 ---
 
-*Updated: 2026-06-25 (stale-check — OTEP-127 + OTEP-397 Done; OTEP-358 In Progress not Backlog; counts 14 IP→12, 8 QA→10, 20 Done→29). Prior: 2026-06-24 (timeline update — S4 close Fri 26 Jun; S5–S9 dates; VAPT 7 Sep–16 Oct; first release 2 Nov). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE 15–26 Jun. S4: 12 In Progress, 10 QA, 29 Done, 1 To Do (live 2026-06-25).*
+*Updated: 2026-06-26 (stale-check — IP 10→12 +386/439, Backlog 15→13, total 67→66 — OTEP-127 + OTEP-397 Done; OTEP-358 In Progress not Backlog; counts 14 IP→12, 8 QA→10, 20 Done→29). Prior: 2026-06-24 (timeline update — S4 close Fri 26 Jun; S5–S9 dates; VAPT 7 Sep–16 Oct; first release 2 Nov). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE 15–26 Jun. S4: 12 In Progress, 10 QA, 29 Done, 1 To Do (live 2026-06-25).*

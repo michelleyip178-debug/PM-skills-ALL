@@ -83,3 +83,5 @@ Then no competency match count is shown on those cards. MVP scope is Gigs and ST
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-06-26*
