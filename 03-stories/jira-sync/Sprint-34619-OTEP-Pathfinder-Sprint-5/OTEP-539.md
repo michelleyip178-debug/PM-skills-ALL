@@ -1,7 +1,7 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-539: Make C@G import run as a background task
 
-**Status:** Done
-**Assignee:** Thomas Huchedé
+**Status:** In Progress
+**Assignee:** Léo Milbor
 **Story Points:** N/A
 
 ---

@@ -1,4 +1,4 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-368: Automatic redirection to login page when session expires
 
 **Status:** Done
 **Assignee:** Thomas Huchedé

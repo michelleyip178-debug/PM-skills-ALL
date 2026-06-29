@@ -1,7 +1,7 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-541: Implement agencies fetching/maping in FE
 
-**Status:** Done
-**Assignee:** Thomas Huchedé
+**Status:** Backlog
+**Assignee:** N/A
 **Story Points:** N/A
 
 ---

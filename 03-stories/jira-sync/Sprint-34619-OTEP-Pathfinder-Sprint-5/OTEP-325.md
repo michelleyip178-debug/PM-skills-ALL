@@ -1,4 +1,4 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-325: Create an empty state for opportunity listing
 
 **Status:** Done
 **Assignee:** Thomas Huchedé
@@ -8,7 +8,7 @@
 
 ## Description
 
-No description provided.
+When the  /api/v1/opportunities  endpoint returns no results, we should display an empty state:
 
 ---
 

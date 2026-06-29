@@ -1,4 +1,4 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-327: Opportunity detail page using design system 
 
 **Status:** Done
 **Assignee:** Thomas Huchedé
@@ -8,7 +8,7 @@
 
 ## Description
 
-No description provided.
+Opportunity detail page should match Figma design:
 
 ---
 

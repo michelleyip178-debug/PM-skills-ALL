@@ -7,11 +7,11 @@
 ---
 
 ## Sprint details
-- **Sprint number:** **Sprint 4 closes TODAY (26 Jun). Sprint 5 starts Sun 29 Jun.**
+- **Sprint number:** **Sprint 5 ACTIVE (29 Jun – 12 Jul 2026)**
 - **Sprint 2:** closed (Sprint 34616) — 6 stories Done at close.
 - **Sprint 3 dates:** 2–14 Jun 2026 (Pathfinder Sprint 3 / Sprint 34617). Final state: 23 Done, 9 in QA at close (carry-in to S4), 4 Backlog carry-in.
-- **Sprint 4 dates:** 15–26 Jun 2026 (closes Fri 26 Jun). Goal: complete, usable listing experience — search, filter, sort, data currency.
-- **Sprint 5 dates:** 29 Jun – 12 Jul 2026. 11 issues in sprint (1 Done, 10 Backlog). Goal (draft): ringfencing on listing + detail, competency match signal, agency icons, auth session persistence, job family filter.
+- **Sprint 4 dates:** 15–26 Jun 2026. CLOSED 29 Jun 2026. Final state: 28 Done, 11 in QA (carry-in to S5), 11 In Progress (carry-in), 1 To Do, 12 Backlog carry-in.
+- **Sprint 5 dates:** 29 Jun – 12 Jul 2026. Goal: officers browsing the opportunity listing can see which roles they're eligible for and filter by job category — so they spend less time on opportunities that aren't relevant to them.
 
 **Confirmed sprint schedule (updated 2026-06-23):**
 
@@ -32,10 +32,33 @@
 
 **Sprint 4 (agreed at planning 2026-06-11):** Deliver a complete, usable opportunity listing experience — officers can search, filter, and sort opportunities, understand what each type means, and trust that the data they're seeing is current and accurate.
 
-**Sprint 5 (draft — gates must clear first):** By end of Sprint 5, an officer can log in with their real WOG AD credentials and view full Careers@Gov opportunity details before applying — with the CSC SSO integration scoped and started.
-> *Auth "realistic landing" per the adopted plan. Conditional on 4 gates: WOG AD onboarding (#26), POCDEX (#31), competency SSOT (#18), CSC SSO ownership (#30). If WOG AD slips, S5 auth slips — goal de-scopes to "C@G detail complete + CSC SSO scoped," auth carries to S6.*
+**Sprint 5 (confirmed at start 2026-06-29):** By end of sprint, officers browsing the opportunity listing can see which roles they're eligible for and filter by job category — so they spend less time on opportunities that aren't relevant to them.
 
 ---
+
+## Sprint 5 — ACTIVE (29 Jun – 12 Jul 2026)
+
+> Source: OTEP-Pathfinder Sprint 5. **Live pull: 2026-06-29.** 55 issues total.
+> Goal: Officers browsing the opportunity listing can see which roles they're eligible for and filter by job category.
+
+**In Progress (11):** OTEP-88 (C@G listing, Léo), OTEP-539 (C@G background import, Léo), OTEP-386 (opportunity type tooltip, Thomas), OTEP-439 (ineligible states design, Amber), OTEP-322 (Playwright, Rathika), OTEP-131 (broken FormSG link, Thomas), OTEP-276 (design-system spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-349 (competency spike, Pow Hwee), OTEP-361 (ADR forum, Pow Hwee), OTEP-505 (CFT upload/webhook, Hao Eng)
+
+**In QA (11):** OTEP-86 (filters), OTEP-268 (empty/error states), OTEP-85 (listing cards), OTEP-305 (login/logout), OTEP-128 (detail page), OTEP-405 (keyword search, Thomas), OTEP-284 (closing soon, Thomas), OTEP-129 (open/closed, Thomas), OTEP-438 (admin view, Hao Eng), OTEP-406 (sort, Thomas), OTEP-392 (federated logout, Thomas)
+
+**To Do (1):** OTEP-445 (POCDEX code table import spike)
+
+**Done (28):** OTEP-170, OTEP-193, OTEP-288, OTEP-296, OTEP-313, OTEP-314, OTEP-320, OTEP-324, OTEP-325, OTEP-326, OTEP-327, OTEP-334, OTEP-362, OTEP-363, OTEP-367, OTEP-368, OTEP-369, OTEP-374, OTEP-375, OTEP-380, OTEP-381, OTEP-440, OTEP-441, OTEP-482, OTEP-495, OTEP-496, OTEP-536, OTEP-540 ✅ (Michelle), OTEP-499
+
+**Backlog (22):** OTEP-87, OTEP-289, OTEP-304, OTEP-328, OTEP-329, OTEP-336, OTEP-348, OTEP-390, OTEP-393, OTEP-403, OTEP-404, OTEP-408, OTEP-409, OTEP-437, OTEP-444, OTEP-483, OTEP-484, OTEP-485, OTEP-541, OTEP-570, OTEP-571, OTEP-283
+
+**PM-owned:** OTEP-540 ✅ Done. No other Michelle stories active in S5 yet.
+
+---
+
+## Sprint 4 — CLOSED (15–26 Jun 2026, completed 29 Jun)
+
+> Source: OTEP-Pathfinder Sprint 4. Final live pull: 2026-06-29. CLOSED.
+> Goal: Complete, usable listing experience — search, filter, sort, data currency.
 
 ## Sprint 2 — CLOSED ✅ (synced 2026-06-02)
 

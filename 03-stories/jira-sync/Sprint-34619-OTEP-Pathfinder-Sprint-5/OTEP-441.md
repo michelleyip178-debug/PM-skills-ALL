@@ -1,4 +1,4 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-441: UI for Closing today
 
 **Status:** Done
 **Assignee:** Thomas Huchedé

@@ -1,4 +1,4 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-496: Wire frontend search bar to backend api
 
 **Status:** Done
 **Assignee:** Thomas Huchedé

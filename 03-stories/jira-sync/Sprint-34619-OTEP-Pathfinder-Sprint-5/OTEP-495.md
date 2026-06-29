@@ -1,4 +1,4 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-495: Add queryParam on backend to handle text search
 
 **Status:** Done
 **Assignee:** Thomas Huchedé

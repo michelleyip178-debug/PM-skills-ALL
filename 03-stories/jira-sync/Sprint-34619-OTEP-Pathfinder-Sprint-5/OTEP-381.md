@@ -1,4 +1,4 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-381: [FE] Handle filtering params
 
 **Status:** Done
 **Assignee:** Thomas Huchedé

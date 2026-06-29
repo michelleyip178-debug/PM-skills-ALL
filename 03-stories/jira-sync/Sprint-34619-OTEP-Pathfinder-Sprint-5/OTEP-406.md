@@ -1,8 +1,8 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-406: [FE] Sort Opportunities (Posted Date / Closing Date)
 
-**Status:** Done
+**Status:** QA
 **Assignee:** Thomas Huchedé
-**Story Points:** N/A
+**Story Points:** 2
 
 ---
 

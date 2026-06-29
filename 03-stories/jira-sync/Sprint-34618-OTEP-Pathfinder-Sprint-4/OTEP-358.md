@@ -1,6 +1,6 @@
 # OTEP-358: [Spike] Robust nil-date handling for OTG Excel import
 
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Michelle Yip
 **Story Points:** 1
 

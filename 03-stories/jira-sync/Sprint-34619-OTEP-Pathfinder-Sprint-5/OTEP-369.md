@@ -1,4 +1,4 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-369: Custom login page 
 
 **Status:** Done
 **Assignee:** Thomas Huchedé

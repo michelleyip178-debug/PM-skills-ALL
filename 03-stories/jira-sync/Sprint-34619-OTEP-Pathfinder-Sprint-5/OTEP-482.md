@@ -1,7 +1,7 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-482: Import C@G opportunities
 
 **Status:** Done
-**Assignee:** Thomas Huchedé
+**Assignee:** Léo Milbor
 **Story Points:** N/A
 
 ---

@@ -1,7 +1,7 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-380: [BE] Handle filtering params
 
 **Status:** Done
-**Assignee:** Thomas Huchedé
+**Assignee:** Léo Milbor
 **Story Points:** N/A
 
 ---

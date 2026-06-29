@@ -1,7 +1,7 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-320: Replace mock /opportunities endpoint with real db access
 
 **Status:** Done
-**Assignee:** Thomas Huchedé
+**Assignee:** Léo Milbor
 **Story Points:** N/A
 
 ---

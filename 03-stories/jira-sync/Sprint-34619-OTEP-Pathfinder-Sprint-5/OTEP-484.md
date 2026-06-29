@@ -1,7 +1,7 @@
-# OTEP-536: update frontend filters for `jobs`
+# OTEP-484: Update er digram generation to add Sub-domain breakdown & extract postgres image version
 
-**Status:** Done
-**Assignee:** Thomas Huchedé
+**Status:** Backlog
+**Assignee:** N/A
 **Story Points:** N/A
 
 ---
