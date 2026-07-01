@@ -1,8 +1,11 @@
 # User Stories: OTG Application Lifecycle
 
 **Epic:** Opportunities (Epic 4)
+
 **One-pager:** _TODO: Confluence link_
+
 **Status:** Draft — needs grooming
+
 **Dependency:** WOG AD Login (officers must be authenticated to apply)
 
 ---
@@ -79,6 +82,7 @@ The page needs all mandatory fields to render. If a mandatory field is missing, 
 - No apply button in Sprint 2 → should officers see messaging explaining why? Currently silent — could confuse. Decide with Amber.
 
 **Design dependency:** Amber's detail page design — finalised. Needs lock date (open item #22).
+
 **Depends on:** OTEP-85 (listing page + card click handler must exist)
 
 **Priority:** MVP
@@ -138,7 +142,9 @@ The page needs all mandatory fields to render. If a mandatory field is missing, 
 - `formsg_url` field confirmed in OTG export (2026-05-21 — Rama + PSD Ops ✔). Field present for Internal Jobs, STIPs, Gigs. SJRs excluded (no apply flow in MVP — decision 2026-05-13).
 
 **Sprint:** 3
+
 **Jira:** OTEP-319 (ticketed 2026-05-21)
+
 **Priority:** MVP — this is the core apply action for three of four opportunity types
 
 **Risks:**
@@ -150,62 +156,77 @@ The page needs all mandatory fields to render. If a mandatory field is missing, 
 
 ---
 
-### OTEP-130: Apply to an OTG opportunity via FormSG (full)
+### OTEP-130: Apply to an OTG opportunity via FormSG (full, with webhook)
+
+> **Sprint 4.** Builds on OTEP-319 (Sprint 3 basic redirect). OTEP-319 handles the redirect; OTEP-130 adds the webhook integration that makes OTEP aware a submission happened — enabling "already applied" state and the confirmation flow (US-10). These two stories must be groomed together.
+>
+> **Integration model decision needed before grooming:** OTEP-319 opens FormSG in a new tab. OTEP-130 assumes OTEP receives a webhook from FormSG on submission. If FormSG does not support outbound webhooks, the "already applied" indicator and US-10 confirmation screen cannot fire — the fallback is officer-declared confirmation (officer clicks "I've applied" on return to OTEP). Pow Hwee to confirm webhook support before Sprint 4 grooming.
 
 **As an** officer,
-**I want to** submit my application for an OTG opportunity through a FormSG form,
-**So that** I can express interest without leaving OTEP.
+**I want** OTEP to know when I've submitted a FormSG application,
+**So that** I see an "already applied" indicator and can trust my application was received.
 
 **Acceptance Criteria:**
-- [ ] When I click "Apply" on an OTG opportunity detail page, I'm taken to the FormSG form for that opportunity.
-- [ ] After I submit the FormSG form, I see confirmation that my application was received.
-- [ ] If I've already applied to an opportunity, I see a "You've applied" indicator on the detail page.
-- [ ] If my profile data is available, my name, email, agency, and grade are pre-filled when the FormSG form opens. [ASSUMPTION: FormSG supports pre-fill via URL params — open item #14]
-- [ ] If FormSG doesn't support pre-fill, the form opens blank — applying still works, just without pre-fill.
+
+*Must-have:*
+- [ ] After I submit a FormSG application and return to the OTEP detail page, I see a "You've applied" indicator — the Apply button is no longer shown. [ASSUMPTION: OTEP receives a FormSG webhook on submission. If webhooks aren't available, see fallback AC below.]
+- [ ] The "You've applied" indicator shows the date I submitted — not just a generic badge.
+- [ ] If OTEP has not received the webhook within a reasonable window (e.g. 30 seconds), the Apply button is replaced with "Submitted via FormSG — check My Applications to confirm." Officers are not left with a stale Apply button.
+- [ ] My submitted application appears in "My Applications" (US-14) as soon as OTEP receives the webhook — not on a delay.
+- [ ] If I try to navigate back to the same opportunity and click Apply again, the Apply button is not shown — the "You've applied" state persists across sessions.
+
+*Fallback (if FormSG webhooks are not available — confirm with Pow Hwee):*
+- [ ] After I submit and return to OTEP, I see a prompt: "Did you complete your application on FormSG?" with a "Yes, I applied" button. Clicking this records my application in OTEP and shows "You've applied."
+- [ ] This fallback is a temporary MVP workaround — document as tech debt in decisions-log.md.
+
+*Not in scope:* Pre-fill from profile (US-P3 — R1 unless FormSG supports URL params). Email confirmation (open item #15 — R1). Duplicate submission prevention on FormSG side (outside OTEP's control).
 
 **Edge cases:**
-- FormSG is down — show a clear error with retry guidance
-- Officer accidentally submits twice — does FormSG deduplicate, or do we prevent double-submission?
-- FormSG link is invalid or expired — what does the officer see?
-- Pre-filled data is stale (officer recently transferred) — officer can edit before submitting
+- [ ] Webhook arrives but opportunity has since closed — record the application anyway; don't reject on closed state.
+- [ ] Webhook arrives for an officer whose session has expired — associate it with their profile via the officer ID in the payload; don't lose the submission.
+- [ ] Officer submits the same FormSG form twice (duplicate) — OTEP records both if webhooks fire twice. Flag as an open question: does OTEP or FormSG deduplicate? (open question #3)
+- [ ] Webhook payload is malformed or missing the opportunity ID — log and alert; show officer the fallback message above rather than a broken state.
 
 **Dependencies:**
-- US-P1 (officer profile exists) — for pre-fill
-- US-P3 (pre-fill mechanism) — MVP if FormSG supports it; degrade gracefully if not
+- OTEP-319 (FormSG basic redirect — must ship first; OTEP-130 adds webhook layer on top)
+- FormSG webhook support confirmed (Pow Hwee — pre-grooming blocker)
+- OTEP-71 (WOG AD auth — officer identity needed for webhook association)
 
-**Priority:** MVP — this is the core action of the OTG apply flow
+**Sprint:** 4
+
+**Priority:** MVP — without this, OTEP has no record of applications and tracking is impossible
+
+**API contract intent (for Pow Hwee):**
+- Inbound webhook: `POST /api/formsg/webhook`
+- Payload (expected from FormSG): `{ opportunity_id, officer_id, submitted_at, form_response_id }`
+- OTEP response: 200 on success; 400 on malformed payload; 500 logged internally
+- OTEP stores: officer_id, opportunity_id, submitted_at, form_response_id, status = "Submitted"
+- `GET /opportunities/:id` response must include `officer_applied: true/false` based on stored record
+
+**Subtasks:**
+
+| # | Task | Track | Notes |
+|---|------|-------|-------|
+| 1 | Inbound FormSG webhook endpoint (`POST /api/formsg/webhook`) | Backend | Confirm payload shape with Pow Hwee before Sprint 4 W1 |
+| 2 | Application record model: officer_id, opportunity_id, submitted_at, form_response_id, status | Backend | Foundation for US-14–17 tracking group |
+| 3 | `GET /opportunities/:id` — include `officer_applied` field in response | Backend | Drives "You've applied" UI state |
+| 4 | "You've applied" indicator on detail page (replaces Apply button) | Frontend | Per Amber's design — confirm design exists before ticket moves to Ready |
+| 5 | Fallback flow: "Did you apply?" prompt if no webhook received within 30s | Frontend | Only build if webhook not supported — confirm with Pow Hwee |
+| 6 | Feature flag: `formsg_webhook_integration` (off = fallback mode) | Frontend/Backend | Flag controls which path is active |
+| 7 | Test: webhook received → "You've applied" shown; My Applications updated | Test | |
+| 8 | Test: webhook not received → fallback prompt shown | Test | |
+| 9 | Test: officer returns to detail page in new session → "You've applied" persists | Test | |
+
+**Design dependency:** Amber — "You've applied" detail page state + fallback prompt. Needs to be designed before this story is Ready.
 
 **Risks:**
-- FormSG webhook/callback integration is undiscovered territory — OTEP-194 (Sprint 1 discovery) should inform this, but if the discovery finds that webhooks aren't supported, the entire confirmation and "already applied" flow changes shape.
-- Pre-fill dependency chain: US-P3 depends on open item #14 (does FormSG support pre-fill?). If no, OTEP-130 still works but the "low friction" promise weakens.
-- Status source of truth undefined (workflow audit gap #11) — tracking stories US-14 to US-17 assume status updates flow in, but how they flow in isn't resolved. Shapes whether OTEP-130's "already applied" indicator is reliable.
+- If FormSG doesn't support outbound webhooks, the fallback (officer-declared confirmation) is a significant UX downgrade — and tracking (US-14–17) relies on OTEP having the application record. Resolve this before Sprint 4 grooming.
+- Application record model built here is the foundation for the entire tracking group. Getting the schema wrong now means refactoring in Sprint 5.
 
 **Open questions:**
-1. Is the FormSG form embedded in OTEP (iframe) or opened in a new tab? (Pow Hwee + Amber)
-2. Does FormSG support pre-fill via URL parameters? (Pow Hwee to confirm — determines if US-P3 is MVP or R1)
-3. How does OTEP detect a successful submission? Webhook callback from FormSG, or polling?
-
----
-
-### US-10: Receive application confirmation
-
-**As an** officer,
-**I want to** receive clear confirmation after submitting my OTG application,
-**So that** I know my application went through and what to expect next.
-
-**Acceptance Criteria:**
-- [ ] After successfully submitting a FormSG application, I see a confirmation screen showing: the opportunity title, when I submitted, and what happens next. [ASSUMPTION: confirmation screen relies on OTEP receiving a callback from FormSG — open item, workflow audit gap #7]
-- [ ] After submitting, my new application appears in "My Applications" straight away — I don't need to refresh.
-
-**Edge cases:**
-- Submission succeeded on FormSG but OTEP didn't receive the webhook/callback — how is state synced?
-- Network drops during submission — unclear success state
-
-**Priority:** MVP — without confirmation, officers won't trust the system
-
-**Risks:**
-- If FormSG doesn't support a return-URL or webhook, US-10 has no trigger — the confirmation screen can't fire without knowing submission succeeded. This is the biggest open technical question in the apply flow (workflow audit gap #7).
-- Email delivery service unknown (open item #15). If confirmation includes email, the infra dependency needs to be resolved by Sprint 4.
+1. Does FormSG support outbound webhooks? What's the payload shape? (Pow Hwee — pre-grooming blocker)
+2. Does OTEP or FormSG deduplicate submissions if an officer submits twice?
+3. How does the webhook authenticate to OTEP? (Shared secret, HMAC signature, IP allowlist?)
 
 ---
 

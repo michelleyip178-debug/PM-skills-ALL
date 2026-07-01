@@ -1,6 +1,6 @@
 # Active Tasks
 
-Current sprint: **Sprint 4 CLOSED 26 Jun. Sprint 5 starts Sun 29 Jun.**
+Current sprint: **Sprint 5 ACTIVE (29 Jun – 12 Jul 2026)**
 Sprint 3 final state (2026-06-12): ~23 Done, 9 in QA carry-in (85/86/89/128/192/268/305/317/319), 4 Backlog carry-in. Sprint goal near-met (filters + apply + deep-link all reached QA). Sprint 4 goal: complete, usable listing experience — search, filter, sort, data currency.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
@@ -9,7 +9,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 4 W2 (22–28 Jun) — reconcile S4 board, OTG ingestion unblocks (v3 ACs, 4-cat mapping to Xian Zhang). ~~Rama interview on upload module scope~~ ✅ Done 15 Jun. July SteerCo deliverables (transition plan, North Star brief, gap analysis) are owned by other teams (for-info), NOT Michelle — corrected 2026-06-19. Michelle's SteerCo job = co-prep the consolidated-narrative demo with Imelda/Rama/Pow Hwee. *(Updated 2026-06-19)*
+**Theme:** Sprint 5 W1 (30 Jun – 3 Jul) — board health (11 QA carry-ins, OTEP-445 owner TBC), #40 Mark ask, KR Word doc to Jace (due Thu 3 Jul), #43 BO sign-off on OTEP-439/386. July SteerCo deliverables (transition plan, North Star brief, gap analysis) are owned by other teams (for-info), NOT Michelle — Michelle's SteerCo job = co-prep the consolidated-narrative demo with Imelda/Rama/Pow Hwee. *(Updated 2026-06-30 — was Sprint 4 W2)*
 
 ---
 
@@ -150,4 +150,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-06-26 — stale-check. Sprint line S4 active→S4 closed. Jobelle handover marked done. Jira MCP unavailable; file-only check. Engineering In Progress section reflects Sprint 3 state (live 2026-06-09) — use sprint-status.md for current S4 counts. Prior: 2026-06-23 (W1→W2 update).*
+*Updated: 2026-06-29 — stale-check. Sprint line updated S4 closed → S5 active. Engineering In Progress section reflects S4 state (2026-06-26) — use sprint-status.md for current S5 counts. Prior: 2026-06-26.*

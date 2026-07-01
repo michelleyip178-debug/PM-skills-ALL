@@ -1,8 +1,11 @@
 # Epic 4: Opportunities — User Stories
 
 **Owner:** Michelle
+
 **Epic goal:** Unified Opportunities experience with two-pipeline model (OTG + Careers@Gov)
+
 **MVP target:** Opportunities discoverable in one place; OTG full lifecycle end-to-end; C@G deep-link handoff functional
+
 **Status:** In Progress
 
 ---
@@ -54,7 +57,7 @@
 | OTEP-87 | Enhance detail page: apply CTA only (Sprint 3, builds on OTEP-128) | MVP | ⚠️ Jira ACs include competency scope — reconcile before grooming |
 | OTEP-319 | Apply via FormSG — basic redirect, Internal Jobs/STIPs/Gigs *(was US-18)* | MVP | Sprint 3 — ticketed 2026-05-21; `formsg_url` confirmed ✔ |
 | OTEP-130 | Apply to an OTG opportunity via FormSG (full) | MVP | Pending |
-| US-10 | Receive application confirmation | MVP | Pending |
+| ~~US-10~~ | ~~Receive application confirmation~~ | — | **Dropped — scenario no longer applies (2026-06-29)** |
 
 ### C@G Deep-link Handoff (3 stories)
 
