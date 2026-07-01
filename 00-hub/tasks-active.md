@@ -9,7 +9,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 5 W1 (30 Jun – 3 Jul) — board health (11 QA carry-ins, OTEP-445 owner TBC), #40 Mark ask, KR Word doc to Jace (due Thu 3 Jul), #43 BO sign-off on OTEP-439/386. July SteerCo deliverables (transition plan, North Star brief, gap analysis) are owned by other teams (for-info), NOT Michelle — Michelle's SteerCo job = co-prep the consolidated-narrative demo with Imelda/Rama/Pow Hwee. *(Updated 2026-06-30 — was Sprint 4 W2)*
+**Theme:** Sprint 5 W1 (30 Jun – 3 Jul) — board health (12 QA carry-ins, OTEP-445 owner still TBC), #40 Mark ask (2 days unconfirmed), KR Word doc to Jace (due Thu 2 Jul), #43 BO sign-off on OTEP-439/386 (outcome unconfirmed — Design Review 30 Jun notes not captured). July SteerCo deliverables (transition plan, North Star brief, gap analysis) are owned by other teams (for-info), NOT Michelle — Michelle's SteerCo job = co-prep the consolidated-narrative demo with Imelda/Rama/Pow Hwee. **New from 30 Jun meeting cleanup:** CMM scope-pressure escalation needed (#50 — 3 days of unresolved surfacing, no roadmap trade-off decision), search AC ownership gap (#51 — no one consolidating final acceptance criteria across Thomas/Amber/Rathika), Hao Eng leave coverage plan needed before next week (#52). *(Updated 2026-07-01 — was 2026-06-30)*
 
 ---
 
