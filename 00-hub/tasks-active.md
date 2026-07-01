@@ -1,5 +1,7 @@
 # Active Tasks
 
+> ⚠️ **STALE (flagged by /sprint-pulse, 2026-07-01):** this file hasn't moved since 2026-06-02. Per `04-ceremonies/sprint-calendar.md`, **Sprint 5 (Mon 29 Jun – Fri 10 Jul) is active — today is Day 3.** Sprint 4 ran and closed 26 Jun with no update here. Run `/jira-sync` then `/stale-check` before relying on the sprint line below.
+
 Current sprint: **Sprint 3 active (started Tue 2 Jun). Sprint 2 closed — carry-over QA/In-Progress pulled into S3.**
 Jira sync 2026-06-02 (live): **Sprint 3:** carry-over QA in flight (finish first), new-scope stories in Backlog. New: OTEP-358 (Michelle, nil-date OTG spike), OTEP-361 (Pow Hwee, ADR forum). **OTEP-129 now on the S3 board, split into OTEP-362 (backend) + OTEP-363 (UI).** · **Sprint 2 (closed) In Progress carried to S3:** OTEP-85, OTEP-322 (Rathika) · **In QA (carried):** OTEP-128, OTEP-170, OTEP-268, OTEP-314, OTEP-320, OTEP-325/326, OTEP-327, OTEP-332, OTEP-334, OTEP-303 · **Done:** OTEP-191, OTEP-267, OTEP-313 (Léo), OTEP-252, OTEP-194, OTEP-193, OTEP-288, OTEP-296.
 

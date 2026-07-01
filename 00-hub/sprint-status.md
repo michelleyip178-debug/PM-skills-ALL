@@ -4,6 +4,8 @@
 > All commands read this file — keeping it current makes every
 > output accurate and specific to where you actually are.
 
+> ⚠️ **STALE (flagged by /sprint-pulse, 2026-07-01):** everything below is frozen at the 2026-06-02 sync and still says "Sprint 3 active." Per `04-ceremonies/sprint-calendar.md`, **Sprint 5 (Mon 29 Jun – Fri 10 Jul) is actually active — today is Day 3.** Sprint 4 (15–26 Jun) ran and closed with no record here. Run `/jira-sync` to refresh before trusting anything below.
+
 ---
 
 ## Sprint details
