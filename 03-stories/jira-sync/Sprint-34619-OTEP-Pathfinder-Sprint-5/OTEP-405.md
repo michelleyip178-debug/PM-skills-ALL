@@ -1,6 +1,6 @@
 # OTEP-405: [FE/BE] Keyword Search for Opportunities
 
-**Status:** QA
+**Status:** In Progress
 **Assignee:** Thomas Huchedé
 **Story Points:** 3
 
@@ -23,6 +23,11 @@ As an officer, I want to search for opportunities by keyword so I can quickly fi
 
 ## Latest Comments
 
+**Rathika Ramalingam** (2026-06-29)
+Test Results (in Dev) -
+
+---
+
 **Michelle Yip** (2026-06-17)
 Regarding #2,  a. Do we exclude description to search only title and agency <MY> Yes  b. Is the search dynamic as the user keys in or we need to hit Search button (#7) to trigger the search? <MY> need to search button  c. If dynamic, do we have minimum characters before triggering search to filter <MY> N/A  Regarding #8  a. Can we define ‘by relevance’ - is it the weight based on no of occurrence + location + exact match of the search text? <MY? exact match of the search text in title or agency. Is this good enough?
 
@@ -30,8 +35,3 @@ Regarding #2,  a. Do we exclude description to search only title and agency <MY>
 
 **Rathika Ramalingam** (2026-06-17)
 I have these questions. Pls clarify. cc:       1. Regarding #2,   a. Do we exclude description to search only title and agency   b. Is the search dynamic as the user keys in or we need to hit Search button (#7) to trigger the search?  c. If dynamic, do we have minimum characters before triggering search to filter   2. Regarding #8  a. Can we define ‘by relevance’ - is it the weight based on no of occurrence + location + exact match of the search text?
-
----
-
-**Michelle Yip** (2026-06-17)
-Updated the ACs based on our discussion today.

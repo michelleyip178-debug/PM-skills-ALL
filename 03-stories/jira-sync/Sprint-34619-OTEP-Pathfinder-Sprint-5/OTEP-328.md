@@ -1,6 +1,6 @@
 # OTEP-328: Integration with OpenTelemetry for otep-web
 
-**Status:** Backlog
+**Status:** Done
 **Assignee:** Thomas Huchedé
 **Story Points:** 3
 
@@ -20,4 +20,5 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**Thomas Huchedé** (2026-06-29)
+Closing as this was done already by core team

@@ -1,6 +1,6 @@
 # OTEP-131: Handle missing or broken FormSG application link.
 
-**Status:** In Progress
+**Status:** QA
 **Assignee:** Thomas Huchedé
 **Story Points:** 2
 

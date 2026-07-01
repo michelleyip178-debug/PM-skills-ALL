@@ -1,7 +1,7 @@
 # OTEP-304: Logged-in officer remains authenticated while actively using OTEP
 
-**Status:** Backlog
-**Assignee:** N/A
+**Status:** In Progress
+**Assignee:** Hao Eng
 **Story Points:** N/A
 
 ---

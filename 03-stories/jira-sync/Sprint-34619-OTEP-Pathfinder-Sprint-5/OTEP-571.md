@@ -1,7 +1,7 @@
 # OTEP-571: [FE] Layout change for STIPs and Gigs Opportunity Cards - Swop time commitment and X of Y competencies matched
 
-**Status:** Backlog
-**Assignee:** N/A
+**Status:** QA
+**Assignee:** Hao Eng
 **Story Points:** N/A
 
 ---
