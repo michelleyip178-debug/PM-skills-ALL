@@ -1,7 +1,7 @@
 # OTEP-52: Epic 2: Comp Gap Analysis 
 
 **Type:** Sub-task
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Imelda Mo
 **Story Points:** N/A
 
@@ -33,3 +33,5 @@ working on data cleanliness for role profile and competency bank with WD, in ord
 
 **Imelda Mo** (2026-02-13)
 Done with one-pager     walked through with Adrian and Jace Next Step: Dex for deisgn
+
+*Synced from Jira: 2026-07-01*

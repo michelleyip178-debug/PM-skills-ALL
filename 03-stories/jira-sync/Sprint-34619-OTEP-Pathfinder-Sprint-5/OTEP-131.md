@@ -2,7 +2,7 @@
 
 **Status:** QA
 **Assignee:** Thomas Huchedé
-**Story Points:** 2
+**Story Points:** 2.0
 
 ---
 
@@ -27,3 +27,5 @@ As discussed today, the POC is missing in the source excel file so we have nothi
 
 **Amber Tong** (2026-05-13)
 Figma link  here .
+
+*Synced from Jira: 2026-07-01*

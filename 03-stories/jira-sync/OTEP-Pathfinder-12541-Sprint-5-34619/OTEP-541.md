@@ -2,9 +2,9 @@
 
 **Type:** Story
 
-**Status:** Backlog
+**Status:** In Progress
 
-**Assignee:** N/A
+**Assignee:** Thomas Huchedé
 
 **Story Points:** N/A
 
@@ -27,4 +27,4 @@ As an officer viewing an opportunity, I want to see the correct agency icon disp
 
 ---
 
-*Synced from Jira: 2026-06-26*
+*Synced from Jira: 2026-07-01*

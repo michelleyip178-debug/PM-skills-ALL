@@ -1,7 +1,7 @@
 # OTEP-35: Cost assessment and funding approach for NExus
 
 **Type:** Task
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Jace Tan
 **Story Points:** N/A
 
@@ -28,3 +28,5 @@ met up with DS on 13 Feb, guidance given by DS to update the deck and arrange a 
 
 **Jace Tan** (2026-02-09)
 meeting DLE to clarify on the costing on 10 Feb, together w Barry
+
+*Synced from Jira: 2026-07-01*

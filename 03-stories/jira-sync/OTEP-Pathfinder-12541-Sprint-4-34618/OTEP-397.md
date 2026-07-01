@@ -2,7 +2,7 @@
 
 **Status:** Done
 **Assignee:** Michelle Yip
-**Story Points:** 3
+**Story Points:** 3.0
 
 ---
 
@@ -91,4 +91,4 @@ there will be a new field called “role” to be added in keycloak  no Jira tic
 **Hao Eng** (2026-06-08)
 hi   , heard from Rama that only specific users can access this upload UI. how to identify such user?
 
-*Synced from Jira: 2026-06-26*
+*Synced from Jira: 2026-07-01*

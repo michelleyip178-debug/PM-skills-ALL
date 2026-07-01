@@ -1,7 +1,7 @@
 # OTEP-55: Determine Pilot Group
 
 **Type:** Sub-task
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Imelda Mo
 **Story Points:** N/A
 
@@ -33,3 +33,5 @@ Teams message status Agencies and officers confirmed - PSD and ESG TBD: whether 
 
 **Imelda Mo** (2026-02-20)
 from ESG: From ESG: "We do want to want to have the  option  to ringfence, essentially to provide officers with the feature to filter down to EnterpriseSG opptys and also for us to post opptys like an internal marketplace for internal projects/ gigs etc. These could essentially help our officers build Domain Competencies, which may not be relevant at WOG level.  But we are of course still opened to seeing/ applying WOG opptys and also to post relevant opptys available for WOG to apply ."  from XZ: yup, i think we shld involve ESG because they are really keen to try out and we want to tap on their enthusiasm. We can work with PSD and ESG to help promote and drive officers to test the MVP, so hope we can get 300-400 from each agency. Could we also include another group of enthu officers, made of up a mix of those who came for the FGD previously, or with high re-login rate?
+
+*Synced from Jira: 2026-07-01*

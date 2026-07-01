@@ -2,9 +2,9 @@
 
 **Type:** Story
 
-**Status:** Backlog
+**Status:** QA
 
-**Assignee:** N/A
+**Assignee:** Hao Eng
 
 **Story Points:** N/A
 
@@ -27,4 +27,4 @@ As an officer browsing the listing, I want the STIP and Gig opportunity cards to
 
 ---
 
-*Synced from Jira: 2026-06-26*
+*Synced from Jira: 2026-07-01*

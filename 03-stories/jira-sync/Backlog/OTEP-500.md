@@ -2,7 +2,7 @@
 
 **Status:** Backlog
 
-**Assignee:** Unassigned
+**Assignee:** N/A
 
 **Story Points:** N/A
 
@@ -26,4 +26,4 @@ Imelda shared this ticket via Slack (2026-06-17): "sharing here the ticket for c
 
 ---
 
-*Synced from Jira: 2026-06-17*
+*Synced from Jira: 2026-07-01*

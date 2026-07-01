@@ -6,7 +6,7 @@
 
 **Assignee:** N/A
 
-**Story Points:** 8
+**Story Points:** N/A
 
 **Sprint:** OTEP-Pathfinder Sprint 5
 
@@ -45,4 +45,4 @@
 - POCDEX read replica confirmed (#31)
 - OTEP-127 spike output reviewed and accepted
 
-*Synced from Jira: 2026-06-26*
+*Synced from Jira: 2026-07-01*

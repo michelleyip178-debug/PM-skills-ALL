@@ -1,6 +1,6 @@
 # OTEP-385: [Title TBC — stub created from Jira sync]
 
-**Status:** QA
+**Status:** Done
 **Assignee:** Fanxu Wang
 **Story Points:** N/A
 **Sprint:** OTEP-Core Sprint 3
@@ -13,4 +13,4 @@
 
 ---
 
-*Synced from Jira: 2026-06-08*
+*Synced from Jira: 2026-07-01*

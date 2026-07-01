@@ -1,9 +1,9 @@
 # OTEP-131: Handle missing or broken FormSG application link.
 
 **Type:** Story
-**Status:** Backlog
-**Assignee:** N/A
-**Story Points:** N/A
+**Status:** QA
+**Assignee:** Thomas Huchedé
+**Story Points:** 2.0
 
 ---
 
@@ -23,3 +23,5 @@ _No subtasks._
 
 **Amber Tong** (2026-05-13)
 Figma link  here .
+
+*Synced from Jira: 2026-07-01*

@@ -1,8 +1,8 @@
 # OTEP-203: Standalone POCDEX API service
 
 **Type:** Task
-**Status:** Backlog
-**Assignee:** Pow Hwee
+**Status:** Done
+**Assignee:** Pow Hwee TAN (PSD)
 **Story Points:** N/A
 **Sprint:** Sprint 3 (1–12 Jun 2026)
 **Note:** No story file exists yet — ACs to be confirmed with Pow Hwee at Sprint 3 Planning (2026-05-28).
@@ -45,3 +45,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-07-01*

@@ -1,8 +1,8 @@
 # OTEP-271: Local POCDEX database
 
 **Type:** Task
-**Status:** Backlog
-**Assignee:** Leo
+**Status:** Done
+**Assignee:** Léo Milbor
 **Story Points:** N/A
 **Sprint:** Sprint 3 (1–12 Jun 2026)
 **Note:** No story file exists yet — ACs to be confirmed with Pow Hwee at Sprint 3 Planning (2026-05-28).
@@ -44,3 +44,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-07-01*

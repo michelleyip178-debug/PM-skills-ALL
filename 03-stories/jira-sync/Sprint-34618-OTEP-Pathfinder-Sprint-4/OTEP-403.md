@@ -2,7 +2,7 @@
 
 **Status:** Backlog
 **Assignee:** Léo Milbor
-**Story Points:** 5
+**Story Points:** 5.0
 
 ---
 
@@ -27,3 +27,5 @@ The changes for the ingestion logic and rules.
 
 **Léo Milbor** (2026-06-10)
 I added this story to highlight current limitation and possible solution.
+
+*Synced from Jira: 2026-07-01*

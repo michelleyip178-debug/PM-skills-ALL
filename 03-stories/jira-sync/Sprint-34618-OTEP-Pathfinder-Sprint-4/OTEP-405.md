@@ -2,7 +2,7 @@
 
 **Status:** In Progress
 **Assignee:** Thomas Huchedé
-**Story Points:** 3
+**Story Points:** 3.0
 
 ---
 
@@ -35,3 +35,5 @@ I have these questions. Pls clarify. cc:       1. Regarding #2,   a. Do we exclu
 
 **Michelle Yip** (2026-06-17)
 Updated the ACs based on our discussion today.
+
+*Synced from Jira: 2026-07-01*

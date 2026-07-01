@@ -4,7 +4,7 @@
 
 **Assignee:** Thomas Huchedé
 
-**Story Points:** 3
+**Story Points:** 3.0
 
 ---
 
@@ -30,4 +30,4 @@ Check with Amber if there’s a “cross” button inside the search bar.
 **Michelle Yip** (2026-06-11)
 Put into backlog - Suggested Search, Partial Match
 
-*Synced from Jira: 2026-06-26*
+*Synced from Jira: 2026-07-01*

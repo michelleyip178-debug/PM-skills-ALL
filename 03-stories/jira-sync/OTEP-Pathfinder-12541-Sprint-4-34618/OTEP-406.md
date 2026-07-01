@@ -2,7 +2,7 @@
 
 **Status:** QA
 **Assignee:** Thomas Huchedé
-**Story Points:** 2
+**Story Points:** 2.0
 
 ---
 
@@ -22,4 +22,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-06-26*
+*Synced from Jira: 2026-07-01*

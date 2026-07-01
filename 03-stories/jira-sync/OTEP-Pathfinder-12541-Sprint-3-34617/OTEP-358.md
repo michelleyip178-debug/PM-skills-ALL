@@ -1,8 +1,8 @@
 # OTEP-358: [Spike] Robust nil-date handling for OTG Excel import
 
-**Status:** Backlog
+**Status:** Done
 **Assignee:** Michelle Yip
-**Story Points:** N/A
+**Story Points:** 1.0
 
 ---
 
@@ -21,3 +21,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-07-01*

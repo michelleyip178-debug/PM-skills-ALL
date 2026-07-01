@@ -2,7 +2,7 @@
 
 **Status:** Backlog
 **Assignee:** N/A
-**Story Points:** 3
+**Story Points:** 3.0
 
 ---
 
@@ -27,3 +27,5 @@ I think this story should be re-evaluated since AFAIK, the task is not scheduled
 
 **Rathika Ramalingam** (2026-06-05)
 Test Cases Document:
+
+*Synced from Jira: 2026-07-01*

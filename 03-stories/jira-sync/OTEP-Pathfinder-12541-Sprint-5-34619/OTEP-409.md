@@ -6,7 +6,7 @@
 
 **Assignee:** N/A
 
-**Story Points:** 3
+**Story Points:** N/A
 
 **Sprint:** OTEP-Pathfinder Sprint 5
 
@@ -36,4 +36,4 @@
 - OTEP-408 (BE eligibility filter) — must be complete before FE can be built
 - OTEP-390 — Ringfenced detail page states (companion story)
 
-*Synced from Jira: 2026-06-26*
+*Synced from Jira: 2026-07-01*

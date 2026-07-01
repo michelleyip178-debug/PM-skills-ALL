@@ -2,7 +2,7 @@
 
 **Status:** Backlog
 **Timebox:** 2 days (19–20 May 2026)  
-**Assignee:** N/A
+**Assignee:** Thomas Huchedé
 **Output due:** Before Sprint 2 grooming, Thu 22 May
 
 ---
@@ -47,4 +47,4 @@ No prototype required at this stage. Build decisions follow once the mapping is 
 
 *Defined: 2026-05-19. Owner: Pow Hwee. PM: Michelle.*
 
-*Synced from Jira: 2026-06-03*
+*Synced from Jira: 2026-07-01*

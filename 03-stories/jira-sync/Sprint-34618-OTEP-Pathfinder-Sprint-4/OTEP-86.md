@@ -2,7 +2,7 @@
 
 **Status:** QA
 **Assignee:** N/A
-**Story Points:** 2
+**Story Points:** 2.0
 
 ---
 
@@ -35,3 +35,5 @@ I think I missed out AC6. Can I double check where is this supposed to be displa
 
 **Pow Hwee TAN (PSD)** (2026-05-28)
 Careers@Gov is not listed as a filter option. Suggest creating a Sprint 4 ticket to add C@G as a filter option once C@G listings are live.
+
+*Synced from Jira: 2026-07-01*

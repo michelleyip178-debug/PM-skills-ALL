@@ -1,7 +1,7 @@
 # OTEP-6: IAA paper for MVP fund submission
 
 **Type:** Task
-**Status:** Backlog
+**Status:** Done
 **Assignee:** Jace Tan
 **Story Points:** N/A
 
@@ -33,3 +33,5 @@ will send to GK today for her comments
 
 **Jace Tan** (2026-01-29)
 sent to CS for review.  in progress responding to comment and update the budget
+
+*Synced from Jira: 2026-07-01*

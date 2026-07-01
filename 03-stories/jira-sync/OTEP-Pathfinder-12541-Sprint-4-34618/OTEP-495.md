@@ -1,6 +1,6 @@
 # OTEP-495: Add queryParam on backend to handle text search
 
-**Status:** In Progress
+**Status:** Done
 
 **Assignee:** Thomas Huchedé
 
@@ -26,4 +26,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-06-17*
+*Synced from Jira: 2026-07-01*

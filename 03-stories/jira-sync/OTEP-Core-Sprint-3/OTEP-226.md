@@ -1,7 +1,7 @@
 # OTEP-226: Setup CFTP
 
 **Type:** Sub-task
-**Status:** In Progress
+**Status:** Done
 **Assignee:** rama moorthy
 **Story Points:** N/A
 
@@ -23,4 +23,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-06-08*
+*Synced from Jira: 2026-07-01*

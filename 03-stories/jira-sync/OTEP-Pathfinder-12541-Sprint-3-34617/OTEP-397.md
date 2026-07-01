@@ -1,8 +1,8 @@
 # OTEP-397: UI for OTG excel file upload
 
-**Status:** Backlog
-**Assignee:** N/A
-**Story Points:** N/A
+**Status:** Done
+**Assignee:** Michelle Yip
+**Story Points:** 3.0
 
 ---
 
@@ -98,3 +98,5 @@ _No subtasks._
 
 **Hao Eng** (2026-06-08)
 hi   , heard from Rama that only specific users can access this upload UI. how to identify such user?
+
+*Synced from Jira: 2026-07-01*

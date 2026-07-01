@@ -2,7 +2,7 @@
 
 **Status:** QA
 **Assignee:** N/A
-**Story Points:** N/A
+**Story Points:** 3.0
 
 ---
 
@@ -36,3 +36,5 @@ OTEP-285 ACs (click-through to detail and return-to-page state) are folded into 
 
 **Amber Tong** (2026-05-13)
 figma link  here
+
+*Synced from Jira: 2026-07-01*

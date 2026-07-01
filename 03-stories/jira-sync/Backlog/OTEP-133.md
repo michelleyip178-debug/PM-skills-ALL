@@ -2,7 +2,7 @@
 
 **Type:** Story
 
-**Status:** Backlog
+**Status:** Done
 
 **Assignee:** N/A
 
@@ -35,3 +35,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-07-01*

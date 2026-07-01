@@ -1,8 +1,8 @@
 # OTEP-343: Implement OTG Competency Staging & First-Login Migration
 
 **Type:** Sub-task
-**Status:** Backlog
-**Assignee:** Fanxu Wang
+**Status:** QA
+**Assignee:** Kingsley Low
 **Story Points:** N/A
 **Sprint:** OTEP-Core Sprint 3
 
@@ -99,4 +99,4 @@ OTG competencies are staged upfront and only materialised into user profile at f
 
 _No subtasks._
 
-*Synced from Jira: 2026-06-03*
+*Synced from Jira: 2026-07-01*

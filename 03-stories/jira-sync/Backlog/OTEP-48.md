@@ -1,7 +1,7 @@
 # OTEP-48: Epic 4: Opportunity Discovery (STIPs / Gigs)
 
 **Type:** Task
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Michelle Yip
 **Story Points:** N/A
 
@@ -35,3 +35,5 @@ From Meeting with Orion - 4 Mar 2026 How STIPs and gigs relate to the ATS vs OTG
 
 **Michelle Yip** (2026-03-03)
 get alignment with stakeholders that we will focus on general officers first on SJR and open jobs.  stips and gigs - unsure how it will drive competency-driven
+
+*Synced from Jira: 2026-07-01*

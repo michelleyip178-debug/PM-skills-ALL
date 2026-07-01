@@ -1,7 +1,7 @@
 # OTEP-116: Database Schema & Mapping for POCDEX Employee Data
 
 **Type:** Sub-task
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Kingsley Low
 **Story Points:** N/A
 
@@ -70,4 +70,4 @@ _No subtasks._
 
 **Kingsley Low:** For now, any Data Nullity check (Fields mentioned above) will return an error by default.
 
-*Synced from Jira: 2026-06-08*
+*Synced from Jira: 2026-07-01*

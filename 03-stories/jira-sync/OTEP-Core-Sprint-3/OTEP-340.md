@@ -1,7 +1,7 @@
 # OTEP-340: OTEP Resolve Identity API
 
 **Type:** Sub-task
-**Status:** QA
+**Status:** Done
 **Assignee:** Pei Ern Lim
 **Story Points:** N/A
 **Sprint:** OTEP-Core Sprint 3
@@ -34,4 +34,4 @@ Meets performance expectations
 
 _No subtasks._
 
-*Synced from Jira: 2026-06-03*
+*Synced from Jira: 2026-07-01*

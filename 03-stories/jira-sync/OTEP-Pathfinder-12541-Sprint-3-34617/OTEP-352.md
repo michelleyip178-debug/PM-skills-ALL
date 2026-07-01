@@ -1,6 +1,6 @@
 # OTEP-352: chore: load POCDEX production code table
 
-**Status:** QA
+**Status:** Done
 **Assignee:** Hao Eng
 **Story Points:** N/A
 
@@ -32,3 +32,5 @@ checked with Acacia through teams chat. She mentioned using the  POCDEX_CODE  sh
 
 **Hao Eng** (2026-06-09)
 can look for Acacia from ITC (which one is the code table) create migration scripts to take in the excel sheets details - agency and employment type
+
+*Synced from Jira: 2026-07-01*

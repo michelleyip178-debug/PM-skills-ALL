@@ -1,7 +1,7 @@
 # OTEP-26: Competency Inference Engine
 
 **Type:** Task
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Imelda Mo
 **Story Points:** N/A
 
@@ -38,3 +38,5 @@ Project doc here:     Next speaking to govtech team on 13 Feb tech exchange 23 f
 
 **Imelda Mo** (2026-02-06)
 Aligned with Mark that priority will be use case 3 in 5 Feb meeting. 1.Recruitment Support  – Infer competencies from resumes and job descriptions for early suitability checks.  2.Job Profile Competency Pre‑population  – Infer competencies from JDs to auto-tag role requirements. 3.Gap Analysis for Officers  – Compare expected vs actual (inferred + self-declared) competencies.  Next step: To set a date with Mark and Govtech Team to align together on what the POC should achieve.vv
+
+*Synced from Jira: 2026-07-01*
