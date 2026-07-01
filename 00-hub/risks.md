@@ -89,4 +89,4 @@ Detailed tracking (owner, deadline, status) lives in [open-items.md](open-items.
 
 ---
 
-*Updated: 2026-06-24 (timeline update — VAPT moved to 7 Sep–16 Oct; UAT now 11 Aug–4 Sep staggered; soft launch 26–30 Oct; first release 2 Nov; Jace leave 26 Oct–5 Nov risk added). Prior: 2026-06-05 (VAPT dates confirmed 21 Sep–16 Oct)*
+*Updated: 2026-07-01 (stale-check — content verified current against open-items #39, no changes). Prior: 2026-06-24 (timeline update — VAPT moved to 7 Sep–16 Oct; UAT now 11 Aug–4 Sep staggered; soft launch 26–30 Oct; first release 2 Nov; Jace leave 26 Oct–5 Nov risk added).*

@@ -15,13 +15,15 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## In Progress
 
-**Engineering (Jira — live 2026-06-26):**
+**Engineering (Jira — live 2026-07-01, Sprint 34619):**
 
-*Sprint 4 In Progress (12):* OTEP-88 (C@G listing, Léo), OTEP-276 (design-system spike, Pow Hwee), OTEP-322 (Playwright, Rathika), OTEP-349 (competency spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-361 (ADR forum, Pow Hwee), OTEP-386 (ringfencing tooltip FE, Thomas), OTEP-405 (keyword search FE/BE, Thomas), OTEP-439 (ineligible states design, Amber), OTEP-495 (search backend, Thomas), OTEP-505 (CFT upload/webhook, Hao Eng), OTEP-539 (C@G background import, Léo).
+*Sprint 5 In Progress (14):* OTEP-87 (C@G opp detail, Thomas), OTEP-88 (C@G listing, Léo), OTEP-276 (design-system spike, Pow Hwee), OTEP-304 (stay-authenticated, Hao Eng), OTEP-322 (Playwright, Rathika), OTEP-349 (competency spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-361 (ADR forum, Pow Hwee), OTEP-386 (opportunity type tooltip, Thomas), OTEP-405 (keyword search, Thomas), OTEP-439 (ineligible states design, Amber), OTEP-505 (CFT upload/webhook, Hao Eng), OTEP-539 (C@G background import, Léo), OTEP-541 (agencies fetch/map FE, Thomas).
 
-*Sprint 4 In QA (10):* OTEP-85 (listing cards), OTEP-86 (filters), OTEP-128 (detail page), OTEP-129 (open/closed), OTEP-268 (empty/error states), OTEP-284 (closing soon label), OTEP-305 (login/logout), OTEP-392 (federated logout), OTEP-406 (sort opportunities), OTEP-438 (admin view placeholder).
+*Sprint 5 In QA (13):* OTEP-85 (listing cards), OTEP-86 (filters), OTEP-128 (detail page), OTEP-129 (open/closed, Thomas), OTEP-131 (broken FormSG link, Thomas), OTEP-268 (empty/error states), OTEP-284 (closing soon, Thomas), OTEP-305 (login/logout), OTEP-392 (federated logout, Thomas), OTEP-406 (sort, Thomas), OTEP-438 (admin view, Hao Eng), OTEP-571 (STIP/Gig card layout, Hao Eng), OTEP-595 (Keycloak realm displayName, Pow Hwee).
 
-*Sprint 4 Done (31):* See sprint-status.md for full list.
+*Sprint 5 To Do (1):* OTEP-445 (POCDEX code table import spike) — still unassigned.
+
+*Sprint 5 Done (29) · Backlog (17):* See sprint-status.md for full list.
 
 ---
 
@@ -150,4 +152,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-06-29 — stale-check. Sprint line updated S4 closed → S5 active. Engineering In Progress section reflects S4 state (2026-06-26) — use sprint-status.md for current S5 counts. Prior: 2026-06-26.*
+*Updated: 2026-07-01 — stale-check. Engineering In Progress/QA/To Do refreshed to live Sprint 5 pull (14/13/1, matches sprint-status.md exactly). Prior: 2026-06-29 (sprint line S4→S5, engineering section left stale pointing to sprint-status.md).*
