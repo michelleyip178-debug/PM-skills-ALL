@@ -34,7 +34,7 @@ Everything else follows from these. If they're stale, every command output is wr
 
 1. **[00-hub/sprint-status.md](00-hub/sprint-status.md)** — sprint goal, stories, dates. Update each sprint start.
 2. **[00-hub/tasks-active.md](00-hub/tasks-active.md)** — in progress / blocked / waiting. Update daily.
-3. **[06-skills-and-decisions/decisions-log.md](06-skills-and-decisions/decisions-log.md)** — every decision, with date, rationale, owner.
+3. **[06-skills-and-decisions/decisions-log.md](../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md)** — every decision, with date, rationale, owner.
 
 ---
 

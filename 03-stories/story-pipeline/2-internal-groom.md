@@ -34,7 +34,7 @@ Review the output. For each story:
 
 - Update the story files with new edge cases and AC refinements from the discussion
 - Add open questions to `00-hub/open-items.md` with owner and deadline
-- Log any scope decisions to `06-skills-and-decisions/decisions-log.md`
+- Log any scope decisions to `../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`
 - Update the index: stories that advanced → DoR: In progress
 
 ## Done when

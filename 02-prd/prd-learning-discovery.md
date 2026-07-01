@@ -231,4 +231,4 @@ Officers who are:
 | More filtered swimlanes (Top 10, Popular) | GOOD TO HAVE — depends on DLE exposing these as callable attributes |
 | Learning history display on profile page | NEXT RELEASE |
 | Jumpstart POC2 — competency-based recommendation model | Timeline and scope to be discussed with Jumpstart |
-| Opportunity recommender (R1) | Hypotheses and interview questions for scoping: [opportunity-recommender-hypotheses-2026-06-05.md](../../../PM-OS/outputs/research-synthesis/opportunity-recommender-hypotheses-2026-06-05.md) |
+| Opportunity recommender (R1) | Hypotheses and interview questions for scoping: [2026-06-05-W23-opportunity-recommender-hypotheses.md](../../PM-OS/outputs/research-synthesis/2026-06-05-W23-opportunity-recommender-hypotheses.md) |

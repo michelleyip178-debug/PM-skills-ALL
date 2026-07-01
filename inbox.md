@@ -52,11 +52,11 @@
 - **[A] Pow Hwee to Daryll: OTEP code table in UAT read replica is very unclean...** → `open-items.md` #33 & `tasks-active.md`
 
 *Routing log for 2026-05-22:*
-- **[D] POCDEX epic to be created and under Me** → `06-skills-and-decisions/decisions-log.md`
+- **[D] POCDEX epic to be created and under Me** → `../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`
 - **[I] OTEP-110 Jira ACs and design spec has mismatch, in PM** → `00-hub/open-items.md` #32
 - **[A] Complete Cybersecurity quiz** → `tasks/active.md`
 - **[A] Completed OTEP-296** → `tasks/active.md` and `open-items.md`
-- **[D] Lock down design sprint with Amber today** → `decisions-log.md` & `open-items.md #22`
+- **[D] Lock down design sprint with Amber today** → `../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md` & `open-items.md #22`
 
 *Routing log for 2026-05-15:*
 - **[I] OTEP-202 / OTEP-271 split (POCDEX DB + seed)** → `context/open-items.md` #27 (confirm Sprint 2 carry-over vs backlog at finalisation / planning)
@@ -67,7 +67,7 @@
 *Routing log for 2026-05-14:*
 - **[I] Thomas carry-over comment** → deleted (redundant with Sprint 2 scope decision logged 2026-05-11)
 - **[A] Thomas auth testing without AzureAD** → `open-items.md` #26 (new item: define expected auth test outcome, owner Pow Hwee/Leo, due Fri 15 May)
-- **[D] Design system → LifeSG** → already in `decisions-log.md` (2026-05-13 entry). No action.
+- **[D] Design system → LifeSG** → already in `../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md` (2026-05-13 entry). No action.
 - **[A] Michelle: consolidate stories for Rethna** → already in `tasks/active.md` "Up Next". No action.
 - **[A] Michelle: test script review with Rethna** → already in `tasks/active.md` "Up Next". No action.
 - **[I] Thomas sole FE velocity risk** → already in `context/risks.md` ("Thomas is sole FE developer..."). No action.

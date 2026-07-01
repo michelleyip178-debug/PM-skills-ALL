@@ -32,14 +32,14 @@ Prepare:
 ### When scope questions come up
 Someone will ask "what about [feature X]?" for something out of MVP scope. Be ready:
 - "That's R1 — we're logging it. For MVP, we're doing [simpler version]."
-- Check `06-skills-and-decisions/decisions-log.md` — has this been decided already? Reference the decision.
+- Check `../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md` — has this been decided already? Reference the decision.
 - If it hasn't been decided, log it as a new open item. Don't decide in the room unless you're confident.
 
 ## After the session (10 min)
 
 - Update story files with estimation results and any AC refinements
 - Add new open questions to `00-hub/open-items.md`
-- Log any scope decisions to `06-skills-and-decisions/decisions-log.md`
+- Log any scope decisions to `../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`
 - Update the index: estimated stories → DoR: Ready (if all checklist items green)
 - Stories not ready → note what's missing and who owns it
 

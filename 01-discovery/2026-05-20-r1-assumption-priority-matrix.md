@@ -200,4 +200,4 @@ The one genuine gap that can't be closed before R1 starts is A1 (channel choice)
 
 ---
 
-*Living document — update status column as experiments run. Log outcomes in `decisions-log.md`.*
+*Living document — update status column as experiments run. Log outcomes in `../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`.*

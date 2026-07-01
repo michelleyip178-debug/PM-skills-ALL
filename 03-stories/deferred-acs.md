@@ -156,9 +156,9 @@ Grouped by **parent story**. Each row is one deferred AC. If a whole story is de
 
 1. **When you cut an AC from a must-have during grooming** — copy it here under the parent story, set Tier and Status = 🟡 Open.
 2. **When a sprint pulls a deferred AC back in** — change Status to 🟢 Pulled, note which sprint and Jira ticket.
-3. **When a decision kills an AC for good** — change to 🔴 Dropped, link the decision in `06-skills-and-decisions/decisions-log.md`.
+3. **When a decision kills an AC for good** — change to 🔴 Dropped, link the decision in `../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`.
 4. **At Sprint 3 grooming and beyond** — scan this file's "Sprint 3 stories" section + R1 backlog. Pull anything that's earned its way back in.
 
 ---
 
-*Created: 2026-05-15. Source files: `filters.md`, `otg-lifecycle.md`, CLAUDE.md MVP guardrails, `06-skills-and-decisions/decisions-log.md`.*
+*Created: 2026-05-15. Source files: `filters.md`, `otg-lifecycle.md`, CLAUDE.md MVP guardrails, `../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`.*

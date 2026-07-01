@@ -279,6 +279,6 @@ These aren't assumptions for experiments — they're questions that need a decis
 
 ---
 
-*Living document — update as experiments run and scope decisions are logged in `decisions-log.md`.*  
+*Living document — update as experiments run and scope decisions are logged in `../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`.*  
 *Source: Project OTEP OKR Review and Roadmap deck (uploaded 2026-05-20) + sprint-status.md + risks.md*  
 *Reconciled 2026-06-02 against current state: pilot → MVP-6; SJR excluded from MVP (D 2026-05-21); formsg_url confirmed; auth de-risked via Keycloak (D 2026-06-02); A14 split into Experiment 6; Next Steps re-baselined to Sprint 3.*

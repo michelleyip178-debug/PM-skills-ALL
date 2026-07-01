@@ -2,7 +2,7 @@
 
 **This is the source of truth for which stories are in which sprint.** Other docs (`04-ceremonies/archive-tasks/story-readiness.md`, `04-ceremonies/sprint-checklists.md`, `04-ceremonies/sprint-calendar.md`, the story-group files in `projects/otep-mvp/stories/`) reference this — they don't restate it. Story IDs are reconciled in [story-id-map.md](../03-stories/story-id-map.md).
 
-> **Plan of record (2026-06-04):** the team adopted **Pow Hwee's "Planning draft for sprint 3 and after"** (Confluence, PSD-OTEP) as the S2–S6 shape. This file stays the working ticket-level allocation; where they diverge, his page wins on shape and this file wins on live ticket placement. One amendment: native apply = R1 (not an S4 spike). See [adoption reconciliation](../../../PM-OS/outputs/analyses/2026-06-04-adopt-powhwee-plan-reconciliation.md).
+> **Plan of record (2026-06-04):** the team adopted **Pow Hwee's "Planning draft for sprint 3 and after"** (Confluence, PSD-OTEP) as the S2–S6 shape. This file stays the working ticket-level allocation; where they diverge, his page wins on shape and this file wins on live ticket placement. One amendment: native apply = R1 (not an S4 spike). See [adoption reconciliation](../../PM-OS/outputs/archive/2026-W23-Jun01-Jun07/analyses/2026-06-04-W23-adopt-powhwee-plan-reconciliation.md).
 
 **Last updated:** 2026-06-04 (adopted Pow Hwee's Confluence plan as S2–S6 plan-of-record; S4 dates corrected 16–27 → 14–28; native-apply spike dropped → R1). Prior: 2026-06-03 (Sprints 2–3 reconciled to live Jira post-rollover — both S2 closed, both S3 active; Pathfinder S3 = 49 issues, Core S3 = 92).
 
@@ -75,11 +75,11 @@
 
 ## Sprint 4 (14–28 Jun) — Finish the S3 spine + C@G + Auth if WOG AD clean — *provisional, re-based 2026-06-03*
 
-> **📌 Plan of record (2026-06-04): Pow Hwee's "Planning draft for sprint 3 and after"** (Confluence, PSD-OTEP) is now the team's S2–S6 source of truth. This file's streams already align with it; reconcile against the page when they diverge. **One amendment (Michelle, 2026-06-04):** native apply = R1, not an S4 spike — MVP apply stays the FormSG redirect (OTEP-319). See [adoption reconciliation](../../../PM-OS/outputs/analyses/2026-06-04-adopt-powhwee-plan-reconciliation.md). *Pow Hwee's page is pre-26-May in spots (dates, CareerCompass name, C@G deep-link, R1 creation) — flagged for his refresh.*
+> **📌 Plan of record (2026-06-04): Pow Hwee's "Planning draft for sprint 3 and after"** (Confluence, PSD-OTEP) is now the team's S2–S6 source of truth. This file's streams already align with it; reconcile against the page when they diverge. **One amendment (Michelle, 2026-06-04):** native apply = R1, not an S4 spike — MVP apply stays the FormSG redirect (OTEP-319). See [adoption reconciliation](../../PM-OS/outputs/archive/2026-W23-Jun01-Jun07/analyses/2026-06-04-W23-adopt-powhwee-plan-reconciliation.md). *Pow Hwee's page is pre-26-May in spots (dates, CareerCompass name, C@G deep-link, R1 creation) — flagged for his refresh.*
 >
 > **Dates corrected 2026-06-04:** S4 = **14–28 Jun** per live Jira (Sprint 34618), was 16–27.
 >
-> **Re-based 2026-06-03 against live S3.** Sprint 4 is no longer a clean "new C@G + auth" sprint. Sprint 3 carries 45 open issues on Day 2 with **one FE dev (Thomas) and ~20 FE stories** — the apply/filter spine and the entire C@G UI stream will mostly carry into S4. Plan S4 as *finish-the-spine first*, new work second. Full reasoning: [Sprint 3 FE capacity + S4 impact analysis](../../../PM-OS/outputs/analyses/2026-06-03-sprint3-fe-capacity-and-sprint4-impact.md).
+> **Re-based 2026-06-03 against live S3.** Sprint 4 is no longer a clean "new C@G + auth" sprint. Sprint 3 carries 45 open issues on Day 2 with **one FE dev (Thomas) and ~20 FE stories** — the apply/filter spine and the entire C@G UI stream will mostly carry into S4. Plan S4 as *finish-the-spine first*, new work second. Full reasoning: [Sprint 3 FE capacity + S4 impact analysis](../../PM-OS/outputs/archive/2026-W23-Jun01-Jun07/analyses/2026-06-03-W23-sprint3-fe-capacity-and-sprint4-impact.md).
 >
 > **🟢 Capacity boost in S4: a second full-stack dev joins** (productive day 1, even FE/BE split) → ~1.5 FE-equivalent + extra BE. This makes S4 the *catch-up* sprint that can absorb the S3 carry-over AND start some new work. Sprint 3 itself gets no relief — the catch-up only starts 16 Jun.
 >

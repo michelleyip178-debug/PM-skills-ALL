@@ -27,7 +27,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## Up Next
 
-> 🎯 **SPRINT 4 & 5 GATES (added 2026-06-04)** — what each sprint needs from *Michelle specifically*. Plan-of-record = [Pow Hwee's Confluence plan](https://sgtechstack.atlassian.net/wiki/spaces/OTEP/pages/2293796526/Planning+draft+for+sprint+3+and+after) (adopted 2026-06-04, native apply→R1). See [S4/S5 reconciliation](../../../PM-OS/outputs/analyses/2026-06-04-adopt-powhwee-plan-reconciliation.md).
+> 🎯 **SPRINT 4 & 5 GATES (added 2026-06-04)** — what each sprint needs from *Michelle specifically*. Plan-of-record = [Pow Hwee's Confluence plan](https://sgtechstack.atlassian.net/wiki/spaces/OTEP/pages/2293796526/Planning+draft+for+sprint+3+and+after) (adopted 2026-06-04, native apply→R1). See [S4/S5 reconciliation](../../PM-OS/outputs/archive/2026-W23-Jun01-Jun07/analyses/2026-06-04-W23-adopt-powhwee-plan-reconciliation.md).
 >
 > **Sprint 4 (15–28 Jun) — goal agreed at planning 2026-06-11:**
 > - [x] ~~**Lock the Sprint 4 goal**~~ — ✅ Done 2026-06-11. Goal: complete, usable listing experience — search, filter, sort, data currency.
@@ -46,7 +46,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 > 📌 ~~**REVIEW TOMORROW (parked 2026-06-02):** Pow Hwee's **Sprint 3 Proposed Backlog** — review against sprint-status (50 issues, carry-over QA + new scope). Act/comment after reading.~~ **STALE — now Day 6 of Sprint 3. Board is live at 50 issues. Action moot.**
 
-> **LNO re-sort applied 2026-06-02** ([analysis](../../../PM-OS/outputs/analyses/2026-06-02-lno-prioritization.md)). This week's **Leverage** (do deeply): feed Adrian the R1 resource ask · drive R1 design alignment w/ designers · force the ATS fork (C1) · CSC SSO feasibility · finish WOG Auth metrics. Overhead items below struck/delegated/deferred to protect that time.
+> **LNO re-sort applied 2026-06-02** ([analysis](../../PM-OS/outputs/archive/2026-W23-Jun01-Jun07/analyses/2026-06-02-W23-lno-prioritization.md)). This week's **Leverage** (do deeply): feed Adrian the R1 resource ask · drive R1 design alignment w/ designers · force the ATS fork (C1) · CSC SSO feasibility · finish WOG Auth metrics. Overhead items below struck/delegated/deferred to protect that time.
 
 > **BAU / standing tasks — prioritised** (linked from daily plans):
 > - **🔴 P1 (this week, unblocks others):** WOG AD response — Adrian (#26) · CSC SSO + ref data — Imelda (#18/#30)

@@ -45,7 +45,7 @@ Most items are **I** (info only). Let those go — they're in your memory and th
 
 | Tag | Route to | Format |
 |-----|----------|--------|
-| **D** — Decision | `06-skills-and-decisions/decisions-log.md` | Date, Decision, Rationale, Owner |
+| **D** — Decision | `../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md` | Date, Decision, Rationale, Owner |
 | **A** — Action item (mine) | `00-hub/tasks-active.md` | Add to In Progress or Up Next |
 | **A** — Action item (theirs) | `00-hub/open-items.md` | Item, Owner, Needed By, Impacts/why, Status |
 | **Q** — Open question | `00-hub/open-items.md` | Item, Owner, Needed By, Impacts/why, Status |
@@ -53,7 +53,7 @@ Most items are **I** (info only). Let those go — they're in your memory and th
 
 ### Special cases
 
-- **Scope decision** → also check: does this affect `06-skills-and-decisions/decisions-log.md` AND the PRD decision tracker (Section 11)?
+- **Scope decision** → also check: does this affect `../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md` AND the PRD decision tracker (Section 11)?
 - **New risk or dependency** → add to `00-hub/risks.md`
 - **Design direction** → update the relevant story file's AC or designer notes
 - **Stakeholder insight** → update the person's profile in `06-skills-and-decisions/stakeholders/people/`

@@ -123,7 +123,7 @@ Format: "[Topic] — that's Sprint N+2 / R1. Logging it, not grooming it."
 
 - [ ] Update `00-hub/sprint-status.md` with confirmed Sprint N+1 scope
 - [ ] Update `04-ceremonies/sprint-allocation.md` if stories moved
-- [ ] Log decisions in `06-skills-and-decisions/decisions-log.md`
+- [ ] Log decisions in `../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`
 - [ ] Add new open items to `00-hub/open-items.md`
 - [ ] Update `04-ceremonies/sprint-checklists.md` with DoR status
 - [ ] Share committed stories + ACs with Rethna for QA review prep

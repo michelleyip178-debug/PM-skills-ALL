@@ -67,6 +67,6 @@ This is the sharpest question because it forces a binary answer on the sprint's 
 ## After the Session
 
 1. Update `context/current-sprint.md` with actual committed stories and real sprint goal
-2. Log any decisions made in `context/decisions-log.md`
+2. Log any decisions made in `../../../../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`
 3. Update `context/open-items.md` with any items that got resolved or re-assigned
 4. Run `/archive` to checkpoint the mid-sprint state

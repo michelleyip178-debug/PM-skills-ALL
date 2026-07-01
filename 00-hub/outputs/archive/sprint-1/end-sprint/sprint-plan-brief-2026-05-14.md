@@ -99,7 +99,7 @@ Same stories, but "fully shippable" signals to the team that good-to-have ACs (m
 
 Update these files after the session:
 - `context/current-sprint.md` — swap in the Sprint 2 section on Monday
-- `context/decisions-log.md` — Sprint 2 final commitment, any scope changes
+- `../../../../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md` — Sprint 2 final commitment, any scope changes
 - `projects/sprint-allocation.md` — reconcile if anything shifted
 - `projects/otep-mvp/sprint-checklists.md` — update story status
 - `context/open-items.md` — #24 and #23 status after resolution

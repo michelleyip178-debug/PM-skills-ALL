@@ -62,7 +62,7 @@
 |---|---|---|
 | **Weekly Jira ↔ OS reconciliation.** Friday afternoon (before next-sprint planning), spend 15 min comparing the upcoming-sprint Jira board against `current-sprint.md` and `story-id-map.md`. Catch ID changes / rename / scope splits before they become drift. | Michelle | At Sprint 2 finalisation, zero unknown Jira IDs and zero missing OS references. |
 | **Pow Hwee load check at Sprint 2 planning.** Explicitly count how many stories have Pow Hwee as primary owner. If >3 critical-path stories, flag as a capacity risk before planning ends — not at mid-sprint. | Michelle to raise, Pow Hwee to confirm | At Sprint 2 mid-sprint review, Pow Hwee's stories all in progress (not "not started"). |
-| **Log every scope decision flip within 24h with the rationale.** If steering or a BO meeting changes a previous call, the new decision lands in `decisions-log.md` same-day with explicit supersede note. | Michelle | At Sprint 2 retro, count of decisions flipped without same-day log = 0. |
+| **Log every scope decision flip within 24h with the rationale.** If steering or a BO meeting changes a previous call, the new decision lands in `../../../../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md` same-day with explicit supersede note. | Michelle | At Sprint 2 retro, count of decisions flipped without same-day log = 0. |
 
 **Pick 1 to commit to** — running all three dilutes focus. **Recommended:** the Jira ↔ OS reconciliation. Smallest effort, highest leverage, and it would have caught today's surprises before retro.
 
@@ -84,4 +84,4 @@ You're a participant here — not a facilitator, not a defender. Rama facilitate
 
 ---
 
-*Generated: 2026-05-15. Source files: `context/current-sprint.md` (post-archive), `context/decisions-log.md`, `context/risks.md`, `context/open-items.md`, `outputs/archive/sprint-1/end-sprint/` snapshots.*
+*Generated: 2026-05-15. Source files: `context/current-sprint.md` (post-archive), `../../../../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`, `context/risks.md`, `context/open-items.md`, `outputs/archive/sprint-1/end-sprint/` snapshots.*

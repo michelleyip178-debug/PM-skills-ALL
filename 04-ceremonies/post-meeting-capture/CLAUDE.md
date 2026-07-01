@@ -8,7 +8,7 @@ Say "meeting capture", "triage meeting notes", or "process meeting notes" after 
 
 ## What This Produces
 
-- Decisions logged in `06-skills-and-decisions/decisions-log.md`
+- Decisions logged in `../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`
 - Action items routed to `00-hub/tasks-active.md` (mine) or `00-hub/open-items.md` (theirs)
 - Open questions added to `00-hub/open-items.md` with owner and deadline
 - Optionally: raw notes archived to `04-ceremonies/archive-meetings/`

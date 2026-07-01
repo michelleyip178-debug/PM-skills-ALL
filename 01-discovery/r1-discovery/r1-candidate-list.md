@@ -1,7 +1,7 @@
 # R1 Candidate List — Phase 1 Consolidation
 
 **Created:** 2026-05-20
-**Sources:** `sprint-allocation.md` (Deferred to R1), `decisions-log.md`, `scoping-gaps-tracker.md`, CareerCompass OKR Review & Roadmap deck
+**Sources:** `sprint-allocation.md` (Deferred to R1), `../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`, `scoping-gaps-tracker.md`, CareerCompass OKR Review & Roadmap deck
 **Owner:** Michelle
 **Status:** Draft — pending reconciliation with Adrian
 

@@ -27,7 +27,7 @@ The risk without a clear handoff protocol: decisions get logged in both places, 
 ## Where They Hand Off
 
 **Laughing-pmyip → PM-skills-ALL-1** (strategy feeds execution):
-- A hypothesis graduates to a decision → paste the short decision into `06-skills-and-decisions/decisions-log.md`
+- A hypothesis graduates to a decision → paste the short decision into `../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`
 - Discovery synthesis identifies a user need → becomes a story brief in `03-stories/otep-stories/`
 - Stakeholder intelligence surfaces a constraint → add to `00-hub/risks.md`
 
@@ -61,7 +61,7 @@ The risk without a clear handoff protocol: decisions get logged in both places, 
 
 | Concept | Single source of truth | Notes |
 |---------|----------------------|-------|
-| Decisions | Laughing-pmyip `decisions/` (full WHY + evidence) | PM-skills-ALL-1 `decisions-log.md` = short operational record only |
+| Decisions | Laughing-pmyip `decisions/` (full WHY + evidence) | PM-skills-ALL-1 `../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md` = short operational record only |
 | Stakeholder profiles | Laughing-pmyip `stakeholders/` | PM-skills-ALL-1 `06-skills-and-decisions/stakeholders/people/` = meeting prep only |
 | Risks | PM-skills-ALL-1 `00-hub/risks.md` | Move to Laughing-pmyip `/risk` only when you need to interrogate the assumption behind the risk |
 | Sprint state | PM-skills-ALL-1 only | Laughing-pmyip doesn't track sprint status |
@@ -71,6 +71,6 @@ The risk without a clear handoff protocol: decisions get logged in both places, 
 
 ## You'll Know It's Working When
 
-- Every decision in PM-skills-ALL-1 `decisions-log.md` has a corresponding entry in Laughing-pmyip `decisions/` with evidence and confidence
+- Every decision in PM-skills-ALL-1 `../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md` has a corresponding entry in Laughing-pmyip `decisions/` with evidence and confidence
 - Hypotheses in Laughing-pmyip are getting marked validated/invalidated after sprints (not just accumulating)
 - You open Laughing-pmyip at least once per stakeholder meeting, not just before sprints

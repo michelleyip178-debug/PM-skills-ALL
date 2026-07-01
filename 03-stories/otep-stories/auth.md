@@ -255,7 +255,7 @@ Deferred to the sprint that ships the apply flow (Sprint 3+). The FormSG data-lo
 
 ### WOG-18: Concurrent sessions — policy decision, not a feature
 
-This does not need a delivery ticket. Make a one-line default decision and record it in `decisions-log.md`:
+This does not need a delivery ticket. Make a one-line default decision and record it in `../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`:
 
 > *"Allow multiple concurrent sessions. Each session respects the idle timeout independently."*
 

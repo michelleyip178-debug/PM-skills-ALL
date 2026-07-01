@@ -83,7 +83,7 @@
 
 ## Decisions logged
 
-→ `context/decisions-log.md` (9 entries added 2026-05-13 from this session)
+→ `../../../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md` (9 entries added 2026-05-13 from this session)
 
 ## New open items
 

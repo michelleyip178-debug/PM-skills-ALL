@@ -15,7 +15,7 @@ Move all dated briefs and dailies from `00-hub/outputs/` → `00-hub/outputs/arc
 Copy (don't move) `00-hub/sprint-status.md` → `00-hub/outputs/archive/sprint-N/snapshot-sprint-N-YYYY-MM-DD.md`. This preserves committed vs delivered.
 
 ### 3. Log undocumented decisions
-Scan memory from the past 2 weeks: any scope calls in Slack/standup not in `06-skills-and-decisions/decisions-log.md`? Any informal R1 deferrals? Add each with date, decision, rationale, owner.
+Scan memory from the past 2 weeks: any scope calls in Slack/standup not in `../../PM-OS/outputs/decisions/2026-05-29-W22-decisions-log.md`? Any informal R1 deferrals? Add each with date, decision, rationale, owner.
 
 ### 4. Update tasks-active.md
 - Move completed items to Done with a one-line impact note (not just a strikethrough — say what it unblocked)
