@@ -4,7 +4,7 @@
 
 > **Plan of record (2026-06-04):** the team adopted **Pow Hwee's "Planning draft for sprint 3 and after"** (Confluence, PSD-OTEP) as the S2–S6 shape. This file stays the working ticket-level allocation; where they diverge, his page wins on shape and this file wins on live ticket placement. One amendment: native apply = R1 (not an S4 spike). See [adoption reconciliation](../../PM-OS/outputs/archive/2026-W23-Jun01-Jun07/analyses/2026-06-04-W23-adopt-powhwee-plan-reconciliation.md).
 
-**Last updated:** 2026-06-04 (adopted Pow Hwee's Confluence plan as S2–S6 plan-of-record; S4 dates corrected 16–27 → 14–28; native-apply spike dropped → R1). Prior: 2026-06-03 (Sprints 2–3 reconciled to live Jira post-rollover — both S2 closed, both S3 active; Pathfinder S3 = 49 issues, Core S3 = 92).
+**Last updated:** 2026-07-01 (jira-sync full sweep — Sprint 5 owner/status columns refreshed against live Jira (Sprint 34619, 74 issues); OTEP-71/110/127/89 flagged as stale placement, WOG-06/US-10 flagged as invalid Jira keys). Prior: 2026-06-04 (adopted Pow Hwee's Confluence plan as S2–S6 plan-of-record; S4 dates corrected 16–27 → 14–28; native-apply spike dropped → R1). Prior: 2026-06-03 (Sprints 2–3 reconciled to live Jira post-rollover — both S2 closed, both S3 active; Pathfinder S3 = 49 issues, Core S3 = 92).
 
 **Prior:** 2026-05-21 (Sprint 3 reallocation — auth deferred; Sprint 4 restructured with contingency-first stream; **working assumption = auth lands Sprint 5** — WOG AD is a formal process, min 2 wks + back and forth; Sprint 5 carries auth realistic + C@G; Sprint 6 carries CSC SSO realistic + admin).
 
@@ -121,27 +121,28 @@
 
 ---
 
-## Sprint 5 (29 Jun – 10 Jul) — Auth (realistic) + C@G detail + CSC SSO process — *provisional*
+## Sprint 5 (29 Jun – 12 Jul) — Auth (realistic) + C@G detail + CSC SSO process — *provisional*
 
 > **Realistic scenario: WOG AD completes ~19 Jun (3 weeks from late-May approval, with some back and forth). Auth stories start Sprint 5.**
+> **Live pull 2026-07-01** (Sprint 34619, state=active): owner/status columns below refreshed against Jira. Several rows in this provisional plan do not match live placement — see notes per row. ⚠️ **Flagged, not rewritten:** whether to keep/reallocate these rows is a scope call, not a field sync.
 
 **Stream A — Auth (realistic landing):**
 
 | Jira | Story | Owner | Notes |
 |------|-------|-------|-------|
-| OTEP-71 | Log in with WOG AD credentials | Pow Hwee | Moves here if WOG AD not done by Sprint 4 start. |
-| OTEP-110 | Login fail / clear error | Thomas | |
-| OTEP-304 | Stay logged in during session | — | |
-| OTEP-305 | Log out of OTEP | — | |
-| OTEP-127 | Apply ringfencing criteria | Thomas / Leo | Needs WOG AD + Sprint 3 POCDEX plumbing. |
-| WOG-06 | First-time login experience | Thomas | |
+| OTEP-71 | Log in with WOG AD credentials | — (unassigned) | ⚠️ **Still in Backlog per live Jira, NOT in Sprint 5.** Plan assumed it would move here; it hasn't. |
+| OTEP-110 | Login fail / clear error | — (unassigned) | ⚠️ **Still in Backlog per live Jira, NOT in Sprint 5.** Same as above. |
+| OTEP-304 | Stay logged in during session | Hao Eng | Confirmed in Sprint 5, **In Progress** (live pull 2026-07-01). |
+| OTEP-305 | Log out of OTEP | — (unassigned) | Confirmed in Sprint 5, **QA** (live pull 2026-07-01). |
+| OTEP-127 | Apply ringfencing criteria | Michelle Yip | ⚠️ **Already Done — closed in Sprint 4 (34618), not landing in Sprint 5.** Plan is stale on this row. |
+| WOG-06 | First-time login experience | Thomas | ⚠️ **Not a valid Jira key** — no such issue found in OTEP project. Flag for cleanup or correction to real key. |
 
 **Stream B — C@G (depends on S04 ingestion):**
 
 | Jira | Story | Owner | Notes |
 |------|-------|-------|-------|
-| OTEP-89 | View Careers@Gov opportunity summary on OTEP | Thomas | C@G detail + "Apply via C@G" CTA. Depends on C@G ingestion landing in S04. |
-| US-10 | Receive application confirmation | Thomas | Confirmation screen. FormSG webhook dep (OTEP-130 — moved to Backlog 2026-06-10; US-10 dependency unresolved). |
+| OTEP-89 | View Careers@Gov opportunity summary on OTEP | Thomas Huchedé | ⚠️ **Already Done — closed in Sprint 3 (34617), not landing in Sprint 5.** Plan is stale on this row. |
+| US-10 | Receive application confirmation | Thomas | ⚠️ **Not a valid Jira key** — no such issue found in OTEP project. Flag for cleanup or correction to real key. |
 
 **CSC SSO track (external, running in parallel):**
 - Documents sent to CSC ~end Sprint 4 (best case) / ~end Sprint 5 (realistic)
