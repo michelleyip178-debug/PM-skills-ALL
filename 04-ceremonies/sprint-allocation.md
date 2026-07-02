@@ -4,7 +4,7 @@
 
 > **Plan of record (2026-06-04):** the team adopted **Pow Hwee's "Planning draft for sprint 3 and after"** (Confluence, PSD-OTEP) as the S2–S6 shape. This file stays the working ticket-level allocation; where they diverge, his page wins on shape and this file wins on live ticket placement. One amendment: native apply = R1 (not an S4 spike). See [adoption reconciliation](../../PM-OS/outputs/archive/2026-W23-Jun01-Jun07/analyses/2026-06-04-W23-adopt-powhwee-plan-reconciliation.md).
 
-**Last updated:** 2026-07-02 (jira-sync — Pathfinder Sprint 5 cache cleanup: removed stale duplicate folder `OTEP-Pathfinder-12541-Sprint-5-34619` (11 partial, outdated files); canonical folder `Sprint-34619-OTEP-Pathfinder-Sprint-5` verified 75/75 against live Jira with zero field drift, all files stamped. Live pull confirms 75 issues, up from 74 on 2026-07-01). Prior: 2026-07-01 (jira-sync full sweep — Sprint 5 owner/status columns refreshed against live Jira (Sprint 34619, 74 issues); OTEP-71/110/127/89 flagged as stale placement, WOG-06/US-10 flagged as invalid Jira keys). Prior: 2026-06-04 (adopted Pow Hwee's Confluence plan as S2–S6 plan-of-record; S4 dates corrected 16–27 → 14–28; native-apply spike dropped → R1). Prior: 2026-06-03 (Sprints 2–3 reconciled to live Jira post-rollover — both S2 closed, both S3 active; Pathfinder S3 = 49 issues, Core S3 = 92).
+**Last updated:** 2026-07-02 (jira-sync — added live Jira Sprint 6 placement (8 issues, all Backlog/ungroomed) alongside the existing provisional plan; flagged discrepancy between the two for grooming). Prior: 2026-07-02 (jira-sync — Pathfinder Sprint 5 cache cleanup: removed stale duplicate folder `OTEP-Pathfinder-12541-Sprint-5-34619` (11 partial, outdated files); canonical folder `Sprint-34619-OTEP-Pathfinder-Sprint-5` verified 75/75 against live Jira with zero field drift, all files stamped. Live pull confirms 75 issues, up from 74 on 2026-07-01). Prior: 2026-07-01 (jira-sync full sweep — Sprint 5 owner/status columns refreshed against live Jira (Sprint 34619, 74 issues); OTEP-71/110/127/89 flagged as stale placement, WOG-06/US-10 flagged as invalid Jira keys). Prior: 2026-06-04 (adopted Pow Hwee's Confluence plan as S2–S6 plan-of-record; S4 dates corrected 16–27 → 14–28; native-apply spike dropped → R1). Prior: 2026-06-03 (Sprints 2–3 reconciled to live Jira post-rollover — both S2 closed, both S3 active; Pathfinder S3 = 49 issues, Core S3 = 92).
 
 **Prior:** 2026-05-21 (Sprint 3 reallocation — auth deferred; Sprint 4 restructured with contingency-first stream; **working assumption = auth lands Sprint 5** — WOG AD is a formal process, min 2 wks + back and forth; Sprint 5 carries auth realistic + C@G; Sprint 6 carries CSC SSO realistic + admin).
 
@@ -162,6 +162,21 @@
 | WOG-02 | Log in as agency admin | — | |
 | WOG-07 | Role-based access control | — | 2 roles: officer, admin. |
 | — | Bug fixes + polish from Sprints 2–5 | — | Address mid-sprint review issues. |
+
+**Live Jira placement (pulled 2026-07-02):** Jira board 12541 already has 8 issues sitting in Sprint 6 (future, not started), all Backlog status / unassigned / unpointed:
+
+| Jira | Story | Notes |
+|------|-------|-------|
+| OTEP-71 | Login Authentication Successful | |
+| OTEP-110 | Login fail using WOG AD | |
+| OTEP-111 | Officers with no access (unauthorised page - display only) | |
+| OTEP-594 | Officer is routed to the correct page after WOG AD authentication | |
+| OTEP-331 | WOG AD - SSO integration with CSC | Matches "Story B" above conceptually — may be the actual Jira-side placeholder for CSC SSO. |
+| OTEP-130 | Apply for a STIP or Gig via FormSG link | |
+| OTEP-425 | Bookmark opportunities | Not in the provisional plan above. |
+| OTEP-611 | [SPIKE] Bookmark of opportunities | Sub-task. Not in the provisional plan above. |
+
+⚠️ **Discrepancy, not yet reconciled:** the live Jira set (mostly WOG AD login-flow tickets + a new bookmark feature pair) doesn't match this section's provisional plan (OTEP-133, WOG-02, WOG-07). Only OTEP-331 lines up with "Story B." All 8 are still ungroomed (Backlog, unpointed) — worth confirming at Sprint 6 grooming whether this is early auto-placement to reconcile against, or whether the provisional plan above needs updating to reflect where WOG AD/login work actually landed in Jira.
 
 ---
 
