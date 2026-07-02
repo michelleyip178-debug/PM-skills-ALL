@@ -2,7 +2,7 @@
 
 **Status:** In Progress
 **Assignee:** Thomas Huchedé
-**Story Points:** 2.0
+**Story Points:** 2
 
 ---
 
@@ -24,4 +24,4 @@ As an officer who is new to CareerCompass, I want a quick explanation of what ea
 
 _No comments._
 
-*Synced from Jira: 2026-07-01*
+*Synced from Jira: 2026-07-02*

@@ -38,7 +38,7 @@
 
 ## Sprint 5 — ACTIVE (29 Jun – 12 Jul 2026)
 
-> Source: OTEP-Pathfinder Sprint 5 (Sprint 34619). **Live pull: 2026-07-01.** 74 issues total (up from 55 on 2026-06-30 — carry-in grew).
+> Source: OTEP-Pathfinder Sprint 5 (Sprint 34619). **Live pull: 2026-07-02.** 75 issues total (up from 74 on 2026-07-01 — OTEP-604 added, already Done).
 > Goal: Officers browsing the opportunity listing can see which roles they're eligible for and filter by job category.
 
 **In Progress (14):** OTEP-87 (C@G opp detail, Thomas), OTEP-88 (C@G listing, Léo), OTEP-276 (design-system spike, Pow Hwee), OTEP-304 (stay-authenticated, Hao Eng), OTEP-322 (Playwright, Rathika), OTEP-349 (competency spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-361 (ADR forum, Pow Hwee), OTEP-386 (opportunity type tooltip, Thomas), OTEP-405 (keyword search, Thomas), OTEP-439 (ineligible states design, Amber), OTEP-505 (CFT upload/webhook, Hao Eng), OTEP-539 (C@G background import, Léo), OTEP-541 (agencies fetch/map FE, Thomas)
@@ -47,7 +47,7 @@
 
 **To Do (1):** OTEP-445 (POCDEX code table import spike)
 
-**Done (29):** OTEP-170, OTEP-193, OTEP-288, OTEP-296 (Michelle), OTEP-313, OTEP-314, OTEP-320, OTEP-325, OTEP-326, OTEP-327, OTEP-328, OTEP-334, OTEP-362, OTEP-363, OTEP-367, OTEP-368, OTEP-369, OTEP-374, OTEP-375, OTEP-380, OTEP-381, OTEP-440, OTEP-441, OTEP-482, OTEP-495, OTEP-496, OTEP-499, OTEP-536, OTEP-540 ✅ (Michelle)
+**Done (30):** OTEP-170, OTEP-193, OTEP-288, OTEP-296 (Michelle), OTEP-313, OTEP-314, OTEP-320, OTEP-325, OTEP-326, OTEP-327, OTEP-328, OTEP-334, OTEP-362, OTEP-363, OTEP-367, OTEP-368, OTEP-369, OTEP-374, OTEP-375, OTEP-380, OTEP-381, OTEP-440, OTEP-441, OTEP-482, OTEP-495, OTEP-496, OTEP-499, OTEP-536, OTEP-540 ✅ (Michelle), OTEP-604 (Keycloak CI build job + lowercase realm emails, Pow Hwee)
 
 **Backlog (17):** OTEP-283, OTEP-289, OTEP-329, OTEP-336, OTEP-348, OTEP-390, OTEP-393, OTEP-403, OTEP-404, OTEP-408, OTEP-409, OTEP-437, OTEP-444, OTEP-483, OTEP-484, OTEP-485, OTEP-570
 
@@ -173,4 +173,4 @@
 
 ---
 
-*Updated: 2026-07-01 (jira-sync full sweep — Sprint 5 recomputed from live Jira: 74 issues total (was 55), 14 In Progress (was 12), 13 QA (was 11), 1 To Do, 29 Done, 17 Backlog (was 21). Source: direct Jira REST API pull, sprint 34619.) Prior: 2026-06-26 (stale-check — IP 10→12 +386/439, Backlog 15→13, total 67→66 — OTEP-127 + OTEP-397 Done; OTEP-358 In Progress not Backlog; counts 14 IP→12, 8 QA→10, 20 Done→29). Prior: 2026-06-24 (timeline update — S4 close Fri 26 Jun; S5–S9 dates; VAPT 7 Sep–16 Oct; first release 2 Nov). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE 15–26 Jun. S4: 12 In Progress, 10 QA, 29 Done, 1 To Do (live 2026-06-25).*
+*Updated: 2026-07-02 (jira-sync — Pathfinder Sprint 5 cache folder cleanup: deleted stale duplicate `OTEP-Pathfinder-12541-Sprint-5-34619` (11 partial files); canonical `Sprint-34619-OTEP-Pathfinder-Sprint-5` verified 75/75 against live Jira, zero field drift, all 75 files stamped. Counts: 75 issues total (was 74), 14 In Progress, 13 QA, 1 To Do, 30 Done (was 29 — OTEP-604 added, already Done), 17 Backlog. Source: direct Jira REST API pull, sprint 34619.) Prior: 2026-07-01 (jira-sync full sweep — Sprint 5 recomputed from live Jira: 74 issues total (was 55), 14 In Progress (was 12), 13 QA (was 11), 1 To Do, 29 Done, 17 Backlog (was 21)). Prior: 2026-06-26 (stale-check — IP 10→12 +386/439, Backlog 15→13, total 67→66 — OTEP-127 + OTEP-397 Done; OTEP-358 In Progress not Backlog; counts 14 IP→12, 8 QA→10, 20 Done→29). Prior: 2026-06-24 (timeline update — S4 close Fri 26 Jun; S5–S9 dates; VAPT 7 Sep–16 Oct; first release 2 Nov). Sprint 3 CLOSED 12 Jun. Sprint 4 ACTIVE 15–26 Jun. S4: 12 In Progress, 10 QA, 29 Done, 1 To Do (live 2026-06-25).*

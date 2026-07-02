@@ -2,7 +2,7 @@
 
 **Status:** QA
 **Assignee:** N/A
-**Story Points:** 2.0
+**Story Points:** 2
 
 ---
 
@@ -26,4 +26,4 @@ As a  logged-in public officer,  I want to  log out of OTEP,  So that  my sessio
 **Pow Hwee TAN (PSD)** (2026-05-28)
 Title updated to cover both login and logout (replacing keycloak page with actual). Current AC covers the logout flow well but login is underspecified — what happens if WOG AD auth fails? What does the officer see? Also: this likely depends on OTEP-350 (Onboard WOG AD) being completed first. Suggest adding that as a dependency.
 
-*Synced from Jira: 2026-07-01*
+*Synced from Jira: 2026-07-02*

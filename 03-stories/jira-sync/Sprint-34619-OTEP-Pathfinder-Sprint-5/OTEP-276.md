@@ -2,7 +2,7 @@
 
 **Status:** In Progress
 **Assignee:** Pow Hwee TAN (PSD)
-**Story Points:** 2.0
+**Story Points:** 2
 
 ---
 
@@ -23,4 +23,4 @@ _No subtasks._
 **Pow Hwee TAN (PSD)** (2026-05-18)
 Moved to backlog — not on the critical path for Sprint 2.
 
-*Synced from Jira: 2026-07-01*
+*Synced from Jira: 2026-07-02*

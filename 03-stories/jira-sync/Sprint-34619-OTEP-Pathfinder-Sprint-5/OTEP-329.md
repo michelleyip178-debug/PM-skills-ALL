@@ -2,7 +2,7 @@
 
 **Status:** Backlog
 **Assignee:** Pow Hwee TAN (PSD)
-**Story Points:** 1.0
+**Story Points:** 1
 
 ---
 
@@ -22,4 +22,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-07-01*
+*Synced from Jira: 2026-07-02*

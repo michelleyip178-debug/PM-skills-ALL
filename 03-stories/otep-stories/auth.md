@@ -1,9 +1,13 @@
 # User Stories: WOG AD Authentication (Epic 5)
 
 **Epic:** WOG AD Authentication (Epic 5)
+
 **One-pager:** _TODO: Confluence link_
+
 **Status:** Draft — Auth epic deferred to Sprint 4+ (2026-05-21). Needs grooming before Sprint 4 planning.
+
 **Criticality:** MVP blocker — all other epics depend on this
+
 **Scope decision:** Officers only for MVP. Agency admin login + RBAC (WOG-02, WOG-07) deferred to Sprint 6 (decision 2026-05-12). Auth accepted as-is (decision 2026-05-12). Sprint 2 auth scope = minimal, check user exists + name (decision 2026-05-13). **Auth epic (OTEP-71, OTEP-110, OTEP-304, OTEP-305) moved from Sprint 3 to Sprint 4+ (decision 2026-05-21) — no WOG AD UAT environment available (open item #26).**
 
 ---
@@ -20,6 +24,11 @@ These are decisions, not open questions. Each blocks at least one story from rea
 | 4 | **Concurrent-session default** — allow multiple sessions (simplest) or enforce single-session? Pick a default; don't build a management feature. | Security team | WOG-18 |
 | 5 | **Mandatory profile field** — name only, or name + something else? (email auto-fills; agency comes from WOG-10) | Michelle + team | WOG-06 |
 | 6 | **OTEP-111 scope** — does the existing Sprint 1 "Officers with no access" ticket already cover the not-onboarded and invalid-officer messages? | Pow Hwee | WOG-08/09 absorbed |
+| 7 | **OTEP-111 / OTEP-594 boundary** — Rama flagged these as duplicates (Squad Sync). Confirm the split below (594 = routing decision, 111 = unauthorised-page display) and whether the new "pilot agency, no POCDEX profile yet" system-error case moves out of OTEP-111 into its own outcome. | Michelle + Rama | OTEP-111, OTEP-594 |
+| 8 | **System-error message copy + retry window** — Imelda proposed "Sorry the system is still onboarding your details. We have logged your case and please try logging in again in 2 days," assuming a 2-day POCDEX sync lag. Confirm the lag assumption and whether Core has a screen for this. | Imelda + Pow Hwee | New scenario below |
+| 9 | **Auto-logging to "report issue"** — Pow Hwee + Rama agreed the no-profile-in-whitelisted-agency case should auto-log a backend issue rather than surface as a dead end. Confirm implementation owner and what "report issue" auto-log means technically. | Pow Hwee + Rama | New scenario below |
+| 10 | **Deactivation ACs for officers leaving a pilot agency** — Michelle asked Rama to re-examine ACs for this case. Not yet covered explicitly by either OTEP-111 or OTEP-594. | Rama | OTEP-111 |
+| 11 | **No-session-on-manual-URL-nav** — Rama noted user sessions should not start if a user manually navigates to any URL while unauthenticated/unauthorised. Confirm this is captured as a route-guard NFR, not just an AC on one ticket. | Rama | OTEP-594 |
 
 ---
 
@@ -28,7 +37,8 @@ These are decisions, not open questions. Each blocks at least one story from rea
 | ID | Story | Sprint | Action |
 |----|-------|--------|--------|
 | OTEP-71 | Log in with WOG AD credentials | **4+** *(was 3, deferred 2026-05-21 — no WOG AD UAT env)* | Keep (absorbs WOG-11) |
-| OTEP-111 | Officers with no access | 1 ✔ | Existing ticket — confirm it covers WOG-08/09 ACs |
+| OTEP-111 | Officers with no access (unauthorised page — display) | Backlog | Existing ticket — re-scope pending decision #7 (no-profile-yet case moves out) |
+| OTEP-594 | Officer routed to correct page after WOG AD auth (routing decision) | Backlog | New — depends on OTEP-111 + OTEP-350; blocks OTEP-71 |
 | WOG-10 | Resolve agency from AD identity | **4+** *(was 3)* | Keep — spike decision #2 first |
 | OTEP-110 | Login fail / clear error | **4+** *(was 3, deferred 2026-05-21)* | Keep (absorbs WOG-12, WOG-13; NFR from WOG-15) |
 | OTEP-304 | Stay logged in during session *(was WOG-04)* | **4+** *(was 3, deferred 2026-05-21)* | Ticketed OTEP-304 |
@@ -67,22 +77,62 @@ These are decisions, not open questions. Each blocks at least one story from rea
 
 ---
 
-### OTEP-111: Officers with no access
+### OTEP-111 / OTEP-594: scope split (updated post-Squad Sync — Rama flagged as duplicates)
 
-> **Note:** This is an existing Sprint 1 Jira ticket ("Officers with no access"). It is not re-groomed here. Confirm with Pow Hwee that it covers the following two scenarios — if not, raise an amendment to OTEP-111 rather than creating new tickets.
+> **Live Jira pull (2026-07-02):** OTEP-111 and OTEP-594 are not duplicates, but the boundary between them has drifted and needs re-confirming with Rama + Pow Hwee. Proposed split below — pending decision #7.
+>
+> - **OTEP-594 owns the decision:** given the outcome of WOG AD auth + pilot-agency check + POCDEX lookup, which of 4 outcomes does the officer get routed to? (Profile page / Unauthorised page / System-error page / WOG AD's own error UI)
+> - **OTEP-111 owns the display:** what the Unauthorised destination page shows, for the subset of cases that land there deliberately (not-in-pilot, no-profile-and-not-expected, deactivated).
+> - **New scenario (Pow Hwee/Imelda/Rama, Squad Sync):** whitelisted agency + no POCDEX profile *yet* is a timing/system error, not access-denied. It needs to route somewhere other than OTEP-111's generic page — see below.
 
-**Scenarios that must be covered by OTEP-111:**
+---
 
-**Not-onboarded agency (was WOG-08):**
-- [ ] If my WOG AD credentials are valid but my agency isn't onboarded, I'm blocked and see a message stating my agency isn't onboarded — not a generic error.
-- [ ] If my agency was previously onboarded but has since been removed, my next login shows the same not-onboarded message — not a broken or blank page.
-- [ ] The not-onboarded message is distinct from the invalid-credentials error so I can tell the two situations apart.
+### OTEP-111: Officers with no access (unauthorised page — display only)
 
-**Invalid officer (was WOG-09):**
-- [ ] If my WOG AD credentials are invalid or I'm not a public officer, login fails with a clear error and I'm not let in.
-- [ ] When login fails for any reason, I stay on the login page and can retry — the app doesn't break.
+**As a** public officer who has authenticated via WOG AD but does not have access to Career Compass,
+**I want to** see a clear message explaining why,
+**So that** I know I'm not locked out by a technical error and I know what to do next.
 
-**Priority:** Sprint 1 — already ticketed. Amend OTEP-111 if these scenarios are not covered.
+**Acceptance Criteria (per live Jira, 2026-07-02):**
+- [ ] Given I am not from a pilot agency → show unauthorised page.
+- [ ] Given I am from a pilot agency but have no profile in POCDEX **and this is not the timing/system-error case below** → show unauthorised page. [NEEDS RE-SCOPE: decision #7 — the "no profile yet, still onboarding" case should NOT land here; see new scenario]
+- [ ] Given I have a POCDEX profile but it is deactivated/inactive → show unauthorised page.
+- [ ] The unauthorised page shows: "Oops, you do not seem to have access at the moment. Please contact your HR for more information."
+- [ ] The page does not expose which specific check failed.
+
+**Not yet covered — needs ACs (decision #10):**
+- [ ] Officer whose agency leaves the pilot after they've been actively using OTEP — Michelle asked Rama to re-examine this deactivation scenario. No AC exists yet for the "was authorised, now isn't" transition.
+
+**Priority:** Backlog, unassigned. Amend via Jira directly — do not re-groom scope here until decision #7 resolves.
+
+---
+
+### OTEP-594: Officer is routed to the correct page after WOG AD authentication (routing decision)
+
+**As a** public officer attempting to log in to Career Compass,
+**I want to** be directed to the right page immediately after authentication,
+**So that** I either land on my profile or understand that I don't have access.
+
+**Acceptance Criteria (per live Jira, 2026-07-02):**
+- [ ] If I log in successfully, my agency is in the pilot, and I have an active POCDEX profile, I land on my Profile Page — no extra steps.
+- [ ] If I log in successfully but my agency isn't in the pilot, I'm taken straight to the unauthorised page (OTEP-111) — not a broken page or a dead end.
+- [ ] If I log in successfully, my agency is in the pilot, but I don't have a POCDEX profile yet, I'm taken to a **system-error page**, not the generic unauthorised page. **[NEEDS RE-SCOPE: decision #7/#8/#9 — see new scenario below]**
+- [ ] If I log in successfully but my POCDEX profile is deactivated, I'm taken to the unauthorised page (OTEP-111).
+- [ ] If my WOG AD login itself fails, I never reach OTEP's routing logic — WOG AD shows its own error, and OTEP doesn't try to intercept it.
+- [ ] If I try to reach any OTEP page directly by typing a URL without being logged in and authorised, I'm not let in — no session starts and I'm redirected appropriately. (Rama, Squad Sync — route-guard NFR, decision #11)
+
+**New scenario to add — pilot agency, no POCDEX profile yet (system error, not access-denied):**
+- [ ] If my agency is in the pilot but POCDEX hasn't synced my profile yet, I don't see the generic "you don't have access" message — I see a message that makes clear this is temporary, not a rejection.
+- [ ] Proposed copy (Imelda, pending confirmation): "Sorry the system is still onboarding your details. We have logged your case and please try logging in again in 2 days." [ASSUMPTION: 2-day POCDEX sync lag — confirm with Rama/Pow Hwee, decision #8]
+- [ ] My case is logged automatically in the background — I don't need to manually submit a "report issue" myself. [OWNER TBC — decision #9]
+- [ ] Confirm with Imelda whether Core team has a screen ready for this state before committing to the copy/flow above.
+
+**Dependencies (per live Jira):**
+- Blocks OTEP-71 (WOG AD login)
+- Depends on OTEP-350 (WOG AD onboarding)
+- Depends on OTEP-111 (unauthorised page must exist before routing can land there)
+
+**Priority:** Backlog, unassigned. Sequencing matters — OTEP-111 (or its replacement outcome) must be build-ready before OTEP-594 can ship end-to-end.
 
 ---
 
@@ -241,6 +291,7 @@ These are decisions, not open questions. Each blocks at least one story from rea
 **What to answer:** Does WOG AD already enforce account lockout and rate limiting? The standing assumption says yes ("WOG AD handles password management, MFA, and account lockout — OTEP does not re-implement these"). If confirmed, OTEP builds nothing here. Only create a delivery ticket if WOG AD does *not* cover it.
 
 **Owner:** Pow Hwee
+
 **When:** Before Sprint 3 grooming
 
 ---
@@ -332,6 +383,11 @@ If the security team rules differently, revisit. Do not build a session-manageme
 - [ ] Security team: pick a concurrent-session default (decision #4) — closes WOG-18 without build
 - [ ] Michelle + team: confirm name-only is the mandatory profile field (decision #5) — unblocks WOG-06
 - [ ] Pow Hwee: confirm OTEP-111 covers WOG-08/09 scenarios (decision #6)
+- [ ] Michelle + Rama: resolve OTEP-111/OTEP-594 boundary — confirm proposed split (decision #7)
+- [ ] Imelda + Pow Hwee: confirm system-error copy + 2-day retry assumption; confirm Core has a screen for this state (decision #8)
+- [ ] Pow Hwee + Rama: confirm auto-log-to-report-issue implementation owner (decision #9)
+- [ ] Rama: re-examine ACs for officer leaving a pilot agency — deactivation scenario (decision #10)
+- [ ] Rama: confirm no-session-on-manual-URL-nav is captured as a route-guard NFR (decision #11)
 - [ ] Compliance: idle-timeout value (decision #1) — unblocks WOG-04
 - [ ] Compliance: error message copy sign-off for OTEP-110 + NFR from WOG-15
 - [ ] Amber: design WOG-06 profile screen (name entry + email pre-fill) and OTEP-110 error states

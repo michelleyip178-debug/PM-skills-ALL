@@ -20,6 +20,7 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**Pow Hwee TAN (PSD)** (2026-07-01)
+Merged MR 134 to resolve this:  https://sgts.gitlab-dedicated.com/wog/psd/pdo/otep/otep-service/-/merge_requests/134
 
-*Synced from Jira: 2026-07-01*
+*Synced from Jira: 2026-07-02*

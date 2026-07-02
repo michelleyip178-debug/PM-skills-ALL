@@ -22,3 +22,5 @@ _No subtasks._
 
 **Léo Milbor** (2026-06-10)
 After checking with   , for now we will only display the existing description field. Front end is  not  displaying any of the new field as of now. So in this story I will: update the db model  Opportunity not  OpportunitySummary do the migration script cc:   ,
+
+*Synced from Jira: 2026-07-02*

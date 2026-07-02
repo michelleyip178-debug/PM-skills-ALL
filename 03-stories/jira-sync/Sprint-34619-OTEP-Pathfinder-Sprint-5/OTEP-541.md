@@ -1,7 +1,7 @@
-# OTEP-485: Run update deps in otep-service
+# OTEP-541: Implement agencies fetching/maping in FE
 
-**Status:** Backlog
-**Assignee:** N/A
+**Status:** In Progress
+**Assignee:** Thomas Huchedé
 **Story Points:** N/A
 
 ---

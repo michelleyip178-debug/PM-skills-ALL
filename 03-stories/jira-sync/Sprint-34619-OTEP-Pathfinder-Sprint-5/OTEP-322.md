@@ -2,7 +2,7 @@
 
 **Status:** In Progress
 **Assignee:** Rathika Ramalingam
-**Story Points:** 3.0
+**Story Points:** 3
 
 ---
 
@@ -22,4 +22,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-07-01*
+*Synced from Jira: 2026-07-02*
