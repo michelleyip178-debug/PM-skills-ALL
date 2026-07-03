@@ -22,5 +22,3 @@ _No subtasks._
 
 **Thomas Huchedé** (2026-06-29)
 Closing as this was done already by core team
-
-*Synced from Jira: 2026-07-02*

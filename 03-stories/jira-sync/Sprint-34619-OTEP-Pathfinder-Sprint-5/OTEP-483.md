@@ -26,5 +26,3 @@ No description provided.
 ## Latest Comments
 
 _No comments._
-
-*Synced from Jira: 2026-07-02*

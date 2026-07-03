@@ -22,5 +22,3 @@ _No subtasks._
 
 **Michelle Yip** (2026-05-21)
 Uploaded the file here
-
-*Synced from Jira: 2026-07-02*

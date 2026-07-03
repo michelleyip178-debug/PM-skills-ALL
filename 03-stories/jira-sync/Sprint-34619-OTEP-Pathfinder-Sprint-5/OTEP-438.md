@@ -32,5 +32,3 @@ Just checking a linked item need to be created for the  role  creation in keyclo
 
 **Hao Eng** (2026-06-11)
 tagging
-
-*Synced from Jira: 2026-07-02*

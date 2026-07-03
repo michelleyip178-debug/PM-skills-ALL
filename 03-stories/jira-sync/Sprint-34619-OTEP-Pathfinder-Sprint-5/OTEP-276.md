@@ -22,5 +22,3 @@ _No subtasks._
 
 **Pow Hwee TAN (PSD)** (2026-05-18)
 Moved to backlog — not on the critical path for Sprint 2.
-
-*Synced from Jira: 2026-07-02*

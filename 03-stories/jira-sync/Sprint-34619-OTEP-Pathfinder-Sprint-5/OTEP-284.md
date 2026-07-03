@@ -25,5 +25,3 @@ User story:  As an officer, I want to see a "Closing soon" label on opportunitie
 
 **Michelle Yip** (2026-06-11)
 BO raised about evergreen opportunities. Able to handle if we agree that evergreen opportunities are easily identifiable and has no closing date, and will always be sorted to the last few cards / pages.
-
-*Synced from Jira: 2026-07-02*

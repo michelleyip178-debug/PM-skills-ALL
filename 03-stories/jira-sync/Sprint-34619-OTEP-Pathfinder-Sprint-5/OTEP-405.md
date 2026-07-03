@@ -35,5 +35,3 @@ Regarding #2,  a. Do we exclude description to search only title and agency <MY>
 
 **Rathika Ramalingam** (2026-06-17)
 I have these questions. Pls clarify. cc:       1. Regarding #2,   a. Do we exclude description to search only title and agency   b. Is the search dynamic as the user keys in or we need to hit Search button (#7) to trigger the search?  c. If dynamic, do we have minimum characters before triggering search to filter   2. Regarding #8  a. Can we define ‘by relevance’ - is it the weight based on no of occurrence + location + exact match of the search text?
-
-*Synced from Jira: 2026-07-02*
