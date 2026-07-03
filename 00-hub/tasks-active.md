@@ -9,21 +9,19 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 5 W1 (30 Jun – 3 Jul) — board health (12 QA carry-ins, OTEP-445 owner still TBC), #40 Mark ask (2 days unconfirmed), KR Word doc to Jace (due Thu 2 Jul), #43 BO sign-off on OTEP-439/386 (outcome unconfirmed — Design Review 30 Jun notes not captured). July SteerCo deliverables (transition plan, North Star brief, gap analysis) are owned by other teams (for-info), NOT Michelle — Michelle's SteerCo job = co-prep the consolidated-narrative demo with Imelda/Rama/Pow Hwee. **New from 30 Jun meeting cleanup:** CMM scope-pressure escalation needed (#50 — 3 days of unresolved surfacing, no roadmap trade-off decision), search AC ownership gap (#51 — no one consolidating final acceptance criteria across Thomas/Amber/Rathika), Hao Eng leave coverage plan needed before next week (#52). *(Updated 2026-07-01 — was 2026-06-30)*
+**Theme:** Sprint 5 W1-W2 (29 Jun – 3 Jul) — board health (OTEP-445 owner still TBC), #40 Mark ask now confirmed for 9 Jul SteerCo (no longer a standalone chase item), KR Word doc to Jace (targeted 2 Jul), **#43 BO sign-off on OTEP-439/386 — RESOLVED 2026-07-03** (all 5 BO questions answered; Amber/Thomas notified). July SteerCo deliverables (transition plan, North Star brief, gap analysis) are owned by other teams (for-info), NOT Michelle — Michelle's SteerCo job = co-prep the consolidated-narrative demo with Imelda/Rama/Pow Hwee. **Still open from 30 Jun–3 Jul:** CMM scope-pressure escalation needed (#50 — now 5 surfacings, no roadmap trade-off decision), search AC ownership gap (#51 — no one consolidating final acceptance criteria across Thomas/Amber/Rathika), Hao Eng leave coverage plan (#52 — still no handover discussed as of 3 Jul standup), SSOT session (#18 — still not booked as of 3 Jul, two weeks running). *(Updated 2026-07-03 — was 2026-07-01)*
 
 ---
 
 ## In Progress
 
-**Engineering (Jira — live 2026-07-01, Sprint 34619):**
+**Engineering (Jira — live 2026-07-03, Sprint 34619):**
 
-*Sprint 5 In Progress (14):* OTEP-87 (C@G opp detail, Thomas), OTEP-88 (C@G listing, Léo), OTEP-276 (design-system spike, Pow Hwee), OTEP-304 (stay-authenticated, Hao Eng), OTEP-322 (Playwright, Rathika), OTEP-349 (competency spike, Pow Hwee), OTEP-350 (WOG AD onboarding, Fabian), OTEP-361 (ADR forum, Pow Hwee), OTEP-386 (opportunity type tooltip, Thomas), OTEP-405 (keyword search, Thomas), OTEP-439 (ineligible states design, Amber), OTEP-505 (CFT upload/webhook, Hao Eng), OTEP-539 (C@G background import, Léo), OTEP-541 (agencies fetch/map FE, Thomas).
-
-*Sprint 5 In QA (13):* OTEP-85 (listing cards), OTEP-86 (filters), OTEP-128 (detail page), OTEP-129 (open/closed, Thomas), OTEP-131 (broken FormSG link, Thomas), OTEP-268 (empty/error states), OTEP-284 (closing soon, Thomas), OTEP-305 (login/logout), OTEP-392 (federated logout, Thomas), OTEP-406 (sort, Thomas), OTEP-438 (admin view, Hao Eng), OTEP-571 (STIP/Gig card layout, Hao Eng), OTEP-595 (Keycloak realm displayName, Pow Hwee).
+*Sprint 5 In Progress (13) · In QA (14):* Counts corrected 2026-07-03 stale-check — prior version had these transposed (14 In Progress / 13 QA) and mis-placed OTEP-87 in In Progress when Jira shows it in QA. See [sprint-status.md](sprint-status.md) for the corrected, current list.
 
 *Sprint 5 To Do (1):* OTEP-445 (POCDEX code table import spike) — still unassigned.
 
-*Sprint 5 Done (29) · Backlog (17):* See sprint-status.md for full list.
+*Sprint 5 Done (30) · Backlog (18):* See sprint-status.md for full list.
 
 ---
 
@@ -152,4 +150,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-07-01 — stale-check. Engineering In Progress/QA/To Do refreshed to live Sprint 5 pull (14/13/1, matches sprint-status.md exactly). Prior: 2026-06-29 (sprint line S4→S5, engineering section left stale pointing to sprint-status.md).*
+*Updated: 2026-07-03 — stale-check. Corrected In Progress/QA counts (13/14, was transposed as 14/13) and #43 status (now resolved, was "unconfirmed"). This Week's Focus refreshed with current #50/#51/#52/#18 status. Prior: 2026-07-01 (stale-check — engineering In Progress/QA/To Do refreshed to live Sprint 5 pull, 14/13/1). Prior: 2026-06-29 (sprint line S4→S5, engineering section left stale pointing to sprint-status.md).*
