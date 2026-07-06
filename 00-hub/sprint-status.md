@@ -57,9 +57,7 @@
 
 **Note:** OTEP-324 (OAuth refresh token rotation) still does not appear in this sprint's live pull — status unchanged from 2026-07-03, still unconfirmed why (check board history / decision log).
 
----
-
-## Sprint 4 — CLOSED (15–26 Jun 2026, completed 29 Jun)
+**Core board cache cleanup (2026-07-06):** 19 orphaned ticket files (OTEP-180, 187, 189, 213, 214, 219, 227, 234, 263, 266, 269, 275, 277, 279, 297, 298, 308, 321, 365) removed from `OTEP-Core-13640-Sprint-5-34609/` — confirmed they no longer belong to Core Sprint 5's live issue list, archived to `03-stories/jira-sync/Archive/OTEP-Core-13640-Sprint-5-34609-orphaned-2026-07-06/` rather than deleted. Core board still has a separate open gap: live pull shows 100 issues vs. 76 remaining locally after this cleanup (24 tickets from the 2026-07-06 pull not yet synced in) — needs a follow-up `/jira-sync core` run.
 
 > Source: OTEP-Pathfinder Sprint 4. Final live pull: 2026-06-29. CLOSED.
 > Goal: Complete, usable listing experience — search, filter, sort, data currency.
