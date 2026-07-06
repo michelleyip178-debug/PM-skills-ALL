@@ -1,8 +1,11 @@
 # OTEP-126: Delete and Hide Competencies
 
 **Type:** Story
-**Status:** QA
+
+**Status:** UAT
+
 **Assignee:** N/A
+
 **Story Points:** N/A
 
 ---
@@ -48,4 +51,4 @@ As an officer, I can delete or hide selected competencies from my profile so I h
 
 _No comments._
 
-*Synced from Jira: 2026-07-01*
+*Synced from Jira: 2026-07-06*

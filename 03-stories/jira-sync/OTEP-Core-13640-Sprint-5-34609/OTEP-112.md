@@ -1,8 +1,11 @@
 # OTEP-112: Add competencies without CIE
 
 **Type:** Story
-**Status:** QA
+
+**Status:** UAT
+
 **Assignee:** N/A
+
 **Story Points:** N/A
 
 ---
@@ -78,4 +81,4 @@ Users have 2 ways to add competencies
 
 _No comments._
 
-*Synced from Jira: 2026-07-01*
+*Synced from Jira: 2026-07-06*
