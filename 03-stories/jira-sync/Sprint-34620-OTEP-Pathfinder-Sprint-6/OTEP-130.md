@@ -1,9 +1,14 @@
 # OTEP-130: Apply for a STIP or Gig via FormSG link
 
 **Type:** Story
+
 **Status:** Backlog
+
 **Assignee:** N/A
+
 **Story Points:** N/A
+
+**Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
 
@@ -22,3 +27,7 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+---
+
+*Synced from Jira: 2026-07-07 — moved into OTEP-Pathfinder Sprint 6 (34620).*

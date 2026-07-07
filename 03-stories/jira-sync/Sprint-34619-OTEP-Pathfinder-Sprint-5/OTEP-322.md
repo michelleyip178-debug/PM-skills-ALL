@@ -1,9 +1,7 @@
 # OTEP-322: test: setup Playwright E2E Testing Framework
 
 **Status:** Done
-
 **Assignee:** Rathika Ramalingam
-
 **Story Points:** 3
 
 ---
@@ -22,6 +20,5 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
-
-*Synced from Jira: 2026-07-06*
+**Rathika Ramalingam** (2026-07-06)
+The e2e tests are added out of the otep-web,  hence go ahead to close this card first.

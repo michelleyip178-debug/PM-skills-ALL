@@ -8,6 +8,8 @@
 
 **Story Points:** N/A
 
+**Sprint:** OTEP-Pathfinder Sprint 6 (34620)
+
 ---
 
 ## Description
@@ -28,4 +30,6 @@ _No comments._
 
 ---
 
-*Synced from Jira: 2026-06-04 (PM) — no sprint assigned in live Jira (plain backlog). Flipped 3× today: was S4 → synced out → Michelle re-added → now out again. Live truth = no sprint. Verify intended placement with whoever's editing the board (likely Pow Hwee restructuring per adopted plan).*
+*Synced from Jira: 2026-07-07 — moved into OTEP-Pathfinder Sprint 6 (34620), live Jira confirms sprint assignment.*
+
+*Prior note (2026-06-04): no sprint assigned in live Jira (plain backlog). Flipped 3× that day: was S4 → synced out → Michelle re-added → now out again.*

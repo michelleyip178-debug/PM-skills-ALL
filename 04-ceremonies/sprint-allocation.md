@@ -4,7 +4,7 @@
 
 > **Plan of record (2026-06-04):** the team adopted **Pow Hwee's "Planning draft for sprint 3 and after"** (Confluence, PSD-OTEP) as the S2–S6 shape. This file stays the working ticket-level allocation; where they diverge, his page wins on shape and this file wins on live ticket placement. One amendment: native apply = R1 (not an S4 spike). See [adoption reconciliation](../../PM-OS/outputs/archive/2026-W23-Jun01-Jun07/analyses/2026-06-04-W23-adopt-powhwee-plan-reconciliation.md).
 
-**Last updated:** 2026-07-06 (jira-sync — Pathfinder Sprint 5 live pull refreshed, 76→81 issues; OTEP-304/305 status re-confirmed unchanged; full field-level diff in `00-hub/sprint-status.md`, not restated here since this file's Sprint 5 section is a provisional-plan diff, not a status mirror). Prior: 2026-07-02 (jira-sync — added live Jira Sprint 6 placement (8 issues, all Backlog/ungroomed) alongside the existing provisional plan; flagged discrepancy between the two for grooming). Prior: 2026-07-02 (jira-sync — Pathfinder Sprint 5 cache cleanup: removed stale duplicate folder `OTEP-Pathfinder-12541-Sprint-5-34619` (11 partial, outdated files); canonical folder `Sprint-34619-OTEP-Pathfinder-Sprint-5` verified 75/75 against live Jira with zero field drift, all files stamped. Live pull confirms 75 issues, up from 74 on 2026-07-01). Prior: 2026-07-01 (jira-sync full sweep — Sprint 5 owner/status columns refreshed against live Jira (Sprint 34619, 74 issues); OTEP-71/110/127/89 flagged as stale placement, WOG-06/US-10 flagged as invalid Jira keys). Prior: 2026-06-04 (adopted Pow Hwee's Confluence plan as S2–S6 plan-of-record; S4 dates corrected 16–27 → 14–28; native-apply spike dropped → R1). Prior: 2026-06-03 (Sprints 2–3 reconciled to live Jira post-rollover — both S2 closed, both S3 active; Pathfinder S3 = 49 issues, Core S3 = 92).
+**Last updated:** 2026-07-07 (jira-sync — Pathfinder Sprint 6 live pull refreshed, 8→10 issues; OTEP-611 dropped, replaced by OTEP-613/614/615; created local cache files for all 10 tickets in new `Sprint-34620-OTEP-Pathfinder-Sprint-6` folder (5 moved from `Backlog/`, 5 newly created); discrepancy against the provisional plan and against the 2026-07-07 sprint-plan-brief both flagged for reconciliation at planning). Prior: 2026-07-06 (jira-sync — Pathfinder Sprint 5 live pull refreshed, 76→81 issues; OTEP-304/305 status re-confirmed unchanged; full field-level diff in `00-hub/sprint-status.md`, not restated here since this file's Sprint 5 section is a provisional-plan diff, not a status mirror). Prior: 2026-07-02 (jira-sync — added live Jira Sprint 6 placement (8 issues, all Backlog/ungroomed) alongside the existing provisional plan; flagged discrepancy between the two for grooming). Prior: 2026-07-02 (jira-sync — Pathfinder Sprint 5 cache cleanup: removed stale duplicate folder `OTEP-Pathfinder-12541-Sprint-5-34619` (11 partial, outdated files); canonical folder `Sprint-34619-OTEP-Pathfinder-Sprint-5` verified 75/75 against live Jira with zero field drift, all files stamped. Live pull confirms 75 issues, up from 74 on 2026-07-01). Prior: 2026-07-01 (jira-sync full sweep — Sprint 5 owner/status columns refreshed against live Jira (Sprint 34619, 74 issues); OTEP-71/110/127/89 flagged as stale placement, WOG-06/US-10 flagged as invalid Jira keys). Prior: 2026-06-04 (adopted Pow Hwee's Confluence plan as S2–S6 plan-of-record; S4 dates corrected 16–27 → 14–28; native-apply spike dropped → R1). Prior: 2026-06-03 (Sprints 2–3 reconciled to live Jira post-rollover — both S2 closed, both S3 active; Pathfinder S3 = 49 issues, Core S3 = 92).
 
 **Prior:** 2026-05-21 (Sprint 3 reallocation — auth deferred; Sprint 4 restructured with contingency-first stream; **working assumption = auth lands Sprint 5** — WOG AD is a formal process, min 2 wks + back and forth; Sprint 5 carries auth realistic + C@G; Sprint 6 carries CSC SSO realistic + admin).
 
@@ -163,20 +163,24 @@
 | WOG-07 | Role-based access control | — | 2 roles: officer, admin. |
 | — | Bug fixes + polish from Sprints 2–5 | — | Address mid-sprint review issues. |
 
-**Live Jira placement (pulled 2026-07-02):** Jira board 12541 already has 8 issues sitting in Sprint 6 (future, not started), all Backlog status / unassigned / unpointed:
+**Live Jira placement (pulled 2026-07-07, sprint 34620):** Jira board 12541 has 10 issues sitting in Sprint 6 (future, not started 12–26 Jul), all Backlog status / unassigned / unpointed:
 
 | Jira | Story | Notes |
 |------|-------|-------|
 | OTEP-71 | Login Authentication Successful | |
 | OTEP-110 | Login fail using WOG AD | |
 | OTEP-111 | Officers with no access (unauthorised page - display only) | |
-| OTEP-594 | Officer is routed to the correct page after WOG AD authentication | |
+| OTEP-594 | Officer is routed to the correct page after WOG AD authentication | Description flags open decisions #7/#8/#9 and an unconfirmed 2-day POCDEX sync assumption — not fully resolved. |
 | OTEP-331 | WOG AD - SSO integration with CSC | Matches "Story B" above conceptually — may be the actual Jira-side placeholder for CSC SSO. |
 | OTEP-130 | Apply for a STIP or Gig via FormSG link | |
-| OTEP-425 | Bookmark opportunities | Not in the provisional plan above. |
-| OTEP-611 | [SPIKE] Bookmark of opportunities | Sub-task. Not in the provisional plan above. |
+| OTEP-613 | [FE] Opportunities with no agency logo — default logo fallback | New since 2026-07-02 pull. Not in the provisional plan above. |
+| OTEP-614 | [SPIKE] Discovery — advanced filters/search (competency, job function) | New since 2026-07-02 pull. Not in the provisional plan above. |
+| OTEP-615 | [SPIKE] Suggested search after 3 characters in opportunity listing | New since 2026-07-02 pull. Not in the provisional plan above. |
+| OTEP-425 | [SPIKE] Discovery — bookmark opportunities | Was already in Sprint 6 on 2026-07-02 pull. |
 
-⚠️ **Discrepancy, not yet reconciled:** the live Jira set (mostly WOG AD login-flow tickets + a new bookmark feature pair) doesn't match this section's provisional plan (OTEP-133, WOG-02, WOG-07). Only OTEP-331 lines up with "Story B." All 8 are still ungroomed (Backlog, unpointed) — worth confirming at Sprint 6 grooming whether this is early auto-placement to reconcile against, or whether the provisional plan above needs updating to reflect where WOG AD/login work actually landed in Jira.
+**Changed since 2026-07-02 pull:** OTEP-611 ([SPIKE] Bookmark of opportunities, sub-task) no longer appears in the sprint — replaced by OTEP-613/614/615 as the new discovery-spike set. Total moved 8 → 10.
+
+⚠️ **Discrepancy, not yet reconciled:** the live Jira set (WOG AD login-flow tickets + 3 discovery spikes + a small FE fix) still doesn't match this section's provisional plan (OTEP-133, WOG-02, WOG-07 — none of which appear in the live pull). Only OTEP-331 lines up with "Story B." All 10 are still ungroomed (Backlog, unpointed) — confirm at Sprint 6 planning (9 Jul) whether this is early auto-placement to reconcile against, or whether the provisional plan above needs rewriting to match where WOG AD/login work and the discovery spikes actually landed in Jira. The Sprint 6 sprint-plan-brief drafted 2026-07-07 (`PM-OS/outputs/analyses/2026-07-07-W28-sprint-plan-brief.md`) was built from Sprint 5's leftover Backlog candidates and does **not** yet reflect this live-Jira set — reconcile the two before presenting at planning.
 
 ---
 

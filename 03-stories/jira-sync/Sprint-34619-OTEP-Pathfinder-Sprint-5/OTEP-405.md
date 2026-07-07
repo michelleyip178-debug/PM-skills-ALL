@@ -18,6 +18,7 @@ As an officer, I want to search for opportunities by keyword so I can quickly fi
 |-----|---------|--------|
 | OTEP-495 | Add queryParam on backend to handle text search | Done |
 | OTEP-496 | Wire frontend search bar to backend api | Done |
+| OTEP-668 | [BUG] Bugs open for Search opportunities feature | Backlog |
 
 ---
 

@@ -1,29 +1,24 @@
 # OTEP-659: Investigate smoke test for pipeline
 
 **Status:** Backlog
-
 **Assignee:** Thomas Huchedé
-
 **Story Points:** N/A
 
 ---
 
 ## Description
 
-_New ticket, pulled from live Jira 2026-07-06. Full description not fetched in this sync — run a per-ticket detail pull if needed._
+No description provided.
 
 ---
 
 ## Subtasks
 
-_Not fetched in this sync._
+_No subtasks._
 
 ---
 
 ## Latest Comments
 
-_Not fetched in this sync._
-
----
-
-*Synced from Jira: 2026-07-06*
+**Thomas Huchedé** (2026-07-06)
+I have a draft here, need to check about connectivity between the ci runner and the dev env (limited to seed devices for now IIRC)  https://sgts.gitlab-dedicated.com/wog/psd/pdo/otep/otep-web/-/merge_requests/119

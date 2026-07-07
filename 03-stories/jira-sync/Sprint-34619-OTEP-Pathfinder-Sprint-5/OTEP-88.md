@@ -19,8 +19,9 @@ User story: As an officer, I want to see Careers@Gov opportunities alongside OTG
 | OTEP-375 | Add Careers@Gov badge/metadata to OpportunityCard | Done |
 | OTEP-374 | Expose source and agency fields in listing API | Done |
 | OTEP-482 | Import C@G opportunities | Done |
-| OTEP-539 | Make C@G import run as a background task | In Progress |
+| OTEP-539 | Make C@G import run as a background task | Done |
 | OTEP-536 | update frontend filters for `jobs` | Done |
+| OTEP-666 | Enable scheduled trigger of import | Backlog |
 
 ---
 

@@ -1,6 +1,6 @@
-# OTEP-331: WOG AD - SSO integration with CSC
+# OTEP-614: [SPIKE] Discovery - Advanced filters / search options (competency, job function)
 
-**Type:** Story
+**Type:** Task
 
 **Status:** Backlog
 
@@ -30,4 +30,4 @@ _No comments._
 
 ---
 
-*Synced from Jira: 2026-07-07 — moved into OTEP-Pathfinder Sprint 6 (34620).*
+*Synced from Jira: 2026-07-07 — new to local cache, created from live Jira pull.*

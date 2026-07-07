@@ -1,29 +1,23 @@
 # OTEP-662: Investigate why we're seeing login error after a redeploy in dev
 
 **Status:** Backlog
-
 **Assignee:** Thomas Huchedé
-
 **Story Points:** N/A
 
 ---
 
 ## Description
 
-_New ticket, pulled from live Jira 2026-07-06. Full description not fetched in this sync — run a per-ticket detail pull if needed._
+We’re seeing a couple of failure to redirect unlogged user. Seems to be happening after a redeploy (but not sure this is the root cause).   We need to make sure unlogged user are properly redirected to the login page when we failed to refresh their token.   Ref:
 
 ---
 
 ## Subtasks
 
-_Not fetched in this sync._
+_No subtasks._
 
 ---
 
 ## Latest Comments
 
-_Not fetched in this sync._
-
----
-
-*Synced from Jira: 2026-07-06*
+_No comments._
