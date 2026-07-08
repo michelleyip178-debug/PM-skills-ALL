@@ -1,6 +1,6 @@
 # OTEP-484: Update er digram generation to add Sub-domain breakdown & extract postgres image version
 
-**Status:** Backlog
+**Status:** Done
 **Assignee:** Léo Milbor
 **Story Points:** N/A
 

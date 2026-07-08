@@ -23,6 +23,7 @@ User Story As an  officer,  I want to  see open opportunities displayed as cards
 | OTEP-320 | Replace mock /opportunities endpoint with real db access | Done |
 | OTEP-170 | Base Layout for Opportunity Listing Page | Done |
 | OTEP-663 | [BUG] Open issues for competencies listing page | Backlog |
+| OTEP-677 | [BUG] OTG data is NOT imported  | Backlog |
 
 ---
 

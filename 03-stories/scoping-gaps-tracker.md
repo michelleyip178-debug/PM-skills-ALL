@@ -1,7 +1,9 @@
 # Scoping Gaps Tracker: OTEP Opportunities (Epic 4)
 
 **Last updated:** 2026-05-29
+
 **Target:** All items resolved or formally deferred to R1
+
 **Alignment needed:** Mark, Adrian, Jacky, Xian Zhang
 
 > **This is the analysis layer** — what's still undefined in the Epic 4 spec, which category it sits in, and which gaps have been formally deferred to R1. It pairs with the PRD (Section 11).
@@ -13,10 +15,10 @@
 
 | Status | Count |
 |--------|-------|
-| Open | 5 |
+| Open | 7 |
 | Resolved | 5 |
 | Deferred to R1 | 3 |
-| **Total** | **13** |
+| **Total** | **15** |
 
 ---
 
@@ -37,6 +39,8 @@
 | 11 | Competency match ratio display on detail page | Technical | Deferred to R1 | Decision 2026-05-08. MVP shows "What you'll develop" tags only, no scoring. |
 | 12 | Auto-populate OTG form fields from POCDEX | Technical | Deferred to R1 | Keep FormSG as-is for MVP; revisit when pre-fill mechanism confirmed (links to #10). |
 | 13 | Persist filter selections across sessions (US-07) | Design | Deferred to R1 | Decision 2026-05-08. Not required for the "discoverable in one place" target. |
+| 14 | POCDEX → Compass sync cadence and data-currency model unconfirmed — is it near-real-time push (per POCDEX Integration PRD assumption) or gated by upstream HR systems' daily update to POCDEX (per 2026-07-08 conversation)? Also unconfirmed: whether POCDEX carries future-dated (effective-start-date) records or is current-state only, and per-field refresh cadence (name/email/agency/competencies may not all refresh together) | Technical | Open | → open-items #56 (Imelda / Rama for data-domain side; Daryll for platform/SLA side — see [POCDEX sync lag, open-items #31/#55] for the related platform-side thread already tracked). Impacts POCDEX Authorisation epic's unfiltered-listing fallback sizing (OTEP-337) — if sync is daily rather than near-real-time, more Day-1 officers may hit the fallback state than currently assumed. |
+| 15 | OTEP-594 (routing after auth) re-scope — **all three named decisions resolved 2026-07-08**, traced from [otep-stories/auth.md](otep-stories/auth.md): ~~**#7** — OTEP-111/OTEP-594 boundary~~ **RESOLVED** — "pilot agency, no POCDEX profile yet" shows its own system-error state, not OTEP-111's unauthorised page; ~~**#8** — system-error copy + 2-day retry assumption + screen existence~~ **RESOLVED (two parts)** — copy revised to generic wording ("try again shortly," decoupled from gap #14 / open-items #56's sync-cadence question); screen confirmed **not built yet**; ~~**#9** — auto-log-to-report-issue ownership~~ **RESOLVED** — no auto-logging, officer-clicked "Report issue" CTA instead (simplifies original ownership question; small follow-up on post-click routing/triage owner, not a blocker). AC rewritten directly in Jira 2026-07-08 to reflect all three resolutions — clean, no decision-number references or unconfirmed assumptions left in the ticket text. A fourth item, **decision #11** (route-guard NFR — direct URL access without a session), is also named in OTEP-594's AC but is independently buildable and doesn't block on #7/#8/#9 — see Sprint 6 test scenarios Scenario 17. | Technical | Open (decisions resolved; screen not built) | **Re-scope complete.** Remaining gap is pure build work — the system-error screen (design + copy + CTA all settled) doesn't exist yet. **Decision 2026-07-08: keep as one ticket** — the screen build stays inside OTEP-594 rather than splitting into a separate story. Not committed to Sprint 6 (13–26 Jul) until built and tested. Test coverage in [sprint6-test-scenarios.md](../../PM-OS/outputs/analyses/2026-07-08-W28-sprint6-test-scenarios.md) (Scenarios 14–17). |
 
 ---
 
