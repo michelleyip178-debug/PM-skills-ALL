@@ -22,3 +22,6 @@ _No subtasks._
 
 **Thomas Huchedé** (2026-07-06)
 I have a draft here, need to check about connectivity between the ci runner and the dev env (limited to seed devices for now IIRC)  https://sgts.gitlab-dedicated.com/wog/psd/pdo/otep/otep-web/-/merge_requests/119
+
+---
+*Synced from Jira: 2026-07-10*

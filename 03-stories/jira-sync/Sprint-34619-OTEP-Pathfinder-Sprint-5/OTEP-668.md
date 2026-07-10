@@ -1,7 +1,7 @@
 # OTEP-668: [BUG] Bugs open for Search opportunities feature
 
-**Status:** Backlog
-**Assignee:** N/A
+**Status:** To Do
+**Assignee:** Thomas Huchedé
 **Story Points:** N/A
 
 ---
@@ -21,3 +21,6 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+---
+*Synced from Jira: 2026-07-10*

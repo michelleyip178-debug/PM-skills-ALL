@@ -1,7 +1,7 @@
 # OTEP-343: Implement OTG Competency Staging & First-Login Migration
 
 **Type:** Sub-task
-**Status:** QA
+**Status:** Done
 **Assignee:** Kingsley Low
 **Story Points:** N/A
 **Sprint:** OTEP-Core Sprint 5 (id 34609, active)

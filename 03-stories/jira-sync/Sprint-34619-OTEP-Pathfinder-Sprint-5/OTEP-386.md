@@ -23,3 +23,6 @@ As an officer who is new to CareerCompass, I want a quick explanation of what ea
 ## Latest Comments
 
 _No comments._
+
+---
+*Synced from Jira: 2026-07-10*

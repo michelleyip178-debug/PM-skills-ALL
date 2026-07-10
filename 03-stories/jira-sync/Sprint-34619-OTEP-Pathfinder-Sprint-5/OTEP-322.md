@@ -22,3 +22,6 @@ _No subtasks._
 
 **Rathika Ramalingam** (2026-07-06)
 The e2e tests are added out of the otep-web,  hence go ahead to close this card first.
+
+---
+*Synced from Jira: 2026-07-10*

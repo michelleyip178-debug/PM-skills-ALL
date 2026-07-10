@@ -22,8 +22,8 @@ User Story As an  officer,  I want to  see open opportunities displayed as cards
 | OTEP-313 | OTG raw ingest table and source model | Done |
 | OTEP-320 | Replace mock /opportunities endpoint with real db access | Done |
 | OTEP-170 | Base Layout for Opportunity Listing Page | Done |
-| OTEP-663 | [BUG] Open issues for competencies listing page | Backlog |
-| OTEP-677 | [BUG] OTG data is NOT imported  | Backlog |
+| OTEP-663 | [BUG] Open issues for competencies listing page | To Do |
+| OTEP-677 | [BUG] OTG and C@G data import NOT done | To Do |
 
 ---
 
@@ -41,3 +41,6 @@ High Level Test Cases Scenario 1: Displaying all required fields on an opportuni
 
 **Michelle Yip** (2026-05-19)
 Have removed >= 7 days and will put into the closing soon label ticket. have removed the AC of silently drop and that will be in the designing recurring job, i assume?
+
+---
+*Synced from Jira: 2026-07-10*

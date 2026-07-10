@@ -27,3 +27,6 @@ can take. a look at aws eventbridge scheduler and ecs scheduled tasks?  Also che
 
 **Léo Milbor** (2026-07-06)
 This is to track the automatic trigger. I provided a basic description but we should update on the unknown and tech choices.
+
+---
+*Synced from Jira: 2026-07-10*

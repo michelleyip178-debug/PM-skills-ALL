@@ -1,7 +1,7 @@
-# OTEP-320: Replace mock /opportunities endpoint with real db access
+# OTEP-681: Run integration testing in pipeline
 
-**Status:** Done
-**Assignee:** Léo Milbor
+**Status:** Backlog
+**Assignee:** N/A
 **Story Points:** N/A
 
 ---

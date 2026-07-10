@@ -1,7 +1,7 @@
-# OTEP-369: Custom login page 
+# OTEP-679: Connectivity between CSC and CareerCompass
 
-**Status:** Done
-**Assignee:** Thomas Huchedé
+**Status:** Backlog
+**Assignee:** Fanxu Wang
 **Story Points:** N/A
 
 ---
@@ -21,6 +21,3 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
-
----
-*Synced from Jira: 2026-07-10*

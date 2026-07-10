@@ -1,6 +1,6 @@
 # OTEP-283: Opportunity Detail - Add Ministry icons to detail page
 
-**Status:** Backlog
+**Status:** In Progress
 **Assignee:** N/A
 **Story Points:** 1
 
@@ -60,3 +60,6 @@ The list you shared here (   ) looks good but I do have a few gaps: agencies fro
 
 **Michelle Yip** (2026-06-11)
 Find where we can get the list of agencies icon.  BO mentioned that for sub-agencies like AgilePSD may want to have their own icon to represent their opportunities but this is out of MVP.
+
+---
+*Synced from Jira: 2026-07-10*

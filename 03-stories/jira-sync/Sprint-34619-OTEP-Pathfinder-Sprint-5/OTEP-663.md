@@ -1,7 +1,7 @@
 # OTEP-663: [BUG] Open issues for competencies listing page
 
-**Status:** Backlog
-**Assignee:** N/A
+**Status:** To Do
+**Assignee:** Thomas Huchedé
 **Story Points:** N/A
 
 ---
@@ -21,3 +21,6 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+---
+*Synced from Jira: 2026-07-10*

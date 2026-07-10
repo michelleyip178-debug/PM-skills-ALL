@@ -1,6 +1,6 @@
-# OTEP-320: Replace mock /opportunities endpoint with real db access
+# OTEP-680: Check with OPS for observability needs
 
-**Status:** Done
+**Status:** Backlog
 **Assignee:** Léo Milbor
 **Story Points:** N/A
 
@@ -8,7 +8,7 @@
 
 ## Description
 
-No description provided.
+Check with Fabian and Fanxu
 
 ---
 

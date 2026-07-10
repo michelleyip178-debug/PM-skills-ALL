@@ -1,7 +1,7 @@
-# OTEP-320: Replace mock /opportunities endpoint with real db access
+# OTEP-613: [FE] Opportunities with no agency logo to be displayed with a default logo
 
-**Status:** Done
-**Assignee:** Léo Milbor
+**Status:** Backlog
+**Assignee:** N/A
 **Story Points:** N/A
 
 ---

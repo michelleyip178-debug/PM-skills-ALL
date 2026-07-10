@@ -1,7 +1,7 @@
 # OTEP-342: Build UI actions to API.
 
 **Type:** Sub-task
-**Status:** QA
+**Status:** Done
 **Assignee:** Pei Ern Lim
 **Story Points:** N/A
 **Sprint:** OTEP-Core Sprint 5 (id 34609, active)

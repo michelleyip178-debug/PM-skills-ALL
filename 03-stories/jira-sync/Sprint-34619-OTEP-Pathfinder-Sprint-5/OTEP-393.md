@@ -22,3 +22,6 @@ _No subtasks._
 
 **Thomas Huchedé** (2026-06-25)
 We don’t have AzureAD or anything to login so for now we need to keep the keycloak page.  I don’t think we should spend time designing and building a theme for keycloak when ultimately this page should not appear when using AzureAD to login
+
+---
+*Synced from Jira: 2026-07-10*

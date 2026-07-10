@@ -1,7 +1,7 @@
 # OTEP-312: User Competency CRUD API -  Hide, Delete
 
 **Type:** Sub-task
-**Status:** QA
+**Status:** Done
 **Assignee:** Pei Ern Lim
 **Story Points:** N/A
 

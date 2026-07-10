@@ -1,7 +1,7 @@
 # OTEP-105: Port over existing OTG competencies
 
 **Type:** Story
-**Status:** Backlog
+**Status:** Done
 **Assignee:** N/A
 **Story Points:** N/A
 
