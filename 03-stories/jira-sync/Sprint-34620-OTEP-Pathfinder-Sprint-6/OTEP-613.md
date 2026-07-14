@@ -2,9 +2,9 @@
 
 **Type:** Story
 
-**Status:** Backlog
+**Status:** QA
 
-**Assignee:** N/A
+**Assignee:** Thomas Huchedé
 
 **Story Points:** N/A
 
@@ -30,4 +30,4 @@ _No comments._
 
 ---
 
-*Synced from Jira: 2026-07-07 — new to local cache, created from live Jira pull.*
+*Synced from Jira: 2026-07-14*

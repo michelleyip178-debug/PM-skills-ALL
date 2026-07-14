@@ -3,6 +3,7 @@
 **Status:** In Progress
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
+**Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
 
@@ -27,3 +28,5 @@ Updated in purple for 1 and 3. For #2, there is no indicator and have removed th
 
 **Rathika Ramalingam** (2026-07-07)
 Hi    , please update the following.  Eligibility Rules or POCDEX Data Logic (Blocker) What is the visual eligibility indicator on the detail page? (if we decided to show) Is sorting the default by posted_date within the pinned items (listed first) and ineligible cards?
+
+*Synced from Jira: 2026-07-14*

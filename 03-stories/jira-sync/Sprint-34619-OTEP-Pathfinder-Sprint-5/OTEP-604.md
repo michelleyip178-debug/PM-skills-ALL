@@ -3,6 +3,7 @@
 **Status:** Done
 **Assignee:** Pow Hwee TAN (PSD)
 **Story Points:** N/A
+**Sprint:** OTEP-Pathfinder Sprint 5 (34619)
 
 ---
 
@@ -23,4 +24,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-07-10*
+*Synced from Jira: 2026-07-14*

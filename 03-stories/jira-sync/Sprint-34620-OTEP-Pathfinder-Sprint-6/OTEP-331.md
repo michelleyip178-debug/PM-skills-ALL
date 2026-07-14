@@ -30,4 +30,4 @@ _No comments._
 
 ---
 
-*Synced from Jira: 2026-07-07 — moved into OTEP-Pathfinder Sprint 6 (34620).*
+*Synced from Jira: 2026-07-14*
