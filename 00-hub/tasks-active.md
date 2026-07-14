@@ -1,6 +1,6 @@
 # Active Tasks
 
-Current sprint: **Sprint 5 ACTIVE (29 Jun – 12 Jul 2026)**
+Current sprint: **Sprint 6 ACTIVE (13–26 Jul 2026)** — Sprint 5 closed 2026-07-12 (76 of 79 tickets rolled over, not a clean close). See [sprint-status.md](sprint-status.md) for the live-verified breakdown (89 issues: 6 To Do, 12 In Progress, 16 QA, 33 Done, 23 Backlog as of 2026-07-14 afternoon jira-sync).
 Sprint 3 final state (2026-06-12): ~23 Done, 9 in QA carry-in (85/86/89/128/192/268/305/317/319), 4 Backlog carry-in. Sprint goal near-met (filters + apply + deep-link all reached QA). Sprint 4 goal: complete, usable listing experience — search, filter, sort, data currency.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
@@ -9,19 +9,19 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 5 W1-W2 (29 Jun – 3 Jul) — board health (OTEP-445 owner still TBC), #40 Mark ask now confirmed for 9 Jul SteerCo (no longer a standalone chase item), KR Word doc to Jace (targeted 2 Jul), **#43 BO sign-off on OTEP-439/386 — RESOLVED 2026-07-03** (all 5 BO questions answered; Amber/Thomas notified). July SteerCo deliverables (transition plan, North Star brief, gap analysis) are owned by other teams (for-info), NOT Michelle — Michelle's SteerCo job = co-prep the consolidated-narrative demo with Imelda/Rama/Pow Hwee. **Still open from 30 Jun–3 Jul:** CMM scope-pressure escalation needed (#50 — now 5 surfacings, no roadmap trade-off decision), search AC ownership gap (#51 — no one consolidating final acceptance criteria across Thomas/Amber/Rathika), Hao Eng leave coverage plan (#52 — still no handover discussed as of 3 Jul standup), SSOT session (#18 — still not booked as of 3 Jul, two weeks running). *(Updated 2026-07-03 — was 2026-07-01)*
+**Theme:** Sprint 6 W1 (13–19 Jul) — Huiting/Mark data-sharing approval now the top risk to August MVP feasibility (#55, escalated 2026-07-14 at OTEP Squad Sync — "we answered the questions" ≠ "approvers are comfortable"), UAT operating model still undefined with two possibly-duplicate action items surfaced same-day (Squad Sync + Team 2 standup — needs reconciling before Rama schedules the alignment session), environment governance flagged 🔴 Red (manual env var/secret drift observed, no mechanism in place — Team 2 standup, feeds #58). **#52 (Hao Eng/OTEP-505) RESOLVED 2026-07-14** — engineering build confirmed ready for QA, #58's CFT thread also closed same day. **Still open:** #50 (CMM scope-pressure escalation, Adrian-owned), #51 (search AC ownership — resolved via scope cut 2026-07-13), #58 issues #2/#3 (comms gaps, E2E validation — still open), Huiting submission coordination conflict (Xian Zhang vs. Xian Zhang Guo document ownership, flagged 2026-07-13, still unresolved 2 days later). *(Updated 2026-07-14 — was 2026-07-03, 11 days stale)*
 
 ---
 
 ## In Progress
 
-**Engineering (Jira — live 2026-07-03, Sprint 34619):**
+**Engineering (Jira — live 2026-07-14 afternoon, Sprint 34620):**
 
-*Sprint 5 In Progress (13) · In QA (14):* Counts corrected 2026-07-03 stale-check — prior version had these transposed (14 In Progress / 13 QA) and mis-placed OTEP-87 in In Progress when Jira shows it in QA. See [sprint-status.md](sprint-status.md) for the corrected, current list.
+*Sprint 6 In Progress (12) · In QA (16):* See [sprint-status.md](sprint-status.md) for the full, live-verified list (3 independent jira-sync pulls today, last at afternoon).
 
-*Sprint 5 To Do (1):* OTEP-445 (POCDEX code table import spike) — still unassigned.
+*Sprint 6 To Do (6):* includes OTEP-445 (POCDEX code table import spike, still unassigned) and OTEP-437 (filter by job family, moved Backlog→To Do today, assigned Hao Eng).
 
-*Sprint 5 Done (30) · Backlog (18):* See sprint-status.md for full list.
+*Sprint 6 Done (33) · Backlog (23):* See sprint-status.md for full list.
 
 ---
 
@@ -150,4 +150,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-07-03 — stale-check. Corrected In Progress/QA counts (13/14, was transposed as 14/13) and #43 status (now resolved, was "unconfirmed"). This Week's Focus refreshed with current #50/#51/#52/#18 status. Prior: 2026-07-01 (stale-check — engineering In Progress/QA/To Do refreshed to live Sprint 5 pull, 14/13/1). Prior: 2026-06-29 (sprint line S4→S5, engineering section left stale pointing to sprint-status.md).*
+*Updated: 2026-07-14 — stale-check. Corrected sprint header (Sprint 5→6, was 11 days stale), engineering section counts (now points to live sprint-status.md, Sprint 6: 6/12/16/33/23), and This Week's Focus (refreshed with #55 escalation, UAT duplicate-thread flag, #58 environment-governance finding, #52 resolution). Prior: 2026-07-03 (stale-check. Corrected In Progress/QA counts and #43 status). Prior: 2026-07-01 (stale-check — engineering counts refreshed to live Sprint 5 pull). Prior: 2026-06-29 (sprint line S4→S5, engineering section left stale pointing to sprint-status.md).*

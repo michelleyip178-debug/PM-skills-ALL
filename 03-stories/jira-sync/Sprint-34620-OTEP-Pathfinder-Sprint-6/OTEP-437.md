@@ -1,7 +1,7 @@
 # OTEP-437: [FE/BE] Filter by job family
 
-**Status:** Backlog
-**Assignee:** N/A
+**Status:** To Do
+**Assignee:** Hao Eng
 **Story Points:** 3
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
