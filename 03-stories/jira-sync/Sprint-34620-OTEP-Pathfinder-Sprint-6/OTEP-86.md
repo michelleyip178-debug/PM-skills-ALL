@@ -24,6 +24,11 @@ User story:  As an officer, I want to filter the listing by opportunity type so 
 
 ## Latest Comments
 
+**Rathika Ramalingam** (2026-07-14)
+Test results included here      cc:    confirmed the Internal Jobs are not for MVP.
+
+---
+
 **Michelle Yip** (2026-06-11)
 I have removed it and it’s replaced with    as I need Amber to come up with the page.
 
@@ -33,9 +38,4 @@ I have removed it and it’s replaced with    as I need Amber to come up with th
 I think I missed out AC6. Can I double check where is this supposed to be displayed?
 
 ---
-
-**Pow Hwee TAN (PSD)** (2026-05-28)
-Careers@Gov is not listed as a filter option. Suggest creating a Sprint 4 ticket to add C@G as a filter option once C@G listings are live.
-
----
-*Synced from Jira: 2026-07-14*
+*Synced from Jira: 2026-07-15*

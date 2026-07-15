@@ -25,4 +25,5 @@ Instrument the opportunities journey in PostHog as an  event-first funnel  ( sea
 
 _No comments._
 
-*Synced from Jira: 2026-07-14*
+---
+*Synced from Jira: 2026-07-15*

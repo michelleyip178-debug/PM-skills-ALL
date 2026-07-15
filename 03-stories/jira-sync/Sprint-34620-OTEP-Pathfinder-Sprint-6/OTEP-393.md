@@ -25,4 +25,4 @@ _No subtasks._
 We don’t have AzureAD or anything to login so for now we need to keep the keycloak page.  I don’t think we should spend time designing and building a theme for keycloak when ultimately this page should not appear when using AzureAD to login
 
 ---
-*Synced from Jira: 2026-07-14*
+*Synced from Jira: 2026-07-15*

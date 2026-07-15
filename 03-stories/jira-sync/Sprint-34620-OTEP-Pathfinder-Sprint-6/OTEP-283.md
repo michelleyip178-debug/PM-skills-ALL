@@ -17,8 +17,8 @@ Acceptance Criteria The system must display the Ministry icon next to the agency
 
 | Key | Summary | Status |
 |-----|---------|--------|
+| OTEP-541 | Implement agencies fetching/maping in FE | Done |
 | OTEP-540 | Find source for agencies icons | Done |
-| OTEP-541 | Implement agencies fetching/maping in FE | In Progress |
 
 ---
 
@@ -63,4 +63,4 @@ The list you shared here (   ) looks good but I do have a few gaps: agencies fro
 Find where we can get the list of agencies icon.  BO mentioned that for sub-agencies like AgilePSD may want to have their own icon to represent their opportunities but this is out of MVP.
 
 ---
-*Synced from Jira: 2026-07-14*
+*Synced from Jira: 2026-07-15*

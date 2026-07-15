@@ -108,7 +108,7 @@ def get_comments(base, auth, key, max_results=3):
     return (data.get("comments") or []) if data else []
 
 
-def build_markdown(key, fields, comments=None):
+def build_markdown(key, fields, comments=None, sprint_id=None, sprint_name=None):
     summary = fields.get("summary", "N/A")
     status = (fields.get("status") or {}).get("name", "N/A")
     assignee_obj = fields.get("assignee")
@@ -143,12 +143,15 @@ def build_markdown(key, fields, comments=None):
     else:
         comments_section = "_No comments._"
 
+    sprint_line = f"**Sprint:** {sprint_name} ({sprint_id})\n" if sprint_id and sprint_name else ""
+    today = datetime.date.today().isoformat()
+
     return f"""# {key}: {summary}
 
 **Status:** {status}
 **Assignee:** {assignee}
 **Story Points:** {story_points}
-
+{sprint_line}
 ---
 
 ## Description
@@ -166,6 +169,9 @@ def build_markdown(key, fields, comments=None):
 ## Latest Comments
 
 {comments_section}
+
+---
+*Synced from Jira: {today}*
 """
 
 
@@ -205,7 +211,7 @@ def main():
         old_status, old_assignee, old_comment = parse_existing(path)
 
         fields = detail.get("fields", {})
-        md = build_markdown(key, fields, comments)
+        md = build_markdown(key, fields, comments, sprint_id=sprint_id, sprint_name=sprint_name)
 
         with open(path, "w", encoding="utf-8") as f:
             f.write(md)

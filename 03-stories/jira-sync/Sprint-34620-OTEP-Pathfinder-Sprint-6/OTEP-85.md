@@ -17,14 +17,14 @@ User Story As an  officer,  I want to  see open opportunities displayed as cards
 
 | Key | Summary | Status |
 |-----|---------|--------|
+| OTEP-663 | [BUG] Open issues for competencies listing page | To Do |
+| OTEP-677 | [BUG] OTG and C@G data import NOT done | To Do |
 | OTEP-193 | Design Data Model for Opportunities | Done |
 | OTEP-288 | Setup a simple backend endpoint with in-memory list | Done |
 | OTEP-296 | Prepare defined report format that matches data model | Done |
 | OTEP-313 | OTG raw ingest table and source model | Done |
 | OTEP-320 | Replace mock /opportunities endpoint with real db access | Done |
 | OTEP-170 | Base Layout for Opportunity Listing Page | Done |
-| OTEP-663 | [BUG] Open issues for competencies listing page | To Do |
-| OTEP-677 | [BUG] OTG and C@G data import NOT done | To Do |
 
 ---
 
@@ -44,4 +44,4 @@ High Level Test Cases Scenario 1: Displaying all required fields on an opportuni
 Have removed >= 7 days and will put into the closing soon label ticket. have removed the AC of silently drop and that will be in the designing recurring job, i assume?
 
 ---
-*Synced from Jira: 2026-07-14*
+*Synced from Jira: 2026-07-15*

@@ -25,4 +25,4 @@ _No subtasks._
 Merged MR 134 to resolve this:  https://sgts.gitlab-dedicated.com/wog/psd/pdo/otep/otep-service/-/merge_requests/134
 
 ---
-*Synced from Jira: 2026-07-14*
+*Synced from Jira: 2026-07-15*

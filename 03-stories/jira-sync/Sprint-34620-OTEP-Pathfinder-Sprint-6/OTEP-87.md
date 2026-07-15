@@ -35,4 +35,4 @@ Hi   , while the title is correct, the details of this ticket currently talk mos
 Title has been updated to "View Careers@Gov Opportunity Detail" since Internal Jobs/STIPs/Gigs detail is done in Sprint 2 (OTEP-128/327/314). However, the AC still references FormSG redirect and "Internal Jobs, STIPs, Gigs". Suggest revising AC to reflect C@G behaviour — the Apply CTA should deep-link to Careers@Gov platform (per OTEP-89), not trigger FormSG.
 
 ---
-*Synced from Jira: 2026-07-14*
+*Synced from Jira: 2026-07-15*
