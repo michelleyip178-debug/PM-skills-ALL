@@ -1,6 +1,6 @@
 # OTEP-283: Opportunity Detail - Add Ministry icons to detail page
 
-**Status:** QA
+**Status:** In Progress
 **Assignee:** N/A
 **Story Points:** 1
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
@@ -23,6 +23,11 @@ Acceptance Criteria The system must display the Ministry icon next to the agency
 ---
 
 ## Latest Comments
+
+**Rathika Ramalingam** (2026-07-15)
+Hi    , is this deployed to qa env? I can’t see the logos in detail page.
+
+---
 
 **Michelle Yip** (2026-07-01)
 For those with missing logos, we will just have a placeholder.    ok for us to have the placeholder done?   For those logos in the csv without matching agencies, we will need to create them in the reference table
@@ -58,9 +63,4 @@ The list you shared here (   ) looks good but I do have a few gaps: agencies fro
 •	Supreme Court : Supreme_Court.png What should we do for those?  Do we plan to have a fallback when there’s a missing logo? Or just hide the logo from the card?
 
 ---
-
-**Michelle Yip** (2026-06-11)
-Find where we can get the list of agencies icon.  BO mentioned that for sub-agencies like AgilePSD may want to have their own icon to represent their opportunities but this is out of MVP.
-
----
-*Synced from Jira: 2026-07-15*
+*Synced from Jira: 2026-07-16*

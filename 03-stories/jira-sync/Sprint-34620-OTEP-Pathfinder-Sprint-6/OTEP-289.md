@@ -1,6 +1,6 @@
 # OTEP-289: [Spike] Filter Opportunities by Functions - C@G and OTG Opportunity Type tagging by Functions 
 
-**Status:** Backlog
+**Status:** Done
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
@@ -21,6 +21,11 @@ _No subtasks._
 
 ## Latest Comments
 
+**Thomas Huchedé** (2026-07-15)
+Closing as mapping was decided in
+
+---
+
 **Michelle Yip** (2026-05-19)
 updated above
 
@@ -30,4 +35,4 @@ updated above
 Michelle — can you clarify: What are the acceptance criteria for this ticket? Is this timeboxed? If so, how long? What outcome do you want — a written recommendation, a prototype, or something else?
 
 ---
-*Synced from Jira: 2026-07-15*
+*Synced from Jira: 2026-07-16*

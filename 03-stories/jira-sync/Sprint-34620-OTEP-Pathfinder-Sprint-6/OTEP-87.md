@@ -21,6 +21,11 @@ _No subtasks._
 
 ## Latest Comments
 
+**Rathika Ramalingam** (2026-07-15)
+To be tested when the BE is done in qa env
+
+---
+
 **Michelle Yip** (2026-06-18)
 updated and sharpened this AC as well.
 
@@ -30,9 +35,4 @@ updated and sharpened this AC as well.
 Hi   , while the title is correct, the details of this ticket currently talk mostly about click to apply. Could you please amend the description and scope to ensure it fully covers showing the actual opportunity details?
 
 ---
-
-**Pow Hwee TAN (PSD)** (2026-05-28)
-Title has been updated to "View Careers@Gov Opportunity Detail" since Internal Jobs/STIPs/Gigs detail is done in Sprint 2 (OTEP-128/327/314). However, the AC still references FormSG redirect and "Internal Jobs, STIPs, Gigs". Suggest revising AC to reflect C@G behaviour — the Apply CTA should deep-link to Careers@Gov platform (per OTEP-89), not trigger FormSG.
-
----
-*Synced from Jira: 2026-07-15*
+*Synced from Jira: 2026-07-16*

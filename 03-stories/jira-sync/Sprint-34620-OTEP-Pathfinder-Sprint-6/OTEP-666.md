@@ -1,6 +1,6 @@
 # OTEP-666: Enable scheduled trigger of import
 
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Léo Milbor
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
@@ -30,4 +30,4 @@ can take. a look at aws eventbridge scheduler and ecs scheduled tasks?  Also che
 This is to track the automatic trigger. I provided a basic description but we should update on the unknown and tech choices.
 
 ---
-*Synced from Jira: 2026-07-15*
+*Synced from Jira: 2026-07-16*

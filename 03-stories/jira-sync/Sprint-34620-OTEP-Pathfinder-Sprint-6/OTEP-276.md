@@ -25,4 +25,4 @@ _No subtasks._
 Moved to backlog — not on the critical path for Sprint 2.
 
 ---
-*Synced from Jira: 2026-07-15*
+*Synced from Jira: 2026-07-16*

@@ -1,6 +1,6 @@
-# OTEP-484: Update er digram generation to add Sub-domain breakdown & extract postgres image version
+# OTEP-723: Integration testing
 
-**Status:** Done
+**Status:** In Progress
 **Assignee:** Léo Milbor
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)

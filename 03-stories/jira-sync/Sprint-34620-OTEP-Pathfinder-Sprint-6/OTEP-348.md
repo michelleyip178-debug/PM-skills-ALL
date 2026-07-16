@@ -30,4 +30,4 @@ I think this story should be re-evaluated since AFAIK, the task is not scheduled
 Test Cases Document:
 
 ---
-*Synced from Jira: 2026-07-15*
+*Synced from Jira: 2026-07-16*
