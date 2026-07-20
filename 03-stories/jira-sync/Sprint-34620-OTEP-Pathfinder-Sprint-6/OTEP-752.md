@@ -1,7 +1,7 @@
-# OTEP-684: Refactor ingestion model (split otg /cag importer.SourceRecord)
+# OTEP-752: Setup integration testing harness
 
-**Status:** Backlog
-**Assignee:** N/A
+**Status:** In Progress
+**Assignee:** Léo Milbor
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 

@@ -34,4 +34,4 @@ Testing done -
 Added to Sprint 2 — Open/Closed labels and "Closing soon" badge complete the Listing→Detail journey. Feedback on ACs: Business rule conflict with OTEP-85: OTEP-85 says hide listings where Closing Date >= 7 days (only show opportunities closing more than 7 days from now). This ticket says show "Closing soon" for opportunities closing within 7 days. If OTEP-85 hides them, "Closing soon" can never appear. Suggest: OTEP-85 visibility = show all where closing_date > now. This ticket = "Closing soon" badge where closing date is within 7 days. The AC "Closed or expired postings are hidden from the listing" is already handled by OTEP-85 visibility filter. Suggest removing it from this ticket to avoid double-counting. This ticket should own labels and deep-link behaviour only.
 
 ---
-*Synced from Jira: 2026-07-16*
+*Synced from Jira: 2026-07-20*

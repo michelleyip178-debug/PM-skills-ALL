@@ -35,4 +35,4 @@ updated and sharpened this AC as well.
 Hi   , while the title is correct, the details of this ticket currently talk mostly about click to apply. Could you please amend the description and scope to ensure it fully covers showing the actual opportunity details?
 
 ---
-*Synced from Jira: 2026-07-16*
+*Synced from Jira: 2026-07-20*

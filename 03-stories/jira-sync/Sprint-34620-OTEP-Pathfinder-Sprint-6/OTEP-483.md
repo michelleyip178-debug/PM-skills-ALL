@@ -1,4 +1,4 @@
-# OTEP-483: Technical tasks Sprint 4
+# OTEP-483: Technical tasks
 
 **Status:** Backlog
 **Assignee:** N/A
@@ -27,6 +27,7 @@ No description provided.
 | OTEP-681 | Run integration testing in pipeline | Backlog |
 | OTEP-682 | Autogenerate doc in pipeline | Backlog |
 | OTEP-684 | Refactor ingestion model (split otg /cag importer.SourceRecord) | Backlog |
+| OTEP-752 | Setup integration testing harness | In Progress |
 
 ---
 
@@ -35,4 +36,4 @@ No description provided.
 _No comments._
 
 ---
-*Synced from Jira: 2026-07-16*
+*Synced from Jira: 2026-07-20*

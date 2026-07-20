@@ -21,8 +21,13 @@ _No subtasks._
 
 ## Latest Comments
 
+**Léo Milbor** (2026-07-17)
+Should we still keep this? I’m thinking the choice is made for foreseeable future.
+
+---
+
 **Pow Hwee TAN (PSD)** (2026-05-18)
 Moved to backlog — not on the critical path for Sprint 2.
 
 ---
-*Synced from Jira: 2026-07-16*
+*Synced from Jira: 2026-07-20*

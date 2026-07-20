@@ -26,4 +26,4 @@ As an officer who is new to CareerCompass, I want a quick explanation of what ea
 _No comments._
 
 ---
-*Synced from Jira: 2026-07-16*
+*Synced from Jira: 2026-07-20*
