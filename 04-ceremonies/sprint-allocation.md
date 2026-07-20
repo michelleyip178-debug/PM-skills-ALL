@@ -151,7 +151,7 @@
 
 ---
 
-## Sprint 6 (13–24 Jul) — CSC SSO + C@G deep-links + Admin — *provisional*
+## Sprint 6 (13–26 Jul) — CSC SSO + C@G deep-links + Admin — *provisional*
 
 > **Realistic: CSC SSO external process completes ~17 Jul. Integration work lands here.**
 

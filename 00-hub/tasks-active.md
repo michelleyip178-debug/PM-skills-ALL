@@ -9,19 +9,19 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 6 W1 (13–19 Jul) — Huiting/Mark data-sharing approval now the top risk to August MVP feasibility (#55, escalated 2026-07-14 at OTEP Squad Sync — "we answered the questions" ≠ "approvers are comfortable"), UAT operating model still undefined with two possibly-duplicate action items surfaced same-day (Squad Sync + Team 2 standup — needs reconciling before Rama schedules the alignment session), environment governance flagged 🔴 Red (manual env var/secret drift observed, no mechanism in place — Team 2 standup, feeds #58). **#52 (Hao Eng/OTEP-505) RESOLVED 2026-07-14** — engineering build confirmed ready for QA, #58's CFT thread also closed same day. **Still open:** #50 (CMM scope-pressure escalation, Adrian-owned), #51 (search AC ownership — resolved via scope cut 2026-07-13), #58 issues #2/#3 (comms gaps, E2E validation — still open), Huiting submission coordination conflict (Xian Zhang vs. Xian Zhang Guo document ownership, flagged 2026-07-13, still unresolved 2 days later). *(Updated 2026-07-14 — was 2026-07-03, 11 days stale)*
+**Theme:** Sprint 6 W2 (20–26 Jul) — **#57 (OTEP-130/Pow Hwee scope-cut confirmation) is now the top governance item**, per last week's `/weekly-review`: 4 missed venues, the most-repeated unresolved item of W29, named Priority 1 in this week's plan with an explicit escalate-after-second-miss trigger. Huiting/Mark data-sharing approval remains the top risk to August MVP feasibility (#55, escalated 2026-07-14 at OTEP Squad Sync — "we answered the questions" ≠ "approvers are comfortable"), UAT operating model still undefined with two possibly-duplicate action items surfaced same-day (Squad Sync + Team 2 standup — needs reconciling before Rama schedules the alignment session), environment governance flagged 🔴 Red (manual env var/secret drift observed, no mechanism in place — Team 2 standup, feeds #58). **#52 (Hao Eng/OTEP-505) RESOLVED 2026-07-14** — engineering build confirmed ready for QA, #58's CFT thread also closed same day. **Still open:** #50 (CMM scope-pressure escalation, Adrian-owned), #51 (search AC ownership — resolved via scope cut 2026-07-13), #58 issues #2/#3 (comms gaps, E2E validation — still open), Huiting submission coordination conflict (Xian Zhang vs. Xian Zhang Guo document ownership, flagged 2026-07-13, still unresolved 2 days later). *(Updated 2026-07-20 — #57 elevated to top line per weekly-review escalation)*
 
 ---
 
 ## In Progress
 
-**Engineering (Jira — live 2026-07-14 afternoon, Sprint 34620):**
+**Engineering (Jira — live 2026-07-20, Sprint 34620):**
 
-*Sprint 6 In Progress (12) · In QA (16):* See [sprint-status.md](sprint-status.md) for the full, live-verified list (3 independent jira-sync pulls today, last at afternoon).
+*Sprint 6 In Progress (18) · In QA (5):* See [sprint-status.md](sprint-status.md) for the full, live-verified list.
 
-*Sprint 6 To Do (6):* includes OTEP-445 (POCDEX code table import spike, still unassigned) and OTEP-437 (filter by job family, moved Backlog→To Do today, assigned Hao Eng).
+*Sprint 6 To Do (5):* includes OTEP-445 (POCDEX code table import spike, still unassigned) and OTEP-437 (filter by job family — now In Progress, assigned Hao Eng).
 
-*Sprint 6 Done (33) · Backlog (23):* See sprint-status.md for full list.
+*Sprint 6 Done (42) · Backlog (21):* See sprint-status.md for full list.
 
 ---
 
@@ -150,4 +150,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-07-14 — stale-check. Corrected sprint header (Sprint 5→6, was 11 days stale), engineering section counts (now points to live sprint-status.md, Sprint 6: 6/12/16/33/23), and This Week's Focus (refreshed with #55 escalation, UAT duplicate-thread flag, #58 environment-governance finding, #52 resolution). Prior: 2026-07-03 (stale-check. Corrected In Progress/QA counts and #43 status). Prior: 2026-07-01 (stale-check — engineering counts refreshed to live Sprint 5 pull). Prior: 2026-06-29 (sprint line S4→S5, engineering section left stale pointing to sprint-status.md).*
+*Updated: 2026-07-20 — stale-check. Corrected Sprint 6 week label (W1→W2, was 1 day into W2), engineering section counts (5/18/5/42/21, was 6 days stale at 6/12/16/33/23). Prior: 2026-07-14 — stale-check. Corrected sprint header (Sprint 5→6, was 11 days stale), engineering section counts (now points to live sprint-status.md, Sprint 6: 6/12/16/33/23), and This Week's Focus (refreshed with #55 escalation, UAT duplicate-thread flag, #58 environment-governance finding, #52 resolution). Prior: 2026-07-03 (stale-check. Corrected In Progress/QA counts and #43 status). Prior: 2026-07-01 (stale-check — engineering counts refreshed to live Sprint 5 pull). Prior: 2026-06-29 (sprint line S4→S5, engineering section left stale pointing to sprint-status.md).*

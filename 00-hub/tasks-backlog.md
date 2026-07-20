@@ -17,13 +17,13 @@ For scoping gaps and missing stories, see [scoping-gaps-tracker.md](../03-storie
 
 ## Process / Operations
 
-- [ ] Establish definition of done across team — deployed? tested? reviewed? Get alignment from Pow Hwee
+- [x] ~~Establish definition of done across team~~ — ✅ Done. DoR/DoD guidelines documented (Rama, 2026-05-13) at [dor-dod-guidelines.md](../06-skills-and-decisions/dor-dod-guidelines.md).
 - [ ] Set up weekly status reporting rhythm for Adrian — format, frequency, what he wants to see
 
 ## Stakeholder / Communication
 
 - [ ] Align with Jace on handover/co-ownership model during his transition
-- [ ] Brief Jacky/Xian Zhang on Sprint 1–5 plan — surface open questions requiring their input
+- [ ] Brief Jacky/Xian Zhang on Sprint 6 plan — surface open questions requiring their input
 - [ ] Coordinate with C@G team on ingestion method and deep-link URL patterns
 - [ ] Coordinate with OTG team on redirect URL structure and data export format
 - [ ] OTEP-133 email deep-link decision — manually composed link (MVP) vs OTEP auto-generated notifications (R1)
@@ -37,4 +37,4 @@ For scoping gaps and missing stories, see [scoping-gaps-tracker.md](../03-storie
 
 ---
 
-*Last reviewed: 2026-06-25 (VAPT start 21 Sep → 7 Sep per risks.md 2026-06-24). Prior: 2026-06-18 (VAPT early Aug → 21 Sep).*
+*Last reviewed: 2026-07-20 (stale-check — DoD item marked done, points to dor-dod-guidelines.md; "Sprint 1–5 plan" briefing item → "Sprint 6 plan", was 25 days stale referencing a closed sprint window). Prior: 2026-06-25 (VAPT start 21 Sep → 7 Sep per risks.md 2026-06-24). Prior: 2026-06-18 (VAPT early Aug → 21 Sep).*
