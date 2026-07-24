@@ -1,8 +1,11 @@
 # OTEP-276: [Spike] Investigate custom design system reimplementation
 
-**Status:** In Progress
+**Status:** Done
+
 **Assignee:** Pow Hwee TAN (PSD)
+
 **Story Points:** 2
+
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
@@ -30,4 +33,4 @@ Should we still keep this? I’m thinking the choice is made for foreseeable fut
 Moved to backlog — not on the critical path for Sprint 2.
 
 ---
-*Synced from Jira: 2026-07-20*
+*Synced from Jira: 2026-07-23*

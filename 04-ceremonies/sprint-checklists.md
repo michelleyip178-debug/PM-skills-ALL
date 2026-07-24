@@ -128,6 +128,25 @@ Per-story grooming readiness and DoR blockers, per sprint. **Which stories are i
 
 ---
 
+## Sprint 7 — Ready Shelf (in progress)
+
+**Sprint dates:** 27 Jul – 9 Aug 2026. Sprint goal not yet set (flagged at `/groom-prep`, 2026-07-22 — agree before/during grooming).
+
+**Status:** `/grooming-close` run 2026-07-22 against 4 outright-Ready candidates from the 23-story Sprint 6 Backlog pool (full scorecard: [grooming-brief-2026-07-22.md](../../../PM-OS/outputs/analyses/grooming-brief-2026-07-22.md)). Remaining 19 candidates (6 near-ready, 13 blocked) still pending a real grooming session.
+
+| ID | Title | Grooming-ready? | Ready date | Notes |
+|---|---|---|---|---|
+| OTEP-329 | chore: Keycloak Client Secret Externalization | ✅ Ready | 2026-07-22 | Infra chore, mechanism-language ACs acceptable given non-user-facing scope |
+| OTEP-680 | Check with OPS for observability needs | ✅ Ready | 2026-07-22 | Investigation/spike, AC gate exempt by convention |
+| OTEP-659 | Investigate smoke test for pipeline | ✅ Ready | 2026-07-22 | Investigation/spike — scope is thin (title only), flagged but passes as exploratory |
+| OTEP-485 | Run update deps in otep-service | ✅ Ready | 2026-07-22 | Routine dependency-bump chore |
+
+### DoR Blockers
+
+*(19 remaining candidates — see [grooming-brief-2026-07-22.md](../../../PM-OS/outputs/analyses/grooming-brief-2026-07-22.md) for full scorecard and blockers per story)*
+
+---
+
 ---
 
 ## Strategic Skills — Sprint Phase Triggers

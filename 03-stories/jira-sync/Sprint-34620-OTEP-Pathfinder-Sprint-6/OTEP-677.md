@@ -1,8 +1,11 @@
 # OTEP-677: [BUG] OTG and C@G data import NOT done
 
-**Status:** To Do
+**Status:** Done
+
 **Assignee:** Thomas Huchedé
+
 **Story Points:** N/A
+
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
@@ -24,4 +27,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-07-20*
+*Synced from Jira: 2026-07-23*

@@ -1,0 +1,29 @@
+# OTEP-169: IAC for provisioning the services(UAT)
+
+**Type:** Sub-task
+
+**Status:** Done
+
+**Assignee:** Fanxu Wang
+
+**Story Points:** N/A
+
+---
+
+## Description
+
+No description provided.
+
+---
+
+## Subtasks
+
+_No subtasks._
+
+---
+
+## Latest Comments
+
+_No comments._
+
+*Synced from Jira: 2026-07-23*

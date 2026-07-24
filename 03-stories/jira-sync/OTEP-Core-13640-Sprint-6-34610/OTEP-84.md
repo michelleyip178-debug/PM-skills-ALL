@@ -1,8 +1,11 @@
 # OTEP-84: Course detail page
 
 **Type:** Story
-**Status:** Backlog
+
+**Status:** QA
+
 **Assignee:** Pei Ern Lim
+
 **Story Points:** N/A
 
 ---
@@ -23,4 +26,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-07-14*
+*Synced from Jira: 2026-07-23*

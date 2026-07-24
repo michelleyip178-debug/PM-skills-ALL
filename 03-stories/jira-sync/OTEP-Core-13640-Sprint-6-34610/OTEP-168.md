@@ -1,0 +1,30 @@
+# OTEP-168: IAC for provisioning the services(QA)
+
+**Type:** Sub-task
+**Status:** Done
+**Assignee:** Soumya Routa
+**Story Points:** N/A
+
+---
+
+## Description
+
+Set up  prerequisites  (OIDC , Role_ARN, ECR, TF state)
+
+Set up env variable for Deployment
+
+Deploy for service.
+
+---
+
+## Subtasks
+
+_No subtasks._
+
+---
+
+## Latest Comments
+
+_No comments._
+
+*Synced from Jira: 2026-07-23*

@@ -1,6 +1,6 @@
 # Active Tasks
 
-Current sprint: **Sprint 6 ACTIVE (13–26 Jul 2026)** — Sprint 5 closed 2026-07-12 (76 of 79 tickets rolled over, not a clean close). See [sprint-status.md](sprint-status.md) for the live-verified breakdown (89 issues: 6 To Do, 12 In Progress, 16 QA, 33 Done, 23 Backlog as of 2026-07-14 afternoon jira-sync).
+Current sprint: **Sprint 6 ACTIVE (13–26 Jul 2026), ends today** — Sprint 5 closed 2026-07-12 (76 of 79 tickets rolled over, not a clean close). See [sprint-status.md](sprint-status.md) for the live-verified breakdown (Pathfinder: 95 issues — 4 To Do, 16 In Progress, 5 QA, 46 Done, 24 Backlog. Core: 100 issues — 74 Done, 13 Backlog, 6 UAT, 4 QA, 2 In Progress, 1 To Do — as of 2026-07-23 jira-sync).
 Sprint 3 final state (2026-06-12): ~23 Done, 9 in QA carry-in (85/86/89/128/192/268/305/317/319), 4 Backlog carry-in. Sprint goal near-met (filters + apply + deep-link all reached QA). Sprint 4 goal: complete, usable listing experience — search, filter, sort, data currency.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
@@ -9,19 +9,21 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 6 W2 (20–26 Jul) — **#57 (OTEP-130/Pow Hwee scope-cut confirmation) is now the top governance item**, per last week's `/weekly-review`: 4 missed venues, the most-repeated unresolved item of W29, named Priority 1 in this week's plan with an explicit escalate-after-second-miss trigger. Huiting/Mark data-sharing approval remains the top risk to August MVP feasibility (#55, escalated 2026-07-14 at OTEP Squad Sync — "we answered the questions" ≠ "approvers are comfortable"), UAT operating model still undefined with two possibly-duplicate action items surfaced same-day (Squad Sync + Team 2 standup — needs reconciling before Rama schedules the alignment session), environment governance flagged 🔴 Red (manual env var/secret drift observed, no mechanism in place — Team 2 standup, feeds #58). **#52 (Hao Eng/OTEP-505) RESOLVED 2026-07-14** — engineering build confirmed ready for QA, #58's CFT thread also closed same day. **Still open:** #50 (CMM scope-pressure escalation, Adrian-owned), #51 (search AC ownership — resolved via scope cut 2026-07-13), #58 issues #2/#3 (comms gaps, E2E validation — still open), Huiting submission coordination conflict (Xian Zhang vs. Xian Zhang Guo document ownership, flagged 2026-07-13, still unresolved 2 days later). *(Updated 2026-07-20 — #57 elevated to top line per weekly-review escalation)*
+**Theme:** Sprint 6 closes today (26 Jul per calendar) — **#57 (OTEP-130/Pow Hwee scope-cut confirmation) RESOLVED 2026-07-20**: Pow Hwee confirmed FormSG has no webhook support, full net-new scope cut confirmed. Only remaining thread: small Jira housekeeping call (close OTEP-130 as duplicate of Sprint 3's US-18/OTEP-319, or keep as thin ticket) — still open as of 2026-07-23. The Ready shelf for Sprint 7 planning (Monday) was at zero as of 2026-07-20's `/sprint-check`; `/grooming-close` runs on 2026-07-22 and today's 2pm Sprint 7 grooming session are addressing this — see [sprint-status.md](sprint-status.md) and today's meeting notes. Huiting/Mark data-sharing approval remains the top risk to August MVP feasibility (#55, escalated 2026-07-14 at OTEP Squad Sync — "we answered the questions" ≠ "approvers are comfortable"), UAT operating model still undefined with two possibly-duplicate action items surfaced same-day (Squad Sync + Team 2 standup — needs reconciling before Rama schedules the alignment session), environment governance flagged 🔴 Red (manual env var/secret drift observed, no mechanism in place — Team 2 standup, feeds #58). **#52 (Hao Eng/OTEP-505) RESOLVED 2026-07-14** — engineering build confirmed ready for QA, #58's CFT thread also closed same day. **Still open:** #50 (CMM scope-pressure escalation, Adrian-owned), #51 (search AC ownership — resolved via scope cut 2026-07-13), #58 issues #2/#3 (comms gaps, E2E validation — still open), Huiting submission coordination conflict (Xian Zhang vs. Xian Zhang Guo document ownership, flagged 2026-07-13, still unresolved 2 days later). A new cross-cutting structural gap surfaced 2026-07-22/23: competency matching can't reliably resolve for OTG-sourced opportunities (missing agency code) — architecture direction (competency codes over labels) agreed at today's Sprint 7 planning, but implementation/governance still open. *(Updated 2026-07-23 — stale-check: #57 confirmed resolved, was still framed as "top governance item" needing forcing)*
 
 ---
 
 ## In Progress
 
-**Engineering (Jira — live 2026-07-20, Sprint 34620):**
+**Engineering (Jira — live 2026-07-23, Sprint 34620 + 34610):**
 
-*Sprint 6 In Progress (18) · In QA (5):* See [sprint-status.md](sprint-status.md) for the full, live-verified list.
+*Pathfinder Sprint 6 In Progress (16) · In QA (5):* See [sprint-status.md](sprint-status.md) for the full, live-verified list.
 
-*Sprint 6 To Do (5):* includes OTEP-445 (POCDEX code table import spike, still unassigned) and OTEP-437 (filter by job family — now In Progress, assigned Hao Eng).
+*Pathfinder Sprint 6 To Do (4):* includes OTEP-445 (POCDEX code table import spike, still unassigned).
 
-*Sprint 6 Done (42) · Backlog (21):* See sprint-status.md for full list.
+*Pathfinder Sprint 6 Done (46) · Backlog (24):* See sprint-status.md for full list.
+
+*Core Sprint 6 (100 issues, newly fully synced 2026-07-23):* 74 Done, 13 Backlog, 6 UAT, 4 QA, 2 In Progress, 1 To Do. See sprint-status.md.
 
 ---
 
@@ -40,8 +42,8 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 >
 > - [x] ~~**WOG AD onboarding session — Fabian** (#26)~~ — no longer required (2026-06-09).
 > - [x] ~~**POCDEX planning session — Daryll** (#31)~~ — no longer required (2026-06-09).
-> - [ ] **CSC SSO requirements + ownership — #30** — Dependencies Sync rescheduled to Thu 11 Jun; 6-wk chain, owner TBC. *(see line ~60 feasibility deep-dive)*
-> - [ ] **Competency SSOT — Imelda** (#18) — Dependencies Sync rescheduled to Thu 11 Jun; gates full OTEP-87 / C@G detail competency block. *(see line ~67)*
+> - [x] ~~**CSC SSO requirements + ownership — #30**~~ — Resolved via email 2026-06-26 (technical feasibility confirmed, DLE testing targeted August). Approval/governance docs still TBC per open-items.md, but the requirements/ownership question itself is closed.
+> - [x] ~~**Competency SSOT — Imelda** (#18)~~ — Fully resolved (sourcing + governance architecture settled at Dependencies Sync 2026-06-11, per open-items.md).
 > - *Also: resolve OTEP-110 error-spec mismatch (#32) before auth grooms clean.*
 
 > 📌 ~~**REVIEW TOMORROW (parked 2026-06-02):** Pow Hwee's **Sprint 3 Proposed Backlog** — review against sprint-status (50 issues, carry-over QA + new scope). Act/comment after reading.~~ **STALE — now Day 6 of Sprint 3. Board is live at 50 issues. Action moot.**
@@ -49,7 +51,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 > **LNO re-sort applied 2026-06-02** ([analysis](../../PM-OS/outputs/archive/2026-W23-Jun01-Jun07/analyses/2026-06-02-W23-lno-prioritization.md)). This week's **Leverage** (do deeply): feed Adrian the R1 resource ask · drive R1 design alignment w/ designers · force the ATS fork (C1) · CSC SSO feasibility · finish WOG Auth metrics. Overhead items below struck/delegated/deferred to protect that time.
 
 > **BAU / standing tasks — prioritised** (linked from daily plans):
-> - **🔴 P1 (this week, unblocks others):** WOG AD response — Adrian (#26) · CSC SSO + ref data — Imelda (#18/#30)
+> - **🔴 P1 (this week, unblocks others):** ⚠️ **STALE (dated from a 2026-06-02 LNO analysis, 7+ weeks old)** — WOG AD response — Adrian (#26, open-items.md last updated 2026-06-30, blocked on Léo/Keycloak config with no ETA — worth a fresh status check given OTEP-71/305 now show In Progress on the live Sprint 6 board) · CSC SSO + ref data — Imelda (#18/#30, both now resolved per open-items.md — this whole line is carried-over cruft from June, worth pruning at next weekly-review)
 > - **🟠 P2 (batch soon):** Jira housekeeping (POCDEX epic, OTEP-128 AC, placeholder stories) · DQ issue — Daryll (#33) · ~~dependency map~~ → delegated to Pow Hwee
 > - **🟡 P3 (whenever):** Diana loop-in + stakeholder file · ~~OKR doc → NotebookLM~~ (killed) · clean inbox (15-min timebox)
 > - **🗓️ Deferred out of June:** Cybersecurity quiz (Dec) · PIM risk assessment (post-feature-freeze)
