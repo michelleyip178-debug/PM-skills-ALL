@@ -38,4 +38,4 @@ Hi   , this ticket should be the actual listing page for Careers@Gov opportuniti
 AC is clear on the UI requirement (label on card, visible without hover). Missing: where does C@G data come from? Is there a dependency on a C@G ingest pipeline or data source? Suggest noting the data dependency so this isn’t blocked at implementation time.
 
 ---
-*Synced from Jira: 2026-07-20*
+*Synced from Jira: 2026-07-27*

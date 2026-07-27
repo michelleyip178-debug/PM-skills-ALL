@@ -1,11 +1,8 @@
-# OTEP-677: [BUG] OTG and C@G data import NOT done
+# OTEP-677: [BUG] OTG data import NOT done
 
 **Status:** Done
-
 **Assignee:** Thomas Huchedé
-
 **Story Points:** N/A
-
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
@@ -24,7 +21,8 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**Rathika Ramalingam** (2026-07-22)
+This is fixed and verified in qa. The main testing is done as part of
 
 ---
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-07-27*

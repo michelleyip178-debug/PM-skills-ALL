@@ -35,4 +35,4 @@ As discussed today, the POC is missing in the source excel file so we have nothi
 Figma link  here .
 
 ---
-*Synced from Jira: 2026-07-20*
+*Synced from Jira: 2026-07-27*

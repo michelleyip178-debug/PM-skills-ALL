@@ -24,6 +24,11 @@ As a  logged-in public officer,  I want to  log out of OTEP,  So that  my sessio
 
 ## Latest Comments
 
+**Amber Tong** (2026-07-23)
+The "Having trouble? Contact  careercompass@psd.gov.sg " text and email link have been removed from the login page. cc
+
+---
+
 **Rathika Ramalingam** (2026-07-15)
 Hi   , I can’t see the login form replaced. Is this implementation (no login form) NOT for qa env ?
 
@@ -33,4 +38,4 @@ Hi   , I can’t see the login form replaced. Is this implementation (no login f
 Title updated to cover both login and logout (replacing keycloak page with actual). Current AC covers the logout flow well but login is underspecified — what happens if WOG AD auth fails? What does the officer see? Also: this likely depends on OTEP-350 (Onboard WOG AD) being completed first. Suggest adding that as a dependency.
 
 ---
-*Synced from Jira: 2026-07-20*
+*Synced from Jira: 2026-07-27*

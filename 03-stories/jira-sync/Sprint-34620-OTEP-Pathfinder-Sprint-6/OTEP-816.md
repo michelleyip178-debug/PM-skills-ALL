@@ -1,7 +1,7 @@
-# OTEP-680: Check with OPS for observability needs
+# OTEP-816: add mock CFT for opportunity integration test
 
-**Status:** Backlog
-**Assignee:** Léo Milbor
+**Status:** In Progress
+**Assignee:** N/A
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
@@ -9,7 +9,7 @@
 
 ## Description
 
-Check with Fabian and Fanxu
+No description provided.
 
 ---
 

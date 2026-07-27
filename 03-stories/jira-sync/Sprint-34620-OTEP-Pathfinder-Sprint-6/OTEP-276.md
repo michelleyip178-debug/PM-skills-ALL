@@ -1,11 +1,8 @@
 # OTEP-276: [Spike] Investigate custom design system reimplementation
 
 **Status:** Done
-
 **Assignee:** Pow Hwee TAN (PSD)
-
 **Story Points:** 2
-
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
@@ -24,6 +21,11 @@ _No subtasks._
 
 ## Latest Comments
 
+**Pow Hwee TAN (PSD)** (2026-07-23)
+Team has proceeded with LifeSG design system; team assessed that LifeSG is sufficient to support server side rendering. Also verified to work with Intranet.
+
+---
+
 **Léo Milbor** (2026-07-17)
 Should we still keep this? I’m thinking the choice is made for foreseeable future.
 
@@ -33,4 +35,4 @@ Should we still keep this? I’m thinking the choice is made for foreseeable fut
 Moved to backlog — not on the critical path for Sprint 2.
 
 ---
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-07-27*

@@ -21,13 +21,18 @@ _No subtasks._
 
 ## Latest Comments
 
+**boonsiangteh** (2026-07-22)
+Thomas Huchede  mentioned this issue in  a merge request  of  WOG / PSD / pdo / OTEP / otep-service  on branch  feat/resolve-officer-ringfencing-criteria : feat:    resolve officer ringfencing criteria
+
+---
+
+**boonsiangteh** (2026-07-22)
+Thomas Huchede  mentioned this issue in  a merge request  of  WOG / PSD / pdo / OTEP / otep-service  on branch  feat/get-ringfenced : feat:    add ringfencing to get opportunity
+
+---
+
 **Michelle Yip** (2026-07-07)
 Updated in purple for 1 and 3. For #2, there is no indicator and have removed the occurrences.
 
 ---
-
-**Rathika Ramalingam** (2026-07-07)
-Hi    , please update the following.  Eligibility Rules or POCDEX Data Logic (Blocker) What is the visual eligibility indicator on the detail page? (if we decided to show) Is sorting the default by posted_date within the pinned items (listed first) and ineligible cards?
-
----
-*Synced from Jira: 2026-07-20*
+*Synced from Jira: 2026-07-27*

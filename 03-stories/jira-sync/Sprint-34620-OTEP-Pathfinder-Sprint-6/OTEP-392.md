@@ -25,4 +25,4 @@ _No subtasks._
 Hi   , is it the final and permanent implementation of logout? I am asking because it is mentioned as chore. cc:
 
 ---
-*Synced from Jira: 2026-07-20*
+*Synced from Jira: 2026-07-27*

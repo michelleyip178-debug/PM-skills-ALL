@@ -1,20 +1,15 @@
 # OTEP-791: [BUG] C@G import is NOT working in qa
 
-**Type:** Sub-task
-
 **Status:** Backlog
-
 **Assignee:** N/A
-
 **Story Points:** N/A
-
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
 
 ## Description
 
-No description provided.
+c@g opportunities import using the API is NOT working in qa. Also ensure it is working in higher environments. c@g observability and scheduler to be verified for regular updates
 
 ---
 
@@ -29,4 +24,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-07-27*

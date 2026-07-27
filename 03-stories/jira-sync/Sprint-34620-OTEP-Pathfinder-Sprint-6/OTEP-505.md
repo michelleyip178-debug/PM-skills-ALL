@@ -21,7 +21,18 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**boonsiangteh** (2026-07-21)
+Hao Eng CHUA  mentioned this issue in  a commit  of  WOG / PSD / pdo / OTEP / otep-service  on branch  main :   Refactor CFT client and simplify shared packages
 
 ---
-*Synced from Jira: 2026-07-20*
+
+**boonsiangteh** (2026-07-21)
+Hao Eng CHUA  mentioned this issue in  a commit  of  WOG / PSD / pdo / OTEP / otep-service  on branch  fix/otep-505-refactoring : fix:    fix the body close and shallow copy of httpclient
+
+---
+
+**boonsiangteh** (2026-07-21)
+Hao Eng CHUA  mentioned this issue in  a commit  of  WOG / PSD / pdo / OTEP / otep-service  on branch  fix/otep-505-refactoring : chore:    fileprocessor as interface
+
+---
+*Synced from Jira: 2026-07-27*

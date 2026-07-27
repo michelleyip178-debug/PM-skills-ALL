@@ -35,4 +35,4 @@ Entity A: OTEP_Opportunity (The Parsed Core)  The backend will use an AI script 
 Currently there are variations of files with different format, need to define a standard format.
 
 ---
-*Synced from Jira: 2026-07-20*
+*Synced from Jira: 2026-07-27*
