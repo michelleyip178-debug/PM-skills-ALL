@@ -1,9 +1,9 @@
 # OTEP-405: [FE/BE] Keyword Search for Opportunities
 
-**Status:** In Progress
+**Status:** Backlog
 **Assignee:** Thomas Huchedé
 **Story Points:** 3
-**Sprint:** OTEP-Pathfinder Sprint 6 (34620)
+**Sprint:** OTEP-Pathfinder Sprint 7 (2026-07-26 → 2026-08-09)
 
 ---
 
@@ -39,4 +39,4 @@ Regarding #2,  a. Do we exclude description to search only title and agency <MY>
 I have these questions. Pls clarify. cc:       1. Regarding #2,   a. Do we exclude description to search only title and agency   b. Is the search dynamic as the user keys in or we need to hit Search button (#7) to trigger the search?  c. If dynamic, do we have minimum characters before triggering search to filter   2. Regarding #8  a. Can we define ‘by relevance’ - is it the weight based on no of occurrence + location + exact match of the search text?
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-07-28*

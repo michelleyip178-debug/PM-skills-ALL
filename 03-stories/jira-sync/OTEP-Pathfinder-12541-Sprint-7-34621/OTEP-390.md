@@ -3,7 +3,7 @@
 **Status:** In Progress
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
-**Sprint:** OTEP-Pathfinder Sprint 6 (34620)
+**Sprint:** OTEP-Pathfinder Sprint 7 (2026-07-26 → 2026-08-09)
 
 ---
 
@@ -35,4 +35,4 @@ Thomas Huchede  mentioned this issue in  a merge request  of  WOG / PSD / pdo / 
 Updated in purple for 1 and 3. For #2, there is no indicator and have removed the occurrences.
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-07-28*

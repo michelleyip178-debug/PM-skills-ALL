@@ -3,7 +3,7 @@
 **Status:** In Progress
 **Assignee:** Léo Milbor
 **Story Points:** 3
-**Sprint:** OTEP-Pathfinder Sprint 6 (34620)
+**Sprint:** OTEP-Pathfinder Sprint 7 (2026-07-26 → 2026-08-09)
 
 ---
 
@@ -25,4 +25,4 @@ _No subtasks._
 From what I understand from Fabien’s message before he went on leave, the Azure AD is available for ‘testing’, in the sense that we can integrate with it except that to login will need a real user id.  Which I think is fine.  Again if I interpreted correctly, Fabien also whitelisted the dev env’s URL to the Azure AD.  Fabien should be back in Sprint 5.   In the current Sprint 4, Boon Siang is setting up the egress (a path for our backend to call Azure AD to validate token).  You can approach him on the status of egress.   Short of this, the fallback will be to use the Keycloak realm as you suggested.  This ticket will be brought forward to Sprint 5.
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-07-28*

@@ -1,9 +1,9 @@
 # OTEP-283: Opportunity Detail - Add Ministry icons to detail page
 
 **Status:** In Progress
-**Assignee:** N/A
+**Assignee:** Michelle Yip
 **Story Points:** 1
-**Sprint:** OTEP-Pathfinder Sprint 6 (34620)
+**Sprint:** OTEP-Pathfinder Sprint 7 (2026-07-26 → 2026-08-09)
 
 ---
 
@@ -63,4 +63,4 @@ The list you shared here (   ) looks good but I do have a few gaps: agencies fro
 •	Supreme Court : Supreme_Court.png What should we do for those?  Do we plan to have a fallback when there’s a missing logo? Or just hide the logo from the card?
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-07-28*

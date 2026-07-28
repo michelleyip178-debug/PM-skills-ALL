@@ -3,7 +3,7 @@
 **Status:** Backlog
 **Assignee:** N/A
 **Story Points:** 3
-**Sprint:** OTEP-Pathfinder Sprint 6 (34620)
+**Sprint:** OTEP-Pathfinder Sprint 7 (2026-07-26 → 2026-08-09)
 
 ---
 
@@ -30,4 +30,4 @@ I think this story should be re-evaluated since AFAIK, the task is not scheduled
 Test Cases Document:
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-07-28*

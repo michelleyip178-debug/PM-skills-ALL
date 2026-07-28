@@ -1,9 +1,9 @@
 # OTEP-88: C@G opportunities in the listing page
 
-**Status:** In Progress
+**Status:** Backlog
 **Assignee:** Léo Milbor
 **Story Points:** 5
-**Sprint:** OTEP-Pathfinder Sprint 6 (34620)
+**Sprint:** OTEP-Pathfinder Sprint 7 (2026-07-26 → 2026-08-09)
 
 ---
 
@@ -38,4 +38,4 @@ Hi   , this ticket should be the actual listing page for Careers@Gov opportuniti
 AC is clear on the UI requirement (label on card, visible without hover). Missing: where does C@G data come from? Is there a dependency on a C@G ingest pipeline or data source? Suggest noting the data dependency so this isn’t blocked at implementation time.
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-07-28*

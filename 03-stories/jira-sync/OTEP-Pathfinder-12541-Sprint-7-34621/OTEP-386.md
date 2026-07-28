@@ -3,7 +3,7 @@
 **Status:** In Progress
 **Assignee:** Thomas Huchedé
 **Story Points:** 2
-**Sprint:** OTEP-Pathfinder Sprint 6 (34620)
+**Sprint:** OTEP-Pathfinder Sprint 7 (2026-07-26 → 2026-08-09)
 
 ---
 
@@ -26,4 +26,4 @@ As an officer who is new to CareerCompass, I want a quick explanation of what ea
 _No comments._
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-07-28*

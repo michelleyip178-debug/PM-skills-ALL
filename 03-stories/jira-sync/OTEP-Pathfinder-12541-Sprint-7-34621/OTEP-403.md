@@ -3,7 +3,7 @@
 **Status:** Backlog
 **Assignee:** Léo Milbor
 **Story Points:** 5
-**Sprint:** OTEP-Pathfinder Sprint 6 (34620)
+**Sprint:** OTEP-Pathfinder Sprint 7 (2026-07-26 → 2026-08-09)
 
 ---
 
@@ -30,4 +30,4 @@ The changes for the ingestion logic and rules.
 I added this story to highlight current limitation and possible solution.
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-07-28*

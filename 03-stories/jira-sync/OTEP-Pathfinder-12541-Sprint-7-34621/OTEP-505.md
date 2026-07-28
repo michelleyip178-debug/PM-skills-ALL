@@ -3,7 +3,7 @@
 **Status:** QA
 **Assignee:** Hao Eng
 **Story Points:** N/A
-**Sprint:** OTEP-Pathfinder Sprint 6 (34620)
+**Sprint:** OTEP-Pathfinder Sprint 7 (2026-07-26 → 2026-08-09)
 
 ---
 
@@ -35,4 +35,4 @@ Hao Eng CHUA  mentioned this issue in  a commit  of  WOG / PSD / pdo / OTEP / ot
 Hao Eng CHUA  mentioned this issue in  a commit  of  WOG / PSD / pdo / OTEP / otep-service  on branch  fix/otep-505-refactoring : chore:    fileprocessor as interface
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-07-28*

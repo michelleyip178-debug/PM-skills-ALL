@@ -1,9 +1,9 @@
 # OTEP-131: Handle missing or broken FormSG application link.
 
-**Status:** In Progress
+**Status:** Backlog
 **Assignee:** Thomas Huchedé
 **Story Points:** 2
-**Sprint:** OTEP-Pathfinder Sprint 6 (34620)
+**Sprint:** OTEP-Pathfinder Sprint 7 (2026-07-26 → 2026-08-09)
 
 ---
 
@@ -35,4 +35,4 @@ As discussed today, the POC is missing in the source excel file so we have nothi
 Figma link  here .
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-07-28*
