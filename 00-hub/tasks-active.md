@@ -1,6 +1,6 @@
 # Active Tasks
 
-Current sprint: **Sprint 6 ACTIVE (13–26 Jul 2026), ends Sunday** — Sprint 5 closed 2026-07-12 (76 of 79 tickets rolled over, not a clean close). See [sprint-status.md](sprint-status.md) for the live-verified breakdown (Pathfinder: 95 issues — 4 To Do, 16 In Progress, 5 QA, 46 Done, 24 Backlog. Core: 100 issues — 74 Done, 13 Backlog, 6 UAT, 4 QA, 2 In Progress, 1 To Do — as of 2026-07-23 jira-sync).
+Current sprint: **Sprint 7 ACTIVE (28 Jul – 9 Aug 2026)** — Sprint 6 closed. See [sprint-status.md](sprint-status.md) for the live-verified breakdown (Pathfinder Sprint 7: 36 issues — 2 To Do, 8 In Progress, 2 QA, 16 Done, 24 Backlog, as of 2026-07-31 jira pull; goal now set in Jira: "Ship ringfenced opportunity listing and detail views, and close out login/auth replacement (Keycloak → real WOG AD flow) and CFT file-upload integration.").
 Sprint 3 final state (2026-06-12): ~23 Done, 9 in QA carry-in (85/86/89/128/192/268/305/317/319), 4 Backlog carry-in. Sprint goal near-met (filters + apply + deep-link all reached QA). Sprint 4 goal: complete, usable listing experience — search, filter, sort, data currency.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
@@ -9,21 +9,23 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
+> ⚠️ **STALE (flagged 2026-07-31, not rewritten):** the paragraph below describes Sprint 6 close-out, which has already happened — Sprint 7 is now active (28 Jul–9 Aug, see header above). This is a judgement call, not a factual swap: rewriting "this week's focus" changes narrative/priority framing, which needs the PM's own read on what Sprint 7's focus actually is, not an auto-generated replacement. Recommend replacing this whole section at next `/weekly-plan` or `/sprint-plan-prep` rather than patching it here.
+
 **Theme:** Sprint 6 closes today (26 Jul per calendar) — **#57 (OTEP-130/Pow Hwee scope-cut confirmation) RESOLVED 2026-07-20**: Pow Hwee confirmed FormSG has no webhook support, full net-new scope cut confirmed. Only remaining thread: small Jira housekeeping call (close OTEP-130 as duplicate of Sprint 3's US-18/OTEP-319, or keep as thin ticket) — still open as of 2026-07-23. The Ready shelf for Sprint 7 planning (Monday) was at zero as of 2026-07-20's `/sprint-check`; `/grooming-close` runs on 2026-07-22 and today's 2pm Sprint 7 grooming session are addressing this — see [sprint-status.md](sprint-status.md) and today's meeting notes. Huiting/Mark data-sharing approval remains the top risk to August MVP feasibility (#55, escalated 2026-07-14 at OTEP Squad Sync — "we answered the questions" ≠ "approvers are comfortable"), UAT operating model still undefined with two possibly-duplicate action items surfaced same-day (Squad Sync + Team 2 standup — needs reconciling before Rama schedules the alignment session), environment governance flagged 🔴 Red (manual env var/secret drift observed, no mechanism in place — Team 2 standup, feeds #58). **#52 (Hao Eng/OTEP-505) RESOLVED 2026-07-14** — engineering build confirmed ready for QA, #58's CFT thread also closed same day. **Still open:** #50 (CMM scope-pressure escalation, Adrian-owned), #51 (search AC ownership — resolved via scope cut 2026-07-13), #58 issues #2/#3 (comms gaps, E2E validation — still open), Huiting submission coordination conflict (Xian Zhang vs. Xian Zhang Guo document ownership, flagged 2026-07-13, still unresolved 2 days later). A new cross-cutting structural gap surfaced 2026-07-22/23: competency matching can't reliably resolve for OTG-sourced opportunities (missing agency code) — architecture direction (competency codes over labels) agreed at today's Sprint 7 planning, but implementation/governance still open. *(Updated 2026-07-23 — stale-check: #57 confirmed resolved, was still framed as "top governance item" needing forcing)*
 
 ---
 
 ## In Progress
 
-**Engineering (Jira — live 2026-07-23, Sprint 34620 + 34610):**
+**Engineering (Jira — live 2026-07-31, Sprint 34621):**
 
-*Pathfinder Sprint 6 In Progress (16) · In QA (5):* See [sprint-status.md](sprint-status.md) for the full, live-verified list.
+*Pathfinder Sprint 7 In Progress (8) · In QA (2):* See [sprint-status.md](sprint-status.md) for the full, live-verified list.
 
-*Pathfinder Sprint 6 To Do (4):* includes OTEP-445 (POCDEX code table import spike, still unassigned).
+*Pathfinder Sprint 7 To Do (2):* OTEP-668 (search bugs), OTEP-283 (Ministry icons, Michelle Yip).
 
-*Pathfinder Sprint 6 Done (46) · Backlog (24):* See sprint-status.md for full list.
+*Pathfinder Sprint 7 Done (16) · Backlog (24):* See sprint-status.md for full list.
 
-*Core Sprint 6 (100 issues, newly fully synced 2026-07-23):* 74 Done, 13 Backlog, 6 UAT, 4 QA, 2 In Progress, 1 To Do. See sprint-status.md.
+*Core Sprint 7:* not yet synced this pass — see sprint-status.md's Core board notes (last full sync 2026-07-23, Sprint 6, 100 issues). Run `/jira-sync core` for a current Core Sprint 7 read.
 
 ---
 
@@ -51,7 +53,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 > **LNO re-sort applied 2026-06-02** ([analysis](../../PM-OS/outputs/archive/2026-W23-Jun01-Jun07/analyses/2026-06-02-W23-lno-prioritization.md)). This week's **Leverage** (do deeply): feed Adrian the R1 resource ask · drive R1 design alignment w/ designers · force the ATS fork (C1) · CSC SSO feasibility · finish WOG Auth metrics. Overhead items below struck/delegated/deferred to protect that time.
 
 > **BAU / standing tasks — prioritised** (linked from daily plans):
-> - **🔴 P1 (this week, unblocks others):** ⚠️ **STALE (dated from a 2026-06-02 LNO analysis, 7+ weeks old)** — WOG AD response — Adrian (#26, open-items.md last updated 2026-06-30, blocked on Léo/Keycloak config with no ETA — worth a fresh status check given OTEP-71/305 now show In Progress on the live Sprint 6 board) · CSC SSO + ref data — Imelda (#18/#30, both now resolved per open-items.md — this whole line is carried-over cruft from June, worth pruning at next weekly-review)
+> - **🔴 P1 (this week, unblocks others):** WOG AD response — Adrian (#26, open-items.md last updated 2026-06-30, blocked on Léo/Keycloak config with no ETA). ⚠️ **Flagged, not fixed:** open-items.md #26's last update is over a month old, but live Jira now shows OTEP-71 (WOG AD login) In Progress in Sprint 7 — worth a fresh status check with Léo/Adrian rather than assuming the June blocker still holds; this needs a person to confirm, not a file edit. (CSC SSO + ref data — Imelda, #18/#30 — pruned from this line: both confirmed resolved per open-items.md, no longer live BAU.)
 > - **🟠 P2 (batch soon):** Jira housekeeping (POCDEX epic, OTEP-128 AC, placeholder stories) · DQ issue — Daryll (#33) · ~~dependency map~~ → delegated to Pow Hwee
 > - **🟡 P3 (whenever):** Diana loop-in + stakeholder file · ~~OKR doc → NotebookLM~~ (killed) · clean inbox (15-min timebox)
 > - **🗓️ Deferred out of June:** Cybersecurity quiz (Dec) · PIM risk assessment (post-feature-freeze)
@@ -152,4 +154,4 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ---
 
-*Updated: 2026-07-24 — stale-check. Corrected "ends today" (written 2026-07-20, sprint actually ends Sun 26 Jul) → "ends Sunday". Prior: 2026-07-20 — stale-check. Corrected Sprint 6 week label (W1→W2, was 1 day into W2), engineering section counts (5/18/5/42/21, was 6 days stale at 6/12/16/33/23). Prior: 2026-07-14 — stale-check. Corrected sprint header (Sprint 5→6, was 11 days stale), engineering section counts (now points to live sprint-status.md, Sprint 6: 6/12/16/33/23), and This Week's Focus (refreshed with #55 escalation, UAT duplicate-thread flag, #58 environment-governance finding, #52 resolution). Prior: 2026-07-03 (stale-check. Corrected In Progress/QA counts and #43 status). Prior: 2026-07-01 (stale-check — engineering counts refreshed to live Sprint 5 pull). Prior: 2026-06-29 (sprint line S4→S5, engineering section left stale pointing to sprint-status.md).*
+*Updated: 2026-07-31 — stale-check. Corrected sprint header (Sprint 6→7, Sprint 6 had closed); corrected Engineering section header/counts to live Sprint 7 pull (In Progress 8, QA 2, To Do 2, Done 16, Backlog 24); pruned resolved CSC SSO/ref-data (#18/#30) from the P1 BAU line per the file's own prior flag, kept WOG AD (#26) but flagged for a fresh status check rather than assuming June's blocker still holds; flagged (not rewrote) "This Week's Focus" as describing closed Sprint 6, needs PM judgement at next `/weekly-plan`. Prior: 2026-07-24 — stale-check. Corrected "ends today" (written 2026-07-20, sprint actually ends Sun 26 Jul) → "ends Sunday". Prior: 2026-07-20 — stale-check. Corrected Sprint 6 week label (W1→W2, was 1 day into W2), engineering section counts (5/18/5/42/21, was 6 days stale at 6/12/16/33/23). Prior: 2026-07-14 — stale-check. Corrected sprint header (Sprint 5→6, was 11 days stale), engineering section counts (now points to live sprint-status.md, Sprint 6: 6/12/16/33/23), and This Week's Focus (refreshed with #55 escalation, UAT duplicate-thread flag, #58 environment-governance finding, #52 resolution). Prior: 2026-07-03 (stale-check. Corrected In Progress/QA counts and #43 status). Prior: 2026-07-01 (stale-check — engineering counts refreshed to live Sprint 5 pull). Prior: 2026-06-29 (sprint line S4→S5, engineering section left stale pointing to sprint-status.md).*
