@@ -1,9 +1,12 @@
 # Michelle Yip — PM Conversion Case
 
 **Role:** Business Analyst → Product Manager
+
 **Product:** OTEP (One Talent Engagement Platform), PSD
+
 **Period:** Q2 2026 (Sprint 1 – ongoing)
-**Last updated:** 2026-05-11
+
+**Last updated:** 2026-08-03
 
 ---
 
@@ -46,8 +49,13 @@ I maintain a scoping gaps tracker with 13 items — each with an owner, a status
 
 ## What's Next
 
-- Deliver Sprint 2–5 (May–July): core hub, discovery, application routing, polish
-- Continue producing PM artifacts through normal OTEP delivery
+**Conversion process timeline (confirmed with Adrian, 2026-08-03):**
+- Fortnightly 1:1s with Adrian, established 2026-08-03, to review this one-pager and readiness for the conversion
+- One-pager: full draft ready by end of September 2026
+- October 2026: one-pager finalized, experience deep-dive, live-case exercise, and mock interviews all begin
+
+**Ongoing:**
+- Continue producing PM artifacts through normal OTEP delivery (R1 epics, CSC/POCDEX integration work, weekly/daily planning discipline) — this is the evidence base the September draft will draw from
 - Present this case when the panel convenes
 
 ---
