@@ -21,7 +21,8 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**Léo Milbor** (2026-08-03)
+,    I think Fanxu already took care of this and keycloak is now using proper aws secret manager for its secrets.
 
 ---
-*Synced from Jira: 2026-07-29*
+*Synced from Jira: 2026-08-05*

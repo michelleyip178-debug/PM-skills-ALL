@@ -29,6 +29,7 @@ No description provided.
 | OTEP-684 | Refactor ingestion model (split otg /cag importer.SourceRecord) | Backlog |
 | OTEP-752 | Setup integration testing harness | Done |
 | OTEP-803 | Investigate date timezone | Backlog |
+| OTEP-1120 | Build Pathfinder E2E test suite (scheduled tripwire against deployed dev) | In Progress |
 
 ---
 
@@ -37,4 +38,4 @@ No description provided.
 _No comments._
 
 ---
-*Synced from Jira: 2026-07-29*
+*Synced from Jira: 2026-08-05*

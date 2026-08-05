@@ -25,4 +25,4 @@ _No subtasks._
 The design and Jira ticket for the Access Denied page text have been updated. Figma  link  here  cc
 
 ---
-*Synced from Jira: 2026-07-29*
+*Synced from Jira: 2026-08-05*

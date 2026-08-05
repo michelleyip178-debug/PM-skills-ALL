@@ -1,6 +1,6 @@
 # OTEP-283: Opportunity Detail - Add Ministry icons to detail page
 
-**Status:** In Progress
+**Status:** To Do
 **Assignee:** Michelle Yip
 **Story Points:** 1
 **Sprint:** OTEP-Pathfinder Sprint 7 (34621)
@@ -38,4 +38,4 @@ Oh, or probably we decided not to do now?    pls confirm.
 I think the card is named in a confusing manner. There is no planned ministry icon in opportunity detail page. If OK with you, I’ll let you take it back to QA or move to DONE. cc:   ,
 
 ---
-*Synced from Jira: 2026-07-29*
+*Synced from Jira: 2026-08-05*

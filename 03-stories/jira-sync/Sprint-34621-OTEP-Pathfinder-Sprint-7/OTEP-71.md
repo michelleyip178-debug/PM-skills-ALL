@@ -1,7 +1,7 @@
 # OTEP-71: Login Authentication using WOG AD
 
-**Status:** Backlog
-**Assignee:** N/A
+**Status:** In Progress
+**Assignee:** Léo Milbor
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 7 (34621)
 
@@ -24,4 +24,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-07-29*
+*Synced from Jira: 2026-08-05*

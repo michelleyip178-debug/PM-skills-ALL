@@ -1,7 +1,7 @@
 # OTEP-336: Show competency match signal on Gig/STIP listing cards
 
-**Status:** Backlog
-**Assignee:** N/A
+**Status:** In Progress
+**Assignee:** Thomas Huchedé
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 7 (34621)
 
@@ -24,4 +24,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-07-29*
+*Synced from Jira: 2026-08-05*

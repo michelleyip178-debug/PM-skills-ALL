@@ -23,7 +23,7 @@ User story: As an officer, I want to see Careers@Gov opportunities alongside OTG
 | OTEP-539 | Make C@G import run as a background task | Done |
 | OTEP-536 | update frontend filters for `jobs` | Done |
 | OTEP-666 | Enable scheduled trigger of import | Done |
-| OTEP-723 | CAG - Integration testing | Backlog |
+| OTEP-723 | CAG - Integration testing | In Progress |
 
 ---
 
@@ -38,4 +38,4 @@ Hi   , this ticket should be the actual listing page for Careers@Gov opportuniti
 AC is clear on the UI requirement (label on card, visible without hover). Missing: where does C@G data come from? Is there a dependency on a C@G ingest pipeline or data source? Suggest noting the data dependency so this isn’t blocked at implementation time.
 
 ---
-*Synced from Jira: 2026-07-29*
+*Synced from Jira: 2026-08-05*
