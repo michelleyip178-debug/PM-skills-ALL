@@ -6,7 +6,7 @@
 
 **Assignee:** Kingsley Low
 
-**Story Points:** N/A
+**Story Points:** 4.0
 
 ---
 
@@ -106,4 +106,4 @@ Need to figure out the below:
 
 **Kingsley Low:** [~accountid:70121:9d369513-d725-4e3d-a2b8-675d4d862e3a] As of context from Rama, it’s a webhook
 
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-08-07*

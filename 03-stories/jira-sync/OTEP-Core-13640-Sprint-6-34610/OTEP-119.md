@@ -3,7 +3,7 @@
 **Type:** Sub-task
 **Status:** Done
 **Assignee:** Pei Ern Lim
-**Story Points:** N/A
+**Story Points:** 3.0
 
 ---
 
@@ -73,4 +73,4 @@ _No subtasks._
 
 !Screenshot 2026-05-14 at 2.25.02 PM.png|width=593,alt="Screenshot 2026-05-14 at 2.25.02 PM.png"!
 
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-08-07*

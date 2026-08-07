@@ -3,7 +3,7 @@
 **Type:** Sub-task
 **Status:** Done
 **Assignee:** Pei Ern Lim
-**Story Points:** N/A
+**Story Points:** 2.0
 
 ---
 
@@ -62,4 +62,4 @@ _No subtasks._
 
 **Kingsley Low:** Assuming actual API implementation will be handled by Path Finder team as we dont have access to actual Pocdex API call
 
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-08-07*

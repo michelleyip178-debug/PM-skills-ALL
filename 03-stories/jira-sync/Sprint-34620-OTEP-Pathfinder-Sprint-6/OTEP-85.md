@@ -2,7 +2,7 @@
 
 **Status:** Done
 **Assignee:** N/A
-**Story Points:** 8
+**Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
@@ -45,4 +45,4 @@ High Level Test Cases Scenario 1: Displaying all required fields on an opportuni
 Have removed >= 7 days and will put into the closing soon label ticket. have removed the AC of silently drop and that will be in the designing recurring job, i assume?
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-08-07*

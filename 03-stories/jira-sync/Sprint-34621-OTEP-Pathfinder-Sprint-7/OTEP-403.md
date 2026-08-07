@@ -1,8 +1,8 @@
 # OTEP-403: OTG data import hardening
 
-**Status:** Backlog
+**Status:** Done
 **Assignee:** Léo Milbor
-**Story Points:** 5
+**Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 7 (34621)
 
 ---
@@ -30,4 +30,4 @@ The changes for the ingestion logic and rules.
 I added this story to highlight current limitation and possible solution.
 
 ---
-*Synced from Jira: 2026-08-05*
+*Synced from Jira: 2026-08-07*

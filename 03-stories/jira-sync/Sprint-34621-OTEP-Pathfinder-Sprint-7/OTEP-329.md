@@ -1,8 +1,8 @@
 # OTEP-329: chore: Keycloak Client Secret Externalization
 
-**Status:** Backlog
+**Status:** Done
 **Assignee:** Pow Hwee TAN (PSD)
-**Story Points:** 1
+**Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 7 (34621)
 
 ---
@@ -25,4 +25,4 @@ _No subtasks._
 ,    I think Fanxu already took care of this and keycloak is now using proper aws secret manager for its secrets.
 
 ---
-*Synced from Jira: 2026-08-05*
+*Synced from Jira: 2026-08-07*

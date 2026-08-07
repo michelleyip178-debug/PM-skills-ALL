@@ -2,7 +2,7 @@
 
 **Status:** QA
 **Assignee:** Thomas Huchedé
-**Story Points:** 2
+**Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 7 (34621)
 
 ---
@@ -38,4 +38,4 @@ The "Having trouble? Contact  careercompass@psd.gov.sg " text and email link hav
 Hi   , I can’t see the login form replaced. Is this implementation (no login form) NOT for qa env ?
 
 ---
-*Synced from Jira: 2026-08-05*
+*Synced from Jira: 2026-08-07*

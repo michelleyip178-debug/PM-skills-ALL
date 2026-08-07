@@ -2,7 +2,7 @@
 
 **Status:** Done
 **Assignee:** Thomas Huchedé
-**Story Points:** 3
+**Story Points:** N/A
 
 ---
 
@@ -24,4 +24,4 @@ _No subtasks._
 Closing as this was done already by core team
 
 ---
-*Synced from Jira: 2026-07-10*
+*Synced from Jira: 2026-08-07*

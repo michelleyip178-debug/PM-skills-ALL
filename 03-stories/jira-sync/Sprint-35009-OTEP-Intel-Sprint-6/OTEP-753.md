@@ -1,6 +1,6 @@
 # OTEP-753: Integrating Cloak into cie-backend
 
-**Status:** Backlog
+**Status:** Done
 **Assignee:** Benjamin Aw
 **Story Points:** N/A
 **Sprint:** OTEP-Intel Sprint 6 (35009)
@@ -35,4 +35,4 @@ Benjamin AW  mentioned this issue in  a merge request  of  WOG / PSD / pdo / int
 Benjamin AW  mentioned this issue in  a commit  of  WOG / PSD / pdo / intelligence / intelligence-iac  on branch  OTEP-753 : [Ben]   networking: add Cloak PrivateLink partner endpoint in new vpce_expansion tier (dev)
 
 ---
-*Synced from Jira: 2026-07-28*
+*Synced from Jira: 2026-08-07*

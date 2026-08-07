@@ -1,9 +1,9 @@
 # OTEP-74: Profile Details
 
 **Type:** Story
-**Status:** UAT
+**Status:** Done
 **Assignee:** Imelda Mo
-**Story Points:** N/A
+**Story Points:** 1.0
 
 ---
 
@@ -149,4 +149,4 @@ Assumptions:
 * *When* the profile card is rendered
 * *Then* the UI divider line is removed to prevent awkward spacing
 
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-08-07*

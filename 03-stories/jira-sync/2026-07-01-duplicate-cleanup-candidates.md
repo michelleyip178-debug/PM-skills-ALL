@@ -1,9 +1,26 @@
 # Duplicate Cleanup Candidates - Jira Sync Cache
 
 **Generated:** 2026-07-01 (W27)
+
 **Source:** Jira-sync cache audit, agent `ab401d18d99996339`
+
 **Scope:** `PM-skills-ALL-1/03-stories/jira-sync/`
-**Status:** Report only. No files deleted. Human review required before any deletion.
+
+**Status:** SUPERSEDED. Cleanup completed 2026-08-07 — see note below. This report's specific file-path mappings are stale (many sprint folders below were reorganized/renamed between 2026-07-01 and 2026-08-07, e.g. new `Sprint-34620/34621` folders appeared that this report never saw). Do not use the tables below as a deletion source of truth going forward.
+
+## 2026-08-07 cleanup completed
+
+Re-scanned `03-stories/jira-sync/` fresh on 2026-08-07 rather than trusting this report's file paths (folder structure had shifted materially since 2026-07-01). Findings and actions:
+
+- **Duplicates found live (51 keys, not the ~69/314 estimated here):** all 51 followed one of two patterns — (a) 35 keys duplicated between `OTEP-Pathfinder-12541-Sprint-7-34621/` (stale, synced 2026-07-28) and `Sprint-34621-OTEP-Pathfinder-Sprint-7/` (canonical, synced 2026-08-05/07, matches live active sprint 34621 "OTEP-Pathfinder Sprint 7"); (b) 16 keys duplicated between `Sprint-34620-OTEP-Pathfinder-Sprint-6/` (stale, tickets rolled over from Sprint 6) and `Sprint-34621-OTEP-Pathfinder-Sprint-7/` (canonical — confirmed live in active Sprint 7 via Jira API). All 51 stale copies deleted, canonical `Sprint-34621-OTEP-Pathfinder-Sprint-7/` copy kept in every case. Zero ambiguous/skipped keys.
+- **Dead-link keys (18 of 18):** all 18 previously-flagged 404 keys (OTEP-389, 172, 210, 90, 72, 91, 318, 323, 196, 950, 878, 679, 370, 378, 379, 377, 316, 295) re-confirmed 404 live via Jira API on 2026-08-07 (no 403s). One file per key found and deleted across the tree.
+- The old-naming Pathfinder folders (`Sprint-34618-OTEP-Pathfinder-Sprint-4`, `Sprint-34619-OTEP-Pathfinder-Sprint-5`, `Sprint-34620-OTEP-Pathfinder-Sprint-6`, `OTEP-Core-Sprint-2/3/4`, `OTEP-Pathfinder-12541-Sprint-3/4/5`) referenced heavily in the tables below either no longer exist, no longer contain the flagged files, or were resolved as part of this pass. Treat the tables below as historical record only.
+
+**Note:** `sprint-status.md` (00-hub) line 53 still lists OTEP-679 in a Backlog narrative list; OTEP-679 was confirmed dead (404) and its cache file deleted in this pass. Not auto-corrected here per instruction scope (no displayed count changed) — flagged for manual fix.
+
+---
+
+**Original report below (2026-07-01, now superseded):**
 
 ## Summary
 

@@ -1,7 +1,7 @@
 # OTEP-670: CIE-Hotfix: 100-token chunk cap truncates long compound bullets 
 
-**Status:** Backlog
-**Assignee:** Benjamin Aw
+**Status:** Done
+**Assignee:** Brian Noel Kesuma
 **Story Points:** N/A
 **Sprint:** OTEP-Intel Sprint 6 (35009)
 
@@ -24,4 +24,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-07-28*
+*Synced from Jira: 2026-08-07*

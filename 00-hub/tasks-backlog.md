@@ -23,7 +23,7 @@ For scoping gaps and missing stories, see [scoping-gaps-tracker.md](../03-storie
 ## Stakeholder / Communication
 
 - [ ] Align with Jace on handover/co-ownership model during his transition
-- [ ] Brief Jacky/Xian Zhang on Sprint 6 plan — surface open questions requiring their input ⚠️ **Flagged 2026-07-31:** Sprint 6 has closed; unclear whether this was done during Sprint 6 or should be updated to Sprint 7 — needs the PM's call, not auto-corrected.
+- [ ] Brief Jacky/Xian Zhang on Sprint 7 plan — surface open questions requiring their input. **Updated 2026-08-06 (PM confirmed we're in Sprint 7):** carried forward from the Sprint 6 version of this item, which was never confirmed done — treat as still open for Sprint 7, not resolved.
 - [ ] Coordinate with C@G team on ingestion method and deep-link URL patterns
 - [ ] Coordinate with OTG team on redirect URL structure and data export format
 - [ ] OTEP-133 email deep-link decision — manually composed link (MVP) vs OTEP auto-generated notifications (R1)
@@ -37,4 +37,4 @@ For scoping gaps and missing stories, see [scoping-gaps-tracker.md](../03-storie
 
 ---
 
-*Last reviewed: 2026-07-31 (stale-check — flagged VAPT closure date conflict, 16 Oct here vs. 23 Oct confirmed by Rama in 2026-07-30 Slack; not auto-resolved. "Brief Jacky/Xian Zhang on Sprint 6 plan" line below is now itself stale — Sprint 6 closed — flagged, not rewritten, since it's a judgement call on whether that stakeholder-comms task still applies to Sprint 7 or is done). Prior: 2026-07-20 (stale-check — DoD item marked done, points to dor-dod-guidelines.md; "Sprint 1–5 plan" briefing item → "Sprint 6 plan", was 25 days stale referencing a closed sprint window). Prior: 2026-06-25 (VAPT start 21 Sep → 7 Sep per risks.md 2026-06-24). Prior: 2026-06-18 (VAPT early Aug → 21 Sep).*
+*Last reviewed: 2026-08-06 (stale-check — PM confirmed we're in Sprint 7; updated "Brief Jacky/Xian Zhang" item from Sprint 6 to Sprint 7, kept open since it was never confirmed done). Prior: 2026-07-31 (stale-check — flagged VAPT closure date conflict, 16 Oct here vs. 23 Oct confirmed by Rama in 2026-07-30 Slack; not auto-resolved. "Brief Jacky/Xian Zhang on Sprint 6 plan" line below is now itself stale — Sprint 6 closed — flagged, not rewritten, since it's a judgement call on whether that stakeholder-comms task still applies to Sprint 7 or is done). Prior: 2026-07-20 (stale-check — DoD item marked done, points to dor-dod-guidelines.md; "Sprint 1–5 plan" briefing item → "Sprint 6 plan", was 25 days stale referencing a closed sprint window). Prior: 2026-06-25 (VAPT start 21 Sep → 7 Sep per risks.md 2026-06-24). Prior: 2026-06-18 (VAPT early Aug → 21 Sep).*

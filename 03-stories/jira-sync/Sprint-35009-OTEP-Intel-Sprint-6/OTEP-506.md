@@ -1,6 +1,6 @@
 # OTEP-506: Switch ACM Certificate from RSA 2048 to ECDSA P-256
 
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Fanxu Wang
 **Story Points:** N/A
 **Sprint:** OTEP-Intel Sprint 6 (35009)
@@ -24,4 +24,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-07-28*
+*Synced from Jira: 2026-08-07*

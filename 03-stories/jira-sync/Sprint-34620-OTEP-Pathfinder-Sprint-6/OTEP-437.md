@@ -2,7 +2,7 @@
 
 **Status:** QA
 **Assignee:** Hao Eng
-**Story Points:** 3
+**Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
@@ -37,4 +37,4 @@ Hao Eng CHUA  mentioned this issue in  a commit  of  WOG / PSD / pdo / OTEP / ot
 Hao Eng CHUA  mentioned this issue in  a commit  of  WOG / PSD / pdo / OTEP / otep-web : fix:    remove wog wording
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-08-07*

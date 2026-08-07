@@ -2,7 +2,7 @@
 
 **Status:** Done
 **Assignee:** Thomas Huchedé
-**Story Points:** 3.0
+**Story Points:** N/A
 
 ---
 
@@ -33,4 +33,4 @@ Testing in LOCAL:  Checked by adding console logs.  Issue When an access token e
 **Pow Hwee TAN (PSD)** (2026-05-28)
 AC is quite thin — "refresh token when expired" and "redirect to temp login page". Suggest expanding to cover: what triggers expiry detection (API 401? proactive check?), token rotation strategy (one-time use refresh tokens?), session lifetime expectations, and edge cases (concurrent tabs, token reuse after rotation).
 
-*Synced from Jira: 2026-07-01*
+*Synced from Jira: 2026-08-07*

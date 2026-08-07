@@ -2,7 +2,7 @@
 
 **Status:** Done
 **Assignee:** Rathika Ramalingam
-**Story Points:** 3
+**Story Points:** N/A
 
 ---
 
@@ -24,4 +24,4 @@ _No subtasks._
 The e2e tests are added out of the otep-web,  hence go ahead to close this card first.
 
 ---
-*Synced from Jira: 2026-07-10*
+*Synced from Jira: 2026-08-07*

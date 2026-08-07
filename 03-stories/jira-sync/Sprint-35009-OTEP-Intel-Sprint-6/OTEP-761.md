@@ -1,6 +1,6 @@
 # OTEP-761: Onboard Keycloak to the Shared CI/CD Deployment Workflow
 
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Fanxu Wang
 **Story Points:** N/A
 **Sprint:** OTEP-Intel Sprint 6 (35009)
@@ -25,4 +25,4 @@ _No subtasks._
 It seems the scope of this ticket required three repo changes:  otep-keycloak otep-deployment otep-iac
 
 ---
-*Synced from Jira: 2026-07-28*
+*Synced from Jira: 2026-08-07*

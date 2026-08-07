@@ -1,7 +1,7 @@
 # OTEP-208: Wire up golang-migrate in cmd/migrate
 
 **Type:** Task
-**Status:** Backlog
+**Status:** Done
 **Assignee:** N/A
 **Story Points:** N/A
 
@@ -22,3 +22,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-08-07*

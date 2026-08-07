@@ -1,8 +1,8 @@
 # OTEP-348: OTG data ingestion — scheduler & observability
 
-**Status:** Backlog
+**Status:** Done
 **Assignee:** N/A
-**Story Points:** 3
+**Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 7 (34621)
 
 ---
@@ -30,4 +30,4 @@ I think this story should be re-evaluated since AFAIK, the task is not scheduled
 Test Cases Document:
 
 ---
-*Synced from Jira: 2026-08-05*
+*Synced from Jira: 2026-08-07*

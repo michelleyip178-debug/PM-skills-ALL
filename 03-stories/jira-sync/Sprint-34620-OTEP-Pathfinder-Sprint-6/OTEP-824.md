@@ -1,6 +1,6 @@
 # OTEP-824: [BUG] Open items for function filter
 
-**Status:** Backlog
+**Status:** QA
 **Assignee:** Hao Eng
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
@@ -24,4 +24,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-08-07*

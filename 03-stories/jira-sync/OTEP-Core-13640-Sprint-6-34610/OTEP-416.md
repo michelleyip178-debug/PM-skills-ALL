@@ -3,7 +3,7 @@
 **Type:** Sub-task
 **Status:** Done
 **Assignee:** Pei Ern Lim
-**Story Points:** N/A
+**Story Points:** 3.0
 **Sprint:** OTEP-Core Sprint 6 (id 34610, active)
 
 ---
@@ -25,4 +25,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-08-07*

@@ -3,7 +3,7 @@
 **Type:** Sub-task
 **Status:** Done
 **Assignee:** Fanxu Wang
-**Story Points:** N/A
+**Story Points:** 4.0
 
 ---
 
@@ -23,4 +23,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-08-07*

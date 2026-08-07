@@ -2,7 +2,7 @@
 
 **Status:** Done
 **Assignee:** Michelle Yip
-**Story Points:** 1.0
+**Story Points:** N/A
 
 ---
 
@@ -22,4 +22,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-07-01*
+*Synced from Jira: 2026-08-07*

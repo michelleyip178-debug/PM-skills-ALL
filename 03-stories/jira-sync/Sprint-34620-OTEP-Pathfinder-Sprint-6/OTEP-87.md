@@ -2,7 +2,7 @@
 
 **Status:** QA
 **Assignee:** Thomas Huchedé
-**Story Points:** 8
+**Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
@@ -35,4 +35,4 @@ updated and sharpened this AC as well.
 Hi   , while the title is correct, the details of this ticket currently talk mostly about click to apply. Could you please amend the description and scope to ensure it fully covers showing the actual opportunity details?
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-08-07*

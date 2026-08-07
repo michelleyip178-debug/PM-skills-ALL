@@ -1,7 +1,7 @@
 # OTEP-75: View My Competencies
 
 **Type:** Story
-**Status:** UAT
+**Status:** Done
 **Assignee:** N/A
 **Story Points:** N/A
 
@@ -186,4 +186,4 @@ For users with no role profile but with OTG competencies
 #* *Then* the Job Role competencies section is rendered empty
 #* *And* the OTG competencies are populated exclusively under the "Self-declared competencies" section.
 
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-08-07*

@@ -2,7 +2,7 @@
 
 **Status:** Done
 **Assignee:** Thomas Huchedé
-**Story Points:** N/A
+**Story Points:** 2.0
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
@@ -35,4 +35,4 @@ updated above
 Michelle — can you clarify: What are the acceptance criteria for this ticket? Is this timeboxed? If so, how long? What outcome do you want — a written recommendation, a prototype, or something else?
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-08-07*

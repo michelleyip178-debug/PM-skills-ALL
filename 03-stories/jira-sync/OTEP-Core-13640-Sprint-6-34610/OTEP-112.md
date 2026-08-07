@@ -2,7 +2,7 @@
 
 **Type:** Story
 
-**Status:** UAT
+**Status:** Done
 
 **Assignee:** N/A
 
@@ -81,4 +81,4 @@ Users have 2 ways to add competencies
 
 _No comments._
 
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-08-07*

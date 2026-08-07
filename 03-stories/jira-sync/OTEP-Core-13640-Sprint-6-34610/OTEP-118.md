@@ -3,7 +3,7 @@
 **Type:** Sub-task
 **Status:** Done
 **Assignee:** Pei Ern Lim
-**Story Points:** N/A
+**Story Points:** 3.0
 
 ---
 
@@ -94,4 +94,4 @@ Due to the complexity of the Resolve Identity endpoint, propose to create anothe
 
 Jira: [OTEP-332|https://sgtechstack.atlassian.net/browse/OTEP-332]
 
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-08-07*

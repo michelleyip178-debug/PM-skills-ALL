@@ -3,7 +3,7 @@
 **Type:** Sub-task
 **Status:** Done
 **Assignee:** Kingsley Low
-**Story Points:** N/A
+**Story Points:** 2.0
 
 ---
 
@@ -70,4 +70,4 @@ _No subtasks._
 
 **Kingsley Low:** For now, any Data Nullity check (Fields mentioned above) will return an error by default.
 
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-08-07*

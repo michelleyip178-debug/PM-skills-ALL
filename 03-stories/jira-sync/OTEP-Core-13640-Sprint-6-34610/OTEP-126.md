@@ -2,7 +2,7 @@
 
 **Type:** Story
 
-**Status:** UAT
+**Status:** Done
 
 **Assignee:** N/A
 
@@ -51,4 +51,4 @@ As an officer, I can delete or hide selected competencies from my profile so I h
 
 _No comments._
 
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-08-07*

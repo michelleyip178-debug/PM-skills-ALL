@@ -2,7 +2,7 @@
 
 **Status:** Done
 **Assignee:** N/A
-**Story Points:** 2
+**Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
@@ -38,4 +38,4 @@ I have removed it and it’s replaced with    as I need Amber to come up with th
 I think I missed out AC6. Can I double check where is this supposed to be displayed?
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-08-07*

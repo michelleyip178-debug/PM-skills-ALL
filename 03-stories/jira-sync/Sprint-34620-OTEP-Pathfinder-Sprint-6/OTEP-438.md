@@ -2,7 +2,7 @@
 
 **Status:** QA
 **Assignee:** Hao Eng
-**Story Points:** 2
+**Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
@@ -35,4 +35,4 @@ Just checking a linked item need to be created for the  role  creation in keyclo
 tagging
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-08-07*

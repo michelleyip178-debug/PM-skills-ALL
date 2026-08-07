@@ -2,7 +2,7 @@
 
 **Type:** Story
 
-**Status:** Backlog
+**Status:** Done
 
 **Assignee:** Pow Hwee TAN (PSD)
 
@@ -37,3 +37,5 @@ _No subtasks._
 ## Latest Comments
 
 _No comments._
+
+*Synced from Jira: 2026-08-07*

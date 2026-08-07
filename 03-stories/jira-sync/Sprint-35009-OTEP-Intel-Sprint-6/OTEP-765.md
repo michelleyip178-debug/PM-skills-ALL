@@ -1,6 +1,6 @@
 # OTEP-765: Provisioning of CIE Feedback SQS through OTEP IAC
 
-**Status:** Backlog
+**Status:** Done
 **Assignee:** Fanxu Wang
 **Story Points:** N/A
 **Sprint:** OTEP-Intel Sprint 6 (35009)
@@ -35,4 +35,4 @@ Dev and QA alrady applied before by    , I’ll create for uat and prod
 For now CIE team only have dev env that can be integrated for feedback queue. To provision from UAT env, thats the only possible env we can integrate.    We need to update the IaC later to change the env variables/CIE accounts to CIE uat env later once available.       I think we need seperate ticket to track it. Along with input/output queues.
 
 ---
-*Synced from Jira: 2026-07-28*
+*Synced from Jira: 2026-08-07*

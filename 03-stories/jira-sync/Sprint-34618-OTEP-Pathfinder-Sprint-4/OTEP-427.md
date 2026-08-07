@@ -2,7 +2,7 @@
 
 **Status:** Done
 **Assignee:** Michelle Yip
-**Story Points:** 3.0
+**Story Points:** N/A
 
 ---
 
@@ -23,4 +23,4 @@ _No subtasks._
 **Michelle Yip** (2026-06-26)
 I have updated the ingestion logic.   cc:
 
-*Synced from Jira: 2026-07-01*
+*Synced from Jira: 2026-08-07*

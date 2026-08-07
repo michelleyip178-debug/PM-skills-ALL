@@ -3,7 +3,7 @@
 **Type:** Sub-task
 **Status:** Done
 **Assignee:** Kingsley Low
-**Story Points:** N/A
+**Story Points:** 5.0
 **Sprint:** OTEP-Core Sprint 5 (id 34609, active)
 
 ---
@@ -99,4 +99,4 @@ OTG competencies are staged upfront and only materialised into user profile at f
 
 _No subtasks._
 
-*Synced from Jira: 2026-07-01*
+*Synced from Jira: 2026-08-07*

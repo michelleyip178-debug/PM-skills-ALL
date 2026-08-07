@@ -2,7 +2,7 @@
 
 **Status:** In Progress
 **Assignee:** Thomas Huchedé
-**Story Points:** 2
+**Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 7 (34621)
 
 ---
@@ -32,4 +32,4 @@ Yes, update the AC to fit what Amber has in her figma. This comment was left via
 The current design is no longer a modal and the copy is different for each opportunity type.  Should I update the acceptance criteria here?        cc
 
 ---
-*Synced from Jira: 2026-08-05*
+*Synced from Jira: 2026-08-07*

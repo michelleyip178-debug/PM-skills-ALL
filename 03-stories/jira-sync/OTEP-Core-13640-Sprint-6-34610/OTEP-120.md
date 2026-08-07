@@ -3,7 +3,7 @@
 **Type:** Sub-task
 **Status:** Done
 **Assignee:** Fanxu Wang
-**Story Points:** N/A
+**Story Points:** 4.0
 
 ---
 
@@ -78,4 +78,4 @@ _No subtasks._
 
 **Fanxu Wang:** As discussed with [~accountid:712020:a67da354-dac1-4916-9690-e37d5fb54f47] and [~accountid:712020:f158b30e-da93-44df-b04c-6e83078033b3] . this ticket will focus on get competencies from table: {{officer_competency}}  . The scope to build data into {{officer_competency}} is not involved.
 
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-08-07*

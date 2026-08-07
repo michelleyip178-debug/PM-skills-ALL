@@ -1,7 +1,7 @@
 # OTEP-205: Add competencies with CIE
 
 **Type:** Story
-**Status:** QA
+**Status:** Done
 **Assignee:** N/A
 **Story Points:** N/A
 
@@ -79,4 +79,4 @@ _No subtasks._
 
 _No comments._
 
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-08-07*

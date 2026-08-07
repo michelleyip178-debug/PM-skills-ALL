@@ -2,7 +2,7 @@
 
 **Status:** Done
 **Assignee:** Thomas Huchedé
-**Story Points:** 1
+**Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
 
 ---
@@ -33,4 +33,4 @@ Tests Status - done
 BO raised about evergreen opportunities. Able to handle if we agree that evergreen opportunities are easily identifiable and has no closing date, and will always be sorted to the last few cards / pages.
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-08-07*

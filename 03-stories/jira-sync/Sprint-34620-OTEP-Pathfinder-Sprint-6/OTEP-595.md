@@ -1,6 +1,6 @@
 # OTEP-595: Set Keycloak realm displayName to Career Compass in realm-export.json
 
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Pow Hwee TAN (PSD)
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 6 (34620)
@@ -30,4 +30,4 @@ Test:  Still seeing the Keycloak logo Test Case Evidence/Screenshot Status Verif
 Merged MR 134 to resolve this:  https://sgts.gitlab-dedicated.com/wog/psd/pdo/otep/otep-service/-/merge_requests/134
 
 ---
-*Synced from Jira: 2026-07-27*
+*Synced from Jira: 2026-08-07*
