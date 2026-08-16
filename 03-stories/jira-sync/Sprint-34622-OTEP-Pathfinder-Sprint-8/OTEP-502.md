@@ -23,7 +23,23 @@ Instrument the opportunities journey in PostHog as an  event-first funnel  ( sea
 
 ## Latest Comments
 
-_No comments._
+**Thomas Huchedé** (2026-08-14)
+For the opportunity types, I think the dashboard in posthog is incorrect.  The current dashboard is using  opportunity_type  instead of  opportunity_types .   I created a copy to test and got something like this:  For the categories filter (called functions in posthog), we simply don’t have the wiring yet in the web app so I’ll make the change and you should be able to see the event coming it.   Do you want me to update the dashboards in Posthog to make sure the naming of the variable is consistent while I’m at it?
 
 ---
-*Synced from Jira: 2026-08-11*
+
+**Michelle Yip** (2026-08-12)
+can you check for the filters to be applied on opportunities? Seems like the type and functions are not captured as part of the filters.    What i got from PostHog AI:   The  function  and  type  filter dimensions aren't currently being captured as properties on the  opportunity_filter_applied  event. Right now, the only custom properties tracked on that event are  sort_by  and  results_count . To track function and type filters, you'd need to add those as properties when the event is fired on the client side. Here's what I'd recommend instrumenting:  posthog.capture('opportunity_filter_applied', {  
+ filter_name: 'function', // or 'type', 'sort_by', etc.  
+ filter_value: 'Engineering', // the selected value  
+ results_count: 42 // already tracked  
+})  
+  Or if multiple filters can be applied at once:  posthog.capture('opportunity_filter_applied', {  
+ sort_by: 'closing_date',  
+ function: 'Engineering',  
+ opportunity_type: 'Gig',  
+ results_count: 42  
+})
+
+---
+*Synced from Jira: 2026-08-17*

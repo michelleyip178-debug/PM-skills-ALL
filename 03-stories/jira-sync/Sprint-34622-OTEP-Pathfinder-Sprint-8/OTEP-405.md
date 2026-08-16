@@ -1,6 +1,6 @@
 # OTEP-405: [FE/BE] Keyword Search for Opportunities
 
-**Status:** Backlog
+**Status:** QA
 **Assignee:** Thomas Huchedé
 **Story Points:** 3
 **Sprint:** OTEP-Pathfinder Sprint 8 (34622)
@@ -19,24 +19,24 @@ As an officer, I want to search for opportunities by keyword so I can quickly fi
 |-----|---------|--------|
 | OTEP-495 | Add queryParam on backend to handle text search | Done |
 | OTEP-496 | Wire frontend search bar to backend api | Done |
-| OTEP-668 | [BUG] Bugs open for Search opportunities feature | To Do |
+| OTEP-668 | [BUG] Bugs open for Search opportunities feature | QA |
 
 ---
 
 ## Latest Comments
 
+**Thomas Huchedé** (2026-08-13)
+Moving back to QA lane since all the subtask have been completed and the fix of the search logic will be done in a separate ticket
+
+---
+
+**Pow Hwee TAN (PSD)** (2026-08-11)
+- is this ticket completed?  If so just update it will do, thanks.  Am checking through if we have outstanding features.
+
+---
+
 **Rathika Ramalingam** (2026-06-29)
 Test Results (in Dev) -
 
 ---
-
-**Michelle Yip** (2026-06-17)
-Regarding #2,  a. Do we exclude description to search only title and agency <MY> Yes  b. Is the search dynamic as the user keys in or we need to hit Search button (#7) to trigger the search? <MY> need to search button  c. If dynamic, do we have minimum characters before triggering search to filter <MY> N/A  Regarding #8  a. Can we define ‘by relevance’ - is it the weight based on no of occurrence + location + exact match of the search text? <MY? exact match of the search text in title or agency. Is this good enough?
-
----
-
-**Rathika Ramalingam** (2026-06-17)
-I have these questions. Pls clarify. cc:       1. Regarding #2,   a. Do we exclude description to search only title and agency   b. Is the search dynamic as the user keys in or we need to hit Search button (#7) to trigger the search?  c. If dynamic, do we have minimum characters before triggering search to filter   2. Regarding #8  a. Can we define ‘by relevance’ - is it the weight based on no of occurrence + location + exact match of the search text?
-
----
-*Synced from Jira: 2026-08-11*
+*Synced from Jira: 2026-08-17*

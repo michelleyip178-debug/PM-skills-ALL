@@ -1,4 +1,4 @@
-# OTEP-752: Setup integration testing harness
+# OTEP-334: backend endpoint for opportunity detail
 
 **Status:** Done
 **Assignee:** Léo Milbor
@@ -21,7 +21,8 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**Rathika Ramalingam** (2026-06-10)
+Testing in LOCAL: The Full Time tag is not displaying when time-commitment-quantity is NULL and time-commitment-unit is 'Full-time’/any text
 
 ---
 *Synced from Jira: 2026-08-17*

@@ -1,6 +1,6 @@
 # OTEP-668: [BUG] Bugs open for Search opportunities feature
 
-**Status:** To Do
+**Status:** QA
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 8 (34622)
@@ -21,7 +21,8 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**Thomas Huchedé** (2026-08-13)
+We now have a custom illustration for the “no result” error state, figma has not been updated with the newer design yet. Clearing the search will still require the “search” button to be clicked to retrigger the search (ref:    ) NA NA has bee moved to it’s own bug ticket
 
 ---
-*Synced from Jira: 2026-08-11*
+*Synced from Jira: 2026-08-17*

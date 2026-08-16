@@ -1,7 +1,7 @@
-# OTEP-1155: Update otep-service to check pocdex user is in whitelisted agency
+# OTEP-327: Opportunity detail page using design system 
 
 **Status:** Done
-**Assignee:** N/A
+**Assignee:** Thomas Huchedé
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 8 (34622)
 
@@ -9,7 +9,7 @@
 
 ## Description
 
-No description provided.
+Opportunity detail page should match Figma design:
 
 ---
 

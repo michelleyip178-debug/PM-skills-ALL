@@ -30,4 +30,4 @@ We will be getting OTG to include CompetencyId in the xls instead of Competency 
 Hi   /    , An operations question: For this task if we require competencyId to be present in the xl instead of competency names, after importing from OTG do we need to manually add competencyIds?
 
 ---
-*Synced from Jira: 2026-08-11*
+*Synced from Jira: 2026-08-17*

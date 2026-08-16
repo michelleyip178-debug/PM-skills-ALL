@@ -1,6 +1,6 @@
 # OTEP-131: Handle missing or broken FormSG application link.
 
-**Status:** QA
+**Status:** Done
 **Assignee:** Thomas Huchedé
 **Story Points:** 2
 **Sprint:** OTEP-Pathfinder Sprint 8 (34622)
@@ -21,6 +21,11 @@ _No subtasks._
 
 ## Latest Comments
 
+**Rathika Ramalingam** (2026-08-11)
+Test cases  QA-DTL-01  and  QA-DTL-05  added and verified here
+
+---
+
 **Rathika Ramalingam** (2026-07-15)
 does this mean the actual implementation is blocked by data? Anyways, I move the task to In progress.
 
@@ -30,9 +35,4 @@ does this mean the actual implementation is blocked by data? Anyways, I move the
 As discussed today, the POC is missing in the source excel file so we have nothing to display.  We’ll keep the placeholder for now just to display something for the demo.
 
 ---
-
-**Amber Tong** (2026-05-13)
-Figma link  here .
-
----
-*Synced from Jira: 2026-08-11*
+*Synced from Jira: 2026-08-17*

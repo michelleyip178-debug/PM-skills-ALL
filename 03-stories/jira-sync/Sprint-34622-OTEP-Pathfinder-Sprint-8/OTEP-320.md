@@ -1,7 +1,7 @@
-# OTEP-1155: Update otep-service to check pocdex user is in whitelisted agency
+# OTEP-320: Replace mock /opportunities endpoint with real db access
 
 **Status:** Done
-**Assignee:** N/A
+**Assignee:** Léo Milbor
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 8 (34622)
 

@@ -1,6 +1,6 @@
 # OTEP-88: C@G opportunities in the listing page
 
-**Status:** QA
+**Status:** Done
 **Assignee:** Léo Milbor
 **Story Points:** 5
 **Sprint:** OTEP-Pathfinder Sprint 8 (34622)
@@ -29,6 +29,11 @@ User story: As an officer, I want to see Careers@Gov opportunities alongside OTG
 
 ## Latest Comments
 
+**Rathika Ramalingam** (2026-08-11)
+Test cases covered here -
+
+---
+
 **Pow Hwee TAN (PSD)** (2026-06-02)
 Hi   , this ticket should be the actual listing page for Careers@Gov opportunities. Right now it is only saying to differentiate the flows. Could you please revise the description and scope to reflect that this will be the actual C@G Opportunities listing page? I have updated the title accordingly.
 
@@ -38,4 +43,4 @@ Hi   , this ticket should be the actual listing page for Careers@Gov opportuniti
 AC is clear on the UI requirement (label on card, visible without hover). Missing: where does C@G data come from? Is there a dependency on a C@G ingest pipeline or data source? Suggest noting the data dependency so this isn’t blocked at implementation time.
 
 ---
-*Synced from Jira: 2026-08-11*
+*Synced from Jira: 2026-08-17*
