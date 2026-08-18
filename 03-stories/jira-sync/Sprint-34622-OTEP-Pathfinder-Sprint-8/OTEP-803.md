@@ -1,6 +1,6 @@
 # OTEP-803: Investigate date timezone
 
-**Status:** In Progress
+**Status:** Done
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 8 (34622)
@@ -24,4 +24,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-08-17*
+*Synced from Jira: 2026-08-18*

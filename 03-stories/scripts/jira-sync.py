@@ -12,6 +12,8 @@ from base64 import b64encode
 
 BOARD_ID = os.environ.get("JIRA_BOARD_ID", "12541")
 
+CC_UAT_JQL = 'project = OTEP AND labels = "uat" AND labels = "PATHFINDER" ORDER BY Rank ASC'
+
 
 def load_env():
     env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".env")
@@ -77,6 +79,31 @@ def get_sprint_issues(base, auth, sprint_id):
     )
     data = get(url, auth)
     return data.get("issues", []) if data else []
+
+
+def get_jql_issues(base, auth, jql):
+    """Fetch issues via JQL search (for Kanban boards with no sprint concept)."""
+    issues = []
+    next_token = None
+    while True:
+        params = {
+            "jql": jql,
+            "fields": "summary,status,assignee,labels",
+            "maxResults": "100",
+        }
+        if next_token:
+            params["nextPageToken"] = next_token
+        url = f"{base}/rest/api/3/search/jql?" + urllib.parse.urlencode(params)
+        data = get(url, auth)
+        if data is None:
+            break
+        issues.extend(data.get("issues", []))
+        if data.get("isLast", True):
+            break
+        next_token = data.get("nextPageToken")
+        if not next_token:
+            break
+    return issues
 
 
 def get_issue_detail(base, auth, key):
@@ -175,28 +202,9 @@ def build_markdown(key, fields, comments=None, sprint_id=None, sprint_name=None)
 """
 
 
-def main():
-    load_env()
-    site = os.environ.get("JIRA_SITE")
-    if not site:
-        sys.exit("Missing environment variable: JIRA_SITE")
-
-    base = f"https://{site}"
-    auth = make_auth_header()
-
-    print("Fetching active sprint...")
-    sprint = get_active_sprint(base, auth)
-    sprint_id = sprint["id"]
-    sprint_name = sprint["name"]
-    print(f"Active sprint: {sprint_name} (id={sprint_id})")
-
-    folder_name = f"Sprint-{sprint_id}-{sanitise(sprint_name)}"
-    out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "jira-sync", folder_name)
+def sync_issues_to_dir(base, auth, issues, out_dir, sprint_id=None, sprint_name=None):
+    """Shared write/diff loop: writes per-issue markdown files and a .changes.md diff."""
     os.makedirs(out_dir, exist_ok=True)
-
-    print("Fetching sprint issues...")
-    issues = get_sprint_issues(base, auth, sprint_id)
-    print(f"Found {len(issues)} issues. Fetching full details...\n")
 
     written = 0
     change_rows = []
@@ -248,9 +256,63 @@ def main():
     with open(changes_path, "w", encoding="utf-8") as f:
         f.write(f"# Story Changes — {today}\n\n{table}\n")
 
+    return written, change_rows
+
+
+def sync_sprint_board(base, auth):
+    print("Fetching active sprint...")
+    sprint = get_active_sprint(base, auth)
+    sprint_id = sprint["id"]
+    sprint_name = sprint["name"]
+    print(f"Active sprint: {sprint_name} (id={sprint_id})")
+
+    folder_name = f"Sprint-{sprint_id}-{sanitise(sprint_name)}"
+    out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "jira-sync", folder_name)
+
+    print("Fetching sprint issues...")
+    issues = get_sprint_issues(base, auth, sprint_id)
+    print(f"Found {len(issues)} issues. Fetching full details...\n")
+
+    written, change_rows = sync_issues_to_dir(base, auth, issues, out_dir, sprint_id=sprint_id, sprint_name=sprint_name)
+
     print(f"\nDone. {written} files written to jira-sync/{folder_name}/")
     if change_rows:
         print(f"Changes detected: {len(change_rows)} (see .changes.md)")
+
+
+def sync_cc_uat_board(base, auth):
+    print("Fetching CC-UAT board issues (labels: uat + PATHFINDER)...")
+    issues = get_jql_issues(base, auth, CC_UAT_JQL)
+    print(f"Found {len(issues)} issues. Fetching full details...\n")
+
+    out_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "jira-sync", "CC-UAT")
+
+    written, change_rows = sync_issues_to_dir(base, auth, issues, out_dir)
+
+    print(f"\nDone. {written} files written to jira-sync/CC-UAT/")
+    if change_rows:
+        print(f"Changes detected: {len(change_rows)} (see .changes.md)")
+
+
+def main():
+    load_env()
+    site = os.environ.get("JIRA_SITE")
+    if not site:
+        sys.exit("Missing environment variable: JIRA_SITE")
+
+    base = f"https://{site}"
+    auth = make_auth_header()
+
+    board_arg = None
+    if "--board" in sys.argv:
+        idx = sys.argv.index("--board")
+        if idx + 1 < len(sys.argv):
+            board_arg = sys.argv[idx + 1].lower()
+
+    if board_arg == "cc-uat":
+        sync_cc_uat_board(base, auth)
+    else:
+        sync_sprint_board(base, auth)
 
 
 if __name__ == "__main__":

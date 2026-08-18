@@ -39,4 +39,4 @@ Moving back to QA lane since all the subtask have been completed and the fix of 
 Test Results (in Dev) -
 
 ---
-*Synced from Jira: 2026-08-17*
+*Synced from Jira: 2026-08-18*

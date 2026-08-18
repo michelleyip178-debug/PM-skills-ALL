@@ -1,6 +1,6 @@
 # OTEP-386: Officers clicks on tooltip link to view a page/popup on the different opportunity types 
 
-**Status:** In Progress
+**Status:** QA
 **Assignee:** Thomas Huchedé
 **Story Points:** 2
 **Sprint:** OTEP-Pathfinder Sprint 8 (34622)
@@ -32,4 +32,4 @@ Yes, update the AC to fit what Amber has in her figma. This comment was left via
 The current design is no longer a modal and the copy is different for each opportunity type.  Should I update the acceptance criteria here?        cc
 
 ---
-*Synced from Jira: 2026-08-17*
+*Synced from Jira: 2026-08-18*

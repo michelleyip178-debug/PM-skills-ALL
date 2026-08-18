@@ -25,4 +25,4 @@ _No subtasks._
 This is fixed and verified in qa. The main testing is done as part of
 
 ---
-*Synced from Jira: 2026-08-17*
+*Synced from Jira: 2026-08-18*

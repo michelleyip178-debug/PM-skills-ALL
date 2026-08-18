@@ -25,4 +25,4 @@ _No subtasks._
 We now have a custom illustration for the “no result” error state, figma has not been updated with the newer design yet. Clearing the search will still require the “search” button to be clicked to retrigger the search (ref:    ) NA NA has bee moved to it’s own bug ticket
 
 ---
-*Synced from Jira: 2026-08-17*
+*Synced from Jira: 2026-08-18*

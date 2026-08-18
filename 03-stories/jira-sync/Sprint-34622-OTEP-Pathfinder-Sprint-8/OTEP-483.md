@@ -28,10 +28,11 @@ No description provided.
 | OTEP-682 | Autogenerate doc in pipeline | Backlog |
 | OTEP-684 | Refactor ingestion model (split otg /cag importer.SourceRecord) | Backlog |
 | OTEP-752 | Setup integration testing harness | Done |
-| OTEP-803 | Investigate date timezone | In Progress |
+| OTEP-803 | Investigate date timezone | Done |
 | OTEP-1120 | Build Pathfinder E2E test suite (scheduled tripwire against deployed dev) | In Progress |
 | OTEP-1150 | Add git hooks to "just onboard" command | Done |
 | OTEP-1202 | Hardening Keycloak client configuration | Backlog |
+| OTEP-1300 | Inject config files in keycloak-config-cli | Backlog |
 
 ---
 
@@ -40,4 +41,4 @@ No description provided.
 _No comments._
 
 ---
-*Synced from Jira: 2026-08-17*
+*Synced from Jira: 2026-08-18*
