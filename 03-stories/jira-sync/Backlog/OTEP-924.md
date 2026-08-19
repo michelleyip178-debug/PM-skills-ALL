@@ -1,0 +1,24 @@
+# OTEP-924: [CORE] DTL-03 - No proficiency level shown (OTEP-84)
+
+**Type:** Task
+**Status:** Backlog
+**Assignee:** N/A
+**Story Points:** N/A
+
+---
+
+## Description
+
+Account Account LC1 - Wen Jie Sim - wenjie.sim@psd_test.gov.sg - password: Wenjie@Cc2026 - (Standard officer; no course recommendations (Jumpstart POC not live). Read-only - all Courses UAT is browse/search/view, so this account is stable/immutable.) Test Steps Go to the  UAT site  and Log in as LC1. Open a course detail page that lists competencies. Test Data Account LC1. A course tagged with competencies. Expected Result The competencies are listed WITHOUT any proficiency level shown.
+
+---
+
+## Subtasks
+
+_No subtasks._
+
+---
+
+## Latest Comments
+
+_No comments._

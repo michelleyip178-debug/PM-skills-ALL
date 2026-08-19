@@ -4,23 +4,12 @@
 **Status:** Backlog
 **Assignee:** N/A
 **Story Points:** N/A
-**Sprint:** Backlog (no sprint)
 
 ---
 
 ## Description
 
-This card serves to track the tech debt item for the Home Screen.
-The current below are items identified:
-General
-Fix top alignment for Profile and Competency columns
-Adjust column gap between Profile and Competency columns
-Profile
-Use Design System Avatar 
-Competency
-Use Design System <Tag> instead of declaring a new <CompetencyTag>
-Check on how to use <Typography> is able to handle text truncation
-Will need to check with Amber on the components used in Figma first
+This card serves to track the tech debt item for the Home Screen. The current below are items identified: General Fix top alignment for Profile and Competency columns Adjust column gap between Profile and Competency columns Profile Use Design System Avatar  Competency Use Design System <Tag> instead of declaring a new <CompetencyTag> Check on how to use <Typography> is able to handle text truncation Will need to check with Amber on the components used in Figma first
 
 ---
 
@@ -28,4 +17,8 @@ Will need to check with Amber on the components used in Figma first
 
 _No subtasks._
 
-*Synced from Jira: 2026-07-01*
+---
+
+## Latest Comments
+
+_No comments._
