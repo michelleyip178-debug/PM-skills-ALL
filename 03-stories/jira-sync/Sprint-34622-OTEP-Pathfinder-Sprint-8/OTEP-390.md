@@ -1,6 +1,6 @@
 # OTEP-390: Ringfenced opportunity detail page states (eligible + ineligible)
 
-**Status:** QA
+**Status:** Done
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 8 (34622)
@@ -35,4 +35,4 @@ Thomas Huchede  mentioned this issue in  a merge request  of  WOG / PSD / pdo / 
 Updated in purple for 1 and 3. For #2, there is no indicator and have removed the occurrences.
 
 ---
-*Synced from Jira: 2026-08-18*
+*Synced from Jira: 2026-08-19*

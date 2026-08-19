@@ -25,4 +25,4 @@ _No subtasks._
 Do you have any recommendation or need regarding what we might need in terms of observability? I’ll double check if we export the regular go metrics (nb of goroutine, GC pauses, etc.), but apart from that?
 
 ---
-*Synced from Jira: 2026-08-18*
+*Synced from Jira: 2026-08-19*

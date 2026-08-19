@@ -71,9 +71,11 @@
 
 ## Sprint 8 — 🟢 ACTIVE (11–24 Aug 2026)
 
-> Source: OTEP-Pathfinder Sprint 8 (Sprint 34622), Jira state `active`. **Live pull: 2026-08-17 (direct Jira REST API).** Goal: "Clean up defects from Phase 1 - UAT and enable Phase 2 - UAT on Ringfencing and Competency Matching." **This is the final MVP dev sprint — no Sprint 9 buffer** (confirmed 2026-08-11, per weekly-plan/daily-plan record in PM-OS).
+> Source: OTEP-Pathfinder Sprint 8 (Sprint 34622), Jira state `active`. **Live pull: 2026-08-19 (direct Jira REST API via `/jira-sync pathfinder`).** Goal: "Clean up defects from Phase 1 - UAT and enable Phase 2 - UAT on Ringfencing and Competency Matching." **This is the final MVP dev sprint — no Sprint 9 buffer** (confirmed 2026-08-11, per weekly-plan/daily-plan record in PM-OS).
 >
-> 73 issues total: **Done 37, In Progress 9, QA 11, To Do 3, Backlog 13.**
+> 73 issues total: **Done 49, In Progress 8, QA 4, To Do 2, Backlog 10.**
+>
+> **Net movement since 2026-08-17 pull:** 8 QA tickets closed out to Done (OTEP-336, 386, 390, 405, 408, 409, 570, 668, 810) and 1 Backlog item closed (OTEP-1119) — QA queue burned down from 11 to 4 ahead of Friday's feature freeze. OTEP-283 (Michelle, Ministry icons) moved To Do → Done. OTEP-1133 moved Backlog → In Progress. OTEP-1190 (Upload UI audit trail) confirmed unsprinted in live Jira — relocated from the Sprint 8 cache folder to `Backlog/`, dropping the total from 74 to 73 tracked-in-sprint issues.
 >
 > WOG AD tickets checked individually (2026-08-17): OTEP-71 (Léo) — In Progress; OTEP-594 (unassigned) — In Progress; OTEP-331 (unassigned) — QA; OTEP-110 (unassigned) — QA. Dev-environment re-enable was confirmed working 2026-08-13 (see PM-OS decision note `2026-08-13-W33-wog-ad-dev-re-enabled.md`) but prod/UAT confirmation is not reflected in ticket status — OTEP-71 still shows In Progress, not Done.
 

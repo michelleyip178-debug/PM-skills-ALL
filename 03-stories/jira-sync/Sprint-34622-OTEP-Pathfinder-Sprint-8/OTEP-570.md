@@ -1,6 +1,6 @@
 # OTEP-570: View matched competencies on Gig/STIP detail page
 
-**Status:** QA
+**Status:** Done
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 8 (34622)
@@ -24,4 +24,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-08-18*
+*Synced from Jira: 2026-08-19*

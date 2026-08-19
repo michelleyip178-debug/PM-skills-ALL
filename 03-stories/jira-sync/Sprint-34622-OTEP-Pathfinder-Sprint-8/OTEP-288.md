@@ -25,4 +25,4 @@ _No subtasks._
 any preference regarding  page_size  and  page  vs  offset  and  limit ? So far I did with  page_size  and  page  but it’s trivial to change, especially now if needed.
 
 ---
-*Synced from Jira: 2026-08-18*
+*Synced from Jira: 2026-08-19*

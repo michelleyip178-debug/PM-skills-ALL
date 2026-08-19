@@ -1,6 +1,6 @@
 # OTEP-408: [BE] Listing API — apply ringfencing eligibility filter
 
-**Status:** QA
+**Status:** Done
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 8 (34622)
@@ -30,4 +30,4 @@ That was my understanding also of the following:  “Eligible ringfenced Interna
 Hi    ,  “Eligible ringfenced Internal Jobs pinned to top” - is this only for Internal Jobs and NOT for other OTG opps?   Also Internal jobs id NOT for MVP. Pls confirm.  So basically no change in sort order for the eligible opportunity. cc:
 
 ---
-*Synced from Jira: 2026-08-18*
+*Synced from Jira: 2026-08-19*

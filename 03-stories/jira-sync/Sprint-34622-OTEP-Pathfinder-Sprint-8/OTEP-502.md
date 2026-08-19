@@ -110,4 +110,4 @@ This does not make any sense for C@G, and we dont have OTG redirection at all ei
 yes pls. Thanks u!
 
 ---
-*Synced from Jira: 2026-08-18*
+*Synced from Jira: 2026-08-19*

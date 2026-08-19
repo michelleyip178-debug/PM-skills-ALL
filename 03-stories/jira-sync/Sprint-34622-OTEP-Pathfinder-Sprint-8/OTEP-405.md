@@ -1,6 +1,6 @@
 # OTEP-405: [FE/BE] Keyword Search for Opportunities
 
-**Status:** QA
+**Status:** Done
 **Assignee:** Thomas Huchedé
 **Story Points:** 3
 **Sprint:** OTEP-Pathfinder Sprint 8 (34622)
@@ -39,4 +39,4 @@ Moving back to QA lane since all the subtask have been completed and the fix of 
 Test Results (in Dev) -
 
 ---
-*Synced from Jira: 2026-08-18*
+*Synced from Jira: 2026-08-19*

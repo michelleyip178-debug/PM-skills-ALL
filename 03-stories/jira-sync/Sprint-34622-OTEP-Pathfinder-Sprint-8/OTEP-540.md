@@ -25,4 +25,4 @@ _No subtasks._
 Requested for the list of logos from C@G team, there’s no master source of where these logos sit. Not sure if we need to build in a repo to store these.
 
 ---
-*Synced from Jira: 2026-08-18*
+*Synced from Jira: 2026-08-19*

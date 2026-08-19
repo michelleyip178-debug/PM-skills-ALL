@@ -25,4 +25,4 @@ _No subtasks._
 the fix for the closing date has been merged and a more recent commit as been deployed already in QA so you should be able to test it already
 
 ---
-*Synced from Jira: 2026-08-18*
+*Synced from Jira: 2026-08-19*
