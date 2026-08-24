@@ -1,6 +1,6 @@
 # OTEP-975: [PATHFINDER] E2E — Ringfencing: Blocked vs Eligible Views (by Agency)
 
-**Status:** Ready For UAT
+**Status:** Done
 **Assignee:** N/A
 **Story Points:** N/A
 
@@ -20,7 +20,8 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**Guo XZ** (2026-08-18)
+Works for Michelle, can’t open for Richard Ramos
 
 ---
-*Synced from Jira: 2026-08-18*
+*Synced from Jira: 2026-08-20*

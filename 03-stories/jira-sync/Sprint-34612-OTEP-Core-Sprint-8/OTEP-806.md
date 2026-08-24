@@ -1,0 +1,27 @@
+# OTEP-806: Update Role Profile for Job Family, Job Function , Agency, Job Grade with master data
+
+**Status:** QA
+**Assignee:** Kingsley Low
+**Story Points:** N/A
+**Sprint:** OTEP-Core Sprint 8 (34612)
+
+---
+
+## Description
+
+Sheets in scope:  HRPS Role Profiles, Cumulus Role Profiles, WOG Role Profiles.  Sheet classes:   HRPS / Cumulus  (optional columns) vs  WOG  (mandatory core columns) — see AC-M11. AC-M1 — Job ID (Col A → job.job_id)  Given a role-profile row, when it is imported, then Col A (Job Profile ID) is stored (trimmed) as  job.job_id . AC-M2 — Agency (Col C → job.agency_id)  Given a row, when it is imported, then each Col C (POCDEX Agency Code) code ( ; -separated) is resolved against  ref_agency.code  and stored as  job.agency_id , producing one job per agency. When Col C is blank,  agency_id  is stored NULL (all sheets). When any supplied agency code is not found in master, the  whole row is skipped and logged  (no partial emission). AC-M3 — Job Function (Col I → job.job_function_id)  Given a row, when it is imported, then each Col I (Job Function IDs) code ( ; -separated) is resolved against  ref_job_function.code  and stored as  job.job_function_id , producing one job per function. If a supplied function code is not found in master →  skip whole row + log . HRPS / Cumulus:  Col I may be blank → one job is emitted per agency with  job_function_id  NULL and  job_family_id  NULL (still carrying grade + competencies).  (⚠ Dependency — requires  job.job_function_id  /  job.job_family_id  to be nullable; see Open Item.) WOG:  Col I is mandatory — blank →  skip whole row + log . AC-M4 — Job Family (derived → job.job_family_id)  Given a resolved job function, when its job is created, then  job.job_family_id  is taken from that function's  ref_job_function.job_family_id . Col G (Job Family IDs): every supplied code is  validated against  ref_job_family.code ; a code not found in master →  skip whole row + log . When Col I (function) is present, Col G (family)  must be non-empty  — a present function with a blank family →  skip whole row + log . Likewise a resolved function that has no linked family in master → skip whole row + log. (The previous "Col G used only to cross-check; mismatch recorded but not blocking" rule is removed.) AC-M5 — Job Grade (Col J → job.job_grade_id)  Given a row, when it is imported, then Col J (Job Grade) is resolved against  ref_job_grade.code  and stored as  job.job_grade_id . If a supplied grade code is not found in master →  skip whole row + log . HRPS / Cumulus:  Col J may be blank →  job_grade_id  stored NULL. WOG:  Col J is mandatory — blank →  skip whole row + log . AC-M6 — Job Profile Name (Col E → job.job_profile_name)  Given a row, when it is imported, then Col E (Job Profile Name) is stored (trimmed) as  job.job_profile_name . AC-M7 — Competencies (Col L → job.core_competency)  Given a row, when it is imported, then the competency references in Col L (Competency Reference ID,  ; -separated) are stored in  job.core_competency  (JSONB) keyed by competency  code , with a proficiency value ( PL<n> ) only when the token carries a trailing  -<level 1–5> , else an empty string. Splitting uses the  last   -  and only treats a single digit  1–5  as the level (so hyphenated codes are preserved; an out-of-range suffix stays part of the code). AC-M8 — Label-only columns not stored  Given a row, when it is imported, then Col B, Col D (agency name/description), Col F (Job Family name), Col H (Job Function name), Col K (Competency name) are not persisted on  job  — only the code columns (C / G / I / L) are authoritative. AC-M9 — System-set columns  Given a row is imported, then  job.id = uuidv7() ,  is_active = true ,  created_by/updated_by = "system" ,  version = 1 ,  created_at/updated_at = NOW() ,  deleted_at = NULL  — none sourced from Excel. AC-M10 — Uniqueness  Given rows fanned across agencies and functions, when jobs are upserted, then identity is UNIQUE  (job_id, agency_id, job_family_id, job_function_id)  (NULLS NOT DISTINCT);  agency_id  and  job_grade_id  are nullable. AC-M11 — Sheet-aware required fields (new)  Given the sheet class, when a row is imported, then: WOG Role Profiles:  Job Family, Job Function and Job Grade are  mandatory ; Agency may be blank. Any mandatory column blank →  skip whole row + log . HRPS / Cumulus Role Profiles:  Agency, Job Family, Job Function and Job Grade are  all optional ; the only cross-field rule is  function present ⇒ family present  (AC-M4). On both classes, any non-blank code must still resolve in master, else the row is skipped (AC-M2/M3/M4/M5). AC-M12 — Row-level skip + reporting (new)  Given any validation failure on a row (mandatory-but-blank, or present-but-unmatched code, in any of agency/family/function/grade), when the import runs, then the  entire row is skipped  (no partial jobs emitted) and recorded in the import report with the sheet, row number, job profile ID, the failing field, and whether it was empty or an unmatched value. The run continues with the next row.  Column-mapping summary (for reference) DB column ( job ) Excel col Header job_id A Job Profile ID agency_id C POCDEX Agency Code job_function_id I Job Function IDs job_family_id (from function FK;  G  cross-check) Job Family IDs job_grade_id J Job Grade job_profile_name E Job Profile Name competency L Competency Reference ID (not stored) B, D, F, H, G labels / validated-only
+
+---
+
+## Subtasks
+
+_No subtasks._
+
+---
+
+## Latest Comments
+
+_No comments._
+
+---
+*Synced from Jira: 2026-08-20*

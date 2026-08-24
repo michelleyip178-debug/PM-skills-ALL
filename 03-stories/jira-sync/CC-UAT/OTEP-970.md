@@ -23,4 +23,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-08-18*
+*Synced from Jira: 2026-08-20*

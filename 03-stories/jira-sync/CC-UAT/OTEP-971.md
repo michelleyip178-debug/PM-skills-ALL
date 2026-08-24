@@ -1,6 +1,6 @@
 # OTEP-971: [PATHFINDER] UAT-OPP-017 — Deep-link to a closed opportunity shows a clear closed-state message (OTEP-128)
 
-**Status:** To Do
+**Status:** Done
 **Assignee:** N/A
 **Story Points:** N/A
 
@@ -20,18 +20,18 @@ _No subtasks._
 
 ## Latest Comments
 
+**Guo XZ** (2026-08-19)
+🎉 Looks good! Opportunity no longer available today.
+
+---
+
+**Guo XZ** (2026-08-18)
+Have checked that these 2 are “closing today”. Will check again tmr.
+
+---
+
 **Alan Lim** (2026-08-18)
 ok:
 
 ---
-
-**Michelle Yip** (2026-08-18)
-Can test on these opportunities that are supposed to be closing today? If tomorrow, u click on these links, they should show you the closed state.  https://uat.careercompass.gov.sg/opportunities/019fd83c-75fd-7220-9a17-52a35728e852?ms=filter   https://uat.careercompass.gov.sg/opportunities/019fd316-150c-7734-9188-7b62a385cb59?ms=filter
-
----
-
-**Alan Lim** (2026-08-11)
-same remarks as Charles
-
----
-*Synced from Jira: 2026-08-18*
+*Synced from Jira: 2026-08-20*
