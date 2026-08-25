@@ -1,6 +1,6 @@
 # Active Tasks
 
-Current sprint: **Sprint 8 CLOSED (11–23 Aug 2026, closed 1 day early) — was confirmed the final MVP dev sprint with no Sprint 9 buffer, and no Sprint 9 has been created.** See [sprint-status.md](sprint-status.md) for the live-verified breakdown (Pathfinder Sprint 8 final state: 73 issues — 52 Done, 8 In Progress, 4 QA, 8 Backlog, 1 To Do, as of 2026-08-24 jira pull; 20 issues did not reach Done, including 6 WOG AD/auth-adjacent tickets — OTEP-71/594/331/110/305/111).
+Current sprint: **Sprint 8 CLOSED (11–23 Aug 2026, closed 1 day early). The week of 24 Aug is Phase 3 UAT by design — Sprint 9 starts w/c 31 Aug (confirmed by PM 2026-08-24).** See [sprint-status.md](sprint-status.md) for the live-verified breakdown (Pathfinder Sprint 8 final state: 73 issues — 52 Done, 8 In Progress, 4 QA, 8 Backlog, 1 To Do, as of 2026-08-24 jira pull; 20 issues did not reach Done, including 6 WOG AD/auth-adjacent tickets — OTEP-71/594/331/110/305/111).
 Sprint 3 final state (2026-06-12): ~23 Done, 9 in QA carry-in (85/86/89/128/192/268/305/317/319), 4 Backlog carry-in. Sprint goal near-met (filters + apply + deep-link all reached QA). Sprint 4 goal: complete, usable listing experience — search, filter, sort, data currency.
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
@@ -9,13 +9,13 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 ## This Week's Focus
 
-**Theme:** Sprint 8 (11–23 Aug, closed 1 day ahead of its 24 Aug scheduled end) is **closed — no Sprint 9 exists on board 12541 as of 2026-08-24.** This was named the final MVP dev sprint with no buffer (confirmed 2026-08-11); that buffer question is now live, not hypothetical. Final state: 52 Done, 8 In Progress, 4 QA, 8 Backlog, 1 To Do (73 total, live 2026-08-24). Sprint goal per Jira: clean up defects from Phase 1 UAT, enable Phase 2 UAT on Ringfencing and Competency Matching.
+**Theme:** Sprint 8 (11–23 Aug, closed 1 day ahead of its 24 Aug scheduled end) is **closed. This week (24–28 Aug) is Phase 3 UAT by design — Sprint 9 starts w/c 31 Aug (confirmed by PM 2026-08-24).** Final state: 52 Done, 8 In Progress, 4 QA, 8 Backlog, 1 To Do (73 total, live 2026-08-24). Sprint goal per Jira: clean up defects from Phase 1 UAT, enable Phase 2 UAT on Ringfencing and Competency Matching.
 
-**What's open at sprint close:** 20 of 73 issues (27%) did not reach Done, including 6 WOG AD/auth-adjacent tickets — OTEP-71 (Login Authentication, Léo — In Progress), OTEP-594 (WOG AD routing, unassigned — In Progress), OTEP-331 (SSO/CSC, unassigned — QA), OTEP-110 (Login fail, unassigned — QA), OTEP-305 (Login/Logout, Thomas — QA), OTEP-111 (unauthorised-access page, unassigned — Backlog). **This is a different claim from "the WOG AD blocker is resolved"** — PM-OS's W34 weekly review reports the underlying WOG AD and UAT Gate 2 access blockers cleared 18 Aug, but the tickets themselves haven't followed that into Done. Worth a direct check on whether these need a Sprint 9 to land in, or are done-in-substance and just need Jira closed out.
+**What's open at sprint close:** 20 of 73 issues (27%) did not reach Done, including 6 WOG AD/auth-adjacent tickets — OTEP-71 (Login Authentication, Léo — In Progress), OTEP-594 (WOG AD routing, unassigned — In Progress), OTEP-331 (SSO/CSC, unassigned — QA), OTEP-110 (Login fail, unassigned — QA), OTEP-305 (Login/Logout, Thomas — QA), OTEP-111 (unauthorised-access page, unassigned — Backlog). **This is a different claim from "the WOG AD blocker is resolved"** — PM-OS's W34 weekly review reports the underlying WOG AD and UAT Gate 2 access blockers cleared 18 Aug, but the tickets themselves haven't followed that into Done. Worth a direct check that these are confirmed to roll into Sprint 9, or are done-in-substance and just need Jira closed out.
 
-**Carried-forward risks still open (per this stale-check against `open-items.md`/`risks.md`):** VAPT closure date conflict (16 Oct vs. 23 Oct, #39 — still unresolved; PS/DS accept/reject decision also still pending as of the W34 weekly review, likely supersedes this conflict entirely once resolved — needs a person to confirm, not a file edit); Huiting/Mark data-sharing approval (#55 — Data Sharing Form confirmed locked/approved 2026-08-14, but ≥25 additional UAT scenarios and Day-2 support scoping remain open with no owner); POCDEX ETL/infra core-team questions (#31 — still outstanding). With Sprint 8 now closed and no Sprint 9 created, these all sit against an undefined next-sprint timeline, not just a feature-freeze gate.
+**Carried-forward risks still open (per this stale-check against `open-items.md`/`risks.md`):** VAPT closure date conflict (16 Oct vs. 23 Oct, #39 — still unresolved; **PS/DS's accept/reject decision itself was resolved — accepted 18 Aug — see #39's updated status; this VAPT date conflict is the separate remaining piece**); Huiting/Mark data-sharing approval (#55 — Data Sharing Form confirmed locked/approved 2026-08-14, but ≥25 additional UAT scenarios and Day-2 support scoping remain open with no owner); POCDEX ETL/infra core-team questions (#31 — still outstanding). Sprint 9 starting w/c 31 Aug gives these a concrete next-sprint anchor rather than an undefined one.
 
-*(Updated 2026-08-24 — stale-check: Sprint 8 flipped `active`→`closed` since the 2026-08-17/19 pulls this section was still describing; rewrote against live Jira closed-state counts and named the 6 open WOG AD/auth tickets. Cross-checked against PM-OS's 2026-08-24 W34 weekly review for the WOG AD/Gate 2/PS/DS status.)*
+*(Updated 2026-08-24, 2nd pass — corrected the "no Sprint 9 exists" framing: PM confirmed this week is Phase 3 UAT by design, Sprint 9 starts w/c 31 Aug. Also corrected PS/DS: accepted 18 Aug, not still pending as the 1st pass reported. Prior: 2026-08-24, 1st pass — stale-check: Sprint 8 flipped `active`→`closed` since the 2026-08-17/19 pulls this section was still describing; rewrote against live Jira closed-state counts and named the 6 open WOG AD/auth tickets.)*
 
 ---
 
@@ -25,7 +25,7 @@ Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-
 
 *Pathfinder Sprint 8 final state — In Progress (8) · QA (4):* See [sprint-status.md](sprint-status.md) for the full, live-verified list.
 
-*Pathfinder Sprint 8 final state — To Do (1), Done (52), Backlog (8):* See sprint-status.md for full list. No Sprint 9 exists yet — these 20 open tickets have no current sprint home.
+*Pathfinder Sprint 8 final state — To Do (1), Done (52), Backlog (8):* See sprint-status.md for full list. Sprint 9 starts w/c 31 Aug (this week is Phase 3 UAT) — confirm these 20 open tickets have an explicit destination before then.
 
 *Core Sprint 8:* not synced this pass — see sprint-status.md's Core board notes for last full sync. Run `/jira-sync core` for a current Core board read.
 
