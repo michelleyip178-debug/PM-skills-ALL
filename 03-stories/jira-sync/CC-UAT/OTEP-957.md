@@ -29,4 +29,4 @@ Thanks, moving this to Done/Passed.
 I can confirm that [UAT-OPP-003] cannot be found in the listing when I searched for it. Is there a way to verify on your end that the opportunity was correctly filtered out, and not because it was not there in the first place?
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-08-25*
