@@ -67,9 +67,18 @@ def sanitise(name):
 def get_active_sprint(base, auth):
     data = get(f"{base}/rest/agile/1.0/board/{BOARD_ID}/sprint?state=active", auth)
     values = data.get("values", []) if data else []
-    if not values:
-        sys.exit("No active sprint found. Please provide a sprint ID to target.")
-    return values[0]
+    # The board/{id}/sprint endpoint can return sprints owned by a DIFFERENT
+    # board (observed on this shared Jira instance — board 12541's "active"
+    # query returned an OTEP-Intel sprint, originBoardId 14855). Filter to
+    # sprints actually owned by the requested board before trusting the result.
+    owned = [s for s in values if s.get("originBoardId") == int(BOARD_ID)]
+    if not owned:
+        sys.exit(
+            f"No active sprint found on board {BOARD_ID} (owned by this board — "
+            "cross-board results, if any, were filtered out). "
+            "Please provide a sprint ID to target."
+        )
+    return owned[0]
 
 
 def get_sprint_issues(base, auth, sprint_id):

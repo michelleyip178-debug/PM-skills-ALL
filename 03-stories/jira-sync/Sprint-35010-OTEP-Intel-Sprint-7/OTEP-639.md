@@ -1,4 +1,4 @@
-# OTEP-345: CIE-14 (Feedback Loop) Feedback Loop Transfer Setup
+# OTEP-639:  --dataset flag + store emission in run_eval.py.
 
 **Status:** Done
 **Assignee:** Benjamin Aw

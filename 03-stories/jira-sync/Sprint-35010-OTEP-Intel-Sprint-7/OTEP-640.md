@@ -1,4 +1,4 @@
-# OTEP-345: CIE-14 (Feedback Loop) Feedback Loop Transfer Setup
+# OTEP-640: Seed JD and Course golden sets (placeholder-flagged until labelled, same convention as CVs).
 
 **Status:** Done
 **Assignee:** Benjamin Aw

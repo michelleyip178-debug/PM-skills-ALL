@@ -14,16 +14,28 @@ BASE="https://$JIRA_SITE"
 SPRINT_JSON=$(curl -sS -u "$AUTH" -H "Accept: application/json" \
   "$BASE/rest/agile/1.0/board/$BOARD_ID/sprint?state=active")
 
-SPRINT_ID=$(echo "$SPRINT_JSON" | python3 -c "import json,sys;v=json.load(sys.stdin).get('values',[]);print(v[0]['id'] if v else '')")
+# The board/{id}/sprint endpoint can return sprints whose originBoardId is a
+# DIFFERENT board (observed on this shared Jira instance — board 12541's
+# "active" query returned an OTEP-Intel sprint, originBoardId 14855). Filter
+# to sprints actually owned by the requested board before trusting the result.
+SPRINT_ID=$(echo "$SPRINT_JSON" | BOARD_ID="$BOARD_ID" python3 -c "
+import json, os, sys
+board_id = int(os.environ['BOARD_ID'])
+v = json.load(sys.stdin).get('values', [])
+owned = [s for s in v if s.get('originBoardId') == board_id]
+print(owned[0]['id'] if owned else '')
+")
 
 if [ -z "$SPRINT_ID" ]; then
-  echo "No active sprint on board $BOARD_ID."
+  echo "No active sprint on board $BOARD_ID (owned by this board — cross-board results, if any, were filtered out)."
   exit 0
 fi
 
-echo "$SPRINT_JSON" | python3 -c "
-import json,sys
-s=json.load(sys.stdin)['values'][0]
+echo "$SPRINT_JSON" | BOARD_ID="$BOARD_ID" python3 -c "
+import json, os, sys
+board_id = int(os.environ['BOARD_ID'])
+v = json.load(sys.stdin)['values']
+s = [x for x in v if x.get('originBoardId') == board_id][0]
 print(f\"Sprint: {s['name']}  ({s.get('startDate','?')[:10]} → {s.get('endDate','?')[:10]})\")
 print(f\"Goal:   {s.get('goal') or '(none set)'}\")
 print()

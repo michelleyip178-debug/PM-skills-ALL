@@ -1,4 +1,4 @@
-# OTEP-345: CIE-14 (Feedback Loop) Feedback Loop Transfer Setup
+# OTEP-638: Restructure eval/ to multi-dataset layout; migrate CV set; keep pytest non-collection intact.
 
 **Status:** Done
 **Assignee:** Benjamin Aw

@@ -1,7 +1,7 @@
-# OTEP-345: CIE-14 (Feedback Loop) Feedback Loop Transfer Setup
+# OTEP-987: Do a deep research on SWP track project using email thread
 
 **Status:** Done
-**Assignee:** Benjamin Aw
+**Assignee:** Brian Noel Kesuma
 **Story Points:** N/A
 **Sprint:** OTEP-Intel Sprint 7 (35010)
 

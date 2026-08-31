@@ -1,4 +1,4 @@
-# OTEP-345: CIE-14 (Feedback Loop) Feedback Loop Transfer Setup
+# OTEP-641: ECS task family cie-eval, EventBridge schedule, CloudWatch alarm → team channel. Blocks nightly runs.
 
 **Status:** Done
 **Assignee:** Benjamin Aw
