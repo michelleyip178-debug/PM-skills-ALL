@@ -5,6 +5,8 @@ Sprint 3 final state (2026-06-12): ~23 Done, 9 in QA carry-in (85/86/89/128/192/
 
 Story pipeline tracking lives in [sprint-checklists.md](../04-ceremonies/sprint-checklists.md). (Old story-readiness.md archived 2026-05-15.)
 
+**New recurring commitment (2026-09-01): R1 brainstorm, bi-weekly, starting Sprint 9 (week of 6 Sep).** Attendees: Michelle, Pow Hwee Tan, R1 designer (TBC). Structured session with a running doc — see [2026-09-01-W36-r1-brainstorm-running-doc.md](../../PM-OS/outputs/decisions/2026-09-01-W36-r1-brainstorm-running-doc.md). Purpose: protected thinking time on R1 direction, separate from MVP delivery work. Note: this is planning time, not confirmed R1 dev capacity — the MVP employment-lifecycle freeze runs through end-September (open item #61), so don't assume Sprint 9 R1 brainstorming implies R1 development starts then too.
+
 ---
 
 ## This Week's Focus

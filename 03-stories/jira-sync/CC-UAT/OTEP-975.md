@@ -24,4 +24,4 @@ _No subtasks._
 Works for Michelle, can’t open for Richard Ramos
 
 ---
-*Synced from Jira: 2026-08-25*
+*Synced from Jira: 2026-09-04*
