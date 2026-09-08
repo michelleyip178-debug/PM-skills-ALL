@@ -31,4 +31,4 @@ User Story As an officer, I want to browse and search across the full course cat
 _No comments._
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

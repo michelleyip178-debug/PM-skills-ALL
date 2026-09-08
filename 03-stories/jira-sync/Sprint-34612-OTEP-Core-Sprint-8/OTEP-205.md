@@ -32,4 +32,4 @@ User Story As an officer, I can use the inference tool to suggest competencies t
 _No comments._
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

@@ -25,4 +25,4 @@ _No subtasks._
 Remove usage of AutoMigrate with GORM due to it does not support audit trail and migrate up/down. Switch to use  golang-migrate  to handle the migration.
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

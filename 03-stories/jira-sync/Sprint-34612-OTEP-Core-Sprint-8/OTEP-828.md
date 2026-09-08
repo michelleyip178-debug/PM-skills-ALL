@@ -20,9 +20,10 @@ Main card to look at Sonarqube and SAST findings for otep-web. For purpose of tr
 | OTEP-982 | Sonarqube Rule: typescript:S3358 | Done |
 | OTEP-1186 | Sonarqube Rule: CWE-918 | Backlog |
 | OTEP-1195 | Sonarqube Rule: typescript:S2871 | Backlog |
-| OTEP-1196 | Sonarqube Rule: typescript:S3735 | Backlog |
+| OTEP-1196 | Sonarqube Rule: typescript:S3735 | Done |
 | OTEP-1197 | Sonarqube Rule: typescript:S6848 | Done |
-| OTEP-1198 | Package Vulnerabilities | Backlog |
+| OTEP-1198 | Package Vulnerabilities | Done |
+| OTEP-1445 | otep-web: Update severity level for non critical items | Backlog |
 
 ---
 
@@ -31,4 +32,4 @@ Main card to look at Sonarqube and SAST findings for otep-web. For purpose of tr
 _No comments._
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

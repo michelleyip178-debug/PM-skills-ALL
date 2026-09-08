@@ -29,4 +29,4 @@ SIT for  CSC course catalogue - next Jul CSC NRIC/learn ID  pocdex
 _No comments._
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

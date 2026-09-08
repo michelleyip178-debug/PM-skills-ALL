@@ -25,4 +25,4 @@ _No subtasks._
 Remind to myself: Check comments under here too to fix in this task: https://sgts.gitlab-dedicated.com/wog/psd/pdo/otep/otep-web/-/merge_requests/85
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

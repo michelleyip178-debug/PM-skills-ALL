@@ -35,4 +35,4 @@ We dont have permisison to create groups and repo settings
 OTEP-138:  Repository & Branch Governance        OTEP-155:  CI & Quality Scans         OTEP-156:  Integrate DevSecOps Tools & Quality Scanners     OTEP-159:  Integrate External Application Secrets     OTEP-157:  Generate and Store SBOMs (Software Bill of Materials)   DevSecOps controls implementation will be handle by     Other than that will be handle by    : Build pipeline, testing pipeline, release and deployment pipeline,  etc
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

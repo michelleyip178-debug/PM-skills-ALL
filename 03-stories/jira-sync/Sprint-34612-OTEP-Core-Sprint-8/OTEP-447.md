@@ -30,4 +30,4 @@ User Story As a logged-in officer, I want to view recommended target roles based
 _No comments._
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

@@ -24,6 +24,7 @@ Main card to look at Sonarqube and SAST findings for otep-service. For purpose o
 | OTEP-1192 | Sonarqube Rule: go:S4144 | Done |
 | OTEP-1193 | gRPC-Go: xDS RBAC and HTTP/2 Vulnerabilities | Done |
 | OTEP-1194 | Sonarqube Rule: go:S107 | QA |
+| OTEP-1444 | otep-service: Update sonarqube severity level for non critical items | Done |
 
 ---
 
@@ -32,4 +33,4 @@ Main card to look at Sonarqube and SAST findings for otep-service. For purpose o
 _No comments._
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

@@ -25,4 +25,4 @@ _No subtasks._
 Library  go-retryablehttp  is introduced into this task  The reason is to implement standardized resiliency patterns, including exponential backoff and automatic request rewinding, ensuring our service handles transient downstream failures without manual error-handling logic.
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

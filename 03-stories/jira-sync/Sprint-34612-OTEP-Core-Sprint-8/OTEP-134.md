@@ -62,4 +62,4 @@ References: Prototype repository:  https://sgts.gitlab-dedicated.com/wog/psd/pdo
 are the approval reviewers for merging the feature into main branch
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

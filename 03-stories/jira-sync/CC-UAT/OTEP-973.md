@@ -34,4 +34,4 @@ no, this one Alan had said ok. Can you shift it to done, pls?
 Are we supposed to re-test this? If so, which opportunity do we look for? [UAT-OPP-019] cannot be found now.
 
 ---
-*Synced from Jira: 2026-09-04*
+*Synced from Jira: 2026-09-08*

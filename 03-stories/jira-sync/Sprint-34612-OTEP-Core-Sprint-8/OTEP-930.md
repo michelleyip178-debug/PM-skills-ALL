@@ -25,4 +25,4 @@ _No subtasks._
 This is duplicated ticket of
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

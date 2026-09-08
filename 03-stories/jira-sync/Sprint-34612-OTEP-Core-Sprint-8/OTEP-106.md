@@ -29,4 +29,4 @@ User Story As an officer, I want to see a clear navigation bar so that I can cle
 Testing done in Dev and Bug task created for pending issues.
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

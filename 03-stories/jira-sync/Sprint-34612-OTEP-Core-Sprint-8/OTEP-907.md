@@ -33,4 +33,4 @@ Thanks Leo. Will likely flag this as a false positive since it’s not in actual
 Thanks for checking   . I thinks it’s flagging it because we do `description = fmt.Sprintf("Test opportunity: %s", f.Title)`. In any cases, this is for integration testing only (package is  opportunitytest  which is our test harness for integration testing). I think we could update so it’s not flagged, but not sure on the priority regarding this.
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

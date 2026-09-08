@@ -25,4 +25,4 @@ _No subtasks._
 Change to use SQS instead of http
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

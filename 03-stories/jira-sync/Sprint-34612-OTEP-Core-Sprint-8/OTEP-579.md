@@ -21,7 +21,8 @@ _No subtasks._
 
 ## Latest Comments
 
-_No comments._
+**Imelda Mo** (2026-08-24)
+role_search_submitted > Search term length is referring to the number of words, and not characters.
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

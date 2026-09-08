@@ -30,4 +30,4 @@ This ticket is resolved in  OTEP-806
 Pending confirmation from stakeholder for changing family and function name to code
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

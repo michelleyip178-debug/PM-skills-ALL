@@ -30,4 +30,4 @@ design updated, link  here
 FYI, look at AC 7, we want to add a Feedback link at the footer too, similar to this
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

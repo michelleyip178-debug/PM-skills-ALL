@@ -30,4 +30,4 @@ Adrian Lo  mentioned this issue in  a commit  of  WOG / PSD / pdo / OTEP / otep-
 Pei Ern Lim  mentioned this issue in  a merge request  of  WOG / PSD / pdo / OTEP / otep-web  on branch  OTEP-713-714-715 :         : Implement Learning Courses UI
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

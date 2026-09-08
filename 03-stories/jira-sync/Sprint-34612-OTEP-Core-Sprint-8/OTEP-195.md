@@ -25,4 +25,4 @@ _No subtasks._
 /docs folder are committed into the repository in this MR
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

@@ -35,4 +35,4 @@ cc:
 Just to confirm, is it possible to apply line-based truncation? ie. the title is truncated only if it's longer than 2 lines.
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*

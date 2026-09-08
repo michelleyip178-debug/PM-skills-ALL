@@ -34,4 +34,4 @@ _No subtasks._
 Update: We no longer calls API from CIE Engine, instead we use SQS to communicate. Detail specification for API Endpoints please refer to: otep-docs-endpoint-list-sprint-4 Detail specification for SQS messaging please refer to: otep-docs-messaging
 
 ---
-*Synced from Jira: 2026-08-20*
+*Synced from Jira: 2026-09-07*
