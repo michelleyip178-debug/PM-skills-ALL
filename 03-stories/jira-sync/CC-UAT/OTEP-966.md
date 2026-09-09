@@ -34,4 +34,4 @@ passed with comments: Expected result should be “Clear all” button is greyed
 passed with comments: Expected result should be “Clear all” button is greyed out and inactive
 
 ---
-*Synced from Jira: 2026-09-08*
+*Synced from Jira: 2026-09-09*
