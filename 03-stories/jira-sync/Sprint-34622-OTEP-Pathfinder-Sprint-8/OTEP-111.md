@@ -1,6 +1,6 @@
 # OTEP-111: Officers with no access (unauthorised page - display only)
 
-**Status:** Backlog
+**Status:** Done
 **Assignee:** N/A
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 8 (34622)
@@ -37,4 +37,4 @@ Checked with   . We already check during authz flow that user exists as officer 
 The design and Jira ticket for the Access Denied page text have been updated. Figma  link  here  cc
 
 ---
-*Synced from Jira: 2026-08-19*
+*Synced from Jira: 2026-09-11 (closed out)*

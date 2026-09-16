@@ -1,6 +1,6 @@
 # OTEP-594: Officer is routed to the correct page after WOG AD authentication
 
-**Status:** Backlog
+**Status:** Done
 **Assignee:** N/A
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 7 (34621)
@@ -24,4 +24,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-08-05*
+*Synced from Jira: 2026-09-11 (closed out)*

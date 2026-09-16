@@ -2,7 +2,7 @@
 
 **Type:** Story
 
-**Status:** Backlog
+**Status:** Done
 
 **Assignee:** N/A
 
@@ -30,4 +30,4 @@ _No comments._
 
 ---
 
-*Synced from Jira: 2026-07-23*
+*Synced from Jira: 2026-09-11 (closed out)*

@@ -1,6 +1,6 @@
 # OTEP-111: Officers with no access (unauthorised page - display only)
 
-**Status:** Backlog
+**Status:** Done
 **Assignee:** N/A
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 7 (34621)
@@ -25,4 +25,4 @@ _No subtasks._
 The design and Jira ticket for the Access Denied page text have been updated. Figma  link  here  cc
 
 ---
-*Synced from Jira: 2026-08-05*
+*Synced from Jira: 2026-09-11 (closed out)*

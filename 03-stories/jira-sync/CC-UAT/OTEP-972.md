@@ -34,4 +34,4 @@ Filtered by closing date and worked:
 Didn’t show the closing part.
 
 ---
-*Synced from Jira: 2026-09-10*
+*Synced from Jira: 2026-09-15*

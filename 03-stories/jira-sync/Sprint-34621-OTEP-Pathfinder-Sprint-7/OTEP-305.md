@@ -1,6 +1,6 @@
 # OTEP-305: Login and Logout (replace keycloak page with actual)
 
-**Status:** QA
+**Status:** Done
 **Assignee:** Thomas Huchedé
 **Story Points:** N/A
 **Sprint:** OTEP-Pathfinder Sprint 7 (34621)
@@ -38,4 +38,4 @@ The "Having trouble? Contact  careercompass@psd.gov.sg " text and email link hav
 Hi   , I can’t see the login form replaced. Is this implementation (no login form) NOT for qa env ?
 
 ---
-*Synced from Jira: 2026-08-07*
+*Synced from Jira: 2026-09-11 (closed out)*
