@@ -3,7 +3,7 @@
 **Status:** Backlog
 **Assignee:** N/A
 **Story Points:** 3
-**Sprint:** OTEP-Pathfinder Sprint 9 (42637)
+**Sprint:** OTEP-Pathfinder Sprint 10 (43875)
 
 ---
 
@@ -45,4 +45,4 @@ No description provided.
 _No comments._
 
 ---
-*Synced from Jira: 2026-09-21*
+*Synced from Jira: 2026-09-24*

@@ -1,9 +1,9 @@
-# OTEP-1202: Hardening Keycloak client configuration
+# OTEP-578: [SPIKE] OTG ingestion - Jobs (Secondments, Internal Jobs, Rotations)
 
 **Status:** Backlog
 **Assignee:** N/A
 **Story Points:** N/A
-**Sprint:** OTEP-Pathfinder Sprint 9 (42637)
+**Sprint:** OTEP-Pathfinder Sprint 10 (43875)
 
 ---
 
@@ -24,4 +24,4 @@ _No subtasks._
 _No comments._
 
 ---
-*Synced from Jira: 2026-09-21*
+*Synced from Jira: 2026-09-24*
